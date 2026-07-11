@@ -343,6 +343,47 @@ header p {
     border-left: 4px solid var(--accent-cyan);
 }
 
+/* Skeleton loading shimmer */
+@keyframes shimmer {
+    0% { background-position: -400px 0; }
+    100% { background-position: 400px 0; }
+}
+
+.skeleton {
+    background: linear-gradient(90deg, rgba(255,255,255,0.04) 25%, rgba(255,255,255,0.1) 50%, rgba(255,255,255,0.04) 75%);
+    background-size: 800px 100%;
+    animation: shimmer 1.4s infinite linear;
+    border-radius: 8px;
+}
+
+.skeleton-card {
+    pointer-events: none;
+    cursor: default;
+}
+
+.skeleton-circle {
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-title {
+    height: 20px;
+    width: 60%;
+    margin-bottom: 0.75rem;
+}
+
+.skeleton-line {
+    height: 14px;
+    width: 80%;
+    margin-bottom: 0.5rem;
+}
+
+.skeleton-line.short {
+    width: 45%;
+}
+
 /* Radial Progress Circular Score */
 .score-circle {
     width: 68px;

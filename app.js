@@ -4,6 +4,15 @@ let filteredJobs = [];
 let currentPage = 1;
 let itemsPerPage = 25;
 
+// Debounce helper – prevents search firing on every keypress
+function debounce(fn, delay = 300) {
+    let timer;
+    return (...args) => {
+        clearTimeout(timer);
+        timer = setTimeout(() => fn(...args), delay);
+    };
+}
+
 // DOM Elements
 const searchInput = document.getElementById('searchInput');
 const matchFilter = document.getElementById('matchFilter');
@@ -38,7 +47,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     }
 
     // 2. Setup event listeners
-    searchInput.addEventListener('input', () => { currentPage = 1; applyFilters(); });
+    searchInput.addEventListener('input', debounce(() => { currentPage = 1; applyFilters(); }, 250));
     matchFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     sourceFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     if (expFilter) expFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
@@ -108,7 +117,23 @@ async function loadJobsData() {
         }
     }
 
+    // Show skeleton while loading
+    showSkeleton();
     applyFilters();
+}
+
+// Show skeleton loading cards
+function showSkeleton() {
+    const skeletons = Array.from({ length: 5 }, () => `
+        <div class="job-card skeleton-card">
+            <div class="skeleton skeleton-circle"></div>
+            <div class="job-info" style="flex:1">
+                <div class="skeleton skeleton-title"></div>
+                <div class="skeleton skeleton-line"></div>
+                <div class="skeleton skeleton-line short"></div>
+            </div>
+        </div>`).join('');
+    jobListContainer.innerHTML = skeletons;
 }
 
 // Render Error Screen
@@ -351,7 +376,7 @@ function renderJobList() {
         else if (job.source === 'SawitPRO') sourceBadge = `<span class="source-badge sawitpro">SawitPRO</span>`;
 
         const companyLogo = job.logo
-            ? `<img src="${job.logo}" class="company-logo" alt="${job.organization_name}">`
+            ? `<img src="${job.logo}" class="company-logo" alt="${job.organization_name}" loading="lazy" onerror="this.style.display='none'">`
             : '';
 
         const card = document.createElement('div');
