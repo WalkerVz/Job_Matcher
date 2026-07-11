@@ -57,10 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (currentPage > 1) {
                 currentPage--;
                 renderJobList();
-                const filtersBar = document.querySelector('.filters-bar');
-                if (filtersBar) {
-                    filtersBar.scrollIntoView({ behavior: 'smooth' });
-                }
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     }
@@ -69,10 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         nextPageBtn.addEventListener('click', () => {
             currentPage++;
             renderJobList();
-            const filtersBar = document.querySelector('.filters-bar');
-            if (filtersBar) {
-                filtersBar.scrollIntoView({ behavior: 'smooth' });
-            }
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         });
     }
 
@@ -248,8 +242,7 @@ function renderPaginationNumbers(totalPages) {
                 if (currentPage !== p) {
                     currentPage = p;
                     renderJobList();
-                    const filtersBar = document.querySelector('.filters-bar');
-                    if (filtersBar) filtersBar.scrollIntoView({ behavior: 'smooth' });
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 }
             });
             container.appendChild(btn);
