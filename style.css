@@ -990,8 +990,8 @@ header p {
         padding: 0.85rem 1rem;
         position: sticky;
         top: 0.5rem;
-        max-height: 82vh;
-        overflow-y: auto;
+        max-height: none;
+        overflow: visible;
     }
     .filters-top-row {
         gap: 0.6rem;
