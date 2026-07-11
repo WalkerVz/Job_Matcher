@@ -345,7 +345,8 @@ function renderJobList() {
         }
 
         let sourceBadge = `<span class="source-badge talentics">Hulu Migas</span>`;
-        if (job.source === 'Astra') sourceBadge = `<span class="source-badge astra">Astra Career</span>`;
+        if (job.source === 'Grab') sourceBadge = `<span class="source-badge grab">Grab Indonesia</span>`;
+        else if (job.source === 'Astra') sourceBadge = `<span class="source-badge astra">Astra Career</span>`;
         else if (job.source === 'Pertamina PTC') sourceBadge = `<span class="source-badge ptc">Pertamina PTC</span>`;
         else if (job.source === 'SawitPRO') sourceBadge = `<span class="source-badge sawitpro">SawitPRO</span>`;
 
@@ -424,7 +425,9 @@ function openJobModal(job) {
     };
 
     let sourceBadge = `<span class="source-badge talentics" style="margin-left: 10px; vertical-align: middle;">Hulu Migas</span>`;
-    if (job.source === 'Astra') {
+    if (job.source === 'Grab') {
+        sourceBadge = `<span class="source-badge grab" style="margin-left: 10px; vertical-align: middle;">Grab Indonesia</span>`;
+    } else if (job.source === 'Astra') {
         sourceBadge = `<span class="source-badge astra" style="margin-left: 10px; vertical-align: middle;">Astra Career</span>`;
     } else if (job.source === 'Pertamina PTC') {
         sourceBadge = `<span class="source-badge ptc" style="margin-left: 10px; vertical-align: middle;">Pertamina PTC</span>`;

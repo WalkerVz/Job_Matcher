@@ -867,6 +867,12 @@ header p {
     color: #f59e0b;
 }
 
+.source-badge.grab {
+    background: rgba(0, 185, 100, 0.15);
+    border: 1px solid rgba(0, 185, 100, 0.3);
+    color: #00b964;
+}
+
 .job-title-wrapper {
     display: flex;
     align-items: center;
