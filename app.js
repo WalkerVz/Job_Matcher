@@ -521,3 +521,10 @@ window.closeModal = function () {
     detailModal.classList.remove('active');
     document.body.style.overflow = ''; // Restore background scrolling
 }
+
+// Register Progressive Web App (PWA) Service Worker
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+}
