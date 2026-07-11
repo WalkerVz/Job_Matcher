@@ -2,8 +2,8 @@ name: Auto Scrape Job Vacancies
 
 on:
   schedule:
-    # Run every day at 01:00 UTC (08:00 WIB)
-    - cron: '0 1 * * *'
+    # Run every 2 hours (12x per day)
+    - cron: '0 */2 * * *'
   workflow_dispatch: # Allows manual trigger from GitHub UI
 
 jobs:
