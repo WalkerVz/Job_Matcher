@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             if (currentPage > 1) {
                 currentPage--;
                 renderJobList();
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                scrollToJobListTop();
             }
         });
     }
@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         nextPageBtn.addEventListener('click', () => {
             currentPage++;
             renderJobList();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            scrollToJobListTop();
         });
     }
 
@@ -242,12 +242,24 @@ function renderPaginationNumbers(totalPages) {
                 if (currentPage !== p) {
                     currentPage = p;
                     renderJobList();
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                    scrollToJobListTop();
                 }
             });
             container.appendChild(btn);
         }
     });
+}
+
+// Smoothly scroll to the top of the job list (filter bar position)
+function scrollToJobListTop() {
+    const filtersBar = document.querySelector('.filters-bar');
+    if (filtersBar) {
+        const topPos = filtersBar.getBoundingClientRect().top + window.scrollY - 12;
+        window.scrollTo({
+            top: Math.max(0, topPos),
+            behavior: 'smooth'
+        });
+    }
 }
 
 // Render the Job List Cards
