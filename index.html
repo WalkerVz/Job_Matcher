@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hulu Migas & Astra Career Job Matcher</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- SVG Gradients Definition -->
+    <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
+        <linearGradient id="scoreGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#06b6d4" />
+            <stop offset="100%" stop-color="#8b5cf6" />
+        </linearGradient>
+    </svg>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Hulu Migas, Pertamina PTC, SawitPRO & Astra Career Job Matcher</h1>
+            <p>Lowongan kerja ter-scrap dari portal karir resmi Hulu Migas (Talentics), Pertamina PTC, SawitPRO dan Astra Career yang dicocokkan dengan profil Anda</p>
+        </header>
+
+        <div class="dashboard-grid">
+            <!-- Sidebar: User Profile Card -->
+            <aside class="profile-card">
+                <div class="profile-avatar-container">
+                    <div class="profile-avatar">MR</div>
+                    <h3 class="profile-name">Muhammad Ravil</h3>
+                    <p class="profile-title">Python Developer & Data Analyst</p>
+                </div>
+
+                <div class="profile-details">
+                    <div class="profile-item">
+                        <span class="label">Pendidikan:</span>
+                        <span class="val">S1 Teknik Informatika</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">IPK / GPA:</span>
+                        <span class="val">3.39</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Usia:</span>
+                        <span class="val">23 Tahun</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">TOEFL:</span>
+                        <span class="val">537</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Gender:</span>
+                        <span class="val">Laki-laki</span>
+                    </div>
+                    <div class="profile-item">
+                        <span class="label">Pengalaman Kerja:</span>
+                        <span class="val">1 Tahun (PHR Intern)</span>
+                    </div>
+                </div>
+
+                <div class="profile-skills">
+                    <h4>Keahlian & Sertifikasi</h4>
+                    <div class="skills-tags">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Data Science</span>
+                        <span class="skill-tag">Data Analysis</span>
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">Project Mgmt</span>
+                        <span class="skill-tag">Hulu Migas QC</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Main Content Area -->
+            <main class="main-section">
+                <!-- Search and Filters Bar -->
+                <div class="filters-bar">
+                    <div class="search-input-wrapper">
+                        <span class="search-icon">🔍</span>
+                        <input type="text" id="searchInput" placeholder="Cari posisi atau nama perusahaan...">
+                    </div>
+
+                    <select id="matchFilter" class="filter-select">
+                        <option value="all">Semua Kualitas Match</option>
+                        <option value="high">Kecocokan Tinggi (Score &gt;= 80%)</option>
+                        <option value="medium">Kecocokan Sedang (Score 50% - 79%)</option>
+                        <option value="low">Kecocokan Rendah (Score &lt; 50%)</option>
+                        <option value="compatible">Hanya yang Kompatibel (Tanpa Blocker)</option>
+                        <option value="blocked">Ada Blocker (IPK/Usia/Gender)</option>
+                    </select>
+
+                    <select id="sourceFilter" class="filter-select">
+                        <option value="all">Semua Platform (Talentics, Astra, PTC & SawitPRO)</option>
+                        <option value="talentics">Hanya Hulu Migas (Talentics)</option>
+                        <option value="astra">Hanya Astra Career</option>
+                        <option value="ptc">Hanya Pertamina PTC</option>
+                        <option value="sawitpro">Hanya SawitPRO</option>
+                    </select>
+
+                    <select id="expFilter" class="filter-select">
+                        <option value="all">Semua Syarat Pengalaman</option>
+                        <option value="eligible">≤ 1 Tahun (Sesuai Pengalamanmu 1 Thn)</option>
+                        <option value="freshgrad">Terbuka Fresh Graduate (0 Tahun)</option>
+                        <option value="experienced">Syarat &gt; 1 Tahun (Mid/Senior)</option>
+                    </select>
+
+                    <select id="sortSelect" class="filter-select">
+                        <option value="score">Urutkan: Match Score Tertinggi</option>
+                        <option value="title">Urutkan: Judul (A-Z)</option>
+                        <option value="due_date">Urutkan: Batas Tanggal Terdekat</option>
+                    </select>
+
+                    <select id="perPageSelect" class="filter-select">
+                        <option value="10">Tampilkan: 10 / halaman</option>
+                        <option value="25" selected>Tampilkan: 25 / halaman</option>
+                        <option value="50">Tampilkan: 50 / halaman</option>
+                        <option value="100">Tampilkan: 100 / halaman</option>
+                        <option value="all">Tampilkan: Semua</option>
+                    </select>
+
+                    <div class="job-count" id="jobCount">Memuat...</div>
+                </div>
+
+                <!-- Job Cards Container -->
+                <div class="job-list" id="jobListContainer">
+                    <!-- Loading Spinner initially -->
+                    <div class="loading-container">
+                        <div class="spinner"></div>
+                        <h3>Mengambil Data Lowongan...</h3>
+                        <p>Harap tunggu sementara sistem memuat data scraping lowongan.</p>
+                    </div>
+                </div>
+
+                <!-- Pagination Controls -->
+                <div class="pagination-bar" id="paginationBar" style="display: none;">
+                    <button class="page-btn" id="prevPageBtn">← Sebelumnya</button>
+                    <div class="page-info" id="pageInfo">Halaman 1 dari 1</div>
+                    <button class="page-btn" id="nextPageBtn">Selanjutnya →</button>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Job Detail Modal -->
+    <div class="modal-overlay" id="detailModal">
+        <div class="modal-container">
+            <button class="modal-close" id="modalCloseBtn">✕</button>
+            <div class="modal-content" id="modalContent">
+                <!-- Injected dynamically by app.js -->
+            </div>
+        </div>
+    </div>
+
+    <script src="matched_jobs.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
