@@ -152,11 +152,15 @@ function applyFilters() {
 
         // C. Source Filter
         if (sourceVal !== 'all') {
-            if (sourceVal === 'grab' && job.source !== 'Grab') return false;
-            if (sourceVal === 'talentics' && job.source !== 'Talentics') return false;
-            if (sourceVal === 'astra' && job.source !== 'Astra') return false;
-            if (sourceVal === 'ptc' && job.source !== 'Pertamina PTC') return false;
-            if (sourceVal === 'sawitpro' && job.source !== 'SawitPRO') return false;
+            const sourceMap = {
+                'grab': 'Grab',
+                'talentics': 'Talentics',
+                'astra': 'Astra',
+                'ptc': 'Pertamina PTC',
+                'sawitpro': 'SawitPRO'
+            };
+            const targetSource = sourceMap[sourceVal];
+            if (targetSource && job.source !== targetSource) return false;
         }
 
         // D. Experience Filter (Ravil has 1 Year Experience)
