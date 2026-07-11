@@ -215,6 +215,48 @@ function applyFilters() {
     renderJobList();
 }
 
+// Render Numbered Pagination Buttons
+function renderPaginationNumbers(totalPages) {
+    const container = document.getElementById('pageNumbersContainer');
+    if (!container) return;
+    container.innerHTML = '';
+
+    const pages = [];
+    if (totalPages <= 7) {
+        for (let i = 1; i <= totalPages; i++) pages.push(i);
+    } else {
+        if (currentPage <= 4) {
+            pages.push(1, 2, 3, 4, 5, '...', totalPages);
+        } else if (currentPage >= totalPages - 3) {
+            pages.push(1, '...', totalPages - 4, totalPages - 3, totalPages - 2, totalPages - 1, totalPages);
+        } else {
+            pages.push(1, '...', currentPage - 1, currentPage, currentPage + 1, '...', totalPages);
+        }
+    }
+
+    pages.forEach(p => {
+        if (p === '...') {
+            const span = document.createElement('span');
+            span.className = 'page-ellipsis';
+            span.textContent = '...';
+            container.appendChild(span);
+        } else {
+            const btn = document.createElement('button');
+            btn.className = `page-number-btn ${p === currentPage ? 'active' : ''}`;
+            btn.textContent = p;
+            btn.addEventListener('click', () => {
+                if (currentPage !== p) {
+                    currentPage = p;
+                    renderJobList();
+                    const filtersBar = document.querySelector('.filters-bar');
+                    if (filtersBar) filtersBar.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+            container.appendChild(btn);
+        }
+    });
+}
+
 // Render the Job List Cards
 function renderJobList() {
     jobListContainer.innerHTML = '';
@@ -251,7 +293,7 @@ function renderJobList() {
 
         if (paginationBar) {
             paginationBar.style.display = totalPages > 1 ? 'flex' : 'none';
-            if (pageInfo) pageInfo.textContent = `Halaman ${currentPage} dari ${totalPages}`;
+            renderPaginationNumbers(totalPages);
             if (prevPageBtn) prevPageBtn.disabled = (currentPage <= 1);
             if (nextPageBtn) nextPageBtn.disabled = (currentPage >= totalPages);
         }
