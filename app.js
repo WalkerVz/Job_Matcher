@@ -152,6 +152,7 @@ function applyFilters() {
 
         // C. Source Filter
         if (sourceVal !== 'all') {
+            if (sourceVal === 'grab' && job.source !== 'Grab') return false;
             if (sourceVal === 'talentics' && job.source !== 'Talentics') return false;
             if (sourceVal === 'astra' && job.source !== 'Astra') return false;
             if (sourceVal === 'ptc' && job.source !== 'Pertamina PTC') return false;
