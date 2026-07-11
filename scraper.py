@@ -675,6 +675,85 @@ def scrape_sawitpro(session):
                 
     return sawitpro_jobs
 
+def fetch_grab_job_detail(url):
+    try:
+        r = requests.get(url, timeout=10)
+        soup = BeautifulSoup(r.text, "html.parser")
+        main = soup.find("main") or soup.body
+        text_lines = [l.strip() for l in main.get_text("\n", strip=True).split("\n") if l.strip()]
+        desc_lines = []
+        for line in text_lines:
+            if any(k in line for k in ["Equal opportunity", "Featured Links", "Recruitment agencies"]):
+                break
+            desc_lines.append(line)
+        return "<p>" + "</p><p>".join(desc_lines[:30]) + "</p>"
+    except Exception:
+        return ""
+
+def scrape_grab_careers(session):
+    print("Scraping Grab Careers Indonesia jobs...")
+    grab_jobs = []
+    url = "https://www.grab.careers/en/jobs/?search=&country=Indonesia&pagesize=50"
+    try:
+        r = session.get(url, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        job_links = soup.find_all("a", href=re.compile(r"/en/jobs/\d+/"))
+        seen_urls = set()
+        for a in job_links:
+            title = a.get_text(strip=True)
+            href = a["href"]
+            if not href.startswith("http"):
+                href = "https://www.grab.careers" + href
+            if href in seen_urls or not title:
+                continue
+            seen_urls.add(href)
+            
+            job_id_match = re.search(r"/jobs/(\d+)/", href)
+            job_id = job_id_match.group(1) if job_id_match else str(len(grab_jobs))
+            
+            parent = a.find_parent("div") or a.find_parent("li")
+            location = "Jakarta, Indonesia"
+            if parent:
+                loc_el = parent.find(class_=re.compile(r"location|city|country", re.I))
+                if loc_el:
+                    location = loc_el.get_text(strip=True)
+                    
+            grab_jobs.append({
+                "id": f"grab_{job_id}",
+                "title": title,
+                "organization_id": "Grab",
+                "organization_name": "Grab Indonesia",
+                "slug": f"grab-{job_id}",
+                "type_name": "Full Time",
+                "level": "Profesional",
+                "location": location,
+                "workplace": "Hybrid / WFO",
+                "due_date": "Aktif",
+                "group": "Grab Tech & Operations",
+                "url": href,
+                "description": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: {location}</p>",
+                "requirements": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: {location}</p>",
+                "source": "Grab",
+                "logo": "https://www.grab.careers/favicon.ico"
+            })
+    except Exception as e:
+        print(f"Error scraping Grab Careers: {e}")
+        
+    print(f"Found {len(grab_jobs)} Grab Indonesia jobs.")
+    print(f"Fetching details for {min(len(grab_jobs), 20)} Grab vacancies concurrently...")
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_job = {executor.submit(fetch_grab_job_detail, job["url"]): job for job in grab_jobs[:20]}
+        for future in as_completed(future_to_job):
+            job = future_to_job[future]
+            try:
+                detail_html = future.result()
+                if detail_html:
+                    job["description"] = detail_html
+                    job["requirements"] = detail_html
+            except Exception:
+                pass
+    return grab_jobs
+
 def main():
     session = requests.Session()
     session.headers.update({
@@ -839,6 +918,12 @@ def main():
     print("\nStep 3d: Scraping SawitPRO vacancies...")
     sawitpro_jobs = scrape_sawitpro(session)
     for job in sawitpro_jobs:
+        matched_job = evaluate_job_match(job)
+        matched_jobs.append(matched_job)
+
+    print("\nStep 3e: Scraping Grab Careers Indonesia vacancies...")
+    grab_jobs = scrape_grab_careers(session)
+    for job in grab_jobs:
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 
