@@ -20,11 +20,22 @@ const pageInfo = document.getElementById('pageInfo');
 const detailModal = document.getElementById('detailModal');
 const modalCloseBtn = document.getElementById('modalCloseBtn');
 const modalContent = document.getElementById('modalContent');
+const mobileFilterToggleBtn = document.getElementById('mobileFilterToggleBtn');
+const filterControlsWrapper = document.getElementById('filterControlsWrapper');
+const filterCountBadge = document.getElementById('filterCountBadge');
 
 // Initialize Dashboard
 document.addEventListener('DOMContentLoaded', async () => {
     // 1. Fetch data
     await loadJobsData();
+
+    // Setup mobile filter toggle
+    if (mobileFilterToggleBtn && filterControlsWrapper) {
+        mobileFilterToggleBtn.addEventListener('click', () => {
+            filterControlsWrapper.classList.toggle('active');
+            mobileFilterToggleBtn.classList.toggle('active');
+        });
+    }
 
     // 2. Setup event listeners
     searchInput.addEventListener('input', () => { currentPage = 1; applyFilters(); });
@@ -184,6 +195,21 @@ function applyFilters() {
             const dateB = b.due_date ? new Date(b.due_date) : new Date('2099-12-31');
             return dateA - dateB;
         });
+    }
+
+    // Update mobile filter badge count
+    if (filterCountBadge) {
+        let activeCount = 0;
+        if (matchFilter && matchFilter.value !== 'all') activeCount++;
+        if (sourceFilter && sourceFilter.value !== 'all') activeCount++;
+        if (expFilter && expFilter.value !== 'all') activeCount++;
+        if (sortSelect && sortSelect.value !== 'score') activeCount++;
+        if (activeCount > 0) {
+            filterCountBadge.style.display = 'inline-block';
+            filterCountBadge.textContent = activeCount;
+        } else {
+            filterCountBadge.style.display = 'none';
+        }
     }
 
     renderJobList();

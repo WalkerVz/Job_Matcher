@@ -83,50 +83,58 @@
             <main class="main-section">
                 <!-- Search and Filters Bar -->
                 <div class="filters-bar">
-                    <div class="search-input-wrapper">
-                        <span class="search-icon">🔍</span>
-                        <input type="text" id="searchInput" placeholder="Cari posisi atau nama perusahaan...">
+                    <div class="filters-top-row">
+                        <div class="search-input-wrapper">
+                            <span class="search-icon">🔍</span>
+                            <input type="text" id="searchInput" placeholder="Cari posisi atau nama perusahaan...">
+                        </div>
+                        <button id="mobileFilterToggleBtn" class="mobile-filter-toggle-btn" aria-label="Toggle Filter">
+                            <span>🎛️ Filter</span>
+                            <span id="filterCountBadge" class="filter-count-badge" style="display: none;">0</span>
+                        </button>
                     </div>
 
-                    <select id="matchFilter" class="filter-select">
-                        <option value="all">Semua Kualitas Match</option>
-                        <option value="high">Kecocokan Tinggi (Score &gt;= 80%)</option>
-                        <option value="medium">Kecocokan Sedang (Score 50% - 79%)</option>
-                        <option value="low">Kecocokan Rendah (Score &lt; 50%)</option>
-                        <option value="compatible">Hanya yang Kompatibel (Tanpa Blocker)</option>
-                        <option value="blocked">Ada Blocker (IPK/Usia/Gender)</option>
-                    </select>
+                    <div class="filter-controls-wrapper" id="filterControlsWrapper">
+                        <select id="matchFilter" class="filter-select">
+                            <option value="all">Semua Kualitas Match</option>
+                            <option value="high">Kecocokan Tinggi (Score &gt;= 80%)</option>
+                            <option value="medium">Kecocokan Sedang (Score 50% - 79%)</option>
+                            <option value="low">Kecocokan Rendah (Score &lt; 50%)</option>
+                            <option value="compatible">Hanya yang Kompatibel (Tanpa Blocker)</option>
+                            <option value="blocked">Ada Blocker (IPK/Usia/Gender)</option>
+                        </select>
 
-                    <select id="sourceFilter" class="filter-select">
-                        <option value="all">Semua Platform (Talentics, Astra, PTC & SawitPRO)</option>
-                        <option value="talentics">Hanya Hulu Migas (Talentics)</option>
-                        <option value="astra">Hanya Astra Career</option>
-                        <option value="ptc">Hanya Pertamina PTC</option>
-                        <option value="sawitpro">Hanya SawitPRO</option>
-                    </select>
+                        <select id="sourceFilter" class="filter-select">
+                            <option value="all">Semua Platform (Talentics, Astra, PTC & SawitPRO)</option>
+                            <option value="talentics">Hanya Hulu Migas (Talentics)</option>
+                            <option value="astra">Hanya Astra Career</option>
+                            <option value="ptc">Hanya Pertamina PTC</option>
+                            <option value="sawitpro">Hanya SawitPRO</option>
+                        </select>
 
-                    <select id="expFilter" class="filter-select">
-                        <option value="all">Semua Syarat Pengalaman</option>
-                        <option value="eligible">≤ 1 Tahun (Sesuai Pengalamanmu 1 Thn)</option>
-                        <option value="freshgrad">Terbuka Fresh Graduate (0 Tahun)</option>
-                        <option value="experienced">Syarat &gt; 1 Tahun (Mid/Senior)</option>
-                    </select>
+                        <select id="expFilter" class="filter-select">
+                            <option value="all">Semua Syarat Pengalaman</option>
+                            <option value="eligible">≤ 1 Tahun (Sesuai Pengalamanmu 1 Thn)</option>
+                            <option value="freshgrad">Terbuka Fresh Graduate (0 Tahun)</option>
+                            <option value="experienced">Syarat &gt; 1 Tahun (Mid/Senior)</option>
+                        </select>
 
-                    <select id="sortSelect" class="filter-select">
-                        <option value="score">Urutkan: Match Score Tertinggi</option>
-                        <option value="title">Urutkan: Judul (A-Z)</option>
-                        <option value="due_date">Urutkan: Batas Tanggal Terdekat</option>
-                    </select>
+                        <select id="sortSelect" class="filter-select">
+                            <option value="score">Urutkan: Match Score Tertinggi</option>
+                            <option value="title">Urutkan: Judul (A-Z)</option>
+                            <option value="due_date">Urutkan: Batas Tanggal Terdekat</option>
+                        </select>
 
-                    <select id="perPageSelect" class="filter-select">
-                        <option value="10">Tampilkan: 10 / halaman</option>
-                        <option value="25" selected>Tampilkan: 25 / halaman</option>
-                        <option value="50">Tampilkan: 50 / halaman</option>
-                        <option value="100">Tampilkan: 100 / halaman</option>
-                        <option value="all">Tampilkan: Semua</option>
-                    </select>
+                        <select id="perPageSelect" class="filter-select">
+                            <option value="10">Tampilkan: 10 / halaman</option>
+                            <option value="25" selected>Tampilkan: 25 / halaman</option>
+                            <option value="50">Tampilkan: 50 / halaman</option>
+                            <option value="100">Tampilkan: 100 / halaman</option>
+                            <option value="all">Tampilkan: Semua</option>
+                        </select>
 
-                    <div class="job-count" id="jobCount">Memuat...</div>
+                        <div class="job-count" id="jobCount">Memuat...</div>
+                    </div>
                 </div>
 
                 <!-- Job Cards Container -->
