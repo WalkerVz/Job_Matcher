@@ -1,4 +1,4 @@
-const CACHE_NAME = 'career-radar-v2';
+const CACHE_NAME = 'career-radar-v3';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -28,13 +28,24 @@ self.addEventListener('activate', (event) => {
           }
         })
       );
-    })
+    }).then(() => self.clients.claim())
   );
-  self.clients.claim();
 });
 
+// Network-first strategy: Always try network first so mobile app always gets freshest data
 self.addEventListener('fetch', (event) => {
   event.respondWith(
-    fetch(event.request).catch(() => caches.match(event.request))
+    fetch(event.request)
+      .then((networkResponse) => {
+        // Optionally update cache with fresh response
+        if (event.request.method === 'GET' && networkResponse.status === 200) {
+          const responseClone = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, responseClone);
+          });
+        }
+        return networkResponse;
+      })
+      .catch(() => caches.match(event.request))
   );
 });

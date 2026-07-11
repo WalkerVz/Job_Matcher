@@ -26,20 +26,11 @@
       ]
     },
     {
-      "source": "/matched_jobs.js",
+      "source": "/(.*).(html|js|css|json)",
       "headers": [
         {
           "key": "Cache-Control",
-          "value": "public, max-age=3600, must-revalidate"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).(css|js|svg|png|jpg|ico)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=86400, stale-while-revalidate=604800"
+          "value": "no-cache, no-store, must-revalidate"
         }
       ]
     }
