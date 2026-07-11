@@ -250,11 +250,11 @@ function renderPaginationNumbers(totalPages) {
     });
 }
 
-// Smoothly scroll to the top of the job list (filter bar position)
+// Smoothly scroll to the top of the job list (non-sticky anchor position)
 function scrollToJobListTop() {
-    const filtersBar = document.querySelector('.filters-bar');
-    if (filtersBar) {
-        const topPos = filtersBar.getBoundingClientRect().top + window.scrollY - 12;
+    const anchor = document.getElementById('jobListTopAnchor') || document.querySelector('.main-section');
+    if (anchor) {
+        const topPos = anchor.getBoundingClientRect().top + window.scrollY - 10;
         window.scrollTo({
             top: Math.max(0, topPos),
             behavior: 'smooth'
