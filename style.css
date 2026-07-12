@@ -1804,84 +1804,95 @@ header p {
     }
 
     .modal-content {
-        padding: 0.75rem 0.85rem 1rem;
+        padding: 0.6rem 0.75rem 115px !important;
         overflow-y: auto;
         flex: 1;
     }
 
     .modal-header-section {
-        padding-right: 2.5rem;
-        margin-bottom: 0.75rem;
-        padding-bottom: 0.75rem;
+        padding-right: 2.2rem;
+        margin-bottom: 0.5rem;
+        padding-bottom: 0.5rem;
     }
 
     .modal-job-title {
-        font-size: 1.1rem;
-        line-height: 1.3;
-        margin-bottom: 0.35rem;
+        font-size: 1rem;
+        line-height: 1.25;
+        margin-bottom: 0.25rem;
     }
 
     .match-evaluation-section {
-        padding: 0.75rem;
-        margin-bottom: 1rem;
+        padding: 0.5rem;
+        margin-bottom: 0.65rem;
     }
 
     .match-evaluation-title {
-        font-size: 0.95rem;
-        margin-bottom: 0.65rem;
+        font-size: 0.84rem;
+        margin-bottom: 0.4rem;
     }
 
     .match-checklist {
         grid-template-columns: 1fr;
-        gap: 0.45rem;
+        gap: 0.35rem;
     }
 
     .checklist-item,
     .checklist-item-full {
         grid-column: span 1 !important;
-        padding: 0.55rem 0.7rem;
+        padding: 0.4rem 0.6rem;
         border-radius: 8px;
-        background: rgba(255, 255, 255, 0.035);
-        border: 1px solid rgba(255, 255, 255, 0.07);
-        gap: 0.5rem;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(255, 255, 255, 0.06);
+        gap: 0.4rem;
     }
 
     .checklist-info h5 {
-        font-size: 0.74rem;
-        margin-bottom: 0.1rem;
+        font-size: 0.7rem;
+        margin-bottom: 0.08rem;
     }
 
     .checklist-info p {
-        font-size: 0.79rem;
-        line-height: 1.35;
+        font-size: 0.75rem;
+        line-height: 1.3;
     }
 
+    /* Native App Horizontal Swipable Chips Bar (1 Row Height) */
     .tab-headers {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 0.35rem;
-        background: rgba(255, 255, 255, 0.04);
-        padding: 0.35rem;
-        border-radius: 10px;
-        border-bottom: none;
-        margin-bottom: 0.85rem;
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 0.4rem !important;
+        background: transparent !important;
+        padding: 0.15rem 0 0.5rem !important;
+        border-radius: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        margin-bottom: 0.65rem;
+        scrollbar-width: none !important;
+    }
+
+    .tab-headers::-webkit-scrollbar {
+        display: none !important;
     }
 
     .tab-btn {
+        flex: 0 0 auto !important;
         text-align: center;
-        padding: 0.5rem 0.35rem;
-        border-radius: 7px;
-        font-size: 0.76rem;
-        line-height: 1.25;
-        min-height: 34px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        padding: 0.38rem 0.75rem;
+        border-radius: 999px;
+        font-size: 0.75rem;
+        min-height: 30px;
+        background: rgba(255, 255, 255, 0.06);
+        border: 1px solid rgba(255, 255, 255, 0.12);
+        color: #cbd5e1;
+        white-space: nowrap !important;
     }
 
     .tab-btn.active {
         background: var(--primary-gradient);
+        border-color: #06b6d4;
         color: white;
+        font-weight: 700;
     }
 
     .tab-btn.active::after {
@@ -1893,25 +1904,51 @@ header p {
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(15, 23, 42, 0.96);
-        backdrop-filter: blur(16px);
-        border-top: 1px solid var(--border-color);
-        padding: 0.55rem 0.85rem;
-        margin-top: 0.75rem;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 0.75rem;
+        margin-top: 0.5rem;
+        display: flex !important;
+        flex-direction: column !important;
         gap: 0.45rem;
-        z-index: 20;
+        z-index: 50;
     }
 
-    .btn-secondary,
-    .btn-primary {
-        flex: 1 1 auto;
+    .modal-footer-row-top {
+        display: flex !important;
+        width: 100%;
+        gap: 0.45rem;
+    }
+
+    .btn-bookmark-modal {
+        flex: 1 1 45% !important;
+        padding: 0.55rem 0.6rem !important;
+        font-size: 0.78rem !important;
+        border-radius: 9px !important;
+        text-align: center;
+        white-space: nowrap;
+    }
+
+    .status-select-modal {
+        flex: 1 1 55% !important;
+        padding: 0.55rem 0.6rem !important;
+        font-size: 0.78rem !important;
+        border-radius: 9px !important;
+        background: rgba(30, 41, 59, 0.95);
+    }
+
+    .btn-apply-modal {
+        width: 100% !important;
         text-align: center;
         justify-content: center;
-        padding: 0.6rem 0.75rem;
-        font-size: 0.82rem;
+        padding: 0.6rem 0.85rem !important;
+        font-size: 0.82rem !important;
+        font-weight: 700 !important;
+        border-radius: 9px !important;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }
 
