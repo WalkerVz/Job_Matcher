@@ -952,11 +952,21 @@ header p {
 /* Apply CTA Footer in Modal */
 .modal-footer {
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 1rem;
     border-top: 1px solid var(--border-color);
-    padding-top: 1.5rem;
-    margin-top: 2rem;
+    padding-top: 1.25rem;
+    margin-top: 1.75rem;
+}
+
+.modal-footer-top-row,
+.modal-footer-bottom-row {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
 }
 
 .btn-secondary {
@@ -1705,22 +1715,63 @@ header p {
         bottom: 0;
         left: 0;
         right: 0;
-        background: rgba(15, 23, 42, 0.96);
-        backdrop-filter: blur(16px);
+        background: rgba(15, 23, 42, 0.98);
+        backdrop-filter: blur(20px);
         border-top: 1px solid var(--border-color);
-        padding: 0.9rem 1.25rem;
-        margin-top: 1.5rem;
+        padding: 0.75rem 1rem;
+        margin-top: 1.25rem;
         display: flex;
-        flex-direction: column-reverse;
-        gap: 0.6rem;
-        z-index: 20;
+        flex-direction: column;
+        gap: 0.65rem;
+        z-index: 30;
     }
-    .btn-secondary,
-    .btn-primary {
+    .modal-footer-top-row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 0.5rem;
         width: 100%;
+    }
+    .modal-footer-top-row .btn-bookmark-modal {
+        flex: 1;
+        padding: 0.55rem 0.5rem;
+        font-size: 0.78rem;
+        justify-content: center;
+        display: inline-flex;
+        align-items: center;
+        white-space: nowrap;
+    }
+    .modal-footer-top-row .status-select-modal {
+        flex: 1.25;
+        padding: 0.55rem 0.5rem;
+        font-size: 0.78rem;
+        width: auto;
+    }
+    .modal-footer-bottom-row {
+        display: flex;
+        align-items: center;
+        gap: 0.55rem;
+        width: 100%;
+        flex-wrap: nowrap;
+    }
+    .modal-close-btn-footer {
+        flex: 0 0 80px !important;
+        width: 80px !important;
+        padding: 0.68rem 0.5rem !important;
+        font-size: 0.84rem !important;
         text-align: center;
         justify-content: center;
-        padding: 0.85rem 1rem;
-        font-size: 0.92rem;
+    }
+    .modal-apply-btn-footer {
+        flex: 1 !important;
+        width: auto !important;
+        padding: 0.68rem 0.85rem !important;
+        font-size: 0.86rem !important;
+        font-weight: 700;
+        text-align: center;
+        justify-content: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 }

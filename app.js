@@ -909,9 +909,9 @@ function openJobModal(job) {
         </div>
         
         <div class="modal-footer">
-            <div class="modal-footer-left">
+            <div class="modal-footer-top-row">
                 <button class="btn-bookmark-modal ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(event, '${job.id}'); openJobModal(allJobs.find(j => j.id == '${job.id}'));">
-                    ${isBookmarked ? '★ Tersimpan' : '☆ Simpan ke Wishlist'}
+                    ${isBookmarked ? '★ Tersimpan' : '☆ Wishlist'}
                 </button>
                 <select class="status-select-modal" onchange="changeApplicationStatus('${job.id}', this.value)">
                     <option value="" ${!appStatus ? 'selected' : ''}>📌 Belum Dilamar</option>
@@ -920,10 +920,10 @@ function openJobModal(job) {
                     <option value="accepted" ${appStatus === 'accepted' ? 'selected' : ''}>🎉 Diterima</option>
                 </select>
             </div>
-            <div class="modal-footer-right">
-                <button class="btn-secondary" onclick="closeModal()">Tutup</button>
-                <a href="${job.url}" target="_blank" class="btn-primary">
-                    Lamar di Portal Resmi (${job.source}) ↗
+            <div class="modal-footer-bottom-row">
+                <button class="btn-secondary modal-close-btn-footer" onclick="closeModal()">Tutup</button>
+                <a href="${job.url}" target="_blank" class="btn-primary modal-apply-btn-footer">
+                    Lamar di Portal (${job.source || 'Resmi'}) ↗
                 </a>
             </div>
         </div>
