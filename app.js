@@ -481,6 +481,54 @@ function openJobModal(job) {
         ? `<img src="${job.logo}" class="company-logo" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 8px;" alt="${job.organization_name}">`
         : '';
 
+    const nlp = job.nlp_breakdown || {};
+    const mandSkillsTags = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
+        ? nlp.mandatory_skills.map(s => `<span class="nlp-skill-badge mandatory">${s}</span>`).join('')
+        : `<span class="nlp-skill-badge neutral">Umum / Tidak Spesifik</span>`;
+
+    const plusSkillsTags = (nlp.plus_skills && nlp.plus_skills.length > 0)
+        ? nlp.plus_skills.map(s => `<span class="nlp-skill-badge plus">+ ${s}</span>`).join('')
+        : '';
+
+    const keySentencesList = (nlp.key_sentences && nlp.key_sentences.length > 0)
+        ? nlp.key_sentences.map(sent => `<li>• ${sent}</li>`).join('')
+        : '<li>• Silakan lihat detail lengkap di tab Persyaratan Detail di bawah.</li>';
+
+    const nlpSectionHTML = `
+        <div class="nlp-smart-box">
+            <div class="nlp-smart-header">
+                <span class="nlp-icon">🤖</span>
+                <div class="nlp-header-text">
+                    <h4>AI / NLP Smart Requirement Breakdown</h4>
+                    <p>Ringkasan otomatis hasil ekstraksi bahasa alami dari persyaratan lowongan ini</p>
+                </div>
+            </div>
+            <div class="nlp-smart-grid">
+                <div class="nlp-item">
+                    <h5>🎓 Konteks Pendidikan</h5>
+                    <p>${nlp.education_summary || 'S1 / D3 relevan atau setara'}</p>
+                </div>
+                <div class="nlp-item">
+                    <h5>⏳ Konteks Pengalaman</h5>
+                    <p>${nlp.experience_summary || '1 Tahun Pengalaman / Fresh Graduate'}</p>
+                </div>
+            </div>
+            <div class="nlp-skills-row">
+                <h5>🛠️ Tech Stack Wajib (Mandatory):</h5>
+                <div class="nlp-tags">${mandSkillsTags}</div>
+            </div>
+            ${plusSkillsTags ? `
+            <div class="nlp-skills-row" style="margin-top: 0.65rem;">
+                <h5>🌟 Keahlian Nilai Tambah (Nice-to-have):</h5>
+                <div class="nlp-tags">${plusSkillsTags}</div>
+            </div>` : ''}
+            <div class="nlp-sentences-box">
+                <h5>📌 Kalimat Kunci Persyaratan Terdeteksi:</h5>
+                <ul class="nlp-sentences-list">${keySentencesList}</ul>
+            </div>
+        </div>
+    `;
+
     modalContent.innerHTML = `
         <div class="modal-header-section">
             <h2 class="modal-job-title">${job.title}</h2>
@@ -499,6 +547,8 @@ function openJobModal(job) {
                 ${job.due_date ? `<span class="meta-tag highlight">📅 Deadline: ${job.due_date}</span>` : ''}
             </div>
         </div>
+        
+        ${nlpSectionHTML}
         
         <!-- Checklist Match Section -->
         <div class="match-evaluation-section">

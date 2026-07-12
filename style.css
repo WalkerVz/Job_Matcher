@@ -645,6 +645,121 @@ header p {
     margin-bottom: 1rem;
 }
 
+/* AI / NLP Smart Requirement Breakdown Box */
+.nlp-smart-box {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(168, 85, 247, 0.08));
+    border: 1px solid rgba(139, 92, 246, 0.35);
+    border-radius: var(--radius-md);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.12);
+}
+.nlp-smart-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid rgba(139, 92, 246, 0.25);
+    padding-bottom: 0.75rem;
+}
+.nlp-icon {
+    font-size: 1.6rem;
+}
+.nlp-header-text h4 {
+    font-family: var(--font-heading);
+    font-size: 1.05rem;
+    color: #c4b5fd;
+    margin: 0;
+}
+.nlp-header-text p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin: 0.1rem 0 0;
+}
+.nlp-smart-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+}
+@media (max-width: 640px) {
+    .nlp-smart-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.nlp-item {
+    background: rgba(15, 23, 42, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+}
+.nlp-item h5 {
+    font-size: 0.75rem;
+    color: #a78bfa;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 0.25rem;
+}
+.nlp-item p {
+    font-size: 0.86rem;
+    color: var(--text-primary);
+    margin: 0;
+    line-height: 1.4;
+}
+.nlp-skills-row h5 {
+    font-size: 0.8rem;
+    color: #ddd6fe;
+    margin-bottom: 0.4rem;
+}
+.nlp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+}
+.nlp-skill-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    padding: 0.25rem 0.65rem;
+    border-radius: 999px;
+}
+.nlp-skill-badge.mandatory {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #34d399;
+}
+.nlp-skill-badge.plus {
+    background: rgba(245, 158, 11, 0.2);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    color: #fbbf24;
+}
+.nlp-skill-badge.neutral {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--text-secondary);
+}
+.nlp-sentences-box {
+    margin-top: 1rem;
+    background: rgba(15, 23, 42, 0.5);
+    border-radius: 10px;
+    padding: 0.75rem 0.9rem;
+}
+.nlp-sentences-box h5 {
+    font-size: 0.78rem;
+    color: #a78bfa;
+    margin-bottom: 0.4rem;
+}
+.nlp-sentences-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.nlp-sentences-list li {
+    font-size: 0.83rem;
+    color: #e2e8f0;
+    margin-bottom: 0.35rem;
+    line-height: 1.45;
+}
+
 /* Matching Details Checklist */
 .match-evaluation-section {
     background: rgba(255, 255, 255, 0.02);

@@ -106,6 +106,87 @@ def parse_exp_req(req_text):
     return 0
 
 
+class RequirementNLPParser:
+    """
+    Lightweight Natural Language Processing (NLP) Parser for Job Requirements.
+    Performs sentence segmentation, requirement classification (Mandatory vs Nice-to-have),
+    and skill taxonomy NER extraction.
+    """
+    SKILL_TAXONOMY = {
+        "Languages & Core": ["Python", "SQL", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
+        "Data Science & Analytics": ["Machine Learning", "Deep Learning", "NLP", "Pandas", "NumPy", "Scikit-Learn", "PyTorch", "TensorFlow", "Data Analysis", "Statistical Modeling", "Analytics"],
+        "BI & Visualization": ["Power BI", "PowerBI", "Tableau", "Looker", "Metabase", "Excel", "Data Studio"],
+        "Engineering & Tools": ["Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL"],
+        "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Agile", "Scrum", "Project Management"]
+    }
+
+    @classmethod
+    def parse(cls, job):
+        raw = (job.get("requirements", "") + " " + job.get("description", ""))
+        text = clean_html(raw)
+        
+        # Segment into logical sentences or bullet items
+        sentences = [s.strip() for s in re.split(r'[\n•\-\*.]+', text) if len(s.strip()) > 15]
+        
+        mandatory_skills = set()
+        plus_skills = set()
+        key_requirements = []
+        edu_summary = "S1 / D3 jurusan relevan atau setara"
+        exp_summary = "1 Tahun Pengalaman / Fresh Graduate"
+        accepts_fresh = False
+        
+        mandatory_triggers = ["wajib", "harus", "minimal", "required", "must", "essential", "syarat", "qualification"]
+        plus_triggers = ["diutamakan", "nilai tambah", "nilai plus", "plus point", "preferred", "advantage", "bonus", "nice to have"]
+        
+        for sent in sentences:
+            sent_lower = sent.lower()
+            
+            # Check education context
+            if any(k in sent_lower for k in ["s1", "d3", "sarjana", "bachelor", "pendidikan"]):
+                if len(sent) < 130 and "pendidikan" in sent_lower:
+                    edu_summary = sent
+            
+            # Check experience context
+            if any(k in sent_lower for k in ["fresh graduate", "lulusan baru", "0 tahun", "magang", "internship"]):
+                accepts_fresh = True
+                if len(sent) < 140:
+                    exp_summary = sent
+            elif any(k in sent_lower for k in ["pengalaman", "experience", "tahun"]):
+                if len(sent) < 140 and exp_summary == "1 Tahun Pengalaman / Fresh Graduate":
+                    exp_summary = sent
+            
+            # Check skill taxonomy match
+            is_plus = any(t in sent_lower for t in plus_triggers)
+            is_mand = any(t in sent_lower for t in mandatory_triggers)
+            
+            found_skills = []
+            for category, skills in cls.SKILL_TAXONOMY.items():
+                for sk in skills:
+                    pattern = r'\b' + re.escape(sk.lower()) + r'\b'
+                    if re.search(pattern, sent_lower):
+                        found_skills.append(sk)
+                        if is_plus and not is_mand:
+                            plus_skills.add(sk)
+                        else:
+                            mandatory_skills.add(sk)
+            
+            # Save informative key requirements sentences
+            if found_skills or is_mand or ("pengalaman" in sent_lower):
+                if len(key_requirements) < 4 and sent not in key_requirements:
+                    key_requirements.append(sent)
+        
+        if accepts_fresh:
+            exp_summary = "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (" + exp_summary[:90] + "...)"
+            
+        return {
+            "education_summary": edu_summary[:130],
+            "experience_summary": exp_summary[:150],
+            "mandatory_skills": sorted(list(mandatory_skills)),
+            "plus_skills": sorted(list(plus_skills)),
+            "key_sentences": key_requirements[:3]
+        }
+
+
 def evaluate_job_match(job):
     # Requirements and Description
     req_html = job.get("requirements", "")
@@ -362,6 +443,8 @@ def evaluate_job_match(job):
         # Cap match score at 40
         final_score = min(score, 40)
         
+    nlp_breakdown = RequirementNLPParser.parse(job)
+        
     job_details = {
         "id": job.get("id"),
         "title": job.get("title"),
@@ -380,6 +463,7 @@ def evaluate_job_match(job):
         "match_score": final_score,
         "is_blocked": is_blocked,
         "match_details": match_details,
+        "nlp_breakdown": nlp_breakdown,
         "parsed_requirements": {
             "gpa": gpa_req,
             "age": age_req,
