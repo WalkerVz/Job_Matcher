@@ -1162,6 +1162,192 @@ header p {
 }
 
 /* =========================================
+   Wishlist, Bookmarks & Cover Letter Generator
+   ========================================= */
+.wishlist-toggle-btn {
+    background: rgba(245, 158, 11, 0.1);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: #fcd34d;
+    padding: 0.65rem 1.1rem;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.88rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+}
+.wishlist-toggle-btn:hover {
+    background: rgba(245, 158, 11, 0.2);
+    border-color: #fbbf24;
+}
+.wishlist-toggle-btn.active {
+    background: linear-gradient(135deg, #f59e0b, #d97706);
+    color: #ffffff;
+    border-color: #f59e0b;
+    box-shadow: 0 4px 15px rgba(245, 158, 11, 0.35);
+}
+
+/* Bookmark Star on Card Header */
+.bookmark-btn {
+    background: transparent;
+    border: none;
+    color: #64748b;
+    font-size: 1.3rem;
+    cursor: pointer;
+    transition: var(--transition);
+    padding: 0.2rem 0.4rem;
+    line-height: 1;
+}
+.bookmark-btn:hover {
+    color: #fcd34d;
+    transform: scale(1.15);
+}
+.bookmark-btn.active {
+    color: #f59e0b;
+    text-shadow: 0 0 12px rgba(245, 158, 11, 0.6);
+}
+
+/* Application Status Pill on Card Header */
+.app-status-pill {
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    display: inline-block;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+}
+.app-status-pill.applied {
+    background: rgba(59, 130, 246, 0.2);
+    border: 1px solid rgba(59, 130, 246, 0.4);
+    color: #60a5fa;
+}
+.app-status-pill.interview {
+    background: rgba(168, 85, 247, 0.2);
+    border: 1px solid rgba(168, 85, 247, 0.4);
+    color: #c084fc;
+}
+.app-status-pill.accepted {
+    background: rgba(16, 185, 129, 0.2);
+    border: 1px solid rgba(16, 185, 129, 0.4);
+    color: #34d399;
+}
+
+/* Cover Letter Tab & Pitch Generator */
+.pitch-tab-btn {
+    color: #fcd34d !important;
+}
+.cover-letter-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.cover-letter-header h4 {
+    font-size: 1.05rem;
+    color: #fcd34d;
+    margin-bottom: 0.25rem;
+}
+.cover-letter-header p {
+    font-size: 0.83rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+.pitch-section {
+    background: rgba(15, 23, 42, 0.7);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.1rem;
+}
+.pitch-card-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.65rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+.pitch-card-title h5 {
+    font-size: 0.84rem;
+    color: #e2e8f0;
+    margin: 0;
+}
+.btn-copy {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.78rem;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn-copy:hover {
+    background: var(--accent-cyan);
+    color: white;
+    border-color: var(--accent-cyan);
+}
+.btn-copy.copied {
+    background: var(--accent-emerald);
+    color: white;
+    border-color: var(--accent-emerald);
+}
+.pitch-textarea {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    color: #f8fafc;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 0.84rem;
+    line-height: 1.5;
+    resize: vertical;
+}
+
+/* Modal Footer Interactive Controls */
+.modal-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.modal-footer-left,
+.modal-footer-right {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+.btn-bookmark-modal {
+    background: rgba(245, 158, 11, 0.12);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    color: #fcd34d;
+    padding: 0.65rem 1rem;
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+}
+.btn-bookmark-modal:hover,
+.btn-bookmark-modal.active {
+    background: #f59e0b;
+    color: white;
+}
+.status-select-modal {
+    background: #1e293b;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 0.65rem 0.85rem;
+    border-radius: var(--radius-sm);
+    font-size: 0.86rem;
+    cursor: pointer;
+}
+
+/* =========================================
    Mobile, Smartphone & Tablet Optimization
    ========================================= */
 @media (max-width: 1024px) {

@@ -3,6 +3,7 @@ let allJobs = [];
 let filteredJobs = [];
 let currentPage = 1;
 let itemsPerPage = 25;
+let wishlistOnly = false;
 
 // Debounce helper – prevents search firing on every keypress
 function debounce(fn, delay = 300) {
@@ -20,6 +21,8 @@ const sourceFilter = document.getElementById('sourceFilter');
 const expFilter = document.getElementById('expFilter');
 const sortSelect = document.getElementById('sortSelect');
 const perPageSelect = document.getElementById('perPageSelect');
+const wishlistToggleBtn = document.getElementById('wishlistToggleBtn');
+const wishlistCountEl = document.getElementById('wishlistCount');
 const jobCountEl = document.getElementById('jobCount');
 const jobListContainer = document.getElementById('jobListContainer');
 const paginationBar = document.getElementById('paginationBar');
@@ -148,6 +151,106 @@ function renderError(title, subtitle) {
     jobCountEl.textContent = '0 Lowongan';
 }
 
+// Load saved jobs state from localStorage
+function getSavedJobsState() {
+    try {
+        return JSON.parse(localStorage.getItem('savedJobMatcherState') || '{}');
+    } catch (e) {
+        return {};
+    }
+}
+
+function updateWishlistCountBadge() {
+    if (!wishlistCountEl) return;
+    const state = getSavedJobsState();
+    const count = Object.values(state).filter(s => s && s.isBookmarked).length;
+    wishlistCountEl.textContent = count;
+}
+
+window.toggleBookmark = function(event, jobId) {
+    if (event) event.stopPropagation();
+    const state = getSavedJobsState();
+    const idStr = String(jobId);
+    const isBookmarked = state[idStr] ? !state[idStr].isBookmarked : true;
+    state[idStr] = { ...(state[idStr] || {}), isBookmarked };
+    localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
+    updateWishlistCountBadge();
+    applyFilters();
+};
+
+window.changeApplicationStatus = function(jobId, statusValue) {
+    const state = getSavedJobsState();
+    const idStr = String(jobId);
+    state[idStr] = { ...(state[idStr] || {}), status: statusValue, isBookmarked: true };
+    localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
+    updateWishlistCountBadge();
+    applyFilters();
+};
+
+function generateCoverLetterHTML(job) {
+    const nlp = job.nlp_breakdown || {};
+    const requiredSkills = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
+        ? nlp.mandatory_skills.join(', ')
+        : 'analisis data, pemecahan masalah, dan keahlian teknis relevan';
+        
+    const companyName = job.organization_name || 'Perusahaan';
+    const jobTitle = job.title || 'Posisi yang dilamar';
+    
+    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Ravil, lulusan S1 Teknik Informatika (IPK 3.65) dengan pengalaman 1 tahun di analisis data & industri hulu migas/teknologi. Saya memiliki keahlian mendalam pada ${requiredSkills} yang sesuai dengan persyaratan posisi ${jobTitle}.\n\nSaya sangat antusias untuk berdiskusi lebih lanjut mengenai bagaimana keahlian saya dapat memberikan dampak positif bagi ${companyName}. Terlampir resume lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
+
+    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Ravil, a Computer Science graduate (GPA 3.65) with 1 year of experience in data analytics & upstream oil and gas/tech operations. I bring strong hands-on expertise in ${requiredSkills}, aligning directly with your requirements for the ${jobTitle} role.\n\nI would welcome the opportunity to discuss how my background and analytical skillset can contribute to ${companyName}. Please find my resume attached for your review. Thank you.`;
+
+    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan diri untuk bergabung dengan tim Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dengan IPK 3.65 serta memiliki pengalaman kerja 1 tahun yang berfokus pada analisis data dan industri hulu migas/teknologi. Selama perjalanan karier dan pendidikan saya, saya terbiasa menggunakan dan mengimplementasikan ${requiredSkills}.\n\nSaya memiliki motivasi tinggi, kemampuan analisis yang kuat, serta siap beradaptasi dengan cepat untuk berkontribusi terhadap pencapaian target ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar saya dapat menjelaskan lebih lanjut mengenai kualifikasi saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\nRavil`;
+
+    return `
+        <div class="cover-letter-container">
+            <div class="cover-letter-header">
+                <div>
+                    <h4>✨ Auto-Generated Application Pitch & Cover Letter</h4>
+                    <p>Dibuat otomatis dari profilmu (S1 Informatika, IPK 3.65, 1 Thn Exp) dicocokkan dengan keahlian wajib lowongan ini.</p>
+                </div>
+            </div>
+            
+            <div class="pitch-section">
+                <div class="pitch-card-title">
+                    <h5>💬 Pitch Singkat / LinkedIn Message (Bahasa Indonesia)</h5>
+                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(pitchID)}\`)">📋 Salin Teks</button>
+                </div>
+                <textarea readonly class="pitch-textarea" rows="5">${pitchID}</textarea>
+            </div>
+
+            <div class="pitch-section">
+                <div class="pitch-card-title">
+                    <h5>🌐 Brief Pitch / Recruiter Outreach (English)</h5>
+                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(pitchEN)}\`)">📋 Copy Pitch</button>
+                </div>
+                <textarea readonly class="pitch-textarea" rows="5">${pitchEN}</textarea>
+            </div>
+
+            <div class="pitch-section">
+                <div class="pitch-card-title">
+                    <h5>📄 Surat Lamaran Resmi / Formal Cover Letter (ID)</h5>
+                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(formalID)}\`)">📋 Salin Lamaran</button>
+                </div>
+                <textarea readonly class="pitch-textarea" rows="11">${formalID}</textarea>
+            </div>
+        </div>
+    `;
+}
+
+window.copyToClipboard = function(btnElem, encodedText) {
+    const text = decodeURIComponent(encodedText);
+    navigator.clipboard.writeText(text).then(() => {
+        const origText = btnElem.innerHTML;
+        btnElem.innerHTML = '✅ Tersalin!';
+        btnElem.classList.add('copied');
+        setTimeout(() => {
+            btnElem.innerHTML = origText;
+            btnElem.classList.remove('copied');
+        }, 2000);
+    });
+};
+
 // Filter and Sort Logic
 function applyFilters() {
     if (!allJobs || allJobs.length === 0) return;
@@ -199,6 +302,12 @@ function applyFilters() {
             if (expVal === 'eligible' && reqYears > 1) return false;
             if (expVal === 'freshgrad' && reqYears > 0) return false;
             if (expVal === 'experienced' && reqYears <= 1) return false;
+        }
+
+        // E. Wishlist Filter
+        if (wishlistOnly) {
+            const state = getSavedJobsState();
+            if (!state[job.id] || !state[job.id].isBookmarked) return false;
         }
 
         return true;
@@ -392,6 +501,23 @@ function renderJobList() {
         else if (job.source === 'SawitPRO') sourceBadge = `<span class="source-badge sawitpro">SawitPRO</span>`;
         else if (job.source === 'Indosat Ooredoo Hutchison') sourceBadge = `<span class="source-badge ioh">Indosat Ooredoo Hutchison</span>`;
 
+        const savedState = getSavedJobsState()[job.id] || {};
+        const isBookmarked = savedState.isBookmarked || false;
+        const appStatus = savedState.status || '';
+
+        const bookmarkBtnHTML = `
+            <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" title="Simpan lowongan ini" onclick="toggleBookmark(event, '${job.id}')">
+                ${isBookmarked ? '★' : '☆'}
+            </button>
+        `;
+
+        const statusBadgeMap = {
+            'applied': '<span class="app-status-pill applied">🚀 Sudah Dilamar</span>',
+            'interview': '<span class="app-status-pill interview">💬 Tahap Interview</span>',
+            'accepted': '<span class="app-status-pill accepted">🎉 Diterima</span>'
+        };
+        const appStatusBadge = statusBadgeMap[appStatus] || '';
+
         const companyLogo = job.logo
             ? `<img src="${job.logo}" class="company-logo" alt="${job.organization_name}" loading="lazy" onerror="this.style.display='none'">`
             : '';
@@ -413,6 +539,8 @@ function renderJobList() {
                     <div class="job-title-wrapper">
                         <h3 class="job-title-text">${job.title}</h3>
                         ${sourceBadge}
+                        ${appStatusBadge}
+                        ${bookmarkBtnHTML}
                     </div>
                 </div>
                 <div class="job-company">
@@ -480,6 +608,10 @@ function openJobModal(job) {
     const companyLogo = job.logo
         ? `<img src="${job.logo}" class="company-logo" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 8px;" alt="${job.organization_name}">`
         : '';
+
+    const savedState = getSavedJobsState()[job.id] || {};
+    const isBookmarked = savedState.isBookmarked || false;
+    const appStatus = savedState.status || '';
 
     const nlp = job.nlp_breakdown || {};
     const mandSkillsTags = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
@@ -652,6 +784,7 @@ function openJobModal(job) {
         <div class="tab-headers">
             <button class="tab-btn active" onclick="switchTab(event, 'descriptionTab')">Deskripsi Pekerjaan</button>
             <button class="tab-btn" onclick="switchTab(event, 'requirementsTab')">Persyaratan Detail</button>
+            <button class="tab-btn pitch-tab-btn" onclick="switchTab(event, 'pitchTab')">✨ Auto Cover Letter / Pitch</button>
         </div>
         
         <div id="descriptionTab" class="tab-pane active">
@@ -661,12 +794,29 @@ function openJobModal(job) {
         <div id="requirementsTab" class="tab-pane">
             ${job.raw_requirements || '<p>Tidak ada persyaratan detail yang dicantumkan.</p>'}
         </div>
+
+        <div id="pitchTab" class="tab-pane">
+            ${generateCoverLetterHTML(job)}
+        </div>
         
         <div class="modal-footer">
-            <button class="btn-secondary" onclick="closeModal()">Tutup</button>
-            <a href="${job.url}" target="_blank" class="btn-primary">
-                Lamar di Portal Resmi (${job.source}) ↗
-            </a>
+            <div class="modal-footer-left">
+                <button class="btn-bookmark-modal ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(event, '${job.id}'); openJobModal(allJobs.find(j => j.id == '${job.id}'));">
+                    ${isBookmarked ? '★ Tersimpan' : '☆ Simpan ke Wishlist'}
+                </button>
+                <select class="status-select-modal" onchange="changeApplicationStatus('${job.id}', this.value)">
+                    <option value="" ${!appStatus ? 'selected' : ''}>📌 Belum Dilamar</option>
+                    <option value="applied" ${appStatus === 'applied' ? 'selected' : ''}>🚀 Sudah Dilamar</option>
+                    <option value="interview" ${appStatus === 'interview' ? 'selected' : ''}>💬 Tahap Interview</option>
+                    <option value="accepted" ${appStatus === 'accepted' ? 'selected' : ''}>🎉 Diterima</option>
+                </select>
+            </div>
+            <div class="modal-footer-right">
+                <button class="btn-secondary" onclick="closeModal()">Tutup</button>
+                <a href="${job.url}" target="_blank" class="btn-primary">
+                    Lamar di Portal Resmi (${job.source}) ↗
+                </a>
+            </div>
         </div>
     `;
 
