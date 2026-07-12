@@ -9,6 +9,8 @@ on:
 jobs:
   scrape-and-update:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write  # Required to push updated job data back to repo
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
