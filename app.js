@@ -462,6 +462,21 @@ function applyFilters() {
     renderJobList();
 }
 
+function getSourceBadgeHTML(job, styleAttr = '') {
+    if (job.source === 'Grab') {
+        return `<span class="source-badge grab" style="${styleAttr}">Grab Indonesia</span>`;
+    } else if (job.source === 'Astra') {
+        return `<span class="source-badge astra" style="${styleAttr}">Astra Career</span>`;
+    } else if (job.source === 'Pertamina PTC') {
+        return `<span class="source-badge ptc" style="${styleAttr}">Pertamina PTC</span>`;
+    } else if (job.source === 'SawitPRO') {
+        return `<span class="source-badge sawitpro" style="${styleAttr}">SawitPRO</span>`;
+    } else if (job.source === 'Indosat Ooredoo Hutchison') {
+        return `<span class="source-badge ioh" style="${styleAttr}">Indosat Ooredoo Hutchison</span>`;
+    }
+    return `<span class="source-badge talentics" style="${styleAttr}">${job.source || 'Hulu Migas / BUMN'}</span>`;
+}
+
 // Render Numbered Pagination Buttons
 function renderPaginationNumbers(totalPages) {
     const container = document.getElementById('pageNumbersContainer');
@@ -597,12 +612,7 @@ function renderJobList() {
             matchPreview = job.match_details.major.reason;
         }
 
-        let sourceBadge = `<span class="source-badge talentics">Hulu Migas</span>`;
-        if (job.source === 'Grab') sourceBadge = `<span class="source-badge grab">Grab Indonesia</span>`;
-        else if (job.source === 'Astra') sourceBadge = `<span class="source-badge astra">Astra Career</span>`;
-        else if (job.source === 'Pertamina PTC') sourceBadge = `<span class="source-badge ptc">Pertamina PTC</span>`;
-        else if (job.source === 'SawitPRO') sourceBadge = `<span class="source-badge sawitpro">SawitPRO</span>`;
-        else if (job.source === 'Indosat Ooredoo Hutchison') sourceBadge = `<span class="source-badge ioh">Indosat Ooredoo Hutchison</span>`;
+        const sourceBadge = getSourceBadgeHTML(job);
 
         const savedState = getSavedJobsState()[job.id] || {};
         const isBookmarked = savedState.isBookmarked || false;
@@ -697,16 +707,7 @@ function openJobModal(job) {
         return 'neutral';
     };
 
-    let sourceBadge = `<span class="source-badge talentics" style="margin-left: 10px; vertical-align: middle;">Hulu Migas</span>`;
-    if (job.source === 'Grab') {
-        sourceBadge = `<span class="source-badge grab" style="margin-left: 10px; vertical-align: middle;">Grab Indonesia</span>`;
-    } else if (job.source === 'Astra') {
-        sourceBadge = `<span class="source-badge astra" style="margin-left: 10px; vertical-align: middle;">Astra Career</span>`;
-    } else if (job.source === 'Pertamina PTC') {
-        sourceBadge = `<span class="source-badge ptc" style="margin-left: 10px; vertical-align: middle;">Pertamina PTC</span>`;
-    } else if (job.source === 'SawitPRO') {
-        sourceBadge = `<span class="source-badge sawitpro" style="margin-left: 10px; vertical-align: middle;">SawitPRO</span>`;
-    }
+    const sourceBadge = getSourceBadgeHTML(job, 'margin-left: 10px; vertical-align: middle;');
 
     const companyLogo = job.logo
         ? `<img src="${job.logo}" class="company-logo" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 8px;" alt="${job.organization_name}">`
