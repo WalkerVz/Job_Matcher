@@ -201,23 +201,23 @@ function generateCoverLetterHTML(job) {
     const nlp = job.nlp_breakdown || {};
     const requiredSkills = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
         ? nlp.mandatory_skills.join(', ')
-        : 'analisis data, pemecahan masalah, dan keahlian teknis relevan';
+        : 'pemrograman Python, analisis data (SQL), dan pengembangan solusi teknologi';
         
     const companyName = job.organization_name || 'Perusahaan';
     const jobTitle = job.title || 'Posisi yang dilamar';
     
-    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Ravil, lulusan S1 Teknik Informatika (IPK 3.65) dengan pengalaman 1 tahun di analisis data & industri hulu migas/teknologi. Saya memiliki keahlian mendalam pada ${requiredSkills} yang sesuai dengan persyaratan posisi ${jobTitle}.\n\nSaya sangat antusias untuk berdiskusi lebih lanjut mengenai bagaimana keahlian saya dapat memberikan dampak positif bagi ${companyName}. Terlampir resume lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
+    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika (IPK 3.39 / TOEFL 537) dengan pengalaman praktis sebagai Python Developer & Data Analyst Intern di PT Pertamina Hulu Rokan (PHR). Saya terbiasa mengimplementasikan ${requiredSkills} yang sangat sejalan dengan kualifikasi untuk posisi ${jobTitle}.\n\nSaya sangat antusias untuk berdiskusi lebih lanjut mengenai kontribusi nyata yang dapat saya berikan bagi tim ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
 
-    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Ravil, a Computer Science graduate (GPA 3.65) with 1 year of experience in data analytics & upstream oil and gas/tech operations. I bring strong hands-on expertise in ${requiredSkills}, aligning directly with your requirements for the ${jobTitle} role.\n\nI would welcome the opportunity to discuss how my background and analytical skillset can contribute to ${companyName}. Please find my resume attached for your review. Thank you.`;
+    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate (GPA 3.39 / TOEFL 537) with professional internship experience as a Python Developer & Data Analyst at PT Pertamina Hulu Rokan (PHR). I bring hands-on practical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nI would welcome the opportunity to discuss how my technical background and problem-solving skills can drive value for ${companyName}. Please find my updated resume attached for your review. Thank you.`;
 
-    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan diri untuk bergabung dengan tim Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dengan IPK 3.65 serta memiliki pengalaman kerja 1 tahun yang berfokus pada analisis data dan industri hulu migas/teknologi. Selama perjalanan karier dan pendidikan saya, saya terbiasa menggunakan dan mengimplementasikan ${requiredSkills}.\n\nSaya memiliki motivasi tinggi, kemampuan analisis yang kuat, serta siap beradaptasi dengan cepat untuk berkontribusi terhadap pencapaian target ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar saya dapat menjelaskan lebih lanjut mengenai kualifikasi saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\nRavil`;
+    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika (IPK 3.39, TOEFL 537) yang memiliki rekam jejak pengalaman magang profesional di PT Pertamina Hulu Rokan (PHR) sebagai Python Developer Intern di lingkungan operasi hulu migas. Selama masa studi dan pengalaman kerja tersebut, saya terbiasa mengembangkan dan mengaplikasikan keahlian pada ${requiredSkills}.\n\nLatar belakang akademis dan pengalaman langsung di industri telah membekali saya dengan kemampuan analisis yang tajam, pemecahan masalah yang berorientasi pada data, serta etos kerja tinggi untuk memberikan hasil terbaik bagi pencapaian target ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai kualifikasi dan portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil`;
 
     return `
         <div class="cover-letter-container">
             <div class="cover-letter-header">
                 <div>
                     <h4>✨ Auto-Generated Application Pitch & Cover Letter</h4>
-                    <p>Dibuat otomatis dari profilmu (S1 Informatika, IPK 3.65, 1 Thn Exp) dicocokkan dengan keahlian wajib lowongan ini.</p>
+                    <p>Dibuat otomatis dari profil asli CV-mu (Muhammad Ravil | S1 Informatika | IPK 3.39 | TOEFL 537 | Exp Magang PHR) dicocokkan dengan keahlian lowongan ini.</p>
                 </div>
             </div>
             
