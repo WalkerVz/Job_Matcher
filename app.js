@@ -201,23 +201,23 @@ function generateCoverLetterHTML(job) {
     const nlp = job.nlp_breakdown || {};
     const requiredSkills = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
         ? nlp.mandatory_skills.join(', ')
-        : 'pemrograman Python, analisis data (SQL), dan pengembangan solusi teknologi';
+        : 'pemrograman Python, analisis data (SQL/Dataiku), dan pengembangan solusi teknologi';
         
     const companyName = job.organization_name || 'Perusahaan';
     const jobTitle = job.title || 'Posisi yang dilamar';
     
-    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika (IPK 3.39 / TOEFL 537) dengan pengalaman praktis sebagai Python Developer & Data Analyst Intern di PT Pertamina Hulu Rokan (PHR). Saya terbiasa mengimplementasikan ${requiredSkills} yang sangat sejalan dengan kualifikasi untuk posisi ${jobTitle}.\n\nSaya sangat antusias untuk berdiskusi lebih lanjut mengenai kontribusi nyata yang dapat saya berikan bagi tim ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
+    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika UIN Suska Riau (IPK 3.39 | TOEFL 537) dengan pengalaman profesional sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR) serta Data Scientist Intern di Rakamin Academy. Saya memiliki keahlian teruji dalam ${requiredSkills} yang sangat sejalan dengan kebutuhan posisi ${jobTitle}.\n\nMelalui proyek nyata seperti otomatisasi aplikasi QC Log Analyzer dan pemodelan prediktif risiko kredit, saya siap memberikan kontribusi nyata bagi efisiensi operasional ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
 
-    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate (GPA 3.39 / TOEFL 537) with professional internship experience as a Python Developer & Data Analyst at PT Pertamina Hulu Rokan (PHR). I bring hands-on practical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nI would welcome the opportunity to discuss how my technical background and problem-solving skills can drive value for ${companyName}. Please find my updated resume attached for your review. Thank you.`;
+    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate from UIN Suska Riau (GPA 3.39 | TOEFL 537) with hands-on industry experience as an AI Engineer at PT Pertamina Hulu Rokan (PHR) and Data Scientist Intern at Rakamin Academy. I bring practical technical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nWith a track record of building automated analytics applications (Python/Dataiku) and predictive machine learning models, I look forward to contributing to data-driven growth at ${companyName}. Please find my resume attached for your review. Thank you.`;
 
-    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika (IPK 3.39, TOEFL 537) yang memiliki rekam jejak pengalaman magang profesional di PT Pertamina Hulu Rokan (PHR) sebagai Python Developer Intern di lingkungan operasi hulu migas. Selama masa studi dan pengalaman kerja tersebut, saya terbiasa mengembangkan dan mengaplikasikan keahlian pada ${requiredSkills}.\n\nLatar belakang akademis dan pengalaman langsung di industri telah membekali saya dengan kemampuan analisis yang tajam, pemecahan masalah yang berorientasi pada data, serta etos kerja tinggi untuk memberikan hasil terbaik bagi pencapaian target ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai kualifikasi dan portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil`;
+    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dari UIN Suska Riau (IPK 3.39, TOEFL 537) dengan latar belakang pengalaman di industri hulu migas sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR). Selama masa kerja tersebut, saya berhasil mengembangkan aplikasi QC Log Analyzer berbasis Python dan Dataiku untuk otomatisasi pemrosesan serta visualisasi data operasional.\n\nSelain itu, sebagai Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student Score 86.96), saya memiliki rekam jejak mengembangkan model machine learning yang berhasil menurunkan tingkat gagal bayar pinjaman hingga 12%. Pengalaman ini membuat saya sangat terbiasa mengimplementasikan keahlian pada ${requiredSkills}.\n\nKemampuan analisis data yang kuat, keahlian teknis lintas platform (Python, SQL, Dataiku, Web Dev), serta komunikasi kolaboratif membuat saya yakin dapat memberikan kontribusi signifikan bagi ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil`;
 
     return `
         <div class="cover-letter-container">
             <div class="cover-letter-header">
                 <div>
                     <h4>✨ Auto-Generated Application Pitch & Cover Letter</h4>
-                    <p>Dibuat otomatis dari profil asli CV-mu (Muhammad Ravil | S1 Informatika | IPK 3.39 | TOEFL 537 | Exp Magang PHR) dicocokkan dengan keahlian lowongan ini.</p>
+                    <p>Dibuat otomatis dari profil asli CV-mu (Muhammad Ravil | UIN Suska Riau | IPK 3.39 | AI Engineer PHR & Rakamin) dicocokkan dengan keahlian lowongan ini.</p>
                 </div>
             </div>
             
@@ -254,8 +254,13 @@ function generateATSBoosterHTML(job) {
     const plus = nlp.plus_skills || [];
     const rawText = ((job.raw_description || '') + ' ' + (job.raw_requirements || '')).toLowerCase();
 
-    // Ravil's core profile keywords
-    const ravilProfileKeywords = ['python', 'sql', 'data analysis', 'data science', 'machine learning', 'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data', 'data analyst'];
+    // Ravil's authentic profile keywords from CV PDF
+    const ravilProfileKeywords = [
+        'python', 'sql', 'data analysis', 'data science', 'machine learning', 
+        'dataiku', 'excel', 'power bi', 'react', 'laravel', 'php', 'git', 'arcgis',
+        'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data', 
+        'data analyst', 'ai engineer', 'web development', 'web developer'
+    ];
 
     // Identify which mandatory/plus skills Ravil already matches
     const matchedATS = [];
@@ -279,12 +284,12 @@ function generateATSBoosterHTML(job) {
         }
     });
 
-    const atsScore = Math.min(96, Math.max(78, 72 + (matchedATS.length * 6)));
+    const atsScore = Math.min(98, Math.max(82, 75 + (matchedATS.length * 6)));
 
-    // Generate tailored resume bullet points
-    const bullet1 = `• Successfully executed end-to-end ${matchedATS[0] || 'data analysis'} workflows and query optimization using SQL & Python, delivering actionable business insights to executive stakeholders.`;
-    const bullet2 = `• Engineered interactive dashboards and automated data reporting pipelines (${bonusFound[0] || 'Data Visualization'}), improving team decision-making speed by 30%.`;
-    const bullet3 = `• Collaborated cross-functionally to translate complex business requirements into analytical models and scalable ${missingATS[0] || 'data science'} solutions.`;
+    // Generate tailored resume bullet points authentic to CV PDF
+    const bullet1 = `• Developed automated data processing & monitoring applications (QC Log Analyzer) using Python and Dataiku at PT Pertamina Hulu Rokan, streamlining operational reporting.`;
+    const bullet2 = `• Engineered machine learning classification & predictive models (Credit Risk Loan project) reducing loan default rates by 12% across 466,285 records.`;
+    const bullet3 = `• Spearheaded end-to-end ${matchedATS[0] || 'data analytics'} workflows and dashboard reporting (${bonusFound[0] || 'SQL/Power BI'}) to drive cross-functional operational efficiency.`;
 
     const allBulletsText = `${bullet1}\n${bullet2}\n${bullet3}`;
 
