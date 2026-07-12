@@ -248,6 +248,89 @@ function generateCoverLetterHTML(job) {
     `;
 }
 
+function generateATSBoosterHTML(job) {
+    const nlp = job.nlp_breakdown || {};
+    const mandatory = nlp.mandatory_skills || [];
+    const plus = nlp.plus_skills || [];
+    const rawText = ((job.raw_description || '') + ' ' + (job.raw_requirements || '')).toLowerCase();
+
+    // Ravil's core profile keywords
+    const ravilProfileKeywords = ['python', 'sql', 'data analysis', 'data science', 'machine learning', 'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data', 'data analyst'];
+
+    // Identify which mandatory/plus skills Ravil already matches
+    const matchedATS = [];
+    const missingATS = [];
+
+    [...mandatory, ...plus].forEach(skill => {
+        const sLower = skill.toLowerCase();
+        if (ravilProfileKeywords.some(rk => sLower.includes(rk) || rk.includes(sLower))) {
+            matchedATS.push(skill);
+        } else {
+            missingATS.push(skill);
+        }
+    });
+
+    // Also look for industry standard keywords in description
+    const potentialBonusKeywords = ['power bi', 'tableau', 'excel', 'etl', 'data warehouse', 'big data', 'uat', 'dashboard', 'cleaning', 'visualisasi data', 'agile', 'jira', 'sap'];
+    const bonusFound = [];
+    potentialBonusKeywords.forEach(pk => {
+        if (rawText.includes(pk) && !matchedATS.includes(pk)) {
+            bonusFound.push(pk.toUpperCase());
+        }
+    });
+
+    const atsScore = Math.min(96, Math.max(78, 72 + (matchedATS.length * 6)));
+
+    // Generate tailored resume bullet points
+    const bullet1 = `• Successfully executed end-to-end ${matchedATS[0] || 'data analysis'} workflows and query optimization using SQL & Python, delivering actionable business insights to executive stakeholders.`;
+    const bullet2 = `• Engineered interactive dashboards and automated data reporting pipelines (${bonusFound[0] || 'Data Visualization'}), improving team decision-making speed by 30%.`;
+    const bullet3 = `• Collaborated cross-functionally to translate complex business requirements into analytical models and scalable ${missingATS[0] || 'data science'} solutions.`;
+
+    const allBulletsText = `${bullet1}\n${bullet2}\n${bullet3}`;
+
+    return `
+        <div class="ats-booster-container">
+            <div class="ats-score-header">
+                <div class="ats-score-badge">
+                    <span class="ats-number">${atsScore}%</span>
+                    <span class="ats-label">ATS Keyword Readiness</span>
+                </div>
+                <div class="ats-header-info">
+                    <h4>💡 AI ATS Resume Keyword Optimizer</h4>
+                    <p>Sistem ATS mengecek kecocokan kata kunci CV kamu sebelum dibaca HR. Berikut analisis kata kunci untuk posisi ini:</p>
+                </div>
+            </div>
+
+            <div class="ats-grid">
+                <div class="ats-card matched">
+                    <h5>✅ Kata Kunci Sudah Ada di Profilmu</h5>
+                    <p class="ats-desc">Skill ini cocok dengan latar belakangmu (S1 Informatika & Data/Migas):</p>
+                    <div class="nlp-tags">
+                        ${matchedATS.length > 0 ? matchedATS.map(s => `<span class="nlp-skill-badge mandatory">✓ ${s}</span>`).join('') : '<span class="nlp-skill-badge mandatory">✓ Data Analysis & IT Core</span>'}
+                    </div>
+                </div>
+
+                <div class="ats-card opportunity">
+                    <h5>🎯 Kata Kunci Emas yang Perlu Ditambahkan ke CV</h5>
+                    <p class="ats-desc">Tambahkan istilah ini pada bullet point CV kamu agar skor ATS naik maksimal:</p>
+                    <div class="nlp-tags">
+                        ${missingATS.concat(bonusFound).length > 0 ? missingATS.concat(bonusFound).slice(0, 8).map(s => `<span class="nlp-skill-badge plus">+ ${s}</span>`).join('') : '<span class="nlp-skill-badge plus">+ Analytical Problem Solving</span>'}
+                    </div>
+                </div>
+            </div>
+
+            <div class="pitch-section">
+                <div class="pitch-card-title">
+                    <h5>✨ 3 ATS-Optimized Resume Bullet Points (1-Click Copy untuk CV-mu)</h5>
+                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(allBulletsText)}\`)">📋 Salin 3 Bullet Points</button>
+                </div>
+                <p style="font-size: 0.78rem; color: #a78bfa; margin-top: 0; margin-bottom: 0.6rem;">Tempelkan poin-poin berdampak tinggi ini pada bagian Pengalaman Kerja / Proyek di CV kamu sebelum melamar lowongan ini:</p>
+                <textarea readonly class="pitch-textarea" rows="6">${allBulletsText}</textarea>
+            </div>
+        </div>
+    `;
+}
+
 window.copyToClipboard = function(btnElem, encodedText) {
     const text = decodeURIComponent(encodedText);
     navigator.clipboard.writeText(text).then(() => {
@@ -800,6 +883,7 @@ function openJobModal(job) {
             <button class="tab-btn active" onclick="switchTab(event, 'descriptionTab')">Deskripsi Pekerjaan</button>
             <button class="tab-btn" onclick="switchTab(event, 'requirementsTab')">Persyaratan Detail</button>
             <button class="tab-btn pitch-tab-btn" onclick="switchTab(event, 'pitchTab')">✨ Auto Cover Letter / Pitch</button>
+            <button class="tab-btn ats-tab-btn" onclick="switchTab(event, 'atsTab')">💡 ATS Keyword Booster</button>
         </div>
         
         <div id="descriptionTab" class="tab-pane active">
@@ -812,6 +896,10 @@ function openJobModal(job) {
 
         <div id="pitchTab" class="tab-pane">
             ${generateCoverLetterHTML(job)}
+        </div>
+
+        <div id="atsTab" class="tab-pane">
+            ${generateATSBoosterHTML(job)}
         </div>
         
         <div class="modal-footer">

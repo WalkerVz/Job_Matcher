@@ -1347,6 +1347,90 @@ header p {
     cursor: pointer;
 }
 
+/* AI ATS Resume Keyword Booster */
+.ats-tab-btn {
+    color: #38bdf8 !important;
+}
+.ats-booster-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+.ats-score-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(14, 165, 233, 0.15), rgba(99, 102, 241, 0.1));
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    border-radius: 12px;
+    padding: 1.1rem;
+}
+.ats-score-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: rgba(15, 23, 42, 0.85);
+    border: 2px solid #38bdf8;
+    border-radius: 10px;
+    padding: 0.5rem 0.85rem;
+    min-width: 90px;
+    text-align: center;
+}
+.ats-number {
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #38bdf8;
+}
+.ats-label {
+    font-size: 0.65rem;
+    color: #cbd5e1;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+.ats-header-info h4 {
+    font-size: 1.05rem;
+    color: #38bdf8;
+    margin: 0 0 0.2rem;
+}
+.ats-header-info p {
+    font-size: 0.82rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+.ats-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.85rem;
+}
+@media (max-width: 640px) {
+    .ats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+.ats-card {
+    background: rgba(15, 23, 42, 0.65);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 10px;
+    padding: 0.9rem;
+}
+.ats-card.matched {
+    border-color: rgba(16, 185, 129, 0.4);
+}
+.ats-card.opportunity {
+    border-color: rgba(245, 158, 11, 0.4);
+}
+.ats-card h5 {
+    font-size: 0.85rem;
+    margin: 0 0 0.35rem;
+    color: #f8fafc;
+}
+.ats-desc {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    margin: 0 0 0.65rem;
+}
+
 /* =========================================
    Mobile, Smartphone & Tablet Optimization
    ========================================= */
