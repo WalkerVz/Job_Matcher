@@ -754,6 +754,85 @@ def scrape_grab_careers(session):
                 pass
     return grab_jobs
 
+def fetch_ioh_job_detail(url):
+    try:
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        soup = BeautifulSoup(r.text, "html.parser")
+        desc_el = soup.find(class_="jobdescription") or soup.find(class_="jobDisplay")
+        if desc_el:
+            return str(desc_el)
+    except Exception:
+        pass
+    return ""
+
+def scrape_ioh_careers(session):
+    print("Scraping Indosat Ooredoo Hutchison (IOH) Careers...")
+    ioh_jobs = []
+    seen = set()
+    try:
+        for start in range(0, 150, 10):
+            r = session.get(f"https://careers.ioh.co.id/search/?q=&startrow={start}", timeout=15)
+            soup = BeautifulSoup(r.text, "html.parser")
+            tiles = soup.find_all("li", class_="job-tile")
+            new_found = 0
+            for t in tiles:
+                a = t.find("a", class_="jobTitle-link")
+                if not a or "href" not in a.attrs:
+                    continue
+                href = a["href"]
+                full_url = "https://careers.ioh.co.id" + href
+                if full_url in seen:
+                    continue
+                seen.add(full_url)
+                new_found += 1
+                
+                title = a.get_text(strip=True)
+                job_id_match = re.search(r"/(\d+)/?$", href)
+                job_id = job_id_match.group(1) if job_id_match else str(len(seen))
+                
+                loc_el = t.find(class_="location")
+                loc = loc_el.get_text(strip=True).replace("Location", "").strip() if loc_el else "Jakarta, Indonesia"
+                dept_el = t.find(class_="dept")
+                dept = dept_el.get_text(strip=True).replace("Department", "").strip() if dept_el else "Indosat Ooredoo Hutchison"
+                
+                ioh_jobs.append({
+                    "id": f"ioh_{job_id}",
+                    "title": title,
+                    "organization_id": "IOH",
+                    "organization_name": "Indosat Ooredoo Hutchison",
+                    "slug": f"ioh-{job_id}",
+                    "type_name": "Full Time",
+                    "level": "Profesional",
+                    "location": loc or "Jakarta, Indonesia",
+                    "workplace": "Hybrid / WFO",
+                    "due_date": "Aktif",
+                    "group": dept or "Indosat Ooredoo Hutchison",
+                    "url": full_url,
+                    "description": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Indosat Ooredoo Hutchison</p><p>Divisi: {dept}</p>",
+                    "requirements": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Indosat Ooredoo Hutchison</p><p>Divisi: {dept}</p>",
+                    "source": "Indosat Ooredoo Hutchison",
+                    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+                })
+            if new_found == 0:
+                break
+    except Exception as e:
+        print(f"Error scraping IOH Careers: {e}")
+        
+    print(f"Found {len(ioh_jobs)} Indosat Ooredoo Hutchison jobs.")
+    print(f"Fetching details for {len(ioh_jobs)} IOH vacancies concurrently...")
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        future_to_job = {executor.submit(fetch_ioh_job_detail, job["url"]): job for job in ioh_jobs}
+        for future in as_completed(future_to_job):
+            job = future_to_job[future]
+            try:
+                detail_html = future.result()
+                if detail_html:
+                    job["description"] = detail_html
+                    job["requirements"] = detail_html
+            except Exception:
+                pass
+    return ioh_jobs
+
 def main():
     session = requests.Session()
     session.headers.update({
@@ -924,6 +1003,12 @@ def main():
     print("\nStep 3e: Scraping Grab Careers Indonesia vacancies...")
     grab_jobs = scrape_grab_careers(session)
     for job in grab_jobs:
+        matched_job = evaluate_job_match(job)
+        matched_jobs.append(matched_job)
+
+    print("\nStep 3f: Scraping Indosat Ooredoo Hutchison (IOH) vacancies...")
+    ioh_jobs = scrape_ioh_careers(session)
+    for job in ioh_jobs:
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 

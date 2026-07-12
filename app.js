@@ -182,7 +182,8 @@ function applyFilters() {
                 'talentics': 'Talentics',
                 'astra': 'Astra',
                 'ptc': 'Pertamina PTC',
-                'sawitpro': 'SawitPRO'
+                'sawitpro': 'SawitPRO',
+                'ioh': 'Indosat Ooredoo Hutchison'
             };
             const targetSource = sourceMap[sourceVal];
             if (targetSource && job.source !== targetSource) return false;
@@ -374,6 +375,7 @@ function renderJobList() {
         else if (job.source === 'Astra') sourceBadge = `<span class="source-badge astra">Astra Career</span>`;
         else if (job.source === 'Pertamina PTC') sourceBadge = `<span class="source-badge ptc">Pertamina PTC</span>`;
         else if (job.source === 'SawitPRO') sourceBadge = `<span class="source-badge sawitpro">SawitPRO</span>`;
+        else if (job.source === 'Indosat Ooredoo Hutchison') sourceBadge = `<span class="source-badge ioh">Indosat Ooredoo Hutchison</span>`;
 
         const companyLogo = job.logo
             ? `<img src="${job.logo}" class="company-logo" alt="${job.organization_name}" loading="lazy" onerror="this.style.display='none'">`

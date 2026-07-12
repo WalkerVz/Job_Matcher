@@ -1,12 +1,14 @@
 # 🚀 Automated Job Matcher & Scraper
 
-Platform pencocokan lowongan kerja otomatis berbasis web yang mengambil data secara langsung (*scraping*) dari portal karir resmi **Hulu Migas (Talentics)**, **Pertamina Training & Consulting (PTC)**, **SawitPRO**, dan **Astra Careers**, kemudian mengevaluasinya dengan algoritma *scoring* yang disesuaikan untuk profil **Python Developer & Data Analyst (1 Tahun Pengalaman)**.
+Platform pencocokan lowongan kerja otomatis berbasis web yang mengambil data secara langsung (*scraping*) dari 6 portal karir resmi **Grab Indonesia**, **Indosat Ooredoo Hutchison (IOH)**, **Hulu Migas (Talentics)**, **Pertamina Training & Consulting (PTC)**, **SawitPRO**, dan **Astra Careers**, kemudian mengevaluasinya dengan algoritma *scoring* yang disesuaikan untuk profil **Python Developer & Data Analyst (1 Tahun Pengalaman)**.
 
 ---
 
 ## ✨ Fitur Utama
 
-- **Scraper Otomatis 4 Portal Karir Resmi**:
+- **Scraper Otomatis 6 Portal Karir Resmi**:
+  - 🟢 **Grab Careers Indonesia** (`grab.careers`)
+  - 🟡 **Indosat Ooredoo Hutchison (IOH)** (`careers.ioh.co.id`)
   - 🏛️ **SKK Migas & KKKS (Talentics)** (`jobs.talentics.id`)
   - 🌟 **Astra Careers** (`career.astra.co.id`)
   - 🛢️ **Pertamina Training & Consulting (PTC)** (`recruitment.pertamina-ptc.com`)
@@ -34,7 +36,7 @@ Platform pencocokan lowongan kerja otomatis berbasis web yang mengambil data sec
    ```bash
    python scraper.py
    ```
-   Script akan mengambil lowongan terbaru dari 4 portal karir dan memperbarui file `matched_jobs.json` serta `matched_jobs.js`.
+   Script akan mengambil lowongan terbaru dari 6 portal karir dan memperbarui file `matched_jobs.json` serta `matched_jobs.js`.
 
 4. Buka file `index.html` langsung di browser Anda untuk melihat hasilnya!
 

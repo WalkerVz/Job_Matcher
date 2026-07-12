@@ -914,6 +914,12 @@ header p {
     color: #00b964;
 }
 
+.source-badge.ioh {
+    background: rgba(236, 0, 140, 0.15);
+    border: 1px solid rgba(236, 0, 140, 0.3);
+    color: #EC008C;
+}
+
 .job-title-wrapper {
     display: flex;
     align-items: center;
