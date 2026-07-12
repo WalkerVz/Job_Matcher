@@ -421,7 +421,8 @@ function applyFilters() {
                 'astra': 'Astra',
                 'ptc': 'Pertamina PTC',
                 'sawitpro': 'SawitPRO',
-                'ioh': 'Indosat Ooredoo Hutchison'
+                'ioh': 'Indosat Ooredoo Hutchison',
+                'indofood': 'Indofood'
             };
             const targetSource = sourceMap[sourceVal];
             if (targetSource && job.source !== targetSource) return false;
@@ -510,6 +511,8 @@ function getSourceBadgeHTML(job, styleAttr = '') {
         return `<span class="source-badge sawitpro" style="${styleAttr}">SawitPRO</span>`;
     } else if (job.source === 'Indosat Ooredoo Hutchison') {
         return `<span class="source-badge ioh" style="${styleAttr}">Indosat Ooredoo Hutchison</span>`;
+    } else if (job.source === 'Indofood') {
+        return `<span class="source-badge indofood" style="${styleAttr}">Indofood Career</span>`;
     }
     return `<span class="source-badge talentics" style="${styleAttr}">${job.source || 'Hulu Migas / BUMN'}</span>`;
 }
@@ -994,7 +997,7 @@ window.closeModal = function () {
 // Register Progressive Web App (PWA) Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js?v=4').then((reg) => {
+        navigator.serviceWorker.register('sw.js?v=5').then((reg) => {
             reg.update();
         }).catch(() => { });
     });
