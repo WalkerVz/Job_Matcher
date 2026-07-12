@@ -35,6 +35,7 @@ const modalContent = document.getElementById('modalContent');
 const mobileFilterToggleBtn = document.getElementById('mobileFilterToggleBtn');
 const filterControlsWrapper = document.getElementById('filterControlsWrapper');
 const filterCountBadge = document.getElementById('filterCountBadge');
+const resetFilterBtn = document.getElementById('resetFilterBtn');
 
 // Initialize Dashboard
 document.addEventListener('DOMContentLoaded', async () => {
@@ -55,7 +56,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     sourceFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     if (expFilter) expFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     sortSelect.addEventListener('change', () => { currentPage = 1; applyFilters(); });
-    
+
     if (wishlistToggleBtn) {
         wishlistToggleBtn.addEventListener('click', () => {
             wishlistOnly = !wishlistOnly;
@@ -64,7 +65,27 @@ document.addEventListener('DOMContentLoaded', async () => {
             applyFilters();
         });
     }
-    
+
+    if (resetFilterBtn) {
+        resetFilterBtn.addEventListener('click', () => {
+            // Reset all filters to default values
+            searchInput.value = '';
+            matchFilter.value = 'all';
+            sourceFilter.value = 'all';
+            if (expFilter) expFilter.value = 'all';
+            sortSelect.value = 'score';
+            perPageSelect.value = '25';
+            wishlistOnly = false;
+            if (wishlistToggleBtn) wishlistToggleBtn.classList.remove('active');
+            
+            // Reset pagination and re-apply filters
+            currentPage = 1;
+            itemsPerPage = 25;
+            applyFilters();
+            scrollToJobListTop();
+        });
+    }
+
     if (perPageSelect) {
         perPageSelect.addEventListener('change', () => {
             itemsPerPage = perPageSelect.value;
@@ -72,7 +93,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderJobList();
         });
     }
-    
+
     if (prevPageBtn) {
         prevPageBtn.addEventListener('click', () => {
             if (currentPage > 1) {
@@ -82,7 +103,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             }
         });
     }
-    
+
     if (nextPageBtn) {
         nextPageBtn.addEventListener('click', () => {
             currentPage++;
@@ -122,10 +143,26 @@ async function loadJobsData() {
         console.warn('Fetch failed or was blocked by CORS. Checking for global window variable fallback...');
         if (window.matchedJobs && window.matchedJobs.length > 0) {
             allJobs = window.matchedJobs;
+        }
+    }
+
+    // Try to load last updated timestamp
+    try {
+        const luRes = await fetch('last_updated.json');
+        if (luRes.ok) {
+            const luData = await luRes.json();
+            if (luData && luData.last_updated) {
+                const badgeEl = document.getElementById('lastUpdatedDate');
+                if (badgeEl) badgeEl.textContent = luData.last_updated;
+            }
         } else {
-            // Show error/instructions to user
-            renderError('Gagal memuat data lowongan.', 'Pastikan Anda telah menjalankan <code>scraper.py</code> atau jalankan server lokal (misalnya dengan <code>python -m http.server</code>) untuk menghindari pemblokiran CORS oleh peramban.');
-            return;
+            throw new Error('Local last_updated fetch failed');
+        }
+    } catch (err) {
+        console.warn('Failed to load last updated timestamp from JSON:', err);
+        if (window.lastUpdated) {
+            const badgeEl = document.getElementById('lastUpdatedDate');
+            if (badgeEl) badgeEl.textContent = window.lastUpdated;
         }
     }
 
@@ -177,7 +214,7 @@ function updateWishlistCountBadge() {
     wishlistCountEl.textContent = count;
 }
 
-window.toggleBookmark = function(event, jobId) {
+window.toggleBookmark = function (event, jobId) {
     if (event) event.stopPropagation();
     const state = getSavedJobsState();
     const idStr = String(jobId);
@@ -188,7 +225,7 @@ window.toggleBookmark = function(event, jobId) {
     applyFilters();
 };
 
-window.changeApplicationStatus = function(jobId, statusValue) {
+window.changeApplicationStatus = function (jobId, statusValue) {
     const state = getSavedJobsState();
     const idStr = String(jobId);
     state[idStr] = { ...(state[idStr] || {}), status: statusValue, isBookmarked: true };
@@ -202,10 +239,10 @@ function generateCoverLetterHTML(job) {
     const requiredSkills = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
         ? nlp.mandatory_skills.join(', ')
         : 'pemrograman Python, analisis data (SQL/Dataiku), dan pengembangan solusi teknologi';
-        
+
     const companyName = job.organization_name || 'Perusahaan';
     const jobTitle = job.title || 'Posisi yang dilamar';
-    
+
     const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika UIN Suska Riau (IPK 3.39 | TOEFL 537) dengan pengalaman profesional sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR) serta Data Scientist Intern di Rakamin Academy. Saya memiliki keahlian teruji dalam ${requiredSkills} yang sangat sejalan dengan kebutuhan posisi ${jobTitle}.\n\nMelalui proyek nyata seperti otomatisasi aplikasi QC Log Analyzer dan pemodelan prediktif risiko kredit, saya siap memberikan kontribusi nyata bagi efisiensi operasional ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
 
     const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate from UIN Suska Riau (GPA 3.39 | TOEFL 537) with hands-on industry experience as an AI Engineer at PT Pertamina Hulu Rokan (PHR) and Data Scientist Intern at Rakamin Academy. I bring practical technical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nWith a track record of building automated analytics applications (Python/Dataiku) and predictive machine learning models, I look forward to contributing to data-driven growth at ${companyName}. Please find my resume attached for your review. Thank you.`;
@@ -256,9 +293,9 @@ function generateATSBoosterHTML(job) {
 
     // Ravil's authentic profile keywords from CV PDF
     const ravilProfileKeywords = [
-        'python', 'sql', 'data analysis', 'data science', 'machine learning', 
+        'python', 'sql', 'data analysis', 'data science', 'machine learning',
         'dataiku', 'excel', 'power bi', 'react', 'laravel', 'php', 'git', 'arcgis',
-        'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data', 
+        'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data',
         'data analyst', 'ai engineer', 'web development', 'web developer'
     ];
 
@@ -336,7 +373,7 @@ function generateATSBoosterHTML(job) {
     `;
 }
 
-window.copyToClipboard = function(btnElem, encodedText) {
+window.copyToClipboard = function (btnElem, encodedText) {
     const text = decodeURIComponent(encodedText);
     navigator.clipboard.writeText(text).then(() => {
         const origText = btnElem.innerHTML;
@@ -537,8 +574,8 @@ function renderJobList() {
     if (filteredJobs.length === 0) {
         const emptyIcon = wishlistOnly ? '⭐' : '🔎';
         const emptyTitle = wishlistOnly ? 'Wishlist Anda Masih Kosong' : 'Tidak Ada Lowongan yang Cocok';
-        const emptySub = wishlistOnly 
-            ? 'Klik ikon bintang (⭐) pada lowongan apa pun untuk menyimpannya ke daftar Wishlist ini.' 
+        const emptySub = wishlistOnly
+            ? 'Klik ikon bintang (⭐) pada lowongan apa pun untuk menyimpannya ke daftar Wishlist ini.'
             : 'Cobalah mengubah filter pencarian Anda atau kata kunci pencarian.';
         jobListContainer.innerHTML = `
             <div class="empty-container">
@@ -909,9 +946,9 @@ function openJobModal(job) {
         </div>
         
         <div class="modal-footer">
-            <div class="modal-footer-top-row">
+            <div class="modal-footer-left">
                 <button class="btn-bookmark-modal ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(event, '${job.id}'); openJobModal(allJobs.find(j => j.id == '${job.id}'));">
-                    ${isBookmarked ? '★ Tersimpan' : '☆ Wishlist'}
+                    ${isBookmarked ? '★ Tersimpan' : '☆ Simpan ke Wishlist'}
                 </button>
                 <select class="status-select-modal" onchange="changeApplicationStatus('${job.id}', this.value)">
                     <option value="" ${!appStatus ? 'selected' : ''}>📌 Belum Dilamar</option>
@@ -920,10 +957,10 @@ function openJobModal(job) {
                     <option value="accepted" ${appStatus === 'accepted' ? 'selected' : ''}>🎉 Diterima</option>
                 </select>
             </div>
-            <div class="modal-footer-bottom-row">
-                <button class="btn-secondary modal-close-btn-footer" onclick="closeModal()">Tutup</button>
-                <a href="${job.url}" target="_blank" class="btn-primary modal-apply-btn-footer">
-                    Lamar di Portal (${job.source || 'Resmi'}) ↗
+            <div class="modal-footer-right">
+                <button class="btn-secondary" onclick="closeModal()">Tutup</button>
+                <a href="${job.url}" target="_blank" class="btn-primary">
+                    Lamar di Portal Resmi (${job.source}) ↗
                 </a>
             </div>
         </div>
@@ -959,6 +996,6 @@ if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js?v=4').then((reg) => {
             reg.update();
-        }).catch(() => {});
+        }).catch(() => { });
     });
 }

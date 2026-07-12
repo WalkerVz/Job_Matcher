@@ -11,7 +11,8 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Career Radar">
     <link rel="apple-touch-icon" href="icon.svg">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230f172a'/><circle cx='50' cy='50' r='38' fill='none' stroke='%2306b6d4' stroke-width='4'/><text x='50' y='68' font-size='52' text-anchor='middle'>⚡</text></svg>">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%230f172a'/><circle cx='50' cy='50' r='38' fill='none' stroke='%2306b6d4' stroke-width='4'/><text x='50' y='68' font-size='52' text-anchor='middle'>⚡</text></svg>">
     <link rel="stylesheet" href="style.css?v=20260711_5">
     <!-- SVG Gradients Definition -->
     <svg style="width:0;height:0;position:absolute;" aria-hidden="true" focusable="false">
@@ -26,7 +27,11 @@
     <div class="container">
         <header>
             <h1>⚡ Ravil's Career Radar & Job Matcher</h1>
-            <p>Platform cerdas kurasi & pencocokan lowongan kerja otomatis untuk Ravil Muhammad — bersumber langsung dari portal karir resmi pilihan</p>
+            <p>Platform cerdas kurasi & pencocokan lowongan kerja otomatis untuk Ravil Muhammad — bersumber langsung
+                dari portal karir resmi pilihan</p>
+            <div class="last-updated-badge" id="lastUpdatedBadge">
+                <span>🕒 Terakhir Diupdate: </span><strong id="lastUpdatedDate">-</strong>
+            </div>
         </header>
 
         <div class="dashboard-grid">
@@ -129,15 +134,21 @@
                         </select>
 
                         <select id="perPageSelect" class="filter-select">
-                            <option value="10">Tampilkan: 10 / halaman</option>
-                            <option value="25" selected>Tampilkan: 25 / halaman</option>
+                            <option value="10" selected>Tampilkan: 10 / halaman</option>
+                            <option value="25">Tampilkan: 25 / halaman</option>
                             <option value="50">Tampilkan: 50 / halaman</option>
                             <option value="100">Tampilkan: 100 / halaman</option>
                             <option value="all">Tampilkan: Semua</option>
                         </select>
 
-                        <button id="wishlistToggleBtn" class="wishlist-toggle-btn" title="Tampilkan Hanya Lowongan Tersimpan">
+                        <button id="wishlistToggleBtn" class="wishlist-toggle-btn"
+                            title="Tampilkan Hanya Lowongan Tersimpan">
                             ⭐ Wishlist (<span id="wishlistCount">0</span>)
+                        </button>
+
+                        <button id="resetFilterBtn" class="reset-filter-btn"
+                            title="Reset Semua Filter ke Default">
+                            🔄 Reset Filter
                         </button>
 
                         <div class="job-count" id="jobCount">Memuat...</div>
