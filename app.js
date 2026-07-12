@@ -204,6 +204,21 @@ function applyFilters() {
         return true;
     });
 
+    // Update mobile filter badge
+    if (filterCountBadge) {
+        let count = 0;
+        if (matchType !== 'all') count++;
+        if (sourceVal !== 'all') count++;
+        if (expFilter && expFilter.value !== 'all') count++;
+        if (query !== '') count++;
+        if (count > 0) {
+            filterCountBadge.style.display = 'inline-block';
+            filterCountBadge.textContent = count;
+        } else {
+            filterCountBadge.style.display = 'none';
+        }
+    }
+
     // C. Sorting
     if (sortBy === 'score') {
         // Highest score first, compatible jobs prioritized over blocked
