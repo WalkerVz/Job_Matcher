@@ -184,6 +184,78 @@ Format output (hanya list pertanyaan, tanpa penjelasan):
         }), 500
 
 
+@app.route('/api/generate-cover-letter', methods=['POST'])
+def generate_cover_letter():
+    """
+    Generate personalized cover letter based on job requirements and user CV
+    """
+    try:
+        data = request.get_json(silent=True) or {}
+        job_title = data.get('title', '')
+        company = data.get('company', '')
+        job_description = clean_html(data.get('description', ''))
+        requirements = clean_html(data.get('requirements', ''))
+        
+        # User CV data
+        user_major = data.get('user_major', 'Teknik Informatika')
+        user_gpa = data.get('user_gpa', '3.5')
+        user_skills = data.get('user_skills', 'Python, Data Science, Machine Learning')
+        user_experience = data.get('user_experience', '1 tahun')
+        
+        if not job_title:
+            return jsonify({'success': False, 'error': 'Job title is required'}), 400
+        
+        prompt = f"""
+Kamu adalah career coach profesional yang ahli menulis cover letter. Buatkan cover letter profesional dalam Bahasa Indonesia untuk lamaran ini.
+
+INFORMASI PELAMAR (CV):
+- Jurusan: {user_major}
+- IPK: {user_gpa}
+- Keahlian: {user_skills}
+- Pengalaman: {user_experience}
+
+INFORMASI LOWONGAN:
+- Perusahaan: {company}
+- Posisi: {job_title}
+
+Deskripsi Pekerjaan:
+{job_description}
+
+Persyaratan:
+{requirements}
+
+Tulis cover letter yang:
+1. Profesional dan menarik perhatian HRD
+2. Menunjukkan kesesuaian skills dan pengalaman pelamar dengan posisi
+3. Highlight keahlian teknis yang relevan dengan requirement
+4. Tunjukkan antusiasme dan motivasi yang kuat
+5. Maksimal 3-4 paragraf (tidak terlalu panjang)
+6. Gunakan bahasa Indonesia yang formal namun tetap hangat
+7. JANGAN menulis alamat, tanggal, atau salam pembuka "Kepada Yth" - langsung mulai dari paragraf pembuka
+
+Format output (langsung paragraf tanpa header):
+[Paragraf pembuka yang menarik dan menunjukkan antusiasme]
+
+[Paragraf kedua menjelaskan kesesuaian skills dan pengalaman dengan posisi]
+
+[Paragraf penutup yang kuat dengan call-to-action]
+"""
+        
+        cover_letter = generate_ai_content(prompt)
+        
+        return jsonify({
+            'success': True,
+            'cover_letter': cover_letter,
+            'provider': AI_PROVIDER.upper()
+        })
+        
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'error': str(e)
+        }), 500
+
+
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
@@ -203,5 +275,6 @@ if __name__ == '__main__':
     print("Endpoints available:")
     print("   - POST /api/summarize-job")
     print("   - POST /api/predict-interview")
+    print("   - POST /api/generate-cover-letter")
     print("   - GET /health")
     app.run(host='0.0.0.0', port=5001, debug=True)

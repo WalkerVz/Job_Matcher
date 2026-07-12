@@ -943,7 +943,21 @@ function openJobModal(job) {
         </div>
 
         <div id="pitchTab" class="tab-pane">
-            ${generateCoverLetterHTML(job)}
+            <div class="ai-feature-container">
+                <div class="ai-feature-header">
+                    <h3>✨ Auto Cover Letter / Pitch</h3>
+                    <p>Generate cover letter profesional yang disesuaikan dengan CV dan lowongan ini menggunakan AI</p>
+                </div>
+                <button class="btn-generate-ai" onclick="generateAICoverLetter('${job.id}')">
+                    ✨ Generate Cover Letter
+                </button>
+                <div id="aiCoverLetterContent-${job.id}" class="ai-content-area" style="display: none;">
+                    <div class="ai-loading">
+                        <div class="spinner"></div>
+                        <p>AI sedang menulis cover letter untuk Anda...</p>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div id="atsTab" class="tab-pane">
@@ -1049,6 +1063,7 @@ const AI_SERVICE_URL = 'http://localhost:5001';
 // In-Memory AI Caches for Instant Loading
 window.aiSummaryCache = window.aiSummaryCache || {};
 window.aiInterviewCache = window.aiInterviewCache || {};
+window.aiCoverLetterCache = window.aiCoverLetterCache || {};
 
 // Fast Fetch with Timeout (1200ms) for responsive local server detection on mobile
 async function fetchWithTimeout(url, options, timeoutMs = 1200) {
@@ -1261,8 +1276,296 @@ window.generateInterviewQuestions = async function(jobId) {
     }
 }
 
+// Generate AI Cover Letter / Pitch
+window.generateAICoverLetter = async function(jobId) {
+    const job = allJobs.find(j => j.id == jobId);
+    if (!job) return;
+    
+    const contentArea = document.getElementById(`aiCoverLetterContent-${jobId}`);
+    if (!contentArea) return;
+    contentArea.style.display = 'block';
 
-// Register Progressive Web App (PWA) Service Worker
+    // Instant Cache Return
+    if (window.aiCoverLetterCache[jobId]) {
+        contentArea.innerHTML = window.aiCoverLetterCache[jobId];
+        return;
+    }
+
+    contentArea.innerHTML = `
+        <div class="ai-loading">
+            <div class="spinner"></div>
+            <p>AI sedang menulis cover letter untuk Anda...</p>
+        </div>
+    `;
+    
+    // User CV profile data (based on actual CV)
+    const userMajor = 'Teknik Informatika';
+    const userGPA = '3.5';
+    const userSkills = 'Python, Data Science, Machine Learning, SQL, Excel, Google Sheets, Tableau, Power BI';
+    const userExperience = '1 tahun pengalaman kerja di bidang data & IT';
+
+    try {
+        const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/generate-cover-letter`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title: job.title,
+                company: job.organization_name || job.company || 'Perusahaan',
+                description: job.raw_description || job.description || '',
+                requirements: job.raw_requirements || job.requirements || '',
+                user_major: userMajor,
+                user_gpa: userGPA,
+                user_skills: userSkills,
+                user_experience: userExperience
+            })
+        }, 1200);
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            const htmlOut = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>✨ Cover Letter Profesional (Groq AI)</h4>
+                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
+                    </div>
+                    <div class="ai-result-content cover-letter-content">
+                        ${formatAIResponse(data.cover_letter)}
+                    </div>
+                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
+                        📋 Salin Cover Letter
+                    </button>
+                </div>
+            `;
+            window.aiCoverLetterCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
+        } else {
+            throw new Error(data.error || 'Server error');
+        }
+    } catch (error) {
+        // Fallback ke Serverless Cloud AI (Mobile & ketika laptop dimatikan)
+        try {
+            const promptText = `Kamu adalah career coach profesional. Buatkan cover letter profesional dalam Bahasa Indonesia.
+
+INFORMASI PELAMAR:
+- Jurusan: ${userMajor}
+- IPK: ${userGPA}
+- Keahlian: ${userSkills}
+- Pengalaman: ${userExperience}
+
+INFORMASI LOWONGAN:
+- Perusahaan: ${job.organization_name || 'Perusahaan'}
+- Posisi: ${job.title}
+- Deskripsi: ${stripHtml(job.raw_description || job.description)}
+- Persyaratan: ${stripHtml(job.raw_requirements || job.requirements)}
+
+Tulis cover letter profesional 3-4 paragraf. Langsung mulai dari paragraf pembuka tanpa alamat atau salam formal.`;
+            
+            const cloudCoverLetter = await fetchCloudAI(promptText);
+            const htmlOut = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>✨ Cover Letter Profesional (Cloud AI)</h4>
+                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
+                    </div>
+                    <div class="ai-result-content cover-letter-content">
+                        ${formatAIResponse(cloudCoverLetter)}
+                    </div>
+                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
+                        📋 Salin Cover Letter
+                    </button>
+                </div>
+            `;
+            window.aiCoverLetterCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
+        } catch (cloudErr) {
+            contentArea.innerHTML = `
+                <div class="ai-error">
+                    <p>❌ Tidak dapat membuat cover letter AI.</p>
+                    <p>Error: ${cloudErr.message}</p>
+                </div>
+            `;
+        }
+    }
+}
+
+// Copy AI Cover Letter to clipboard
+window.copyAICoverLetter = async function(jobId) {
+    const cacheHtml = window.aiCoverLetterCache[jobId];
+    if (!cacheHtml) return;
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = cacheHtml;
+    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+    try {
+        await navigator.clipboard.writeText(text);
+        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
+        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
+    } catch (e) {
+        alert('Gagal menyalin. Silakan copy manual.');
+    }
+}
+
+// Copy AI Cover Letter to clipboard
+window.copyAICoverLetter = async function(jobId) {
+    const cacheHtml = window.aiCoverLetterCache[jobId];
+    if (!cacheHtml) return;
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = cacheHtml;
+    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+    try {
+        await navigator.clipboard.writeText(text);
+        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
+        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
+    } catch (e) {
+        alert('Gagal menyalin. Silakan copy manual.');
+    }
+}
+// Generate AI Cover Letter / Pitch
+window.generateAICoverLetter = async function(jobId) {
+    const job = allJobs.find(j => j.id == jobId);
+    if (!job) return;
+    
+    const contentArea = document.getElementById(`aiCoverLetterContent-${jobId}`);
+    if (!contentArea) return;
+    contentArea.style.display = 'block';
+
+    // Instant Cache Return
+    if (window.aiCoverLetterCache[jobId]) {
+        contentArea.innerHTML = window.aiCoverLetterCache[jobId];
+        return;
+    }
+
+    contentArea.innerHTML = `
+        <div class="ai-loading">
+            <div class="spinner"></div>
+            <p>AI sedang menulis cover letter untuk Anda...</p>
+        </div>
+    `;
+    
+    // User CV profile data (based on actual CV)
+    const userMajor = 'Teknik Informatika';
+    const userGPA = '3.5';
+    const userSkills = 'Python, Data Science, Machine Learning, SQL, Excel, Google Sheets, Tableau, Power BI';
+    const userExperience = '1 tahun pengalaman kerja di bidang data & IT';
+
+    try {
+        const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/generate-cover-letter`, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                title: job.title,
+                company: job.organization_name || job.company || 'Perusahaan',
+                description: job.raw_description || job.description || '',
+                requirements: job.raw_requirements || job.requirements || '',
+                user_major: userMajor,
+                user_gpa: userGPA,
+                user_skills: userSkills,
+                user_experience: userExperience
+            })
+        }, 1200);
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            const htmlOut = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>✨ Cover Letter Profesional (Groq AI)</h4>
+                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
+                    </div>
+                    <div class="ai-result-content cover-letter-content">
+                        ${formatAIResponse(data.cover_letter)}
+                    </div>
+                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
+                        📋 Salin Cover Letter
+                    </button>
+                </div>
+            `;
+            window.aiCoverLetterCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
+        } else {
+            throw new Error(data.error || 'Server error');
+        }
+    } catch (error) {
+        // Fallback ke Serverless Cloud AI (Mobile & ketika laptop dimatikan)
+        try {
+            const promptText = `Kamu adalah career coach profesional. Buatkan cover letter profesional dalam Bahasa Indonesia.
+
+INFORMASI PELAMAR:
+- Jurusan: ${userMajor}
+- IPK: ${userGPA}
+- Keahlian: ${userSkills}
+- Pengalaman: ${userExperience}
+
+INFORMASI LOWONGAN:
+- Perusahaan: ${job.organization_name || 'Perusahaan'}
+- Posisi: ${job.title}
+- Deskripsi: ${stripHtml(job.raw_description || job.description)}
+- Persyaratan: ${stripHtml(job.raw_requirements || job.requirements)}
+
+Tulis cover letter profesional 3-4 paragraf. Langsung mulai dari paragraf pembuka tanpa alamat atau salam formal.`;
+            
+            const cloudCoverLetter = await fetchCloudAI(promptText);
+            const htmlOut = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>✨ Cover Letter Profesional (Cloud AI)</h4>
+                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
+                    </div>
+                    <div class="ai-result-content cover-letter-content">
+                        ${formatAIResponse(cloudCoverLetter)}
+                    </div>
+                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
+                        📋 Salin Cover Letter
+                    </button>
+                </div>
+            `;
+            window.aiCoverLetterCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
+        } catch (cloudErr) {
+            contentArea.innerHTML = `
+                <div class="ai-error">
+                    <p>❌ Tidak dapat membuat cover letter AI.</p>
+                    <p>Error: ${cloudErr.message}</p>
+                </div>
+            `;
+        }
+    }
+}
+
+// Copy AI Cover Letter to clipboard
+window.copyAICoverLetter = async function(jobId) {
+    const cacheHtml = window.aiCoverLetterCache[jobId];
+    if (!cacheHtml) return;
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = cacheHtml;
+    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+    try {
+        await navigator.clipboard.writeText(text);
+        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
+        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
+    } catch (e) {
+        alert('Gagal menyalin. Silakan copy manual.');
+    }
+}
+
+// Copy AI Cover Letter to clipboard
+window.copyAICoverLetter = async function(jobId) {
+    const cacheHtml = window.aiCoverLetterCache[jobId];
+    if (!cacheHtml) return;
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = cacheHtml;
+    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+    try {
+        await navigator.clipboard.writeText(text);
+        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
+        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
+    } catch (e) {
+        alert('Gagal menyalin. Silakan copy manual.');
+    }
+}
+
+
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('sw.js?v=5').then((reg) => {
