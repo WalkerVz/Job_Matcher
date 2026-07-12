@@ -2062,9 +2062,44 @@ header p {
         max-width: 100%;
         padding: 0.9rem 1.5rem;
         font-size: 0.95rem;
+        min-height: 44px;
     }
     
     .ai-result {
         padding: 1rem;
+    }
+
+    .ai-result-content {
+        font-size: 0.92rem;
+        line-height: 1.65;
+    }
+
+    /* Modal Mobile Optimizations */
+    .modal-content {
+        max-height: 88vh !important;
+        padding: 1.2rem !important;
+        -webkit-overflow-scrolling: touch;
+        overflow-y: auto;
+    }
+
+    /* Smooth horizontal scroll for tab buttons on mobile */
+    .tab-headers {
+        display: flex;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        gap: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+
+    .tab-headers::-webkit-scrollbar {
+        display: none;
+    }
+
+    .tab-btn {
+        flex-shrink: 0;
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+        min-height: 40px;
     }
 }

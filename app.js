@@ -1007,6 +1007,7 @@ function openJobModal(job) {
         </div>
     `;
 
+    window.currentModalJobId = job.id;
     detailModal.classList.add('active');
     document.body.style.overflow = 'hidden'; // Lock background scrolling
 }
@@ -1024,6 +1025,19 @@ window.switchTab = function (event, tabId) {
     // Show selected pane and set button active
     document.getElementById(tabId).classList.add('active');
     event.currentTarget.classList.add('active');
+
+    // Otomatis jalankan AI ketika membuka tab AI (jika belum dijalankan)
+    if (tabId === 'aiSummaryTab' && window.currentModalJobId) {
+        const area = document.getElementById(`aiSummaryContent-${window.currentModalJobId}`);
+        if (area && area.style.display === 'none') {
+            generateAISummary(window.currentModalJobId);
+        }
+    } else if (tabId === 'interviewTab' && window.currentModalJobId) {
+        const area = document.getElementById(`interviewContent-${window.currentModalJobId}`);
+        if (area && area.style.display === 'none') {
+            generateInterviewQuestions(window.currentModalJobId);
+        }
+    }
 }
 
 // Close Modal
@@ -1035,6 +1049,57 @@ window.closeModal = function () {
 // AI Service Functions
 const AI_SERVICE_URL = 'http://localhost:5001';
 
+// In-Memory AI Caches for Instant Loading
+window.aiSummaryCache = window.aiSummaryCache || {};
+window.aiInterviewCache = window.aiInterviewCache || {};
+
+// Fast Fetch with Timeout (1200ms) for responsive local server detection on mobile
+async function fetchWithTimeout(url, options, timeoutMs = 1200) {
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+        const res = await fetch(url, { ...options, signal: controller.signal });
+        clearTimeout(timer);
+        return res;
+    } catch (err) {
+        clearTimeout(timer);
+        throw err;
+    }
+}
+
+// Helper to format AI response text (convert bold markdown and linebreaks)
+function formatAIResponse(text) {
+    if (!text) return '';
+    return text
+        .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+        .replace(/\*(.*?)\*/g, '<em>$1</em>')
+        .replace(/\n/g, '<br>');
+}
+
+// Serverless Free AI Fallback (Jalan 24/7 di Mobile/GitHub Pages tanpa server backend)
+async function fetchCloudAI(prompt) {
+    const res = await fetch('https://text.pollinations.ai/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+            messages: [
+                { role: 'system', content: 'Kamu adalah asisten karir dan HR profesional dalam Bahasa Indonesia. Jawab langsung ke poinnya secara ringkas dan informatif.' },
+                { role: 'user', content: prompt }
+            ]
+        })
+    });
+    if (!res.ok) throw new Error('Cloud AI status ' + res.status);
+    return await res.text();
+}
+
+// Strip basic HTML tags for cleaner cloud prompt
+function stripHtml(html) {
+    if (!html) return '';
+    const tmp = document.createElement('DIV');
+    tmp.innerHTML = html;
+    return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+}
+
 // Generate AI Summary for a job
 window.generateAISummary = async function(jobId) {
     const job = allJobs.find(j => j.id == jobId);
@@ -1042,6 +1107,13 @@ window.generateAISummary = async function(jobId) {
     
     const contentArea = document.getElementById(`aiSummaryContent-${jobId}`);
     contentArea.style.display = 'block';
+
+    // Instant Cache Return
+    if (window.aiSummaryCache[jobId]) {
+        contentArea.innerHTML = window.aiSummaryCache[jobId];
+        return;
+    }
+
     contentArea.innerHTML = `
         <div class="ai-loading">
             <div class="spinner"></div>
@@ -1050,47 +1122,61 @@ window.generateAISummary = async function(jobId) {
     `;
     
     try {
-        const response = await fetch(`${AI_SERVICE_URL}/api/summarize-job`, {
+        const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/summarize-job`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 title: job.title,
-                description: job.raw_description || job.description,
-                requirements: job.raw_requirements || job.requirements
+                description: job.raw_description || job.description || '',
+                requirements: job.raw_requirements || job.requirements || ''
             })
-        });
+        }, 1200);
         
         const data = await response.json();
         
         if (data.success) {
-            contentArea.innerHTML = `
+            const htmlOut = `
                 <div class="ai-result">
                     <div class="ai-result-header">
-                        <h4>📝 Ringkasan Lowongan</h4>
+                        <h4>📝 Ringkasan Lowongan (Groq AI)</h4>
                     </div>
                     <div class="ai-result-content">
-                        ${data.summary.replace(/\n/g, '<br>')}
+                        ${formatAIResponse(data.summary)}
                     </div>
                 </div>
             `;
+            window.aiSummaryCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
         } else {
+            throw new Error(data.error || 'Server error');
+        }
+    } catch (error) {
+        // Fallback otomatis ke Serverless Cloud AI (jalan di Mobile & ketika laptop dimatikan)
+        try {
+            const promptText = `Ringkas deskripsi pekerjaan berikut menjadi 5-7 poin bullet yang mudah dipahami dalam Bahasa Indonesia untuk posisi "${job.title}":\n\nDeskripsi: ${stripHtml(job.raw_description || job.description)}\nPersyaratan: ${stripHtml(job.raw_requirements || job.requirements)}`;
+            const cloudSummary = await fetchCloudAI(promptText);
+            const htmlOut = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>📝 Ringkasan Lowongan (Cloud AI)</h4>
+                    </div>
+                    <div class="ai-result-content">
+                        ${formatAIResponse(cloudSummary)}
+                    </div>
+                </div>
+            `;
+            window.aiSummaryCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
+        } catch (cloudErr) {
             contentArea.innerHTML = `
                 <div class="ai-error">
-                    <p>❌ Gagal menghasilkan ringkasan: ${data.error}</p>
-                    <p>Pastikan AI service sedang berjalan di port 5001.</p>
+                    <p>❌ Tidak dapat memuat ringkasan AI.</p>
+                    <p>Error: ${cloudErr.message}</p>
                 </div>
             `;
         }
-    } catch (error) {
-        contentArea.innerHTML = `
-            <div class="ai-error">
-                <p>❌ Tidak dapat terhubung ke AI service.</p>
-                <p>Pastikan <code>python ai_service.py</code> sudah dijalankan.</p>
-                <p>Error: ${error.message}</p>
-            </div>
-        `;
     }
 }
 
@@ -1101,6 +1187,13 @@ window.generateInterviewQuestions = async function(jobId) {
     
     const contentArea = document.getElementById(`interviewContent-${jobId}`);
     contentArea.style.display = 'block';
+
+    // Instant Cache Return
+    if (window.aiInterviewCache[jobId]) {
+        contentArea.innerHTML = window.aiInterviewCache[jobId];
+        return;
+    }
+
     contentArea.innerHTML = `
         <div class="ai-loading">
             <div class="spinner"></div>
@@ -1109,49 +1202,65 @@ window.generateInterviewQuestions = async function(jobId) {
     `;
     
     try {
-        const response = await fetch(`${AI_SERVICE_URL}/api/predict-interview`, {
+        const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/predict-interview`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
                 title: job.title,
-                description: job.raw_description || job.description,
-                requirements: job.raw_requirements || job.requirements,
-                company: job.company
+                description: job.raw_description || job.description || '',
+                requirements: job.raw_requirements || job.requirements || '',
+                company: job.organization_name || job.company || 'Perusahaan tidak disebutkan'
             })
-        });
+        }, 1200);
         
         const data = await response.json();
         
         if (data.success) {
-            contentArea.innerHTML = `
+            const htmlOut = `
                 <div class="ai-result">
                     <div class="ai-result-header">
-                        <h4>💬 Prediksi Pertanyaan Interview</h4>
+                        <h4>💬 Prediksi Pertanyaan Interview (Groq AI)</h4>
                         <p>Berdasarkan analisis AI terhadap job requirements</p>
                     </div>
                     <div class="ai-result-content interview-questions">
-                        ${data.questions.replace(/\n/g, '<br>')}
+                        ${formatAIResponse(data.questions)}
                     </div>
                 </div>
             `;
+            window.aiInterviewCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
         } else {
+            throw new Error(data.error || 'Server error');
+        }
+    } catch (error) {
+        // Fallback otomatis ke Serverless Cloud AI (jalan di Mobile & ketika laptop dimatikan)
+        try {
+            const companyName = job.organization_name || job.company || 'Perusahaan';
+            const promptText = `Prediksi 8 pertanyaan interview yang kemungkinan besar ditanyakan untuk posisi "${job.title}" di ${companyName} dalam Bahasa Indonesia (campuran technical dan behavioral):\n\nDeskripsi: ${stripHtml(job.raw_description || job.description)}\nPersyaratan: ${stripHtml(job.raw_requirements || job.requirements)}`;
+            const cloudQuestions = await fetchCloudAI(promptText);
+            const htmlOut = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>💬 Prediksi Pertanyaan Interview (Cloud AI)</h4>
+                        <p>Berdasarkan analisis AI terhadap job requirements</p>
+                    </div>
+                    <div class="ai-result-content interview-questions">
+                        ${formatAIResponse(cloudQuestions)}
+                    </div>
+                </div>
+            `;
+            window.aiInterviewCache[jobId] = htmlOut;
+            contentArea.innerHTML = htmlOut;
+        } catch (cloudErr) {
             contentArea.innerHTML = `
                 <div class="ai-error">
-                    <p>❌ Gagal memprediksi pertanyaan: ${data.error}</p>
-                    <p>Pastikan AI service sedang berjalan di port 5001.</p>
+                    <p>❌ Tidak dapat memprediksi pertanyaan AI.</p>
+                    <p>Error: ${cloudErr.message}</p>
                 </div>
             `;
         }
-    } catch (error) {
-        contentArea.innerHTML = `
-            <div class="ai-error">
-                <p>❌ Tidak dapat terhubung ke AI service.</p>
-                <p>Pastikan <code>python ai_service.py</code> sudah dijalankan.</p>
-                <p>Error: ${error.message}</p>
-            </div>
-        `;
     }
 }
 
