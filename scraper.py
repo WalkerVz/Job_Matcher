@@ -917,6 +917,77 @@ def scrape_ioh_careers(session):
                 pass
     return ioh_jobs
 
+def scrape_indofood_careers(session):
+    print("Scraping Indofood Careers vacancies...")
+    indofood_jobs = []
+    payload = {
+        "advFilter": {
+            "NeedJobList": "Y",
+            "RefreshCE": "Y",
+            "SearchKeyword": "",
+            "CheckedAdvFilterEduLevel": [],
+            "CheckedAdvFilterFunction": [],
+            "CheckedAdvFilterExpLevel": [],
+            "CheckedAdvFilterCity": [],
+            "pageNumber": 1,
+            "PageSize": 100,
+            "BindFuncANDJOB": False,
+            "SortedBy": "lastposted",
+            "Lang": "id"
+        }
+    }
+    
+    try:
+        r = session.post(
+            "https://career.indofood.com/default.aspx/OnGetAdvFilter", 
+            json=payload,
+            headers={
+                "Content-Type": "application/json; charset=utf-8",
+                "X-Requested-With": "XMLHttpRequest"
+            }
+        )
+        if r.status_code == 200:
+            d_val = r.json().get("d", "")
+            if "[space2]" in d_val:
+                _, data_part = d_val.split("[space2]")
+                data_json = json.loads(data_part)
+                vacancies = data_json.get("ListAdvFilterJob", [])
+                print(f"Retrieved {len(vacancies)} jobs from Indofood Careers.")
+                
+                for v in vacancies:
+                    # Clean desc & requirements
+                    desc_html = v.get("JobDesc", "") or ""
+                    req_html = v.get("JobReq", "") or ""
+                    
+                    job_entry = {
+                        "id": v.get("JobID"),
+                        "title": v.get("JobPositionName"),
+                        "organization_id": v.get("JobDivision"),
+                        "organization_name": v.get("JobDivisionName") or "PT Indofood Sukses Makmur Tbk",
+                        "slug": f"indofood-{v.get('JobID')}",
+                        "type_name": "Karyawan Tetap" if v.get("JobStatusName2") == "Tetap" else "Karyawan Kontrak",
+                        "level": v.get("ExpLevelName") or "Professional",
+                        "location": f"{v.get('JobLocation', '')} - {v.get('CityName', '')}".strip(" -"),
+                        "workplace": "Work From Office (WFO)",
+                        "due_date": v.get("JobValidUntilStrID"),
+                        "group": v.get("JobFunctionName"),
+                        "url": f"https://career.indofood.com/vacancy_detail.aspx?id={v.get('JobID')}",
+                        "description": desc_html,
+                        "requirements": req_html,
+                        "source": "Indofood",
+                        "logo": None
+                    }
+                    indofood_jobs.append(job_entry)
+            else:
+                print("Failed to find [space2] separator in Indofood response.")
+        else:
+            print(f"Error calling Indofood API: {r.status_code}")
+    except Exception as e:
+        print(f"Exception during Indofood scraping: {e}")
+        
+    return indofood_jobs
+
+
 def main():
     session = requests.Session()
     session.headers.update({
@@ -1096,6 +1167,12 @@ def main():
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 
+    print("\nStep 3g: Scraping Indofood Careers vacancies...")
+    indofood_jobs = scrape_indofood_careers(session)
+    for job in indofood_jobs:
+        matched_job = evaluate_job_match(job)
+        matched_jobs.append(matched_job)
+
     # Sort matched jobs by match score (highest first), placing blocked jobs at the end
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
 
@@ -1110,11 +1187,25 @@ def main():
         json.dump(matched_jobs, f, indent=2, ensure_ascii=False)
         
     output_path_js = os.path.join(os.path.dirname(__file__), "matched_jobs.js")
+    import datetime
+    # Format: 12 July 2026 - 17:23 WIB
+    months_id = {
+        1: "Januari", 2: "Februari", 3: "Maret", 4: "April", 5: "Mei", 6: "Juni",
+        7: "Juli", 8: "Agustus", 9: "September", 10: "Oktober", 11: "November", 12: "Desember"
+    }
+    now = datetime.datetime.now()
+    timestamp_str = f"{now.day} {months_id[now.month]} {now.year} - {now.strftime('%H:%M')} WIB"
+    
     with open(output_path_js, "w", encoding="utf-8") as f:
+        f.write(f"window.lastUpdated = '{timestamp_str}';\n")
         f.write("window.matchedJobs = " + json.dumps(matched_jobs, ensure_ascii=False) + ";")
         
+    output_path_lu = os.path.join(os.path.dirname(__file__), "last_updated.json")
+    with open(output_path_lu, "w", encoding="utf-8") as f:
+        json.dump({"last_updated": timestamp_str}, f, indent=2, ensure_ascii=False)
+        
     print(f"Successfully processed {len(matched_jobs)} jobs!")
-    print(f"Output saved to: {output_path_json} and {output_path_js}")
+    print(f"Output saved to: {output_path_json}, {output_path_js}, and {output_path_lu}")
 
 if __name__ == "__main__":
     main()
