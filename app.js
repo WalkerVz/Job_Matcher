@@ -930,6 +930,8 @@ function openJobModal(job) {
             <button class="tab-btn" onclick="switchTab(event, 'requirementsTab')">Persyaratan Detail</button>
             <button class="tab-btn pitch-tab-btn" onclick="switchTab(event, 'pitchTab')">✨ Auto Cover Letter / Pitch</button>
             <button class="tab-btn ats-tab-btn" onclick="switchTab(event, 'atsTab')">💡 ATS Keyword Booster</button>
+            <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'aiSummaryTab')">🤖 AI Smart Summary</button>
+            <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'interviewTab')">💬 Interview Questions</button>
         </div>
         
         <div id="descriptionTab" class="tab-pane active">
@@ -946,6 +948,42 @@ function openJobModal(job) {
 
         <div id="atsTab" class="tab-pane">
             ${generateATSBoosterHTML(job)}
+        </div>
+
+        <div id="aiSummaryTab" class="tab-pane">
+            <div class="ai-feature-container">
+                <div class="ai-feature-header">
+                    <h3>🤖 AI Smart Summary</h3>
+                    <p>Ringkasan otomatis menggunakan AI untuk memahami lowongan ini dengan cepat</p>
+                </div>
+                <button class="btn-generate-ai" onclick="generateAISummary('${job.id}')">
+                    ✨ Generate Smart Summary
+                </button>
+                <div id="aiSummaryContent-${job.id}" class="ai-content-area" style="display: none;">
+                    <div class="ai-loading">
+                        <div class="spinner"></div>
+                        <p>AI sedang menganalisis deskripsi pekerjaan...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="interviewTab" class="tab-pane">
+            <div class="ai-feature-container">
+                <div class="ai-feature-header">
+                    <h3>💬 Interview Questions Predictor</h3>
+                    <p>Prediksi pertanyaan interview yang mungkin ditanyakan berdasarkan job requirements</p>
+                </div>
+                <button class="btn-generate-ai" onclick="generateInterviewQuestions('${job.id}')">
+                    🎯 Predict Interview Questions
+                </button>
+                <div id="interviewContent-${job.id}" class="ai-content-area" style="display: none;">
+                    <div class="ai-loading">
+                        <div class="spinner"></div>
+                        <p>AI sedang memprediksi pertanyaan interview...</p>
+                    </div>
+                </div>
+            </div>
         </div>
         
         <div class="modal-footer">
@@ -993,6 +1031,130 @@ window.closeModal = function () {
     detailModal.classList.remove('active');
     document.body.style.overflow = ''; // Restore background scrolling
 }
+
+// AI Service Functions
+const AI_SERVICE_URL = 'http://localhost:5001';
+
+// Generate AI Summary for a job
+window.generateAISummary = async function(jobId) {
+    const job = allJobs.find(j => j.id == jobId);
+    if (!job) return;
+    
+    const contentArea = document.getElementById(`aiSummaryContent-${jobId}`);
+    contentArea.style.display = 'block';
+    contentArea.innerHTML = `
+        <div class="ai-loading">
+            <div class="spinner"></div>
+            <p>AI sedang menganalisis deskripsi pekerjaan...</p>
+        </div>
+    `;
+    
+    try {
+        const response = await fetch(`${AI_SERVICE_URL}/api/summarize-job`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                title: job.title,
+                description: job.raw_description || job.description,
+                requirements: job.raw_requirements || job.requirements
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            contentArea.innerHTML = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>📝 Ringkasan Lowongan</h4>
+                    </div>
+                    <div class="ai-result-content">
+                        ${data.summary.replace(/\n/g, '<br>')}
+                    </div>
+                </div>
+            `;
+        } else {
+            contentArea.innerHTML = `
+                <div class="ai-error">
+                    <p>❌ Gagal menghasilkan ringkasan: ${data.error}</p>
+                    <p>Pastikan AI service sedang berjalan di port 5001.</p>
+                </div>
+            `;
+        }
+    } catch (error) {
+        contentArea.innerHTML = `
+            <div class="ai-error">
+                <p>❌ Tidak dapat terhubung ke AI service.</p>
+                <p>Pastikan <code>python ai_service.py</code> sudah dijalankan.</p>
+                <p>Error: ${error.message}</p>
+            </div>
+        `;
+    }
+}
+
+// Generate Interview Questions Prediction
+window.generateInterviewQuestions = async function(jobId) {
+    const job = allJobs.find(j => j.id == jobId);
+    if (!job) return;
+    
+    const contentArea = document.getElementById(`interviewContent-${jobId}`);
+    contentArea.style.display = 'block';
+    contentArea.innerHTML = `
+        <div class="ai-loading">
+            <div class="spinner"></div>
+            <p>AI sedang memprediksi pertanyaan interview...</p>
+        </div>
+    `;
+    
+    try {
+        const response = await fetch(`${AI_SERVICE_URL}/api/predict-interview`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                title: job.title,
+                description: job.raw_description || job.description,
+                requirements: job.raw_requirements || job.requirements,
+                company: job.company
+            })
+        });
+        
+        const data = await response.json();
+        
+        if (data.success) {
+            contentArea.innerHTML = `
+                <div class="ai-result">
+                    <div class="ai-result-header">
+                        <h4>💬 Prediksi Pertanyaan Interview</h4>
+                        <p>Berdasarkan analisis AI terhadap job requirements</p>
+                    </div>
+                    <div class="ai-result-content interview-questions">
+                        ${data.questions.replace(/\n/g, '<br>')}
+                    </div>
+                </div>
+            `;
+        } else {
+            contentArea.innerHTML = `
+                <div class="ai-error">
+                    <p>❌ Gagal memprediksi pertanyaan: ${data.error}</p>
+                    <p>Pastikan AI service sedang berjalan di port 5001.</p>
+                </div>
+            `;
+        }
+    } catch (error) {
+        contentArea.innerHTML = `
+            <div class="ai-error">
+                <p>❌ Tidak dapat terhubung ke AI service.</p>
+                <p>Pastikan <code>python ai_service.py</code> sudah dijalankan.</p>
+                <p>Error: ${error.message}</p>
+            </div>
+        `;
+    }
+}
+
 
 // Register Progressive Web App (PWA) Service Worker
 if ('serviceWorker' in navigator) {

@@ -610,6 +610,12 @@ header p {
     color: #c084fc;
 }
 
+.source-badge.indofood {
+    background: rgba(14, 165, 233, 0.15);
+    border: 1px solid rgba(14, 165, 233, 0.35);
+    color: #38bdf8;
+}
+
 .job-matching-preview {
     font-size: 0.85rem;
     color: var(--text-secondary);
@@ -1887,5 +1893,178 @@ header p {
         justify-content: center;
         padding: 0.85rem 1rem;
         font-size: 0.92rem;
+    }
+}
+
+/* ============================================
+   AI FEATURES STYLING
+   ============================================ */
+
+.ai-feature-container {
+    padding: 1.5rem;
+    background: rgba(15, 23, 42, 0.4);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+}
+
+.ai-feature-header {
+    margin-bottom: 1.5rem;
+}
+
+.ai-feature-header h3 {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.ai-feature-header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.btn-generate-ai {
+    background: linear-gradient(135deg, #8b5cf6 0%, #06b6d4 100%);
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.btn-generate-ai:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 92, 246, 0.4);
+}
+
+.btn-generate-ai:active {
+    transform: translateY(0);
+}
+
+.ai-content-area {
+    margin-top: 1.5rem;
+    animation: fadeIn 0.3s ease;
+}
+
+.ai-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    gap: 1rem;
+}
+
+.ai-loading .spinner {
+    width: 48px;
+    height: 48px;
+    border: 4px solid rgba(139, 92, 246, 0.2);
+    border-top-color: #8b5cf6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.ai-loading p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.ai-result {
+    background: rgba(6, 182, 212, 0.05);
+    border: 1px solid rgba(6, 182, 212, 0.2);
+    border-radius: 10px;
+    padding: 1.5rem;
+    animation: fadeIn 0.5s ease;
+}
+
+.ai-result-header {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.ai-result-header h4 {
+    font-size: 1.2rem;
+    color: var(--text-color);
+    margin-bottom: 0.3rem;
+}
+
+.ai-result-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.ai-result-content {
+    color: var(--text-color);
+    font-size: 1rem;
+    line-height: 1.8;
+    white-space: pre-wrap;
+}
+
+.ai-result-content br {
+    display: block;
+    content: "";
+    margin: 0.5rem 0;
+}
+
+.interview-questions {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+.ai-error {
+    background: rgba(239, 68, 68, 0.1);
+    border: 1px solid rgba(239, 68, 68, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    color: #fca5a5;
+}
+
+.ai-error p {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.ai-error code {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.2rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 640px) {
+    .ai-feature-container {
+        padding: 1rem;
+    }
+    
+    .btn-generate-ai {
+        max-width: 100%;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .ai-result {
+        padding: 1rem;
     }
 }
