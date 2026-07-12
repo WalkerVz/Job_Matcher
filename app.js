@@ -56,6 +56,15 @@ document.addEventListener('DOMContentLoaded', async () => {
     if (expFilter) expFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     sortSelect.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     
+    if (wishlistToggleBtn) {
+        wishlistToggleBtn.addEventListener('click', () => {
+            wishlistOnly = !wishlistOnly;
+            wishlistToggleBtn.classList.toggle('active', wishlistOnly);
+            currentPage = 1;
+            applyFilters();
+        });
+    }
+    
     if (perPageSelect) {
         perPageSelect.addEventListener('change', () => {
             itemsPerPage = perPageSelect.value;
@@ -122,6 +131,7 @@ async function loadJobsData() {
 
     // Show skeleton while loading
     showSkeleton();
+    updateWishlistCountBadge();
     applyFilters();
 }
 
@@ -422,11 +432,16 @@ function renderJobList() {
     jobListContainer.innerHTML = '';
 
     if (filteredJobs.length === 0) {
+        const emptyIcon = wishlistOnly ? '⭐' : '🔎';
+        const emptyTitle = wishlistOnly ? 'Wishlist Anda Masih Kosong' : 'Tidak Ada Lowongan yang Cocok';
+        const emptySub = wishlistOnly 
+            ? 'Klik ikon bintang (⭐) pada lowongan apa pun untuk menyimpannya ke daftar Wishlist ini.' 
+            : 'Cobalah mengubah filter pencarian Anda atau kata kunci pencarian.';
         jobListContainer.innerHTML = `
             <div class="empty-container">
-                <div class="empty-icon">🔎</div>
-                <h3>Tidak Ada Lowongan yang Cocok</h3>
-                <p>Cobalah mengubah filter pencarian Anda atau kata kunci pencarian.</p>
+                <div class="empty-icon">${emptyIcon}</div>
+                <h3>${emptyTitle}</h3>
+                <p>${emptySub}</p>
             </div>
         `;
         jobCountEl.textContent = '0 Lowongan';
