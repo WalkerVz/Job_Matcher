@@ -586,7 +586,7 @@ function openJobModal(job) {
                 </div>
 
                 <!-- Experience & Industry relevance -->
-                <div class="checklist-item" style="grid-column: span 2;">
+                <div class="checklist-item checklist-item-full">
                     <span class="checklist-icon ${getClass(job.match_details.experience.status)}">
                         ${getIcon(job.match_details.experience.status)}
                     </span>
