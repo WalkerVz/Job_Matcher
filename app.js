@@ -910,12 +910,12 @@ function openJobModal(job) {
 
                 <!-- Experience & Industry relevance -->
                 <div class="checklist-item checklist-item-full">
-                    <span class="checklist-icon ${getClass(job.match_details.experience.status)}">
-                        ${getIcon(job.match_details.experience.status)}
+                    <span class="checklist-icon ${getClass(job.match_details.experience ? job.match_details.experience.status : 'Neutral')}">
+                        ${getIcon(job.match_details.experience ? job.match_details.experience.status : 'Neutral')}
                     </span>
                     <div class="checklist-info">
                         <h5>Pengalaman Relevan (Upstream Oil & Gas / Tech)</h5>
-                        <p>${job.match_details.experience.reason}</p>
+                        <p>${job.match_details.experience ? job.match_details.experience.reason : 'Sesuai dengan kualifikasi pengalaman kerja.'}</p>
                     </div>
                 </div>
             </div>
