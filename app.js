@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             perPageSelect.value = '25';
             wishlistOnly = false;
             if (wishlistToggleBtn) wishlistToggleBtn.classList.remove('active');
-            
+
             // Reset pagination and re-apply filters
             currentPage = 1;
             itemsPerPage = 25;
@@ -243,18 +243,18 @@ function generateCoverLetterHTML(job) {
     const companyName = job.organization_name || 'Perusahaan';
     const jobTitle = job.title || 'Posisi yang dilamar';
 
-    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika UIN Suska Riau (IPK 3.39 | TOEFL 537) dengan pengalaman profesional sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR) serta Data Scientist Intern di Rakamin Academy. Saya memiliki keahlian teruji dalam ${requiredSkills} yang sangat sejalan dengan kebutuhan posisi ${jobTitle}.\n\nMelalui proyek nyata seperti otomatisasi aplikasi QC Log Analyzer dan pemodelan prediktif risiko kredit, saya siap memberikan kontribusi nyata bagi efisiensi operasional ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
+    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika UIN Suska Riau (IPK 3.39 | TOEFL 537) dengan pengalaman profesional sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR), Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student 86.96), serta Freelance Web Dev & Machine Learning. Saya memiliki keahlian teruji dalam ${requiredSkills} yang sangat sejalan dengan kebutuhan posisi ${jobTitle}.\n\nMelalui proyek nyata seperti QC Log Analyzer (Python/Dataiku), model Credit Risk Loan (turunkan gagal bayar 12%), dan pengembangan aplikasi web (React/Laravel), saya siap memberikan kontribusi nyata bagi efisiensi operasional ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
 
-    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate from UIN Suska Riau (GPA 3.39 | TOEFL 537) with hands-on industry experience as an AI Engineer at PT Pertamina Hulu Rokan (PHR) and Data Scientist Intern at Rakamin Academy. I bring practical technical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nWith a track record of building automated analytics applications (Python/Dataiku) and predictive machine learning models, I look forward to contributing to data-driven growth at ${companyName}. Please find my resume attached for your review. Thank you.`;
+    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate from UIN Suska Riau (GPA 3.39 | TOEFL 537) with hands-on industry experience as an AI Engineer at PT Pertamina Hulu Rokan (PHR), Data Scientist Intern at Id/x partners x Rakamin Academy, and Freelance Web Developer & ML Engineer. I bring practical technical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nWith a track record of building automated analytics applications (Python/Dataiku), predictive ML models (12% credit risk reduction), and full-stack web solutions (React/Laravel), I look forward to contributing to data-driven growth at ${companyName}. Please find my resume attached for your review. Thank you.`;
 
-    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dari UIN Suska Riau (IPK 3.39, TOEFL 537) dengan latar belakang pengalaman di industri hulu migas sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR). Selama masa kerja tersebut, saya berhasil mengembangkan aplikasi QC Log Analyzer berbasis Python dan Dataiku untuk otomatisasi pemrosesan serta visualisasi data operasional.\n\nSelain itu, sebagai Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student Score 86.96), saya memiliki rekam jejak mengembangkan model machine learning yang berhasil menurunkan tingkat gagal bayar pinjaman hingga 12%. Pengalaman ini membuat saya sangat terbiasa mengimplementasikan keahlian pada ${requiredSkills}.\n\nKemampuan analisis data yang kuat, keahlian teknis lintas platform (Python, SQL, Dataiku, Web Dev), serta komunikasi kolaboratif membuat saya yakin dapat memberikan kontribusi signifikan bagi ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil`;
+    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dari UIN Suska Riau (IPK 3.39, TOEFL 537) dengan latar belakang pengalaman di industri hulu migas sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR, Juli 2025–Februari 2026). Selama masa kerja tersebut, saya berhasil mengembangkan aplikasi QC Log Analyzer berbasis Python dan Dataiku untuk otomatisasi pemrosesan, monitoring, serta visualisasi data operasional hulu migas.\n\nSelain itu, sebagai Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student Score 86.96, April–Mei 2025), saya memiliki rekam jejak mengembangkan model machine learning Credit Risk Loan yang berhasil menurunkan tingkat gagal bayar pinjaman hingga 12% pada dataset 466.285 data. Saat ini saya juga aktif sebagai Freelance Web Developer & Machine Learning Engineer (PHP, Laravel, React, Python). Pengalaman ini membuat saya sangat terbiasa mengimplementasikan keahlian pada ${requiredSkills}.\n\nKemampuan analisis data yang kuat, keahlian teknis lintas platform (Python, SQL, Dataiku, React, Laravel, Power BI), serta komunikasi kolaboratif membuat saya yakin dapat memberikan kontribusi signifikan bagi ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil\nPekanbaru, Riau | ravilmuhammad987@gmail.com`;
 
     return `
         <div class="cover-letter-container">
             <div class="cover-letter-header">
                 <div>
                     <h4>✨ Auto-Generated Application Pitch & Cover Letter</h4>
-                    <p>Dibuat otomatis dari profil asli CV-mu (Muhammad Ravil | UIN Suska Riau | IPK 3.39 | AI Engineer PHR & Rakamin) dicocokkan dengan keahlian lowongan ini.</p>
+                    <p>Dibuat otomatis dari CV asli (Muhammad Ravil | UIN Suska Riau | AI Engineer PHR | Rakamin 86.96 | Freelance Web/ML) dicocokkan dengan keahlian lowongan ini.</p>
                 </div>
             </div>
             
@@ -291,12 +291,14 @@ function generateATSBoosterHTML(job) {
     const plus = nlp.plus_skills || [];
     const rawText = ((job.raw_description || '') + ' ' + (job.raw_requirements || '')).toLowerCase();
 
-    // Ravil's authentic profile keywords from CV PDF
+    // Kata kunci profil autentik dari CV - Muhammad Ravil.pdf
     const ravilProfileKeywords = [
         'python', 'sql', 'data analysis', 'data science', 'machine learning',
-        'dataiku', 'excel', 'power bi', 'react', 'laravel', 'php', 'git', 'arcgis',
+        'dataiku', 'excel', 'power bi', 'react', 'laravel', 'php', 'javascript', 'git', 'arcgis',
         'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data',
-        'data analyst', 'ai engineer', 'web development', 'web developer'
+        'data analyst', 'data scientist', 'ai engineer', 'web development', 'web developer',
+        'fullstack', 'full stack', 'it support', 'mysql', 'sentiment analysis', 'naive bayes',
+        'tableau', 'microsoft office', 'troubleshooting'
     ];
 
     // Identify which mandatory/plus skills Ravil already matches
@@ -324,9 +326,9 @@ function generateATSBoosterHTML(job) {
     const atsScore = Math.min(98, Math.max(82, 75 + (matchedATS.length * 6)));
 
     // Generate tailored resume bullet points authentic to CV PDF
-    const bullet1 = `• Developed automated data processing & monitoring applications (QC Log Analyzer) using Python and Dataiku at PT Pertamina Hulu Rokan, streamlining operational reporting.`;
-    const bullet2 = `• Engineered machine learning classification & predictive models (Credit Risk Loan project) reducing loan default rates by 12% across 466,285 records.`;
-    const bullet3 = `• Spearheaded end-to-end ${matchedATS[0] || 'data analytics'} workflows and dashboard reporting (${bonusFound[0] || 'SQL/Power BI'}) to drive cross-functional operational efficiency.`;
+    const bullet1 = `• Developed QC Log Analyzer — automated data processing, monitoring & visualization application using Python and Dataiku at PT Pertamina Hulu Rokan (AI Engineer), streamlining upstream oil & gas operational reporting.`;
+    const bullet2 = `• Engineered Credit Risk Loan ML model at Id/x partners x Rakamin Academy (Best Student 86.96), reducing loan default rates by 12% across 466,285 records.`;
+    const bullet3 = `• Delivered end-to-end ${matchedATS[0] || 'data analytics'} workflows and full-stack solutions (${bonusFound[0] || 'React/Laravel/Python'}) as Freelance Web Dev & ML Engineer.`;
 
     const allBulletsText = `${bullet1}\n${bullet2}\n${bullet3}`;
 
@@ -895,7 +897,7 @@ function openJobModal(job) {
                         ${job.match_details && job.match_details.exp_years ? getIcon(job.match_details.exp_years.status) : '✅'}
                     </span>
                     <div class="checklist-info">
-                        <h5>Syarat Pengalaman Kerja (Kamu: 1 Tahun)</h5>
+                        <h5>Syarat Pengalaman Kerja (Kamu: ~1 Tahun — PHR, Rakamin & Freelance)</h5>
                         <p>${job.match_details && job.match_details.exp_years ? job.match_details.exp_years.reason : 'Sesuai dengan profil pengalamanmu.'}</p>
                     </div>
                 </div>
@@ -906,7 +908,7 @@ function openJobModal(job) {
                         ${getIcon(job.match_details.skills.status)}
                     </span>
                     <div class="checklist-info">
-                        <h5>Keahlian (Python & Data Science)</h5>
+                        <h5>Keahlian (Python, Dataiku & AI/ML)</h5>
                         <p>${job.match_details.skills.reason}</p>
                     </div>
                 </div>
@@ -943,21 +945,7 @@ function openJobModal(job) {
         </div>
 
         <div id="pitchTab" class="tab-pane">
-            <div class="ai-feature-container">
-                <div class="ai-feature-header">
-                    <h3>✨ Auto Cover Letter / Pitch</h3>
-                    <p>Generate cover letter profesional yang disesuaikan dengan CV dan lowongan ini menggunakan AI</p>
-                </div>
-                <button class="btn-generate-ai" onclick="generateAICoverLetter('${job.id}')">
-                    ✨ Generate Cover Letter
-                </button>
-                <div id="aiCoverLetterContent-${job.id}" class="ai-content-area" style="display: none;">
-                    <div class="ai-loading">
-                        <div class="spinner"></div>
-                        <p>AI sedang menulis cover letter untuk Anda...</p>
-                    </div>
-                </div>
-            </div>
+            ${generateCoverLetterHTML(job)}
         </div>
 
         <div id="atsTab" class="tab-pane">
@@ -1063,7 +1051,6 @@ const AI_SERVICE_URL = 'http://localhost:5001';
 // In-Memory AI Caches for Instant Loading
 window.aiSummaryCache = window.aiSummaryCache || {};
 window.aiInterviewCache = window.aiInterviewCache || {};
-window.aiCoverLetterCache = window.aiCoverLetterCache || {};
 
 // Fast Fetch with Timeout (1200ms) for responsive local server detection on mobile
 async function fetchWithTimeout(url, options, timeoutMs = 1200) {
@@ -1113,10 +1100,10 @@ function stripHtml(html) {
 }
 
 // Generate AI Summary for a job
-window.generateAISummary = async function(jobId) {
+window.generateAISummary = async function (jobId) {
     const job = allJobs.find(j => j.id == jobId);
     if (!job) return;
-    
+
     const contentArea = document.getElementById(`aiSummaryContent-${jobId}`);
     contentArea.style.display = 'block';
 
@@ -1132,7 +1119,7 @@ window.generateAISummary = async function(jobId) {
             <p>AI sedang menganalisis deskripsi pekerjaan...</p>
         </div>
     `;
-    
+
     try {
         const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/summarize-job`, {
             method: 'POST',
@@ -1145,9 +1132,9 @@ window.generateAISummary = async function(jobId) {
                 requirements: job.raw_requirements || job.requirements || ''
             })
         }, 1200);
-        
+
         const data = await response.json();
-        
+
         if (data.success) {
             const htmlOut = `
                 <div class="ai-result">
@@ -1193,10 +1180,10 @@ window.generateAISummary = async function(jobId) {
 }
 
 // Generate Interview Questions Prediction
-window.generateInterviewQuestions = async function(jobId) {
+window.generateInterviewQuestions = async function (jobId) {
     const job = allJobs.find(j => j.id == jobId);
     if (!job) return;
-    
+
     const contentArea = document.getElementById(`interviewContent-${jobId}`);
     contentArea.style.display = 'block';
 
@@ -1212,7 +1199,7 @@ window.generateInterviewQuestions = async function(jobId) {
             <p>AI sedang memprediksi pertanyaan interview...</p>
         </div>
     `;
-    
+
     try {
         const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/predict-interview`, {
             method: 'POST',
@@ -1226,9 +1213,9 @@ window.generateInterviewQuestions = async function(jobId) {
                 company: job.organization_name || job.company || 'Perusahaan tidak disebutkan'
             })
         }, 1200);
-        
+
         const data = await response.json();
-        
+
         if (data.success) {
             const htmlOut = `
                 <div class="ai-result">
@@ -1276,299 +1263,12 @@ window.generateInterviewQuestions = async function(jobId) {
     }
 }
 
-// Generate AI Cover Letter / Pitch
-window.generateAICoverLetter = async function(jobId) {
-    const job = allJobs.find(j => j.id == jobId);
-    if (!job) return;
-    
-    const contentArea = document.getElementById(`aiCoverLetterContent-${jobId}`);
-    if (!contentArea) return;
-    contentArea.style.display = 'block';
 
-    // Instant Cache Return
-    if (window.aiCoverLetterCache[jobId]) {
-        contentArea.innerHTML = window.aiCoverLetterCache[jobId];
-        return;
-    }
-
-    contentArea.innerHTML = `
-        <div class="ai-loading">
-            <div class="spinner"></div>
-            <p>AI sedang menulis cover letter untuk Anda...</p>
-        </div>
-    `;
-    
-    // User CV profile data (based on actual CV)
-    const userMajor = 'Teknik Informatika';
-    const userGPA = '3.5';
-    const userSkills = 'Python, Data Science, Machine Learning, SQL, Excel, Google Sheets, Tableau, Power BI';
-    const userExperience = '1 tahun pengalaman kerja di bidang data & IT';
-
-    try {
-        const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/generate-cover-letter`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                title: job.title,
-                company: job.organization_name || job.company || 'Perusahaan',
-                description: job.raw_description || job.description || '',
-                requirements: job.raw_requirements || job.requirements || '',
-                user_major: userMajor,
-                user_gpa: userGPA,
-                user_skills: userSkills,
-                user_experience: userExperience
-            })
-        }, 1200);
-        
-        const data = await response.json();
-        
-        if (data.success) {
-            const htmlOut = `
-                <div class="ai-result">
-                    <div class="ai-result-header">
-                        <h4>✨ Cover Letter Profesional (Groq AI)</h4>
-                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
-                    </div>
-                    <div class="ai-result-content cover-letter-content">
-                        ${formatAIResponse(data.cover_letter)}
-                    </div>
-                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
-                        📋 Salin Cover Letter
-                    </button>
-                </div>
-            `;
-            window.aiCoverLetterCache[jobId] = htmlOut;
-            contentArea.innerHTML = htmlOut;
-        } else {
-            throw new Error(data.error || 'Server error');
-        }
-    } catch (error) {
-        // Fallback ke Serverless Cloud AI (Mobile & ketika laptop dimatikan)
-        try {
-            const promptText = `Kamu adalah career coach profesional. Buatkan cover letter profesional dalam Bahasa Indonesia.
-
-INFORMASI PELAMAR:
-- Jurusan: ${userMajor}
-- IPK: ${userGPA}
-- Keahlian: ${userSkills}
-- Pengalaman: ${userExperience}
-
-INFORMASI LOWONGAN:
-- Perusahaan: ${job.organization_name || 'Perusahaan'}
-- Posisi: ${job.title}
-- Deskripsi: ${stripHtml(job.raw_description || job.description)}
-- Persyaratan: ${stripHtml(job.raw_requirements || job.requirements)}
-
-Tulis cover letter profesional 3-4 paragraf. Langsung mulai dari paragraf pembuka tanpa alamat atau salam formal.`;
-            
-            const cloudCoverLetter = await fetchCloudAI(promptText);
-            const htmlOut = `
-                <div class="ai-result">
-                    <div class="ai-result-header">
-                        <h4>✨ Cover Letter Profesional (Cloud AI)</h4>
-                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
-                    </div>
-                    <div class="ai-result-content cover-letter-content">
-                        ${formatAIResponse(cloudCoverLetter)}
-                    </div>
-                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
-                        📋 Salin Cover Letter
-                    </button>
-                </div>
-            `;
-            window.aiCoverLetterCache[jobId] = htmlOut;
-            contentArea.innerHTML = htmlOut;
-        } catch (cloudErr) {
-            contentArea.innerHTML = `
-                <div class="ai-error">
-                    <p>❌ Tidak dapat membuat cover letter AI.</p>
-                    <p>Error: ${cloudErr.message}</p>
-                </div>
-            `;
-        }
-    }
-}
-
-// Copy AI Cover Letter to clipboard
-window.copyAICoverLetter = async function(jobId) {
-    const cacheHtml = window.aiCoverLetterCache[jobId];
-    if (!cacheHtml) return;
-    const tmp = document.createElement('DIV');
-    tmp.innerHTML = cacheHtml;
-    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
-    try {
-        await navigator.clipboard.writeText(text);
-        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
-        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
-    } catch (e) {
-        alert('Gagal menyalin. Silakan copy manual.');
-    }
-}
-
-// Copy AI Cover Letter to clipboard
-window.copyAICoverLetter = async function(jobId) {
-    const cacheHtml = window.aiCoverLetterCache[jobId];
-    if (!cacheHtml) return;
-    const tmp = document.createElement('DIV');
-    tmp.innerHTML = cacheHtml;
-    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
-    try {
-        await navigator.clipboard.writeText(text);
-        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
-        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
-    } catch (e) {
-        alert('Gagal menyalin. Silakan copy manual.');
-    }
-}
-// Generate AI Cover Letter / Pitch
-window.generateAICoverLetter = async function(jobId) {
-    const job = allJobs.find(j => j.id == jobId);
-    if (!job) return;
-    
-    const contentArea = document.getElementById(`aiCoverLetterContent-${jobId}`);
-    if (!contentArea) return;
-    contentArea.style.display = 'block';
-
-    // Instant Cache Return
-    if (window.aiCoverLetterCache[jobId]) {
-        contentArea.innerHTML = window.aiCoverLetterCache[jobId];
-        return;
-    }
-
-    contentArea.innerHTML = `
-        <div class="ai-loading">
-            <div class="spinner"></div>
-            <p>AI sedang menulis cover letter untuk Anda...</p>
-        </div>
-    `;
-    
-    // User CV profile data (based on actual CV)
-    const userMajor = 'Teknik Informatika';
-    const userGPA = '3.5';
-    const userSkills = 'Python, Data Science, Machine Learning, SQL, Excel, Google Sheets, Tableau, Power BI';
-    const userExperience = '1 tahun pengalaman kerja di bidang data & IT';
-
-    try {
-        const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/generate-cover-letter`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({
-                title: job.title,
-                company: job.organization_name || job.company || 'Perusahaan',
-                description: job.raw_description || job.description || '',
-                requirements: job.raw_requirements || job.requirements || '',
-                user_major: userMajor,
-                user_gpa: userGPA,
-                user_skills: userSkills,
-                user_experience: userExperience
-            })
-        }, 1200);
-        
-        const data = await response.json();
-        
-        if (data.success) {
-            const htmlOut = `
-                <div class="ai-result">
-                    <div class="ai-result-header">
-                        <h4>✨ Cover Letter Profesional (Groq AI)</h4>
-                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
-                    </div>
-                    <div class="ai-result-content cover-letter-content">
-                        ${formatAIResponse(data.cover_letter)}
-                    </div>
-                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
-                        📋 Salin Cover Letter
-                    </button>
-                </div>
-            `;
-            window.aiCoverLetterCache[jobId] = htmlOut;
-            contentArea.innerHTML = htmlOut;
-        } else {
-            throw new Error(data.error || 'Server error');
-        }
-    } catch (error) {
-        // Fallback ke Serverless Cloud AI (Mobile & ketika laptop dimatikan)
-        try {
-            const promptText = `Kamu adalah career coach profesional. Buatkan cover letter profesional dalam Bahasa Indonesia.
-
-INFORMASI PELAMAR:
-- Jurusan: ${userMajor}
-- IPK: ${userGPA}
-- Keahlian: ${userSkills}
-- Pengalaman: ${userExperience}
-
-INFORMASI LOWONGAN:
-- Perusahaan: ${job.organization_name || 'Perusahaan'}
-- Posisi: ${job.title}
-- Deskripsi: ${stripHtml(job.raw_description || job.description)}
-- Persyaratan: ${stripHtml(job.raw_requirements || job.requirements)}
-
-Tulis cover letter profesional 3-4 paragraf. Langsung mulai dari paragraf pembuka tanpa alamat atau salam formal.`;
-            
-            const cloudCoverLetter = await fetchCloudAI(promptText);
-            const htmlOut = `
-                <div class="ai-result">
-                    <div class="ai-result-header">
-                        <h4>✨ Cover Letter Profesional (Cloud AI)</h4>
-                        <p>Disesuaikan dengan profil CV Anda & lowongan ini</p>
-                    </div>
-                    <div class="ai-result-content cover-letter-content">
-                        ${formatAIResponse(cloudCoverLetter)}
-                    </div>
-                    <button class="btn-copy-ai" onclick="copyAICoverLetter('${jobId}')">
-                        📋 Salin Cover Letter
-                    </button>
-                </div>
-            `;
-            window.aiCoverLetterCache[jobId] = htmlOut;
-            contentArea.innerHTML = htmlOut;
-        } catch (cloudErr) {
-            contentArea.innerHTML = `
-                <div class="ai-error">
-                    <p>❌ Tidak dapat membuat cover letter AI.</p>
-                    <p>Error: ${cloudErr.message}</p>
-                </div>
-            `;
-        }
-    }
-}
-
-// Copy AI Cover Letter to clipboard
-window.copyAICoverLetter = async function(jobId) {
-    const cacheHtml = window.aiCoverLetterCache[jobId];
-    if (!cacheHtml) return;
-    const tmp = document.createElement('DIV');
-    tmp.innerHTML = cacheHtml;
-    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
-    try {
-        await navigator.clipboard.writeText(text);
-        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
-        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
-    } catch (e) {
-        alert('Gagal menyalin. Silakan copy manual.');
-    }
-}
-
-// Copy AI Cover Letter to clipboard
-window.copyAICoverLetter = async function(jobId) {
-    const cacheHtml = window.aiCoverLetterCache[jobId];
-    if (!cacheHtml) return;
-    const tmp = document.createElement('DIV');
-    tmp.innerHTML = cacheHtml;
-    const text = (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
-    try {
-        await navigator.clipboard.writeText(text);
-        const btn = document.querySelector(`#aiCoverLetterContent-${jobId} .btn-copy-ai`);
-        if (btn) { btn.textContent = '✅ Tersalin!'; setTimeout(() => { btn.textContent = '📋 Salin Cover Letter'; }, 2000); }
-    } catch (e) {
-        alert('Gagal menyalin. Silakan copy manual.');
-    }
-}
-
-
+// Register Progressive Web App (PWA) Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        navigator.serviceWorker.register('sw.js?v=5').then((reg) => {
+        // Daftarkan SW tanpa query string supaya browser selalu cek versi terbaru
+        navigator.serviceWorker.register('/sw.js').then((reg) => {
             reg.update();
         }).catch(() => { });
     });
