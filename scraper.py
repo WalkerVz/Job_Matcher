@@ -18,15 +18,40 @@ def get_timestamp_wib():
     now = datetime.datetime.now()
     return f"{now.day} {MONTHS_ID[now.month]} {now.year} - {now.strftime('%H:%M')} WIB"
 
+def detect_new_jobs(matched_jobs, base_dir):
+    """
+    Bandingkan ID job saat ini dengan run sebelumnya.
+    Kembalikan list ID job yang benar-benar baru (belum pernah ada sebelumnya).
+    """
+    prev_path = os.path.join(base_dir, "matched_jobs.json")
+    prev_ids = set()
+    if os.path.exists(prev_path):
+        try:
+            with open(prev_path, encoding="utf-8") as f:
+                prev_jobs = json.load(f)
+            prev_ids = {str(j.get("id")) for j in prev_jobs}
+        except Exception:
+            pass
+
+    current_ids = {str(j.get("id")) for j in matched_jobs}
+    new_ids = current_ids - prev_ids
+    print(f"Job baru terdeteksi: {len(new_ids)} dari {len(current_ids)} total")
+    return list(new_ids)
+
+
 def save_jobs(matched_jobs, base_dir=None):
     """
-    Simpan hasil matched_jobs ke tiga file output:
+    Simpan hasil matched_jobs ke empat file output:
       - matched_jobs.json
       - matched_jobs.js  (window global fallback untuk browser)
       - last_updated.json
+      - new_jobs.json    (ID job baru sejak scrape terakhir, dibaca app.js)
     """
     if base_dir is None:
         base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Deteksi job baru SEBELUM overwrite matched_jobs.json
+    new_job_ids = detect_new_jobs(matched_jobs, base_dir)
 
     timestamp_str = get_timestamp_wib()
 
@@ -43,7 +68,16 @@ def save_jobs(matched_jobs, base_dir=None):
     with open(output_lu, "w", encoding="utf-8") as f:
         json.dump({"last_updated": timestamp_str}, f, indent=2, ensure_ascii=False)
 
-    print(f"Output disimpan ke: {output_json}, {output_js}, {output_lu}")
+    # Simpan ID job baru — dibaca frontend untuk tampilkan notifikasi
+    output_new = os.path.join(base_dir, "new_jobs.json")
+    with open(output_new, "w", encoding="utf-8") as f:
+        json.dump({
+            "scraped_at": timestamp_str,
+            "new_ids": new_job_ids,
+            "count": len(new_job_ids)
+        }, f, indent=2, ensure_ascii=False)
+
+    print(f"Output disimpan ke: {output_json}, {output_js}, {output_lu}, {output_new}")
     return timestamp_str
 # ──────────────────────────────────────────────────────────────────────────────
 

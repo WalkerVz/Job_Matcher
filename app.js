@@ -2,8 +2,110 @@
 let allJobs = [];
 let filteredJobs = [];
 let currentPage = 1;
-let itemsPerPage = 25;
+let itemsPerPage = 10;
 let wishlistOnly = false;
+
+// ─── State job baru ───────────────────────────────────────────────────────────
+let newJobIds = new Set(); // ID job yang baru muncul sejak scrape terakhir
+
+// Key localStorage untuk menyimpan ID yang sudah pernah dilihat user
+const SEEN_KEY = 'careerRadar_seenJobIds';
+
+function getSeenIds() {
+    try { return new Set(JSON.parse(localStorage.getItem(SEEN_KEY) || '[]')); }
+    catch { return new Set(); }
+}
+
+function markAllAsSeen() {
+    const allIds = allJobs.map(j => String(j.id));
+    localStorage.setItem(SEEN_KEY, JSON.stringify(allIds));
+    newJobIds = new Set();
+    // Hapus banner & semua badge 'Baru'
+    const banner = document.getElementById('newJobsBanner');
+    if (banner) banner.remove();
+    document.querySelectorAll('.new-job-badge').forEach(el => el.remove());
+    updateNewJobsNavBadge(0);
+}
+
+function updateNewJobsNavBadge(count) {
+    const badge = document.getElementById('newJobsNavBadge');
+    if (!badge) return;
+    if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'inline-block';
+    } else {
+        badge.style.display = 'none';
+    }
+}
+
+async function loadNewJobsData() {
+    try {
+        const res = await fetch('new_jobs.json?t=' + Date.now());
+        if (!res.ok) return;
+        const data = await res.json();
+        if (!data.new_ids || data.count === 0) return;
+
+        const seenIds = getSeenIds();
+        // Job baru = ada di new_jobs.json DAN belum pernah dilihat user
+        const trulyNew = data.new_ids.filter(id => !seenIds.has(String(id)));
+        if (trulyNew.length === 0) return;
+
+        newJobIds = new Set(trulyNew.map(String));
+        showNewJobsBanner(trulyNew.length, data.scraped_at);
+        updateNewJobsNavBadge(trulyNew.length);
+    } catch (e) {
+        // new_jobs.json belum ada (run pertama) — diam saja
+    }
+}
+
+function showNewJobsBanner(count, scrapedAt) {
+    // Hindari duplikat banner
+    const existing = document.getElementById('newJobsBanner');
+    if (existing) existing.remove();
+
+    const banner = document.createElement('div');
+    banner.id = 'newJobsBanner';
+    banner.className = 'new-jobs-banner';
+    banner.innerHTML = `
+        <div class="new-jobs-banner-left">
+            <span class="new-jobs-banner-icon">🆕</span>
+            <div>
+                <strong>${count} lowongan baru</strong> ditemukan sejak scrape terakhir
+                <span class="new-jobs-banner-time">${scrapedAt}</span>
+            </div>
+        </div>
+        <div class="new-jobs-banner-actions">
+            <button class="btn-see-new" onclick="filterToNewJobs()">Lihat Semua</button>
+            <button class="btn-dismiss-new" onclick="markAllAsSeen()" title="Tandai semua sudah dilihat">✕</button>
+        </div>
+    `;
+
+    // Sisipkan tepat di atas filter bar
+    const mainSection = document.querySelector('.main-section');
+    const filterBar = document.querySelector('.filters-bar');
+    if (mainSection && filterBar) {
+        mainSection.insertBefore(banner, filterBar);
+    }
+}
+
+window.filterToNewJobs = function () {
+    // Reset filter lain, lalu render ulang — card dengan badge 'Baru' akan muncul di atas
+    searchInput.value = '';
+    matchFilter.value = 'all';
+    sourceFilter.value = 'all';
+    if (expFilter) expFilter.value = 'all';
+    sortSelect.value = 'score';
+    currentPage = 1;
+
+    // Pindahkan job baru ke urutan paling atas sementara
+    filteredJobs = [
+        ...allJobs.filter(j => newJobIds.has(String(j.id))),
+        ...allJobs.filter(j => !newJobIds.has(String(j.id)))
+    ];
+    renderJobList();
+    scrollToJobListTop();
+};
+// ─────────────────────────────────────────────────────────────────────────────
 
 // Debounce helper – prevents search firing on every keypress
 function debounce(fn, delay = 300) {
@@ -74,13 +176,13 @@ document.addEventListener('DOMContentLoaded', async () => {
             sourceFilter.value = 'all';
             if (expFilter) expFilter.value = 'all';
             sortSelect.value = 'score';
-            perPageSelect.value = '25';
+            perPageSelect.value = '10';
             wishlistOnly = false;
             if (wishlistToggleBtn) wishlistToggleBtn.classList.remove('active');
 
             // Reset pagination and re-apply filters
             currentPage = 1;
-            itemsPerPage = 25;
+            itemsPerPage = 10;
             applyFilters();
             scrollToJobListTop();
         });
@@ -170,6 +272,9 @@ async function loadJobsData() {
     showSkeleton();
     updateWishlistCountBadge();
     applyFilters();
+
+    // Cek job baru sejak scrape terakhir (async, tidak blokir render utama)
+    await loadNewJobsData();
 }
 
 // Show skeleton loading cards
@@ -678,7 +783,7 @@ function renderJobList() {
             : '';
 
         const card = document.createElement('div');
-        card.className = cardClass;
+        card.className = newJobIds.has(String(job.id)) ? cardClass + ' is-new-job' : cardClass;
         card.innerHTML = `
             <div class="score-circle ${matchClass}">
                 <svg>
@@ -693,6 +798,7 @@ function renderJobList() {
                 <div class="job-card-header">
                     <div class="job-title-wrapper">
                         <h3 class="job-title-text">${job.title}</h3>
+                        ${newJobIds.has(String(job.id)) ? '<span class="new-job-badge">🆕 Baru</span>' : ''}
                         ${sourceBadge}
                         ${appStatusBadge}
                         ${bookmarkBtnHTML}

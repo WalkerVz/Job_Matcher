@@ -2160,3 +2160,166 @@ header p {
         min-height: 40px;
     }
 }
+
+/* =========================================
+   NOTIFIKASI JOB BARU
+   ========================================= */
+
+/* Banner di atas filter bar */
+.new-jobs-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(6, 182, 212, 0.1));
+    border: 1px solid rgba(16, 185, 129, 0.45);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    margin-bottom: 1rem;
+    animation: slideDown 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 20px rgba(16, 185, 129, 0.15);
+}
+
+@keyframes slideDown {
+    from { opacity: 0; transform: translateY(-12px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.new-jobs-banner-left {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    flex: 1;
+    min-width: 0;
+}
+
+.new-jobs-banner-icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+}
+
+.new-jobs-banner-left strong {
+    color: #34d399;
+    font-size: 0.98rem;
+}
+
+.new-jobs-banner-left div {
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    line-height: 1.4;
+}
+
+.new-jobs-banner-time {
+    display: block;
+    font-size: 0.76rem;
+    color: var(--text-muted);
+    margin-top: 0.1rem;
+}
+
+.new-jobs-banner-actions {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.btn-see-new {
+    background: linear-gradient(135deg, #10b981, #06b6d4);
+    border: none;
+    color: white;
+    padding: 0.5rem 1.1rem;
+    border-radius: var(--radius-sm);
+    font-family: inherit;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.btn-see-new:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.4);
+}
+
+.btn-dismiss-new {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: var(--text-secondary);
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: var(--transition);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.btn-dismiss-new:hover {
+    background: rgba(244, 63, 94, 0.15);
+    border-color: rgba(244, 63, 94, 0.3);
+    color: var(--accent-rose);
+}
+
+/* Badge '🆕 Baru' di card lowongan */
+.new-job-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.2rem;
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(6, 182, 212, 0.2));
+    border: 1px solid rgba(16, 185, 129, 0.5);
+    color: #34d399;
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 0.2rem 0.6rem;
+    border-radius: 999px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    animation: pulseBadge 2.5s ease-in-out infinite;
+    flex-shrink: 0;
+}
+
+@keyframes pulseBadge {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+    50%       { box-shadow: 0 0 0 5px rgba(16, 185, 129, 0.15); }
+}
+
+/* Badge counter di nav (opsional — dipakai updateNewJobsNavBadge) */
+#newJobsNavBadge {
+    background: #10b981;
+    color: white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    padding: 0.15rem 0.45rem;
+    border-radius: 999px;
+    margin-left: 0.4rem;
+    vertical-align: middle;
+}
+
+/* Border kiri hijau untuk card job baru */
+.job-card.is-new-job {
+    border-left-color: #10b981 !important;
+}
+
+@media (max-width: 640px) {
+    .new-jobs-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.85rem;
+        padding: 0.9rem 1rem;
+    }
+
+    .new-jobs-banner-actions {
+        width: 100%;
+        justify-content: flex-end;
+    }
+
+    .btn-see-new {
+        flex: 1;
+        text-align: center;
+        justify-content: center;
+    }
+}

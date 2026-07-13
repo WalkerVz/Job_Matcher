@@ -14,7 +14,8 @@ const STATIC_ASSETS = [
 const DATA_FILES = [
   '/matched_jobs.js',
   '/matched_jobs.json',
-  '/last_updated.json'
+  '/last_updated.json',
+  '/new_jobs.json'
 ];
 
 self.addEventListener('install', (event) => {
