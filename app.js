@@ -41,20 +41,37 @@ function updateNewJobsNavBadge(count) {
 async function loadNewJobsData() {
     try {
         const res = await fetch('new_jobs.json?t=' + Date.now());
-        if (!res.ok) return;
+        if (!res.ok) {
+            console.log('[DEBUG] new_jobs.json fetch gagal:', res.status);
+            return;
+        }
         const data = await res.json();
-        if (!data.new_ids || data.count === 0) return;
+        console.log('[DEBUG] new_jobs.json loaded:', data);
+        
+        if (!data.new_ids || data.count === 0) {
+            console.log('[DEBUG] Tidak ada job baru atau count = 0');
+            return;
+        }
 
         const seenIds = getSeenIds();
+        console.log('[DEBUG] Seen IDs dari localStorage:', Array.from(seenIds));
+        console.log('[DEBUG] New IDs dari server:', data.new_ids);
+        
         // Job baru = ada di new_jobs.json DAN belum pernah dilihat user
         const trulyNew = data.new_ids.filter(id => !seenIds.has(String(id)));
-        if (trulyNew.length === 0) return;
+        console.log('[DEBUG] Truly new IDs (belum dilihat):', trulyNew);
+        
+        if (trulyNew.length === 0) {
+            console.log('[DEBUG] Semua job sudah pernah dilihat, tidak tampilkan banner');
+            return;
+        }
 
         newJobIds = new Set(trulyNew.map(String));
+        console.log('[DEBUG] newJobIds state updated:', Array.from(newJobIds));
         showNewJobsBanner(trulyNew.length, data.scraped_at);
         updateNewJobsNavBadge(trulyNew.length);
     } catch (e) {
-        // new_jobs.json belum ada (run pertama) — diam saja
+        console.error('[DEBUG] Error loadNewJobsData:', e);
     }
 }
 
