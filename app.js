@@ -252,7 +252,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 async function loadJobsData() {
     try {
         // Attempt to fetch from local json first
-        const response = await fetch('matched_jobs.json');
+        // Tambah timestamp query string agar bypass cache SW di mobile
+        const response = await fetch('matched_jobs.json?t=' + Date.now());
         if (response.ok) {
             allJobs = await response.json();
         } else {
@@ -267,7 +268,7 @@ async function loadJobsData() {
 
     // Try to load last updated timestamp
     try {
-        const luRes = await fetch('last_updated.json');
+        const luRes = await fetch('last_updated.json?t=' + Date.now());
         if (luRes.ok) {
             const luData = await luRes.json();
             if (luData && luData.last_updated) {
