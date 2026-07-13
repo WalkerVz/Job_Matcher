@@ -15,8 +15,12 @@ MONTHS_ID = {
 
 def get_timestamp_wib():
     """Kembalikan string timestamp format '12 Juli 2026 - 17:23 WIB'."""
-    now = datetime.datetime.now()
-    return f"{now.day} {MONTHS_ID[now.month]} {now.year} - {now.strftime('%H:%M')} WIB"
+    # Konversi UTC ke WIB (UTC+7)
+    import pytz
+    utc_now = datetime.datetime.now(datetime.timezone.utc)
+    wib_tz = pytz.timezone('Asia/Jakarta')
+    wib_now = utc_now.astimezone(wib_tz)
+    return f"{wib_now.day} {MONTHS_ID[wib_now.month]} {wib_now.year} - {wib_now.strftime('%H:%M')} WIB"
 
 def detect_new_jobs(matched_jobs, base_dir):
     """
