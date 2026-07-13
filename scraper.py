@@ -7,16 +7,78 @@ import os
 import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-# User Profile definition
+# ─── Konstanta bersama (dipakai scraper, rescore, add_job_entry) ───────────────
+MONTHS_ID = {
+    1: "Januari", 2: "Februari", 3: "Maret", 4: "April", 5: "Mei", 6: "Juni",
+    7: "Juli", 8: "Agustus", 9: "September", 10: "Oktober", 11: "November", 12: "Desember"
+}
+
+def get_timestamp_wib():
+    """Kembalikan string timestamp format '12 Juli 2026 - 17:23 WIB'."""
+    now = datetime.datetime.now()
+    return f"{now.day} {MONTHS_ID[now.month]} {now.year} - {now.strftime('%H:%M')} WIB"
+
+def save_jobs(matched_jobs, base_dir=None):
+    """
+    Simpan hasil matched_jobs ke tiga file output:
+      - matched_jobs.json
+      - matched_jobs.js  (window global fallback untuk browser)
+      - last_updated.json
+    """
+    if base_dir is None:
+        base_dir = os.path.dirname(os.path.abspath(__file__))
+
+    timestamp_str = get_timestamp_wib()
+
+    output_json = os.path.join(base_dir, "matched_jobs.json")
+    with open(output_json, "w", encoding="utf-8") as f:
+        json.dump(matched_jobs, f, indent=2, ensure_ascii=False)
+
+    output_js = os.path.join(base_dir, "matched_jobs.js")
+    with open(output_js, "w", encoding="utf-8") as f:
+        f.write(f"window.lastUpdated = '{timestamp_str}';\n")
+        f.write("window.matchedJobs = " + json.dumps(matched_jobs, ensure_ascii=False) + ";")
+
+    output_lu = os.path.join(base_dir, "last_updated.json")
+    with open(output_lu, "w", encoding="utf-8") as f:
+        json.dump({"last_updated": timestamp_str}, f, indent=2, ensure_ascii=False)
+
+    print(f"Output disimpan ke: {output_json}, {output_js}, {output_lu}")
+    return timestamp_str
+# ──────────────────────────────────────────────────────────────────────────────
+
+# User Profile definition (sinkron dengan CV - Muhammad Ravil.pdf)
 PROFILE = {
     "name": "Muhammad Ravil",
+    "email": "ravilmuhammad987@gmail.com",
+    "phone": "0819-9258-9299",
+    "location": "Pekanbaru, Riau",
+    "linkedin": "linkedin.com/in/Muhammad-ravil",
     "gender": "Laki-laki",
     "age": 23,  # born 10 August 2002 (current year 2026)
     "gpa": 3.39,
     "toefl": 537,
     "major": "Teknik Informatika",
-    "skills": ["python", "data science", "data analyst", "data analysis", "machine learning", "programming", "developer", "analytics", "sql", "it"],
-    "experience": "Pertamina Hulu Rokan (Python Developer Intern - Upstream Oil & Gas)",
+    "university": "Universitas Islam Negeri Sultan Syarif Kasim Riau",
+    "skills": [
+        "python", "data science", "data analyst", "data analysis", "machine learning",
+        "sql", "dataiku", "power bi", "excel", "react", "laravel", "php", "javascript",
+        "ai engineer", "ai", "programming", "developer", "analytics", "it",
+        "web development", "fullstack", "full stack", "git", "arcgis", "it support",
+        "sentiment analysis", "naive bayes", "tableau", "mysql"
+    ],
+    "certifications": [
+        "TOEFL 537 (Elskill 2023)",
+        "IT Support Fundamentals (Google 2024)",
+        "FullStack Web Development (Udemy 2025)",
+        "Data Science Mastery (Udemy 2025)",
+        "Data Analysis (Myskill 2025)",
+    ],
+    "experience": (
+        "AI Engineer di PT Pertamina Hulu Rokan (Upstream Oil & Gas, Jul 2025–Feb 2026); "
+        "Data Scientist Intern Id/x partners x Rakamin Academy (Apr–Mei 2025, Best Student 86.96); "
+        "Freelance Web Dev & Machine Learning (2025–Sekarang)"
+    ),
     "exp_years": 1
 }
 
@@ -114,11 +176,11 @@ class RequirementNLPParser:
     and skill taxonomy NER extraction.
     """
     SKILL_TAXONOMY = {
-        "Languages & Core": ["Python", "SQL", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
-        "Data Science & Analytics": ["Machine Learning", "Deep Learning", "NLP", "Pandas", "NumPy", "Scikit-Learn", "PyTorch", "TensorFlow", "Data Analysis", "Statistical Modeling", "Analytics"],
+        "Languages & Core": ["Python", "SQL", "PHP", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
+        "Data Science & Analytics": ["Machine Learning", "Deep Learning", "NLP", "Pandas", "NumPy", "Scikit-Learn", "PyTorch", "TensorFlow", "Data Analysis", "Statistical Modeling", "Analytics", "Dataiku"],
         "BI & Visualization": ["Power BI", "PowerBI", "Tableau", "Looker", "Metabase", "Excel", "Data Studio"],
-        "Engineering & Tools": ["Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL"],
-        "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Agile", "Scrum", "Project Management"]
+        "Engineering & Tools": ["React", "React.js", "Laravel", "Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL", "ArcGIS"],
+        "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Upstream", "Agile", "Scrum", "Project Management", "AI Engineer"]
     }
 
     @classmethod
@@ -216,7 +278,7 @@ def evaluate_job_match(job):
     
     # 1. MAJOR MATCHING (Max 35 points)
     # Check if they request IT majors
-    it_keywords = ["informatika", "ilmu komputer", "sistem informasi", "teknik komputer", "computer science", "software", "information technology", "telekomunikasi", "sistem & teknologi informasi", "backend", "fullstack", "data analyst", "engineer", "developer", "odoo", "web"]
+    it_keywords = ["informatika", "ilmu komputer", "sistem informasi", "teknik komputer", "computer science", "software", "information technology", "telekomunikasi", "sistem & teknologi informasi", "backend", "fullstack", "full stack", "data analyst", "data scientist", "ai engineer", "machine learning", "engineer", "developer", "odoo", "web"]
     general_keywords = ["semua jurusan", "all major", "semua program studi", "diploma", "sarjana"]
     engineering_keywords = ["teknik", "engineering", "mipa", "sains", "matematika", "statistika"]
     
@@ -381,7 +443,7 @@ def evaluate_job_match(job):
         match_details["skills"] = {
             "score": 0,
             "status": "Low Match",
-            "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Data Analyst, Programming) pada deskripsi lowongan ini."
+            "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
         }
         
     # 7. EXPERIENCE & UPSTREAM DOMAIN MATCHING (Max 10 points)
@@ -392,7 +454,7 @@ def evaluate_job_match(job):
     exp_score = 0
     relevance_reasons = []
     
-    role_keywords = ["data", "analyst", "analis", "programmer", "developer", "it", "systems", "digital", "informasi", "komputer", "teknologi"]
+    role_keywords = ["data", "analyst", "analis", "scientist", "ai engineer", "machine learning", "programmer", "developer", "it", "systems", "digital", "informasi", "komputer", "teknologi", "fullstack", "web"]
     if any(kw in job.get("title", "").lower() for kw in role_keywords):
         exp_score += 5
         relevance_reasons.append("Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda.")
@@ -1183,30 +1245,8 @@ def main():
     matched_jobs = filtered_jobs
 
     print("\nStep 4: Writing output files...")
-    output_path_json = os.path.join(os.path.dirname(__file__), "matched_jobs.json")
-    with open(output_path_json, "w", encoding="utf-8") as f:
-        json.dump(matched_jobs, f, indent=2, ensure_ascii=False)
-        
-    output_path_js = os.path.join(os.path.dirname(__file__), "matched_jobs.js")
-    import datetime
-    # Format: 12 July 2026 - 17:23 WIB
-    months_id = {
-        1: "Januari", 2: "Februari", 3: "Maret", 4: "April", 5: "Mei", 6: "Juni",
-        7: "Juli", 8: "Agustus", 9: "September", 10: "Oktober", 11: "November", 12: "Desember"
-    }
-    now = datetime.datetime.now()
-    timestamp_str = f"{now.day} {months_id[now.month]} {now.year} - {now.strftime('%H:%M')} WIB"
-    
-    with open(output_path_js, "w", encoding="utf-8") as f:
-        f.write(f"window.lastUpdated = '{timestamp_str}';\n")
-        f.write("window.matchedJobs = " + json.dumps(matched_jobs, ensure_ascii=False) + ";")
-        
-    output_path_lu = os.path.join(os.path.dirname(__file__), "last_updated.json")
-    with open(output_path_lu, "w", encoding="utf-8") as f:
-        json.dump({"last_updated": timestamp_str}, f, indent=2, ensure_ascii=False)
-        
-    print(f"Successfully processed {len(matched_jobs)} jobs!")
-    print(f"Output saved to: {output_path_json}, {output_path_js}, and {output_path_lu}")
+    save_jobs(matched_jobs)
+    print(f"Berhasil memproses {len(matched_jobs)} lowongan!")
 
 if __name__ == "__main__":
     main()

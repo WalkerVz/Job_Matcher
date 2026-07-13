@@ -6,11 +6,11 @@ Provides intelligent features: job summarization and interview question predicti
 
 from dotenv import load_dotenv
 import os
-import re
 import requests
 import google.generativeai as genai
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+from scraper import clean_html  # reuse, tidak perlu definisi ulang
 
 # Load environment variables from .env file
 load_dotenv()
@@ -28,15 +28,6 @@ GEMINI_API_KEY = os.getenv('GEMINI_API_KEY')
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 GEMINI_MODEL = os.getenv('GEMINI_MODEL', 'gemini-2.0-flash')
-
-
-def clean_html(text):
-    """Remove HTML tags from job descriptions/requirements for cleaner prompt"""
-    if not text:
-        return ""
-    text = re.sub(r'<[^>]+>', ' ', str(text))
-    text = re.sub(r'\s+', ' ', text)
-    return text.strip()
 
 
 def generate_ai_content(prompt):
