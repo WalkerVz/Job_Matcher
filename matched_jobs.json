@@ -1012,6 +1012,87 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_470.jpg?1730967082889"
   },
   {
+    "id": 13642,
+    "title": "Mobile Developer - GSI",
+    "organization_id": 466,
+    "organization_name": "PT Global Service Indonesia",
+    "slug": "astra-13642",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Information Technology",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13642/detail",
+    "raw_description": "<p><br></p><ul><li><span style=\"color: rgb(0, 0, 0)\">Membangun aplikasi baru berbasis mobile</span></li><li><span style=\"color: rgb(0, 0, 0)\">Melakukan pengujian terhadap aplikasi yang di buat</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menganalisa dan mengembangkan aplikasi yang sudah ada</span></li></ul>",
+    "raw_requirements": "<p><br></p><ul><li><span style=\"color: rgb(0, 0, 0)\">Minimal pendidikan D3/S1 Ilmu Komputer, Teknologi Informasi, Manajemen Informatika, Sistem Informasi atau program studi yang berkaitan</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menguasai dan memiliki pengalaman mengembangkan aplikasi Android</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menguasai SQL Server Database</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menguasai Android Studio</span></li><li><span style=\"color: rgb(0, 0, 0)\">Memahami Flutter atau React Native merupakan nilai tambah</span></li><li><span style=\"color: rgb(0, 0, 0)\">Bersedia mempresentasikan project yang pernah dibuat</span></li></ul>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, react, ai, developer, it."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [
+        "React",
+        "SQL"
+      ],
+      "plus_skills": [],
+      "key_sentences": [
+        "Minimal pendidikan D3/S1 Ilmu Komputer, Teknologi Informasi, Manajemen Informatika, Sistem Informasi atau program studi yang berkaitan Menguasai dan memiliki pengalaman mengembangkan aplikasi Android Menguasai SQL Server Database Menguasai Android Studio Memahami Flutter atau React Native merupakan nilai tambah Bersedia mempresentasikan project yang pernah dibuat Membangun aplikasi baru berbasis mobile Melakukan pengujian terhadap aplikasi yang di buat Menganalisa dan mengembangkan aplikasi yang sudah ada"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_466.jpg?1730645951489"
+  },
+  {
     "id": 13641,
     "title": "Web Developer - GSI",
     "organization_id": 466,
@@ -1080,87 +1161,6 @@
       "key_sentences": [
         "Minimal pendidikan D3 jurusan Teknik Informatika, Sistem Informasi, Ilmu Komputer dan jurusan lain yang relavan Memiliki komunikasi yang baik dan keterampilan interpersonal yang baik Memiliki motivasi untuk mempelajari teknologi baru Dapat bekerja secara mandiri dan bekerja sama dalam tim Memiliki kemampuan pemrograman",
         "Net/PHP/Javascript Mengembangkan aplikasi berbasis web Menemukan dan memperbaiki bug dan melakukan pemrograman"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_466.jpg?1730645951489"
-  },
-  {
-    "id": 13642,
-    "title": "Mobile Developer - GSI",
-    "organization_id": 466,
-    "organization_name": "PT Global Service Indonesia",
-    "slug": "astra-13642",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Information Technology",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13642/detail",
-    "raw_description": "<p><br></p><ul><li><span style=\"color: rgb(0, 0, 0)\">Membangun aplikasi baru berbasis mobile</span></li><li><span style=\"color: rgb(0, 0, 0)\">Melakukan pengujian terhadap aplikasi yang di buat</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menganalisa dan mengembangkan aplikasi yang sudah ada</span></li></ul>",
-    "raw_requirements": "<p><br></p><ul><li><span style=\"color: rgb(0, 0, 0)\">Minimal pendidikan D3/S1 Ilmu Komputer, Teknologi Informasi, Manajemen Informatika, Sistem Informasi atau program studi yang berkaitan</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menguasai dan memiliki pengalaman mengembangkan aplikasi Android</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menguasai SQL Server Database</span></li><li><span style=\"color: rgb(0, 0, 0)\">Menguasai Android Studio</span></li><li><span style=\"color: rgb(0, 0, 0)\">Memahami Flutter atau React Native merupakan nilai tambah</span></li><li><span style=\"color: rgb(0, 0, 0)\">Bersedia mempresentasikan project yang pernah dibuat</span></li></ul>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, react, ai, developer, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "React",
-        "SQL"
-      ],
-      "plus_skills": [],
-      "key_sentences": [
-        "Minimal pendidikan D3/S1 Ilmu Komputer, Teknologi Informasi, Manajemen Informatika, Sistem Informasi atau program studi yang berkaitan Menguasai dan memiliki pengalaman mengembangkan aplikasi Android Menguasai SQL Server Database Menguasai Android Studio Memahami Flutter atau React Native merupakan nilai tambah Bersedia mempresentasikan project yang pernah dibuat Membangun aplikasi baru berbasis mobile Melakukan pengujian terhadap aplikasi yang di buat Menganalisa dan mengembangkan aplikasi yang sudah ada"
       ]
     },
     "parsed_requirements": {
@@ -1869,6 +1869,87 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_470.jpg?1730967082889"
   },
   {
+    "id": 14487,
+    "title": "Customer Relationship Management Intern- AstraPay",
+    "organization_id": 455,
+    "organization_name": "PT Astra Digital Arta (AstraPay)",
+    "slug": "astra-14487",
+    "type_name": "Karyawan Tetap",
+    "level": "Lulusan Baru/Mahasiswa",
+    "location": "Jakarta",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Marketing",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14487/detail",
+    "raw_description": "<ul><li>Membantu menyiapkan, menjalankan, dan melakukan monitoring campaign CRM melalui MoEngage (Push Notification, Email, dan WhatsApp).</li><li>Membantu proses segmentasi pengguna sesuai kebutuhan campaign dan business unit.</li><li>Melakukan quality assurance (QA) terhadap campaign sebelum dipublikasikan.</li><li>Melakukan monitoring performa campaign serta menyusun laporan dan insight sederhana berdasarkan metrik seperti Delivery Rate, Open Rate, CTR, dan Conversion Rate.</li><li>Menyusun materi presentasi, dokumentasi, notulen meeting (MoM), serta melakukan follow-up terhadap action items.</li><li>Membantu melakukan analisis sederhana terhadap perilaku pengguna dan efektivitas campaign untuk mendukung pengambilan keputusan.</li><li>Mendukung pengembangan proses dan inisiatif CRM guna meningkatkan customer engagement, first transaction, re-transaction, dan customer retention.<br></li></ul>",
+    "raw_requirements": "<ul><li>Sedang berkuliah (min. semester 6) atau fresh graduate dari program studi Sistem Informasi, Teknik Informatika, Data Science, Manajemen, Bisnis Digital, dan program studi relevan lainnya.</li><li>Memiliki pengalaman yang berkaitan dengan CRM, Digital Marketing, dan sejenisnya.</li><li>Memiliki kemampuan analitis yang baik serta terbiasa bekerja menggunakan data.</li><li>Teliti, detail-oriented, dan memiliki kemampuan problem solving yang baik.</li><li>Mampu berkomunikasi dan berkoordinasi dengan berbagai stakeholder lintas fungsi.</li><li>Memiliki kemampuan manajemen waktu yang baik serta mampu menangani beberapa pekerjaan secara bersamaan.</li><li>Cepat belajar terhadap tools dan teknologi baru.</li><li>Memiliki pengalaman dalam menggunakan Microsoft Office, Google Workspace, atau project management tools lain menjadi nilai tambah.</li><li>Bersedia menjalani Work From Office (WFO) 4 hari dan Work From Home (WFH) 1 hari di Jakarta.<br></li></ul>",
+    "match_score": 100,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data science, ai, it, git."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Memiliki pengalaman yang berkaitan dengan CRM, Digital Marketing, dan sejenisnya...)",
+      "mandatory_skills": [],
+      "plus_skills": [
+        "Project Management"
+      ],
+      "key_sentences": [
+        "Memiliki pengalaman yang berkaitan dengan CRM, Digital Marketing, dan sejenisnya",
+        "Memiliki pengalaman dalam menggunakan Microsoft Office, Google Workspace, atau project management tools lain menjadi nilai tambah"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_455.jpg?1730645443360"
+  },
+  {
     "id": 14490,
     "title": "Sr DevOps Engineer - ADMO",
     "organization_id": 470,
@@ -1955,87 +2036,6 @@
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_470.jpg?1730967082889"
-  },
-  {
-    "id": 14487,
-    "title": "Customer Relationship Management Intern- AstraPay",
-    "organization_id": 455,
-    "organization_name": "PT Astra Digital Arta (AstraPay)",
-    "slug": "astra-14487",
-    "type_name": "Karyawan Tetap",
-    "level": "Lulusan Baru/Mahasiswa",
-    "location": "Jakarta",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Marketing",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14487/detail",
-    "raw_description": "<ul><li>Membantu menyiapkan, menjalankan, dan melakukan monitoring campaign CRM melalui MoEngage (Push Notification, Email, dan WhatsApp).</li><li>Membantu proses segmentasi pengguna sesuai kebutuhan campaign dan business unit.</li><li>Melakukan quality assurance (QA) terhadap campaign sebelum dipublikasikan.</li><li>Melakukan monitoring performa campaign serta menyusun laporan dan insight sederhana berdasarkan metrik seperti Delivery Rate, Open Rate, CTR, dan Conversion Rate.</li><li>Menyusun materi presentasi, dokumentasi, notulen meeting (MoM), serta melakukan follow-up terhadap action items.</li><li>Membantu melakukan analisis sederhana terhadap perilaku pengguna dan efektivitas campaign untuk mendukung pengambilan keputusan.</li><li>Mendukung pengembangan proses dan inisiatif CRM guna meningkatkan customer engagement, first transaction, re-transaction, dan customer retention.<br></li></ul>",
-    "raw_requirements": "<ul><li>Sedang berkuliah (min. semester 6) atau fresh graduate dari program studi Sistem Informasi, Teknik Informatika, Data Science, Manajemen, Bisnis Digital, dan program studi relevan lainnya.</li><li>Memiliki pengalaman yang berkaitan dengan CRM, Digital Marketing, dan sejenisnya.</li><li>Memiliki kemampuan analitis yang baik serta terbiasa bekerja menggunakan data.</li><li>Teliti, detail-oriented, dan memiliki kemampuan problem solving yang baik.</li><li>Mampu berkomunikasi dan berkoordinasi dengan berbagai stakeholder lintas fungsi.</li><li>Memiliki kemampuan manajemen waktu yang baik serta mampu menangani beberapa pekerjaan secara bersamaan.</li><li>Cepat belajar terhadap tools dan teknologi baru.</li><li>Memiliki pengalaman dalam menggunakan Microsoft Office, Google Workspace, atau project management tools lain menjadi nilai tambah.</li><li>Bersedia menjalani Work From Office (WFO) 4 hari dan Work From Home (WFH) 1 hari di Jakarta.<br></li></ul>",
-    "match_score": 100,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data science, ai, it, git."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Memiliki pengalaman yang berkaitan dengan CRM, Digital Marketing, dan sejenisnya...)",
-      "mandatory_skills": [],
-      "plus_skills": [
-        "Project Management"
-      ],
-      "key_sentences": [
-        "Memiliki pengalaman yang berkaitan dengan CRM, Digital Marketing, dan sejenisnya",
-        "Memiliki pengalaman dalam menggunakan Microsoft Office, Google Workspace, atau project management tools lain menjadi nilai tambah"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_455.jpg?1730645443360"
   },
   {
     "id": 14464,
@@ -6590,6 +6590,87 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_470.jpg?1730967082889"
   },
   {
+    "id": 13806,
+    "title": "Purchase Operation Associate - UTPE",
+    "organization_id": 333,
+    "organization_name": "United Tractors Pandu Engineering",
+    "slug": "astra-13806",
+    "type_name": "Karyawan Tetap",
+    "level": "Lulusan Baru/Mahasiswa",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-07-31 23:59:59",
+    "group": "Accounting and Tax",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13806/detail",
+    "raw_description": "<ol><li>Menangani dan memproses aktivitas pembelian (purchase order) sesuai kebutuhan operasional dan kebijakan procurement perusahaan.</li><li>Melakukan koordinasi dengan vendor dan internal user terkait spesifikasi, harga, jadwal pengiriman, dan kelengkapan dokumen.</li><li>Memantau status pengadaan, pengiriman, dan penerimaan barang/jasa untuk memastikan ketepatan waktu dan kesesuaian.</li><li>Mengelola dan memperbarui data procurement serta dokumentasi pembelian pada sistem SAP yang berlaku.</li><li>Menyusun laporan aktivitas pembelian dan mendukung upaya efisiensi biaya serta kepatuhan proses procurement.<br></li></ol>",
+    "raw_requirements": "<ol><li>Pendidikan minimal S1 jurusan Ekonomi, Akuntansi, atau Teknik Industri.</li><li>Memiliki pemahaman dasar tentang procurement dan purchasing process menjadi nilai tambah.</li><li>Mampu mengoperasikan Microsoft Excel dan sistem ERP (SAP diutamakan).</li><li>Memiliki kemampuan komunikasi, koordinasi, dan administrasi yang baik.</li><li>Teliti, bertanggung jawab, dan mampu bekerja di bawah tekanan serta deadline.<br></li></ol>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Pendidikan minimal S1 jurusan Ekonomi, Akuntansi, atau Teknik Industri",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "plus_skills": [
+        "Excel"
+      ],
+      "key_sentences": [
+        "Pendidikan minimal S1 jurusan Ekonomi, Akuntansi, atau Teknik Industri",
+        "Mampu mengoperasikan Microsoft Excel dan sistem ERP (SAP diutamakan)"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_333.jpg?1773210924324"
+  },
+  {
     "id": 13804,
     "title": "Strategic Sourcing Junior Associate - UTPE",
     "organization_id": 333,
@@ -6658,87 +6739,6 @@
         "Pendidikan minimal D3 (diutamakan Manajemen, Teknik Industri, Logistik, atau jurusan terkait)",
         "Memiliki ketertarikan atau pengalaman di bidang strategic sourcing, procurement, atau vendor management menjadi nilai tambah",
         "Mampu mengoperasikan Microsoft Excel dan tools pengolahan data dengan baik"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_333.jpg?1773210924324"
-  },
-  {
-    "id": 13806,
-    "title": "Purchase Operation Associate - UTPE",
-    "organization_id": 333,
-    "organization_name": "United Tractors Pandu Engineering",
-    "slug": "astra-13806",
-    "type_name": "Karyawan Tetap",
-    "level": "Lulusan Baru/Mahasiswa",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-07-31 23:59:59",
-    "group": "Accounting and Tax",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13806/detail",
-    "raw_description": "<ol><li>Menangani dan memproses aktivitas pembelian (purchase order) sesuai kebutuhan operasional dan kebijakan procurement perusahaan.</li><li>Melakukan koordinasi dengan vendor dan internal user terkait spesifikasi, harga, jadwal pengiriman, dan kelengkapan dokumen.</li><li>Memantau status pengadaan, pengiriman, dan penerimaan barang/jasa untuk memastikan ketepatan waktu dan kesesuaian.</li><li>Mengelola dan memperbarui data procurement serta dokumentasi pembelian pada sistem SAP yang berlaku.</li><li>Menyusun laporan aktivitas pembelian dan mendukung upaya efisiensi biaya serta kepatuhan proses procurement.<br></li></ol>",
-    "raw_requirements": "<ol><li>Pendidikan minimal S1 jurusan Ekonomi, Akuntansi, atau Teknik Industri.</li><li>Memiliki pemahaman dasar tentang procurement dan purchasing process menjadi nilai tambah.</li><li>Mampu mengoperasikan Microsoft Excel dan sistem ERP (SAP diutamakan).</li><li>Memiliki kemampuan komunikasi, koordinasi, dan administrasi yang baik.</li><li>Teliti, bertanggung jawab, dan mampu bekerja di bawah tekanan serta deadline.<br></li></ol>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Pendidikan minimal S1 jurusan Ekonomi, Akuntansi, atau Teknik Industri",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "plus_skills": [
-        "Excel"
-      ],
-      "key_sentences": [
-        "Pendidikan minimal S1 jurusan Ekonomi, Akuntansi, atau Teknik Industri",
-        "Mampu mengoperasikan Microsoft Excel dan sistem ERP (SAP diutamakan)"
       ]
     },
     "parsed_requirements": {
@@ -6988,6 +6988,84 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_466.jpg?1730645951489"
   },
   {
+    "id": 13623,
+    "title": "Part Administration Analyst - DSO",
+    "organization_id": 308,
+    "organization_name": "Astra International - Daihatsu Sales Operation",
+    "slug": "astra-13623",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Administration and Clerical",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13623/detail",
+    "raw_description": "<ul><li>Mengelola fungsi administrasi di Parts Department untuk memastikan kelancaran operasional bisnis.</li><li>Melakukan monitoring dan controlling terhadap seluruh kegiatan operasional administrasi sesuai dengan SOP yang berlaku.</li><li>Mengelola budget dan proses keuangan di Parts Department.</li></ul>",
+    "raw_requirements": "<ul><li>Pendidikan minimal S1 dari jurusan Ekonomi, Manajemen, Administrasi, atau bidang lain yang relevan.</li><li>Memiliki pengetahuan mengenai pengelolaan administrasi dan keuangan.</li><li>Memiliki kemampuan interpersonal dan komunikasi yang baik.</li><li>Terbiasa menggunakan software SAP menjadi nilai tambah.<br></li></ul>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Pendidikan minimal S1 dari jurusan Ekonomi, Manajemen, Administrasi, atau bidang lain yang relevan",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Pendidikan minimal S1 dari jurusan Ekonomi, Manajemen, Administrasi, atau bidang lain yang relevan"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
+  },
+  {
     "id": 13557,
     "title": "SDET - Contract-based - ADMO",
     "organization_id": 470,
@@ -7070,84 +7148,6 @@
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_470.jpg?1730967082889"
-  },
-  {
-    "id": 13623,
-    "title": "Part Administration Analyst - DSO",
-    "organization_id": 308,
-    "organization_name": "Astra International - Daihatsu Sales Operation",
-    "slug": "astra-13623",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Administration and Clerical",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13623/detail",
-    "raw_description": "<ul><li>Mengelola fungsi administrasi di Parts Department untuk memastikan kelancaran operasional bisnis.</li><li>Melakukan monitoring dan controlling terhadap seluruh kegiatan operasional administrasi sesuai dengan SOP yang berlaku.</li><li>Mengelola budget dan proses keuangan di Parts Department.</li></ul>",
-    "raw_requirements": "<ul><li>Pendidikan minimal S1 dari jurusan Ekonomi, Manajemen, Administrasi, atau bidang lain yang relevan.</li><li>Memiliki pengetahuan mengenai pengelolaan administrasi dan keuangan.</li><li>Memiliki kemampuan interpersonal dan komunikasi yang baik.</li><li>Terbiasa menggunakan software SAP menjadi nilai tambah.<br></li></ul>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Pendidikan minimal S1 dari jurusan Ekonomi, Manajemen, Administrasi, atau bidang lain yang relevan",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Pendidikan minimal S1 dari jurusan Ekonomi, Manajemen, Administrasi, atau bidang lain yang relevan"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
   },
   {
     "id": "PTC0126D01584",
@@ -9574,6 +9574,88 @@
     "logo": null
   },
   {
+    "id": 14569,
+    "title": "Campus Hiring SBY - After Sales Support Staff - PMP ",
+    "organization_id": 2156,
+    "organization_name": "PT Patria Maritim Perkasa",
+    "slug": "astra-14569",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-09-30 23:59:59",
+    "group": "Marketing",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14569/detail",
+    "raw_description": "<p>1.\tMemberikan dukungan layanan purna jual (after sales support) kepada pelanggan untuk memastikan kepuasan dan keberlanjutan hubungan bisnis.</p><p> 2.\tMenangani permintaan pelanggan terkait garansi, klaim, pemeliharaan, perbaikan, serta layanan teknis setelah proyek atau produk diserahterimakan. </p><p>3.\tBerkoordinasi dengan tim Engineering, Production, Quality Control, Project Management, dan Service Team dalam penyelesaian permasalahan pelanggan. </p><p>4.\tMemantau proses penanganan keluhan (customer complaints) dan memastikan penyelesaiannya sesuai dengan Service Level Agreement (SLA) dan standar perusahaan. </p><p>5.\tMenyiapkan dan mengelola dokumentasi after sales, termasuk laporan kunjungan, warranty report, service report, serta dokumentasi klaim pelanggan. <br></p>",
+    "raw_requirements": "<ol><li>Pendidikan Memiliki gelar S1 dibidang:<br>a. Teknik Perkapalan&nbsp;<br>b. Teknik Industri.</li><li> Pengalaman Minimal 1 tahun pengalaman kerja di bidang:&nbsp;<br>a. After Sales Service / Customer Support&nbsp;<br>b. Warranty &amp; Claim Management&nbsp;<br>c. Customer Relation atau Service Operation Pengalaman di industri manufaktur,alat berat, maritim, atau project based business menjadi nilai tambah.</li><li>Keahlian: Memahami konsep layanan purna jual, termasuk:&nbsp;<br>a. Service Level Agreement (SLA)&nbsp;<br>b. Kebijakan garansi perusahaan&nbsp;<br>c. Proses penanganan komplain dan klaim pelanggan.</li><li>Mampu melakukan monitoring dan evaluasi kinerja layanan,seperti:<br>a. Complaint ratio&nbsp;<br>b. Response time.</li><li>Familiar dengan sistem administrasi layanan, dokumentasi klaim,dan pelaporan service performance.&nbsp;<br></li></ol>",
+    "match_score": 90,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Pendidikan Memiliki gelar S1 dibidang: a",
+      "experience_summary": "Pengalaman Minimal 1 tahun pengalaman kerja di bidang:&nbsp; a",
+      "mandatory_skills": [
+        "Project Management"
+      ],
+      "plus_skills": [],
+      "key_sentences": [
+        "Pengalaman Minimal 1 tahun pengalaman kerja di bidang:&nbsp; a",
+        "Customer Relation atau Service Operation Pengalaman di industri manufaktur,alat berat, maritim, atau project based business menjadi nilai tambah",
+        "Berkoordinasi dengan tim Engineering, Production, Quality Control, Project Management, dan Service Team dalam penyelesaian permasalahan pelanggan"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Minimal 1 tahun",
+      "exp_years": 1
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
+  },
+  {
     "id": 14574,
     "title": "Campus Hiring SBY - Technical Support Junior Associate - UTPE",
     "organization_id": 333,
@@ -9730,88 +9812,6 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_333.jpg?1773210924324"
   },
   {
-    "id": 14569,
-    "title": "Campus Hiring SBY - After Sales Support Staff - PMP ",
-    "organization_id": 2156,
-    "organization_name": "PT Patria Maritim Perkasa",
-    "slug": "astra-14569",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-09-30 23:59:59",
-    "group": "Marketing",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14569/detail",
-    "raw_description": "<p>1.\tMemberikan dukungan layanan purna jual (after sales support) kepada pelanggan untuk memastikan kepuasan dan keberlanjutan hubungan bisnis.</p><p> 2.\tMenangani permintaan pelanggan terkait garansi, klaim, pemeliharaan, perbaikan, serta layanan teknis setelah proyek atau produk diserahterimakan. </p><p>3.\tBerkoordinasi dengan tim Engineering, Production, Quality Control, Project Management, dan Service Team dalam penyelesaian permasalahan pelanggan. </p><p>4.\tMemantau proses penanganan keluhan (customer complaints) dan memastikan penyelesaiannya sesuai dengan Service Level Agreement (SLA) dan standar perusahaan. </p><p>5.\tMenyiapkan dan mengelola dokumentasi after sales, termasuk laporan kunjungan, warranty report, service report, serta dokumentasi klaim pelanggan. <br></p>",
-    "raw_requirements": "<ol><li>Pendidikan Memiliki gelar S1 dibidang:<br>a. Teknik Perkapalan&nbsp;<br>b. Teknik Industri.</li><li> Pengalaman Minimal 1 tahun pengalaman kerja di bidang:&nbsp;<br>a. After Sales Service / Customer Support&nbsp;<br>b. Warranty &amp; Claim Management&nbsp;<br>c. Customer Relation atau Service Operation Pengalaman di industri manufaktur,alat berat, maritim, atau project based business menjadi nilai tambah.</li><li>Keahlian: Memahami konsep layanan purna jual, termasuk:&nbsp;<br>a. Service Level Agreement (SLA)&nbsp;<br>b. Kebijakan garansi perusahaan&nbsp;<br>c. Proses penanganan komplain dan klaim pelanggan.</li><li>Mampu melakukan monitoring dan evaluasi kinerja layanan,seperti:<br>a. Complaint ratio&nbsp;<br>b. Response time.</li><li>Familiar dengan sistem administrasi layanan, dokumentasi klaim,dan pelaporan service performance.&nbsp;<br></li></ol>",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Pendidikan Memiliki gelar S1 dibidang: a",
-      "experience_summary": "Pengalaman Minimal 1 tahun pengalaman kerja di bidang:&nbsp; a",
-      "mandatory_skills": [
-        "Project Management"
-      ],
-      "plus_skills": [],
-      "key_sentences": [
-        "Pengalaman Minimal 1 tahun pengalaman kerja di bidang:&nbsp; a",
-        "Customer Relation atau Service Operation Pengalaman di industri manufaktur,alat berat, maritim, atau project based business menjadi nilai tambah",
-        "Berkoordinasi dengan tim Engineering, Production, Quality Control, Project Management, dan Service Team dalam penyelesaian permasalahan pelanggan"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Minimal 1 tahun",
-      "exp_years": 1
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
-  },
-  {
     "id": 14563,
     "title": "Campus Hiring SBY - Production Control Staff - PMP ",
     "organization_id": 2156,
@@ -9878,6 +9878,85 @@
         "&nbsp;Pendidikan Minimal S1 dari jurusan: a",
         "Pengalaman Kerja Minimal 1 tahun pengalaman di bidang:&nbsp; a",
         "Persyaratan klasifikasi kapal (Class Rules)&nbsp; c"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Minimal 1 tahun",
+      "exp_years": 1
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
+  },
+  {
+    "id": 14548,
+    "title": "Campus Hiring SBY - PE Piping - PMP",
+    "organization_id": 2156,
+    "organization_name": "PT Patria Maritim Perkasa",
+    "slug": "astra-14548",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-09-30 23:59:59",
+    "group": "Engineering",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14548/detail",
+    "raw_description": "<ol><li>Menyusun dan mengembangkan detail routing system perpipaan pada kapal sesuai  standar dan spesifikasi teknis.&nbsp;</li><li>Membuat dan menyusun Work Instruction (WI) sebagai pedoman pelaksanaan  pekerjaan piping.&nbsp;</li><li>Menghitung serta menganalisis kebutuhan manhours dan lead time pekerjaan  piping.&nbsp;</li><li>Melakukan monitoring pelaksanaan proses serta menyusun review dan  evaluasi proses secara berkala.&nbsp;</li><li>Mengembangkan dan meningkatkan jig/alat bantu produksi untuk mendukung  efisiensi pekerjaan piping.&nbsp;</li><li>Melakukan problem solving terhadap kendala teknis maupun operasional di  area piping. <br></li></ol>",
+    "raw_requirements": "<ol><li>Pendidikan minimal S1 Teknik Perkapalan / Marine Engineering atau jurusan  teknik relevan lainnya.&nbsp;</li><li>Memahami standar industri perkapalan serta rules dan regulasi yang  berlaku.&nbsp;</li><li>Diutamakan memiliki pengalaman kerja minimal 1 tahun di bidang terkait,  khususnya piping system.&nbsp;</li><li>Memiliki pemahaman yang baik mengenai sistem perpipaan (piping system)  pada kapal. <br></li></ol>",
+    "match_score": 90,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Pendidikan minimal S1 Teknik Perkapalan / Marine Engineering atau jurusan teknik relevan lainnya",
+      "experience_summary": "&nbsp; Diutamakan memiliki pengalaman kerja minimal 1 tahun di bidang terkait, khususnya piping system",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Pendidikan minimal S1 Teknik Perkapalan / Marine Engineering atau jurusan teknik relevan lainnya",
+        "&nbsp; Diutamakan memiliki pengalaman kerja minimal 1 tahun di bidang terkait, khususnya piping system"
       ]
     },
     "parsed_requirements": {
@@ -9967,85 +10046,6 @@
       "gender": "Open",
       "experience": "Minimal 2 tahun",
       "exp_years": 2
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
-  },
-  {
-    "id": 14548,
-    "title": "Campus Hiring SBY - PE Piping - PMP",
-    "organization_id": 2156,
-    "organization_name": "PT Patria Maritim Perkasa",
-    "slug": "astra-14548",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-09-30 23:59:59",
-    "group": "Engineering",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14548/detail",
-    "raw_description": "<ol><li>Menyusun dan mengembangkan detail routing system perpipaan pada kapal sesuai  standar dan spesifikasi teknis.&nbsp;</li><li>Membuat dan menyusun Work Instruction (WI) sebagai pedoman pelaksanaan  pekerjaan piping.&nbsp;</li><li>Menghitung serta menganalisis kebutuhan manhours dan lead time pekerjaan  piping.&nbsp;</li><li>Melakukan monitoring pelaksanaan proses serta menyusun review dan  evaluasi proses secara berkala.&nbsp;</li><li>Mengembangkan dan meningkatkan jig/alat bantu produksi untuk mendukung  efisiensi pekerjaan piping.&nbsp;</li><li>Melakukan problem solving terhadap kendala teknis maupun operasional di  area piping. <br></li></ol>",
-    "raw_requirements": "<ol><li>Pendidikan minimal S1 Teknik Perkapalan / Marine Engineering atau jurusan  teknik relevan lainnya.&nbsp;</li><li>Memahami standar industri perkapalan serta rules dan regulasi yang  berlaku.&nbsp;</li><li>Diutamakan memiliki pengalaman kerja minimal 1 tahun di bidang terkait,  khususnya piping system.&nbsp;</li><li>Memiliki pemahaman yang baik mengenai sistem perpipaan (piping system)  pada kapal. <br></li></ol>",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Pendidikan minimal S1 Teknik Perkapalan / Marine Engineering atau jurusan teknik relevan lainnya",
-      "experience_summary": "&nbsp; Diutamakan memiliki pengalaman kerja minimal 1 tahun di bidang terkait, khususnya piping system",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Pendidikan minimal S1 Teknik Perkapalan / Marine Engineering atau jurusan teknik relevan lainnya",
-        "&nbsp; Diutamakan memiliki pengalaman kerja minimal 1 tahun di bidang terkait, khususnya piping system"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Minimal 1 tahun",
-      "exp_years": 1
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
@@ -10290,84 +10290,6 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_468.jpg?1679391696434"
   },
   {
-    "id": 14384,
-    "title": "Asisten Apoteker - HRT",
-    "organization_id": 2943,
-    "organization_name": "PT Jakarta Pakar Kardia (Heartology Cardiovascular Hospital)",
-    "slug": "astra-14384",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Health and Medical",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14384/detail",
-    "raw_description": "<ol><li>Membantu Apoteker dalam menyiapkan Alkes, obat, meracik obat-obatan serta mengedukasi pasien tentang cara penggunaanya dengan prinsip 5 benar</li><li>Mampu menyiapkan alkes &amp; obat sesuai dengan permintaan dari ruangan atau dokter</li><li>Mampu melakukan handling complaint</li><li> Menjaga mutu, keamanan, dan penyimpanan obat sesuai standar, termasuk obat high alert, LASA (Look-Alike Sound-Alike), serta obat yang memerlukan kondisi penyimpanan khusus</li><li>Melakukan input data pelayanan farmasi ke dalam Sistem Informasi Manajemen Rumah Sakit (SIMRS) secara akurat dan tepat waktu</li></ol>",
-    "raw_requirements": "<ol><li>Pendidikan Wajib D3 Farmasi</li><li>STR aktif</li><li>Memiliki pengetahuan lebih terkait farmakologi &amp; alkes Jantung dan Pembuluh Darah</li><li>Bersedia bekerja sistem shifting &amp; Full Time</li><li>Teliti &amp; komunikatif</li></ol>",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Pendidikan Wajib D3 Farmasi STR aktif Memiliki pengetahuan lebih terkait farmakologi &amp; alkes Jantung dan Pembuluh Darah Bersedia bekerja sistem shifting &amp; Full Time Teliti &amp; komunikatif Membantu Apoteker dalam menyiapkan Alkes, obat, meracik obat"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2943.jpg?1734583510651"
-  },
-  {
     "id": 14385,
     "title": "Wards Nurse - HRT",
     "organization_id": 2943,
@@ -10433,6 +10355,84 @@
       "key_sentences": [
         "Pendidikan Wajib Profesi Ners Memiliki STR Aktif Memiliki Pengetahuan lebih perawatan maupun obat",
         "obatan pasien kardiovaskuler Memiliki pengalaman kerja sebagai perawat rawat inap pasien jantung dan pembuluh darah lebih diutamakan minimal 2 tahun Mampu bekerja secara sistem shift dan full time Mampu melakukan pemasangan infus Teliti, disiplin, bertanggung jawab, serta mampu bekerja secara individu maupun dalam tim"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2943.jpg?1734583510651"
+  },
+  {
+    "id": 14384,
+    "title": "Asisten Apoteker - HRT",
+    "organization_id": 2943,
+    "organization_name": "PT Jakarta Pakar Kardia (Heartology Cardiovascular Hospital)",
+    "slug": "astra-14384",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Health and Medical",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14384/detail",
+    "raw_description": "<ol><li>Membantu Apoteker dalam menyiapkan Alkes, obat, meracik obat-obatan serta mengedukasi pasien tentang cara penggunaanya dengan prinsip 5 benar</li><li>Mampu menyiapkan alkes &amp; obat sesuai dengan permintaan dari ruangan atau dokter</li><li>Mampu melakukan handling complaint</li><li> Menjaga mutu, keamanan, dan penyimpanan obat sesuai standar, termasuk obat high alert, LASA (Look-Alike Sound-Alike), serta obat yang memerlukan kondisi penyimpanan khusus</li><li>Melakukan input data pelayanan farmasi ke dalam Sistem Informasi Manajemen Rumah Sakit (SIMRS) secara akurat dan tepat waktu</li></ol>",
+    "raw_requirements": "<ol><li>Pendidikan Wajib D3 Farmasi</li><li>STR aktif</li><li>Memiliki pengetahuan lebih terkait farmakologi &amp; alkes Jantung dan Pembuluh Darah</li><li>Bersedia bekerja sistem shifting &amp; Full Time</li><li>Teliti &amp; komunikatif</li></ol>",
+    "match_score": 90,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Pendidikan Wajib D3 Farmasi STR aktif Memiliki pengetahuan lebih terkait farmakologi &amp; alkes Jantung dan Pembuluh Darah Bersedia bekerja sistem shifting &amp; Full Time Teliti &amp; komunikatif Membantu Apoteker dalam menyiapkan Alkes, obat, meracik obat"
       ]
     },
     "parsed_requirements": {
@@ -15189,6 +15189,82 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_328.jpg?1730645288171"
   },
   {
+    "id": 13624,
+    "title": "Part Marketing Support Analyst - DSO",
+    "organization_id": 308,
+    "organization_name": "Astra International - Daihatsu Sales Operation",
+    "slug": "astra-13624",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-03-31 23:59:59",
+    "group": "Engineering",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13624/detail",
+    "raw_description": "<ul><li>Menganalisis dan membuat laporan kinerja penjualan suku cadang, aksesoris, dan genuine oil untuk mendukung strategi bisnis.</li><li>Monitoring dan evaluasi program pemasaran guna meningkatkan penjualan di seluruh jaringan dealer dan bengkel resmi.</li><li>Berkoordinasi dengan tim terkait untuk memastikan ketersediaan produk serta menindaklanjuti masalah pengadaan.</li><li>Mengelola dan memastikan keakuratan data produk dalam sistem.<br></li></ul>",
+    "raw_requirements": "<ul><li>Sarjana (S1) dibidang Teknik.</li><li>Memiliki pemahaman yang kuat tentang Product Knowledge Parts dan konsep dasar otomotif.</li><li>Terbiasa dengan sistem inventaris dan proses pemesanan suku cadang.&nbsp;</li><li>Memiliki pengetahuan tentang sistem manajemen pergudangan dan sistem penomoran suku cadang.</li><li>Mampu membaca dan menginterpretasikan katalog suku cadang.</li><li>Memahami strategi pemasaran dan manajemen rantai pasok (Supply Chain Management).&nbsp;</li></ul>",
+    "match_score": 85,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": []
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
+  },
+  {
     "id": 13565,
     "title": "Management Trainee Marketing & Sales Site Department Head - TRIATRA",
     "organization_id": 461,
@@ -15265,82 +15341,6 @@
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
-  },
-  {
-    "id": 13624,
-    "title": "Part Marketing Support Analyst - DSO",
-    "organization_id": 308,
-    "organization_name": "Astra International - Daihatsu Sales Operation",
-    "slug": "astra-13624",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-03-31 23:59:59",
-    "group": "Engineering",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13624/detail",
-    "raw_description": "<ul><li>Menganalisis dan membuat laporan kinerja penjualan suku cadang, aksesoris, dan genuine oil untuk mendukung strategi bisnis.</li><li>Monitoring dan evaluasi program pemasaran guna meningkatkan penjualan di seluruh jaringan dealer dan bengkel resmi.</li><li>Berkoordinasi dengan tim terkait untuk memastikan ketersediaan produk serta menindaklanjuti masalah pengadaan.</li><li>Mengelola dan memastikan keakuratan data produk dalam sistem.<br></li></ul>",
-    "raw_requirements": "<ul><li>Sarjana (S1) dibidang Teknik.</li><li>Memiliki pemahaman yang kuat tentang Product Knowledge Parts dan konsep dasar otomotif.</li><li>Terbiasa dengan sistem inventaris dan proses pemesanan suku cadang.&nbsp;</li><li>Memiliki pengetahuan tentang sistem manajemen pergudangan dan sistem penomoran suku cadang.</li><li>Mampu membaca dan menginterpretasikan katalog suku cadang.</li><li>Memahami strategi pemasaran dan manajemen rantai pasok (Supply Chain Management).&nbsp;</li></ul>",
-    "match_score": 85,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": []
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
   },
   {
     "id": "sawitpro_4",
@@ -16741,82 +16741,6 @@
     "logo": null
   },
   {
-    "id": 14561,
-    "title": "Campus Hiring SBY - QC Blasting & Painting - PMP ",
-    "organization_id": 2156,
-    "organization_name": "PT Patria Maritim Perkasa",
-    "slug": "astra-14561",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-09-30 23:59:59",
-    "group": "Engineering",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14561/detail",
-    "raw_description": "<ol><li>Melaksanakan Inspeksi proses Blasting &amp; Painting</li><li>Membuat standard inspeksi blasting &amp; painting</li><li>Mengkordinasikan proses inspeksi dengan maker &amp; owner</li><li>Check kesesuaian drawing &amp; spec dengan proses produksi</li><li>Membuat review quality proses blasting &amp; painting </li><li>Membuat all reporting proses blasting &amp; painting<br></li></ol>",
-    "raw_requirements": "<ol><li>Diploma (D3) Teknik Perkapalan / Sistem Perkapalan</li><li>Memahami standar industri pembuatan kapal serta aturan dan regulasi pengecatan</li><li>Familiar dengan proses pembangunan kapal dari awal hingga penyerahan<br></li></ol>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": []
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
-  },
-  {
     "id": 14556,
     "title": "Campus Hiring SBY - Safety Officer - PMP",
     "organization_id": 2156,
@@ -16890,6 +16814,82 @@
       "gender": "Open",
       "experience": "Minimal 1 tahun",
       "exp_years": 1
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
+  },
+  {
+    "id": 14561,
+    "title": "Campus Hiring SBY - QC Blasting & Painting - PMP ",
+    "organization_id": 2156,
+    "organization_name": "PT Patria Maritim Perkasa",
+    "slug": "astra-14561",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-09-30 23:59:59",
+    "group": "Engineering",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14561/detail",
+    "raw_description": "<ol><li>Melaksanakan Inspeksi proses Blasting &amp; Painting</li><li>Membuat standard inspeksi blasting &amp; painting</li><li>Mengkordinasikan proses inspeksi dengan maker &amp; owner</li><li>Check kesesuaian drawing &amp; spec dengan proses produksi</li><li>Membuat review quality proses blasting &amp; painting </li><li>Membuat all reporting proses blasting &amp; painting<br></li></ol>",
+    "raw_requirements": "<ol><li>Diploma (D3) Teknik Perkapalan / Sistem Perkapalan</li><li>Memahami standar industri pembuatan kapal serta aturan dan regulasi pengecatan</li><li>Familiar dengan proses pembangunan kapal dari awal hingga penyerahan<br></li></ol>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": []
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2156.jpg?1765264355554"
@@ -16971,85 +16971,6 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
   },
   {
-    "id": 14337,
-    "title": "TAF - Sales Officer Makassar",
-    "organization_id": 329,
-    "organization_name": "Toyota Astra Financial Services",
-    "slug": "astra-14337",
-    "type_name": "Karyawan Kontrak",
-    "level": "Semua",
-    "location": "Makassar",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-08-31 23:59:59",
-    "group": "Sales",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14337/detail",
-    "raw_description": "<ul><li>Membuat simulasi kredit dan melakukan negosiasi, baik dengan dealer maupun calon pelanggan, untuk mendapatkan aplikasi pembiayaan pelanggan.</li><li>Melengkapi data aplikasi pembiayaan dan dokumen pendukungnya, termasuk melakukan konfirmasi melalui telepon, proses data entry, inisiasi, dan scan dokumen ke docushare untuk menunjang proses analisa kredit yang cepat dan akurat.</li><li>Memonitor status aplikasi pembiayaan untuk memastikan proses persetujuan kredit mencapai target SLA yang ditetapkan.</li><li>Menginformasikan hasil keputusan kredit kepada pihak-pihak terkait untuk memastikan informasi keputusan kredit diterima secara benar.</li><li>Mencetak dokumen kontrak, menjelaskan isi kontrak kepada pelanggan dan meminta tanda tangan dokumen kontrak ke pelanggan dan dealer untuk memastikan kesesuaian dengan prosedur.</li><li>Mengarahkan dan memberikan penjelasan cara pembayaran angsuran kepada pelanggan untuk meastikan cara bayara yang efektif dan efisien.</li><li>Menindaklanjuti dokumen kelengkapan kendaraan dan dokumen tagihan dari dealer untuk memastikan kelancaran proses pembayaran kendaraan ke dealer (disburse).</li><li>Memonitor status aplikasi backlog untuk mencapai target penjualan yang ditetapkan.</li><li>Memonitor pembiayaan selama 5 angsuran pertama dan bekerjasama dengan fungsi AR management dalam menyelesaikan account F5PD untuk memastikan agar pelanggan yang telah jatuh tempo memenuhi kewajibannya.</li><li>Menjalankan aktivitas penunjang penjualan (mendukung pameran, show room event, dll) untuk meningkatkan pencapaian sales target.</li><li>Membina hubungan baik dengan dealer untuk meningkatkan pencapaian sales target.</li><li>Memonitor produktivitas, kualitas proses dan hasil proses sales untuk mencapai target performance yang ditetapkan.</li><li>Memberikan pelayanan kepada pelanggan dan/atau rekan kerja sesuai dengan standar service perusahaan sebagai bagian dari pekerjaan untuk mendukung terciptanya budaya service perusahaan.<br></li></ul>",
-    "raw_requirements": "<ul><li>Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minimal 3.00/4.00.</li><li>Memiliki SIM C/A.</li><li>Memiliki daya tangkap, daya juang, dan kecepatan kerja yang baik.</li><li>Mampu berkomunikasi, bekerja sama, serta menunjukkan inisiatif tinggi dalam bekerja.</li><li>Bersedia ditempatkan di Makassar, Palopo, Tanatoraja, Malili, Polman, Pare-Pare,Sidrap Pinrang, Sengkang, Soppeng, Bone, Bulukumba,&nbsp;Luwu Timur.<br></li></ul>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minimal 3",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minima...)",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minimal 3",
-        "Memonitor pembiayaan selama 5 angsuran pertama dan bekerjasama dengan fungsi AR management dalam menyelesaikan account F5PD untuk memastikan agar pelanggan yang telah jatuh tempo memenuhi kewajibannya"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": 3.0,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_329.jpg?1730646511627"
-  },
-  {
     "id": 14335,
     "title": "Marketing Staff - FTI",
     "organization_id": 421,
@@ -17129,6 +17050,85 @@
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_421.jpg?1691123541586"
+  },
+  {
+    "id": 14337,
+    "title": "TAF - Sales Officer Makassar",
+    "organization_id": 329,
+    "organization_name": "Toyota Astra Financial Services",
+    "slug": "astra-14337",
+    "type_name": "Karyawan Kontrak",
+    "level": "Semua",
+    "location": "Makassar",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-08-31 23:59:59",
+    "group": "Sales",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14337/detail",
+    "raw_description": "<ul><li>Membuat simulasi kredit dan melakukan negosiasi, baik dengan dealer maupun calon pelanggan, untuk mendapatkan aplikasi pembiayaan pelanggan.</li><li>Melengkapi data aplikasi pembiayaan dan dokumen pendukungnya, termasuk melakukan konfirmasi melalui telepon, proses data entry, inisiasi, dan scan dokumen ke docushare untuk menunjang proses analisa kredit yang cepat dan akurat.</li><li>Memonitor status aplikasi pembiayaan untuk memastikan proses persetujuan kredit mencapai target SLA yang ditetapkan.</li><li>Menginformasikan hasil keputusan kredit kepada pihak-pihak terkait untuk memastikan informasi keputusan kredit diterima secara benar.</li><li>Mencetak dokumen kontrak, menjelaskan isi kontrak kepada pelanggan dan meminta tanda tangan dokumen kontrak ke pelanggan dan dealer untuk memastikan kesesuaian dengan prosedur.</li><li>Mengarahkan dan memberikan penjelasan cara pembayaran angsuran kepada pelanggan untuk meastikan cara bayara yang efektif dan efisien.</li><li>Menindaklanjuti dokumen kelengkapan kendaraan dan dokumen tagihan dari dealer untuk memastikan kelancaran proses pembayaran kendaraan ke dealer (disburse).</li><li>Memonitor status aplikasi backlog untuk mencapai target penjualan yang ditetapkan.</li><li>Memonitor pembiayaan selama 5 angsuran pertama dan bekerjasama dengan fungsi AR management dalam menyelesaikan account F5PD untuk memastikan agar pelanggan yang telah jatuh tempo memenuhi kewajibannya.</li><li>Menjalankan aktivitas penunjang penjualan (mendukung pameran, show room event, dll) untuk meningkatkan pencapaian sales target.</li><li>Membina hubungan baik dengan dealer untuk meningkatkan pencapaian sales target.</li><li>Memonitor produktivitas, kualitas proses dan hasil proses sales untuk mencapai target performance yang ditetapkan.</li><li>Memberikan pelayanan kepada pelanggan dan/atau rekan kerja sesuai dengan standar service perusahaan sebagai bagian dari pekerjaan untuk mendukung terciptanya budaya service perusahaan.<br></li></ul>",
+    "raw_requirements": "<ul><li>Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minimal 3.00/4.00.</li><li>Memiliki SIM C/A.</li><li>Memiliki daya tangkap, daya juang, dan kecepatan kerja yang baik.</li><li>Mampu berkomunikasi, bekerja sama, serta menunjukkan inisiatif tinggi dalam bekerja.</li><li>Bersedia ditempatkan di Makassar, Palopo, Tanatoraja, Malili, Polman, Pare-Pare,Sidrap Pinrang, Sengkang, Soppeng, Bone, Bulukumba,&nbsp;Luwu Timur.<br></li></ul>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minimal 3",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minima...)",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Pendidikan minimal Diploma, terbuka untuk semua jurusan dan lulusan baru dengan IPK minimal 3",
+        "Memonitor pembiayaan selama 5 angsuran pertama dan bekerjasama dengan fungsi AR management dalam menyelesaikan account F5PD untuk memastikan agar pelanggan yang telah jatuh tempo memenuhi kewajibannya"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": 3.0,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_329.jpg?1730646511627"
   },
   {
     "id": 14283,
@@ -17442,82 +17442,6 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_447.jpg?1730646677561"
   },
   {
-    "id": 14255,
-    "title": "Custom Clearance - TSM",
-    "organization_id": 447,
-    "organization_name": "PT Tjahja Sakti Motor",
-    "slug": "astra-14255",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-05-31 23:59:59",
-    "group": "Legal",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14255/detail",
-    "raw_description": "<ol><li>Memastikan kepatuhan penuh serta ketepatan waktu proses dokumentasi custom clearance.</li><li>Berkoordinasi dengan shipper dan mengawasi proses pengiriman end-to-end dari pelabuhan ke gudang, guna memastikan barang diterima dengan aman dan tepat waktu.</li><li>Mengelola perizinan impor serta selalu mengikuti perkembangan perubahan regulasi ekspor-impor.</li><li>Memproses izin rekomendasi impor untuk barang yang termasuk dalam regulasi pembatasan impor.</li><li>Merencanakan dan mengontrol anggaran untuk memastikan operasional yang efisien.<br></li></ol>",
-    "raw_requirements": "<ol><li>Sarjana (S1) Teknik diutamakan. Terbuka untuk jurusan lainnya.</li><li>Fresh graduate dapat melamar.</li><li> Diutamakan fasih berbahasa Inggris.</li><li>Memiliki jiwa kepemimpinan yang kuat, jaringan yang luas, perhatian tinggi terhadap detail, serta kemampuan interpersonal yang baik.<br></li></ol>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Fresh graduate dapat melamar...)",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": []
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_447.jpg?1730646677561"
-  },
-  {
     "id": 14243,
     "title": "Sales Corporate Insurance - HRT",
     "organization_id": 2943,
@@ -17594,6 +17518,85 @@
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_2943.jpg?1734583510651"
+  },
+  {
+    "id": 14226,
+    "title": "Quality Assurance Recovery Analyst - KAF",
+    "organization_id": 354,
+    "organization_name": "Komatsu Astra Finance",
+    "slug": "astra-14226",
+    "type_name": "Karyawan Tetap",
+    "level": "Lulusan Baru/Mahasiswa",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Banking and Financial Services",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14226/detail",
+    "raw_description": "<ul><li>Memantau kinerja pelanggan, menganalisis potensi risiko keterlambatan pembayaran, melakukan survei lapangan, serta mengidentifikasi tanda peringatan dini untuk memastikan kualitas portofolio tetap terjaga.</li><li>Menangani proses penagihan dan memastikan pembayaran dilakukan tepat waktu.</li><li>Mengelola proses mobilisasi, restrukturisasi, dan remarketing unit.</li><li>Menyusun laporan serta menjaga akurasi data untuk kebutuhan kinerja dan kepatuhan.<br></li></ul>",
+    "raw_requirements": "<ul><li>Pendidikan minimal S1 dari semua jurusan dengan IPK minimal 3,00. Diutamakan memiliki pengalaman minimal 1 tahun di industri Multifinance, Perbankan, atau Leasing.</li><li>Memiliki kemampuan analisis yang kuat, teliti, dan memiliki sikap kerja yang baik.</li><li>Bersedia ditempatkan di seluruh wilayah Indonesia.<br></li></ul>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Pendidikan minimal S1 dari semua jurusan dengan IPK minimal 3,00",
+      "experience_summary": "Diutamakan memiliki pengalaman minimal 1 tahun di industri Multifinance, Perbankan, atau Leasing",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Pendidikan minimal S1 dari semua jurusan dengan IPK minimal 3,00",
+        "Diutamakan memiliki pengalaman minimal 1 tahun di industri Multifinance, Perbankan, atau Leasing"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": 3.0,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Minimal 1 tahun",
+      "exp_years": 1
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_354.jpg?1730646041473"
   },
   {
     "id": 14223,
@@ -17674,20 +17677,20 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_401.jpg"
   },
   {
-    "id": 14226,
-    "title": "Quality Assurance Recovery Analyst - KAF",
-    "organization_id": 354,
-    "organization_name": "Komatsu Astra Finance",
-    "slug": "astra-14226",
+    "id": 14255,
+    "title": "Custom Clearance - TSM",
+    "organization_id": 447,
+    "organization_name": "PT Tjahja Sakti Motor",
+    "slug": "astra-14255",
     "type_name": "Karyawan Tetap",
-    "level": "Lulusan Baru/Mahasiswa",
+    "level": "Semua",
     "location": "Indonesia",
     "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Banking and Financial Services",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14226/detail",
-    "raw_description": "<ul><li>Memantau kinerja pelanggan, menganalisis potensi risiko keterlambatan pembayaran, melakukan survei lapangan, serta mengidentifikasi tanda peringatan dini untuk memastikan kualitas portofolio tetap terjaga.</li><li>Menangani proses penagihan dan memastikan pembayaran dilakukan tepat waktu.</li><li>Mengelola proses mobilisasi, restrukturisasi, dan remarketing unit.</li><li>Menyusun laporan serta menjaga akurasi data untuk kebutuhan kinerja dan kepatuhan.<br></li></ul>",
-    "raw_requirements": "<ul><li>Pendidikan minimal S1 dari semua jurusan dengan IPK minimal 3,00. Diutamakan memiliki pengalaman minimal 1 tahun di industri Multifinance, Perbankan, atau Leasing.</li><li>Memiliki kemampuan analisis yang kuat, teliti, dan memiliki sikap kerja yang baik.</li><li>Bersedia ditempatkan di seluruh wilayah Indonesia.<br></li></ul>",
+    "due_date": "2027-05-31 23:59:59",
+    "group": "Legal",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14255/detail",
+    "raw_description": "<ol><li>Memastikan kepatuhan penuh serta ketepatan waktu proses dokumentasi custom clearance.</li><li>Berkoordinasi dengan shipper dan mengawasi proses pengiriman end-to-end dari pelabuhan ke gudang, guna memastikan barang diterima dengan aman dan tepat waktu.</li><li>Mengelola perizinan impor serta selalu mengikuti perkembangan perubahan regulasi ekspor-impor.</li><li>Memproses izin rekomendasi impor untuk barang yang termasuk dalam regulasi pembatasan impor.</li><li>Merencanakan dan mengontrol anggaran untuk memastikan operasional yang efisien.<br></li></ol>",
+    "raw_requirements": "<ol><li>Sarjana (S1) Teknik diutamakan. Terbuka untuk jurusan lainnya.</li><li>Fresh graduate dapat melamar.</li><li> Diutamakan fasih berbahasa Inggris.</li><li>Memiliki jiwa kepemimpinan yang kuat, jaringan yang luas, perhatian tinggi terhadap detail, serta kemampuan interpersonal yang baik.<br></li></ol>",
     "match_score": 80,
     "is_blocked": false,
     "match_details": {
@@ -17699,7 +17702,7 @@
       "gpa": {
         "score": 15,
         "status": "Match",
-        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
       },
       "age": {
         "score": 10,
@@ -17724,33 +17727,30 @@
       "experience": {
         "score": 5,
         "status": "Match",
-        "reason": "Cocok. Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda."
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
       },
       "exp_years": {
         "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
       }
     },
     "nlp_breakdown": {
-      "education_summary": "Pendidikan minimal S1 dari semua jurusan dengan IPK minimal 3,00",
-      "experience_summary": "Diutamakan memiliki pengalaman minimal 1 tahun di industri Multifinance, Perbankan, atau Leasing",
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Fresh graduate dapat melamar...)",
       "mandatory_skills": [],
       "plus_skills": [],
-      "key_sentences": [
-        "Pendidikan minimal S1 dari semua jurusan dengan IPK minimal 3,00",
-        "Diutamakan memiliki pengalaman minimal 1 tahun di industri Multifinance, Perbankan, atau Leasing"
-      ]
+      "key_sentences": []
     },
     "parsed_requirements": {
-      "gpa": 3.0,
+      "gpa": null,
       "age": null,
       "toefl": null,
       "gender": "Open",
-      "experience": "Minimal 1 tahun",
-      "exp_years": 1
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
     },
     "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_354.jpg?1730646041473"
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_447.jpg?1730646677561"
   },
   {
     "id": 13988,
@@ -18143,6 +18143,84 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
   },
   {
+    "id": 13535,
+    "title": "Business Consultant - TN",
+    "organization_id": 312,
+    "organization_name": "Traktor Nusantara",
+    "slug": "astra-13535",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-12-31 23:59:59",
+    "group": "Sales",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13535/detail",
+    "raw_description": "<p>Tanggung Jawab:</p><ol><li>Mengembangkan jaringan dan membangun saluran (channel) untuk menemukan peluang bisnis di pasar target.</li><li>Mengawasi seluruh proses penjualan, termasuk pencarian prospek, mengidentifikasi kebutuhan pelanggan, negosiasi harga, dan memantau aktivitas pasca-penjualan.</li><li>Menjaga hubungan dengan pelanggan yang sudah ada dan secara aktif menciptakan permintaan untuk produk perusahaan.</li></ol>",
+    "raw_requirements": "<p>Persyaratan:</p><ul><li>Gelar Sarjana (S1/D4) dari semua jurusan, lebih disukai dari jurusan terkait Teknik</li><li>IPK minimal 3,00 (skala 4,00) dari universitas ternama</li><li>Minat yang kuat dalam aktivitas penjualan (sales) dan pemasaran</li><li>Memiliki kemampuan analitis, interpersonal, dan berorientasi pada pelanggan yang kuat, mampu bekerja sama dalam tim, serta mampu berkembang di lingkungan yang serba cepat</li><li>Memiliki semangat untuk mengeksplorasi dan mempelajari pengetahuan tentang produk alat berat</li><li>Pengalaman di bidang penjualan atau kewirausahaan menjadi nilai tambah</li><li>Kemampuan bahasa Mandarin menjadi nilai tambah</li><li>Mahir berbahasa Inggris, baik lisan maupun tulisan</li><li>Bersedia ditempatkan di seluruh cabang PT Traktor Nusantara.<br></li></ul>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Persyaratan: Gelar Sarjana (S1/D4) dari semua jurusan, lebih disukai dari jurusan terkait Teknik IPK minimal 3,00 (skala 4,00) dari universitas ternama Minat yang kuat dalam aktivitas penjualan (sales) dan pemasaran Memiliki kemampuan analitis, interpersonal, dan berorientasi pada pelanggan yang kuat, mampu bekerja sama dalam tim, serta mampu berkembang di lingkungan yang serba cepat Memiliki semangat untuk mengeksplorasi dan mempelajari pengetahuan tentang produk alat berat Pengalaman di bidang penjualan atau kewirausahaan menjadi nilai tambah Kemampuan bahasa Mandarin menjadi nilai tambah Mahir berbahasa Inggris, baik lisan maupun tulisan Bersedia ditempatkan di seluruh cabang PT Traktor Nusantara"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": 3.0,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_312.jpg?1732070237413"
+  },
+  {
     "id": 13545,
     "title": "Management Trainee Parts Department Head - TN",
     "organization_id": 312,
@@ -18286,84 +18364,6 @@
       "plus_skills": [],
       "key_sentences": [
         "Persyaratan: Gelar Sarjana (S1) di bidang Ekonomi, Manajemen, Bisnis, dan Akuntansi Lulusan baru (fresh graduate) dipersilakan untuk melamar IPK minimal 3,00 (skala 4,00) dari universitas ternama Memiliki kemampuan berpikir analitis, interpersonal, dan kepemimpinan yang baik, mampu bekerja dalam tim, serta mampu bekerja di bawah jadwal yang ketat Menunjukkan kepercayaan diri, motivasi diri, perhatian terhadap detail, kemampuan beradaptasi, dan jiwa pelayanan yang kuat Wajib menguasai literasi komputer Pengalaman organisasi dan kepemimpinan lainnya menjadi nilai tambah Bersedia ditempatkan di seluruh cabang Traktor Nusantara Mahir berbahasa Inggris, baik lisan maupun tulisan Tanggung Jawab: Sebagai Management Trainee Administration Department Head, Anda akan mengikuti program pengembangan ekstensif di berbagai fungsi yang berkaitan dengan administrasi cabang kami"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": 3.0,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_312.jpg?1732070237413"
-  },
-  {
-    "id": 13535,
-    "title": "Business Consultant - TN",
-    "organization_id": 312,
-    "organization_name": "Traktor Nusantara",
-    "slug": "astra-13535",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-12-31 23:59:59",
-    "group": "Sales",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13535/detail",
-    "raw_description": "<p>Tanggung Jawab:</p><ol><li>Mengembangkan jaringan dan membangun saluran (channel) untuk menemukan peluang bisnis di pasar target.</li><li>Mengawasi seluruh proses penjualan, termasuk pencarian prospek, mengidentifikasi kebutuhan pelanggan, negosiasi harga, dan memantau aktivitas pasca-penjualan.</li><li>Menjaga hubungan dengan pelanggan yang sudah ada dan secara aktif menciptakan permintaan untuk produk perusahaan.</li></ol>",
-    "raw_requirements": "<p>Persyaratan:</p><ul><li>Gelar Sarjana (S1/D4) dari semua jurusan, lebih disukai dari jurusan terkait Teknik</li><li>IPK minimal 3,00 (skala 4,00) dari universitas ternama</li><li>Minat yang kuat dalam aktivitas penjualan (sales) dan pemasaran</li><li>Memiliki kemampuan analitis, interpersonal, dan berorientasi pada pelanggan yang kuat, mampu bekerja sama dalam tim, serta mampu berkembang di lingkungan yang serba cepat</li><li>Memiliki semangat untuk mengeksplorasi dan mempelajari pengetahuan tentang produk alat berat</li><li>Pengalaman di bidang penjualan atau kewirausahaan menjadi nilai tambah</li><li>Kemampuan bahasa Mandarin menjadi nilai tambah</li><li>Mahir berbahasa Inggris, baik lisan maupun tulisan</li><li>Bersedia ditempatkan di seluruh cabang PT Traktor Nusantara.<br></li></ul>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Persyaratan: Gelar Sarjana (S1/D4) dari semua jurusan, lebih disukai dari jurusan terkait Teknik IPK minimal 3,00 (skala 4,00) dari universitas ternama Minat yang kuat dalam aktivitas penjualan (sales) dan pemasaran Memiliki kemampuan analitis, interpersonal, dan berorientasi pada pelanggan yang kuat, mampu bekerja sama dalam tim, serta mampu berkembang di lingkungan yang serba cepat Memiliki semangat untuk mengeksplorasi dan mempelajari pengetahuan tentang produk alat berat Pengalaman di bidang penjualan atau kewirausahaan menjadi nilai tambah Kemampuan bahasa Mandarin menjadi nilai tambah Mahir berbahasa Inggris, baik lisan maupun tulisan Bersedia ditempatkan di seluruh cabang PT Traktor Nusantara"
       ]
     },
     "parsed_requirements": {
@@ -19226,83 +19226,6 @@
     "logo": null
   },
   {
-    "id": 14535,
-    "title": "Campus Hiring SBY - Business Consultant - TRIATRA",
-    "organization_id": 461,
-    "organization_name": "PT Triatra Sinergia Pratama",
-    "slug": "astra-14535",
-    "type_name": "Karyawan Tetap",
-    "level": "Lulusan Baru/Mahasiswa",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-09-30 23:59:59",
-    "group": "Sales",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14535/detail",
-    "raw_description": "<ol><li>Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments)</li><li>Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra-penjualan, penjualan, dan purna-penjualan.</li><li>Menganalisis kebutuhan pelanggan, menyusun penawaran, bernegosiasi, dan mengkoordinasikan pengiriman produk.</li><li>Memberikan dukungan teknis dan menanggapi umpan balik pelanggan untuk memastikan kepuasan.</li><li>Mengembangkan database pelanggan dan mengidentifikasi peluang bisnis baru.<br></li></ol><p><br></p>",
-    "raw_requirements": "<ol><li>Gelar Sarjana Semua Teknik&nbsp;</li><li>Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah</li><li>Keterampilan komunikasi dan presentasi yang sangat baik</li><li>Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar</li><li>Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik</li><li>Bersedia ditempatkan di seluruh Indonesia<br></li></ol>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Gelar Sarjana Semua Teknik&nbsp; Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah Keterampilan komunikasi dan presentasi yang sangat baik Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik Bersedia ditempatkan di seluruh Indonesia Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments) Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
-  },
-  {
     "id": 14536,
     "title": "Campus Hiring SBY - After Sales Consultant - TRIATRA",
     "organization_id": 461,
@@ -19366,6 +19289,83 @@
       "plus_skills": [],
       "key_sentences": [
         "Gelar Sarjana dibidang Teknik Bersedia ditempatkan di seluruh Indonesia Terbuka untuk freshgraduate, memiliki pengalaman dalam bidang penjualan akan menjadi nilai tambah Proaktif serta memiliki keterampilan komunikasi dan presentasi yang baik Berorientasi pada target dan cepat belajar, mampu bekerja dengan baik secara individu maupun tim Memiliki ketajaman bisnis yang baik Memiliki Surat Izin Mengemudi (SIM A) Melakukan aktivitas penjualan dengan menawarkan produk after market (Spare parts, services, dan komponen reman kepada customer)"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
+  },
+  {
+    "id": 14535,
+    "title": "Campus Hiring SBY - Business Consultant - TRIATRA",
+    "organization_id": 461,
+    "organization_name": "PT Triatra Sinergia Pratama",
+    "slug": "astra-14535",
+    "type_name": "Karyawan Tetap",
+    "level": "Lulusan Baru/Mahasiswa",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-09-30 23:59:59",
+    "group": "Sales",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14535/detail",
+    "raw_description": "<ol><li>Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments)</li><li>Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra-penjualan, penjualan, dan purna-penjualan.</li><li>Menganalisis kebutuhan pelanggan, menyusun penawaran, bernegosiasi, dan mengkoordinasikan pengiriman produk.</li><li>Memberikan dukungan teknis dan menanggapi umpan balik pelanggan untuk memastikan kepuasan.</li><li>Mengembangkan database pelanggan dan mengidentifikasi peluang bisnis baru.<br></li></ol><p><br></p>",
+    "raw_requirements": "<ol><li>Gelar Sarjana Semua Teknik&nbsp;</li><li>Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah</li><li>Keterampilan komunikasi dan presentasi yang sangat baik</li><li>Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar</li><li>Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik</li><li>Bersedia ditempatkan di seluruh Indonesia<br></li></ol>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Gelar Sarjana Semua Teknik&nbsp; Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah Keterampilan komunikasi dan presentasi yang sangat baik Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik Bersedia ditempatkan di seluruh Indonesia Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments) Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra"
       ]
     },
     "parsed_requirements": {
@@ -19459,20 +19459,20 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_394.jpg?1730963117923"
   },
   {
-    "id": 14458,
-    "title": "Sales Consultant Samarinda - UDSO",
+    "id": 14460,
+    "title": "Sales Consultant Surabaya - UDSO",
     "organization_id": 399,
     "organization_name": "Astra International - UD Trucks Sales Operation",
-    "slug": "astra-14458",
+    "slug": "astra-14460",
     "type_name": "Karyawan Tetap",
     "level": "Semua",
-    "location": "Indonesia",
+    "location": "Surabaya",
     "workplace": "Work From Office (WFO)",
     "due_date": "2026-12-31 23:59:59",
     "group": "Sales",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14458/detail",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14460/detail",
     "raw_description": "<ul><li>Mengidentifikasi kebutuhan dan karakteristik pelanggan</li><li>Membangun serta menjaga hubungan baik dengan pelanggan</li><li>Menyampaikan presentasi produk dan penawaran (quotation) secara informatif</li><li>Mengelola dan mengembangkan database serta informasi kontak pelanggan</li><li>Mencapai target penjualan yang telah ditetapkan<br></li></ul>",
-    "raw_requirements": "<ul><li>Pendidikan min. D3 dari semua jurusan dengan IPK min. 2,75</li><li>Memiliki kemampuan komunikasi dan persuasi yang baik</li><li>Memiliki minat di bidang penjualan (sales) dan industri otomotif</li><li>Bersedia ditempatkan di Samarinda.<br></li></ul>",
+    "raw_requirements": "<ul><li>Pendidikan min. D3 dari semua jurusan dengan IPK min. 2,75</li><li>Memiliki kemampuan komunikasi dan persuasi yang baik</li><li>Memiliki minat di bidang penjualan (sales) dan industri otomotif</li><li>Bersedia ditempatkan di Surabaya<br></li></ul>",
     "match_score": 75,
     "is_blocked": false,
     "match_details": {
@@ -19534,20 +19534,20 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_399.jpg?1730646706398"
   },
   {
-    "id": 14460,
-    "title": "Sales Consultant Surabaya - UDSO",
+    "id": 14458,
+    "title": "Sales Consultant Samarinda - UDSO",
     "organization_id": 399,
     "organization_name": "Astra International - UD Trucks Sales Operation",
-    "slug": "astra-14460",
+    "slug": "astra-14458",
     "type_name": "Karyawan Tetap",
     "level": "Semua",
-    "location": "Surabaya",
+    "location": "Indonesia",
     "workplace": "Work From Office (WFO)",
     "due_date": "2026-12-31 23:59:59",
     "group": "Sales",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14460/detail",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14458/detail",
     "raw_description": "<ul><li>Mengidentifikasi kebutuhan dan karakteristik pelanggan</li><li>Membangun serta menjaga hubungan baik dengan pelanggan</li><li>Menyampaikan presentasi produk dan penawaran (quotation) secara informatif</li><li>Mengelola dan mengembangkan database serta informasi kontak pelanggan</li><li>Mencapai target penjualan yang telah ditetapkan<br></li></ul>",
-    "raw_requirements": "<ul><li>Pendidikan min. D3 dari semua jurusan dengan IPK min. 2,75</li><li>Memiliki kemampuan komunikasi dan persuasi yang baik</li><li>Memiliki minat di bidang penjualan (sales) dan industri otomotif</li><li>Bersedia ditempatkan di Surabaya<br></li></ul>",
+    "raw_requirements": "<ul><li>Pendidikan min. D3 dari semua jurusan dengan IPK min. 2,75</li><li>Memiliki kemampuan komunikasi dan persuasi yang baik</li><li>Memiliki minat di bidang penjualan (sales) dan industri otomotif</li><li>Bersedia ditempatkan di Samarinda.<br></li></ul>",
     "match_score": 75,
     "is_blocked": false,
     "match_details": {
@@ -19995,84 +19995,6 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
   },
   {
-    "id": 13603,
-    "title": "MT Administration Supervisor - DSO",
-    "organization_id": 308,
-    "organization_name": "Astra International - Daihatsu Sales Operation",
-    "slug": "astra-13603",
-    "type_name": "Karyawan Tetap",
-    "level": "Lulusan Baru/Mahasiswa",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Development Program",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13603/detail",
-    "raw_description": "<ul><li>Bertanggung jawab atas pencatatan akuntansi di cabang-cabang Astra Daihatsu.</li><li>Bertanggung jawab atas pembuatan anggaran dan rencana bisnis untuk cabang-cabang Astra Daihatsu.</li><li>Bertanggung jawab untuk memastikan semua proses administrasi di cabang berjalan lancar sesuai SOP.</li></ul>",
-    "raw_requirements": "<ul><li>Sarjana (S1) di bidang Ekonomi, Akuntansi, Manajemen, Keuangan, atau Administrasi.</li><li>Fresh graduate atau maksimal 2 tahun pengalaman kerja.</li><li>Memiliki passion untuk bekerja di industri otomotif dan berambisi menjadi pemimpin.</li><li>Bersedia ditempatkan di seluruh Indonesia adalah KEHARUSAN.</li><li>Memiliki keterampilan interpersonal, komunikasi, dan kepemimpinan yang baik.</li><li>Memiliki naluri bisnis dan orientasi mencapai target.</li></ul><p><br></p><p>Untuk informasi lebih lanjut dapat menghubungi alamat Email Rekrutmen Astra Daihatsu&nbsp;<strong>(recruitment.rod@dso.astra.co.id).</strong></p>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Fresh graduate atau maksimal 2 tahun pengalaman kerja...)",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Fresh graduate atau maksimal 2 tahun pengalaman kerja",
-        "Bersedia ditempatkan di seluruh Indonesia adalah KEHARUSAN"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Minimal 2 tahun",
-      "exp_years": 2
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
-  },
-  {
     "id": 13604,
     "title": "MT Sales Supervisor - DSO",
     "organization_id": 308,
@@ -20152,6 +20074,84 @@
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
   },
   {
+    "id": 13603,
+    "title": "MT Administration Supervisor - DSO",
+    "organization_id": 308,
+    "organization_name": "Astra International - Daihatsu Sales Operation",
+    "slug": "astra-13603",
+    "type_name": "Karyawan Tetap",
+    "level": "Lulusan Baru/Mahasiswa",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Development Program",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13603/detail",
+    "raw_description": "<ul><li>Bertanggung jawab atas pencatatan akuntansi di cabang-cabang Astra Daihatsu.</li><li>Bertanggung jawab atas pembuatan anggaran dan rencana bisnis untuk cabang-cabang Astra Daihatsu.</li><li>Bertanggung jawab untuk memastikan semua proses administrasi di cabang berjalan lancar sesuai SOP.</li></ul>",
+    "raw_requirements": "<ul><li>Sarjana (S1) di bidang Ekonomi, Akuntansi, Manajemen, Keuangan, atau Administrasi.</li><li>Fresh graduate atau maksimal 2 tahun pengalaman kerja.</li><li>Memiliki passion untuk bekerja di industri otomotif dan berambisi menjadi pemimpin.</li><li>Bersedia ditempatkan di seluruh Indonesia adalah KEHARUSAN.</li><li>Memiliki keterampilan interpersonal, komunikasi, dan kepemimpinan yang baik.</li><li>Memiliki naluri bisnis dan orientasi mencapai target.</li></ul><p><br></p><p>Untuk informasi lebih lanjut dapat menghubungi alamat Email Rekrutmen Astra Daihatsu&nbsp;<strong>(recruitment.rod@dso.astra.co.id).</strong></p>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Fresh graduate atau maksimal 2 tahun pengalaman kerja...)",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Fresh graduate atau maksimal 2 tahun pengalaman kerja",
+        "Bersedia ditempatkan di seluruh Indonesia adalah KEHARUSAN"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Minimal 2 tahun",
+      "exp_years": 2
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_308.jpg?1730445113035"
+  },
+  {
     "id": 13566,
     "title": "Technical Officer - TRIATRA",
     "organization_id": 461,
@@ -20215,83 +20215,6 @@
       "plus_skills": [],
       "key_sentences": [
         "Gelar Diploma atau Sarjana Teknik Mesin, Teknik Elekto, Teknik Perkapalan dari universitas terkemuka Bersedia ditempatkan di seluruh Indonesia Terbuka untuk freshgraduate, memiliki pengalaman dalam bidang teknikal lebih diutamakan Gigih, memiliki inisiatif yang tinggi, dan memiliki interpesonal skill yang baik Mampu bekerja dengan baik secara individu maupun tim Memiliki kemampuan bahasa inggris yang baik Mengkoordinasikan dan memastikan&nbsp; kegiatan penanganan Trouble Shooting yang berasal dari ETR/EMR/TI Melakukan analisa atas&nbsp;Troubleshooting&nbsp;yang terjadi untuk mengetahui cara penanganannya, dan membantu menyelesaikan masalah teknis yang terjadi di Site"
-      ]
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Terbuka untuk Fresh Graduate",
-      "exp_years": 0
-    },
-    "source": "Astra",
-    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
-  },
-  {
-    "id": 13563,
-    "title": "Business Consultant - TRIATRA",
-    "organization_id": 461,
-    "organization_name": "PT Triatra Sinergia Pratama",
-    "slug": "astra-13563",
-    "type_name": "Karyawan Tetap",
-    "level": "Semua",
-    "location": "Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2027-01-30 23:59:59",
-    "group": "Sales",
-    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13563/detail",
-    "raw_description": "<ul><li>Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments)</li><li>Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra-penjualan, penjualan, dan purna-penjualan.</li><li>Menganalisis kebutuhan pelanggan, menyusun penawaran, bernegosiasi, dan mengkoordinasikan pengiriman produk.</li><li>Memberikan dukungan teknis dan menanggapi umpan balik pelanggan untuk memastikan kepuasan.</li><li>Mengembangkan database pelanggan dan mengidentifikasi peluang bisnis baru.<br></li></ul>",
-    "raw_requirements": "<ul><li>Gelar Sarjana Teknik / Semua Jurusan dari universitas terkemuka</li><li>Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah</li><li>Keterampilan komunikasi dan presentasi yang sangat baik</li><li>Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar</li><li>Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik</li><li>Bersedia ditempatkan di seluruh Indonesia<br></li></ul>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
-      "mandatory_skills": [],
-      "plus_skills": [],
-      "key_sentences": [
-        "Gelar Sarjana Teknik / Semua Jurusan dari universitas terkemuka Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah Keterampilan komunikasi dan presentasi yang sangat baik Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik Bersedia ditempatkan di seluruh Indonesia Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments) Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra"
       ]
     },
     "parsed_requirements": {
@@ -20459,6 +20382,83 @@
     },
     "source": "Astra",
     "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_312.jpg?1732070237413"
+  },
+  {
+    "id": 13563,
+    "title": "Business Consultant - TRIATRA",
+    "organization_id": 461,
+    "organization_name": "PT Triatra Sinergia Pratama",
+    "slug": "astra-13563",
+    "type_name": "Karyawan Tetap",
+    "level": "Semua",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Sales",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/13563/detail",
+    "raw_description": "<ul><li>Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments)</li><li>Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra-penjualan, penjualan, dan purna-penjualan.</li><li>Menganalisis kebutuhan pelanggan, menyusun penawaran, bernegosiasi, dan mengkoordinasikan pengiriman produk.</li><li>Memberikan dukungan teknis dan menanggapi umpan balik pelanggan untuk memastikan kepuasan.</li><li>Mengembangkan database pelanggan dan mengidentifikasi peluang bisnis baru.<br></li></ul>",
+    "raw_requirements": "<ul><li>Gelar Sarjana Teknik / Semua Jurusan dari universitas terkemuka</li><li>Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah</li><li>Keterampilan komunikasi dan presentasi yang sangat baik</li><li>Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar</li><li>Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik</li><li>Bersedia ditempatkan di seluruh Indonesia<br></li></ul>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
+      "mandatory_skills": [],
+      "plus_skills": [],
+      "key_sentences": [
+        "Gelar Sarjana Teknik / Semua Jurusan dari universitas terkemuka Fresh Graduate dipersilakan, memiliki pengalaman dalam penjualan akan menjadi nilai tambah Keterampilan komunikasi dan presentasi yang sangat baik Memiliki motivasi tinggi, berorientasi pada target, dan cepat belajar Mandiri, banyak akal dan memiliki ketajaman bisnis yang baik Bersedia ditempatkan di seluruh Indonesia Melakukan aktivitas penjualan produk unit Patria (heavy equipment attachments) Membangun dan menjaga hubungan baik dengan customer melalui aktivitas pra"
+      ]
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Terbuka untuk Fresh Graduate",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_461.jpg?1773195566242"
   },
   {
     "id": "grab_744000132783640",
