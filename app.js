@@ -1059,6 +1059,8 @@ function openJobModal(job) {
             <button class="tab-btn pitch-tab-btn" onclick="switchTab(event, 'pitchTab')">✨ Auto Cover Letter / Pitch</button>
             <button class="tab-btn ats-tab-btn" onclick="switchTab(event, 'atsTab')">💡 ATS Keyword Booster</button>
             <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'aiSummaryTab')">🤖 AI Smart Summary</button>
+            <button class="tab-btn skill-gap-tab-btn" onclick="switchTab(event, 'skillsGapTab')">📊 Skills Gap</button>
+            <button class="tab-btn tracker-tab-btn" onclick="switchTab(event, 'trackerTab')">📋 Application Tracker</button>
             <!-- <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'interviewTab')">💬 Interview Questions</button> -->
         </div>
         
@@ -1095,6 +1097,40 @@ function openJobModal(job) {
                 </div>
             </div>
         </div>
+
+        <div id="skillsGapTab" class="tab-pane">
+            <div class="skills-gap-container">
+                <div class="ai-feature-header">
+                    <h3>📊 Skills Gap Analysis</h3>
+                    <p>Bandingkan skill Anda dengan requirement pekerjaan ini</p>
+                </div>
+                <button class="btn-generate-ai" onclick="generateSkillsGap('${job.id}')">
+                    📊 Analyze Skills Gap
+                </button>
+                <div id="skillsGapContent-${job.id}" class="ai-content-area" style="display: none;">
+                    <div class="ai-loading">
+                        <div class="spinner"></div>
+                        <p>Menganalisis gap skills Anda...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="trackerTab" class="tab-pane">
+            <div class="tracker-container">
+                <div class="ai-feature-header">
+                    <h3>📋 Application Tracker</h3>
+                    <p>Kelola status lamaran dan progress interview Anda</p>
+                </div>
+                <button class="btn-generate-ai" onclick="openApplicationTracker('${job.id}')">
+                    📋 Manage Application
+                </button>
+                <div id="trackerContent-${job.id}" class="tracker-content-area" style="display: none;">
+                    <!-- Tracker form akan di-render di sini -->
+                </div>
+            </div>
+        </div>
+
         <!-- <div id="interviewTab" class="tab-pane">
             <div class="ai-feature-container">
                 <div class="ai-feature-header">
@@ -1161,6 +1197,11 @@ window.switchTab = function (event, tabId) {
         if (area && area.style.display === 'none') {
             generateInterviewQuestions(window.currentModalJobId);
         }
+    } else if (tabId === 'skillsGapTab' && window.currentModalJobId) {
+        const area = document.getElementById(`skillsGapContent-${window.currentModalJobId}`);
+        if (area && area.style.display === 'none') {
+            generateSkillsGap(window.currentModalJobId);
+        }
     }
 }
 
@@ -1176,6 +1217,7 @@ const AI_SERVICE_URL = 'http://localhost:5001';
 // In-Memory AI Caches for Instant Loading
 window.aiSummaryCache = window.aiSummaryCache || {};
 window.aiInterviewCache = window.aiInterviewCache || {};
+window.skillsGapCache = window.skillsGapCache || {};
 
 // ⚠️ MEMORY FIX: LRU Cache limiter — prevent unbounded cache growth
 const MAX_CACHE_SIZE = 100; // Max 100 items per cache type
@@ -1440,6 +1482,344 @@ window.generateInterviewQuestions = async function (jobId) {
                     <p>Error: ${cloudErr.message}</p>
                 </div>
             `;
+        }
+    }
+}
+
+// Generate Skills Gap Analysis
+window.generateSkillsGap = async function (jobId) {
+    const job = allJobs.find(j => j.id == jobId);
+    if (!job) return;
+
+    const contentArea = document.getElementById(`skillsGapContent-${jobId}`);
+    contentArea.style.display = 'block';
+
+    // Check if cached
+    if (window.skillsGapCache && window.skillsGapCache[jobId]) {
+        contentArea.innerHTML = window.skillsGapCache[jobId];
+        return;
+    }
+
+    // Extract skills from requirements using simple keyword matching
+    const jobRequirements = extractSkillsFromText(job.raw_requirements || job.requirements || '');
+    
+    // Get user skills from localStorage or use default
+    const userSkillsStr = localStorage.getItem('userSkills') || 'Python,SQL,Pandas,Power BI,Basic ML';
+    const userSkills = userSkillsStr.split(',').map(s => s.trim()).filter(s => s);
+
+    // Calculate skill gaps (simple matching algorithm)
+    const matched = [];
+    const missing = [];
+    const advanced = [];
+
+    const skillSimilarity = (skill1, skill2) => {
+        const s1 = skill1.toLowerCase();
+        const s2 = skill2.toLowerCase();
+        if (s1 === s2) return 1.0;
+        if (s1.includes(s2) || s2.includes(s1)) return 0.7;
+        return 0.0;
+    };
+
+    for (const reqSkill of jobRequirements) {
+        let bestMatch = null;
+        let bestScore = 0;
+
+        for (const userSkill of userSkills) {
+            const score = skillSimilarity(userSkill, reqSkill);
+            if (score > bestScore) {
+                bestScore = score;
+                bestMatch = userSkill;
+            }
+        }
+
+        if (bestScore >= 0.7) {
+            matched.push({ user: bestMatch, required: reqSkill });
+        } else if (bestScore >= 0.4) {
+            advanced.push({ user: bestMatch, required: reqSkill });
+        } else {
+            missing.push(reqSkill);
+        }
+    }
+
+    const matchPercentage = jobRequirements.length > 0 
+        ? Math.round((matched.length / jobRequirements.length) * 100)
+        : 0;
+
+    // Build HTML output
+    const htmlOut = `
+        <div class="skills-gap-result">
+            <div class="gap-header">
+                <div class="match-percentage">
+                    <span class="percent-number">${matchPercentage}%</span>
+                    <span class="percent-label">Match Rate</span>
+                </div>
+            </div>
+            
+            <div class="gap-stats">
+                <div class="stat-box matched">
+                    <strong>${matched.length}</strong>
+                    <span>Matched Skills</span>
+                </div>
+                <div class="stat-box missing">
+                    <strong>${missing.length}</strong>
+                    <span>Missing Skills</span>
+                </div>
+                <div class="stat-box total">
+                    <strong>${jobRequirements.length}</strong>
+                    <span>Total Required</span>
+                </div>
+            </div>
+
+            ${matched.length > 0 ? `
+            <div class="gap-section">
+                <h4>✅ Your Matched Skills</h4>
+                <ul class="skills-list">
+                    ${matched.map(m => `<li class="skill-matched"><strong>${m.user}</strong> → ${m.required}</li>`).join('')}
+                </ul>
+            </div>
+            ` : ''}
+
+            ${missing.length > 0 ? `
+            <div class="gap-section">
+                <h4>❌ Skills to Learn</h4>
+                <ul class="skills-list">
+                    ${missing.map(m => `<li class="skill-missing">• ${m}</li>`).join('')}
+                </ul>
+            </div>
+            ` : ''}
+
+            ${advanced.length > 0 ? `
+            <div class="gap-section">
+                <h4>⚡ Level Up These Skills</h4>
+                <ul class="skills-list">
+                    ${advanced.map(a => `<li class="skill-advanced"><strong>${a.user}</strong> → Advanced ${a.required}</li>`).join('')}
+                </ul>
+            </div>
+            ` : ''}
+        </div>
+    `;
+
+    if (!window.skillsGapCache) window.skillsGapCache = {};
+    window.skillsGapCache[jobId] = htmlOut;
+    contentArea.innerHTML = htmlOut;
+}
+
+// Helper: Extract skills from text
+function extractSkillsFromText(text) {
+    const skillKeywords = [
+        'python', 'javascript', 'java', 'c++', 'r', 'golang', 'php', 'rust',
+        'sql', 'mysql', 'postgresql', 'mongodb', 'redis', 'elasticsearch',
+        'machine learning', 'deep learning', 'nlp', 'computer vision', 'data science', 'ml', 'ai',
+        'tableau', 'power bi', 'looker', 'qlik', 'metabase',
+        'docker', 'kubernetes', 'git', 'aws', 'gcp', 'azure', 'jenkins', 'dataiku',
+        'pandas', 'numpy', 'scikit-learn', 'tensorflow', 'pytorch', 'keras',
+        'react', 'angular', 'vue', 'node.js', 'express', 'django', 'flask',
+        'rest', 'api', 'graphql', 'microservices', 'agile', 'scrum'
+    ];
+
+    const textLower = text.toLowerCase();
+    const foundSkills = new Set();
+
+    for (const skill of skillKeywords) {
+        if (textLower.includes(skill)) {
+            foundSkills.add(skill.split(' ')[0].charAt(0).toUpperCase() + skill.slice(1));
+        }
+    }
+
+    return Array.from(foundSkills);
+}
+
+// Open Application Tracker
+window.openApplicationTracker = function (jobId) {
+    const job = allJobs.find(j => j.id == jobId);
+    if (!job) return;
+
+    const contentArea = document.getElementById(`trackerContent-${jobId}`);
+    contentArea.style.display = 'block';
+
+    // Get or create application data from localStorage
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    // Get or init application for this job
+    if (!applications[jobId]) {
+        applications[jobId] = {
+            jobId: jobId,
+            jobTitle: job.title,
+            company: job.organization_name || job.company || 'Unknown',
+            appliedDate: new Date().toISOString().split('T')[0],
+            status: 'not_applied',
+            interviewDates: [],
+            notes: '',
+            followUpDate: null
+        };
+    }
+
+    const app = applications[jobId];
+
+    // Build tracker form HTML
+    const trackerHTML = `
+        <div class="application-tracker-form">
+            <div class="form-section">
+                <label>📌 Application Status</label>
+                <select class="form-select" id="appStatus_${jobId}" onchange="updateApplicationStatus('${jobId}', this.value)">
+                    <option value="not_applied" ${app.status === 'not_applied' ? 'selected' : ''}>Belum Dilamar</option>
+                    <option value="applied" ${app.status === 'applied' ? 'selected' : ''}>Sudah Dilamar</option>
+                    <option value="interview" ${app.status === 'interview' ? 'selected' : ''}>Tahap Interview</option>
+                    <option value="offer" ${app.status === 'offer' ? 'selected' : ''}>Dapat Offer</option>
+                    <option value="accepted" ${app.status === 'accepted' ? 'selected' : ''}>Diterima</option>
+                    <option value="rejected" ${app.status === 'rejected' ? 'selected' : ''}>Ditolak</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <label>📅 Tanggal Dilamar</label>
+                <input type="date" class="form-input" id="appliedDate_${jobId}" value="${app.appliedDate}" onchange="updateApplicationData('${jobId}', 'appliedDate', this.value)">
+            </div>
+
+            ${app.status !== 'not_applied' ? `
+            <div class="form-section">
+                <label>💬 Interview Dates</label>
+                <div class="interview-list">
+                    ${app.interviewDates.length > 0 ? app.interviewDates.map((int, idx) => `
+                        <div class="interview-item">
+                            <span>${int.date} - ${int.type || 'Interview'}</span>
+                            <button class="btn-remove" onclick="removeInterviewDate('${jobId}', ${idx})">✕</button>
+                        </div>
+                    `).join('') : '<p style="color: #888; font-size: 0.9rem;">Belum ada interview scheduled</p>'}
+                </div>
+                <button class="btn-add-interview" onclick="addInterviewDateForm('${jobId}')">+ Add Interview</button>
+            </div>
+            ` : ''}
+
+            <div class="form-section">
+                <label>📝 Notes</label>
+                <textarea class="form-textarea" id="notes_${jobId}" placeholder="Catatan tentang aplikasi ini..." onchange="updateApplicationData('${jobId}', 'notes', this.value)">${app.notes}</textarea>
+            </div>
+
+            <div class="form-section">
+                <label>📌 Follow-up Date</label>
+                <input type="date" class="form-input" id="followUpDate_${jobId}" value="${app.followUpDate || ''}" onchange="updateApplicationData('${jobId}', 'followUpDate', this.value)">
+            </div>
+
+            <div class="form-actions">
+                <button class="btn-save" onclick="saveApplicationTracker('${jobId}')">💾 Save Progress</button>
+                <button class="btn-view-all" onclick="showApplicationStats()">📊 View All Applications</button>
+            </div>
+        </div>
+    `;
+
+    contentArea.innerHTML = trackerHTML;
+}
+
+// Update application status
+window.updateApplicationStatus = function (jobId, status) {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    if (applications[jobId]) {
+        applications[jobId].status = status;
+        localStorage.setItem(applicationsKey, JSON.stringify(applications));
+    }
+}
+
+// Update application data
+window.updateApplicationData = function (jobId, field, value) {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    if (applications[jobId]) {
+        applications[jobId][field] = value;
+        localStorage.setItem(applicationsKey, JSON.stringify(applications));
+    }
+}
+
+// Add interview date
+window.addInterviewDateForm = function (jobId) {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    if (applications[jobId]) {
+        const interviewDate = prompt('Masukkan tanggal interview (YYYY-MM-DD):');
+        const interviewType = prompt('Tipe interview? (Phone Screen / Technical / HR / Final):', 'Phone Screen');
+
+        if (interviewDate) {
+            applications[jobId].interviewDates.push({
+                date: interviewDate,
+                type: interviewType || 'Interview'
+            });
+            localStorage.setItem(applicationsKey, JSON.stringify(applications));
+            window.openApplicationTracker(jobId); // Refresh form
+        }
+    }
+}
+
+// Remove interview date
+window.removeInterviewDateForm = function (jobId, index) {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    if (applications[jobId]) {
+        applications[jobId].interviewDates.splice(index, 1);
+        localStorage.setItem(applicationsKey, JSON.stringify(applications));
+        window.openApplicationTracker(jobId); // Refresh form
+    }
+}
+
+// Save application tracker
+window.saveApplicationTracker = function (jobId) {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    if (applications[jobId]) {
+        localStorage.setItem(applicationsKey, JSON.stringify(applications));
+        alert('✅ Application progress saved!');
+    }
+}
+
+// Show application stats
+window.showApplicationStats = function () {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+
+    const statuses = { not_applied: 0, applied: 0, interview: 0, offer: 0, accepted: 0, rejected: 0 };
+
+    for (const app of Object.values(applications)) {
+        if (statuses[app.status] !== undefined) {
+            statuses[app.status]++;
+        }
+    }
+
+    const total = Object.keys(applications).length;
+    const interviewRate = total > 0 ? Math.round((statuses.interview / total) * 100) : 0;
+    const acceptanceRate = total > 0 ? Math.round((statuses.accepted / total) * 100) : 0;
+
+    alert(`📋 Application Summary\n\n` +
+        `Total Applications: ${total}\n` +
+        `Applied: ${statuses.applied}\n` +
+        `Interview: ${statuses.interview} (${interviewRate}%)\n` +
+        `Offer: ${statuses.offer}\n` +
+        `Accepted: ${statuses.accepted} (${acceptanceRate}%)\n` +
+        `Rejected: ${statuses.rejected}`
+    );
+}
+
+// Also handle in switchTab
+const originalSwitchTab = window.switchTab;
+window.switchTab = function (event, tabId) {
+    originalSwitchTab.call(this, event, tabId);
+    
+    if (tabId === 'trackerTab' && window.currentModalJobId) {
+        const area = document.getElementById(`trackerContent-${window.currentModalJobId}`);
+        if (area && area.style.display === 'none') {
+            window.openApplicationTracker(window.currentModalJobId);
         }
     }
 }
