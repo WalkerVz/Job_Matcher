@@ -81,8 +81,16 @@ def summarize_job():
         job_description = clean_html(data.get('description', ''))
         requirements = clean_html(data.get('requirements', ''))
         
+        # ⚠️ SECURITY: Input validation
         if not job_description and not requirements:
             return jsonify({'success': False, 'error': 'Job description or requirements is required'}), 400
+        
+        # Limit payload size to prevent abuse
+        if len(job_description) > 15000 or len(requirements) > 15000:
+            return jsonify({'success': False, 'error': 'Input too long. Maximum 15000 chars.'}), 400
+        
+        if not job_title or len(job_title) > 500:
+            return jsonify({'success': False, 'error': 'Invalid job title'}), 400
         
         prompt = f"""
 Kamu adalah asisten karir profesional. Ringkas deskripsi pekerjaan berikut menjadi 5-7 poin bullet yang mudah dipahami dalam Bahasa Indonesia.

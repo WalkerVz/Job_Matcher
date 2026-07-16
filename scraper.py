@@ -6,6 +6,9 @@ import time
 import os
 import datetime
 from concurrent.futures import ThreadPoolExecutor, as_completed
+import pytz  # Import di top, jangan dalam function (efficiency + error handling jelas)
+from dotenv import load_dotenv
+load_dotenv()
 
 # ─── Konstanta bersama (dipakai scraper, rescore, add_job_entry) ───────────────
 MONTHS_ID = {
@@ -15,8 +18,7 @@ MONTHS_ID = {
 
 def get_timestamp_wib():
     """Kembalikan string timestamp format '12 Juli 2026 - 17:23 WIB'."""
-    # Konversi UTC ke WIB (UTC+7)
-    import pytz
+    # Konversi UTC ke WIB (UTC+7) — pytz sudah di-import di top
     utc_now = datetime.datetime.now(datetime.timezone.utc)
     wib_tz = pytz.timezone('Asia/Jakarta')
     wib_now = utc_now.astimezone(wib_tz)
@@ -85,13 +87,18 @@ def save_jobs(matched_jobs, base_dir=None):
     return timestamp_str
 # ──────────────────────────────────────────────────────────────────────────────
 
-# User Profile definition (sinkron dengan CV - Muhammad Ravil.pdf)
+# ⚠️ SECURITY: Load sensitive profile data from .env file, NOT hardcoded
+import os
+from dotenv import load_dotenv
+load_dotenv()
+
+# User Profile definition (load dari .env untuk security)
 PROFILE = {
-    "name": "Muhammad Ravil",
-    "email": "ravilmuhammad987@gmail.com",
-    "phone": "0819-9258-9299",
-    "location": "Pekanbaru, Riau",
-    "linkedin": "linkedin.com/in/Muhammad-ravil",
+    "name": os.getenv("USER_NAME", "Muhammad Ravil"),
+    "email": os.getenv("USER_EMAIL", ""),  # Load dari .env, jangan hardcode
+    "phone": os.getenv("USER_PHONE", ""),  # Load dari .env
+    "location": os.getenv("USER_LOCATION", "Pekanbaru, Riau"),
+    "linkedin": os.getenv("USER_LINKEDIN", "linkedin.com/in/Muhammad-ravil"),
     "gender": "Laki-laki",
     "age": 23,  # born 10 August 2002 (current year 2026)
     "gpa": 3.39,

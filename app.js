@@ -289,10 +289,12 @@ async function loadJobsData() {
     // Show skeleton while loading
     showSkeleton();
     updateWishlistCountBadge();
+    
+    // ⚠️ FIX RACE CONDITION: Ensure loadNewJobsData completes BEFORE applyFilters
+    await loadNewJobsData(); // Wait untuk selesai
+    
+    // Now safe to apply filters
     applyFilters();
-
-    // Cek job baru sejak scrape terakhir (async, tidak blokir render utama)
-    await loadNewJobsData();
 }
 
 // Show skeleton loading cards
@@ -1176,6 +1178,18 @@ const AI_SERVICE_URL = 'http://localhost:5001';
 window.aiSummaryCache = window.aiSummaryCache || {};
 window.aiInterviewCache = window.aiInterviewCache || {};
 
+// ⚠️ MEMORY FIX: LRU Cache limiter — prevent unbounded cache growth
+const MAX_CACHE_SIZE = 100; // Max 100 items per cache type
+
+function addToCache(cacheObj, jobId, content) {
+    // If cache full, remove oldest entry (FIFO style)
+    if (Object.keys(cacheObj).length >= MAX_CACHE_SIZE) {
+        const firstKey = Object.keys(cacheObj)[0];
+        delete cacheObj[firstKey];
+    }
+    cacheObj[jobId] = content;
+}
+
 // Fast Fetch with Timeout (1200ms) for responsive local server detection on mobile
 async function fetchWithTimeout(url, options, timeoutMs = 1200) {
     const controller = new AbortController();
@@ -1200,7 +1214,25 @@ function formatAIResponse(text) {
 }
 
 // Serverless Free AI Fallback (Jalan 24/7 di Mobile/GitHub Pages tanpa server backend)
+// ⚠️ PRIVACY WARNING: This sends job data to external service. Can be disabled via .env
 async function fetchCloudAI(prompt) {
+    // Check if user opted into third-party AI
+    const ENABLE_CLOUD_AI = localStorage.getItem('enableCloudAI');
+    if (ENABLE_CLOUD_AI === 'false') {
+        throw new Error('Cloud AI fallback disabled by user preference');
+    }
+    
+    // Warn user on first use
+    if (ENABLE_CLOUD_AI === null) {
+        const userConsent = confirm(
+            '⚠️ AI Summary memerlukan koneksi ke layanan cloud eksternal (Pollinations AI).\n\n' +
+            'Data pekerjaan akan dikirim ke server pihak ketiga untuk diproses.\n\n' +
+            'Klik OK untuk lanjutkan, atau CANCEL untuk menonaktifkan fitur ini.'
+        );
+        localStorage.setItem('enableCloudAI', userConsent ? 'true' : 'false');
+        if (!userConsent) throw new Error('User disabled cloud AI');
+    }
+    
     const res = await fetch('https://text.pollinations.ai/', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -1221,6 +1253,26 @@ function stripHtml(html) {
     const tmp = document.createElement('DIV');
     tmp.innerHTML = html;
     return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
+}
+
+// ⚠️ SECURITY: Escape HTML entities to prevent XSS injection
+function escapeHtml(unsafe) {
+    if (!unsafe) return '';
+    const map = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'};
+    return String(unsafe).replace(/[&<>"']/g, (c) => map[c]);
+}
+
+// ⚠️ SECURITY: Escape HTML entities to prevent XSS
+function escapeHtml(unsafe) {
+    if (!unsafe) return '';
+    const map = {
+        '&': '&amp;',
+        '<': '&lt;',
+        '>': '&gt;',
+        '"': '&quot;',
+        "'": '&#039;'
+    };
+    return String(unsafe).replace(/[&<>"']/g, (char) => map[char]);
 }
 
 // Generate AI Summary for a job

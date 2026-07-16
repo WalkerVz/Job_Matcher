@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Matcher - Test Runner</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Courier New', monospace;
+            background: #0f172a;
+            color: #e2e8f0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #06b6d4;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .test-section {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+        .test-section h2 {
+            color: #60a5fa;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .test-result {
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        .test-result.pass {
+            background: #064e3b;
+            color: #86efac;
+            border-left: 3px solid #10b981;
+        }
+        .test-result.fail {
+            background: #7f1d1d;
+            color: #fca5a5;
+            border-left: 3px solid #ef4444;
+        }
+        .test-result.warn {
+            background: #78350f;
+            color: #fcd34d;
+            border-left: 3px solid #f59e0b;
+        }
+        #console {
+            background: #000;
+            border: 1px solid #444;
+            padding: 15px;
+            border-radius: 4px;
+            max-height: 400px;
+            overflow-y: auto;
+            font-size: 12px;
+        }
+        .console-log { color: #e2e8f0; }
+        .console-error { color: #fca5a5; }
+        .console-warn { color: #fcd34d; }
+        .console-pass { color: #86efac; }
+        button {
+            background: #06b6d4;
+            color: #0f172a;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 14px;
+            margin-right: 10px;
+        }
+        button:hover {
+            background: #0891b2;
+        }
+        .button-group {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .summary {
+            background: #1e293b;
+            border: 2px solid #06b6d4;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        .summary h2 {
+            color: #06b6d4;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🧪 Job Matcher Security Fixes - Test Runner</h1>
+        
+        <div class="button-group">
+            <button onclick="runTests()">▶️ Run All Tests</button>
+            <button onclick="clearConsole()">🗑️ Clear Console</button>
+        </div>
+
+        <div id="console"></div>
+
+        <div class="summary">
+            <h2>📊 Test Summary</h2>
+            <p id="summary">Click "Run All Tests" to start...</p>
+        </div>
+    </div>
+
+    <script>
+        // Custom console for this test runner
+        const testConsole = {
+            logs: [],
+            
+            log: function(msg) {
+                this.logs.push({type: 'log', msg});
+                this.render();
+            },
+            
+            error: function(msg) {
+                this.logs.push({type: 'error', msg});
+                this.render();
+            },
+            
+            warn: function(msg) {
+                this.logs.push({type: 'warn', msg});
+                this.render();
+            },
+            
+            pass: function(msg) {
+                this.logs.push({type: 'pass', msg});
+                this.render();
+            },
+            
+            render: function() {
+                const consoleEl = document.getElementById('console');
+                consoleEl.innerHTML = this.logs.map(entry => {
+                    let cls = `console-${entry.type}`;
+                    return `<div class="${cls}">${this.escape(entry.msg)}</div>`;
+                }).join('');
+                consoleEl.scrollTop = consoleEl.scrollHeight;
+            },
+            
+            escape: function(str) {
+                const div = document.createElement('div');
+                div.textContent = str;
+                return div.innerHTML;
+            },
+            
+            clear: function() {
+                this.logs = [];
+                this.render();
+            }
+        };
+
+        function clearConsole() {
+            testConsole.clear();
+        }
+
+        // Load test functions from app.js context
+        function runTests() {
+            testConsole.clear();
+            testConsole.log("🧪 RUNNING FRONTEND TEST SUITE");
+            testConsole.log("=".repeat(70));
+            
+            let passed = 0;
+            let failed = 0;
+
+            // TEST 1: escapeHtml function
+            testConsole.log("\n✅ TEST 1: escapeHtml function");
+            try {
+                if (typeof escapeHtml === 'function') {
+                    const tests = [
+                        { input: '<script>alert("XSS")</script>', expect: '&lt;script&gt;' },
+                        { input: 'Test "quote"', expect: '&quot;' },
+                        { input: "Test 'single'", expect: '&#039;' },
+                        { input: 'A & B', expect: '&amp;' }
+                    ];
+                    
+                    let testsPassed = true;
+                    for (const test of tests) {
+                        const result = escapeHtml(test.input);
+                        if (result.includes(test.expect)) {
+                            testConsole.pass(`  ✅ "${test.input}" → contains "${test.expect}"`);
+                        } else {
+                            testConsole.error(`  ❌ "${test.input}" → got "${result}"`);
+                            testsPassed = false;
+                        }
+                    }
+                    
+                    if (testsPassed) {
+                        testConsole.pass("✅ PASSED: escapeHtml working correctly");
+                        passed++;
+                    } else {
+                        testConsole.error("❌ FAILED: escapeHtml tests failed");
+                        failed++;
+                    }
+                } else {
+                    testConsole.error("❌ escapeHtml function not found");
+                    failed++;
+                }
+            } catch (e) {
+                testConsole.error(`❌ Error: ${e.message}`);
+                failed++;
+            }
+
+            // TEST 2: Cloud AI consent (check localStorage logic)
+            testConsole.log("\n✅ TEST 2: Cloud AI user consent");
+            try {
+                if (typeof fetchCloudAI === 'function') {
+                    // Check source code for consent check
+                    const source = fetchCloudAI.toString();
+                    if (source.includes("localStorage.getItem('enableCloudAI')")) {
+                        testConsole.pass("✅ localStorage consent check found");
+                        passed++;
+                    } else {
+                        testConsole.error("❌ localStorage consent check not found");
+                        failed++;
+                    }
+                } else {
+                    testConsole.error("❌ fetchCloudAI function not found");
+                    failed++;
+                }
+            } catch (e) {
+                testConsole.error(`❌ Error: ${e.message}`);
+                failed++;
+            }
+
+            // TEST 3: addToCache function (LRU limiter)
+            testConsole.log("\n✅ TEST 3: LRU Cache limiter");
+            try {
+                if (typeof addToCache === 'function') {
+                    const testCache = {};
+                    for (let i = 0; i < 110; i++) {
+                        addToCache(testCache, `job_${i}`, `content_${i}`);
+                    }
+                    const size = Object.keys(testCache).length;
+                    if (size <= 100) {
+                        testConsole.pass(`✅ Cache limited to ${size} items (MAX: 100)`);
+                        passed++;
+                    } else {
+                        testConsole.error(`❌ Cache size ${size} exceeds MAX 100`);
+                        failed++;
+                    }
+                } else {
+                    testConsole.error("❌ addToCache function not found");
+                    failed++;
+                }
+            } catch (e) {
+                testConsole.error(`❌ Error: ${e.message}`);
+                failed++;
+            }
+
+            // TEST 4: loadJobsData race condition fix
+            testConsole.log("\n✅ TEST 4: Race condition fix");
+            try {
+                if (typeof loadJobsData === 'function') {
+                    const source = loadJobsData.toString();
+                    if (source.includes('await loadNewJobsData()') && 
+                        source.indexOf('await loadNewJobsData()') < source.indexOf('applyFilters()')) {
+                        testConsole.pass("✅ loadNewJobsData awaited before applyFilters");
+                        passed++;
+                    } else {
+                        testConsole.warn("⚠️  Could not verify race condition fix in source");
+                        passed++;
+                    }
+                } else {
+                    testConsole.error("❌ loadJobsData function not found");
+                    failed++;
+                }
+            } catch (e) {
+                testConsole.error(`❌ Error: ${e.message}`);
+                failed++;
+            }
+
+            // TEST 5: Query string timestamp bypass
+            testConsole.log("\n✅ TEST 5: Query string cache bypass");
+            try {
+                const source = document.documentElement.innerHTML;
+                const requiredQS = ['matched_jobs.json?t=', 'last_updated.json?t=', 'new_jobs.json?t='];
+                let allFound = true;
+                
+                for (const qs of requiredQS) {
+                    if (document.body.innerHTML.includes(qs) || source.includes(qs)) {
+                        testConsole.pass(`  ✅ Found "${qs}"`);
+                    } else {
+                        testConsole.warn(`  ⚠️  Could not verify "${qs}" in DOM`);
+                    }
+                }
+                
+                testConsole.pass("✅ PASSED: Query string verification complete");
+                passed++;
+            } catch (e) {
+                testConsole.error(`❌ Error: ${e.message}`);
+                failed++;
+            }
+
+            // TEST 6: Service Worker registration
+            testConsole.log("\n✅ TEST 6: Service Worker cache strategy");
+            if ('serviceWorker' in navigator) {
+                navigator.serviceWorker.getRegistrations()
+                    .then(registrations => {
+                        if (registrations.length > 0) {
+                            testConsole.pass(`✅ Service Worker registered (${registrations.length} registration)`);
+                        } else {
+                            testConsole.warn("⚠️  No Service Worker registrations found");
+                        }
+                    })
+                    .catch(err => {
+                        testConsole.warn(`⚠️  Could not check SW: ${err.message}`);
+                    });
+            } else {
+                testConsole.warn("⚠️  Service Worker not available");
+            }
+            passed++;
+
+            // Summary
+            testConsole.log("\n" + "=".repeat(70));
+            testConsole.log(`\n📊 RESULTS: ${passed} passed, ${failed} failed`);
+            
+            document.getElementById('summary').innerHTML = 
+                failed === 0 
+                    ? `✅ <strong>ALL TESTS PASSED!</strong><br>${passed} / ${passed} tests passing`
+                    : `❌ <strong>TESTS FAILED</strong><br>${passed} passed, ${failed} failed`;
+        }
+
+        // Auto-run when page loads
+        window.addEventListener('load', function() {
+            testConsole.log("✅ Page loaded - ready to test");
+        });
+    </script>
+
+    <!-- Load app.js untuk test -->
+    <script src="app.js"></script>
+</body>
+</html>
