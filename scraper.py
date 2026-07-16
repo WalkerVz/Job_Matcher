@@ -196,9 +196,15 @@ def check_gender_req(req_text):
     return "Open"
 
 def parse_exp_req(req_text):
+    """
+    Parse experience requirement dengan better accuracy.
+    Return dict dengan level + detail, bukan hanya angka.
+    """
     text_lower = req_text.lower()
-    pattern1 = re.findall(r'(?:pengalaman|experience)\s*(?:kerja)?\s*(?:minimal|min|min\.|diutamakan|at least)?\s*(\d+)\s*(?:tahun|year)', text_lower)
-    pattern2 = re.findall(r'(?:minimal|min|min\.|at least)\s*(\d+)\s*(?:tahun|year)\s*(?:pengalaman|experience)', text_lower)
+    
+    # Patterns untuk extract angka pengalaman
+    pattern1 = re.findall(r'(?:pengalaman|experience)\s*(?:kerja)?\s*(?:minimal|min|min\.|diutamakan|at least)?\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)', text_lower)
+    pattern2 = re.findall(r'(?:minimal|min|min\.|at least)\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)\s*(?:pengalaman|experience)', text_lower)
     pattern3 = re.findall(r'(\d+)\+?\s*years?\s*(?:of\s*)?(?:relevant\s*)?experience', text_lower)
     pattern4 = re.findall(r'(\d+)\s*(?:tahun)\s*(?:pengalaman)', text_lower)
     
@@ -208,17 +214,40 @@ def parse_exp_req(req_text):
             exps.append(int(match))
         except ValueError:
             pass
-            
-    if exps:
-        return max(exps)
-    return 0
+    
+    years_req = max(exps) if exps else 0
+    
+    # Determine level based on years
+    if "fresh graduate" in text_lower or "lulusan baru" in text_lower or "0 tahun" in text_lower:
+        level = "Fresh Graduate / Entry Level"
+        years_req = 0
+    elif years_req == 0:
+        level = "Open / Not Specified"
+    elif years_req <= 1:
+        level = "Fresh / Junior (0-1 tahun)"
+    elif years_req <= 3:
+        level = "Mid Level (1-3 tahun)"
+    elif years_req <= 5:
+        level = "Senior (3-5 tahun)"
+    else:
+        level = f"Expert / Lead ({years_req}+ tahun)"
+    
+    return {
+        "years": years_req,
+        "level": level,
+        "raw_text": text_lower[:200]  # Keep snippet untuk debugging
+    }
 
 
 class RequirementNLPParser:
     """
-    Lightweight Natural Language Processing (NLP) Parser for Job Requirements.
-    Performs sentence segmentation, requirement classification (Mandatory vs Nice-to-have),
-    and skill taxonomy NER extraction.
+    Enhanced Natural Language Processing (NLP) Parser for Job Requirements.
+    Features:
+    - Semantic sentence classification (Mandatory, Preferred, Nice-to-have, Responsibility)
+    - Skill taxonomy NER extraction dengan category mapping
+    - Education & experience requirements parsing
+    - Soft skills & competency detection
+    - Context-aware requirement understanding
     """
     SKILL_TAXONOMY = {
         "Languages & Core": ["Python", "SQL", "PHP", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
@@ -227,34 +256,92 @@ class RequirementNLPParser:
         "Engineering & Tools": ["React", "React.js", "Laravel", "Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL", "ArcGIS"],
         "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Upstream", "Agile", "Scrum", "Project Management", "AI Engineer"]
     }
+    
+    SOFT_SKILLS = [
+        "komunikasi", "communication", "teamwork", "tim kerja", "leadership", "kepemimpinan",
+        "problem solving", "pemecahan masalah", "critical thinking", "berpikir kritis",
+        "analytical", "analitis", "attention to detail", "perhatian detail",
+        "adaptability", "adaptif", "flexibility", "fleksibel", "self-motivated", "termotivasi",
+        "time management", "manajemen waktu", "presentation", "presentasi"
+    ]
+
+    @classmethod
+    def classify_sentence(cls, sentence, sentence_lower):
+        """Classify sentence type: mandatory, preferred, responsibility, or description"""
+        mandatory_triggers = ["wajib", "harus", "minimal", "required", "must", "essential", "syarat", "qualification", "persyaratan"]
+        preferred_triggers = ["diutamakan", "preferred", "advantage", "keuntungan", "lebih baik"]
+        nice_triggers = ["nice to have", "bonus", "nilai tambah", "nilai plus", "plus point"]
+        resp_triggers = ["melakukan", "mengembangkan", "mengelola", "memastikan", "bertanggung jawab", "responsible", "manage", "handle", "develop", "create"]
+        
+        if any(t in sentence_lower for t in mandatory_triggers):
+            return "mandatory"
+        elif any(t in sentence_lower for t in preferred_triggers):
+            return "preferred"
+        elif any(t in sentence_lower for t in nice_triggers):
+            return "nice_to_have"
+        elif any(t in sentence_lower for t in resp_triggers):
+            return "responsibility"
+        else:
+            return "description"
+
+    @classmethod
+    def extract_skills_from_sentence(cls, sentence, sentence_lower):
+        """Extract all skills mentioned in sentence dengan category"""
+        found_skills = {}
+        for category, skills in cls.SKILL_TAXONOMY.items():
+            for sk in skills:
+                pattern = r'\b' + re.escape(sk.lower()) + r'\b'
+                if re.search(pattern, sentence_lower):
+                    if category not in found_skills:
+                        found_skills[category] = []
+                    found_skills[category].append(sk)
+        return found_skills
+
+    @classmethod
+    def extract_soft_skills(cls, sentence_lower):
+        """Extract soft skills mentioned"""
+        found_soft_skills = []
+        for skill in cls.SOFT_SKILLS:
+            if skill in sentence_lower:
+                found_soft_skills.append(skill.title())
+        return found_soft_skills
 
     @classmethod
     def parse(cls, job):
+        """Parse job requirements dengan semantic understanding"""
         raw = (job.get("requirements", "") + " " + job.get("description", ""))
         text = clean_html(raw)
         
         # Segment into logical sentences or bullet items
         sentences = [s.strip() for s in re.split(r'[\n•\-\*.]+', text) if len(s.strip()) > 15]
         
-        mandatory_skills = set()
-        plus_skills = set()
-        key_requirements = []
+        mandatory_requirements = []
+        preferred_requirements = []
+        nice_to_have_requirements = []
+        responsibilities = []
+        
+        mandatory_skills_dict = {}  # {category: [skills]}
+        preferred_skills_dict = {}
+        soft_skills_found = set()
+        
         edu_summary = "S1 / D3 jurusan relevan atau setara"
         exp_summary = "1 Tahun Pengalaman / Fresh Graduate"
         accepts_fresh = False
+        job_responsibilities = []
         
-        mandatory_triggers = ["wajib", "harus", "minimal", "required", "must", "essential", "syarat", "qualification"]
-        plus_triggers = ["diutamakan", "nilai tambah", "nilai plus", "plus point", "preferred", "advantage", "bonus", "nice to have"]
-        
+        # Parse each sentence
         for sent in sentences:
             sent_lower = sent.lower()
             
-            # Check education context
+            # Classify sentence type
+            sent_type = cls.classify_sentence(sent, sent_lower)
+            
+            # Extract education context
             if any(k in sent_lower for k in ["s1", "d3", "sarjana", "bachelor", "pendidikan"]):
                 if len(sent) < 130 and "pendidikan" in sent_lower:
                     edu_summary = sent
             
-            # Check experience context
+            # Extract experience context
             if any(k in sent_lower for k in ["fresh graduate", "lulusan baru", "0 tahun", "magang", "internship"]):
                 accepts_fresh = True
                 if len(sent) < 140:
@@ -263,35 +350,68 @@ class RequirementNLPParser:
                 if len(sent) < 140 and exp_summary == "1 Tahun Pengalaman / Fresh Graduate":
                     exp_summary = sent
             
-            # Check skill taxonomy match
-            is_plus = any(t in sent_lower for t in plus_triggers)
-            is_mand = any(t in sent_lower for t in mandatory_triggers)
+            # Extract skills
+            skills_found = cls.extract_skills_from_sentence(sent, sent_lower)
+            soft_skills = cls.extract_soft_skills(sent_lower)
+            soft_skills_found.update(soft_skills)
             
-            found_skills = []
-            for category, skills in cls.SKILL_TAXONOMY.items():
-                for sk in skills:
-                    pattern = r'\b' + re.escape(sk.lower()) + r'\b'
-                    if re.search(pattern, sent_lower):
-                        found_skills.append(sk)
-                        if is_plus and not is_mand:
-                            plus_skills.add(sk)
-                        else:
-                            mandatory_skills.add(sk)
-            
-            # Save informative key requirements sentences
-            if found_skills or is_mand or ("pengalaman" in sent_lower):
-                if len(key_requirements) < 4 and sent not in key_requirements:
-                    key_requirements.append(sent)
+            # Categorize requirement based on type
+            if sent_type == "mandatory":
+                mandatory_requirements.append(sent)
+                for category, skills in skills_found.items():
+                    if category not in mandatory_skills_dict:
+                        mandatory_skills_dict[category] = []
+                    mandatory_skills_dict[category].extend(skills)
+                    
+            elif sent_type == "preferred":
+                preferred_requirements.append(sent)
+                for category, skills in skills_found.items():
+                    if category not in preferred_skills_dict:
+                        preferred_skills_dict[category] = []
+                    preferred_skills_dict[category].extend(skills)
+                    
+            elif sent_type == "nice_to_have":
+                nice_to_have_requirements.append(sent)
+                
+            elif sent_type == "responsibility":
+                responsibilities.append(sent)
+                job_responsibilities.append(sent)
+        
+        # Flatten and deduplicate skills
+        mandatory_skills = sorted(list(set([s for skills in mandatory_skills_dict.values() for s in skills])))
+        preferred_skills = sorted(list(set([s for skills in preferred_skills_dict.values() for s in skills])))
         
         if accepts_fresh:
             exp_summary = "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (" + exp_summary[:90] + "...)"
             
         return {
+            # Basic summaries
             "education_summary": edu_summary[:130],
             "experience_summary": exp_summary[:150],
-            "mandatory_skills": sorted(list(mandatory_skills)),
-            "plus_skills": sorted(list(plus_skills)),
-            "key_sentences": key_requirements[:3]
+            
+            # Skills breakdown
+            "mandatory_skills": mandatory_skills,
+            "preferred_skills": preferred_skills,
+            "soft_skills": sorted(list(soft_skills_found))[:5],
+            
+            # Detailed requirements
+            "mandatory_requirements": mandatory_requirements[:5],  # Top 5
+            "preferred_requirements": preferred_requirements[:3],   # Top 3
+            "nice_to_have": nice_to_have_requirements[:2],          # Top 2
+            
+            # Job responsibilities
+            "key_responsibilities": job_responsibilities[:4],  # Top 4
+            
+            # Skill categories
+            "skill_categories": list(mandatory_skills_dict.keys()),
+            
+            # Full requirement breakdown for display
+            "full_breakdown": {
+                "mandatory": mandatory_requirements[:6],
+                "preferred": preferred_requirements[:4],
+                "nice_to_have": nice_to_have_requirements[:3],
+                "responsibilities": job_responsibilities[:5]
+            }
         }
 
 

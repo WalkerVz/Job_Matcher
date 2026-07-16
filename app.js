@@ -1059,7 +1059,7 @@ function openJobModal(job) {
             <button class="tab-btn pitch-tab-btn" onclick="switchTab(event, 'pitchTab')">✨ Auto Cover Letter / Pitch</button>
             <button class="tab-btn ats-tab-btn" onclick="switchTab(event, 'atsTab')">💡 ATS Keyword Booster</button>
             <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'aiSummaryTab')">🤖 AI Smart Summary</button>
-            <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'interviewTab')">💬 Interview Questions</button>
+            <!-- <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'interviewTab')">💬 Interview Questions</button> -->
         </div>
         
         <div id="descriptionTab" class="tab-pane active">
@@ -1095,8 +1095,7 @@ function openJobModal(job) {
                 </div>
             </div>
         </div>
-
-        <div id="interviewTab" class="tab-pane">
+        <!-- <div id="interviewTab" class="tab-pane">
             <div class="ai-feature-container">
                 <div class="ai-feature-header">
                     <h3>💬 Interview Questions Predictor</h3>
@@ -1112,7 +1111,7 @@ function openJobModal(job) {
                     </div>
                 </div>
             </div>
-        </div>
+        </div> -->
         
         <div class="modal-footer">
             <div class="modal-footer-row-top">
@@ -1219,7 +1218,13 @@ async function fetchCloudAI(prompt) {
     // Check if user opted into third-party AI
     const ENABLE_CLOUD_AI = localStorage.getItem('enableCloudAI');
     if (ENABLE_CLOUD_AI === 'false') {
-        throw new Error('Cloud AI fallback disabled by user preference');
+        // Reset preference jika user ingin coba ulang
+        const userRetry = confirm(
+            '⚠️ Cloud AI fallback sebelumnya di-disable.\n\n' +
+            'Klik OK untuk enable kembali dan coba lagi,\natau CANCEL untuk skip.'
+        );
+        if (!userRetry) throw new Error('Cloud AI fallback disabled by user preference');
+        localStorage.setItem('enableCloudAI', 'true');
     }
     
     // Warn user on first use

@@ -131,7 +131,7 @@ Output format (hanya bullet points, tanpa penjelasan tambahan):
 @app.route('/api/predict-interview', methods=['POST'])
 def predict_interview():
     """
-    Predict likely interview questions based on job requirements
+    Predict likely interview questions based on job requirements + generate sample answers
     """
     try:
         data = request.get_json(silent=True) or {}
@@ -139,40 +139,59 @@ def predict_interview():
         job_description = clean_html(data.get('description', ''))
         requirements = clean_html(data.get('requirements', ''))
         company = data.get('company', '')
+        user_skills = data.get('user_skills', 'Python, SQL, Data Analysis')
+        user_experience = data.get('user_experience', 'Fresh graduate')
         
         if not job_title:
             return jsonify({'success': False, 'error': 'Job title is required'}), 400
         
+        # Generate interview questions + sample answers dalam 1 prompt
         prompt = f"""
-Kamu adalah career coach berpengalaman. Prediksi 8-10 pertanyaan interview yang kemungkinan besar ditanyakan untuk posisi ini.
+Kamu adalah career coach dan interview coach profesional berpengalaman. Kamu akan:
+1. Prediksi 8 pertanyaan interview yang kemungkinan ditanyakan
+2. Untuk SETIAP pertanyaan, buatkan jawaban sample yang profesional
 
-Perusahaan: {company}
-Posisi: {job_title}
+KONTEKS KANDIDAT:
+- Posisi: {job_title}
+- Perusahaan: {company}
+- Keahlian: {user_skills}
+- Pengalaman: {user_experience}
 
-Deskripsi Pekerjaan:
-{job_description}
+INFORMASI LOWONGAN:
+Deskripsi: {job_description}
+Persyaratan: {requirements}
 
-Persyaratan:
-{requirements}
+INSTRUKSI:
+1. Buat 8 pertanyaan interview yang:
+   - Relevan dengan posisi dan requirement
+   - Campuran technical dan behavioral questions
+   - Disesuaikan untuk fresh graduate
+   - Dalam Bahasa Indonesia yang natural
 
-Buat prediksi pertanyaan interview yang:
-1. Relevan dengan posisi dan requirement
-2. Campuran antara technical dan behavioral questions
-3. Disesuaikan untuk fresh graduate IT
-4. Dalam Bahasa Indonesia yang natural
-5. Mencakup pertanyaan umum HR, technical skill, dan situational
+2. Untuk SETIAP pertanyaan, tambahkan:
+   - Contoh jawaban profesional (2-3 kalimat)
+   - Jawaban sesuai konteks candidate fresh graduate
+   - Highlight keahlian yang relevan
 
-Format output (hanya list pertanyaan, tanpa penjelasan):
-1. [pertanyaan 1]
-2. [pertanyaan 2]
-...
+FORMAT OUTPUT (PENTING - ikuti format ini persis):
+**[nomor]. [Pertanyaan]**
+**Jawaban Sample:** [Jawaban profesional 2-3 kalimat]
+
+[Spasi]
+
+**[nomor]. [Pertanyaan berikutnya]**
+**Jawaban Sample:** [Jawaban profesional]
+
+... (ulangi untuk semua 8 pertanyaan)
+
+MULAI SEKARANG (output hanya list pertanyaan + jawaban, tanpa penjelasan):
 """
         
-        questions = generate_ai_content(prompt)
+        response_text = generate_ai_content(prompt)
         
         return jsonify({
             'success': True,
-            'questions': questions,
+            'questions': response_text,
             'provider': AI_PROVIDER.upper()
         })
         
