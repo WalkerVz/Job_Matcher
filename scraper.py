@@ -1096,6 +1096,185 @@ def scrape_indofood_careers(session):
     return indofood_jobs
 
 
+def scrape_linkedin_jobs(session, max_jobs=300):
+    """
+    Scrape LinkedIn jobs dengan safe rate-limiting.
+    Safety features:
+    - 2-5 detik delay antar request
+    - Max 300 jobs per run (avoid rate limit 403)
+    - Filter location: Indonesia only
+    - User-Agent rotation
+    - Graceful error handling
+    
+    NOTE: LinkedIn actively blocks scrapers. This function gracefully handles:
+    - 403 Forbidden → Stop without ban
+    - 429 Too Many Requests → Backoff 30 sec
+    - 404 Not Found → Skip (endpoint unavailable)
+    
+    ALTERNATIVE: If LinkedIn scraping fails consistently, manual search + export CSV
+    from LinkedIn Jobs is recommended (legal, authorized by LinkedIn).
+    """
+    print("Scraping LinkedIn Jobs vacancies (Indonesia) dengan safe rate-limiting...")
+    linkedin_jobs = []
+    
+    # Safe User-Agent rotation
+    user_agents = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+    ]
+    
+    try:
+        # Try multiple LinkedIn public endpoints (if one fails, try next)
+        endpoints = [
+            {
+                "url": "https://www.linkedin.com/jobs-guest/jobs/api/jobs",
+                "params_template": {"keywords": "data analyst", "location": "Indonesia", "start": 0, "count": 25}
+            },
+            {
+                "url": "https://www.linkedin.com/jobs-guest/jobs/api/jobPosting",
+                "params_template": {"keywords": "data analyst", "location": "Indonesia", "start": 0, "count": 25}
+            }
+        ]
+        
+        seen_job_ids = set()
+        page_count = 0
+        max_pages = (max_jobs // 25) + 1
+        
+        print(f"Fetching LinkedIn jobs dengan location filter: Indonesia, max pages: {max_pages}")
+        
+        endpoint_idx = 0
+        current_endpoint = endpoints[endpoint_idx]
+        
+        while page_count < max_pages and len(linkedin_jobs) < max_jobs and endpoint_idx < len(endpoints):
+            try:
+                # Rate limiting: 2-5 detik delay
+                delay = 2 + (page_count % 3) * 1
+                time.sleep(delay)
+                
+                # User-Agent rotation
+                ua = user_agents[page_count % len(user_agents)]
+                session.headers.update({"User-Agent": ua})
+                
+                params = current_endpoint["params_template"].copy()
+                params["start"] = page_count * 25
+                
+                print(f"  LinkedIn page {page_count + 1}: fetching with 2-5sec delay...")
+                r = session.get(current_endpoint["url"], params=params, timeout=15)
+                
+                if r.status_code == 200:
+                    # Parse response (dapat HTML atau JSON tergantung endpoint)
+                    try:
+                        soup = BeautifulSoup(r.text, "html.parser")
+                        job_cards = soup.find_all("div", class_="base-card")
+                        
+                        if not job_cards:
+                            # Try alternate selectors
+                            job_cards = soup.find_all("li", class_="base-list-item")
+                        
+                        if not job_cards:
+                            print(f"  No more LinkedIn jobs found. Stopping.")
+                            break
+                        
+                        new_found = 0
+                        for card in job_cards:
+                            try:
+                                # Extract job info
+                                title_el = card.find("h3", class_="base-search-card__title") or card.find("span", class_="job-card-title")
+                                title = title_el.get_text(strip=True) if title_el else "LinkedIn Position"
+                                
+                                company_el = card.find("h4", class_="base-search-card__subtitle") or card.find("span", class_="job-card-company-name")
+                                company = company_el.get_text(strip=True) if company_el else "Unknown Company"
+                                
+                                link_el = card.find("a", class_="base-card__full-link") or card.find("a", class_="base-card__permalink")
+                                job_url = link_el["href"] if link_el and "href" in link_el.attrs else ""
+                                
+                                loc_el = card.find("span", class_="job-search-card__location")
+                                location = loc_el.get_text(strip=True) if loc_el else "Indonesia"
+                                
+                                # Extract job ID
+                                job_id = f"linkedin_{len(linkedin_jobs)}"
+                                if job_url:
+                                    url_match = re.search(r"/(\d{10,})", job_url)
+                                    if url_match:
+                                        job_id = f"linkedin_{url_match.group(1)}"
+                                
+                                if job_id in seen_job_ids:
+                                    continue
+                                
+                                seen_job_ids.add(job_id)
+                                
+                                linkedin_jobs.append({
+                                    "id": job_id,
+                                    "title": title,
+                                    "organization_id": "LinkedIn",
+                                    "organization_name": company,
+                                    "slug": f"linkedin-{len(linkedin_jobs)}",
+                                    "type_name": "Full Time / Contract",
+                                    "level": "Profesional",
+                                    "location": location,
+                                    "workplace": "Hybrid / WFO",
+                                    "due_date": "Aktif",
+                                    "group": "Tech & Data",
+                                    "url": job_url,
+                                    "description": f"<p><strong>{title}</strong></p><p>Perusahaan: {company}</p><p>Lokasi: {location}</p>",
+                                    "requirements": f"<p><strong>{title}</strong></p><p>Perusahaan: {company}</p><p>Lokasi: {location}</p>",
+                                    "source": "LinkedIn",
+                                    "logo": None
+                                })
+                                new_found += 1
+                                
+                            except Exception as e:
+                                print(f"    Exception parsing LinkedIn job card: {e}")
+                                continue
+                        
+                        if new_found == 0:
+                            print(f"  No new jobs found on LinkedIn page {page_count + 1}. Stopping.")
+                            break
+                        
+                        print(f"  LinkedIn page {page_count + 1}: found {new_found} new jobs (total: {len(linkedin_jobs)})")
+                        page_count += 1
+                        
+                    except Exception as parse_err:
+                        print(f"  Error parsing LinkedIn response: {parse_err}. Trying next endpoint...")
+                        endpoint_idx += 1
+                        if endpoint_idx < len(endpoints):
+                            current_endpoint = endpoints[endpoint_idx]
+                        break
+                        
+                elif r.status_code == 429:
+                    print(f"  LinkedIn rate limit (429). Waiting 30 seconds...")
+                    time.sleep(30)
+                    continue
+                    
+                elif r.status_code == 403:
+                    print(f"  LinkedIn forbidden (403). Skipping LinkedIn scraping to avoid ban.")
+                    break
+                    
+                elif r.status_code == 404:
+                    print(f"  LinkedIn endpoint not found (404). Trying alternate endpoint...")
+                    endpoint_idx += 1
+                    if endpoint_idx < len(endpoints):
+                        current_endpoint = endpoints[endpoint_idx]
+                        page_count = 0  # Reset page for new endpoint
+                    break
+                    
+                else:
+                    print(f"  LinkedIn request failed: {r.status_code}. Stopping.")
+                    break
+                    
+            except Exception as e:
+                print(f"  Exception fetching LinkedIn page {page_count}: {e}")
+                break
+        
+        print(f"Total LinkedIn jobs scraped: {len(linkedin_jobs)} (max: {max_jobs})")
+        
+    except Exception as e:
+        print(f"Error during LinkedIn scraping: {e}")
+    
+    return linkedin_jobs
+
+
 def main():
     session = requests.Session()
     session.headers.update({
@@ -1280,6 +1459,17 @@ def main():
     for job in indofood_jobs:
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
+
+    print("\nStep 3h: Scraping LinkedIn Jobs vacancies (safe rate-limiting)...")
+    # Note: LinkedIn actively blocks scrapers. For production:
+    # Option 1: Manual search on LinkedIn Jobs + Export CSV → import ke system
+    # Option 2: Use LinkedIn Recruiter API (requires authorization)
+    # Option 3: Skip LinkedIn, focus on 7 stable portals (current approach)
+    # linkedin_jobs = scrape_linkedin_jobs(session, max_jobs=300)
+    # for job in linkedin_jobs:
+    #     matched_job = evaluate_job_match(job)
+    #     matched_jobs.append(matched_job)
+    print("  LinkedIn scraping skipped (anti-bot protection active). Use manual export instead.")
 
     # Sort matched jobs by match score (highest first), placing blocked jobs at the end
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
