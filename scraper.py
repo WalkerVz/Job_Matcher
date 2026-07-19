@@ -649,15 +649,15 @@ def evaluate_job_match(job):
             "status": "Neutral",
         }
         
-    if exp_req <= PROFILE["exp_years"]:
+    if exp_req["years"] <= PROFILE["exp_years"]:
         match_details["exp_years"] = {
             "status": "Match",
-            "reason": f"Sesuai. Lowongan meminta minimal {exp_req} tahun pengalaman, sedangkan pengalaman kamu adalah {PROFILE['exp_years']} tahun." if exp_req > 0 else "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+            "reason": f"Sesuai. Lowongan meminta minimal {exp_req['years']} tahun pengalaman, sedangkan pengalaman kamu adalah {PROFILE['exp_years']} tahun." if exp_req['years'] > 0 else "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
         }
     else:
         match_details["exp_years"] = {
             "status": "Low Match",
-            "reason": f"Perlu Perhatian: Lowongan meminta pengalaman minimal {exp_req} tahun, sedangkan pengalaman kamu saat ini {PROFILE['exp_years']} tahun."
+            "reason": f"Perlu Perhatian: Lowongan meminta pengalaman minimal {exp_req['years']} tahun, sedangkan pengalaman kamu saat ini {PROFILE['exp_years']} tahun."
         }
             
     # Check if any hard blocker was failed (e.g. GPA, Age, Gender mismatch)
@@ -697,8 +697,8 @@ def evaluate_job_match(job):
             "age": age_req,
             "toefl": toefl_req,
             "gender": gender_req,
-            "experience": f"Minimal {exp_req} tahun" if exp_req > 0 else "Terbuka untuk Fresh Graduate",
-            "exp_years": exp_req
+            "experience": exp_req["level"],  # Use level string instead of years
+            "exp_years": exp_req["years"]    # Extract years from dict
         },
         "source": job.get("source", "Talentics"),
         "logo": job.get("logo", None)

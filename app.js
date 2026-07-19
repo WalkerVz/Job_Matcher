@@ -355,6 +355,29 @@ window.changeApplicationStatus = function (jobId, statusValue) {
     const idStr = String(jobId);
     state[idStr] = { ...(state[idStr] || {}), status: statusValue, isBookmarked: true };
     localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
+    
+    // Also sync with tracker applications
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    let applications = applicationsData ? JSON.parse(applicationsData) : {};
+    
+    if (!applications[jobId]) {
+        const job = allJobs.find(j => j.id == jobId);
+        applications[jobId] = {
+            jobId: jobId,
+            jobTitle: job ? job.title : 'Unknown',
+            company: job ? (job.organization_name || job.company || 'Unknown') : 'Unknown',
+            appliedDate: new Date().toISOString().split('T')[0],
+            status: statusValue,
+            interviewDates: [],
+            notes: '',
+            followUpDate: null
+        };
+    } else {
+        applications[jobId].status = statusValue;
+    }
+    
+    localStorage.setItem(applicationsKey, JSON.stringify(applications));
     updateWishlistCountBadge();
     applyFilters();
 };
@@ -783,7 +806,12 @@ function renderJobList() {
 
         const savedState = getSavedJobsState()[job.id] || {};
         const isBookmarked = savedState.isBookmarked || false;
-        const appStatus = savedState.status || '';
+        
+        // Read application status from NEW storage (jobMatcher_applications)
+        const applicationsKey = 'jobMatcher_applications';
+        const applicationsData = localStorage.getItem(applicationsKey);
+        const applications = applicationsData ? JSON.parse(applicationsData) : {};
+        const appStatus = applications[job.id] ? applications[job.id].status : (savedState.status || '');
 
         const bookmarkBtnHTML = `
             <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" title="Simpan lowongan ini" onclick="toggleBookmark(event, '${job.id}')">
@@ -1154,12 +1182,6 @@ function openJobModal(job) {
                 <button class="btn-bookmark-modal ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(event, '${job.id}'); openJobModal(allJobs.find(j => j.id == '${job.id}'));">
                     ${isBookmarked ? '★ Tersimpan' : '☆ Simpan'}
                 </button>
-                <select class="status-select-modal" onchange="changeApplicationStatus('${job.id}', this.value)">
-                    <option value="" ${!appStatus ? 'selected' : ''}>📌 Belum Dilamar</option>
-                    <option value="applied" ${appStatus === 'applied' ? 'selected' : ''}>🚀 Sudah Dilamar</option>
-                    <option value="interview" ${appStatus === 'interview' ? 'selected' : ''}>💬 Tahap Interview</option>
-                    <option value="accepted" ${appStatus === 'accepted' ? 'selected' : ''}>🎉 Diterima</option>
-                </select>
             </div>
             <a href="${job.url}" target="_blank" class="btn-primary btn-apply-modal">
                 Lamar di Portal Resmi (${job.source}) ↗
@@ -1642,18 +1664,25 @@ window.openApplicationTracker = function (jobId) {
     const applicationsData = localStorage.getItem(applicationsKey);
     const applications = applicationsData ? JSON.parse(applicationsData) : {};
 
+    // Get status dari footer button (priority)
+    const footerStatus = document.querySelector(`select.status-select-modal`)?.value || '';
+
     // Get or init application for this job
     if (!applications[jobId]) {
+        const initialStatus = footerStatus || 'not_applied';
         applications[jobId] = {
             jobId: jobId,
             jobTitle: job.title,
             company: job.organization_name || job.company || 'Unknown',
             appliedDate: new Date().toISOString().split('T')[0],
-            status: 'not_applied',
+            status: initialStatus,
             interviewDates: [],
             notes: '',
             followUpDate: null
         };
+    } else if (footerStatus && footerStatus !== applications[jobId].status) {
+        // Sync status dari footer ke tracker
+        applications[jobId].status = footerStatus;
     }
 
     const app = applications[jobId];
@@ -1722,6 +1751,69 @@ window.updateApplicationStatus = function (jobId, status) {
     if (applications[jobId]) {
         applications[jobId].status = status;
         localStorage.setItem(applicationsKey, JSON.stringify(applications));
+        
+        // Also sync to footer button
+        const footerSelect = document.querySelector(`select.status-select-modal`);
+        if (footerSelect) {
+            footerSelect.value = status;
+        }
+        
+        // Also sync to savedJobMatcherState (old storage)
+        // Auto-bookmark hanya kalau status bukan "not_applied" atau "rejected"
+        const state = getSavedJobsState();
+        const shouldBookmark = (status !== 'not_applied' && status !== 'rejected');
+        state[jobId] = { ...(state[jobId] || {}), status: status, isBookmarked: shouldBookmark };
+        localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
+        
+        // Update wishlist count badge
+        updateWishlistCountBadge();
+        
+        // Refresh UI job cards (tapi jangan refresh form dulu)
+        refreshJobCardUI(jobId);
+    }
+}
+
+// Helper: Refresh job card UI status pill
+function refreshJobCardUI(jobId) {
+    // Force full re-render dengan applyFilters()
+    // Ini akan re-create semua job cards dengan status terbaru dari localStorage
+    applyFilters();
+    
+    // Juga update modal kalau masih kebuka
+    const modal = document.getElementById('jobModal');
+    if (modal && modal.style.display === 'block') {
+        // Update footer button di modal
+        updateJobModalFooterStatus(jobId);
+        updateJobModalBookmarkButton(jobId);
+    }
+}
+
+// Update footer status button di modal
+function updateJobModalFooterStatus(jobId) {
+    const applicationsKey = 'jobMatcher_applications';
+    const applicationsData = localStorage.getItem(applicationsKey);
+    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+    
+    const footerSelect = document.querySelector('select.status-select-modal');
+    if (footerSelect && applications[jobId]) {
+        footerSelect.value = applications[jobId].status;
+    }
+}
+
+// Update bookmark button di modal
+function updateJobModalBookmarkButton(jobId) {
+    const state = getSavedJobsState();
+    const isBookmarked = state[jobId] ? state[jobId].isBookmarked : false;
+    
+    const bookmarkBtn = document.querySelector('.btn-bookmark-modal');
+    if (bookmarkBtn) {
+        if (isBookmarked) {
+            bookmarkBtn.classList.add('active');
+            bookmarkBtn.innerHTML = '★ Tersimpan';
+        } else {
+            bookmarkBtn.classList.remove('active');
+            bookmarkBtn.innerHTML = '☆ Simpan';
+        }
     }
 }
 
@@ -1759,7 +1851,7 @@ window.addInterviewDateForm = function (jobId) {
 }
 
 // Remove interview date
-window.removeInterviewDateForm = function (jobId, index) {
+window.removeInterviewDate = function (jobId, index) {
     const applicationsKey = 'jobMatcher_applications';
     const applicationsData = localStorage.getItem(applicationsKey);
     const applications = applicationsData ? JSON.parse(applicationsData) : {};
@@ -1775,12 +1867,51 @@ window.removeInterviewDateForm = function (jobId, index) {
 window.saveApplicationTracker = function (jobId) {
     const applicationsKey = 'jobMatcher_applications';
     const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+    let applications = applicationsData ? JSON.parse(applicationsData) : {};
 
-    if (applications[jobId]) {
-        localStorage.setItem(applicationsKey, JSON.stringify(applications));
-        alert('✅ Application progress saved!');
+    // Create aplikasi kalau belum exist
+    if (!applications[jobId]) {
+        const job = allJobs.find(j => j.id == jobId);
+        applications[jobId] = {
+            jobId: jobId,
+            jobTitle: job ? job.title : 'Unknown',
+            company: job ? (job.organization_name || job.company || 'Unknown') : 'Unknown',
+            appliedDate: new Date().toISOString().split('T')[0],
+            status: 'not_applied',
+            interviewDates: [],
+            notes: '',
+            followUpDate: null
+        };
     }
+
+    // Capture form values sebelum save
+    applications[jobId].status = document.getElementById(`appStatus_${jobId}`)?.value || applications[jobId].status;
+    applications[jobId].appliedDate = document.getElementById(`appliedDate_${jobId}`)?.value || applications[jobId].appliedDate;
+    applications[jobId].notes = document.getElementById(`notes_${jobId}`)?.value || '';
+    applications[jobId].followUpDate = document.getElementById(`followUpDate_${jobId}`)?.value || '';
+
+    localStorage.setItem(applicationsKey, JSON.stringify(applications));
+    
+    // Update footer button status juga
+    const footerSelect = document.querySelector(`select.status-select-modal`);
+    if (footerSelect) {
+        footerSelect.value = applications[jobId].status;
+    }
+    
+    // Update savedJobMatcherState (old storage)
+    // Auto-bookmark hanya kalau status bukan "not_applied" atau "rejected"
+    const state = getSavedJobsState();
+    const shouldBookmark = (applications[jobId].status !== 'not_applied' && applications[jobId].status !== 'rejected');
+    state[jobId] = { ...(state[jobId] || {}), status: applications[jobId].status, isBookmarked: shouldBookmark };
+    localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
+    
+    // Refresh UI semua
+    refreshJobCardUI(jobId);
+    
+    // Refresh form biar conditional sections update
+    window.openApplicationTracker(jobId);
+    
+    alert('✅ Application progress saved!');
 }
 
 // Show application stats

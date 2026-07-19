@@ -1,4 +1,4 @@
-const CACHE_NAME = 'career-radar-v5';
+const CACHE_NAME = 'career-radar-v6';
 
 // Aset statis yang boleh di-cache (UI shell)
 const STATIC_ASSETS = [
@@ -42,11 +42,9 @@ self.addEventListener('fetch', (event) => {
   const isDataFile = DATA_FILES.some((f) => url.pathname.startsWith(f.split('?')[0]));
 
   if (isDataFile) {
-    // Data job: selalu network-first, TIDAK disimpan ke cache
-    // Sehingga setiap buka app, data selalu fresh dari server
-    event.respondWith(
-      fetch(event.request).catch(() => caches.match(event.request))
-    );
+    // Data job: ALWAYS network-only, NEVER cache
+    // Ini ensures data selalu fresh dari server
+    event.respondWith(fetch(event.request));
     return;
   }
 
