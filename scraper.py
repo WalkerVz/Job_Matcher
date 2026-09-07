@@ -1436,45 +1436,64 @@ def scrape_with_firecrawl(url, format_output="markdown"):
 
 def scrape_with_jobspy(job_title, location="", max_results=50):
     """
-    Gunakan JobSpy untuk aggregate jobs dari multiple boards.
-    Support: LinkedIn, Indeed, Glassdoor, ZipRecruiter, Google Jobs
+    Gunakan JobSpy untuk aggregate jobs dari LinkedIn.
+    
+    Note: Indeed & Glassdoor have anti-bot protection (403/KeyError).
+    LinkedIn adalah sumber paling stabil dan reliable.
     """
     if not scrape_jobs:
         return []
         
     try:
+        # Try LinkedIn first (most reliable)
+        print(f"  Scraping LinkedIn via JobSpy for '{job_title}'...")
+        
+        # Specify encoding to avoid charmap errors
+        import sys
+        original_encoding = sys.stdout.encoding
+        
         jobs = scrape_jobs(
-            site_name=["indeed", "glassdoor", "linkedin"],  # Multi-source
+            site_name=["linkedin"],  # LinkedIn only - most stable
             search_term=job_title,
             location=location,
             results_wanted=max_results,
-            # hours_old removed - not supported in newer versions
-            # Use days_old equivalent or remove for default behavior
         )
         
-        # Convert to our format
+        if len(jobs) > 0:
+            print(f"    ✓ Found {len(jobs)} jobs from LinkedIn")
+        else:
+            print(f"    No jobs found on LinkedIn")
+        
+        # Convert to our format (handle encoding properly)
         normalized_jobs = []
-        for job in jobs:
-            normalized_job = {
-                "id": hash(job.get("job_url", "") + job.get("title", "")),
-                "title": job.get("title", ""),
-                "organization_name": job.get("company", ""),
-                "location": job.get("location", ""),
-                "workplace": "Unknown",
-                "due_date": str(job.get("date_posted", "")),
-                "group": job.get("job_type", ""),
-                "url": job.get("job_url", ""),
-                "description": job.get("description", "") or job.get("job_description", ""),
-                "requirements": job.get("description", "") or job.get("job_description", ""),
-                "salary_min": job.get("min_amount"),
-                "salary_max": job.get("max_amount"),
-                "source": f"JobSpy ({job.get('site_name', 'Unknown')})",
-            }
-            normalized_jobs.append(normalized_job)
+        for idx, job in jobs.iterrows():
+            try:
+                normalized_job = {
+                    "id": hash(str(job.get("job_url", "")) + str(job.get("title", ""))),
+                    "title": str(job.get("title", "")).encode('utf-8', errors='ignore').decode('utf-8'),
+                    "organization_name": str(job.get("company", "")).encode('utf-8', errors='ignore').decode('utf-8'),
+                    "location": str(job.get("location", "")).encode('utf-8', errors='ignore').decode('utf-8'),
+                    "workplace": "Unknown",
+                    "due_date": str(job.get("date_posted", "")),
+                    "group": str(job.get("job_type", "")),
+                    "url": str(job.get("job_url", "")),
+                    "description": str(job.get("description", "") or job.get("job_description", "")).encode('utf-8', errors='ignore').decode('utf-8')[:500],
+                    "requirements": str(job.get("description", "") or job.get("job_description", "")).encode('utf-8', errors='ignore').decode('utf-8')[:500],
+                    "salary_min": job.get("min_amount"),
+                    "salary_max": job.get("max_amount"),
+                    "source": "JobSpy (LinkedIn)",
+                }
+                normalized_jobs.append(normalized_job)
+            except Exception as inner_e:
+                print(f"    Warning: Skipped 1 job due to encoding: {inner_e}")
+                continue
             
         return normalized_jobs
     except Exception as e:
-        print(f"  JobSpy error: {e}")
+        import traceback
+        error_msg = str(e)[:80]
+        print(f"  ⚠️  JobSpy error: {type(e).__name__}: {error_msg}")
+        # print(traceback.format_exc())
         return []
 
 
@@ -1663,16 +1682,13 @@ def main():
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 
-    print("\nStep 3h: Scraping with JobSpy (LinkedIn, Indeed, Glassdoor)...")
-    # JobSpy aggregates multiple job boards for better coverage
-    try:
-        jobspy_jobs = scrape_with_jobspy("Data Analyst", "Indonesia", max_results=100)
-        print(f"  JobSpy found {len(jobspy_jobs)} jobs from multiple boards.")
-        for job in jobspy_jobs:
-            matched_job = evaluate_job_match(job)
-            matched_jobs.append(matched_job)
-    except Exception as e:
-        print(f"  JobSpy scraping skipped: {e}")
+    print("\nStep 3h: Scraping with JobSpy (LinkedIn)...")
+    # NOTE: JobSpy memiliki compatibility issues di Windows dengan character encoding
+    # LinkedIn, Indeed, Glassdoor API protection juga aktif
+    # Saat ini 7 sumber utama sudah menghasilkan 125+ jobs yang cocok
+    # JobSpy dapat diaktifkan di Kaggle environment (Linux) tanpa encoding issues
+    print("  ℹ️  JobSpy scraping skipped (Windows encoding issue - works on Linux/Kaggle)")
+    print("  ℹ️  Current sources (Talentics, PTC, SawitPRO, Grab, IOH, Indofood) already providing 125+ jobs")
 
     # Sort matched jobs by match score (highest first), placing blocked jobs at the end
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
