@@ -10,7 +10,6 @@ import pytz  # Import di top, jangan dalam function (efficiency + error handling
 from dotenv import load_dotenv
 load_dotenv()
 
-# ─── New Libraries: Firecrawl + JobSpy for Enhanced Scraping ───────────
 try:
     from firecrawl import FirecrawlApp
 except ImportError:
@@ -20,7 +19,7 @@ except ImportError:
 try:
     from jobspy import scrape_jobs
 except ImportError:
-    print("⚠️  JobSpy not installed. Install with: pip install jobspy")
+    print("⚠️  JobSpy not installed. Install with: pip install python-jobspy")
     scrape_jobs = None
 
 # ─── Konstanta bersama (dipakai scraper, rescore, add_job_entry) ───────────────
