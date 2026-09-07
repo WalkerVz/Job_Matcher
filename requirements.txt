@@ -1,0 +1,16 @@
+beautifulsoup4==4.12.2
+requests==2.31.0
+python-dotenv==1.0.0
+pytz==2024.1
+
+# Enhanced Scraping Libraries
+firecrawl-py==1.3.2
+jobspy==2.0.8
+
+# Data Science & NLP (optional, untuk nlp_analyzer.py)
+scikit-learn==1.3.2
+nltk==3.8.1
+
+# API & Async (optional)
+aiohttp==3.9.1
+asyncio-contextmanager==1.0.0

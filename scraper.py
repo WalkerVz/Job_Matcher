@@ -10,6 +10,19 @@ import pytz  # Import di top, jangan dalam function (efficiency + error handling
 from dotenv import load_dotenv
 load_dotenv()
 
+# ─── New Libraries: Firecrawl + JobSpy for Enhanced Scraping ───────────
+try:
+    from firecrawl import FirecrawlApp
+except ImportError:
+    print("⚠️  Firecrawl not installed. Install with: pip install firecrawl-py")
+    FirecrawlApp = None
+
+try:
+    from jobspy import scrape_jobs
+except ImportError:
+    print("⚠️  JobSpy not installed. Install with: pip install jobspy")
+    scrape_jobs = None
+
 # ─── Konstanta bersama (dipakai scraper, rescore, add_job_entry) ───────────────
 MONTHS_ID = {
     1: "Januari", 2: "Februari", 3: "Maret", 4: "April", 5: "Mei", 6: "Juni",
@@ -1395,6 +1408,76 @@ def scrape_linkedin_jobs(session, max_jobs=300):
     return linkedin_jobs
 
 
+def scrape_with_firecrawl(url, format_output="markdown"):
+    """
+    Gunakan Firecrawl untuk extract clean data dari URL.
+    Lebih powerful untuk handle dynamic content dan complex HTML.
+    """
+    if not FirecrawlApp:
+        return None
+        
+    try:
+        api_key = os.getenv("FIRECRAWL_API_KEY")
+        if not api_key:
+            return None
+            
+        app = FirecrawlApp(api_key=api_key)
+        scrape_result = app.scrape_url(url, {
+            "formats": [format_output],
+            "timeout": 30000
+        })
+        
+        if scrape_result and scrape_result.get("success"):
+            return scrape_result.get(format_output)
+        return None
+    except Exception as e:
+        print(f"  Firecrawl error on {url}: {e}")
+        return None
+
+
+def scrape_with_jobspy(job_title, location="", max_results=50):
+    """
+    Gunakan JobSpy untuk aggregate jobs dari multiple boards.
+    Support: LinkedIn, Indeed, Glassdoor, ZipRecruiter, Google Jobs
+    """
+    if not scrape_jobs:
+        return []
+        
+    try:
+        jobs = scrape_jobs(
+            site_name=["indeed", "glassdoor", "linkedin"],  # Multi-source
+            search_term=job_title,
+            location=location,
+            results_wanted=max_results,
+            hours_old=168  # Last 7 days
+        )
+        
+        # Convert to our format
+        normalized_jobs = []
+        for job in jobs:
+            normalized_job = {
+                "id": hash(job.get("job_url", "") + job.get("title", "")),
+                "title": job.get("title", ""),
+                "organization_name": job.get("company", ""),
+                "location": job.get("location", ""),
+                "workplace": "Unknown",
+                "due_date": job.get("date_posted", ""),
+                "group": job.get("job_type", ""),
+                "url": job.get("job_url", ""),
+                "description": job.get("description", "") or job.get("job_description", ""),
+                "requirements": job.get("description", "") or job.get("job_description", ""),
+                "salary_min": job.get("min_amount"),
+                "salary_max": job.get("max_amount"),
+                "source": f"JobSpy ({job.get('site_name', 'Unknown')})",
+            }
+            normalized_jobs.append(normalized_job)
+            
+        return normalized_jobs
+    except Exception as e:
+        print(f"  JobSpy error: {e}")
+        return []
+
+
 def main():
     session = requests.Session()
     session.headers.update({
@@ -1580,16 +1663,16 @@ def main():
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 
-    print("\nStep 3h: Scraping LinkedIn Jobs vacancies (safe rate-limiting)...")
-    # Note: LinkedIn actively blocks scrapers. For production:
-    # Option 1: Manual search on LinkedIn Jobs + Export CSV → import ke system
-    # Option 2: Use LinkedIn Recruiter API (requires authorization)
-    # Option 3: Skip LinkedIn, focus on 7 stable portals (current approach)
-    # linkedin_jobs = scrape_linkedin_jobs(session, max_jobs=300)
-    # for job in linkedin_jobs:
-    #     matched_job = evaluate_job_match(job)
-    #     matched_jobs.append(matched_job)
-    print("  LinkedIn scraping skipped (anti-bot protection active). Use manual export instead.")
+    print("\nStep 3h: Scraping with JobSpy (LinkedIn, Indeed, Glassdoor)...")
+    # JobSpy aggregates multiple job boards for better coverage
+    try:
+        jobspy_jobs = scrape_with_jobspy("Data Analyst", "Indonesia", max_results=100)
+        print(f"  JobSpy found {len(jobspy_jobs)} jobs from multiple boards.")
+        for job in jobspy_jobs:
+            matched_job = evaluate_job_match(job)
+            matched_jobs.append(matched_job)
+    except Exception as e:
+        print(f"  JobSpy scraping skipped: {e}")
 
     # Sort matched jobs by match score (highest first), placing blocked jobs at the end
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
