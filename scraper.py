@@ -1448,7 +1448,8 @@ def scrape_with_jobspy(job_title, location="", max_results=50):
             search_term=job_title,
             location=location,
             results_wanted=max_results,
-            hours_old=168  # Last 7 days
+            # hours_old removed - not supported in newer versions
+            # Use days_old equivalent or remove for default behavior
         )
         
         # Convert to our format
@@ -1460,7 +1461,7 @@ def scrape_with_jobspy(job_title, location="", max_results=50):
                 "organization_name": job.get("company", ""),
                 "location": job.get("location", ""),
                 "workplace": "Unknown",
-                "due_date": job.get("date_posted", ""),
+                "due_date": str(job.get("date_posted", "")),
                 "group": job.get("job_type", ""),
                 "url": job.get("job_url", ""),
                 "description": job.get("description", "") or job.get("job_description", ""),
