@@ -3387,104 +3387,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "grab_744000147875540",
-    "title": "Software Engineering Manager II",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000147875540",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000147875540/software-engineering-manager-ii/",
-    "raw_description": "<p>Software Engineering Manager II</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know Our Team</p><p>The Fulfilment Engineering team builds the technology that connects demand with supply across Grab’s services. We solve complex marketplace problems spanning allocation, driver experience, reliability and operational efficiency, supporting millions of transactions across Southeast Asia.</p><p>We work closely with Product, Data Science, Analytics, Operations and other engineering teams to develop scalable systems that improve the experience of our driver-partners and consumers.</p><p>Get to Know the Role</p><p>You will lead a team of software engineers responsible for building and operating critical fulfilment capabilities. You will create the conditions for the team to deliver reliable outcomes, grow strong technical leaders and translate product and business priorities into an effective engineering roadmap.</p><p>As an engineering manager, you will remain technically fluent while empowering senior individual contributors to lead architecture and detailed technical decisions.</p><p>You will report to the Senior Software Engineering Manager.</p><p>At Grab, we have 5-day in office arrangement.</p><p>The Critical Tasks You Will Perform</p><p>Lead, coach and develop a team of software engineers, setting clear expectations and individual growth plans.</p><p>Partner with Product, Data Science, Analytics and Operations to define priorities, roadmaps and measurable outcomes.</p><p>Own planning and delivery of the team’s engineering roadmap, proactively managing dependencies and risks.</p><p>Work with senior engineers to establish sound technical direction and make appropriate architecture and engineering trade-offs.</p><p>Improve the reliability, scalability, security, observability and cost efficiency of the systems owned by the team.</p><p>Establish effective engineering practices covering design reviews, testing, deployment, incident response and continuous improvement.</p><p>Create an inclusive environment where team members have clarity, psychological safety and meaningful ownership.</p><p>Attract, assess and retain strong engineering talent while contributing to hiring and talent development across Grab.</p><p>Communicate progress, risks and decisions clearly to technical and non-technical stakeholders.</p>",
-    "raw_requirements": "<p>Software Engineering Manager II</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know Our Team</p><p>The Fulfilment Engineering team builds the technology that connects demand with supply across Grab’s services. We solve complex marketplace problems spanning allocation, driver experience, reliability and operational efficiency, supporting millions of transactions across Southeast Asia.</p><p>We work closely with Product, Data Science, Analytics, Operations and other engineering teams to develop scalable systems that improve the experience of our driver-partners and consumers.</p><p>Get to Know the Role</p><p>You will lead a team of software engineers responsible for building and operating critical fulfilment capabilities. You will create the conditions for the team to deliver reliable outcomes, grow strong technical leaders and translate product and business priorities into an effective engineering roadmap.</p><p>As an engineering manager, you will remain technically fluent while empowering senior individual contributors to lead architecture and detailed technical decisions.</p><p>You will report to the Senior Software Engineering Manager.</p><p>At Grab, we have 5-day in office arrangement.</p><p>The Critical Tasks You Will Perform</p><p>Lead, coach and develop a team of software engineers, setting clear expectations and individual growth plans.</p><p>Partner with Product, Data Science, Analytics and Operations to define priorities, roadmaps and measurable outcomes.</p><p>Own planning and delivery of the team’s engineering roadmap, proactively managing dependencies and risks.</p><p>Work with senior engineers to establish sound technical direction and make appropriate architecture and engineering trade-offs.</p><p>Improve the reliability, scalability, security, observability and cost efficiency of the systems owned by the team.</p><p>Establish effective engineering practices covering design reviews, testing, deployment, incident response and continuous improvement.</p><p>Create an inclusive environment where team members have clarity, psychological safety and meaningful ownership.</p><p>Attract, assess and retain strong engineering talent while contributing to hiring and talent development across Grab.</p><p>Communicate progress, risks and decisions clearly to technical and non-technical stakeholders.</p>",
-    "match_score": 100,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan ini dikhususkan atau diutamakan untuk Pria."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data science, ai, analytics, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Software Engineering Manager II Team Engineering Location Jakarta, Indonesia Job Type Full",
-        "We work closely with Product, Data Science, Analytics, Operations and other engineering teams to develop scalable systems that improve the experience of our driver",
-        "Get to Know the Role You will lead a team of software engineers responsible for building and operating critical fulfilment capabilities",
-        "You will create the conditions for the team to deliver reliable outcomes, grow strong technical leaders and translate product and business priorities into an effective engineering roadmap"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Software Engineering Manager II Team Engineering Location Jakarta, Indonesia Job Type Full",
-          "We work closely with Product, Data Science, Analytics, Operations and other engineering teams to develop scalable systems that improve the experience of our driver",
-          "Get to Know the Role You will lead a team of software engineers responsible for building and operating critical fulfilment capabilities",
-          "You will create the conditions for the team to deliver reliable outcomes, grow strong technical leaders and translate product and business priorities into an effective engineering roadmap",
-          "As an engineering manager, you will remain technically fluent while empowering senior individual contributors to lead architecture and detailed technical decisions"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Male Only",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "ioh_59048444",
     "title": "Sr Officer-Retail Store App Development",
     "organization_id": "IOH",
@@ -4372,6 +4274,108 @@
     },
     "source": "Indosat Ooredoo Hutchison",
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": 26865,
+    "title": "Prime Natuna EP - Engineering Manager",
+    "organization_id": 112065,
+    "organization_name": null,
+    "slug": "prime-natuna-ep-engineering-manager",
+    "type_name": "Karyawan Tetap",
+    "level": "Department Head/Manager",
+    "location": "Kota Jakarta Selatan, DKI Jakarta (Indonesia)",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-09-30 00:00:00",
+    "group": "Engineering",
+    "url": "https://jobs.talentics.id/skk-migas/prime-natuna-ep-engineering-manager",
+    "raw_description": "<p class=\"MsoNormal\"><b><span style=\"font-size:11pt;\">Responsible to:</span></b></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Responsible for leading and\nmanaging a multidisciplinary engineering team to ensure the safe, reliable,\nefficient, and cost-effective operation of company assets and facilities.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Responsible for planning,\nimplementing, and monitoring the point of interaction between the various\ntechnical elements of the project to ensure its safe and optimum project\ndelivery as well as reliable operation.</span></p><p class=\"MsoNormal\"><b><span style=\"font-size:11pt;\">Areas of Accountability,\nResponsibility and Competence:   </span></b></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Plan, organize, direct,\ncontrol and evaluate the activities and operations of the FEMI dept.\nEngineering team.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Ensure elimination of\nincidents through robust controls, incident reviews and embedding lessons\nlearned internally and across organization.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Focuses on managerial\nconcerns of the small project under Engineering department such as cost,\ncompletion date, and resource allocation. Provides expert resolution of issues\nand monitors integration of work.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Manage and oversee resource\ncapacity and capabilities within engineering department. Monitor and ensure\neffectiveness utilization of Engineering services contract to make-up and\nfill-the gap.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Identifies risk and\nopportunities. Develop control and mitigation for risk. Follow-up assess and\ndiscuss any improvement opportunities with all relevant stakeholder.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Consult and negotiate with\ncontractors/stakeholders to prepare specifications, explain proposals and\npresent engineering reports and findings.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Assign, co-ordinate and\nreview the technical work of the department or project teams.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Become owner of\nOrganization Engineering procedure and standard. Including development,\nroll-out, implementation, review and validation those documents.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Continuous assurance that\nthe team working following all Engineering guideline and practices. Manage,\nescalate and coordinate with all relevant stakeholder if any exeption is\nrequired.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Develop report for FEMI\nmanagement in a timely manner.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Planning, and preparation\nfor Budget and Work Program approval process. Continue with manage and\nmonitoring approved WP&B. During implementation and monitoring, deviation\nand potential misalign need to be properly manage to avoid future problem.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Performs non-routine tasks\nand attends such meetings as directed from time to time by FEMI Sr. Manager as\nopportunity presents in order to meet Company objectives.  Ensures that all relevant managers and\nsubordinates are kept informed of all major opportunities, developments,\nproblems or other potential issues, which will impact upon the Business.</span></p>",
+    "raw_requirements": "<p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Bachelor’s degree in\nEngineering</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Min. 15 years’ experience\nin engineering management for oil and gas industry, with 5 years in a\nmanagerial role.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Broad and extensive\nknowledge of engineering theories and techniques and a high level of skill in\napplication of this knowledge in the management of the engineering function.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Able to implement and embed\nstandards and processes to effect delivery of engineering excellence.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Good knowledge of\nregulatory framework and associated legislation.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Current knowledge of\nindustry and technology development within area of expertise.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Expert in Engineering\nexcellence.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Able to carry out audit and\nincident investigations.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Good Project management\nskills.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Proficient in Ms. Office\nand other engineering management tools/software. </span></p><p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<span style=\"font-size:11pt;\">• Fluent English (written and oral)</span></p><p><span style=\"font-family:Aptos, sans-serif;font-size:14.6667px;\">• Indonesia Nationality only</span></p>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "15 years’ experience in engineering management for oil and gas industry, with 5 years in a managerial role",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Manage, escalate and coordinate with all relevant stakeholder if any exeption is required"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "15 years’ experience in engineering management for oil and gas industry, with 5 years in a managerial role",
+        "Broad and extensive knowledge of engineering theories and techniques and a high level of skill in application of this knowledge in the management of the engineering function",
+        "Current knowledge of industry and technology development within area of expertise",
+        "Good Project management skills"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Manage, escalate and coordinate with all relevant stakeholder if any exeption is required"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "15 years’ experience in engineering management for oil and gas industry, with 5 years in a managerial role",
+          "Broad and extensive knowledge of engineering theories and techniques and a high level of skill in application of this knowledge in the management of the engineering function",
+          "Current knowledge of industry and technology development within area of expertise",
+          "Good Project management skills",
+          "Office and other engineering management tools/software"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Talentics",
+    "logo": null
   },
   {
     "id": 24655,
@@ -5765,6 +5769,317 @@
     "logo": "https://www.sawitpro.id/favicon.ico"
   },
   {
+    "id": "grab_744000150615581",
+    "title": "Senior Software Engineer, Backend",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000150615581",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000150615581/senior-software-engineer-backend/",
+    "raw_description": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>GrabKios is the pillar of Grab's digital products business – from airtime top up, data package, bill payment, e-wallet top up, and many more. We support millions of users in multiple countries with their digital product needs. We empower hundreds of thousands of entrepreneurs to grow their digital products enterprise. And we also allow external platforms to start selling digital goods as our partners. We're always keen to grow our impact, and we're looking for individuals to join our Engineering team in Jakarta, Indonesia.</p><p>Get to Know the Role</p><p>We are looking for experienced and passionate engineers to be part of our Tech Family. We believe you have experience working in a team and delivering work on backend system development. Reporting to the manager, you will work onsite in our Jakarta Office. If you believe you have what it takes, we'd love to hear from you! In return, you will make an impact on millions of people across Southeast Asia.</p><p>The Critical Tasks You Will Perform</p><p>Design backend components</p><p>Collaborate with product, business, and other engineering teams to solve our user pain points</p><p>Ensure of high quality, maintainable, and bug-free code</p><p>Participate in technical and product reviews</p><p>Ensure a closure of assigned code reviews</p><p>You will participate in team on-call rotation to help us achieve operational excellence</p><p>Support the DevOps/Infra team in the scope of your services</p><p>Provide guidance, mentorship, and knowledge sharing to your peers</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>You have a degree in Engineering – specialization in CS/IT will be an advantage</p><p>You have at least 4+ years of working experience in a relevant field</p>",
+    "raw_requirements": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>GrabKios is the pillar of Grab's digital products business – from airtime top up, data package, bill payment, e-wallet top up, and many more. We support millions of users in multiple countries with their digital product needs. We empower hundreds of thousands of entrepreneurs to grow their digital products enterprise. And we also allow external platforms to start selling digital goods as our partners. We're always keen to grow our impact, and we're looking for individuals to join our Engineering team in Jakarta, Indonesia.</p><p>Get to Know the Role</p><p>We are looking for experienced and passionate engineers to be part of our Tech Family. We believe you have experience working in a team and delivering work on backend system development. Reporting to the manager, you will work onsite in our Jakarta Office. If you believe you have what it takes, we'd love to hear from you! In return, you will make an impact on millions of people across Southeast Asia.</p><p>The Critical Tasks You Will Perform</p><p>Design backend components</p><p>Collaborate with product, business, and other engineering teams to solve our user pain points</p><p>Ensure of high quality, maintainable, and bug-free code</p><p>Participate in technical and product reviews</p><p>Ensure a closure of assigned code reviews</p><p>You will participate in team on-call rotation to help us achieve operational excellence</p><p>Support the DevOps/Infra team in the scope of your services</p><p>Provide guidance, mentorship, and knowledge sharing to your peers</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>You have a degree in Engineering – specialization in CS/IT will be an advantage</p><p>You have at least 4+ years of working experience in a relevant field</p>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Get to Know the Role We are looking for experienced and passionate engineers to be part of our Tech Family",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "call rotation to help us achieve operational excellence Support the DevOps/Infra team in the scope of your services Provide guidance, mentorship, and knowledge sharing to your peers Read more Skills you need What Essential Skills You Will Need You have a degree in Engineering – specialization in CS/IT will be an advantage You have at least 4+ years of working experience in a relevant field Senior Software Engineer, Backend Team Engineering Location Jakarta, Indonesia Job Type Full",
+        "call rotation to help us achieve operational excellence Support the DevOps/Infra team in the scope of your services Provide guidance, mentorship, and knowledge sharing to your peers Read more Skills you need What Essential Skills You Will Need You have a degree in Engineering – specialization in CS/IT will be an advantage You have at least 4+ years of working experience in a relevant field"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "We believe you have experience working in a team and delivering work on backend system development",
+        "Reporting to the manager, you will work onsite in our Jakarta Office",
+        "We believe you have experience working in a team and delivering work on backend system development",
+        "Reporting to the manager, you will work onsite in our Jakarta Office"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "call rotation to help us achieve operational excellence Support the DevOps/Infra team in the scope of your services Provide guidance, mentorship, and knowledge sharing to your peers Read more Skills you need What Essential Skills You Will Need You have a degree in Engineering – specialization in CS/IT will be an advantage You have at least 4+ years of working experience in a relevant field Senior Software Engineer, Backend Team Engineering Location Jakarta, Indonesia Job Type Full",
+          "call rotation to help us achieve operational excellence Support the DevOps/Infra team in the scope of your services Provide guidance, mentorship, and knowledge sharing to your peers Read more Skills you need What Essential Skills You Will Need You have a degree in Engineering – specialization in CS/IT will be an advantage You have at least 4+ years of working experience in a relevant field"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "We believe you have experience working in a team and delivering work on backend system development",
+          "Reporting to the manager, you will work onsite in our Jakarta Office",
+          "We believe you have experience working in a team and delivering work on backend system development",
+          "Reporting to the manager, you will work onsite in our Jakarta Office"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": "grab_744000150609129",
+    "title": "Senior Software Engineer, Backend",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000150609129",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000150609129/senior-software-engineer-backend/",
+    "raw_description": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>The Lending team builds secure and versatile loan products for diverse user segments, owning critical platform components such as Credit Risk, User Profiles, Credit Limits and Offers, Lender Journeys, the Pricing Engine etc. We design and operate large-scale distributed systems that impact millions of users, with a strong focus on financial inclusion and underserved communities.</p><p>Get to Know the Role</p><p>As a Senior Backend Developer, you will develop scalable software applications using GoLang. You will be at the forefront of our development efforts, leading architectural plans and coaching junior engineers. You will report to the Engineering Manager, Backend. You will work onsite in our Jakarta Office.</p><p>The Critical Tasks You Will Perform</p><p>Design and construct software applications using GoLang.</p><p>Identify main tasks, prioritize them, and deliver them throughout the software development life cycle.</p><p>Automate tasks using appropriate tools and scripting.</p><p>Collaborate with multiple teams to define needs, design new features and deliver them.</p><p>Lead the architecture and coding standards efforts, ensuring clean and efficient code.</p><p>Conduct code reviews to ensure adherence to coding standards, best practices, and security guidelines.</p><p>Troubleshoot, debug, and upgrade existing software.</p><p>Stay up-to-date with latest trends and technologies to improve our products and processes.</p><p>Mentor junior software engineers, and guide their development.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>5+ years of related work experience in a similar capacity</p>",
+    "raw_requirements": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>The Lending team builds secure and versatile loan products for diverse user segments, owning critical platform components such as Credit Risk, User Profiles, Credit Limits and Offers, Lender Journeys, the Pricing Engine etc. We design and operate large-scale distributed systems that impact millions of users, with a strong focus on financial inclusion and underserved communities.</p><p>Get to Know the Role</p><p>As a Senior Backend Developer, you will develop scalable software applications using GoLang. You will be at the forefront of our development efforts, leading architectural plans and coaching junior engineers. You will report to the Engineering Manager, Backend. You will work onsite in our Jakarta Office.</p><p>The Critical Tasks You Will Perform</p><p>Design and construct software applications using GoLang.</p><p>Identify main tasks, prioritize them, and deliver them throughout the software development life cycle.</p><p>Automate tasks using appropriate tools and scripting.</p><p>Collaborate with multiple teams to define needs, design new features and deliver them.</p><p>Lead the architecture and coding standards efforts, ensuring clean and efficient code.</p><p>Conduct code reviews to ensure adherence to coding standards, best practices, and security guidelines.</p><p>Troubleshoot, debug, and upgrade existing software.</p><p>Stay up-to-date with latest trends and technologies to improve our products and processes.</p><p>Mentor junior software engineers, and guide their development.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>5+ years of related work experience in a similar capacity</p>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan ini dikhususkan atau diutamakan untuk Pria."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: ai, developer, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Read more Skills you need What Essential Skills You Will Need 5+ years of related work experience in a similar capacity",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Read more Skills you need What Essential Skills You Will Need 5+ years of related work experience in a similar capacity Senior Software Engineer, Backend Team Engineering Location Jakarta, Indonesia Job Type Full",
+        "Read more Skills you need What Essential Skills You Will Need 5+ years of related work experience in a similar capacity"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Get to Know the Role As a Senior Backend Developer, you will develop scalable software applications using GoLang",
+        "You will be at the forefront of our development efforts, leading architectural plans and coaching junior engineers",
+        "You will report to the Engineering Manager, Backend",
+        "Identify main tasks, prioritize them, and deliver them throughout the software development life cycle"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Read more Skills you need What Essential Skills You Will Need 5+ years of related work experience in a similar capacity Senior Software Engineer, Backend Team Engineering Location Jakarta, Indonesia Job Type Full",
+          "Read more Skills you need What Essential Skills You Will Need 5+ years of related work experience in a similar capacity"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Get to Know the Role As a Senior Backend Developer, you will develop scalable software applications using GoLang",
+          "You will be at the forefront of our development efforts, leading architectural plans and coaching junior engineers",
+          "You will report to the Engineering Manager, Backend",
+          "Identify main tasks, prioritize them, and deliver them throughout the software development life cycle",
+          "Mentor junior software engineers, and guide their development"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Male Only",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": "grab_744000150596299",
+    "title": "Software Engineer, Mobile (iOS)",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000150596299",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000150596299/software-engineer-mobile-ios/",
+    "raw_description": "<p>Software Engineer, Mobile (iOS)</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>The Fulfilment tech family enables Grab to serve our customers and partners across Southeast Asia. We build high throughput, real-time distributed systems that process hundreds of millions of requests daily.</p><p>Our mission is to offer the best products and experiences to our driver partners. We improve driver partner opportunities and efficiency to fulfil customer orders without fail. We create efficient marketplaces by determining prices that are both sustainable and valued by our partners and customers.</p><p>Get to Know the Role</p><p>You will join our team in Jakarta as a Mobile (iOS) Software Engineer. You will build iOS features used by driver partners across the region, including communication experiences, AI-assisted workflows, and offline-first screens that remain reliable in real-world operating conditions.</p><p>You will work with product managers, designers, backend engineers, data analysts, and other mobile engineers to build features for the Grab driver app. You will report to the Software Engineering Manager and based fully on-site in Jakarta office.</p><p>The Critical Tasks You Will Perform</p><p>You will develop iOS features using Swift for driver communication, AI-assisted workflows, and offline-first screens that handle unstable network conditions.</p><p>You will integrate iOS applications with backend APIs and mobile platform components to deliver reliable user experiences.</p><p>You will collaborate with product managers, designers, and backend engineers to understand requirements and evaluate product impact through data analysis.</p><p>You will write testable code following established engineering standards and participate in code reviews to maintain product quality.</p><p>You will resolve issues related to app performance, reliability, and offline behavior through debugging and testing.</p><p>You will contribute to app stability through unit testing, integration testing, and validation of features before release.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Up to 2 years of professional iOS development experience, internship experience, or project experience building iOS applications using Swift and the iOS SDK. You will use Swift daily to build features for the driver app.</p><p>Understanding of mobile application architecture patterns (MVC, MVVM, VIPER, or similar). You will apply these patterns to structure code for features that communicate with AI systems and handle offline scenarios.</p>",
+    "raw_requirements": "<p>Software Engineer, Mobile (iOS)</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>The Fulfilment tech family enables Grab to serve our customers and partners across Southeast Asia. We build high throughput, real-time distributed systems that process hundreds of millions of requests daily.</p><p>Our mission is to offer the best products and experiences to our driver partners. We improve driver partner opportunities and efficiency to fulfil customer orders without fail. We create efficient marketplaces by determining prices that are both sustainable and valued by our partners and customers.</p><p>Get to Know the Role</p><p>You will join our team in Jakarta as a Mobile (iOS) Software Engineer. You will build iOS features used by driver partners across the region, including communication experiences, AI-assisted workflows, and offline-first screens that remain reliable in real-world operating conditions.</p><p>You will work with product managers, designers, backend engineers, data analysts, and other mobile engineers to build features for the Grab driver app. You will report to the Software Engineering Manager and based fully on-site in Jakarta office.</p><p>The Critical Tasks You Will Perform</p><p>You will develop iOS features using Swift for driver communication, AI-assisted workflows, and offline-first screens that handle unstable network conditions.</p><p>You will integrate iOS applications with backend APIs and mobile platform components to deliver reliable user experiences.</p><p>You will collaborate with product managers, designers, and backend engineers to understand requirements and evaluate product impact through data analysis.</p><p>You will write testable code following established engineering standards and participate in code reviews to maintain product quality.</p><p>You will resolve issues related to app performance, reliability, and offline behavior through debugging and testing.</p><p>You will contribute to app stability through unit testing, integration testing, and validation of features before release.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Up to 2 years of professional iOS development experience, internship experience, or project experience building iOS applications using Swift and the iOS SDK. You will use Swift daily to build features for the driver app.</p><p>Understanding of mobile application architecture patterns (MVC, MVVM, VIPER, or similar). You will apply these patterns to structure code for features that communicate with AI systems and handle offline scenarios.</p>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data analyst, data analysis, ai, it."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Our mission is to offer the best products and experiences to our driver partners...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Communication"
+      ],
+      "mandatory_requirements": [
+        "Read more Skills you need What Essential Skills You Will Need Up to 2 years of professional iOS development experience, internship experience, or project experience building iOS applications using Swift and the iOS SDK",
+        "Read more Skills you need What Essential Skills You Will Need Up to 2 years of professional iOS development experience, internship experience, or project experience building iOS applications using Swift and the iOS SDK"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "We create efficient marketplaces by determining prices that are both sustainable and valued by our partners and customers",
+        "You will work with product managers, designers, backend engineers, data analysts, and other mobile engineers to build features for the Grab driver app",
+        "You will report to the Software Engineering Manager and based fully on",
+        "The Critical Tasks You Will Perform You will develop iOS features using Swift for driver communication, AI"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Read more Skills you need What Essential Skills You Will Need Up to 2 years of professional iOS development experience, internship experience, or project experience building iOS applications using Swift and the iOS SDK",
+          "Read more Skills you need What Essential Skills You Will Need Up to 2 years of professional iOS development experience, internship experience, or project experience building iOS applications using Swift and the iOS SDK"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "We create efficient marketplaces by determining prices that are both sustainable and valued by our partners and customers",
+          "You will work with product managers, designers, backend engineers, data analysts, and other mobile engineers to build features for the Grab driver app",
+          "You will report to the Software Engineering Manager and based fully on",
+          "The Critical Tasks You Will Perform You will develop iOS features using Swift for driver communication, AI",
+          "first screens that handle unstable network conditions"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
     "id": "grab_744000149584204",
     "title": "Senior Software Engineer, Backend",
     "organization_id": "Grab",
@@ -6074,110 +6389,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "grab_744000147853847",
-    "title": "Senior Workplace Technology Engineer",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000147853847",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000147853847/senior-workplace-technology-engineer/",
-    "raw_description": "<p>Senior Workplace Technology Engineer</p><p>Team</p><p>Technology Solutions</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Grabber Technology Solutions (GTS) provides secure, reliable, and intuitive workplace technology experiences for Grab employees. The Workplace Technology team owns the physical and digital workplace capabilities that ensure collaboration across offices, meeting rooms, event spaces, and hybrid working environments. We partner with business leaders from Corporate Real Estate, Facilities, IT, Corporate Security, Procurement, and external technology providers to create consistent and scalable workplace experiences across Grab.</p><p>Get to Know the Role</p><p>You will support the delivery and operation of Workplace Technology across Grab offices. Your scope will include office-build technology, AV infrastructure, physical security infrastructure, vendor coordination, and project delivery.</p><p>We are looking for sound technical judgement, strong stakeholder coordination, and a willingness to work on-site. You will provide the human accountability needed to assess site conditions, validate installations, resolve physical infrastructure issues, and make informed decisions during projects and incidents.</p><p>You will report to the Senior Manager, Workplace Technology. The role is based in Jakarta and may require travel to support critical projects across Grab's regional offices.</p><p>The Critical Tasks You Will Perform</p><p>Deliver workplace technology for office builds, expansions, renovations, and refresh, from site assessment through handover.</p><p>Implement, maintain, and troubleshoot AV systems, meeting-room technology, displays, collaboration equipment, and related infrastructure.</p><p>Support physical security infrastructure delivery and operations, including access control, CCTV, visitor-management devices, and associated site hardware.</p><p>Coordinate site access, installation windows, safety requirements, business downtime, testing, commissioning, and project handover.</p><p>Manage vendors and contractors, validate installation quality, track defects, and ensure delivery meets agreed scope, cost, timeline, and technical standards.</p><p>Resolve hardware, AV, security, and network-adjacent infrastructure incidents; and maintain accurate technical documentation.</p><p>Maintain project trackers, risks, dependencies, asset records, and status updates for assigned workplace technology projects.</p><p>Use AI and automation to improve documentation, reporting, knowledge management, and routine workflows, while applying human judgment for on-site and business-critical decisions.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p>",
-    "raw_requirements": "<p>Senior Workplace Technology Engineer</p><p>Team</p><p>Technology Solutions</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Grabber Technology Solutions (GTS) provides secure, reliable, and intuitive workplace technology experiences for Grab employees. The Workplace Technology team owns the physical and digital workplace capabilities that ensure collaboration across offices, meeting rooms, event spaces, and hybrid working environments. We partner with business leaders from Corporate Real Estate, Facilities, IT, Corporate Security, Procurement, and external technology providers to create consistent and scalable workplace experiences across Grab.</p><p>Get to Know the Role</p><p>You will support the delivery and operation of Workplace Technology across Grab offices. Your scope will include office-build technology, AV infrastructure, physical security infrastructure, vendor coordination, and project delivery.</p><p>We are looking for sound technical judgement, strong stakeholder coordination, and a willingness to work on-site. You will provide the human accountability needed to assess site conditions, validate installations, resolve physical infrastructure issues, and make informed decisions during projects and incidents.</p><p>You will report to the Senior Manager, Workplace Technology. The role is based in Jakarta and may require travel to support critical projects across Grab's regional offices.</p><p>The Critical Tasks You Will Perform</p><p>Deliver workplace technology for office builds, expansions, renovations, and refresh, from site assessment through handover.</p><p>Implement, maintain, and troubleshoot AV systems, meeting-room technology, displays, collaboration equipment, and related infrastructure.</p><p>Support physical security infrastructure delivery and operations, including access control, CCTV, visitor-management devices, and associated site hardware.</p><p>Coordinate site access, installation windows, safety requirements, business downtime, testing, commissioning, and project handover.</p><p>Manage vendors and contractors, validate installation quality, track defects, and ensure delivery meets agreed scope, cost, timeline, and technical standards.</p><p>Resolve hardware, AV, security, and network-adjacent infrastructure incidents; and maintain accurate technical documentation.</p><p>Maintain project trackers, risks, dependencies, asset records, and status updates for assigned workplace technology projects.</p><p>Use AI and automation to improve documentation, reporting, knowledge management, and routine workflows, while applying human judgment for on-site and business-critical decisions.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: ai, it, git."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Read more Skills you need What Essential Skills You Will Need Senior Workplace Technology Engineer Team Technology Solutions Location Jakarta, Indonesia Job Type Full",
-        "Read more Skills you need What Essential Skills You Will Need"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "We partner with business leaders from Corporate Real Estate, Facilities, IT, Corporate Security, Procurement, and external technology providers to create consistent and scalable workplace experiences across Grab",
-        "You will report to the Senior Manager, Workplace Technology",
-        "management devices, and associated site hardware",
-        "Manage vendors and contractors, validate installation quality, track defects, and ensure delivery meets agreed scope, cost, timeline, and technical standards"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Read more Skills you need What Essential Skills You Will Need Senior Workplace Technology Engineer Team Technology Solutions Location Jakarta, Indonesia Job Type Full",
-          "Read more Skills you need What Essential Skills You Will Need"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "We partner with business leaders from Corporate Real Estate, Facilities, IT, Corporate Security, Procurement, and external technology providers to create consistent and scalable workplace experiences across Grab",
-          "You will report to the Senior Manager, Workplace Technology",
-          "management devices, and associated site hardware",
-          "Manage vendors and contractors, validate installation quality, track defects, and ensure delivery meets agreed scope, cost, timeline, and technical standards",
-          "Use AI and automation to improve documentation, reporting, knowledge management, and routine workflows, while applying human judgment for on"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "grab_744000147411299",
     "title": "Lead Data Scientist (Analytics) - Digital Marketing",
     "organization_id": "Grab",
@@ -6263,112 +6474,6 @@
     },
     "source": "Grab",
     "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "ioh_58181744",
-    "title": "AVP-Lifestyle Strategic Bundling",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58181744",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Digital Growth",
-    "url": "https://careers.ioh.co.id/job/AVP-Lifestyle-Strategic-Bundling/58181744/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><h3>Lifestyle &amp; AI Growth Manager </h3>\n<ul>\n<li>Lead end-to-end go-to-market (GTM) execution for new AI partner products within the mobile app ecosystem.</li>\n<li>Develop and execute integrated marketing campaigns from ideation through launch, optimization, and post-campaign evaluation.</li>\n<li>Drive strategic alignment with external partners to identify growth opportunities, define business initiatives, and achieve shared objectives.</li>\n<li>Coordinate cross-functional teams to ensure timely campaign setup and seamless execution.</li>\n<li>Analyze customer journeys and collaborate with relevant stakeholders to design and optimize the end-to-end product experience, improving user engagement and conversion.</li>\n<li>Monitor campaign performance through regular reporting and funnel analysis, leveraging digital marketing insights to identify optimization opportunities and improve business outcomes.</li>\n<li>Continuously evaluate app touchpoints and customer interactions to enhance discoverability, engagement, and partner product performance.</li>\n</ul>\n<p> </p>\n<p><strong><span>Qualification</span></strong></p>\n<p><span>:-Minimal Bachelor's Degree-Minimal 5 Years of Experience</span></p>\n<p><span>-Understand full funnel marketing &amp; end-to-end product journey</span></p>\n<p><span>-Understanding of AI &amp; OTT products are a plus (but not mandatory)</span></p>\n<p><span>-Work experience mainly in digital ecosystem (app, website) </span></p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Competencies</h2> </div><div><div>Adapt quickly when priorities or conditions change.</div><div>Analysis</div><div>Build strong working relationships with people from diverse backgrounds.</div><div>Business Awareness</div><div>Customer Excellence</div><div>Driving Execution</div><div>Deliver strong results even under tight deadlines or pressure.</div><div>Entrepreneurship</div><div>Growth Mindset</div><div>Strategic Planning</div></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><h3>Lifestyle &amp; AI Growth Manager </h3>\n<ul>\n<li>Lead end-to-end go-to-market (GTM) execution for new AI partner products within the mobile app ecosystem.</li>\n<li>Develop and execute integrated marketing campaigns from ideation through launch, optimization, and post-campaign evaluation.</li>\n<li>Drive strategic alignment with external partners to identify growth opportunities, define business initiatives, and achieve shared objectives.</li>\n<li>Coordinate cross-functional teams to ensure timely campaign setup and seamless execution.</li>\n<li>Analyze customer journeys and collaborate with relevant stakeholders to design and optimize the end-to-end product experience, improving user engagement and conversion.</li>\n<li>Monitor campaign performance through regular reporting and funnel analysis, leveraging digital marketing insights to identify optimization opportunities and improve business outcomes.</li>\n<li>Continuously evaluate app touchpoints and customer interactions to enhance discoverability, engagement, and partner product performance.</li>\n</ul>\n<p> </p>\n<p><strong><span>Qualification</span></strong></p>\n<p><span>:-Minimal Bachelor's Degree-Minimal 5 Years of Experience</span></p>\n<p><span>-Understand full funnel marketing &amp; end-to-end product journey</span></p>\n<p><span>-Understanding of AI &amp; OTT products are a plus (but not mandatory)</span></p>\n<p><span>-Work experience mainly in digital ecosystem (app, website) </span></p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Competencies</h2> </div><div><div>Adapt quickly when priorities or conditions change.</div><div>Analysis</div><div>Build strong working relationships with people from diverse backgrounds.</div><div>Business Awareness</div><div>Customer Excellence</div><div>Driving Execution</div><div>Deliver strong results even under tight deadlines or pressure.</div><div>Entrepreneurship</div><div>Growth Mindset</div><div>Strategic Planning</div></div></div></div>\n</span>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 5 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "end product experience, improving user engagement and conversion",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Minimal Bachelor's Degree",
-        "Minimal 5 Years of Experience",
-        "Minimal Bachelor's Degree",
-        "Minimal 5 Years of Experience"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Job Description Lifestyle &amp; AI Growth Manager Lead end",
-        "Develop and execute integrated marketing campaigns from ideation through launch, optimization, and post",
-        "Entrepreneurship Growth Mindset Strategic Planning Job Description Lifestyle &amp; AI Growth Manager Lead end",
-        "Develop and execute integrated marketing campaigns from ideation through launch, optimization, and post"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Minimal Bachelor's Degree",
-          "Minimal 5 Years of Experience",
-          "Minimal Bachelor's Degree",
-          "Minimal 5 Years of Experience"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Job Description Lifestyle &amp; AI Growth Manager Lead end",
-          "Develop and execute integrated marketing campaigns from ideation through launch, optimization, and post",
-          "Entrepreneurship Growth Mindset Strategic Planning Job Description Lifestyle &amp; AI Growth Manager Lead end",
-          "Develop and execute integrated marketing campaigns from ideation through launch, optimization, and post"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Senior (3-5 tahun)",
-      "exp_years": 5
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
     "id": "ioh_57144244",
@@ -6480,103 +6585,6 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
-    "id": "ioh_58702044",
-    "title": "Sales & Distribution Engineer",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58702044",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Consumer Technology & Digital Innovation",
-    "url": "https://careers.ioh.co.id/job/Sales-&-Distribution-Engineer/58702044/",
-    "raw_description": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (on technical skills and relevant internship/project experience will be considered...)",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
-        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
-          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh Graduate / Entry Level",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
     "id": "ioh_58702244",
     "title": "Mass Market & CVM Engineer",
     "organization_id": "IOH",
@@ -6666,6 +6674,103 @@
           "management concepts",
           "on technical role focused on the Mass Market segment — supporting the configuration, delivery, and troubleshooting of prepaid and Customer Value Management (CVM) products and campaigns",
           "Professional Experience: 1–3 years of experience in telco product configuration, prepaid/charging systems, campaign management, or application support"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Fresh Graduate / Entry Level",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": "ioh_58702044",
+    "title": "Sales & Distribution Engineer",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-58702044",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Consumer Technology & Digital Innovation",
+    "url": "https://careers.ioh.co.id/job/Sales-&-Distribution-Engineer/58702044/",
+    "raw_description": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (on technical skills and relevant internship/project experience will be considered...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
+        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
+          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
         ]
       }
     },
@@ -6987,113 +7092,6 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
-    "id": "ioh_59152344",
-    "title": "HBB Fault Management & Service Assurance",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-59152344",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Network Operations",
-    "url": "https://careers.ioh.co.id/job/HBB-Fault-Management-&-Service-Assurance/59152344/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Batas usia maksimal adalah 24 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 5 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Experience: At least 5 years of experience in telecommunications network planning and engineering",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Communication"
-      ],
-      "mandatory_requirements": [
-        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
-        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
-        "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
-        "Manage related MS vendors team in day",
-        "day Fault Management Operation;"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
-          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
-          "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
-          "Manage related MS vendors team in day",
-          "day Fault Management Operation;",
-          "Consolidate to other functions for issues which are related to HBB network operation and service quality Area of Responsibilities Key Activities Network Fault Monitoring &amp; Management Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": 24,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Senior (3-5 tahun)",
-      "exp_years": 5
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
     "id": "ioh_59127744",
     "title": "VP-Head of HBB & B2B Planning",
     "organization_id": "IOH",
@@ -7205,6 +7203,113 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
+    "id": "ioh_59152344",
+    "title": "HBB Fault Management & Service Assurance",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-59152344",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Network Operations",
+    "url": "https://careers.ioh.co.id/job/HBB-Fault-Management-&-Service-Assurance/59152344/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Batas usia maksimal adalah 24 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 5 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Experience: At least 5 years of experience in telecommunications network planning and engineering",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Communication"
+      ],
+      "mandatory_requirements": [
+        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
+        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
+        "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
+        "Manage related MS vendors team in day",
+        "day Fault Management Operation;"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
+          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
+          "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
+          "Manage related MS vendors team in day",
+          "day Fault Management Operation;",
+          "Consolidate to other functions for issues which are related to HBB network operation and service quality Area of Responsibilities Key Activities Network Fault Monitoring &amp; Management Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": 24,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Senior (3-5 tahun)",
+      "exp_years": 5
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
     "id": 14472,
     "title": "Product Development Technician",
     "organization_id": "18",
@@ -7307,7 +7412,7 @@
     "slug": "indofood-14474",
     "type_name": "Karyawan Tetap",
     "level": "Fresh Graduate",
-    "location": "Jl. Daan Mogot No.KM 19, RT.003/RW.002, Kb. Besar, Kec. Batuceper, Kota Tangerang, Banten 15122 - Tangerang",
+    "location": "ICBP Noodle DKI - Pabrik Tangerang - Tangerang",
     "workplace": "Work From Office (WFO)",
     "due_date": "17 Nov 2026",
     "group": "Human Resources",
@@ -11559,6 +11664,98 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
+    "id": 14481,
+    "title": "Treasury Supervisor",
+    "organization_id": "9",
+    "organization_name": "Bogasari - Bogasari",
+    "slug": "indofood-14481",
+    "type_name": "Karyawan Tetap",
+    "level": "Experienced",
+    "location": "Jl. Raya Cilincing No 1 Tanjung Priok - Jakarta Utara",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "20 Nov 2026",
+    "group": "Finance",
+    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14481",
+    "raw_description": "<p><strong>Responsibilities:</strong></p>\n\n<p>Analyze and verify all documentation related to fund disbursements for each unit, Limits of Authority (LoA), and Requests for Payment; execute and review financial transaction journal entries; and coordinate the wheat procurement process, L/C claim settlements, and loan and interest payments. These tasks aim to ensure guaranteed fund availability for each unit, the completeness and accuracy of documentation in accordance with LoA procedures, the alignment of all invoices with accounts payable records, and adherence to procurement procedures with complete documentation from both banks and suppliers.</p>\n",
+    "raw_requirements": "<p><strong>Expected qualifications:</strong></p>\n\n<ol>\n\t<li>Minimum Bachelor&rsquo;s degree (S1) in Accounting with a minimum GPA of 2.80 (out of 4.00)</li>\n\t<li>Minimum of 2 years of experience in finance or accounting</li>\n\t<li>Understanding of Indonesian Financial Accounting Standards (PSAK)</li>\n\t<li>Familiarity with SAP and/or accounting and taxation software applications</li>\n\t<li>Proficiency in document administration and record-keeping</li>\n\t<li>Strong communication, planning, and problem-solving skills</li>\n\t<li>Understanding of operational scope, corporate financial transactions, and applicable tax and financial regulations</li>\n</ol>\n",
+    "match_score": 85,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. IPK minimal yang diminta adalah 2.80, sedangkan IPK Anda adalah 3.39."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Communication"
+      ],
+      "mandatory_requirements": [
+        "Expected qualifications: Minimum Bachelor&rsquo;s degree (S1) in Accounting with a minimum GPA of 2"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Expected qualifications: Minimum Bachelor&rsquo;s degree (S1) in Accounting with a minimum GPA of 2"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": 2.8,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Mid Level (1-3 tahun)",
+      "exp_years": 2
+    },
+    "source": "Indofood",
+    "logo": null
+  },
+  {
     "id": 14448,
     "title": "Warehouse Clerk",
     "organization_id": "5",
@@ -12126,21 +12323,21 @@
     "logo": null
   },
   {
-    "id": 14355,
-    "title": "Sales Analyst",
-    "organization_id": "23",
-    "organization_name": "ICBP - Nutrition and Special Food",
-    "slug": "indofood-14355",
+    "id": 25652,
+    "title": "General Banking Staff - Wilayah Rekrutmen Kalimantan",
+    "organization_id": 113823,
+    "organization_name": null,
+    "slug": "general-banking-staff-wilayah-rekrutmen-kalimantan-bso8i",
     "type_name": "Karyawan Tetap",
-    "level": "Experienced",
-    "location": "Semarang - Semarang",
+    "level": "Staff",
+    "location": "Kalimantan Barat (Indonesia), Kalimantan Selatan (Indonesia), Kalimantan Tengah (Indonesia), Kalimantan Timur (Indonesia), Kalimantan Utara (Indonesia)",
     "workplace": "Work From Office (WFO)",
-    "due_date": "30 Okt 2026",
-    "group": "Sales",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14355",
-    "raw_description": "<ul>\n\t<li>Maintain sales data database</li>\n\t<li>Make sales report and forecast</li>\n\t<li>Sales data monitoring</li>\n</ul>\n",
-    "raw_requirements": "<ul>\n\t<li>Min S1, GPA min 3.00, all major (Statistika or Teknik Infomatika would be advantage)</li>\n\t<li>Max 30 years old</li>\n\t<li>Experience min 1 years in the same position</li>\n\t<li>Able to operate computer (Ms Word and Ms Excel)&nbsp;</li>\n\t<li>Fast learner</li>\n</ul>\n",
-    "match_score": 85,
+    "due_date": "2026-09-30 16:59:59",
+    "group": null,
+    "url": "https://jobs.talentics.id/skk-migas/general-banking-staff-wilayah-rekrutmen-kalimantan-bso8i",
+    "raw_description": "<p>Rekrutmen pada Posisi setingkat staff yang akan ditempatkan pada beberapa bidang kerja yang mendukung penuh berjalannya proses bisnis Bank. Dibekali dengan pendidikan dan pelatihan yang terkonsentrasi pada bidang pendanaan dan perkreditan.</p><p>Program ini juga menyediakan peluang pengembangan profesional berkelanjutan, memungkinkan para peserta untuk terus meningkatkan kemampuan mereka dari waktu ke waktu. Khususnya pada aspek pendanaan dan perkreditan</p><p>Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi.<br><br><span style=\"font-weight:600;\">Proses seleksi akan dilaksanakan di Kalimantan Barat/Kalimantan Selatan/Kalimantan Tengah/Kalimantan Timur/Kalimantan Utara. Dapat Disesuaikan dengan domisili peserta.</span></p>",
+    "raw_requirements": "<ul><li>Warga Negara Indonesia</li><li>Min. Pendidikan Terakhir S-1 (Sarjana)</li><li>Memiliki nilai IPK min. 3,00 dari skala 4,00</li></ul>",
+    "match_score": 80,
     "is_blocked": false,
     "match_details": {
       "major": {
@@ -12156,7 +12353,7 @@
       "age": {
         "score": 10,
         "status": "Match",
-        "reason": "Sesuai. Batas usia maksimal adalah 30 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
       },
       "toefl": {
         "score": 10,
@@ -12169,53 +12366,51 @@
         "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
       },
       "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
       },
       "experience": {
         "score": 5,
         "status": "Match",
-        "reason": "Cocok. Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda."
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
       },
       "exp_years": {
         "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
       }
     },
     "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "education_summary": "Dibekali dengan pendidikan dan pelatihan yang terkonsentrasi pada bidang pendanaan dan perkreditan",
       "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
       "mandatory_skills": [],
-      "preferred_skills": [
-        "Excel"
-      ],
+      "preferred_skills": [],
       "soft_skills": [],
       "mandatory_requirements": [],
-      "preferred_requirements": [
-        "00, all major (Statistika or Teknik Infomatika would be advantage) Max 30 years old Experience min 1 years in the same position Able to operate computer (Ms Word and Ms Excel)&nbsp; Fast learner Maintain sales data database Make sales report and forecast Sales data monitoring"
-      ],
+      "preferred_requirements": [],
       "nice_to_have": [],
-      "key_responsibilities": [],
+      "key_responsibilities": [
+        "Khususnya pada aspek pendanaan dan perkreditan Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi"
+      ],
       "skill_categories": [],
       "full_breakdown": {
         "mandatory": [],
-        "preferred": [
-          "00, all major (Statistika or Teknik Infomatika would be advantage) Max 30 years old Experience min 1 years in the same position Able to operate computer (Ms Word and Ms Excel)&nbsp; Fast learner Maintain sales data database Make sales report and forecast Sales data monitoring"
-        ],
+        "preferred": [],
         "nice_to_have": [],
-        "responsibilities": []
+        "responsibilities": [
+          "Khususnya pada aspek pendanaan dan perkreditan Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi"
+        ]
       }
     },
     "parsed_requirements": {
       "gpa": 3.0,
-      "age": 30,
+      "age": null,
       "toefl": null,
       "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
+      "experience": "Open / Not Specified",
+      "exp_years": 0
     },
-    "source": "Indofood",
+    "source": "Talentics",
     "logo": null
   },
   {
@@ -12952,11 +13147,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-20",
+    "id": "PTC-19",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-20",
+    "slug": "ptc-PTC-19",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13049,11 +13244,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-38",
+    "id": "PTC-36",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-38",
+    "slug": "ptc-PTC-36",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13146,11 +13341,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-56",
+    "id": "PTC-53",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-56",
+    "slug": "ptc-PTC-53",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13243,11 +13438,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-74",
+    "id": "PTC-70",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-74",
+    "slug": "ptc-PTC-70",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13340,11 +13535,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-92",
+    "id": "PTC-87",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-92",
+    "slug": "ptc-PTC-87",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13437,11 +13632,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-110",
+    "id": "PTC-104",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-110",
+    "slug": "ptc-PTC-104",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13534,11 +13729,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-128",
+    "id": "PTC-121",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-128",
+    "slug": "ptc-PTC-121",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13631,11 +13826,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-146",
+    "id": "PTC-138",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-146",
+    "slug": "ptc-PTC-138",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13728,11 +13923,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-164",
+    "id": "PTC-155",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-164",
+    "slug": "ptc-PTC-155",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13823,6 +14018,93 @@
     },
     "source": "Pertamina PTC",
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "grab_744000147853847",
+    "title": "Senior Workplace Technology Engineer",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000147853847",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000147853847/senior-workplace-technology-engineer/",
+    "raw_description": "<p>Posisi: <strong>Senior Workplace Technology Engineer</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "raw_requirements": "<p>Posisi: <strong>Senior Workplace Technology Engineer</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 0,
+        "status": "Low Match",
+        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
   },
   {
     "id": "grab_744000144333905",
@@ -14664,6 +14946,96 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
+    "id": "grab_744000147875540",
+    "title": "Software Engineering Manager II",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000147875540",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000147875540/software-engineering-manager-ii/",
+    "raw_description": "<p>Posisi: <strong>Software Engineering Manager II</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "raw_requirements": "<p>Posisi: <strong>Software Engineering Manager II</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 0,
+        "status": "Low Match",
+        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Posisi: Software Engineering Manager II Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Software Engineering Manager II Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Posisi: Software Engineering Manager II Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Software Engineering Manager II Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
     "id": "grab_744000146294699",
     "title": "Senior TechOps & Release Automation Engineer",
     "organization_id": "Grab",
@@ -15067,92 +15439,6 @@
     "nlp_breakdown": {
       "education_summary": "S1 / D3 jurusan relevan atau setara",
       "experience_summary": "Consumer Experience Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Lead Software Engineer, Backend",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "grab_744000144225729",
-    "title": "Senior Software Engineer, Mobile (iOS) - Consumer Experience",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000144225729",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000144225729/senior-software-engineer-mobile-ios-consumer-experience/",
-    "raw_description": "<p>Posisi: <strong>Senior Software Engineer, Mobile (iOS) - Consumer Experience</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "raw_requirements": "<p>Posisi: <strong>Senior Software Engineer, Mobile (iOS) - Consumer Experience</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 0,
-        "status": "Low Match",
-        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Consumer Experience Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Senior Software Engineer, Mobile (iOS)",
       "mandatory_skills": [],
       "preferred_skills": [],
       "soft_skills": [],
