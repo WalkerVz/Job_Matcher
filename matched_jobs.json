@@ -105,11 +105,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-8",
+    "id": "PTC-9",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-8",
+    "slug": "ptc-PTC-9",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -210,11 +210,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-14",
+    "id": "PTC-16",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-14",
+    "slug": "ptc-PTC-16",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -315,11 +315,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-20",
+    "id": "PTC-23",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-20",
+    "slug": "ptc-PTC-23",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -420,11 +420,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-26",
+    "id": "PTC-30",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-26",
+    "slug": "ptc-PTC-30",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -525,116 +525,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-32",
+    "id": "PTC-37",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-32",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-38",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-38",
+    "slug": "ptc-PTC-37",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -840,11 +735,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-50",
+    "id": "PTC-51",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-50",
+    "slug": "ptc-PTC-51",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -945,11 +840,116 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-56",
+    "id": "PTC-58",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-56",
+    "slug": "ptc-PTC-58",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "DKI Jakarta, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [
+        "Bash",
+        "CI/CD",
+        "Git",
+        "Python"
+      ],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Problem Solving"
+      ],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan minimal S",
+        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [
+        "Languages & Core",
+        "Engineering & Tools"
+      ],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan minimal S",
+          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Fresh / Junior (0-1 tahun)",
+      "exp_years": 1
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-65",
+    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-65",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -1586,110 +1586,6 @@
     "logo": "https://www.sawitpro.id/favicon.ico"
   },
   {
-    "id": "grab_744000150994808",
-    "title": "Senior Software Engineer, Fullstack (Consumer Experience)",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000150994808",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000150994808/senior-software-engineer-fullstack-consumer-experience/",
-    "raw_description": "<p>Senior Software Engineer, Fullstack (Consumer Experience)</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Come join the Consumer Experience (CX) Engineering team! We work on a diverse set of consumer problems. These problems span across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services. They also cover the user lifecycle, including user growth, engagement, and loyalty. Additionally, they involve the critical platform mission of mobile application developer experience. We are on an exciting mission to connect consumers to Grab's marketplace by allowing them to discover and engage with Grab's services and partners.</p><p>Get to Know the Role</p><p>You will build high-quality systems that power end-to-end consumer journeys across the Grab app—from login to the home and activity experiences. You will promote AI-driven delivery, using AI-enabled engineering workflows to take well-defined requirements through planning, testing, debugging, and documentation to a review-ready merge request. You will ensure these workflows produce secure, reliable, and maintainable solutions while helping raise engineering standards across the team. You will report to the Engineering Manager. This is an on-site role based in Jakarta.</p><p>The Critical Tasks You Will Perform</p><p>Build, operate, and optimize scalable, high-availability fullstack services and Go backend systems.</p><p>Leverage and validate AI-assisted tools to build secure, high-quality code and lead plans that boost team efficiency.</p><p>Design scalable architectures, manage system performance and capacity, and resolve complex distributed system issues.</p><p>Take end-to-end ownership of product outcomes, drive cross-functional alignment, and manage production incidents during on-call rotations.</p><p>Elevate engineering standards through design/code reviews, technical guidance, and knowledge sharing.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Bachelor's degree in CS, Software Engineering, IT, or related field</p><p>6+ years of software engineering experience.</p><p>Computer Science fundamentals (data structures, algorithms, and system design).</p><p>Critical ability to audit AI-generated code for security, correctness, and maintainability.</p><p>Proven track record of leading AI-driven technical initiatives and raising engineering standards across teams.</p>",
-    "raw_requirements": "<p>Senior Software Engineer, Fullstack (Consumer Experience)</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Come join the Consumer Experience (CX) Engineering team! We work on a diverse set of consumer problems. These problems span across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services. They also cover the user lifecycle, including user growth, engagement, and loyalty. Additionally, they involve the critical platform mission of mobile application developer experience. We are on an exciting mission to connect consumers to Grab's marketplace by allowing them to discover and engage with Grab's services and partners.</p><p>Get to Know the Role</p><p>You will build high-quality systems that power end-to-end consumer journeys across the Grab app—from login to the home and activity experiences. You will promote AI-driven delivery, using AI-enabled engineering workflows to take well-defined requirements through planning, testing, debugging, and documentation to a review-ready merge request. You will ensure these workflows produce secure, reliable, and maintainable solutions while helping raise engineering standards across the team. You will report to the Engineering Manager. This is an on-site role based in Jakarta.</p><p>The Critical Tasks You Will Perform</p><p>Build, operate, and optimize scalable, high-availability fullstack services and Go backend systems.</p><p>Leverage and validate AI-assisted tools to build secure, high-quality code and lead plans that boost team efficiency.</p><p>Design scalable architectures, manage system performance and capacity, and resolve complex distributed system issues.</p><p>Take end-to-end ownership of product outcomes, drive cross-functional alignment, and manage production incidents during on-call rotations.</p><p>Elevate engineering standards through design/code reviews, technical guidance, and knowledge sharing.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Bachelor's degree in CS, Software Engineering, IT, or related field</p><p>6+ years of software engineering experience.</p><p>Computer Science fundamentals (data structures, algorithms, and system design).</p><p>Critical ability to audit AI-generated code for security, correctness, and maintainability.</p><p>Proven track record of leading AI-driven technical initiatives and raising engineering standards across teams.</p>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: ai, developer, it, fullstack."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Senior Software Engineer, Fullstack (Consumer Experience) Team Engineering Location Jakarta, Indonesia Job Type Full",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in CS, Software Engineering, IT, or related field 6+ years of software engineering experience",
-        "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in CS, Software Engineering, IT, or related field 6+ years of software engineering experience"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Additionally, they involve the critical platform mission of mobile application developer experience",
-        "You will report to the Engineering Manager",
-        "Design scalable architectures, manage system performance and capacity, and resolve complex distributed system issues",
-        "functional alignment, and manage production incidents during on"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in CS, Software Engineering, IT, or related field 6+ years of software engineering experience",
-          "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in CS, Software Engineering, IT, or related field 6+ years of software engineering experience"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Additionally, they involve the critical platform mission of mobile application developer experience",
-          "You will report to the Engineering Manager",
-          "Design scalable architectures, manage system performance and capacity, and resolve complex distributed system issues",
-          "functional alignment, and manage production incidents during on",
-          "Additionally, they involve the critical platform mission of mobile application developer experience"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "ioh_59152144",
     "title": "Sr Officer-RAN Capacity Program Management",
     "organization_id": "IOH",
@@ -1803,132 +1699,6 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
-    "id": "ioh_58995744",
-    "title": "AVP Enterprise Supply Chain Architect",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58995744",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Digital Corporate",
-    "url": "https://careers.ioh.co.id/job/AVP-Enterprise-Supply-Chain-Architect/58995744/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, developer, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Has an Excellent knowledge of Agile Framework and Waterfall Methodology Extensive experience in managing end",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Communication",
-        "Flexibility",
-        "Leadership",
-        "Presentation"
-      ],
-      "mandatory_requirements": [
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-        "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes"
-      ],
-      "preferred_requirements": [
-        "Oracle Fusion certification is an advantage",
-        "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
-        "Oracle Fusion certification is an advantage"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
-        "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
-        "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
-        "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering"
-        ],
-        "preferred": [
-          "Oracle Fusion certification is an advantage",
-          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
-          "Oracle Fusion certification is an advantage",
-          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
-          "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
-          "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
-          "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
-          "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
     "id": "ioh_58995944",
     "title": "AVP Core Finance Architect",
     "organization_id": "IOH",
@@ -2037,6 +1807,132 @@
         "responsibilities": [
           "Job Description RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands",
           "DOMAIN is defined as all related CORE FINANCE System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
+          "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
+          "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
+          "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": "ioh_58995744",
+    "title": "AVP Enterprise Supply Chain Architect",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-58995744",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Digital Corporate",
+    "url": "https://careers.ioh.co.id/job/AVP-Enterprise-Supply-Chain-Architect/58995744/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, developer, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Has an Excellent knowledge of Agile Framework and Waterfall Methodology Extensive experience in managing end",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Communication",
+        "Flexibility",
+        "Leadership",
+        "Presentation"
+      ],
+      "mandatory_requirements": [
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+        "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes"
+      ],
+      "preferred_requirements": [
+        "Oracle Fusion certification is an advantage",
+        "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
+        "Oracle Fusion certification is an advantage"
+      ],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
+        "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
+        "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
+        "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering"
+        ],
+        "preferred": [
+          "Oracle Fusion certification is an advantage",
+          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
+          "Oracle Fusion certification is an advantage",
+          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage"
+        ],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
+          "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
           "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
           "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
           "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
@@ -4099,6 +3995,107 @@
     },
     "source": "SawitPRO",
     "logo": "https://www.sawitpro.id/favicon.ico"
+  },
+  {
+    "id": "grab_744000151535660",
+    "title": "Business Analytics Specialist",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000151535660",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000151535660/business-analytics-specialist/",
+    "raw_description": "<p>Business Analytics Specialist</p><p>Team</p><p>Data Analytics</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>At Grab Support Regional Analytics (GSRA), we believe that delivering safe and exceptional services to our customers requires a collaborative effort. To ensure the highest quality of support in the industry, we rely on experienced and experienced data analysts to provide applicable insights that guide Grab Support Operations in making decisions that benefit our end-users. The GSRA team also humanizes big data, acts as a bridge between the technical and operational sides of the business, and uses data to align with strategic goals.</p><p>You will join a high-performing team that is deeply committed to delivering the best for our end users. You will directly report to the manager. The role will be based onsite.</p><p>Get to Know the Role</p><p>Be the expert in using data to measure and analyze business performance across markets and lines of business.</p><p>Explore business issues and opportunities, uncover insights, and identify targeted areas for business growth.</p><p>Partner with management and Grab Support Operations to deep dive into core issues and use data to find actionable solutions.</p><p>Collaborate with various expert teams to roll out effective products/services and expand Grab's universe of data for building richer insights.</p><p>Explore new data analytics capability for data-led initiatives across Grab.</p><p>The Critical Tasks You Will Perform</p><p>Help develop and implement data-driven analytics solutions for Grab Support and Regional COE functions, focusing on operational process optimization, enhancing performance metrics, and driving productivity improvements.</p><p>Partner with cross-functional teams to identify data requirements and design innovative analytical solutions or insights to address complex challenges effectively.</p><p>Conduct in-depth analyses of operational data, including business/impact analysis and text analysis, to identify areas for improvement and process optimization.</p><p>Develop dashboards to monitor the performance of Grab Support operations, support specialists, and the business overall.</p><p>Utilize advanced statistical and machine learning techniques, such as quasi-experimental methods, NLP & LLM, to analyze large datasets and derive meaningful insights that drive business decisions, improve support performance, and mitigate risks.</p><p>Stay up-to-date with industry trends, emerging technologies, and best practices in analytics and data science, leveraging this knowledge to enhance the organization's data-driven capabilities.</p><p>Collaborate with data engineering teams to ensure data quality, integrity, and accessibility, while building data pipelines and infrastructure for analytics projects.</p><p>Communicate complex analytical findings to all stakeholders, including senior management, through concise reports, presentations, and visualizations.</p>",
+    "raw_requirements": "<p>Business Analytics Specialist</p><p>Team</p><p>Data Analytics</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>At Grab Support Regional Analytics (GSRA), we believe that delivering safe and exceptional services to our customers requires a collaborative effort. To ensure the highest quality of support in the industry, we rely on experienced and experienced data analysts to provide applicable insights that guide Grab Support Operations in making decisions that benefit our end-users. The GSRA team also humanizes big data, acts as a bridge between the technical and operational sides of the business, and uses data to align with strategic goals.</p><p>You will join a high-performing team that is deeply committed to delivering the best for our end users. You will directly report to the manager. The role will be based onsite.</p><p>Get to Know the Role</p><p>Be the expert in using data to measure and analyze business performance across markets and lines of business.</p><p>Explore business issues and opportunities, uncover insights, and identify targeted areas for business growth.</p><p>Partner with management and Grab Support Operations to deep dive into core issues and use data to find actionable solutions.</p><p>Collaborate with various expert teams to roll out effective products/services and expand Grab's universe of data for building richer insights.</p><p>Explore new data analytics capability for data-led initiatives across Grab.</p><p>The Critical Tasks You Will Perform</p><p>Help develop and implement data-driven analytics solutions for Grab Support and Regional COE functions, focusing on operational process optimization, enhancing performance metrics, and driving productivity improvements.</p><p>Partner with cross-functional teams to identify data requirements and design innovative analytical solutions or insights to address complex challenges effectively.</p><p>Conduct in-depth analyses of operational data, including business/impact analysis and text analysis, to identify areas for improvement and process optimization.</p><p>Develop dashboards to monitor the performance of Grab Support operations, support specialists, and the business overall.</p><p>Utilize advanced statistical and machine learning techniques, such as quasi-experimental methods, NLP & LLM, to analyze large datasets and derive meaningful insights that drive business decisions, improve support performance, and mitigate risks.</p><p>Stay up-to-date with industry trends, emerging technologies, and best practices in analytics and data science, leveraging this knowledge to enhance the organization's data-driven capabilities.</p><p>Collaborate with data engineering teams to ensure data quality, integrity, and accessibility, while building data pipelines and infrastructure for analytics projects.</p><p>Communicate complex analytical findings to all stakeholders, including senior management, through concise reports, presentations, and visualizations.</p>",
+    "match_score": 100,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data science, data analyst, machine learning, analytics, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Presentation"
+      ],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "You will directly report to the manager",
+        "Partner with management and Grab Support Operations to deep dive into core issues and use data to find actionable solutions",
+        "The Critical Tasks You Will Perform Help develop and implement data",
+        "Develop dashboards to monitor the performance of Grab Support operations, support specialists, and the business overall"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "You will directly report to the manager",
+          "Partner with management and Grab Support Operations to deep dive into core issues and use data to find actionable solutions",
+          "The Critical Tasks You Will Perform Help develop and implement data",
+          "Develop dashboards to monitor the performance of Grab Support operations, support specialists, and the business overall",
+          "Communicate complex analytical findings to all stakeholders, including senior management, through concise reports, presentations, and visualizations"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
   },
   {
     "id": "grab_744000150930109",
@@ -6872,104 +6869,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "grab_744000149584204",
-    "title": "Senior Software Engineer, Backend",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000149584204",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000149584204/senior-software-engineer-backend/",
-    "raw_description": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Come join the Consumer Experience (CX) Engineering team - we work on a diverse set of consumer problems spanning across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services, user lifecycle covering user growth, engagement and loyalty and the critical platform mission of mobile application developer experience. We are on an exciting mission to connect consumers to Grab's marketplace by allowing them to discover and engage with Grab's services and partners.</p><p>Get to Know the Role</p><p>We are looking for a Senior Backend Engineer to join the CX Engineering team. You will design, build, and operate high-quality backend systems that power end-to-end consumer journeys across the Grab app—from login to the home and activity experiences.</p><p>You will champion AI-driven delivery, using AI-enabled engineering workflows to take well-defined requirements through planning, implementation, testing, debugging, and documentation to a review-ready merge request. You will ensure these workflows consistently produce secure, reliable, and maintainable solutions while helping raise engineering standards across the team.</p><p>You will report to the Engineering Manager. This is an on-site role based in Jakarta.</p><p>The Critical Tasks You Will Perform</p><p>Design, build, and operate backend services in Go, improving their availability, scalability, latency, reliability, and efficiency</p><p>Use AI-assisted engineering workflows to deliver solutions from well-defined specifications to review-ready merge requests, including planning, implementation, testing, debugging, and documentation</p><p>Critically validate AI-generated solutions for correctness, security, performance, maintainability, and alignment with engineering standards</p><p>Identify and lead AI-enabled engineering initiatives that improve developer productivity and delivery quality across the team</p><p>Work with engineering team to explore and create new design / architectures geared towards scale and performance</p><p>Participate in code and design reviews, helping maintain and raise the team’s engineering standards</p><p>Perform capacity planning, performance analysis, tuning, and optimization for large-scale services</p><p>Collaborate with product, design, and other engineering teams to define, refine, and prototype feature specifications</p><p>Work closely with infrastructure teams to build and scale backend services and conduct root-cause investigations</p><p>Diagnose and resolve complex problems across large-scale distributed systems</p><p>Proactively investigate and resolve production incidents during on-call rotations</p>",
-    "raw_requirements": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Come join the Consumer Experience (CX) Engineering team - we work on a diverse set of consumer problems spanning across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services, user lifecycle covering user growth, engagement and loyalty and the critical platform mission of mobile application developer experience. We are on an exciting mission to connect consumers to Grab's marketplace by allowing them to discover and engage with Grab's services and partners.</p><p>Get to Know the Role</p><p>We are looking for a Senior Backend Engineer to join the CX Engineering team. You will design, build, and operate high-quality backend systems that power end-to-end consumer journeys across the Grab app—from login to the home and activity experiences.</p><p>You will champion AI-driven delivery, using AI-enabled engineering workflows to take well-defined requirements through planning, implementation, testing, debugging, and documentation to a review-ready merge request. You will ensure these workflows consistently produce secure, reliable, and maintainable solutions while helping raise engineering standards across the team.</p><p>You will report to the Engineering Manager. This is an on-site role based in Jakarta.</p><p>The Critical Tasks You Will Perform</p><p>Design, build, and operate backend services in Go, improving their availability, scalability, latency, reliability, and efficiency</p><p>Use AI-assisted engineering workflows to deliver solutions from well-defined specifications to review-ready merge requests, including planning, implementation, testing, debugging, and documentation</p><p>Critically validate AI-generated solutions for correctness, security, performance, maintainability, and alignment with engineering standards</p><p>Identify and lead AI-enabled engineering initiatives that improve developer productivity and delivery quality across the team</p><p>Work with engineering team to explore and create new design / architectures geared towards scale and performance</p><p>Participate in code and design reviews, helping maintain and raise the team’s engineering standards</p><p>Perform capacity planning, performance analysis, tuning, and optimization for large-scale services</p><p>Collaborate with product, design, and other engineering teams to define, refine, and prototype feature specifications</p><p>Work closely with infrastructure teams to build and scale backend services and conduct root-cause investigations</p><p>Diagnose and resolve complex problems across large-scale distributed systems</p><p>Proactively investigate and resolve production incidents during on-call rotations</p>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: ai, developer, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "end consumer journeys across the Grab app—from login to the home and activity experiences",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "we work on a diverse set of consumer problems spanning across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services, user lifecycle covering user growth, engagement and loyalty and the critical platform mission of mobile application developer experience",
-        "You will report to the Engineering Manager",
-        "enabled engineering initiatives that improve developer productivity and delivery quality across the team Work with engineering team to explore and create new design / architectures geared towards scale and performance Participate in code and design reviews, helping maintain and raise the team’s engineering standards Perform capacity planning, performance analysis, tuning, and optimization for large",
-        "we work on a diverse set of consumer problems spanning across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services, user lifecycle covering user growth, engagement and loyalty and the critical platform mission of mobile application developer experience"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "we work on a diverse set of consumer problems spanning across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services, user lifecycle covering user growth, engagement and loyalty and the critical platform mission of mobile application developer experience",
-          "You will report to the Engineering Manager",
-          "enabled engineering initiatives that improve developer productivity and delivery quality across the team Work with engineering team to explore and create new design / architectures geared towards scale and performance Participate in code and design reviews, helping maintain and raise the team’s engineering standards Perform capacity planning, performance analysis, tuning, and optimization for large",
-          "we work on a diverse set of consumer problems spanning across core experiences that power the UX navigation and transaction funnels, search and discovery of content and services, user lifecycle covering user growth, engagement and loyalty and the critical platform mission of mobile application developer experience",
-          "You will report to the Engineering Manager"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "grab_744000149498279",
     "title": "Strategy and Planning GrabBike, Assistant Manager",
     "organization_id": "Grab",
@@ -7492,6 +7391,103 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
+    "id": "ioh_58702044",
+    "title": "Sales & Distribution Engineer",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-58702044",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Consumer Technology & Digital Innovation",
+    "url": "https://careers.ioh.co.id/job/Sales-&-Distribution-Engineer/58702044/",
+    "raw_description": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (on technical skills and relevant internship/project experience will be considered...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
+        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
+          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
+          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Fresh Graduate / Entry Level",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
     "id": "ioh_58702244",
     "title": "Mass Market & CVM Engineer",
     "organization_id": "IOH",
@@ -7581,103 +7577,6 @@
           "management concepts",
           "on technical role focused on the Mass Market segment — supporting the configuration, delivery, and troubleshooting of prepaid and Customer Value Management (CVM) products and campaigns",
           "Professional Experience: 1–3 years of experience in telco product configuration, prepaid/charging systems, campaign management, or application support"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh Graduate / Entry Level",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
-    "id": "ioh_58702044",
-    "title": "Sales & Distribution Engineer",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58702044",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Consumer Technology & Digital Innovation",
-    "url": "https://careers.ioh.co.id/job/Sales-&-Distribution-Engineer/58702044/",
-    "raw_description": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><strong>S &amp; D Engineer</strong></div>\n<p><strong>Job Role:</strong><br/>A hands-on technical role supporting the configuration, integration, and day-to-day delivery of distribution systems within the telco ecosystem. The role sits between business requirements and system implementation — executing configuration tasks, building and testing integrations, and troubleshooting data flow issues across DMS, ERP, and BSS layers under the guidance of senior engineers.<br/><br/></p>\n<p><strong>Key Responsibilities:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Requirement Support:</strong> Help gather and document business requirements for Sales and Supply Chain systems, and translate them into clear technical specifications and configuration tasks.</div>\n</li>\n<li>\n<div><strong>System Configuration:</strong> Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting.</div>\n</li>\n<li>\n<div><strong>Integration &amp; Interface Testing:</strong> Build, test, and troubleshoot API integrations between DMS, ERP, and Telco BSS — using Postman to validate endpoints, interpreting API specifications, and verifying request/response payloads to ensure data integrity.</div>\n</li>\n<li>\n<div><strong>Delivery Support &amp; Troubleshooting:</strong> Execute assigned tasks within system enhancement projects, run data validation queries, inspect application logs, and produce flowcharts/documentation for distribution scenarios.</div>\n</li>\n</ol>\n<p><strong>Educational Background &amp; Experience:</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>Academic:</strong> Bachelor's Degree (S1) in Computer Science, Informatics, Information Systems, Electrical Engineering, or Mathematics/Statistics.</div>\n</li>\n<li>\n<div><strong>Professional Experience:</strong> 1–3 years of experience in systems integration, application support, or supply chain/distribution technology. Fresh graduates with strong hands-on technical skills and relevant internship/project experience will be considered.</div>\n</li>\n</ol>\n<p><strong>Hard Skills (Technical Competence):</strong></p>\n<ol start=\"1\" style=\"list-style-type:decimal\">\n<li>\n<div><strong>API &amp; Integration:</strong> Practical experience testing and troubleshooting APIs with Postman; ability to read and interpret API specifications (REST/SOAP, JSON/XML) and trace integration issues across system interfaces.</div>\n</li>\n<li>\n<div><strong>Database:</strong> Ability to write and run SQL queries (SELECT, JOINs, filtering, aggregation) against distribution/subscriber data. Familiarity with Oracle SQL/PL/SQL is a plus.</div>\n</li>\n<li>\n<div><strong>Unix/Linux:</strong> Comfortable working on the command line for everyday tasks — navigating the filesystem, inspecting and grepping log files, checking process/service status, and basic troubleshooting.</div>\n</li>\n<li>\n<div><strong>Process &amp; Documentation:</strong> Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e.g., Jira) and configuration modules in distribution platforms.</div>\n</li>\n</ol>\n</span>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (on technical skills and relevant internship/project experience will be considered...)",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
-        "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-        "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e",
-          "System Configuration: Perform configuration of Distribution Management Systems (DMS) and support their integration with ERP and BSS layers for subscriber activation and financial posting",
-          "Process &amp; Documentation: Ability to map processes and create technical flowcharts; familiarity with requirement/ticketing tools (e"
         ]
       }
     },
@@ -8971,117 +8870,6 @@
     "logo": null
   },
   {
-    "id": 24685,
-    "title": "Searah Muara Bakau - Process Lead Operator",
-    "organization_id": 112065,
-    "organization_name": null,
-    "slug": "eni-muara-bakau-bv-process-lead-operator",
-    "type_name": "Karyawan Tetap",
-    "level": "Staff",
-    "location": "Kalimantan Timur (Indonesia)",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-09-23 00:00:00",
-    "group": null,
-    "url": "https://jobs.talentics.id/skk-migas/eni-muara-bakau-bv-process-lead-operator",
-    "raw_description": "<p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span> </span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Purpose:</span></b></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">The\n  process lead operator is to lead the controlling and monitoring platform\n  production operations at Offshore facilities. The process lead operator is\n  responsible to ensure the activities conducted in safety manner and\n  maximizing uptime and field production efficiency while minimizing the total\n  maintenance cost (production downtime, spare parts, manpower, etc.) and meet\n  daily production targets whilst complying with company guidelines and legal\n  requirements to deliver highest value to stakeholders without compromising\n  the Safe Operating Principals.</span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">To\n  manage respective people, vendor and organization with relevant\n  administration and report, also managing HSE function in the respective\n  department.</span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">Process\n  lead operator will implement the Asset and Operating Integrity policy and\n  procedure in production operations, also managing contractors who work in FPU\n  in safe and clean environment, and compliance to regulations.</span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">To\n  support the development project activities relevant to the FPU West Seno,\n  TLP-A and KNH Project – Production aspects offshore with focus on, start up\n  and shutdown gas and oil/condensate production facilities, ensuring that\n  commissioning and start-up operations of facilities are conducted in safe,\n  effective, and efficiently manner while meeting the company target and the\n  satisfaction of all parties.</span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">To\n  coordinate and support maintenance to guarantee the prompt, safe and\n  environment respecting execution of all Front-Line Operations Production\n  & Maintenance.</span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\"> </span></p>\n  \n \n \n  \n  <p class=\"TableParagraph\" style=\"text-align:justify;\"><b><span>General\n  Accountabilities and Responsibilities:</span></b></p>\n  <ul>\n   <li><span>Efficiency\n       of the production facilities</span></li>\n   <li><span>Respect\n       of all safety and environment protection procedures</span></li>\n   <li><span>Planning\n       the working activities of production operators during their shift.</span></li>\n   <li><span>Signing\n       the work permits for the execution of maintenance activities.</span></li>\n   <li><span>Supervising\n       the plant process parameter to meet the products requirements.</span></li>\n   <li><span>Gather\n       record and analyse data from process facilities.</span></li>\n   <li><span>Using\n       experience and knowledge to lead investigate and rectify operational\n       problems.</span></li>\n   <li><span>Trouble-shoots\n       minor operation problems and reports major problems.</span></li>\n   <li><span>Ensure\n       the safe start-up and shutdown of process facilities. </span></li>\n   <li><span>Produce\n       comprehensive and accurate shift and crew change handover notes.</span></li>\n   <li><span>Active\n       in mentoring program and develop less experienced operators.</span></li>\n   <li><span>Ensuring\n       that all activities are carried out according to the safety procedures.</span></li>\n   <li><span>Ensuring\n       that all activities are carried out according to environment protection\n       procedures.</span></li>\n   <li><span>Lead\n       and coordinate along with CCR and maintenance team for black start,\n       process upset and normal process condition.</span></li>\n   <li><span>Isolation\n       Coordinator duty during SIMOP and normal operation in PTW system.</span></li>\n   <li><span>Coordinate\n       to compile daily production report for daily gas and oil/condensate\n       production.</span></li>\n   <li><span>Liaise\n       with EKS Parties and POMA for daily production coordination.</span></li>\n   <li><span>Proactively\n       develop action plans to improve production performance that can add\n       value to the asset through improved reliability and uptime.</span></li>\n   <li><span>Champions\n       of Operation Production procedures.</span></li>\n  </ul>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span> </span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Health, Safety, Environment and Quality (HSEQ):</span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Comply\n  with rules and standards described in Company Policies, HSE Integrated\n  Management System and Procedures</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Report\n  all incidents</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Motivate\n  staff and colleagues to comply with HSE rules and standards</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Participate\n  in HSE related initiatives</span></p>",
-    "raw_requirements": "<p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span> </span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Qualifications & Experience:</span></b></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>Education: </span><span>Diploma (D3) in Engineering or equivalent</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>10 years of Oil\n  & Gas industry experience and 10 years experiences in Production Training\n  </span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">    <b>   </b></span></span><span><b>Training and\n  Certification:</b></span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>Employee\n  Induction including HSE Awareness</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>T-BOSIET\n  (1st time) or T-FOET (refreshment)</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>Advance Fire\n  Fighting</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>CSEA\n  (Confined Space Entrant Attendant)</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>SAP PM\n  Modules</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>Advance\n  First Aid</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>Oil Spill\n  Level-1</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">        \n  </span></span><span>BNSP-certified\n  candidates are highly preferred</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span><b>Language:</b> Fluent in\n  English and Bahasa Indonesia</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span> </span></p>\n  \n \n \n  \n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Required Competencies</span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Technical Competencies:</span></b></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Knowledge of\n  subsea system (dry and wet tree solution), Custody Metering System, FPU and FPU\n  Santan utility and process Unit</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Having good\n  experience as CCR Operator in similar oil and gas field.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Pre-commissioning,\n  commissioning and start-up experienced.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Ability to\n  conduct Operations Process upset – Troubleshooting in field facilities.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Having good\n  experience to operate and troubleshoot: Gas Export Compressor, GTG, EDG,\n  offshore Utilities system for floating facilities.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Production\n  Operations: Plant Management, Plant Prod Optimization</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Maintenance\n  Operations: Trouble shooting techniques knowledge.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Understand\n  well management program and drilling in shore, offshore shallow &\n  deepwater.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Compliance:\n  Health, Safety, Environment, Quality</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Familiar with\n  Custody Metering System – Oil & Gas, Multiphase Flow Meter (MPFM) &\n  Gas Chromatograph (GC)</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Having very\n  good understanding with PTW system</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">      \n  </span></span><span>Liaise with\n  contract owner for budgeting and execution plan along with Production\n  Supervisor.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span> </span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span> </span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Non-Technical\n  Competencies:</span></b></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>Integrity\n  & values</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>Driving for\n  results</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>Value\n  Creation Focus</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>Teamwork\n  & cooperation</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span>Initiative</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span style=\"color:#000000;\">Analytical thinking</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span style=\"color:#000000;\">Information seeking</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span style=\"color:#000000;\">Concern for order</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span style=\"color:#000000;\">Self-confidence</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       </span></span><span style=\"color:#000000;\">Team player</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span style=\"color:#000000;\"> </span></p>\n  \n \n \n  \n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Working Conditions:</span></b></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">Offshore\n  based – Rotational (FPSO) </span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span> </span></p>",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 10 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Qualifications & Experience:",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Teamwork"
-      ],
-      "mandatory_requirements": [
-        "Qualifications & Experience:",
-        "Language: Fluent in English and Bahasa Indonesia Required Competencies Technical Competencies:"
-      ],
-      "preferred_requirements": [
-        "certified candidates are highly preferred"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Production Operations: Plant Management, Plant Prod Optimization",
-        "Understand well management program and drilling in shore, offshore shallow & deepwater",
-        "The process lead operator is responsible to ensure the activities conducted in safety manner and maximizing uptime and field production efficiency while minimizing the total maintenance cost (production downtime, spare parts, manpower, etc",
-        "To manage respective people, vendor and organization with relevant administration and report, also managing HSE function in the respective department"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Qualifications & Experience:",
-          "Language: Fluent in English and Bahasa Indonesia Required Competencies Technical Competencies:"
-        ],
-        "preferred": [
-          "certified candidates are highly preferred"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Production Operations: Plant Management, Plant Prod Optimization",
-          "Understand well management program and drilling in shore, offshore shallow & deepwater",
-          "The process lead operator is responsible to ensure the activities conducted in safety manner and maximizing uptime and field production efficiency while minimizing the total maintenance cost (production downtime, spare parts, manpower, etc",
-          "To manage respective people, vendor and organization with relevant administration and report, also managing HSE function in the respective department",
-          "To support the development project activities relevant to the FPU West Seno, TLP"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Expert / Lead (10+ tahun)",
-      "exp_years": 10
-    },
-    "source": "Talentics",
-    "logo": null
-  },
-  {
     "id": 24671,
     "title": "Searah Muara Bakau - Mechanical Specialist",
     "organization_id": 112065,
@@ -9425,6 +9213,110 @@
     },
     "source": "Talentics",
     "logo": null
+  },
+  {
+    "id": "grab_744000148920619",
+    "title": "Senior Software Engineer, Backend - Business Platform",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000148920619",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000148920619/senior-software-engineer-backend-business-platform/",
+    "raw_description": "<p>Senior Software Engineer, Backend - Business Platform</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>We're looking for a Senior Backend Engineer to join our Business Platform team in Jakarta, Indonesia. The Business Platform powers the backend capabilities that enable businesses and enterprises to onboard, operate, grow, and serve consumers at scale across Southeast Asia.</p><p>Get to Know the Role</p><p>In this role, you will design, build, and evolve backend platform services that manage business profiles, store metadata, business configuration, and related operational workflows. You'll work on systems that sit close to the source of truth for business data and workflows—systems that directly influence how businesses set up their operations, how internal teams operate reliably, and how downstream products consume trusted business information. The ideal candidate will demonstrate strong ownership, system design thinking, and a commitment to building platforms that simplify complexity rather than spread it around. This is an onsite role based in Jakarta.</p><p>The Critical Tasks You Will Perform</p><p>Lead the architectural design of microservices, high-throughput APIs, and data storage solutions built to handle scale and high availability.</p><p>Diagnose high-stakes performance bottlenecks, refactor core infrastructure, and ensure low latency across distributed systems.</p><p>Own end-to-end delivery of mission-critical systems—from writing technical design documents (TDDs) and scoping projects to deploying and maintaining production features.</p><p>Drive code quality across the team through high-bar code reviews, system reliability standards, and technical mentorship of mid/junior engineers.</p><p>Oversee cloud infrastructure (AWS/GCP/Azure), automated CI/CD pipelines, security protocols, and robust incident management/observability to guarantee strict SLAs.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>5+ years in backend/platform engineering with high-scale production systems.</p><p>Strong proficiency in Go, Java, or Kotlin.</p><p>Deep knowledge of distributed systems, service-oriented architecture, microservices, APIs, data modeling, and eventual consistency.</p><p>Tech Stack:</p><p>Cloud (AWS/GCP/Azure), containerization (Docker/Kubernetes), CI/CD pipelines, caching, and observability.</p>",
+    "raw_requirements": "<p>Senior Software Engineer, Backend - Business Platform</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>We're looking for a Senior Backend Engineer to join our Business Platform team in Jakarta, Indonesia. The Business Platform powers the backend capabilities that enable businesses and enterprises to onboard, operate, grow, and serve consumers at scale across Southeast Asia.</p><p>Get to Know the Role</p><p>In this role, you will design, build, and evolve backend platform services that manage business profiles, store metadata, business configuration, and related operational workflows. You'll work on systems that sit close to the source of truth for business data and workflows—systems that directly influence how businesses set up their operations, how internal teams operate reliably, and how downstream products consume trusted business information. The ideal candidate will demonstrate strong ownership, system design thinking, and a commitment to building platforms that simplify complexity rather than spread it around. This is an onsite role based in Jakarta.</p><p>The Critical Tasks You Will Perform</p><p>Lead the architectural design of microservices, high-throughput APIs, and data storage solutions built to handle scale and high availability.</p><p>Diagnose high-stakes performance bottlenecks, refactor core infrastructure, and ensure low latency across distributed systems.</p><p>Own end-to-end delivery of mission-critical systems—from writing technical design documents (TDDs) and scoping projects to deploying and maintaining production features.</p><p>Drive code quality across the team through high-bar code reviews, system reliability standards, and technical mentorship of mid/junior engineers.</p><p>Oversee cloud infrastructure (AWS/GCP/Azure), automated CI/CD pipelines, security protocols, and robust incident management/observability to guarantee strict SLAs.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>5+ years in backend/platform engineering with high-scale production systems.</p><p>Strong proficiency in Go, Java, or Kotlin.</p><p>Deep knowledge of distributed systems, service-oriented architecture, microservices, APIs, data modeling, and eventual consistency.</p><p>Tech Stack:</p><p>Cloud (AWS/GCP/Azure), containerization (Docker/Kubernetes), CI/CD pipelines, caching, and observability.</p>",
+    "match_score": 90,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Read more Skills you need What Essential Skills You Will Need 5+ years in backend/platform engineering with high",
+        "Read more Skills you need What Essential Skills You Will Need 5+ years in backend/platform engineering with high"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Get to Know the Role In this role, you will design, build, and evolve backend platform services that manage business profiles, store metadata, business configuration, and related operational workflows",
+        "throughput APIs, and data storage solutions built to handle scale and high availability",
+        "Oversee cloud infrastructure (AWS/GCP/Azure), automated CI/CD pipelines, security protocols, and robust incident management/observability to guarantee strict SLAs",
+        "Get to Know the Role In this role, you will design, build, and evolve backend platform services that manage business profiles, store metadata, business configuration, and related operational workflows"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Read more Skills you need What Essential Skills You Will Need 5+ years in backend/platform engineering with high",
+          "Read more Skills you need What Essential Skills You Will Need 5+ years in backend/platform engineering with high"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Get to Know the Role In this role, you will design, build, and evolve backend platform services that manage business profiles, store metadata, business configuration, and related operational workflows",
+          "throughput APIs, and data storage solutions built to handle scale and high availability",
+          "Oversee cloud infrastructure (AWS/GCP/Azure), automated CI/CD pipelines, security protocols, and robust incident management/observability to guarantee strict SLAs",
+          "Get to Know the Role In this role, you will design, build, and evolve backend platform services that manage business profiles, store metadata, business configuration, and related operational workflows",
+          "throughput APIs, and data storage solutions built to handle scale and high availability"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
   },
   {
     "id": "ioh_58712244",
@@ -11324,11 +11216,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-6",
+    "id": "PTC-7",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-6",
+    "slug": "ptc-PTC-7",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11419,11 +11311,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-12",
+    "id": "PTC-14",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-12",
+    "slug": "ptc-PTC-14",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11514,11 +11406,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-18",
+    "id": "PTC-21",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-18",
+    "slug": "ptc-PTC-21",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11609,11 +11501,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-24",
+    "id": "PTC-28",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-24",
+    "slug": "ptc-PTC-28",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11704,106 +11596,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-30",
+    "id": "PTC-35",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-30",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "Sulawesi Utara, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
-    "match_score": 85,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Mid Level (1-3 tahun)",
-      "exp_years": 2
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-36",
-    "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-36",
+    "slug": "ptc-PTC-35",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11989,11 +11786,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-48",
+    "id": "PTC-49",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-48",
+    "slug": "ptc-PTC-49",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -12084,11 +11881,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-54",
+    "id": "PTC-56",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-54",
+    "slug": "ptc-PTC-56",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -12179,11 +11976,106 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-60",
+    "id": "PTC-63",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-60",
+    "slug": "ptc-PTC-63",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "Sulawesi Utara, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
+    "match_score": 85,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan minimal S",
+        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan minimal S",
+          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Mid Level (1-3 tahun)",
+      "exp_years": 2
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-70",
+    "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-70",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -14374,11 +14266,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-9",
+    "id": "PTC-10",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-9",
+    "slug": "ptc-PTC-10",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14471,11 +14363,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-15",
+    "id": "PTC-17",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-15",
+    "slug": "ptc-PTC-17",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14568,11 +14460,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-21",
+    "id": "PTC-24",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-21",
+    "slug": "ptc-PTC-24",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14665,11 +14557,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-27",
+    "id": "PTC-31",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-27",
+    "slug": "ptc-PTC-31",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14762,108 +14654,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-33",
+    "id": "PTC-38",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-33",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan Minimal D",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Komunikasi"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan Minimal D",
-        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
-        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan Minimal D",
-          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
-          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-39",
-    "title": "Talent Candidate PTC Fresh Graduate",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-39",
+    "slug": "ptc-PTC-38",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -15053,11 +14848,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-51",
+    "id": "PTC-52",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-51",
+    "slug": "ptc-PTC-52",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -15150,11 +14945,108 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-57",
+    "id": "PTC-59",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-57",
+    "slug": "ptc-PTC-59",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "DKI Jakarta, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan Minimal D",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Komunikasi"
+      ],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan Minimal D",
+        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
+        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan Minimal D",
+          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
+          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-66",
+    "title": "Talent Candidate PTC Fresh Graduate",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-66",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -15419,6 +15311,93 @@
     },
     "source": "Grab",
     "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": 14499,
+    "title": "Production Operator",
+    "organization_id": "2",
+    "organization_name": "Indoagri - PT. Salim Ivomas Pratama Tbk. - PLT",
+    "slug": "indofood-14499",
+    "type_name": "Karyawan Tetap",
+    "level": "Experienced",
+    "location": "Perak Barat - Surabaya - Surabaya",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "23 Nov 2026",
+    "group": "Operation",
+    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14499",
+    "raw_description": "<p>Executing production operations in compliance with etablished SOPs<br />\nOperating production machinery<br />\nMaintaining and keeping the workspace clean</p>\n",
+    "raw_requirements": "<p>Male<br />\nMinimum education: High school diploma or equivalent<br />\nMinimum 1 year experience as a production operator<br />\nWilling to work shifts<br />\nLocation: Surabaya</p>\n",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan ini dikhususkan atau diutamakan untuk Pria."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Male Only",
+      "experience": "Fresh / Junior (0-1 tahun)",
+      "exp_years": 1
+    },
+    "source": "Indofood",
+    "logo": null
   },
   {
     "id": 14447,
@@ -16173,92 +16152,6 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "grab_744000148920619",
-    "title": "Senior Software Engineer, Backend - Business Platform",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000148920619",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000148920619/senior-software-engineer-backend-business-platform/",
-    "raw_description": "<p>Posisi: <strong>Senior Software Engineer, Backend - Business Platform</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "raw_requirements": "<p>Posisi: <strong>Senior Software Engineer, Backend - Business Platform</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 0,
-        "status": "Low Match",
-        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "grab_744000148668029",
     "title": "Senior Insider Threat Engineer",
     "organization_id": "Grab",
@@ -16838,6 +16731,182 @@
     "nlp_breakdown": {
       "education_summary": "S1 / D3 jurusan relevan atau setara",
       "experience_summary": "Consumer Experience Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Lead Software Engineer, Backend",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": "grab_744000143637779",
+    "title": "Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS)",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000143637779",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000143637779/lead-infrastructure-engineer-managed-kubernetes-platform-meks/",
+    "raw_description": "<p>Posisi: <strong>Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS)</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "raw_requirements": "<p>Posisi: <strong>Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS)</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 0,
+        "status": "Low Match",
+        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Posisi: Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS) Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS) Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Posisi: Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS) Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Lead Infrastructure Engineer, Managed Kubernetes Platform (MEKS) Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": "grab_744000142800280",
+    "title": "Senior Software Engineer, Backend",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000142800280",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000142800280/senior-software-engineer-backend/",
+    "raw_description": "<p>Posisi: <strong>Senior Software Engineer, Backend</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "raw_requirements": "<p>Posisi: <strong>Senior Software Engineer, Backend</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 0,
+        "status": "Low Match",
+        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
       "mandatory_skills": [],
       "preferred_skills": [],
       "soft_skills": [],
