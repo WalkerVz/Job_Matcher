@@ -1,1055 +1,5 @@
 [
   {
-    "id": "PTC-2",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-2",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-12",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-12",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-22",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-22",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-32",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-32",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-42",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-42",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-52",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-52",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-62",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-62",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-72",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-72",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-82",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-82",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-92",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-92",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
     "id": "sawitpro_11",
     "title": "Website & SEO Specialist (Pekanbaru)",
     "organization_id": "SawitPRO",
@@ -1699,132 +649,6 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
-    "id": "ioh_58995744",
-    "title": "AVP Enterprise Supply Chain Architect",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58995744",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Digital Corporate",
-    "url": "https://careers.ioh.co.id/job/AVP-Enterprise-Supply-Chain-Architect/58995744/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, developer, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Has an Excellent knowledge of Agile Framework and Waterfall Methodology Extensive experience in managing end",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Communication",
-        "Flexibility",
-        "Leadership",
-        "Presentation"
-      ],
-      "mandatory_requirements": [
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-        "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes"
-      ],
-      "preferred_requirements": [
-        "Oracle Fusion certification is an advantage",
-        "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
-        "Oracle Fusion certification is an advantage"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
-        "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
-        "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
-        "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering"
-        ],
-        "preferred": [
-          "Oracle Fusion certification is an advantage",
-          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
-          "Oracle Fusion certification is an advantage",
-          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
-          "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
-          "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
-          "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
-          "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
     "id": "ioh_58995944",
     "title": "AVP Core Finance Architect",
     "organization_id": "IOH",
@@ -1933,6 +757,132 @@
         "responsibilities": [
           "Job Description RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands",
           "DOMAIN is defined as all related CORE FINANCE System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
+          "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
+          "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
+          "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": "ioh_58995744",
+    "title": "AVP Enterprise Supply Chain Architect",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-58995744",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Digital Corporate",
+    "url": "https://careers.ioh.co.id/job/AVP-Enterprise-Supply-Chain-Architect/58995744/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order-to-Cash, Procure-to-Pay, supply chain, procurement, distribution, fulfillment, inventory, sales/channel transaction flows, payment gateway handover, and integration with Oracle Fusion Finance. This role ensures that end-to-end enterprise supply chain solutions are properly designed, integrated, controlled, scalable, and aligned with business, finance, cloud, operation and enterprise architecture requirements.</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualifications</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p> </p>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p>\n<p> </p>\n<ul>\n<li> </li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p><strong> </strong></p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Enterprise Supply Chain Flow system, Enterprise Resource Planning (ERP)</li>\n<li>Strong understanding of Enterprise Architecture Oracle Fusion SCM, Procurement, Inventory, and related enterprise supply chain capabilities. </li>\n<li>Good understanding of Oracle Fusion Finance integration and financial impact from O2C, P2P, inventory, fulfillment, channel, and payment-related transactions.</li>\n<li>Strong knowledge of Order-to-Cash and Procure-to-Pay business processes.</li>\n<li>Understanding of procurement, supplier flow, purchasing, receiving, inventory, distribution, fulfillment, sales/channel transaction flow, payment gateway handover, billing, reconciliation, settlement, and reporting.</li>\n<li>Good understanding of Oracle Cloud concepts, including SaaS, PaaS, OIC, APIs, workflow, cloud extension, integration, security, and monitoring.</li>\n<li>Ability to translate business requirements into solution architecture, functional design, integration requirements, and implementation approach.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, root cause analysis, and cross-functional coordination. </li>\n<li>Ability to balance standard platform capability, customization, automation, control, scalability, and maintainability.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.</li>\n<li>Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, developer, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Has an Excellent knowledge of Agile Framework and Waterfall Methodology Extensive experience in managing end",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Communication",
+        "Flexibility",
+        "Leadership",
+        "Presentation"
+      ],
+      "mandatory_requirements": [
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+        "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes"
+      ],
+      "preferred_requirements": [
+        "Oracle Fusion certification is an advantage",
+        "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
+        "Oracle Fusion certification is an advantage"
+      ],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
+        "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
+        "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
+        "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+          "Qualifications Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering"
+        ],
+        "preferred": [
+          "Oracle Fusion certification is an advantage",
+          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
+          "Oracle Fusion certification is an advantage",
+          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage"
+        ],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Job Description RESPONSIBLE for leading the solution architecture and functional ownership of enterprise supply chain capabilities, covering Order",
+          "DOMAIN is defined as all related ENTERPRISE SUPPLY CHAIN System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
           "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
           "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
           "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
@@ -4412,126 +3362,6 @@
     },
     "source": "Grab",
     "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "ioh_58258044",
-    "title": "Sr Officer-Network Operation Assurance",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58258044",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Network Operations",
-    "url": "https://careers.ioh.co.id/job/Sr-Officer-Network-Operation-Assurance/58258044/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li style=\"text-align:justify\">The Senior Officer – Network Fault Management is responsible for ensuring end-to-end network availability through proactive fault detection, incident management, service restoration, and continuous operational improvement. The role leverages artificial intelligence (AI), automation, and advanced analytics to predict network failures, accelerate root cause identification, reduce mean time to restore (MTTR), and improve customer experience across core, RAN, transport, IP, and infrastructure.</li>\n<li style=\"text-align:justify\">Ensure network communications run efficiently and effectively. You will be responsible for identifying, analyzing, and resolving issues within the network infrastructure to minimize disruptions to service and maintain high levels of network performance and availability. This includes managing incidents, managing problems, and improving those problems. </li>\n<li style=\"text-align:justify\">Continuously monitoring the health and performance of the network. Proactive monitoring allows early detection of potential issues before they escalate into major outages.</li>\n<li style=\"text-align:justify\">Identifying the root cause of incidents to prevent them from recurring. involves analyzing incident data, performing root cause analysis, and implementing corrective actions to address underlying problems.</li>\n<li style=\"text-align:justify\">Maintaining accurate and up-to-date documentation on systems, configurations, and procedures are essential for efficient. troubleshooting and knowledge sharing.</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\">Qualification:</p>\n<ul>\n<li style=\"text-align:justify\">Minimum bachelor’s degree in engineering, telecommunication, IT related field.</li>\n<li style=\"text-align:justify\">Fluent in English both oral and written.</li>\n<li style=\"text-align:justify\">Solid integrity, professionally and personally.</li>\n<li style=\"text-align:justify\">Strong initiatives in self-development.</li>\n<li style=\"text-align:justify\">Commitment to quality and timely result of the works.</li>\n<li style=\"text-align:justify\">A good communication especially in English.</li>\n<li style=\"text-align:justify\">Able to work independent and under pressure.</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\">Experience:</p>\n<ul>\n<li style=\"text-align:justify\">Minimum 5 years of working experience in Transport/RAN/Core and platform equipment.</li>\n<li style=\"text-align:justify\">Minimum 10 years experiences in Network function in Telco company.</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\">Skills:</p>\n<ul>\n<li style=\"text-align:justify\">Analytical Thinking, Customer Oriented.</li>\n<li style=\"text-align:justify\">Able to operate Operating System, MS, Office Application, etc.</li>\n<li style=\"text-align:justify\">Able to operate Craft Terminal (LCT/NCT), Management System (NMS), etc</li>\n<li style=\"text-align:justify\">Understand technology of Transport (DWDM, SDH, MW, IP, Core, etc) &amp; understanding E2E telcos network.</li>\n<li style=\"text-align:justify\">Artificial intelligence enabler</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\"><span><strong>Related Experience:</strong>Experience with incident, problem management processes, L2/3 support, ITIL framework, and service management principles is preferred.</span></p>\n<p style=\"text-align:justify\"><span><strong>Skills:</strong>Technical proficiency, troubleshooting skills, Problem solving, analytical thinking, teamwork, attention to details, communication, documentation, customer focus, data analysis, continuous learning, Certifications such as CCNA, CCNP, or equivalent are a plus.</span></p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Competencies</h2> </div><div><div>Analysis</div><div>Quality Orientation</div><div>Continuous Improvement</div><div>Collaborating</div><div>Applied Learning</div><div>Actively seek feedback, even when it may be critical.</div><div>Understand how his/her actions affect others.</div><div>Take steps to improve based on feedback received.</div><div>Regularly reflect on his/her performance to identify areas for improvement.</div><div>Recognize the strengths and use them effectively.</div><div>Openly acknowledge the mistakes.</div><div>Comfortable to accept criticism from others.</div><div>Change behavior based on reflection.</div><div>Quickly shift the thinking when circumstances change.</div><div>Feel comfortable working with incomplete or ambiguous information.</div><div>Challenge assumptions, even the seniors’, when solving problems.</div><div>Effectively handle problems with lack of clear structure.</div><div>Enjoy solving problems that do not have clear or immediate answers.</div><div>Challenge conventional thinking to explore better solutions.</div><div>Ease in handling complex analytical challenges.</div><div>Initiating Action</div><div>Building Positive Working Relationships</div><div>Work Standards</div><div>Planning and Organizing</div><div>Customer Excellence</div></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Certifications</h2> </div><div></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li style=\"text-align:justify\">The Senior Officer – Network Fault Management is responsible for ensuring end-to-end network availability through proactive fault detection, incident management, service restoration, and continuous operational improvement. The role leverages artificial intelligence (AI), automation, and advanced analytics to predict network failures, accelerate root cause identification, reduce mean time to restore (MTTR), and improve customer experience across core, RAN, transport, IP, and infrastructure.</li>\n<li style=\"text-align:justify\">Ensure network communications run efficiently and effectively. You will be responsible for identifying, analyzing, and resolving issues within the network infrastructure to minimize disruptions to service and maintain high levels of network performance and availability. This includes managing incidents, managing problems, and improving those problems. </li>\n<li style=\"text-align:justify\">Continuously monitoring the health and performance of the network. Proactive monitoring allows early detection of potential issues before they escalate into major outages.</li>\n<li style=\"text-align:justify\">Identifying the root cause of incidents to prevent them from recurring. involves analyzing incident data, performing root cause analysis, and implementing corrective actions to address underlying problems.</li>\n<li style=\"text-align:justify\">Maintaining accurate and up-to-date documentation on systems, configurations, and procedures are essential for efficient. troubleshooting and knowledge sharing.</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\">Qualification:</p>\n<ul>\n<li style=\"text-align:justify\">Minimum bachelor’s degree in engineering, telecommunication, IT related field.</li>\n<li style=\"text-align:justify\">Fluent in English both oral and written.</li>\n<li style=\"text-align:justify\">Solid integrity, professionally and personally.</li>\n<li style=\"text-align:justify\">Strong initiatives in self-development.</li>\n<li style=\"text-align:justify\">Commitment to quality and timely result of the works.</li>\n<li style=\"text-align:justify\">A good communication especially in English.</li>\n<li style=\"text-align:justify\">Able to work independent and under pressure.</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\">Experience:</p>\n<ul>\n<li style=\"text-align:justify\">Minimum 5 years of working experience in Transport/RAN/Core and platform equipment.</li>\n<li style=\"text-align:justify\">Minimum 10 years experiences in Network function in Telco company.</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\">Skills:</p>\n<ul>\n<li style=\"text-align:justify\">Analytical Thinking, Customer Oriented.</li>\n<li style=\"text-align:justify\">Able to operate Operating System, MS, Office Application, etc.</li>\n<li style=\"text-align:justify\">Able to operate Craft Terminal (LCT/NCT), Management System (NMS), etc</li>\n<li style=\"text-align:justify\">Understand technology of Transport (DWDM, SDH, MW, IP, Core, etc) &amp; understanding E2E telcos network.</li>\n<li style=\"text-align:justify\">Artificial intelligence enabler</li>\n</ul>\n<p style=\"text-align:justify\"> </p>\n<p style=\"text-align:justify\"><span><strong>Related Experience:</strong>Experience with incident, problem management processes, L2/3 support, ITIL framework, and service management principles is preferred.</span></p>\n<p style=\"text-align:justify\"><span><strong>Skills:</strong>Technical proficiency, troubleshooting skills, Problem solving, analytical thinking, teamwork, attention to details, communication, documentation, customer focus, data analysis, continuous learning, Certifications such as CCNA, CCNP, or equivalent are a plus.</span></p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Competencies</h2> </div><div><div>Analysis</div><div>Quality Orientation</div><div>Continuous Improvement</div><div>Collaborating</div><div>Applied Learning</div><div>Actively seek feedback, even when it may be critical.</div><div>Understand how his/her actions affect others.</div><div>Take steps to improve based on feedback received.</div><div>Regularly reflect on his/her performance to identify areas for improvement.</div><div>Recognize the strengths and use them effectively.</div><div>Openly acknowledge the mistakes.</div><div>Comfortable to accept criticism from others.</div><div>Change behavior based on reflection.</div><div>Quickly shift the thinking when circumstances change.</div><div>Feel comfortable working with incomplete or ambiguous information.</div><div>Challenge assumptions, even the seniors’, when solving problems.</div><div>Effectively handle problems with lack of clear structure.</div><div>Enjoy solving problems that do not have clear or immediate answers.</div><div>Challenge conventional thinking to explore better solutions.</div><div>Ease in handling complex analytical challenges.</div><div>Initiating Action</div><div>Building Positive Working Relationships</div><div>Work Standards</div><div>Planning and Organizing</div><div>Customer Excellence</div></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Certifications</h2> </div><div></div></div></div>\n</span>",
-    "match_score": 100,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data analysis, excel, ai, analytics, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 10 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Experience: Minimum 5 years of working experience in Transport/RAN/Core and platform equipment",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Attention To Detail",
-        "Communication",
-        "Problem Solving",
-        "Teamwork"
-      ],
-      "mandatory_requirements": [
-        "date documentation on systems, configurations, and procedures are essential for efficient",
-        "Qualification: Minimum bachelor’s degree in engineering, telecommunication, IT related field",
-        "date documentation on systems, configurations, and procedures are essential for efficient",
-        "Qualification: Minimum bachelor’s degree in engineering, telecommunication, IT related field"
-      ],
-      "preferred_requirements": [
-        "Artificial intelligence enabler Related Experience: Experience with incident, problem management processes, L2/3 support, ITIL framework, and service management principles is preferred",
-        "Artificial intelligence enabler Related Experience: Experience with incident, problem management processes, L2/3 support, ITIL framework, and service management principles is preferred"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Job Description The Senior Officer – Network Fault Management is responsible for ensuring end",
-        "end network availability through proactive fault detection, incident management, service restoration, and continuous operational improvement",
-        "You will be responsible for identifying, analyzing, and resolving issues within the network infrastructure to minimize disruptions to service and maintain high levels of network performance and availability",
-        "Able to operate Craft Terminal (LCT/NCT), Management System (NMS), etc Understand technology of Transport (DWDM, SDH, MW, IP, Core, etc) &amp; understanding E2E telcos network"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "date documentation on systems, configurations, and procedures are essential for efficient",
-          "Qualification: Minimum bachelor’s degree in engineering, telecommunication, IT related field",
-          "date documentation on systems, configurations, and procedures are essential for efficient",
-          "Qualification: Minimum bachelor’s degree in engineering, telecommunication, IT related field"
-        ],
-        "preferred": [
-          "Artificial intelligence enabler Related Experience: Experience with incident, problem management processes, L2/3 support, ITIL framework, and service management principles is preferred",
-          "Artificial intelligence enabler Related Experience: Experience with incident, problem management processes, L2/3 support, ITIL framework, and service management principles is preferred"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Job Description The Senior Officer – Network Fault Management is responsible for ensuring end",
-          "end network availability through proactive fault detection, incident management, service restoration, and continuous operational improvement",
-          "You will be responsible for identifying, analyzing, and resolving issues within the network infrastructure to minimize disruptions to service and maintain high levels of network performance and availability",
-          "Able to operate Craft Terminal (LCT/NCT), Management System (NMS), etc Understand technology of Transport (DWDM, SDH, MW, IP, Core, etc) &amp; understanding E2E telcos network",
-          "Effectively handle problems with lack of clear structure"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Expert / Lead (10+ tahun)",
-      "exp_years": 10
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
     "id": "ioh_59048444",
@@ -10599,11 +9429,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-10",
+    "id": "PTC-9",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-10",
+    "slug": "ptc-PTC-9",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -10694,11 +9524,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-20",
+    "id": "PTC-18",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-20",
+    "slug": "ptc-PTC-18",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -10789,11 +9619,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-30",
+    "id": "PTC-27",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-30",
+    "slug": "ptc-PTC-27",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -10884,11 +9714,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-40",
+    "id": "PTC-36",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-40",
+    "slug": "ptc-PTC-36",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -10979,11 +9809,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-50",
+    "id": "PTC-45",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-50",
+    "slug": "ptc-PTC-45",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11074,11 +9904,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-60",
+    "id": "PTC-54",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-60",
+    "slug": "ptc-PTC-54",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11169,11 +9999,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-70",
+    "id": "PTC-63",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-70",
+    "slug": "ptc-PTC-63",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11264,11 +10094,106 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-80",
+    "id": "PTC-72",
     "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-80",
+    "slug": "ptc-PTC-72",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "Sulawesi Utara, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
+    "match_score": 85,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan minimal S",
+        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan minimal S",
+          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Mid Level (1-3 tahun)",
+      "exp_years": 2
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-81",
+    "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-81",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -11364,101 +10289,6 @@
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
     "slug": "ptc-PTC-90",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "Sulawesi Utara, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 semua Jurusan</li>\n<li>Pengalaman kerja minimal 2 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
-    "match_score": 85,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 semua Jurusan Pengalaman kerja minimal 2 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Mid Level (1-3 tahun)",
-      "exp_years": 2
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-100",
-    "title": "Receiving, Storage and Distribution Operation Support – Bitung, Sulawesi Utara",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-100",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "Sulawesi Utara, Indonesia",
@@ -13461,11 +12291,11 @@
     "logo": null
   },
   {
-    "id": "PTC-3",
+    "id": "PTC-2",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-3",
+    "slug": "ptc-PTC-2",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13740,11 +12570,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-13",
+    "id": "PTC-11",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-13",
+    "slug": "ptc-PTC-11",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13837,11 +12667,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-23",
+    "id": "PTC-20",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-23",
+    "slug": "ptc-PTC-20",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13934,11 +12764,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-33",
+    "id": "PTC-29",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-33",
+    "slug": "ptc-PTC-29",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14031,11 +12861,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-43",
+    "id": "PTC-38",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-43",
+    "slug": "ptc-PTC-38",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14128,11 +12958,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-53",
+    "id": "PTC-47",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-53",
+    "slug": "ptc-PTC-47",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14225,11 +13055,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-63",
+    "id": "PTC-56",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-63",
+    "slug": "ptc-PTC-56",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14322,11 +13152,108 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-73",
+    "id": "PTC-65",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-73",
+    "slug": "ptc-PTC-65",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "DKI Jakarta, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan Minimal D",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Komunikasi"
+      ],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan Minimal D",
+        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
+        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan Minimal D",
+          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
+          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-74",
+    "title": "Talent Candidate PTC Fresh Graduate",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-74",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -14424,103 +13351,6 @@
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
     "slug": "ptc-PTC-83",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan Minimal D",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Komunikasi"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan Minimal D",
-        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
-        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan Minimal D",
-          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
-          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-93",
-    "title": "Talent Candidate PTC Fresh Graduate",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-93",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
