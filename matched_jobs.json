@@ -105,11 +105,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-14",
+    "id": "PTC-11",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-14",
+    "slug": "ptc-PTC-11",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -210,11 +210,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-25",
+    "id": "PTC-19",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-25",
+    "slug": "ptc-PTC-19",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -315,11 +315,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-36",
+    "id": "PTC-27",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-36",
+    "slug": "ptc-PTC-27",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -420,11 +420,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-47",
+    "id": "PTC-35",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-47",
+    "slug": "ptc-PTC-35",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -525,11 +525,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-58",
+    "id": "PTC-43",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-58",
+    "slug": "ptc-PTC-43",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -630,11 +630,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-69",
+    "id": "PTC-51",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-69",
+    "slug": "ptc-PTC-51",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -735,11 +735,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-80",
+    "id": "PTC-59",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-80",
+    "slug": "ptc-PTC-59",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -840,11 +840,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-91",
+    "id": "PTC-67",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-91",
+    "slug": "ptc-PTC-67",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -945,11 +945,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-102",
+    "id": "PTC-75",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-102",
+    "slug": "ptc-PTC-75",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -1165,6 +1165,114 @@
     "url": "https://www.sawitpro.id/jobsdetails/senior-fullstack-engineer-(web)---pekanbaru-",
     "raw_description": "<p>< Kembali</p><p>Senior Software Engineer - Fullstack, Product (Pekanbaru)</p><p>Daftar Sekarang</p><p>Pekanbaru, Pekanbaru City, Riau, Indonesia</p><p>Tipe Pekerjaan</p><p>Full-Time (WFO)</p><p>Deskripsi Pekerjaan</p><p>Lead the development of responsive web applications (React, Angular, Vue), ensuring consistency in UX/UI and functionality.</p><p>Design, build, and maintain backend services in Go, delivering scalable, low-latency APIs that power web and mobile clients.</p><p>Architect scalable solutions across the full stack, ensuring maintainability, performance, and security while advocating for modular design patterns.</p><p>Mentor engineers in cross-platform development, backend design, code reviews, and testing strategies.</p><p>Partner with backend and infrastructure teams to design unified APIs (REST/GraphQL) and optimize data synchronization.</p><p>Champion Agile/Scrum rituals, refining sprint planning and retrospectives for cross-functional teams.</p><p>Monitor and troubleshoot production issues using analytics and observability tools.</p><p>Visit customers and collect user feedback to inform product improvements.</p><p>Contribute to technical innovation and optimization efforts across the stack.</p><p>Kualifikasi</p><p>Bachelor's degree in Computer Science, Software Engineering, or a related field.</p><p>10+ years of experience in web, and/or backend development.</p><p>Strong proficiency in</p><p>JavaScript/TypeScript</p><p>for frontend development.</p><p>Proficiency in</p><p>Go</p><p>for building backend services and APIs.</p><p>Solid understanding of RESTful API design and OpenAPI Specification; GraphQL experience is a plus.</p><p>Experience with scalable databases (e.g., PostgreSQL, MySQL) and data modeling.</p><p>Experience building CI/CD pipelines (GitHub Actions, Fastlane, etc.).</p><p>Knowledge of frontend and backend analytics and monitoring tools (e.g., Firebase, AppsFlyer, New Relic).</p><p>Experience with unit testing, automated testing, and TDD (Robot Framework is a plus).</p><p>Proficiency in Git and version control systems.</p><p>Strong problem-solving skills and attention to detail.</p><p>Excellent communication, teamwork, and collaboration abilities.</p><p>Familiarity with Agile methodologies (Scrum/Kanban).</p><p>Willing to be placed in</p><p>Pekanbaru.</p><p>Tentang Perusahaan</p><p>SawitPRO is a cutting-edge green digital agritech startup located in the heart of Jakarta. Our mission is to be the best innovator that improves the lives of everyone in the palm oil industry. Through our integrated end-to-end agri-platform, we create a win-win-win scenario for people, planet, and prosperity.</p><p>We provide integrated apps that connect the supply chain stakeholders in the palm oil industry (Mills, DO Agents, Smallholders, Harvesters, Drivers, etc.). Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri-inputs, and agronomist services.</p><p>Our commitment extends beyond providing innovative solutions; we aim to nurture every aspect of Indonesia's palm oil industry. By fostering growth and sustainability, we strive to bring positive change to the lives of individuals in the palm oil sector, one at a time.</p><p>Daftar Sekarang</p>",
     "raw_requirements": "<p>< Kembali</p><p>Senior Software Engineer - Fullstack, Product (Pekanbaru)</p><p>Daftar Sekarang</p><p>Pekanbaru, Pekanbaru City, Riau, Indonesia</p><p>Tipe Pekerjaan</p><p>Full-Time (WFO)</p><p>Deskripsi Pekerjaan</p><p>Lead the development of responsive web applications (React, Angular, Vue), ensuring consistency in UX/UI and functionality.</p><p>Design, build, and maintain backend services in Go, delivering scalable, low-latency APIs that power web and mobile clients.</p><p>Architect scalable solutions across the full stack, ensuring maintainability, performance, and security while advocating for modular design patterns.</p><p>Mentor engineers in cross-platform development, backend design, code reviews, and testing strategies.</p><p>Partner with backend and infrastructure teams to design unified APIs (REST/GraphQL) and optimize data synchronization.</p><p>Champion Agile/Scrum rituals, refining sprint planning and retrospectives for cross-functional teams.</p><p>Monitor and troubleshoot production issues using analytics and observability tools.</p><p>Visit customers and collect user feedback to inform product improvements.</p><p>Contribute to technical innovation and optimization efforts across the stack.</p><p>Kualifikasi</p><p>Bachelor's degree in Computer Science, Software Engineering, or a related field.</p><p>10+ years of experience in web, and/or backend development.</p><p>Strong proficiency in</p><p>JavaScript/TypeScript</p><p>for frontend development.</p><p>Proficiency in</p><p>Go</p><p>for building backend services and APIs.</p><p>Solid understanding of RESTful API design and OpenAPI Specification; GraphQL experience is a plus.</p><p>Experience with scalable databases (e.g., PostgreSQL, MySQL) and data modeling.</p><p>Experience building CI/CD pipelines (GitHub Actions, Fastlane, etc.).</p><p>Knowledge of frontend and backend analytics and monitoring tools (e.g., Firebase, AppsFlyer, New Relic).</p><p>Experience with unit testing, automated testing, and TDD (Robot Framework is a plus).</p><p>Proficiency in Git and version control systems.</p><p>Strong problem-solving skills and attention to detail.</p><p>Excellent communication, teamwork, and collaboration abilities.</p><p>Familiarity with Agile methodologies (Scrum/Kanban).</p><p>Willing to be placed in</p><p>Pekanbaru.</p><p>Tentang Perusahaan</p><p>SawitPRO is a cutting-edge green digital agritech startup located in the heart of Jakarta. Our mission is to be the best innovator that improves the lives of everyone in the palm oil industry. Through our integrated end-to-end agri-platform, we create a win-win-win scenario for people, planet, and prosperity.</p><p>We provide integrated apps that connect the supply chain stakeholders in the palm oil industry (Mills, DO Agents, Smallholders, Harvesters, Drivers, etc.). Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri-inputs, and agronomist services.</p><p>Our commitment extends beyond providing innovative solutions; we aim to nurture every aspect of Indonesia's palm oil industry. By fostering growth and sustainability, we strive to bring positive change to the lives of individuals in the palm oil sector, one at a time.</p><p>Daftar Sekarang</p>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, excel, react, javascript, ai, analytics, it, fullstack, full stack, git, mysql."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 10 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "10+ years of experience in web, and/or backend development",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Attention To Detail",
+        "Communication",
+        "Teamwork"
+      ],
+      "mandatory_requirements": [
+        "Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri",
+        "Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Time (WFO) Deskripsi Pekerjaan Lead the development of responsive web applications (React, Angular, Vue), ensuring consistency in UX/UI and functionality",
+        "platform development, backend design, code reviews, and testing strategies",
+        "10+ years of experience in web, and/or backend development",
+        "Strong proficiency in JavaScript/TypeScript for frontend development"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri",
+          "Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Time (WFO) Deskripsi Pekerjaan Lead the development of responsive web applications (React, Angular, Vue), ensuring consistency in UX/UI and functionality",
+          "platform development, backend design, code reviews, and testing strategies",
+          "10+ years of experience in web, and/or backend development",
+          "Strong proficiency in JavaScript/TypeScript for frontend development",
+          "platform, we create a win"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Expert / Lead (10+ tahun)",
+      "exp_years": 10
+    },
+    "source": "SawitPRO",
+    "logo": "https://www.sawitpro.id/favicon.ico"
+  },
+  {
+    "id": "sawitpro_48",
+    "title": "Senior Software Engineer - Fullstack, Product (Medan)",
+    "organization_id": "SawitPRO",
+    "organization_name": "SawitPRO (PT Digital Sawit Pro)",
+    "slug": "sawitpro-48",
+    "type_name": "Full Time",
+    "level": "Senior Level",
+    "location": "Medan, Medan City, North Sumatra, Indonesia",
+    "workplace": "WFO / Hybrid",
+    "due_date": "Aktif",
+    "group": "Engineering & Operations",
+    "url": "https://www.sawitpro.id/jobsdetails/senior-fullstack-engineer-(web)---medan-",
+    "raw_description": "<p>< Kembali</p><p>Senior Software Engineer - Fullstack, Product (Medan)</p><p>Daftar Sekarang</p><p>Medan, Medan City, North Sumatra, Indonesia</p><p>Tipe Pekerjaan</p><p>Full-Time (WFO)</p><p>Deskripsi Pekerjaan</p><p>Lead the development of responsive web applications (React, Angular, Vue), ensuring consistency in UX/UI and functionality.</p><p>Design, build, and maintain backend services in Go, delivering scalable, low-latency APIs that power web and mobile clients.</p><p>Architect scalable solutions across the full stack, ensuring maintainability, performance, and security while advocating for modular design patterns.</p><p>Mentor engineers in cross-platform development, backend design, code reviews, and testing strategies.</p><p>Partner with backend and infrastructure teams to design unified APIs (REST/GraphQL) and optimize data synchronization.</p><p>Champion Agile/Scrum rituals, refining sprint planning and retrospectives for cross-functional teams.</p><p>Monitor and troubleshoot production issues using analytics and observability tools.</p><p>Visit customers and collect user feedback to inform product improvements.</p><p>Contribute to technical innovation and optimization efforts across the stack.</p><p>Kualifikasi</p><p>Bachelor's degree in Computer Science, Software Engineering, or a related field.</p><p>10+ years of experience in web, and/or backend development.</p><p>Strong proficiency in</p><p>JavaScript/TypeScript</p><p>for frontend development.</p><p>Proficiency in</p><p>Go</p><p>for building backend services and APIs.</p><p>Solid understanding of RESTful API design and OpenAPI Specification; GraphQL experience is a plus.</p><p>Experience with scalable databases (e.g., PostgreSQL, MySQL) and data modeling.</p><p>Experience building CI/CD pipelines (GitHub Actions, Fastlane, etc.).</p><p>Knowledge of frontend and backend analytics and monitoring tools (e.g., Firebase, AppsFlyer, New Relic).</p><p>Experience with unit testing, automated testing, and TDD (Robot Framework is a plus).</p><p>Proficiency in Git and version control systems.</p><p>Strong problem-solving skills and attention to detail.</p><p>Excellent communication, teamwork, and collaboration abilities.</p><p>Familiarity with Agile methodologies (Scrum/Kanban).</p><p>Willing to be placed in</p><p>Medan</p><p>.</p><p>Tentang Perusahaan</p><p>SawitPRO is a cutting-edge green digital agritech startup located in the heart of Jakarta. Our mission is to be the best innovator that improves the lives of everyone in the palm oil industry. Through our integrated end-to-end agri-platform, we create a win-win-win scenario for people, planet, and prosperity.</p><p>We provide integrated apps that connect the supply chain stakeholders in the palm oil industry (Mills, DO Agents, Smallholders, Harvesters, Drivers, etc.). Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri-inputs, and agronomist services.</p><p>Our commitment extends beyond providing innovative solutions; we aim to nurture every aspect of Indonesia's palm oil industry. By fostering growth and sustainability, we strive to bring positive change to the lives of individuals in the palm oil sector, one at a time.</p><p>Daftar Sekarang</p>",
+    "raw_requirements": "<p>< Kembali</p><p>Senior Software Engineer - Fullstack, Product (Medan)</p><p>Daftar Sekarang</p><p>Medan, Medan City, North Sumatra, Indonesia</p><p>Tipe Pekerjaan</p><p>Full-Time (WFO)</p><p>Deskripsi Pekerjaan</p><p>Lead the development of responsive web applications (React, Angular, Vue), ensuring consistency in UX/UI and functionality.</p><p>Design, build, and maintain backend services in Go, delivering scalable, low-latency APIs that power web and mobile clients.</p><p>Architect scalable solutions across the full stack, ensuring maintainability, performance, and security while advocating for modular design patterns.</p><p>Mentor engineers in cross-platform development, backend design, code reviews, and testing strategies.</p><p>Partner with backend and infrastructure teams to design unified APIs (REST/GraphQL) and optimize data synchronization.</p><p>Champion Agile/Scrum rituals, refining sprint planning and retrospectives for cross-functional teams.</p><p>Monitor and troubleshoot production issues using analytics and observability tools.</p><p>Visit customers and collect user feedback to inform product improvements.</p><p>Contribute to technical innovation and optimization efforts across the stack.</p><p>Kualifikasi</p><p>Bachelor's degree in Computer Science, Software Engineering, or a related field.</p><p>10+ years of experience in web, and/or backend development.</p><p>Strong proficiency in</p><p>JavaScript/TypeScript</p><p>for frontend development.</p><p>Proficiency in</p><p>Go</p><p>for building backend services and APIs.</p><p>Solid understanding of RESTful API design and OpenAPI Specification; GraphQL experience is a plus.</p><p>Experience with scalable databases (e.g., PostgreSQL, MySQL) and data modeling.</p><p>Experience building CI/CD pipelines (GitHub Actions, Fastlane, etc.).</p><p>Knowledge of frontend and backend analytics and monitoring tools (e.g., Firebase, AppsFlyer, New Relic).</p><p>Experience with unit testing, automated testing, and TDD (Robot Framework is a plus).</p><p>Proficiency in Git and version control systems.</p><p>Strong problem-solving skills and attention to detail.</p><p>Excellent communication, teamwork, and collaboration abilities.</p><p>Familiarity with Agile methodologies (Scrum/Kanban).</p><p>Willing to be placed in</p><p>Medan</p><p>.</p><p>Tentang Perusahaan</p><p>SawitPRO is a cutting-edge green digital agritech startup located in the heart of Jakarta. Our mission is to be the best innovator that improves the lives of everyone in the palm oil industry. Through our integrated end-to-end agri-platform, we create a win-win-win scenario for people, planet, and prosperity.</p><p>We provide integrated apps that connect the supply chain stakeholders in the palm oil industry (Mills, DO Agents, Smallholders, Harvesters, Drivers, etc.). Creating a digital ecosystem that essentially boosts their productivity with effortless work documentation, affordable yet original agri-inputs, and agronomist services.</p><p>Our commitment extends beyond providing innovative solutions; we aim to nurture every aspect of Indonesia's palm oil industry. By fostering growth and sustainability, we strive to bring positive change to the lives of individuals in the palm oil sector, one at a time.</p><p>Daftar Sekarang</p>",
     "match_score": 105,
     "is_blocked": false,
     "match_details": {
@@ -6367,93 +6475,6 @@
     "logo": "https://www.sawitpro.id/favicon.ico"
   },
   {
-    "id": "sawitpro_48",
-    "title": "Senior Software Engineer - Fullstack, Product (Medan)",
-    "organization_id": "SawitPRO",
-    "organization_name": "SawitPRO (PT Digital Sawit Pro)",
-    "slug": "sawitpro-48",
-    "type_name": "Full Time",
-    "level": "Senior Level",
-    "location": "Medan, Medan City, North Sumatra, Indonesia",
-    "workplace": "WFO / Hybrid",
-    "due_date": "Aktif",
-    "group": "Engineering & Operations",
-    "url": "https://www.sawitpro.id/jobsdetails/senior-fullstack-engineer-(web)---medan-",
-    "raw_description": "<p>Posisi: <strong>Senior Software Engineer - Fullstack, Product (Medan)</strong></p><p>Perusahaan: PT Digital Sawit Pro (SawitPRO)</p><p>Lokasi: Medan, Medan City, North Sumatra, Indonesia</p>",
-    "raw_requirements": "<p>Posisi: <strong>Senior Software Engineer - Fullstack, Product (Medan)</strong></p><p>Perusahaan: PT Digital Sawit Pro (SawitPRO)</p><p>Lokasi: Medan, Medan City, North Sumatra, Indonesia</p>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: it, fullstack, git."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "SawitPRO",
-    "logo": "https://www.sawitpro.id/favicon.ico"
-  },
-  {
     "id": "sawitpro_61",
     "title": "Software Engineer – Backend, Delivery Team (Pekanbaru)",
     "organization_id": "SawitPRO",
@@ -9014,6 +9035,93 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
+    "id": 15530,
+    "title": "Magang",
+    "organization_id": "22",
+    "organization_name": "ICBP - Noodle",
+    "slug": "indofood-15530",
+    "type_name": "Karyawan Kontrak",
+    "level": "Internship",
+    "location": "Indofood Ancol - Head Office - Jakarta Utara",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "30 Nov 2026",
+    "group": "Human Resources",
+    "url": "https://career.indofood.com/vacancy_detail.aspx?id=15530",
+    "raw_description": "<ul>\n\t<li>Support SHE operations and administrative activities.</li>\n\t<li>Actively participate in SHE projects, events, and activities.</li>\n\t<li>Contribute creative ideas and innovative solutions to support SHE initiatives.</li>\n</ul>\n",
+    "raw_requirements": "<ul>\n\t<li>Active Student&nbsp;minimum of the 5th semester of a Bachelor&#39;s degree in Environmental Engineering, Public Health (Occupational Health and Safety/OSH concentration), or Industrial Engineering.</li>\n\t<li>Strong interest in Human Resources, particularly in Safety, Health, and Environment (SHE).</li>\n\t<li>Proactive, creative, and eager to learn.</li>\n\t<li>Proficient in Microsoft Office (Word, Excel, and PowerPoint).</li>\n\t<li>Willing to undertake an on-site internship at our Head Office in Ancol for a period of 3&ndash;6 months.</li>\n</ul>\n",
+    "match_score": 90,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: excel, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (site internship at our Head Office in Ancol for a period of 3&ndash;6 months...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indofood",
+    "logo": null
+  },
+  {
     "id": 15531,
     "title": "Production Operator",
     "organization_id": "18",
@@ -9096,93 +9204,6 @@
       "age": null,
       "toefl": null,
       "gender": "Male Only",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
-    "id": 15530,
-    "title": "Magang",
-    "organization_id": "22",
-    "organization_name": "ICBP - Noodle",
-    "slug": "indofood-15530",
-    "type_name": "Karyawan Kontrak",
-    "level": "Internship",
-    "location": "Indofood Ancol - Head Office - Jakarta Utara",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "30 Nov 2026",
-    "group": "Human Resources",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=15530",
-    "raw_description": "<ul>\n\t<li>Support SHE operations and administrative activities.</li>\n\t<li>Actively participate in SHE projects, events, and activities.</li>\n\t<li>Contribute creative ideas and innovative solutions to support SHE initiatives.</li>\n</ul>\n",
-    "raw_requirements": "<ul>\n\t<li>Active Student&nbsp;minimum of the 5th semester of a Bachelor&#39;s degree in Environmental Engineering, Public Health (Occupational Health and Safety/OSH concentration), or Industrial Engineering.</li>\n\t<li>Strong interest in Human Resources, particularly in Safety, Health, and Environment (SHE).</li>\n\t<li>Proactive, creative, and eager to learn.</li>\n\t<li>Proficient in Microsoft Office (Word, Excel, and PowerPoint).</li>\n\t<li>Willing to undertake an on-site internship at our Head Office in Ancol for a period of 3&ndash;6 months.</li>\n</ul>\n",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: excel, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (site internship at our Head Office in Ancol for a period of 3&ndash;6 months...)",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
       "experience": "Open / Not Specified",
       "exp_years": 0
     },
@@ -10393,93 +10414,6 @@
     },
     "parsed_requirements": {
       "gpa": 2.75,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
-    "id": 14384,
-    "title": "QC Process Field",
-    "organization_id": "22",
-    "organization_name": "ICBP - Noodle",
-    "slug": "indofood-14384",
-    "type_name": "Karyawan Kontrak",
-    "level": "Fresh Graduate",
-    "location": "ICBP Noodle DKI - Pabrik Tangerang - All",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "06 Nov 2026",
-    "group": "Quality Management",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14384",
-    "raw_description": "<ol>\n\t<li>Carry out quality control, daily production processes in accordance with procedures</li>\n\t<li>Reporting</li>\n</ol>\n",
-    "raw_requirements": "<ol>\n\t<li>Diploma (D3) in Chemical Engineering or Food Technology</li>\n\t<li>Able to work in teams</li>\n\t<li>Able to work under pressure</li>\n\t<li>Willing to work in shift</li>\n\t<li>Experience in QC area will be more considered</li>\n</ol>\n",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
       "age": null,
       "toefl": null,
       "gender": "Open",
@@ -12225,11 +12159,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-15",
+    "id": "PTC-12",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-15",
+    "slug": "ptc-PTC-12",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12322,11 +12256,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-26",
+    "id": "PTC-20",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-26",
+    "slug": "ptc-PTC-20",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12419,11 +12353,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-37",
+    "id": "PTC-28",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-37",
+    "slug": "ptc-PTC-28",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12516,11 +12450,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-48",
+    "id": "PTC-36",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-48",
+    "slug": "ptc-PTC-36",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12613,11 +12547,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-59",
+    "id": "PTC-44",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-59",
+    "slug": "ptc-PTC-44",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12710,11 +12644,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-70",
+    "id": "PTC-52",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-70",
+    "slug": "ptc-PTC-52",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12807,11 +12741,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-81",
+    "id": "PTC-60",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-81",
+    "slug": "ptc-PTC-60",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12904,11 +12838,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-92",
+    "id": "PTC-68",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-92",
+    "slug": "ptc-PTC-68",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -13001,11 +12935,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-103",
+    "id": "PTC-76",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-103",
+    "slug": "ptc-PTC-76",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
