@@ -105,11 +105,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-11",
+    "id": "PTC-10",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-11",
+    "slug": "ptc-PTC-10",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -210,11 +210,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-19",
+    "id": "PTC-17",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-19",
+    "slug": "ptc-PTC-17",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -315,11 +315,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-27",
+    "id": "PTC-24",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-27",
+    "slug": "ptc-PTC-24",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -420,11 +420,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-35",
+    "id": "PTC-31",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-35",
+    "slug": "ptc-PTC-31",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -525,11 +525,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-43",
+    "id": "PTC-38",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-43",
+    "slug": "ptc-PTC-38",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -630,11 +630,116 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-51",
+    "id": "PTC-45",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-51",
+    "slug": "ptc-PTC-45",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "DKI Jakarta, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [
+        "Bash",
+        "CI/CD",
+        "Git",
+        "Python"
+      ],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Problem Solving"
+      ],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan minimal S",
+        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [
+        "Languages & Core",
+        "Engineering & Tools"
+      ],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan minimal S",
+          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
+          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Fresh / Junior (0-1 tahun)",
+      "exp_years": 1
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-52",
+    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-52",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -840,116 +945,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-67",
+    "id": "PTC-66",
     "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-67",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal S-1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Memahami konsep DevOps, CI/CD, dan software development lifecycle</li>\n<li>Menguasai dasar Linux, Git, networking, dan database</li>\n<li>Memahami dasar application security dan secure coding</li>\n<li>Memiliki kemampuan scripting dasar (Python/Bash)</li>\n<li>Memiliki kemampuan troubleshooting dan problem solving</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li><strong>Bersedia ditempatkan di lokasi kerja yang ditentukan </strong></li>\n<li><strong>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal S",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [
-        "Bash",
-        "CI/CD",
-        "Git",
-        "Python"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Problem Solving"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-        "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [
-        "Languages & Core",
-        "Engineering & Tools"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal S",
-          "1 Sederajat Jurusan Informatika, Sistem Informasi, Ilmu Komputer, dan bidang terkait Pengalaman kerja minimal 1 tahun dalam bidang terkait Memahami konsep DevOps, CI/CD, dan software development lifecycle Menguasai dasar Linux, Git, networking, dan database Memahami dasar application security dan secure coding Memiliki kemampuan scripting dasar (Python/Bash) Memiliki kemampuan troubleshooting dan problem solving Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-75",
-    "title": "Development, Security, dan Operations Engineer – Jakarta Selatan, DKI Jakarta",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-75",
+    "slug": "ptc-PTC-66",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -1915,132 +1915,6 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
-    "id": "ioh_58995944",
-    "title": "AVP Core Finance Architect",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-58995944",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Digital Corporate",
-    "url": "https://careers.ioh.co.id/job/AVP-Core-Finance-Architect/58995944/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands-on core finance expertise. This role ensures that finance processes, configurations, integrations, extensions, cloud services, and operational issues are properly designed, implemented, supported, and aligned with business, accounting, compliance, control, and enterprise architecture requirements</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related CORE FINANCE System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p> </p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Core Finance system, Enterprise Resource Planning (ERP)</li>\n<li>Strong expertise in Enterprise Architecture Oracle Fusion Financials.</li>\n<li>Strong hands-on knowledge of GL, AP, AR, Cash Management, Tax, Intercompany, Closing, and financial reporting.</li>\n<li>Good understanding of Oracle Cloud SaaS, PaaS, OIC, API, workflow, extensions, and cloud integration concepts.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Ability to design solutions as an architect and support detailed functional configuration as an expert.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, and continuous improvement.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands-on core finance expertise. This role ensures that finance processes, configurations, integrations, extensions, cloud services, and operational issues are properly designed, implemented, supported, and aligned with business, accounting, compliance, control, and enterprise architecture requirements</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related CORE FINANCE System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p> </p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Core Finance system, Enterprise Resource Planning (ERP)</li>\n<li>Strong expertise in Enterprise Architecture Oracle Fusion Financials.</li>\n<li>Strong hands-on knowledge of GL, AP, AR, Cash Management, Tax, Intercompany, Closing, and financial reporting.</li>\n<li>Good understanding of Oracle Cloud SaaS, PaaS, OIC, API, workflow, extensions, and cloud integration concepts.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Ability to design solutions as an architect and support detailed functional configuration as an expert.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, and continuous improvement.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, developer, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Has an Excellent knowledge of Agile Framework and Waterfall Methodology Extensive experience in managing end",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Communication",
-        "Flexibility",
-        "Leadership",
-        "Presentation"
-      ],
-      "mandatory_requirements": [
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-        "Qualification: Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes"
-      ],
-      "preferred_requirements": [
-        "Oracle Fusion certification is an advantage",
-        "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
-        "Oracle Fusion certification is an advantage"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Job Description RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands",
-        "DOMAIN is defined as all related CORE FINANCE System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
-        "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
-        "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-          "Qualification: Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
-          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
-          "Qualification: Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering"
-        ],
-        "preferred": [
-          "Oracle Fusion certification is an advantage",
-          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
-          "Oracle Fusion certification is an advantage",
-          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Job Description RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands",
-          "DOMAIN is defined as all related CORE FINANCE System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
-          "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
-          "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
-          "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
     "id": "ioh_58995744",
     "title": "AVP Enterprise Supply Chain Architect",
     "organization_id": "IOH",
@@ -2167,20 +2041,20 @@
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
-    "id": "ioh_57963944",
-    "title": "AVP-Telco Cloud Architecture, Automation & Services",
+    "id": "ioh_58995944",
+    "title": "AVP Core Finance Architect",
     "organization_id": "IOH",
     "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-57963944",
+    "slug": "ioh-58995944",
     "type_name": "Full Time",
     "level": "Profesional",
     "location": "ID",
     "workplace": "Hybrid / WFO",
     "due_date": "Aktif",
-    "group": "Group Core Planning & Engineering",
-    "url": "https://careers.ioh.co.id/job/AVP-Telco-Cloud-Architecture%2C-Automation-&-Services/57963944/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
+    "group": "Group Digital Corporate",
+    "url": "https://careers.ioh.co.id/job/AVP-Core-Finance-Architect/58995944/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands-on core finance expertise. This role ensures that finance processes, configurations, integrations, extensions, cloud services, and operational issues are properly designed, implemented, supported, and aligned with business, accounting, compliance, control, and enterprise architecture requirements</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related CORE FINANCE System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p> </p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Core Finance system, Enterprise Resource Planning (ERP)</li>\n<li>Strong expertise in Enterprise Architecture Oracle Fusion Financials.</li>\n<li>Strong hands-on knowledge of GL, AP, AR, Cash Management, Tax, Intercompany, Closing, and financial reporting.</li>\n<li>Good understanding of Oracle Cloud SaaS, PaaS, OIC, API, workflow, extensions, and cloud integration concepts.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Ability to design solutions as an architect and support detailed functional configuration as an expert.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, and continuous improvement.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><ul>\n<li>RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands-on core finance expertise. This role ensures that finance processes, configurations, integrations, extensions, cloud services, and operational issues are properly designed, implemented, supported, and aligned with business, accounting, compliance, control, and enterprise architecture requirements</li>\n<li>DEFINING, REQUIREMENT GATHERING, CONTINUOUSLY IMPROVING the Enterprise Support System (ESS) strategy, architecture and roadmap within the defined domain, Formulation of Solution Design and DELIVERY Business as Usual (BAU) Application and System Finance and Procurement Technology System within the defined domain.</li>\n<li>DOMAIN is defined as all related CORE FINANCE System</li>\n<li>Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management.</li>\n<li>MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man-Days) including propose, review, approve solution / effort and Operational Leadership</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes.</li>\n<li>Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality.</li>\n<li>INTERFACE to all stakeholders internal and external (B2C, B2B, Sales &amp; Distribution, Digital, Finance, Cust Service, Customer Experience, Marketing, Network, Regional, IT Investment, IT Planning, Project, Operation, Infrastructure), External Parties - Bank, Payment Gateway, Manage Vendors or Partner, etc. )</li>\n<li>KEEP UP with global trends and technology update, Deep UNDERSTAND business direction and DEVELOP principles and selection method accordingly for the most suitable partner and technology.</li>\n<li>DEVELOP high-level use-case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes.</li>\n<li>INITIATE annual budgetary plan which includes budgetary of new capabilities, capacity expansion, features enhancement and system transformation.</li>\n<li>Work to REDUCE or REMOVE BOTTLENECKS and INEFFICIENCIES in the Delivery as a whole.</li>\n</ul>\n<p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering.</li>\n<li>Oracle Fusion certification is an advantage.</li>\n</ul>\n<p><strong>Related Experience:</strong></p>\n<p>Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage.</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><p> </p>\n<p><strong>General Skillset:</strong></p>\n<ul>\n<li>Excellent communication in both Bahasa Indonesia and English.</li>\n<li>Excellent technical writing and reporting.</li>\n<li>Excellent presentation and persuasion skills.</li>\n<li>Excellent knowledge of telecommunication business in general.</li>\n<li>Excellent understanding of general and specific business processes within the business users.</li>\n<li>Excellent knowledge of IT system landscape and technology roadmap.</li>\n<li>Excellent in analytical thinking</li>\n<li>Capable of working independently and as a member of team</li>\n<li>Time Management abilities</li>\n<li>Problem-solving skills</li>\n<li>Customer focus</li>\n</ul>\n<p> </p>\n<p><strong>Specific Skillset (Domain):</strong></p>\n<ul>\n<li>Has an excellent knowledge of Core Finance system, Enterprise Resource Planning (ERP)</li>\n<li>Strong expertise in Enterprise Architecture Oracle Fusion Financials.</li>\n<li>Strong hands-on knowledge of GL, AP, AR, Cash Management, Tax, Intercompany, Closing, and financial reporting.</li>\n<li>Good understanding of Oracle Cloud SaaS, PaaS, OIC, API, workflow, extensions, and cloud integration concepts.</li>\n<li>Good understanding of accounting principles, finance operations, reconciliation, audit, and financial control.</li>\n<li>Ability to design solutions as an architect and support detailed functional configuration as an expert.</li>\n<li>Strong analytical capability for issue resolution, impact assessment, and continuous improvement.</li>\n<li>Has an Excellent knowledge of Agile Framework and Waterfall Methodology</li>\n<li>Extensive experience in managing end-to-end demand lifecycle process (requirement, solution and delivery), budget, governance and resources.</li>\n<li>Has an Excellent end to end Delivery Management (Project Management / Scrum Master / Vendor Management)</li>\n<li>Very good understanding of the overall system architecture and end to end system integration, IT application and system solution and design, database design, infrastructure design and services of the telco</li>\n<li>Very good understanding of the system bucket man-days management, review, optimize and approve bucket to keep budget stability.</li>\n<li>Has a good knowledge in Infrastructure in the area of server, storage, database, cloud &amp; virtualization, backup system, desktop, local/wide area network, data center and disaster recovery.Has a good knowledge of Business Process Framework, Application Framework and Information Framework.</li>\n</ul></div></div></div>\n</span>",
     "match_score": 105,
     "is_blocked": false,
     "match_details": {
@@ -2197,7 +2071,7 @@
       "age": {
         "score": 10,
         "status": "Match",
-        "reason": "Sesuai. Batas usia maksimal adalah 90 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
       },
       "toefl": {
         "score": 10,
@@ -2212,7 +2086,7 @@
       "skills": {
         "score": 20,
         "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, developer, it, git."
       },
       "experience": {
         "score": 10,
@@ -2226,45 +2100,64 @@
     },
     "nlp_breakdown": {
       "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Skills Strong experience in cloud",
+      "experience_summary": "Has an Excellent knowledge of Agile Framework and Waterfall Methodology Extensive experience in managing end",
       "mandatory_skills": [],
       "preferred_skills": [],
       "soft_skills": [
         "Analytical",
-        "Leadership"
+        "Communication",
+        "Flexibility",
+        "Leadership",
+        "Presentation"
       ],
       "mandatory_requirements": [
-        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
-        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+        "Qualification: Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+        "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes"
       ],
-      "preferred_requirements": [],
+      "preferred_requirements": [
+        "Oracle Fusion certification is an advantage",
+        "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
+        "Oracle Fusion certification is an advantage"
+      ],
       "nice_to_have": [],
       "key_responsibilities": [
-        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
-        "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
-        "Proactive leadership, vendor management, and decision",
-        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud"
+        "Job Description RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands",
+        "DOMAIN is defined as all related CORE FINANCE System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
+        "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
+        "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high"
       ],
       "skill_categories": [],
       "full_breakdown": {
         "mandatory": [
-          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
-          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+          "Qualification: Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required for the desired business outcomes",
+          "case of the solution which represents the value of the proposed solution in terms of investment and cost of resources required; the desired business outcomes",
+          "Qualification: Minimum University Degree (S1), with major study in Informatics / Computer / Telecommunication Engineering"
         ],
-        "preferred": [],
+        "preferred": [
+          "Oracle Fusion certification is an advantage",
+          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage",
+          "Oracle Fusion certification is an advantage",
+          "Related Experience: Has experience at minimum 5 years in telecommunication industry, especially in Finance and Procurement Technology and Enterprise technology roadmap design, solution and delivery would be an advantage"
+        ],
         "nice_to_have": [],
         "responsibilities": [
-          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
-          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
-          "Proactive leadership, vendor management, and decision",
-          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
-          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)"
+          "Job Description RESPONSIBLE for leading and owning the Oracle Fusion Finance capability, combining solution architecture and hands",
+          "DOMAIN is defined as all related CORE FINANCE System Manage Flexibility of DELIVERY Methodology with AGILE and WATERFALL DELIVERY or OTHER Methodology of application and system Delivery for business and system enhancements include Release Management",
+          "MANAGEMENT of Application Developers, Vendor Partners, Budgetary Plan (Man",
+          "Days) including propose, review, approve solution / effort and Operational Leadership DEVELOP high",
+          "Adoption of Agility Principle in delivery process to reduce bureaucracy in approval process, accelerate development and delivery quality"
         ]
       }
     },
     "parsed_requirements": {
       "gpa": null,
-      "age": 90,
+      "age": null,
       "toefl": null,
       "gender": "Open",
       "experience": "Open / Not Specified",
@@ -2367,6 +2260,113 @@
       "age": null,
       "toefl": null,
       "gender": "Male Only",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": "ioh_57963944",
+    "title": "AVP-Telco Cloud Architecture, Automation & Services",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-57963944",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Core Planning & Engineering",
+    "url": "https://careers.ioh.co.id/job/AVP-Telco-Cloud-Architecture%2C-Automation-&-Services/57963944/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Batas usia maksimal adalah 90 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Skills Strong experience in cloud",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Leadership"
+      ],
+      "mandatory_requirements": [
+        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
+        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
+        "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
+        "Proactive leadership, vendor management, and decision",
+        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
+          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
+          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
+          "Proactive leadership, vendor management, and decision",
+          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
+          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": 90,
+      "toefl": null,
+      "gender": "Open",
       "experience": "Open / Not Specified",
       "exp_years": 0
     },
@@ -7413,113 +7413,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "ioh_59152344",
-    "title": "HBB Fault Management & Service Assurance",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-59152344",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Network Operations",
-    "url": "https://careers.ioh.co.id/job/HBB-Fault-Management-&-Service-Assurance/59152344/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Batas usia maksimal adalah 24 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 5 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Experience: At least 5 years of experience in telecommunications network planning and engineering",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Communication"
-      ],
-      "mandatory_requirements": [
-        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
-        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
-        "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
-        "Manage related MS vendors team in day",
-        "day Fault Management Operation;"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
-          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
-          "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
-          "Manage related MS vendors team in day",
-          "day Fault Management Operation;",
-          "Consolidate to other functions for issues which are related to HBB network operation and service quality Area of Responsibilities Key Activities Network Fault Monitoring &amp; Management Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": 24,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Senior (3-5 tahun)",
-      "exp_years": 5
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
     "id": "ioh_59127744",
     "title": "VP-Head of HBB & B2B Planning",
     "organization_id": "IOH",
@@ -7622,6 +7515,113 @@
     "parsed_requirements": {
       "gpa": null,
       "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Senior (3-5 tahun)",
+      "exp_years": 5
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": "ioh_59152344",
+    "title": "HBB Fault Management & Service Assurance",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-59152344",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Network Operations",
+    "url": "https://careers.ioh.co.id/job/HBB-Fault-Management-&-Service-Assurance/59152344/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><p>- Ensure HBB end-to-end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss.</p>\n<p>-           Ensure service problem tracking and monitoring of any network disruption as impact of project activities.</p>\n<p>-           Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA.</p>\n<p>-           Manage related MS vendors team in day-to-day Fault Management Operation;</p>\n<p>-           Consolidate to other functions for issues which are related to HBB network operation and service quality</p>\n<p> </p>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:6.45in\">\n<tbody>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<p><strong>Area of Responsibilities</strong></p>\n</td>\n<td style=\"width:337.5pt\">\n<p><strong>Key Activities</strong></p>\n</td>\n</tr>\n<tr>\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol>\n<li>Network Fault Monitoring &amp; Management</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"width:557.0px\">\n<tbody>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Set up the strategy approach and prioritized program with HBB Network Manage Service to improve the performance service align with defined KPI/KQI.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li>Build the guidance with HBB Network Manage Service team in order to identify, localize and point out the right domain of root cause for every degraded service happened.  </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:0.1in\">\n<td style=\"width:418.0pt\" valign=\"top\">\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<ul>\n<li> </li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:66.1pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"2\">\n<li>Network &amp; Services Problem Tracking</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>With HBB Network Manage Service, build and control the Network &amp; services problem tracking system effectively.</li>\n<li>Manage the Network &amp; services problem tracking as single point of contact for problem status information.</li>\n<li>Lead in evaluating and improving the performance of service problem tracking system.</li>\n</ul>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"3\">\n<li>External Relation</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<ul>\n<li>Serve as a company representative for external related functions</li>\n</ul>\n<p> </p>\n<p>In order to build good network in the industry and keep up to date with new trends</p>\n</td>\n</tr>\n<tr style=\"height:17.95pt\">\n<td style=\"width:126.9pt\" valign=\"top\">\n<ol start=\"4\">\n<li>On time and accurate reporting</li>\n</ol>\n</td>\n<td style=\"width:337.5pt\" valign=\"top\">\n<p>Managing HBB Network Manage Service:</p>\n<ul>\n<li>Ensure on time Daily, Weekly and Monthly HBB Network Report.</li>\n<li>Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement</li>\n</ul>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Requirement</h2> </div><div><p> </p>\n<p><strong>Qualification:</strong></p>\n<ul>\n<li>Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field.</li>\n<li>Strong understanding of FTTH and FWA technologies and network architecture principles.</li>\n<li>Knowledge of regulatory requirements and industry standards for telecommunications.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Experience:</strong></p>\n<ul>\n<li>At least 5 years of experience in telecommunications network planning and engineering.</li>\n<li>Proven track record in designing and deploying FTTH and FWA networks.</li>\n<li>Familiarity with emerging home broadband technologies and industry trends.</li>\n</ul>\n<p><strong> </strong></p>\n<p><strong>Skills:</strong></p>\n<ul>\n<li>Excellent analytical and problem-solving skills for fault management.</li>\n<li>Strong project management skills with the ability to manage multiple projects simultaneously.</li>\n<li>Effective communication and collaboration skills to work with cross-functional teams.</li>\n<li>Detail-oriented with strong organizational skills for documentation and reporting.</li>\n</ul>\n<p>Ability to adapt to rapidly changing technologies and business needs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Responsibilities</h2> </div><div><div>Operational Excellence</div><div>Operational Issue Resolution</div><div>Operational Management and Performance Monitoring</div><div>Operational Performance Monitoring</div><div>Operational Support and Coordination</div></div></div></div>\n</span>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Batas usia maksimal adalah 24 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 5 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Experience: At least 5 years of experience in telecommunications network planning and engineering",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Communication"
+      ],
+      "mandatory_requirements": [
+        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
+        "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
+        "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
+        "Manage related MS vendors team in day",
+        "day Fault Management Operation;"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field",
+          "Ensure on time Weekly SLA Achievement, Weekly HBB KPI achievement Requirement Qualification: Bachelor's degree in Electrical Engineering, Telecommunications, Computer Science, or a related field"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "end network elements incident (infrastructure) &amp; Quality Performance, network configuration &amp; integration management and services, monitoring, tracking and problem management are handled excellently according to network KPI, agreed SLA, and standard methodology, for 24 hours/day, 7 days/week and to avoid any service degradation and company revenue loss",
+          "Responsible to define, develop &amp; review to continuously improving in the fault management, operation of HBB network to manage network service within a defined SLA",
+          "Manage related MS vendors team in day",
+          "day Fault Management Operation;",
+          "Consolidate to other functions for issues which are related to HBB network operation and service quality Area of Responsibilities Key Activities Network Fault Monitoring &amp; Management Build the guidance in monitoring fault management with HBB Network Manage Service in order to solve the repeated problem issue, massive problem issue and to take preventive action/plan for identified (potential) problem"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": 24,
       "toefl": null,
       "gender": "Open",
       "experience": "Senior (3-5 tahun)",
@@ -8802,121 +8802,6 @@
       "gender": "Open",
       "experience": "Expert / Lead (13+ tahun)",
       "exp_years": 13
-    },
-    "source": "Talentics",
-    "logo": null
-  },
-  {
-    "id": 24671,
-    "title": "Searah Muara Bakau - Mechanical Specialist",
-    "organization_id": 112065,
-    "organization_name": null,
-    "slug": "eni-muara-bakau-bv-mechanical-specialist",
-    "type_name": "Karyawan Tetap",
-    "level": "Staff",
-    "location": "Kalimantan Timur (Indonesia)",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-10-02 00:00:00",
-    "group": null,
-    "url": "https://jobs.talentics.id/skk-migas/eni-muara-bakau-bv-mechanical-specialist",
-    "raw_description": "<p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span> </span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Purpose:</span></b></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">The\n  Mechanical Specialist is responsible for ensuring the reliable operation and\n  maintenance of all mechanical equipment on Offshore/FPSO. This includes\n  troubleshooting, repairing, and overhauling various systems such as pumps,\n  compressors, turbines, and others rotating and static equipment. Also play as\n  key role in developing and implementing preventative maintenance programs and\n  optimizing equipment performance. </span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\"> </span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\">The\n  Mechanical Specialist is guaranteeing the prompt, safe and environment\n  respecting execution of Maintenance activities will be conducted in safe\n  manner with maximizing uptime and field production efficiency while\n  minimizing the total maintenance cost (production downtime, spare parts,\n  manpower, etc.) and meet daily production targets whilst complying with\n  company guidelines and legal requirements to deliver highest value to\n  stakeholders without compromise to Safe Operating Principals.</span></p>\n  <p class=\"Default\" style=\"text-align:justify;\"><span style=\"font-size:11pt;\"> </span></p>\n  \n \n \n  \n  <p class=\"TableParagraph\" style=\"text-align:justify;\"><b><span>General\n  Accountabilities and Responsibilities:</span></b></p>\n  <ul>\n   <li><span>Ensure\n       all relevant Mechanical equipment is fully operational, in service,\n       maintained safely, effectively and in accordance with procedures and\n       equipment design codes and standards.</span></li>\n   <li><span>Ensure\n       maintenance activities are carried out in compliance with all relevant\n       procedures and legal requirements.</span></li>\n   <li><span>Ensure\n       that all Safety Critical element PM’s are completed with plan.</span></li>\n   <li><span>Ensure\n       all work is coordinated and aligned with production priorities and\n       within the issued job plan and schedules, including reporting by the\n       scheduler from the CMMS.</span></li>\n   <li><span>Liaise\n       with Planner and Scheduler regarding the forward planning of spare parts\n       deliverability and in determining min/max stock levels of spare parts\n       and maintenance consumables on the facility.</span></li>\n   <li><span>Assist\n       in preparation and surveillance of annual maintenance team budget.</span></li>\n   <li><span>Maintain\n       complete and accurate equipment history records within the CMMS,\n       Computerized Maintenance Management System, preferable SAP system. </span></li>\n   <li><span>Apply\n       the lessons learned from design reviews, receiving inspections, and risk\n       management findings and support team performance by sharing knowledge\n       and best practices.</span></li>\n   <li><span>Conduct\n       and coordinate Mechanical maintenance contractors, inspections,\n       calibrations, function tests and evaluate Mechanical equipment operation\n       and condition to determine remedial action.</span></li>\n   <li><span>Prepare\n       maintenance activities for flawless execution. Ensuring permits, PPE,\n       tools, materials, equipment, work site preparation, and toolbox talks\n       are in place and always completed.</span></li>\n   <li><span>Develop\n       equipment Standard Maintenance/Repair Procedures and guidelines for all\n       FPU/FPSO equipment.</span></li>\n   <li><span>Support\n       safe start-up and shutdown of process facilities</span></li>\n   <li><span>Manage\n       relevant reporting and administration work based on the needs of the\n       respective organization (including data recording, correspondence, etc.\n       – based on the function of this position).</span></li>\n   <li><span>Produce\n       comprehensive and accurate shift and crew change handover notes.</span></li>\n   <li><span>Ensure\n       that any changes to Mechanical controlled documentation, because of MOC\n       (Management of Change) work, are captured and correctly recorded.</span></li>\n   <li><span>If\n       required, attend Emergency work after normal working hours on a callout\n       basis.</span></li>\n   <li><span>Participate\n       in Root Cause Analysis for equipment failures.</span></li>\n   <li><span>Apply\n       the lesson learned from design review, receiving inspections, and risk\n       management finding and support team performance by sharing knowledge and\n       best practices.</span></li>\n   <li><span>Maintain\n       complete and accurate equipment history records within the Computerized\n       Maintenance Management System.</span></li>\n   <li><span>Manage\n       relevant reporting and administration work based on the needs of the\n       respective organization (including data recording, correspondence, etc –\n       based on the functions of this positions).</span></li>\n   <li><span>Ensure\n       the confidentiality of the company’s documentation.</span></li>\n  </ul>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span> </span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Health, Safety, Environment and Quality (HSEQ):</span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Comply\n  with rules and standards described in Company Policies, HSE Integrated\n  Management System and Procedures</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Report\n  all incidents</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Motivate\n  staff and colleagues to comply with HSE rules and standards</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-              Participate\n  in HSE related initiatives</span></p>",
-    "raw_requirements": "<p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span> </span></b><b><span>Qualifications & Experience:</span></b></p>\n  <p class=\"MsoListParagraph\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Education: </span><span>Bachelor’s degree in\n  mechanical engineering or similar</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Experience: </span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Minimum 5 years of Oil & Gas Industry\n  experience.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Fluent with CMMS System, preferable SAP Experience. </span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Familiar with Predictive Maintenance data\n  acquisition, such as tribology.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive experience handle Gas Turbine Generator,\n  Gas Turbine Compressors, rotating equipment, and pedestal crane. </span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Training and Certification:</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Employee\n  Induction including HSE Awareness</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>T-BOSIET\n  (1st time) or T-FOET (refreshment)</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Advance Fire\n  Fighting</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>CSEA\n  (Confined Spaces Entrant Attendant)</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>BNSP-certified candidates are highly preferred</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span style=\"font-family:Symbol;\">·<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Language: Fluent in English and Bahasa Indonesia</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span> </span></p>\n  \n \n \n  \n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Required Competencies</span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Technical Competencies:</span></b></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with variety of Mechanical rotating and static\n  equipment and manufacturers. </span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Good knowledge\n  of production facilities in an oil/gas including installation, repair testing\n  and maintenance of wide range of Mechanical systems.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Must have the\n  ability to read and understand drawings and specifications specific to\n  Mechanical discipline, e.g. P&ID, vendor control drawings, etc.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with hazardous areas and hazardous area equipment\n  certification.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with standard operating practice with respect to\n  maintenance activities in an operational Oil & Gas production/processing\n  environment, with specific regard to hazardous area practise and\n  restrictions.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with Maintenance Management system CMMS-SAP.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with hazard associate with Manual handling and\n  operation maintenance requirements of fixed and mobile lifting equipment,\n  including offshore cranes and inspection requirements under design code API\n  2C.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with maintenance requirements and hazards of\n  high-pressure piping systems, valve types, and flange management.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with levelling and alignment rotating equipment.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with operation and maintenance of industrial single\n  & dual fuel Gas Turbines and the installation and removal of compressor\n  dry gas seals.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with operation and maintenance of HVAC systems.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with operation and maintenance of centrifugal\n  compressors, centrifugal pumps, air compressors and dryers, fin fan air\n  coolers, pedestal cranes, diesel engine drivers, and utility packages.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with use of hydraulic and pneumatic bolt torque and\n  tensioning equipment.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure with standard operating practice with respect to\n  maintenance activities in an operational oil & gas production/processing\n  environment, with specific regard to hazardous area practices and\n  restrictions.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Extensive\n  experience and exposure to root cause analysis and troubleshooting of\n  operational equipment with state-of-the-art diagnostic techniques.</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span> </span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Non-Technical\n  Competencies:</span></b></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Integrity & values</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Driving for results</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Value Creation Focus</span></p>\n  <p class=\"MsoListParagraph\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Teamwork & cooperation</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span>Initiative</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span style=\"color:#000000;\">Analytical\n  thinking</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span style=\"color:#000000;\">Information\n  seeking</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span style=\"color:#000000;\">Concern\n  for order</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span style=\"color:#000000;\">Self-confidence</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>-<span style=\"font-style:normal;font-size:7pt;\">       \n  </span></span><span style=\"color:#000000;\">Team\n  player</span></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span style=\"color:#000000;\"> </span></p>\n  \n \n \n  \n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><b><span>Working Conditions:</span></b></p>\n  <p class=\"MsoNormal\" style=\"text-align:justify;\"><span>Offshore based – Rotational (FPSO)</span></p>",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "· Fluent with CMMS System, preferable SAP Experience",
-      "mandatory_skills": [
-        "Oil & Gas"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Teamwork"
-      ],
-      "mandatory_requirements": [
-        "Qualifications & Experience: · Education: Bachelor’s degree in mechanical engineering or similar · Experience: · Minimum 5 years of Oil & Gas Industry experience",
-        "certified candidates are highly preferred · Language: Fluent in English and Bahasa Indonesia Required Competencies Technical Competencies:",
-        "Must have the ability to read and understand drawings and specifications specific to Mechanical discipline, e",
-        "If required, attend Emergency work after normal working hours on a callout basis"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "· Extensive experience handle Gas Turbine Generator, Gas Turbine Compressors, rotating equipment, and pedestal crane",
-        "Extensive experience and exposure with Maintenance Management system CMMS",
-        "pressure piping systems, valve types, and flange management",
-        "Team player Working Conditions: Offshore based – Rotational (FPSO) Purpose: The Mechanical Specialist is responsible for ensuring the reliable operation and maintenance of all mechanical equipment on Offshore/FPSO"
-      ],
-      "skill_categories": [
-        "Domain & Methodology"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Qualifications & Experience: · Education: Bachelor’s degree in mechanical engineering or similar · Experience: · Minimum 5 years of Oil & Gas Industry experience",
-          "certified candidates are highly preferred · Language: Fluent in English and Bahasa Indonesia Required Competencies Technical Competencies:",
-          "Must have the ability to read and understand drawings and specifications specific to Mechanical discipline, e",
-          "If required, attend Emergency work after normal working hours on a callout basis"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "· Extensive experience handle Gas Turbine Generator, Gas Turbine Compressors, rotating equipment, and pedestal crane",
-          "Extensive experience and exposure with Maintenance Management system CMMS",
-          "pressure piping systems, valve types, and flange management",
-          "Team player Working Conditions: Offshore based – Rotational (FPSO) Purpose: The Mechanical Specialist is responsible for ensuring the reliable operation and maintenance of all mechanical equipment on Offshore/FPSO",
-          "Also play as key role in developing and implementing preventative maintenance programs and optimizing equipment performance"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
     },
     "source": "Talentics",
     "logo": null
@@ -12068,102 +11953,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC0126D01643",
-    "title": "Cleaning – Atapupu, Nusa Tenggara Timur [PTC0126D01643]",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC0126D01643",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "Nusa Tenggara Timur, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal SMA/SMK Sederajat Semua Jurusan</li>\n<li>Pengalaman kerja minimal 1 tahun dalam dalam bidang terkait</li>\n<li>Memahami prosedur K3 (Keselamatan &amp; Kesehatan Kerja)</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai <strong>Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal SMA/SMK Sederajat Semua Jurusan</li>\n<li>Pengalaman kerja minimal 1 tahun dalam dalam bidang terkait</li>\n<li>Memahami prosedur K3 (Keselamatan &amp; Kesehatan Kerja)</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai <strong>Tenaga Alih Daya (TAD)</strong></li>\n</ul></span>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal SMA/SMK Sederajat Semua Jurusan Pengalaman kerja minimal 1 tahun dalam dalam bidang terkait Memahami prosedur K3 (Keselamatan &amp; Kesehatan Kerja) Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal SMA/SMK Sederajat Semua Jurusan Pengalaman kerja minimal 1 tahun dalam dalam bidang terkait Memahami prosedur K3 (Keselamatan &amp; Kesehatan Kerja) Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal SMA/SMK Sederajat Semua Jurusan Pengalaman kerja minimal 1 tahun dalam dalam bidang terkait Memahami prosedur K3 (Keselamatan &amp; Kesehatan Kerja) Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal SMA/SMK Sederajat Semua Jurusan Pengalaman kerja minimal 1 tahun dalam dalam bidang terkait Memahami prosedur K3 (Keselamatan &amp; Kesehatan Kerja) Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-12",
+    "id": "PTC-11",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-12",
+    "slug": "ptc-PTC-11",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12256,11 +12050,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-20",
+    "id": "PTC-18",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-20",
+    "slug": "ptc-PTC-18",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12353,11 +12147,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-28",
+    "id": "PTC-25",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-28",
+    "slug": "ptc-PTC-25",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12450,11 +12244,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-36",
+    "id": "PTC-32",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-36",
+    "slug": "ptc-PTC-32",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12547,11 +12341,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-44",
+    "id": "PTC-39",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-44",
+    "slug": "ptc-PTC-39",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12644,11 +12438,108 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-52",
+    "id": "PTC-46",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-52",
+    "slug": "ptc-PTC-46",
+    "type_name": "Contract",
+    "level": "Profesional",
+    "location": "DKI Jakarta, Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "Aktif",
+    "group": "Pertamina Training and Consulting",
+    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
+    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
+    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 25,
+        "status": "Match",
+        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "Warga Negara Indonesia Pendidikan Minimal D",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Komunikasi"
+      ],
+      "mandatory_requirements": [
+        "Warga Negara Indonesia Pendidikan Minimal D",
+        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
+        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Warga Negara Indonesia Pendidikan Minimal D",
+          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
+          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Pertamina PTC",
+    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
+  },
+  {
+    "id": "PTC-53",
+    "title": "Talent Candidate PTC Fresh Graduate",
+    "organization_id": "PTC",
+    "organization_name": "PT Pertamina Training and Consulting",
+    "slug": "ptc-PTC-53",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
@@ -12838,108 +12729,11 @@
     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
   },
   {
-    "id": "PTC-68",
+    "id": "PTC-67",
     "title": "Talent Candidate PTC Fresh Graduate",
     "organization_id": "PTC",
     "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-68",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "DKI Jakarta, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan Minimal D-III Semua Jurusan</li>\n<li>Pengalaman dalam Pengelolaan Administrasi (dibuktikan dengan surat pengalaman magang/kerja)</li>\n<li>Dapat mengoperasikan Komputer (Ms. Office)</li>\n<li>Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif)</li>\n<li>Mampu berkomunikasi dan bekerjasama dalam tim dengan baik</li>\n<li>Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan</li>\n<li>Bersedia mematuhi peraturan dan prosedur Perusahaan</li>\n<li>Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)</li>\n</ul></span>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan Minimal D",
-      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (1 Tahun Pengalaman / Fresh Graduate...)",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Komunikasi"
-      ],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan Minimal D",
-        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
-        "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan Minimal D",
-          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK) Warga Negara Indonesia Pendidikan Minimal D",
-          "Office) Menguasai Bahasa Inggris baik lisan maupun tulisan (minimal pasif) Mampu berkomunikasi dan bekerjasama dalam tim dengan baik Memiliki semangat tinggi untuk mendukung kegiatan dan citra Perusahaan Bersedia mematuhi peraturan dan prosedur Perusahaan Memiliki catatan baik dan tidak terlibat dalam kegiatan pelanggaran disiplin dan hukum (dibuktikan dengan lampiran SKCK)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC-76",
-    "title": "Talent Candidate PTC Fresh Graduate",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC-76",
+    "slug": "ptc-PTC-67",
     "type_name": "Contract",
     "level": "Profesional",
     "location": "DKI Jakarta, Indonesia",
