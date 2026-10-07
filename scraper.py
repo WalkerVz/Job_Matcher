@@ -11,16 +11,16 @@ from dotenv import load_dotenv
 load_dotenv()
 
 try:
-    from firecrawl import FirecrawlApp
+    from selenium import webdriver
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from selenium.webdriver.chrome.options import Options
+    from webdriver_manager.chrome import ChromeDriverManager
+    from selenium.webdriver.chrome.service import Service
 except ImportError:
-    print("⚠️  Firecrawl not installed. Install with: pip install firecrawl-py")
-    FirecrawlApp = None
-
-try:
-    from jobspy import scrape_jobs
-except ImportError:
-    print("⚠️  JobSpy not installed. Install with: pip install python-jobspy")
-    scrape_jobs = None
+    print("⚠️  Selenium not installed. Install with: pip install selenium webdriver-manager")
+    webdriver = None
 
 # ─── Konstanta bersama (dipakai scraper, rescore, add_job_entry) ───────────────
 MONTHS_ID = {
@@ -1409,83 +1409,100 @@ def scrape_linkedin_jobs(session, max_jobs=300):
 
 def scrape_opentrain_jobs():
     """
-    Scrape remote AI training jobs dari OpenTrain.ai
-    Focus: Indonesia & Indonesian-speaking roles
+    Scrape ALL remote freelance AI training jobs dari OpenTrain.ai worldwide
+    Gunakan Selenium untuk handle JavaScript rendering
+    Filter by skills match dengan CV: Data, Python, AI, SQL, etc.
     """
-    print("\n  Scraping OpenTrain.ai jobs...")
+    print("\n  Scraping OpenTrain.ai jobs (Selenium - JavaScript rendering)...")
     
+    if not webdriver:
+        print("    ⚠️  Selenium not available. Skipping OpenTrain.")
+        return []
+    
+    driver = None
     try:
-        session = requests.Session()
-        session.headers.update({
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
-        })
+        # Setup Selenium with headless Chrome
+        chrome_options = Options()
+        chrome_options.add_argument("--headless")
+        chrome_options.add_argument("--no-sandbox")
+        chrome_options.add_argument("--disable-dev-shm-usage")
+        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
+        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
         
-        # URLs untuk scrape
-        urls = [
-            "https://www.opentrain.ai/jobs/country/indonesia/",
-            "https://www.opentrain.ai/jobs/language/id/",
+        service = Service(ChromeDriverManager().install())
+        driver = webdriver.Chrome(service=service, options=chrome_options)
+        
+        # User skills untuk filter
+        user_skills = [
+            "python", "data", "ai", "sql", "excel", "analytics", 
+            "machine learning", "ml", "engineer", "developer", "programmer",
+            "coding", "evaluation", "labeling", "annotation", "ai training"
         ]
         
         all_jobs = []
         
-        for url in urls:
+        # Scrape main jobs page
+        url = "https://www.opentrain.ai/jobs/"
+        print(f"    Loading: {url}")
+        driver.get(url)
+        
+        # Wait untuk page load
+        try:
+            WebDriverWait(driver, 10).until(
+                EC.presence_of_all_elements_located((By.CLASS_NAME, "job"))
+            )
+        except:
+            print("    Warning: Timeout waiting for jobs to load")
+        
+        # Extract jobs from rendered page
+        soup = BeautifulSoup(driver.page_source, 'html.parser')
+        
+        # Find all job cards/listings
+        job_elements = soup.find_all(['div', 'article'], class_=lambda x: x and ('job' in x.lower() or 'card' in x.lower()))
+        
+        for elem in job_elements:
             try:
-                r = session.get(url, timeout=10)
-                if r.status_code != 200:
-                    continue
+                # Extract job info
+                text = elem.get_text()
+                
+                # Check if matches user skills
+                text_lower = text.lower()
+                skill_matches = [s for s in user_skills if s in text_lower]
+                
+                if skill_matches and len(text) > 20:
+                    # Extract title (usually first line or in h2/h3)
+                    title_elem = elem.find(['h2', 'h3', 'a'])
+                    title = title_elem.get_text().strip() if title_elem else text.split('\n')[0]
                     
-                soup = BeautifulSoup(r.text, 'html.parser')
-                text = soup.get_text()
-                
-                # Look for job patterns in text - simplified approach
-                # Split by common job title patterns
-                lines = text.split('\n')
-                
-                for i, line in enumerate(lines):
-                    line = line.strip()
+                    job = {
+                        "id": f"opentrain_{hash(title)}",
+                        "title": title[:100],
+                        "description": text[:300],
+                        "organization_name": "OpenTrain",
+                        "location": "Remote (Worldwide)",
+                        "url": url,
+                        "type": "Freelance/Contract",
+                        "source": "OpenTrain.ai",
+                        "matched_skills": skill_matches
+                    }
                     
-                    # Look for lines ending with job titles
-                    if any(keyword in line for keyword in ['Expert', 'Engineer', 'Manager', 'Specialist', 'Designer', 'Attorney', 'Trainer', 'Creator', 'Evaluator']):
-                        # Extract title
-                        if len(line) > 10 and len(line) < 100:
-                            # Look for salary in next few lines
-                            salary_info = ""
-                            for j in range(i, min(i+5, len(lines))):
-                                if '$' in lines[j] and ('hour' in lines[j] or 'task' in lines[j] or 'label' in lines[j]):
-                                    salary_info = lines[j].strip()
-                                    break
-                            
-                            if salary_info:
-                                job = {
-                                    "id": f"opentrain_{hash(line)}",
-                                    "title": line[:80],
-                                    "description": line,
-                                    "organization_name": "OpenTrain",
-                                    "salary_info": salary_info,
-                                    "location": "Remote",
-                                    "url": url,
-                                    "type": "Freelance/Contract",
-                                    "source": "OpenTrain.ai"
-                                }
-                                
-                                # Check if job already exists
-                                if not any(j['title'] == job['title'] for j in all_jobs):
-                                    all_jobs.append(job)
-                
-                time.sleep(1)  # Rate limit
-                
-            except Exception as e:
-                print(f"    Error scraping {url}: {e}")
+                    # Check if job already exists
+                    if not any(j['title'] == job['title'] for j in all_jobs):
+                        all_jobs.append(job)
+            except:
                 continue
         
-        # Remove duplicates
-        unique_jobs = {job['id']: job for job in all_jobs}.values()
-        print(f"  ✓ Found {len(unique_jobs)} OpenTrain jobs")
-        return list(unique_jobs)
+        print(f"    ✓ Found {len(all_jobs)} matching freelance jobs")
+        return all_jobs
         
     except Exception as e:
-        print(f"  ✗ OpenTrain error: {e}")
+        print(f"  ✗ OpenTrain Selenium error: {type(e).__name__}: {str(e)[:60]}")
         return []
+        
+    finally:
+        if driver:
+            driver.quit()
+            print("    (Browser closed)")
 
 
 def scrape_with_firecrawl(url, format_output="markdown"):
