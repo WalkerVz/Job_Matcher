@@ -1413,7 +1413,7 @@ def scrape_opentrain_jobs():
     Gunakan Selenium untuk handle JavaScript rendering
     Filter by skills match dengan CV: Data, Python, AI, SQL, etc.
     """
-    print("\n  Scraping OpenTrain.ai jobs (Selenium - JavaScript rendering)...")
+    print("\n  Scraping OpenTrain.ai jobs (Selenium - 745+ freelance roles)...")
     
     if not webdriver:
         print("    ⚠️  Selenium not available. Skipping OpenTrain.")
@@ -1426,7 +1426,6 @@ def scrape_opentrain_jobs():
         chrome_options.add_argument("--headless")
         chrome_options.add_argument("--no-sandbox")
         chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("--disable-blink-features=AutomationControlled")
         chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
         
         service = Service(ChromeDriverManager().install())
@@ -1436,73 +1435,92 @@ def scrape_opentrain_jobs():
         user_skills = [
             "python", "data", "ai", "sql", "excel", "analytics", 
             "machine learning", "ml", "engineer", "developer", "programmer",
-            "coding", "evaluation", "labeling", "annotation", "ai training"
+            "coding", "evaluation", "labeling", "annotation", "ai training",
+            "expert", "specialist", "analyst"
         ]
         
         all_jobs = []
         
-        # Scrape main jobs page
+        # Load jobs page
         url = "https://www.opentrain.ai/jobs/"
         print(f"    Loading: {url}")
         driver.get(url)
         
-        # Wait untuk page load
-        try:
-            WebDriverWait(driver, 10).until(
-                EC.presence_of_all_elements_located((By.CLASS_NAME, "job"))
-            )
-        except:
-            print("    Warning: Timeout waiting for jobs to load")
+        # Wait untuk JavaScript rendering
+        import time
+        time.sleep(8)  # Longer wait for JS rendering
         
-        # Extract jobs from rendered page
+        # Extract from rendered HTML
         soup = BeautifulSoup(driver.page_source, 'html.parser')
+        text = soup.get_text()
         
-        # Find all job cards/listings
-        job_elements = soup.find_all(['div', 'article'], class_=lambda x: x and ('job' in x.lower() or 'card' in x.lower()))
+        # Better parsing - look for job patterns in text
+        lines = text.split('\n')
         
-        for elem in job_elements:
-            try:
-                # Extract job info
-                text = elem.get_text()
-                
-                # Check if matches user skills
-                text_lower = text.lower()
-                skill_matches = [s for s in user_skills if s in text_lower]
-                
-                if skill_matches and len(text) > 20:
-                    # Extract title (usually first line or in h2/h3)
-                    title_elem = elem.find(['h2', 'h3', 'a'])
-                    title = title_elem.get_text().strip() if title_elem else text.split('\n')[0]
+        i = 0
+        while i < len(lines):
+            line = lines[i].strip()
+            
+            # Look for job title patterns
+            if any(kw in line for kw in ['Expert', 'Specialist', 'Engineer', 'Analyst', 'Manager', 'Trainer', 'Creator', 'Evaluator', 'Attorney']):
+                if len(line) > 15 and len(line) < 150:
+                    # Check skills match
+                    line_lower = line.lower()
+                    skill_matches = [s for s in user_skills if s in line_lower]
                     
-                    job = {
-                        "id": f"opentrain_{hash(title)}",
-                        "title": title[:100],
-                        "description": text[:300],
-                        "organization_name": "OpenTrain",
-                        "location": "Remote (Worldwide)",
-                        "url": url,
-                        "type": "Freelance/Contract",
-                        "source": "OpenTrain.ai",
-                        "matched_skills": skill_matches
-                    }
-                    
-                    # Check if job already exists
-                    if not any(j['title'] == job['title'] for j in all_jobs):
-                        all_jobs.append(job)
-            except:
-                continue
+                    if skill_matches:  # Only if has matching skills
+                        # Extract additional info from next lines
+                        salary = ""
+                        location = "Remote (Worldwide)"
+                        job_type = ""
+                        
+                        for j in range(i+1, min(i+10, len(lines))):
+                            next_line = lines[j].strip().lower()
+                            
+                            # Extract salary
+                            if '$' in lines[j] and ('hour' in next_line or 'task' in next_line or 'label' in next_line):
+                                salary = lines[j].strip()
+                                break
+                            
+                            # Extract location
+                            if 'remote' in next_line:
+                                if 'worldwide' in next_line:
+                                    location = "Remote (Worldwide)"
+                                elif 'us' in next_line:
+                                    location = "Remote (USA)"
+                        
+                        job = {
+                            "id": f"opentrain_{hash(line)}",
+                            "title": line[:100],
+                            "description": line,
+                            "organization_name": "OpenTrain",
+                            "salary_info": salary,
+                            "location": location,
+                            "url": url,
+                            "type": "Freelance/Contract",
+                            "source": "OpenTrain.ai",
+                            "matched_skills": skill_matches
+                        }
+                        
+                        # Avoid duplicates
+                        if not any(j['title'] == job['title'] for j in all_jobs):
+                            all_jobs.append(job)
+            
+            i += 1
         
-        print(f"    ✓ Found {len(all_jobs)} matching freelance jobs")
+        print(f"    Found {len(all_jobs)} matching freelance jobs from OpenTrain")
         return all_jobs
         
     except Exception as e:
-        print(f"  ✗ OpenTrain Selenium error: {type(e).__name__}: {str(e)[:60]}")
+        print(f"  Warning: OpenTrain Selenium error: {type(e).__name__}")
         return []
         
     finally:
         if driver:
-            driver.quit()
-            print("    (Browser closed)")
+            try:
+                driver.quit()
+            except:
+                pass
 
 
 def scrape_with_firecrawl(url, format_output="markdown"):
