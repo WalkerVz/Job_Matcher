@@ -1407,6 +1407,87 @@ def scrape_linkedin_jobs(session, max_jobs=300):
     return linkedin_jobs
 
 
+def scrape_opentrain_jobs():
+    """
+    Scrape remote AI training jobs dari OpenTrain.ai
+    Focus: Indonesia & Indonesian-speaking roles
+    """
+    print("\n  Scraping OpenTrain.ai jobs...")
+    
+    try:
+        session = requests.Session()
+        session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36"
+        })
+        
+        # URLs untuk scrape
+        urls = [
+            "https://www.opentrain.ai/jobs/country/indonesia/",
+            "https://www.opentrain.ai/jobs/language/id/",
+        ]
+        
+        all_jobs = []
+        
+        for url in urls:
+            try:
+                r = session.get(url, timeout=10)
+                if r.status_code != 200:
+                    continue
+                    
+                soup = BeautifulSoup(r.text, 'html.parser')
+                text = soup.get_text()
+                
+                # Look for job patterns in text - simplified approach
+                # Split by common job title patterns
+                lines = text.split('\n')
+                
+                for i, line in enumerate(lines):
+                    line = line.strip()
+                    
+                    # Look for lines ending with job titles
+                    if any(keyword in line for keyword in ['Expert', 'Engineer', 'Manager', 'Specialist', 'Designer', 'Attorney', 'Trainer', 'Creator', 'Evaluator']):
+                        # Extract title
+                        if len(line) > 10 and len(line) < 100:
+                            # Look for salary in next few lines
+                            salary_info = ""
+                            for j in range(i, min(i+5, len(lines))):
+                                if '$' in lines[j] and ('hour' in lines[j] or 'task' in lines[j] or 'label' in lines[j]):
+                                    salary_info = lines[j].strip()
+                                    break
+                            
+                            if salary_info:
+                                job = {
+                                    "id": f"opentrain_{hash(line)}",
+                                    "title": line[:80],
+                                    "description": line,
+                                    "organization_name": "OpenTrain",
+                                    "salary_info": salary_info,
+                                    "location": "Remote",
+                                    "url": url,
+                                    "type": "Freelance/Contract",
+                                    "source": "OpenTrain.ai"
+                                }
+                                
+                                # Check if job already exists
+                                if not any(j['title'] == job['title'] for j in all_jobs):
+                                    all_jobs.append(job)
+                
+                time.sleep(1)  # Rate limit
+                
+            except Exception as e:
+                print(f"    Error scraping {url}: {e}")
+                continue
+        
+        # Remove duplicates
+        unique_jobs = {job['id']: job for job in all_jobs}.values()
+        print(f"  ✓ Found {len(unique_jobs)} OpenTrain jobs")
+        return list(unique_jobs)
+        
+    except Exception as e:
+        print(f"  ✗ OpenTrain error: {e}")
+        return []
+
+
 def scrape_with_firecrawl(url, format_output="markdown"):
     """
     Gunakan Firecrawl untuk extract clean data dari URL.
@@ -1682,13 +1763,32 @@ def main():
         matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 
-    print("\nStep 3h: Scraping with JobSpy (LinkedIn)...")
+    print("\nStep 3h: Scraping OpenTrain.ai AI Training Jobs...")
+    opentrain_jobs = scrape_opentrain_jobs()
+    for job in opentrain_jobs:
+        # Normalize untuk job matching
+        normalized_job = {
+            "id": job.get("id"),
+            "title": job.get("title", ""),
+            "organization_name": job.get("organization_name", ""),
+            "location": job.get("location", ""),
+            "workplace": "Work From Home",
+            "due_date": "Active",
+            "group": "AI Training / Freelance",
+            "url": job.get("url", ""),
+            "description": job.get("description", "") + "\n" + job.get("salary_info", ""),
+            "requirements": "AI Training, Data Labeling, Evaluation, English fluency",
+            "type_name": job.get("type", ""),
+            "source": job.get("source", "")
+        }
+        matched_job = evaluate_job_match(normalized_job)
+        matched_jobs.append(matched_job)
+
+    print("\nStep 3i: Scraping with JobSpy (LinkedIn)...")
     # NOTE: JobSpy memiliki compatibility issues di Windows dengan character encoding
     # LinkedIn, Indeed, Glassdoor API protection juga aktif
-    # Saat ini 7 sumber utama sudah menghasilkan 125+ jobs yang cocok
-    # JobSpy dapat diaktifkan di Kaggle environment (Linux) tanpa encoding issues
+    # Saat ini sources sudah menghasilkan 125+ jobs yang cocok
     print("  ℹ️  JobSpy scraping skipped (Windows encoding issue - works on Linux/Kaggle)")
-    print("  ℹ️  Current sources (Talentics, PTC, SawitPRO, Grab, IOH, Indofood) already providing 125+ jobs")
 
     # Sort matched jobs by match score (highest first), placing blocked jobs at the end
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
