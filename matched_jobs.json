@@ -636,109 +636,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "grab_744000153632882",
-    "title": "Senior Engineer, Finance Systems",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000153632882",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000153632882/senior-engineer-finance-systems/",
-    "raw_description": "<p>Senior Engineer, Finance Systems</p><p>Team</p><p>Technology Solutions</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>This is a hybrid engineering role for someone who builds autonomous, agentic AI systems and is comfortable integrating them into a live ERP landscape. You will design Large Language Model-based agents that plan, reason, and use tools. These agents will implement multi-step Finance and Procurement workflows with minimal human intervention. These agents will connect safely into Oracle Fusion processes. Your work will let us build AI-driven automation internally, promoting this capability directly alongside our Oracle developers.</p><p>You will work on site at our office in Jakarta, Indonesia.</p><p>The Critical Tasks You Will Perform</p><p>Develop autonomous AI agents that plan, reason, and complete Finance and Procurement workflows across O2C, R2R, and P2P.</p><p>Integrate agents with Oracle Fusion Cloud, external APIs, and databases so they can take actions in production ERP processes.</p><p>Improve model and agent performance through prompt engineering and retrieval-augmented generation (RAG) architectures.</p><p>Build evaluation and testing frameworks that measure agent reliability, accuracy, and safety.</p><p>Implement and maintain guardrails and human oversight for automated finance workflows.</p><p>Break down complex, multi-step business processes into components suitable for AI implementation.</p><p>Set technical direction and engineering standards, and guide peers on agentic AI and ERP integration patterns.</p><p>Read more</p><p>Skills you need</p><p>You will need</p><p>3+ years in software engineering, including 5+ years designing and building scalable systems.</p><p>AI engineering skills: Python, API design, and hands-on experience building with large language models.</p><p>Experience with AI/ML fundamentals, data structures, and algorithms.</p><p>Backend proficiency across databases, microservices, and system architecture.</p><p>Experience deconstructing complex business tasks into steps an AI system can implement.</p>",
-    "raw_requirements": "<p>Senior Engineer, Finance Systems</p><p>Team</p><p>Technology Solutions</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>This is a hybrid engineering role for someone who builds autonomous, agentic AI systems and is comfortable integrating them into a live ERP landscape. You will design Large Language Model-based agents that plan, reason, and use tools. These agents will implement multi-step Finance and Procurement workflows with minimal human intervention. These agents will connect safely into Oracle Fusion processes. Your work will let us build AI-driven automation internally, promoting this capability directly alongside our Oracle developers.</p><p>You will work on site at our office in Jakarta, Indonesia.</p><p>The Critical Tasks You Will Perform</p><p>Develop autonomous AI agents that plan, reason, and complete Finance and Procurement workflows across O2C, R2R, and P2P.</p><p>Integrate agents with Oracle Fusion Cloud, external APIs, and databases so they can take actions in production ERP processes.</p><p>Improve model and agent performance through prompt engineering and retrieval-augmented generation (RAG) architectures.</p><p>Build evaluation and testing frameworks that measure agent reliability, accuracy, and safety.</p><p>Implement and maintain guardrails and human oversight for automated finance workflows.</p><p>Break down complex, multi-step business processes into components suitable for AI implementation.</p><p>Set technical direction and engineering standards, and guide peers on agentic AI and ERP integration patterns.</p><p>Read more</p><p>Skills you need</p><p>You will need</p><p>3+ years in software engineering, including 5+ years designing and building scalable systems.</p><p>AI engineering skills: Python, API design, and hands-on experience building with large language models.</p><p>Experience with AI/ML fundamentals, data structures, and algorithms.</p><p>Backend proficiency across databases, microservices, and system architecture.</p><p>Experience deconstructing complex business tasks into steps an AI system can implement.</p>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai engineer, ai, developer, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "on experience building with large language models",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "step Finance and Procurement workflows with minimal human intervention",
-        "step Finance and Procurement workflows with minimal human intervention"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "driven automation internally, promoting this capability directly alongside our Oracle developers",
-        "The Critical Tasks You Will Perform Develop autonomous AI agents that plan, reason, and complete Finance and Procurement workflows across O2C, R2R, and P2P",
-        "driven automation internally, promoting this capability directly alongside our Oracle developers",
-        "The Critical Tasks You Will Perform Develop autonomous AI agents that plan, reason, and complete Finance and Procurement workflows across O2C, R2R, and P2P"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "step Finance and Procurement workflows with minimal human intervention",
-          "step Finance and Procurement workflows with minimal human intervention"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "driven automation internally, promoting this capability directly alongside our Oracle developers",
-          "The Critical Tasks You Will Perform Develop autonomous AI agents that plan, reason, and complete Finance and Procurement workflows across O2C, R2R, and P2P",
-          "driven automation internally, promoting this capability directly alongside our Oracle developers",
-          "The Critical Tasks You Will Perform Develop autonomous AI agents that plan, reason, and complete Finance and Procurement workflows across O2C, R2R, and P2P"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "grab_744000152359679",
     "title": "Assistant Manager, Technology Audit",
     "organization_id": "Grab",
@@ -847,6 +744,213 @@
     },
     "source": "Grab",
     "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": "ioh_57963944",
+    "title": "AVP-Telco Cloud Architecture, Automation & Services",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-57963944",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Core Planning & Engineering",
+    "url": "https://careers.ioh.co.id/job/AVP-Telco-Cloud-Architecture%2C-Automation-&-Services/57963944/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Batas usia maksimal adalah 90 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Skills Strong experience in cloud",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Analytical",
+        "Leadership"
+      ],
+      "mandatory_requirements": [
+        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
+        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
+        "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
+        "Proactive leadership, vendor management, and decision",
+        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
+          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
+          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
+          "Proactive leadership, vendor management, and decision",
+          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
+          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": 90,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": "ioh_57963844",
+    "title": "AVP-Core Architecture & Services",
+    "organization_id": "IOH",
+    "organization_name": "Indosat Ooredoo Hutchison",
+    "slug": "ioh-57963844",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "ID",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Group Core Planning & Engineering",
+    "url": "https://careers.ioh.co.id/job/AVP-Core-Architecture-&-Services/57963844/",
+    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><h2><span style=\"font-size:12.0pt;font-family:arial, helvetica, sans-serif\"> </span></h2>\n<h1><span style=\"font-size:14.0pt\"><strong>Leadership Competencies</strong></span></h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Expected Behavio</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strategic Thinking</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to anticipate long-term trends, opportunities, and risks.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to define long-term product and AI strategy.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Cross-functional Leadership</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead, influence, and collaborate effectively across diverse teams.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Skilled at influencing engineering, commercial, data, and operations teams.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Innovation Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to inspire, drive, and deliver meaningful innovation.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Track record of driving digital, AI, and core network innovation</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Commercial Acumen</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>A strong understanding of business economics, customer value, market dynamics, and financial impact.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to build business cases, pricing models, and partner ecosystems.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Execution Excellence</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The discipline and capability to deliver high-quality outcomes reliably, on time, and within scope.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strong program management and delivery discipline.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Communication &amp; Stakeholder Management</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Clear communicator with senior leadership and partners.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Change Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead teams and organizations through transformation, uncertainty, or shifts in strategy, technology, or operating models.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to drive organization-wide adoption of AI and new product capabilities.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p>\n<p> </p></div></div></div>\n</span>",
+    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><h2><span style=\"font-size:12.0pt;font-family:arial, helvetica, sans-serif\"> </span></h2>\n<h1><span style=\"font-size:14.0pt\"><strong>Leadership Competencies</strong></span></h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Expected Behavio</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strategic Thinking</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to anticipate long-term trends, opportunities, and risks.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to define long-term product and AI strategy.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Cross-functional Leadership</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead, influence, and collaborate effectively across diverse teams.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Skilled at influencing engineering, commercial, data, and operations teams.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Innovation Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to inspire, drive, and deliver meaningful innovation.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Track record of driving digital, AI, and core network innovation</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Commercial Acumen</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>A strong understanding of business economics, customer value, market dynamics, and financial impact.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to build business cases, pricing models, and partner ecosystems.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Execution Excellence</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The discipline and capability to deliver high-quality outcomes reliably, on time, and within scope.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strong program management and delivery discipline.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Communication &amp; Stakeholder Management</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Clear communicator with senior leadership and partners.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Change Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead teams and organizations through transformation, uncertainty, or shifts in strategy, technology, or operating models.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to drive organization-wide adoption of AI and new product capabilities.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p>\n<p> </p></div></div></div>\n</span>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan ini dikhususkan atau diutamakan untuk Pria."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Communication",
+        "Leadership"
+      ],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Strong program management and delivery discipline",
+        "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners",
+        "Strong program management and delivery discipline",
+        "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Strong program management and delivery discipline",
+          "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners",
+          "Strong program management and delivery discipline",
+          "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Male Only",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indosat Ooredoo Hutchison",
+    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
   },
   {
     "id": "ioh_58849544",
@@ -1551,213 +1655,6 @@
     "parsed_requirements": {
       "gpa": null,
       "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
-    "id": "ioh_57963844",
-    "title": "AVP-Core Architecture & Services",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-57963844",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Core Planning & Engineering",
-    "url": "https://careers.ioh.co.id/job/AVP-Core-Architecture-&-Services/57963844/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><h2><span style=\"font-size:12.0pt;font-family:arial, helvetica, sans-serif\"> </span></h2>\n<h1><span style=\"font-size:14.0pt\"><strong>Leadership Competencies</strong></span></h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Expected Behavio</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strategic Thinking</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to anticipate long-term trends, opportunities, and risks.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to define long-term product and AI strategy.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Cross-functional Leadership</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead, influence, and collaborate effectively across diverse teams.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Skilled at influencing engineering, commercial, data, and operations teams.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Innovation Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to inspire, drive, and deliver meaningful innovation.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Track record of driving digital, AI, and core network innovation</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Commercial Acumen</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>A strong understanding of business economics, customer value, market dynamics, and financial impact.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to build business cases, pricing models, and partner ecosystems.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Execution Excellence</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The discipline and capability to deliver high-quality outcomes reliably, on time, and within scope.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strong program management and delivery discipline.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Communication &amp; Stakeholder Management</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Clear communicator with senior leadership and partners.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Change Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead teams and organizations through transformation, uncertainty, or shifts in strategy, technology, or operating models.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to drive organization-wide adoption of AI and new product capabilities.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p>\n<p> </p></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Description</h2> </div><div><h2><span style=\"font-size:12.0pt;font-family:arial, helvetica, sans-serif\"> </span></h2>\n<h1><span style=\"font-size:14.0pt\"><strong>Leadership Competencies</strong></span></h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Expected Behavio</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strategic Thinking</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to anticipate long-term trends, opportunities, and risks.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to define long-term product and AI strategy.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Cross-functional Leadership</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead, influence, and collaborate effectively across diverse teams.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Skilled at influencing engineering, commercial, data, and operations teams.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Innovation Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to inspire, drive, and deliver meaningful innovation.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Track record of driving digital, AI, and core network innovation</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Commercial Acumen</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>A strong understanding of business economics, customer value, market dynamics, and financial impact.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to build business cases, pricing models, and partner ecosystems.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Execution Excellence</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The discipline and capability to deliver high-quality outcomes reliably, on time, and within scope.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Strong program management and delivery discipline.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Communication &amp; Stakeholder Management</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Clear communicator with senior leadership and partners.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Change Leadership</p>\n<p> </p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>The capability to lead teams and organizations through transformation, uncertainty, or shifts in strategy, technology, or operating models.</p>\n</td>\n<td style=\"width:2.0in\" valign=\"top\">\n<p>Ability to drive organization-wide adoption of AI and new product capabilities.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p>\n<p> </p></div></div></div>\n</span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan ini dikhususkan atau diutamakan untuk Pria."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Communication",
-        "Leadership"
-      ],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Strong program management and delivery discipline",
-        "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners",
-        "Strong program management and delivery discipline",
-        "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Strong program management and delivery discipline",
-          "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners",
-          "Strong program management and delivery discipline",
-          "Communication &amp; Stakeholder Management The ability to communicate clearly, convincingly, and appropriately with stakeholders at all levels Clear communicator with senior leadership and partners"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Male Only",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indosat Ooredoo Hutchison",
-    "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
-  },
-  {
-    "id": "ioh_57963944",
-    "title": "AVP-Telco Cloud Architecture, Automation & Services",
-    "organization_id": "IOH",
-    "organization_name": "Indosat Ooredoo Hutchison",
-    "slug": "ioh-57963944",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "ID",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Group Core Planning & Engineering",
-    "url": "https://careers.ioh.co.id/job/AVP-Telco-Cloud-Architecture%2C-Automation-&-Services/57963944/",
-    "raw_description": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
-    "raw_requirements": "<span class=\"jobdescription\"><div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Job Summary</h2> </div><div><p>The Telco Cloud Core Architect &amp; Automation and services  is responsible for defining and driving the architecture of the cloud-native core platform while shaping the company’s API strategy to enable scalable, secure, and interoperable services. This role ensures alignment between cloud infrastructure, 4G/5G core evolution, digital platforms, and API products—enabling faster innovation, improved service exposure, and ecosystem growth.</p>\n<p>The role collaborates with Engineering, TechCo, Product, IT/Digital, Cybersecurity, and external partners to build an architecture that accelerates digital services, supports network modernization, and unlocks new monetization opportunities through APIs</p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibitliy</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Key Responsibilities</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Key Result Areas</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Design and govern cloud‑native core architecture (EPC, IMS, 5G Core, UDM, PCF, NEF).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Stable, scalable cloud-native core platform</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define architecture patterns for CNFs/NFVs (e.g. Openstack, Kubernetes), network slicing, edge cloud, and distributed compute.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Deliver complete target-state and transition-state architecture maps aligned to the technology roadmap.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Create long-term roadmap and implementation plans for Telco cloud infrastructure</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Strategic alignment and modernization readiness</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Define the company’s API strategy covering: </p>\n<ul type=\"disc\">\n<li>Network APIs (NEF, CAPIF/3GPP, CAMARA)</li>\n<li>Enterprise APIs (B2B exposure)</li>\n<li>Internal service APIs for microservices</li>\n</ul>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Alignment with GSMA Open Gateway standards.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Consistent API governance and high adoption across internal/partner ecosystems.</p>\n<p> </p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Key Responsibility_2</h2> </div><div><table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Oversee API gateways, service mesh, identity, and access frameworks (OAuth2/OIDC/MTLS).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Robust, secure, and scalable API platform supporting Telco API monetization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Partner with Product teams to translate network capabilities into monetizable APIs.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Faster launch of network and digital services.</p>\n<p> </p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Drive automation (IaC, CI/CD, GitOps) and cloud reliability (SRE, observability).</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Reduce time for changes through optimized CI/CD workflows</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Ensure platform security, compliance, resilience, and Zero Trust principles.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Implement Zero Trust controls across identity, workload, and network layers with full policy coverage.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Maintain architecture blueprints, reference models, and decision records.</p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Publish and update architecture blueprints quarterly with version control and stakeholder sign-off.</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:215.8pt\" valign=\"top\">\n<p>Lead vendor evaluation, architecture reviews, and technology roadmaps.</p>\n<p> </p>\n</td>\n<td style=\"width:215.7pt\" valign=\"top\">\n<p>Conduct Architecture Review Boards with ≥90% project compliance to standards. </p>\n<p>Complete vendor evaluations with standardized scoring, benchmarks, and TCO for 100% major procurements.</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Skills</h2> </div><div><ul>\n<li>Strong experience in cloud-native telco core (EPC, 5G Core SA, IMS, UDM, PCF, NEF). </li>\n<li>Deep expertise in Kubernetes, containers, service mesh (Istio/Linkerd), and distributed systems. </li>\n<li>Strong understanding of API frameworks (REST, gRPC), gateways, OAuth2, OIDC, JWT, rate limiting, throttling. </li>\n<li>Familiarity with GSMA Open Gateway / CAMARA and CAPIF architecture. </li>\n<li>Proficiency with IaC (Terraform, Ansible), CI/CD, GitOps. </li>\n<li>Strong grasp of cloud networking (BGP, CNI, overlay networks). </li>\n<li>Understanding of SRE practices and cloud observability stacks (Prometheus, Grafana, ELK, Jaeger).</li>\n</ul></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Leadership Competency</h2> </div><div><h1> </h1>\n<table border=\"1\" cellpadding=\"0\" cellspacing=\"0\">\n<tbody>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Competency</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Definition</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Expected Behavior</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Technology Vision</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Shapes cloud-native evolution roadmap</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Defines cloud stack direction for on-prem Telco Core workloads</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Innovation &amp; Automation</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives automation in operations</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Delivers scalable, resilient, and cost-effective cloud infrastructure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Execution Oversight</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensures timely delivery of infrastructure goals</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Tracks infra delivery milestones, issue resolution, and performance optimization</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>API Strategy Leadership</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Leads API enablement and adoption</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Develop robust frameworks for Telco API infrastructure and exposure</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Stakeholder Engagement</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Collaborates across teams and vendors</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Drives alignment and smooth integration across domains and suppliers</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Operational Discipline</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Ensure system stability and compliance</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Embeds governance, monitoring, and security standards</p>\n</td>\n</tr>\n<tr>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Infrastructure Strategy</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Guides to hardware and orchestration technology choices</p>\n</td>\n<td style=\"width:144.0pt\" valign=\"top\">\n<p>Selects optimal platform combinations for performance, efficiency, and cost</p>\n</td>\n</tr>\n</tbody>\n</table>\n<p> </p></div></div><div style=\"padding:10.0px 0.0px;border:1.0px solid transparent\"><div style=\"font-size:16.0px;word-wrap:break-word\"><h2 style=\"font-size:1.0em;margin:0.0px\">Qualifications</h2> </div><div><ul>\n<li>Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field</li>\n<li>8–15+ years in network/cloud architecture or platform engineering. </li>\n<li>Hands-on experience with large-scale cloud-native telco systems. </li>\n<li>Experience designing or leading API ecosystems (internal or external). </li>\n<li>Proven leadership in multi-vendor, cross-functional environments.</li>\n<li>Experience initiating or leading AI-based network operations and automation projects in cloud, SDN, or Telco Core domains</li>\n<li>Familiarity with multi-vendor Telco environments, open-source ecosystems, and hardware platform benchmarking</li>\n<li>Strong understanding of infrastructure hardware design including x86, ARM, and AMD platforms, as well as NIC technologies, DPDK, and high-performance network interface requirements</li>\n<li>Strong analytical and architectural thinking, </li>\n<li>Ability to communicate complex material to both technical and business stakeholders. </li>\n<li>Proactive leadership, vendor management, and decision-making. </li>\n<li>Excellent documentation and modelling (UML, ArchiMate).</li>\n</ul></div></div></div>\n</span>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Batas usia maksimal adalah 90 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Skills Strong experience in cloud",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Leadership"
-      ],
-      "mandatory_requirements": [
-        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
-        "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
-        "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
-        "Proactive leadership, vendor management, and decision",
-        "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering",
-          "effective cloud infrastructure Execution Oversight Ensures timely delivery of infrastructure goals Tracks infra delivery milestones, issue resolution, and performance optimization API Strategy Leadership Leads API enablement and adoption Develop robust frameworks for Telco API infrastructure and exposure Stakeholder Engagement Collaborates across teams and vendors Drives alignment and smooth integration across domains and suppliers Operational Discipline Ensure system stability and compliance Embeds governance, monitoring, and security standards Infrastructure Strategy Guides to hardware and orchestration technology choices Selects optimal platform combinations for performance, efficiency, and cost Qualifications Bachelor’s or master’s degree in computer science, Electrical Engineering, or related technical field 8–15+ years in network/cloud architecture or platform engineering"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
-          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)",
-          "Proactive leadership, vendor management, and decision",
-          "Job Summary The Telco Cloud Core Architect &amp; Automation and services is responsible for defining and driving the architecture of the cloud",
-          "Lead API governance, standards, and lifecycle management (design, versioning, documentation, deprecation)"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": 90,
       "toefl": null,
       "gender": "Open",
       "experience": "Open / Not Specified",
@@ -4563,116 +4460,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "grab_744000152130527",
-    "title": "Operation Excellence Assistant Manager",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000152130527",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000152130527/operation-excellence-assistant-manager/",
-    "raw_description": "<p>Operation Excellence Assistant Manager</p><p>Team</p><p>Operations</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>The ID GrabKios Operation team is part of GrabKios, established initially as Kudo, and is responsible for process transformation activities & technical assistance at GrabKios. Kios plays an important role within the Grab Indonesia ecosystem, in Digital Goods, supporting multiple vertical activities and directly engaging consumers. We are made up of enthusiastic individuals with a desire for progress and development.</p><p>Get to Know the Role</p><p>We are looking for a Operation Excellence Assistant Manager to lead operation process transformation and assist the partner on the technical side. This role is important to our success, as we are looking for you to manage these responsibilities. You will be reporting to Manager, Digital & Sustainability Operations and based onsite in Grab Jakarta office.</p><p>The Critical Tasks You Will Perform</p><p>Lead and execute operational transformation initiatives to enable greater automation.</p><p>Identify operational improvement opportunities and develop effective solutions.</p><p>Collaborate with partners to understand their integration needs and provide technical guidance throughout the integration process.</p><p>Troubleshoot and resolve technical issues related to partner integrations in a timely manner.</p><p>Work closely with internal teams, including Engineering, Product, and Customer Support, to align objectives and success metrics.</p><p>Develop and maintain documentation covering integration processes, technical specifications, and support procedures.</p><p>Monitor the impact of improvement initiatives on operational efficiency and reliability, including post-integration performance.</p><p>Guide and maintain integration solutions using APIs, SDKs, and other relevant technologies.</p><p>Prior experience in a similar role is preferred.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>3+ years</p>",
-    "raw_requirements": "<p>Operation Excellence Assistant Manager</p><p>Team</p><p>Operations</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>The ID GrabKios Operation team is part of GrabKios, established initially as Kudo, and is responsible for process transformation activities & technical assistance at GrabKios. Kios plays an important role within the Grab Indonesia ecosystem, in Digital Goods, supporting multiple vertical activities and directly engaging consumers. We are made up of enthusiastic individuals with a desire for progress and development.</p><p>Get to Know the Role</p><p>We are looking for a Operation Excellence Assistant Manager to lead operation process transformation and assist the partner on the technical side. This role is important to our success, as we are looking for you to manage these responsibilities. You will be reporting to Manager, Digital & Sustainability Operations and based onsite in Grab Jakarta office.</p><p>The Critical Tasks You Will Perform</p><p>Lead and execute operational transformation initiatives to enable greater automation.</p><p>Identify operational improvement opportunities and develop effective solutions.</p><p>Collaborate with partners to understand their integration needs and provide technical guidance throughout the integration process.</p><p>Troubleshoot and resolve technical issues related to partner integrations in a timely manner.</p><p>Work closely with internal teams, including Engineering, Product, and Customer Support, to align objectives and success metrics.</p><p>Develop and maintain documentation covering integration processes, technical specifications, and support procedures.</p><p>Monitor the impact of improvement initiatives on operational efficiency and reliability, including post-integration performance.</p><p>Guide and maintain integration solutions using APIs, SDKs, and other relevant technologies.</p><p>Prior experience in a similar role is preferred.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>3+ years</p>",
-    "match_score": 100,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it, git."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Prior experience in a similar role is preferred",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Read more Skills you need What Essential Skills You Will Need 3+ years Operation Excellence Assistant Manager Team Operations Location Jakarta, Indonesia Job Type Full",
-        "Read more Skills you need What Essential Skills You Will Need 3+ years"
-      ],
-      "preferred_requirements": [
-        "Prior experience in a similar role is preferred",
-        "Prior experience in a similar role is preferred"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Operation Excellence Assistant Manager Team Operations Location Jakarta, Indonesia Job Type Full",
-        "time The role at a glance Skills you need What we offer Life at Grab The role at a glance Get to Know the Team The ID GrabKios Operation team is part of GrabKios, established initially as Kudo, and is responsible for process transformation activities & technical assistance at GrabKios",
-        "We are made up of enthusiastic individuals with a desire for progress and development",
-        "Get to Know the Role We are looking for a Operation Excellence Assistant Manager to lead operation process transformation and assist the partner on the technical side"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Read more Skills you need What Essential Skills You Will Need 3+ years Operation Excellence Assistant Manager Team Operations Location Jakarta, Indonesia Job Type Full",
-          "Read more Skills you need What Essential Skills You Will Need 3+ years"
-        ],
-        "preferred": [
-          "Prior experience in a similar role is preferred",
-          "Prior experience in a similar role is preferred"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Operation Excellence Assistant Manager Team Operations Location Jakarta, Indonesia Job Type Full",
-          "time The role at a glance Skills you need What we offer Life at Grab The role at a glance Get to Know the Team The ID GrabKios Operation team is part of GrabKios, established initially as Kudo, and is responsible for process transformation activities & technical assistance at GrabKios",
-          "We are made up of enthusiastic individuals with a desire for progress and development",
-          "Get to Know the Role We are looking for a Operation Excellence Assistant Manager to lead operation process transformation and assist the partner on the technical side",
-          "This role is important to our success, as we are looking for you to manage these responsibilities"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "ioh_53169644",
     "title": "Point of Sales Platforms",
     "organization_id": "IOH",
@@ -5342,6 +5129,108 @@
     },
     "source": "Indosat Ooredoo Hutchison",
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
+  },
+  {
+    "id": 26865,
+    "title": "Prime Natuna EP - Engineering Manager",
+    "organization_id": 112065,
+    "organization_name": null,
+    "slug": "prime-natuna-ep-engineering-manager",
+    "type_name": "Karyawan Tetap",
+    "level": "Department Head/Manager",
+    "location": "Kota Jakarta Selatan, DKI Jakarta (Indonesia)",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2026-10-13 00:00:00",
+    "group": "Engineering",
+    "url": "https://jobs.talentics.id/skk-migas/prime-natuna-ep-engineering-manager",
+    "raw_description": "<p class=\"MsoNormal\"><b><span style=\"font-size:11pt;\">Responsible to:</span></b></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Responsible for leading and\nmanaging a multidisciplinary engineering team to ensure the safe, reliable,\nefficient, and cost-effective operation of company assets and facilities.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Responsible for planning,\nimplementing, and monitoring the point of interaction between the various\ntechnical elements of the project to ensure its safe and optimum project\ndelivery as well as reliable operation.</span></p><p class=\"MsoNormal\"><b><span style=\"font-size:11pt;\">Areas of Accountability,\nResponsibility and Competence:   </span></b></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Plan, organize, direct,\ncontrol and evaluate the activities and operations of the FEMI dept.\nEngineering team.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Ensure elimination of\nincidents through robust controls, incident reviews and embedding lessons\nlearned internally and across organization.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Focuses on managerial\nconcerns of the small project under Engineering department such as cost,\ncompletion date, and resource allocation. Provides expert resolution of issues\nand monitors integration of work.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Manage and oversee resource\ncapacity and capabilities within engineering department. Monitor and ensure\neffectiveness utilization of Engineering services contract to make-up and\nfill-the gap.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Identifies risk and\nopportunities. Develop control and mitigation for risk. Follow-up assess and\ndiscuss any improvement opportunities with all relevant stakeholder.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Consult and negotiate with\ncontractors/stakeholders to prepare specifications, explain proposals and\npresent engineering reports and findings.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Assign, co-ordinate and\nreview the technical work of the department or project teams.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Become owner of\nOrganization Engineering procedure and standard. Including development,\nroll-out, implementation, review and validation those documents.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Continuous assurance that\nthe team working following all Engineering guideline and practices. Manage,\nescalate and coordinate with all relevant stakeholder if any exeption is\nrequired.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Develop report for FEMI\nmanagement in a timely manner.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Planning, and preparation\nfor Budget and Work Program approval process. Continue with manage and\nmonitoring approved WP&B. During implementation and monitoring, deviation\nand potential misalign need to be properly manage to avoid future problem.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Performs non-routine tasks\nand attends such meetings as directed from time to time by FEMI Sr. Manager as\nopportunity presents in order to meet Company objectives.  Ensures that all relevant managers and\nsubordinates are kept informed of all major opportunities, developments,\nproblems or other potential issues, which will impact upon the Business.</span></p>",
+    "raw_requirements": "<p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Bachelor’s degree in\nEngineering</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Min. 15 years’ experience\nin engineering management for oil and gas industry, with 5 years in a\nmanagerial role.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Broad and extensive\nknowledge of engineering theories and techniques and a high level of skill in\napplication of this knowledge in the management of the engineering function.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Able to implement and embed\nstandards and processes to effect delivery of engineering excellence.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Good knowledge of\nregulatory framework and associated legislation.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Current knowledge of\nindustry and technology development within area of expertise.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Expert in Engineering\nexcellence.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Able to carry out audit and\nincident investigations.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Good Project management\nskills.</span></p><p class=\"MsoNormal\"><span style=\"font-size:11pt;\">• Proficient in Ms. Office\nand other engineering management tools/software. </span></p><p>\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n<span style=\"font-size:11pt;\">• Fluent English (written and oral)</span></p><p><span style=\"font-family:Aptos, sans-serif;font-size:14.6667px;\">• Indonesia Nationality only</span></p>",
+    "match_score": 95,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "15 years’ experience in engineering management for oil and gas industry, with 5 years in a managerial role",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Manage, escalate and coordinate with all relevant stakeholder if any exeption is required"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "15 years’ experience in engineering management for oil and gas industry, with 5 years in a managerial role",
+        "Broad and extensive knowledge of engineering theories and techniques and a high level of skill in application of this knowledge in the management of the engineering function",
+        "Current knowledge of industry and technology development within area of expertise",
+        "Good Project management skills"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Manage, escalate and coordinate with all relevant stakeholder if any exeption is required"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "15 years’ experience in engineering management for oil and gas industry, with 5 years in a managerial role",
+          "Broad and extensive knowledge of engineering theories and techniques and a high level of skill in application of this knowledge in the management of the engineering function",
+          "Current knowledge of industry and technology development within area of expertise",
+          "Good Project management skills",
+          "Office and other engineering management tools/software"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Talentics",
+    "logo": null
   },
   {
     "id": 27117,
@@ -11573,273 +11462,6 @@
     "logo": null
   },
   {
-    "id": 14416,
-    "title": "QC Section Head",
-    "organization_id": "24",
-    "organization_name": "ICBP - Snack Food",
-    "slug": "indofood-14416",
-    "type_name": "Karyawan Tetap",
-    "level": "Fresh Graduate",
-    "location": "Karo, Sumatera Utara - Karo",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "08 Nov 2026",
-    "group": "Quality Management",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14416",
-    "raw_description": "<p>- Monitor the cassava planting preparation process, starting from the handling of high-quality seedlings.<br />\n- Verify the environmental conditions and suitability of the land for cassava cultivation.<br />\n- Monitor plant growth, harvest quantities, and post-harvest handling of cassava, including both seed multiplication and chipstock production.</p>\n",
-    "raw_requirements": "<p>- Have a good understanding of cassava planting processes, from seedling preparation and planting to growth, harvesting, and post-harvest handling (transportation and storage).<br />\n- Able to work in outdoor areas under various weather conditions, including hot and rainy weather.<br />\n- Able to prepare reports accurately and systematically.<br />\n- Good computer skills, particularly in using spreadsheets and presentation software.<br />\n- Good command of English, both written and spoken (TOEFL/IELTS).<br />\n- Willing to be assigned to Karo, North Sumatra.</p>\n",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Presentation"
-      ],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
-    "id": 14417,
-    "title": "QC Section Head",
-    "organization_id": "24",
-    "organization_name": "ICBP - Snack Food",
-    "slug": "indofood-14417",
-    "type_name": "Karyawan Tetap",
-    "level": "Fresh Graduate",
-    "location": "Pangalengan - Bandung",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "08 Nov 2026",
-    "group": "Quality Management",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14417",
-    "raw_description": "<p>- Monitor the cassava planting preparation process, starting from the handling of high-quality seedlings.<br />\n- Verify the environmental conditions and suitability of the land for cassava cultivation.<br />\n- Monitor plant growth, harvest quantities, and post-harvest handling of cassava, including both seed multiplication and chipstock production.</p>\n",
-    "raw_requirements": "<p>- Have a good understanding of cassava planting processes, from seedling preparation and planting to growth, harvesting, and post-harvest handling (transportation and storage).<br />\n- Able to work in outdoor areas under various weather conditions, including hot and rainy weather.<br />\n- Able to prepare reports accurately and systematically.<br />\n- Good computer skills, particularly in using spreadsheets and presentation software.<br />\n- Good command of English, both written and spoken (TOEFL/IELTS).<br />\n- Willing to be assigned to Pangalengan, West Java.</p>\n",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Presentation"
-      ],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
-    "id": 14418,
-    "title": "QC Section Head",
-    "organization_id": "24",
-    "organization_name": "ICBP - Snack Food",
-    "slug": "indofood-14418",
-    "type_name": "Karyawan Tetap",
-    "level": "Fresh Graduate",
-    "location": "Purwokerto - Banyumas",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "08 Nov 2026",
-    "group": "Quality Management",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14418",
-    "raw_description": "<p>- Monitor the cassava planting preparation process, starting from the handling of high-quality seedlings.<br />\n- Verify the environmental conditions and suitability of the land for cassava cultivation.<br />\n- Monitor plant growth, harvest quantities, and post-harvest handling of cassava, including both seed multiplication and chipstock production.</p>\n",
-    "raw_requirements": "<p>- Have a good understanding of cassava planting processes, from seedling preparation and planting to growth, harvesting, and post-harvest handling (transportation and storage).<br />\n- Able to work in outdoor areas under various weather conditions, including hot and rainy weather.<br />\n- Able to prepare reports accurately and systematically.<br />\n- Good computer skills, particularly in using spreadsheets and presentation software.<br />\n- Good command of English, both written and spoken (TOEFL/IELTS).<br />\n- Willing to be assigned to Purwokerto, Central Java</p>\n",
-    "match_score": 90,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Presentation"
-      ],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
     "id": "sawitpro_8",
     "title": "Sales Fertilizer, Seedling, and Palm Oil Plantation (Jambi)",
     "organization_id": "SawitPRO",
@@ -13555,101 +13177,6 @@
       "full_breakdown": {
         "mandatory": [
           "Warga Negara Indonesia Pendidikan minimal SMA/SMK Semua Jurusan Pengalaman kerja minimal 1 tahun dalam terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal SMA/SMK Semua Jurusan Pengalaman kerja minimal 1 tahun dalam terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Fresh / Junior (0-1 tahun)",
-      "exp_years": 1
-    },
-    "source": "Pertamina PTC",
-    "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-  },
-  {
-    "id": "PTC0126D01849",
-    "title": "Network & Application Support - Makassar, Sulawesi Selatan [PTC0126D01849]",
-    "organization_id": "PTC",
-    "organization_name": "PT Pertamina Training and Consulting",
-    "slug": "ptc-PTC0126D01849",
-    "type_name": "Contract",
-    "level": "Profesional",
-    "location": "Sulawesi Selatan, Indonesia",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "Aktif",
-    "group": "Pertamina Training and Consulting",
-    "url": "https://recruitment.pertamina-ptc.com/guest/joblist",
-    "raw_description": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal D-3 Semua Jurusan</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
-    "raw_requirements": "<span class=\"clabels-text font-12 inline-block txt-muted capitalize-font\"><ul>\n<li>Warga Negara Indonesia</li>\n<li>Pendidikan minimal D-3 Semua Jurusan</li>\n<li>Pengalaman kerja minimal 1 tahun dalam bidang terkait</li>\n<li>Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office</li>\n<li>Bersedia ditempatkan di lokasi kerja yang ditentukan</li>\n<li>Bersedia bekerja sebagai Tenaga Alih Daya (TAD)</li>\n</ul></span>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Warga Negara Indonesia Pendidikan minimal D",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Warga Negara Indonesia Pendidikan minimal D",
-        "3 Semua Jurusan Pengalaman kerja minimal 1 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal D",
-        "3 Semua Jurusan Pengalaman kerja minimal 1 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Warga Negara Indonesia Pendidikan minimal D",
-          "3 Semua Jurusan Pengalaman kerja minimal 1 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD) Warga Negara Indonesia Pendidikan minimal D",
-          "3 Semua Jurusan Pengalaman kerja minimal 1 tahun dalam bidang terkait Mampu mengoperasikan komputer dan Pengelolaan data / informasi menggunakan aplikasi Microsoft Office Bersedia ditempatkan di lokasi kerja yang ditentukan Bersedia bekerja sebagai Tenaga Alih Daya (TAD)"
         ],
         "preferred": [],
         "nice_to_have": [],
