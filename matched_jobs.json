@@ -426,6 +426,117 @@
     "logo": "https://www.sawitpro.id/favicon.ico"
   },
   {
+    "id": "grab_744000155350409",
+    "title": "Senior Security Engineer, Cyber Defence Operations",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000155350409",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000155350409/senior-security-engineer-cyber-defence-operations/",
+    "raw_description": "<p>Senior Security Engineer, Cyber Defence Operations</p><p>Team</p><p>Security</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>You'll join Grab Cyber Defence, whose mission is to defend Grab and Grabbers from external and internal threat actors. We detect, hunt and respond to threats, rehearse our defences by emulating attackers, and share what we learn with stakeholders.</p><p>Get to Know the Role</p><p>As a Senior Security Engineer in Jakarta, you will report to the Senior Manager, Cyber Defence Operations. You lead our response to cybersecurity incidents and turn what we learn into better detections, automation and AI-assisted workflows that cut our time to respond. You will be part of our 24/7 on-call rotation.</p><p>The Critical Tasks You Will Perform</p><p>Lead cybersecurity incidents: coordinate responders, guide containment and remediation, and lead post-incident reviews.</p><p>Join a 24/7 on-call rotation.</p><p>Triage security alerts from network, EDR and cloud sources, and handle escalations from complex cases.</p><p>Run deep-dive forensics across cloud, network, host and application layers.</p><p>Tune detections and hunt for threats using log and data analytics.</p><p>Build automation (Python, SOAR playbooks) and lead the use of AI and agentic workflows in triage and response.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>5+ years in a Security Operations Centre, incident response or digital forensics role, including leading incident response.</p><p>Hands-on SIEM and EDR experience (for example Splunk, Sentinel, CrowdStrike).</p><p>Forensics skills across cloud (AWS preferred), network and host (Windows, Linux, macOS) environments.</p><p>Python scripting and security automation experience.</p>",
+    "raw_requirements": "<p>Senior Security Engineer, Cyber Defence Operations</p><p>Team</p><p>Security</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>You'll join Grab Cyber Defence, whose mission is to defend Grab and Grabbers from external and internal threat actors. We detect, hunt and respond to threats, rehearse our defences by emulating attackers, and share what we learn with stakeholders.</p><p>Get to Know the Role</p><p>As a Senior Security Engineer in Jakarta, you will report to the Senior Manager, Cyber Defence Operations. You lead our response to cybersecurity incidents and turn what we learn into better detections, automation and AI-assisted workflows that cut our time to respond. You will be part of our 24/7 on-call rotation.</p><p>The Critical Tasks You Will Perform</p><p>Lead cybersecurity incidents: coordinate responders, guide containment and remediation, and lead post-incident reviews.</p><p>Join a 24/7 on-call rotation.</p><p>Triage security alerts from network, EDR and cloud sources, and handle escalations from complex cases.</p><p>Run deep-dive forensics across cloud, network, host and application layers.</p><p>Tune detections and hunt for threats using log and data analytics.</p><p>Build automation (Python, SOAR playbooks) and lead the use of AI and agentic workflows in triage and response.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>5+ years in a Security Operations Centre, incident response or digital forensics role, including leading incident response.</p><p>Hands-on SIEM and EDR experience (for example Splunk, Sentinel, CrowdStrike).</p><p>Forensics skills across cloud (AWS preferred), network and host (Windows, Linux, macOS) environments.</p><p>Python scripting and security automation experience.</p>",
+    "match_score": 105,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Batas usia maksimal adalah 24 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: python, ai, analytics, it, git."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "on SIEM and EDR experience (for example Splunk, Sentinel, CrowdStrike)",
+      "mandatory_skills": [],
+      "preferred_skills": [
+        "AWS"
+      ],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Read more Skills you need What Essential Skills You Will Need 5+ years in a Security Operations Centre, incident response or digital forensics role, including leading incident response",
+        "Read more Skills you need What Essential Skills You Will Need 5+ years in a Security Operations Centre, incident response or digital forensics role, including leading incident response"
+      ],
+      "preferred_requirements": [
+        "Forensics skills across cloud (AWS preferred), network and host (Windows, Linux, macOS) environments",
+        "Forensics skills across cloud (AWS preferred), network and host (Windows, Linux, macOS) environments"
+      ],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Get to Know the Role As a Senior Security Engineer in Jakarta, you will report to the Senior Manager, Cyber Defence Operations",
+        "Triage security alerts from network, EDR and cloud sources, and handle escalations from complex cases",
+        "Get to Know the Role As a Senior Security Engineer in Jakarta, you will report to the Senior Manager, Cyber Defence Operations",
+        "Triage security alerts from network, EDR and cloud sources, and handle escalations from complex cases"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Read more Skills you need What Essential Skills You Will Need 5+ years in a Security Operations Centre, incident response or digital forensics role, including leading incident response",
+          "Read more Skills you need What Essential Skills You Will Need 5+ years in a Security Operations Centre, incident response or digital forensics role, including leading incident response"
+        ],
+        "preferred": [
+          "Forensics skills across cloud (AWS preferred), network and host (Windows, Linux, macOS) environments",
+          "Forensics skills across cloud (AWS preferred), network and host (Windows, Linux, macOS) environments"
+        ],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Get to Know the Role As a Senior Security Engineer in Jakarta, you will report to the Senior Manager, Cyber Defence Operations",
+          "Triage security alerts from network, EDR and cloud sources, and handle escalations from complex cases",
+          "Get to Know the Role As a Senior Security Engineer in Jakarta, you will report to the Senior Manager, Cyber Defence Operations",
+          "Triage security alerts from network, EDR and cloud sources, and handle escalations from complex cases"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": 24,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
     "id": "grab_744000153988681",
     "title": "Senior Data Engineer",
     "organization_id": "Grab",
@@ -621,116 +732,6 @@
           "You will report to the Engineering Manager",
           "Design scalable architectures, manage system performance and capacity, and resolve complex distributed system issues",
           "functional alignment, and manage production incidents during on"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "grab_744000152359679",
-    "title": "Assistant Manager, Technology Audit",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000152359679",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000152359679/assistant-manager-technology-audit/",
-    "raw_description": "<p>Assistant Manager, Technology Audit</p><p>Team</p><p>Security</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to know our Team:</p><p>Group Internal Audit is an independent function within Grab (reporting to the Audit Committee) that provides objective assurance and advisory services to Grab's senior leaders. We use a systematic, disciplined risk-based approach to evaluate and assess Grab's risks, processes and internal controls. Reflecting Grab's entrepreneurial spirit, Group Internal Audit covers multiple businesses and technology areas. If you're seeking a chance to delve into and execute technology audits within a dynamic, rapidly evolving tech firm, with exposure to cutting-edge technologies, our team is the perfect fit for you!</p><p>Get to know the Role:</p><p>We are seeking an Assistant Manager / Manager of Technology Audit, to be based in South Jakarta. In this role, you will be responsible for the effective execution of audits, risk advisory and SOX testing activities related to Technology across Grab's businesses. You will work alongside a team of technology auditors, performing audits, risk advisories and SOX testing across Grab's product, infrastructure, cybersecurity, and technology processes. We are looking for a candidate with excellent audit and risk advisory experience to complement our Technology Audit team in our fast-paced, dynamic environment. Your role will involve designing audit work steps to evaluate risks associated with governance, financial, operational, regulatory, and business continuity.</p><p>The day-to-day activities:</p><p>Collaborate with the Technology Audit team and other teams within Group IA, focusing on all risks arising from Technology activities across Grab's businesses.</p><p>Plan and perform risk-based assessments, understand and evaluate the business environment, related technology controls and processes.</p><p>Prepare and present audit findings in draft/ final reports.</p><p>Assess deficiencies identified, work with stakeholders to identify action plans and follow-up on remediation activities to verify resolution</p><p>Develop and maintain relationships with Grab's leaders, acting as a trusted risk advisor on control-related matters.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Bachelor's degree in Information Systems, Computer Science/ Engineering, Accountancy, Finance or equivalent. Professional certification (e.g., CISA, CISM, CISSP) is advantageous.</p><p>Minimum of 5 years of technology audit and risk advisory experience, including Sarbanes-Oxley.</p><p>Experience in auditing applications, cybersecurity domains, infrastructure and/ or cloud computing.</p><p>Experience with data analytics and visualisation tools.</p><p>Excellent command of English.</p>",
-    "raw_requirements": "<p>Assistant Manager, Technology Audit</p><p>Team</p><p>Security</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to know our Team:</p><p>Group Internal Audit is an independent function within Grab (reporting to the Audit Committee) that provides objective assurance and advisory services to Grab's senior leaders. We use a systematic, disciplined risk-based approach to evaluate and assess Grab's risks, processes and internal controls. Reflecting Grab's entrepreneurial spirit, Group Internal Audit covers multiple businesses and technology areas. If you're seeking a chance to delve into and execute technology audits within a dynamic, rapidly evolving tech firm, with exposure to cutting-edge technologies, our team is the perfect fit for you!</p><p>Get to know the Role:</p><p>We are seeking an Assistant Manager / Manager of Technology Audit, to be based in South Jakarta. In this role, you will be responsible for the effective execution of audits, risk advisory and SOX testing activities related to Technology across Grab's businesses. You will work alongside a team of technology auditors, performing audits, risk advisories and SOX testing across Grab's product, infrastructure, cybersecurity, and technology processes. We are looking for a candidate with excellent audit and risk advisory experience to complement our Technology Audit team in our fast-paced, dynamic environment. Your role will involve designing audit work steps to evaluate risks associated with governance, financial, operational, regulatory, and business continuity.</p><p>The day-to-day activities:</p><p>Collaborate with the Technology Audit team and other teams within Group IA, focusing on all risks arising from Technology activities across Grab's businesses.</p><p>Plan and perform risk-based assessments, understand and evaluate the business environment, related technology controls and processes.</p><p>Prepare and present audit findings in draft/ final reports.</p><p>Assess deficiencies identified, work with stakeholders to identify action plans and follow-up on remediation activities to verify resolution</p><p>Develop and maintain relationships with Grab's leaders, acting as a trusted risk advisor on control-related matters.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Bachelor's degree in Information Systems, Computer Science/ Engineering, Accountancy, Finance or equivalent. Professional certification (e.g., CISA, CISM, CISSP) is advantageous.</p><p>Minimum of 5 years of technology audit and risk advisory experience, including Sarbanes-Oxley.</p><p>Experience in auditing applications, cybersecurity domains, infrastructure and/ or cloud computing.</p><p>Experience with data analytics and visualisation tools.</p><p>Excellent command of English.</p>",
-    "match_score": 105,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, analytics, it."
-      },
-      "experience": {
-        "score": 10,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "We are looking for a candidate with excellent audit and risk advisory experience to complement our Technology Audit team in our fast",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in Information Systems, Computer Science/ Engineering, Accountancy, Finance or equivalent",
-        "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in Information Systems, Computer Science/ Engineering, Accountancy, Finance or equivalent"
-      ],
-      "preferred_requirements": [
-        ", CISA, CISM, CISSP) is advantageous",
-        ", CISA, CISM, CISSP) is advantageous"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Assistant Manager, Technology Audit Team Security Location Jakarta, Indonesia Job Type Full",
-        "edge technologies, our team is the perfect fit for you! Get to know the Role: We are seeking an Assistant Manager / Manager of Technology Audit, to be based in South Jakarta",
-        "In this role, you will be responsible for the effective execution of audits, risk advisory and SOX testing activities related to Technology across Grab's businesses",
-        "up on remediation activities to verify resolution Develop and maintain relationships with Grab's leaders, acting as a trusted risk advisor on control"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in Information Systems, Computer Science/ Engineering, Accountancy, Finance or equivalent",
-          "Read more Skills you need What Essential Skills You Will Need Bachelor's degree in Information Systems, Computer Science/ Engineering, Accountancy, Finance or equivalent"
-        ],
-        "preferred": [
-          ", CISA, CISM, CISSP) is advantageous",
-          ", CISA, CISM, CISSP) is advantageous"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Assistant Manager, Technology Audit Team Security Location Jakarta, Indonesia Job Type Full",
-          "edge technologies, our team is the perfect fit for you! Get to know the Role: We are seeking an Assistant Manager / Manager of Technology Audit, to be based in South Jakarta",
-          "In this role, you will be responsible for the effective execution of audits, risk advisory and SOX testing activities related to Technology across Grab's businesses",
-          "up on remediation activities to verify resolution Develop and maintain relationships with Grab's leaders, acting as a trusted risk advisor on control",
-          "Assistant Manager, Technology Audit Team Security Location Jakarta, Indonesia Job Type Full"
         ]
       }
     },
@@ -3813,6 +3814,110 @@
     "logo": "https://www.sawitpro.id/favicon.ico"
   },
   {
+    "id": "grab_744000155162739",
+    "title": "Lead Product Manager",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000155162739",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000155162739/lead-product-manager/",
+    "raw_description": "<p>Lead Product Manager</p><p>Team</p><p>Product</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>At Grab Financial Service, we empower the people of Southeast Asia, from consumers and drivers to everyday entrepreneurs, by enabling financial inclusion for the underserved. The team is building innovative solutions by enabling commerce through banking services (invest, savings), payment services (checkout, payments platform, grab pay products, rewards), empowering through Lending(driver & merchants), empowering through agents (Kios) & protecting users through Insurance(scenario insurance). All product managers in Grab Financial Service are regional product managers across Grab's Southeast Asian markets.</p><p>Get to Know the Role</p><p>You will manage the product strategy, roadmap & execution of agent network & wallet core. You will be reporting to Senior Product Management Leader and based onsite in Grab Jakarta office.</p><p>The Critical Tasks You Will Perform</p><p>Define and own the vision, strategy, goals, and roadmap</p><p>Dive deep into our data to identify the biggest opportunities to optimize our systems to benefit Users and Grab.</p><p>Own project delivery, feature development, and experimentation end-to-end, including creating detailed product & business requirements, driving cross-functional execution, sharing insights and learnings across the org, and ensuring stakeholder visibility</p><p>Collaborate with engineering, design, analytics, and data science to define an product strategy, develop and maintain a prioritized product backlog, and execute on delivering great experiences for users. Collaborate with Product Marketing, other Product teams, and regional/country teams on go-to-market strategies and execution.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>8+ years experience in product management at a tech software company, with demonstrable success in formulating product strategy & launching new products/features with clear impact</p><p>Bachelors in computer science, software engineering, information technology, business, finance, economics, or related fields.</p><p>Experience working with distributed teams.</p><p>Empathy for users and a drive to discover and resolve their pain points.</p><p>Read more</p><p>What we offer</p>",
+    "raw_requirements": "<p>Lead Product Manager</p><p>Team</p><p>Product</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>At Grab Financial Service, we empower the people of Southeast Asia, from consumers and drivers to everyday entrepreneurs, by enabling financial inclusion for the underserved. The team is building innovative solutions by enabling commerce through banking services (invest, savings), payment services (checkout, payments platform, grab pay products, rewards), empowering through Lending(driver & merchants), empowering through agents (Kios) & protecting users through Insurance(scenario insurance). All product managers in Grab Financial Service are regional product managers across Grab's Southeast Asian markets.</p><p>Get to Know the Role</p><p>You will manage the product strategy, roadmap & execution of agent network & wallet core. You will be reporting to Senior Product Management Leader and based onsite in Grab Jakarta office.</p><p>The Critical Tasks You Will Perform</p><p>Define and own the vision, strategy, goals, and roadmap</p><p>Dive deep into our data to identify the biggest opportunities to optimize our systems to benefit Users and Grab.</p><p>Own project delivery, feature development, and experimentation end-to-end, including creating detailed product & business requirements, driving cross-functional execution, sharing insights and learnings across the org, and ensuring stakeholder visibility</p><p>Collaborate with engineering, design, analytics, and data science to define an product strategy, develop and maintain a prioritized product backlog, and execute on delivering great experiences for users. Collaborate with Product Marketing, other Product teams, and regional/country teams on go-to-market strategies and execution.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>8+ years experience in product management at a tech software company, with demonstrable success in formulating product strategy & launching new products/features with clear impact</p><p>Bachelors in computer science, software engineering, information technology, business, finance, economics, or related fields.</p><p>Experience working with distributed teams.</p><p>Empathy for users and a drive to discover and resolve their pain points.</p><p>Read more</p><p>What we offer</p>",
+    "match_score": 100,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 20,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: data science, ai, analytics, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Low Match",
+        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 8 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Experience working with distributed teams",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Read more Skills you need What Essential Skills You Will Need 8+ years experience in product management at a tech software company, with demonstrable success in formulating product strategy & launching new products/features with clear impact Bachelors in computer science, software engineering, information technology, business, finance, economics, or related fields",
+        "Read more Skills you need What Essential Skills You Will Need 8+ years experience in product management at a tech software company, with demonstrable success in formulating product strategy & launching new products/features with clear impact Bachelors in computer science, software engineering, information technology, business, finance, economics, or related fields"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Lead Product Manager Team Product Location Jakarta, Indonesia Job Type Full",
+        "All product managers in Grab Financial Service are regional product managers across Grab's Southeast Asian markets",
+        "Get to Know the Role You will manage the product strategy, roadmap & execution of agent network & wallet core",
+        "You will be reporting to Senior Product Management Leader and based onsite in Grab Jakarta office"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Read more Skills you need What Essential Skills You Will Need 8+ years experience in product management at a tech software company, with demonstrable success in formulating product strategy & launching new products/features with clear impact Bachelors in computer science, software engineering, information technology, business, finance, economics, or related fields",
+          "Read more Skills you need What Essential Skills You Will Need 8+ years experience in product management at a tech software company, with demonstrable success in formulating product strategy & launching new products/features with clear impact Bachelors in computer science, software engineering, information technology, business, finance, economics, or related fields"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Lead Product Manager Team Product Location Jakarta, Indonesia Job Type Full",
+          "All product managers in Grab Financial Service are regional product managers across Grab's Southeast Asian markets",
+          "Get to Know the Role You will manage the product strategy, roadmap & execution of agent network & wallet core",
+          "You will be reporting to Senior Product Management Leader and based onsite in Grab Jakarta office",
+          "Own project delivery, feature development, and experimentation end"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Expert / Lead (8+ tahun)",
+      "exp_years": 8
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
     "id": "grab_744000154054039",
     "title": "Software Engineer, Fullstack - Insurance",
     "organization_id": "Grab",
@@ -4339,122 +4444,6 @@
       "gender": "Open",
       "experience": "Senior (3-5 tahun)",
       "exp_years": 5
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "grab_744000152321069",
-    "title": "Senior Software Engineer, Backend",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000152321069",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000152321069/senior-software-engineer-backend/",
-    "raw_description": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Wallet Cash-In/Cash-out Experience team plays a crucial role in powering liquidity for Grab, providing seamless and smooth experiences for millions of customers across Southeast Asia. Our mission is to allow anyone, including the unbanked, to access digital cash quickly and affordably. Whether it's topping up wallets or cashing out funds, our systems ensure transactions happen smoothly.</p><p>Get to Know the Role</p><p>We are looking for a passionate Senior Backend Engineer with the required skills and more to join our payments team. You will offer exciting challenges, including the opportunity to lead groundbreaking architectural advancements. You will have opportunities to design backend components. You'll report to the Software Engineering Manager II. The working arrangement for this role is on-site.</p><p>The Critical Tasks You Will Perform</p><p>You will work within the payments covering Wallet Cash-In/Cash-out Experience, helping improve product engineering vision.</p><p>Build services that delight our customers through active participation in discovery sessions, continuous R&D</p><p>Explore and utilize Generative AI to enhance workflows and accelerate development velocity.</p><p>You will participate in code reviews, testing, debugging, performance tuning, and capacity planning</p><p>You will propose and implement new features, algorithms, and architectures for platform enhancements that enable other developers to work at high velocity.</p><p>You will design new features alongside business owners, engineering managers, and product managers</p><p>You will be required to participate in incident investigation, resolve production issues to ensure minimal downtime as part of On-call responsibilities to ensure we continue to provide optimal service uptime and delight customers with continued service availability</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>6 years of experience in backend engineering</p><p>Solid software engineering and coding skills, with proficiency in GoLang, Java or other core programming languages</p><p>Experience with RDBMS, unit testing with JUnit, Go Testify, or any other mock frameworks.</p>",
-    "raw_requirements": "<p>Senior Software Engineer, Backend</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Wallet Cash-In/Cash-out Experience team plays a crucial role in powering liquidity for Grab, providing seamless and smooth experiences for millions of customers across Southeast Asia. Our mission is to allow anyone, including the unbanked, to access digital cash quickly and affordably. Whether it's topping up wallets or cashing out funds, our systems ensure transactions happen smoothly.</p><p>Get to Know the Role</p><p>We are looking for a passionate Senior Backend Engineer with the required skills and more to join our payments team. You will offer exciting challenges, including the opportunity to lead groundbreaking architectural advancements. You will have opportunities to design backend components. You'll report to the Software Engineering Manager II. The working arrangement for this role is on-site.</p><p>The Critical Tasks You Will Perform</p><p>You will work within the payments covering Wallet Cash-In/Cash-out Experience, helping improve product engineering vision.</p><p>Build services that delight our customers through active participation in discovery sessions, continuous R&D</p><p>Explore and utilize Generative AI to enhance workflows and accelerate development velocity.</p><p>You will participate in code reviews, testing, debugging, performance tuning, and capacity planning</p><p>You will propose and implement new features, algorithms, and architectures for platform enhancements that enable other developers to work at high velocity.</p><p>You will design new features alongside business owners, engineering managers, and product managers</p><p>You will be required to participate in incident investigation, resolve production issues to ensure minimal downtime as part of On-call responsibilities to ensure we continue to provide optimal service uptime and delight customers with continued service availability</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>6 years of experience in backend engineering</p><p>Solid software engineering and coding skills, with proficiency in GoLang, Java or other core programming languages</p><p>Experience with RDBMS, unit testing with JUnit, Go Testify, or any other mock frameworks.</p>",
-    "match_score": 100,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: ai, programming, developer, it, git."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 6 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "out Experience, helping improve product engineering vision",
-      "mandatory_skills": [
-        "Go",
-        "Java"
-      ],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Get to Know the Role We are looking for a passionate Senior Backend Engineer with the required skills and more to join our payments team",
-        "You will design new features alongside business owners, engineering managers, and product managers You will be required to participate in incident investigation, resolve production issues to ensure minimal downtime as part of On",
-        "call responsibilities to ensure we continue to provide optimal service uptime and delight customers with continued service availability Read more Skills you need What Essential Skills You Will Need 6 years of experience in backend engineering Solid software engineering and coding skills, with proficiency in GoLang, Java or other core programming languages Experience with RDBMS, unit testing with JUnit, Go Testify, or any other mock frameworks",
-        "Get to Know the Role We are looking for a passionate Senior Backend Engineer with the required skills and more to join our payments team",
-        "You will design new features alongside business owners, engineering managers, and product managers You will be required to participate in incident investigation, resolve production issues to ensure minimal downtime as part of On"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "You'll report to the Software Engineering Manager II",
-        "Build services that delight our customers through active participation in discovery sessions, continuous R&D Explore and utilize Generative AI to enhance workflows and accelerate development velocity",
-        "You will participate in code reviews, testing, debugging, performance tuning, and capacity planning You will propose and implement new features, algorithms, and architectures for platform enhancements that enable other developers to work at high velocity",
-        "You'll report to the Software Engineering Manager II"
-      ],
-      "skill_categories": [
-        "Languages & Core"
-      ],
-      "full_breakdown": {
-        "mandatory": [
-          "Get to Know the Role We are looking for a passionate Senior Backend Engineer with the required skills and more to join our payments team",
-          "You will design new features alongside business owners, engineering managers, and product managers You will be required to participate in incident investigation, resolve production issues to ensure minimal downtime as part of On",
-          "call responsibilities to ensure we continue to provide optimal service uptime and delight customers with continued service availability Read more Skills you need What Essential Skills You Will Need 6 years of experience in backend engineering Solid software engineering and coding skills, with proficiency in GoLang, Java or other core programming languages Experience with RDBMS, unit testing with JUnit, Go Testify, or any other mock frameworks",
-          "Get to Know the Role We are looking for a passionate Senior Backend Engineer with the required skills and more to join our payments team",
-          "You will design new features alongside business owners, engineering managers, and product managers You will be required to participate in incident investigation, resolve production issues to ensure minimal downtime as part of On",
-          "call responsibilities to ensure we continue to provide optimal service uptime and delight customers with continued service availability Read more Skills you need What Essential Skills You Will Need 6 years of experience in backend engineering Solid software engineering and coding skills, with proficiency in GoLang, Java or other core programming languages Experience with RDBMS, unit testing with JUnit, Go Testify, or any other mock frameworks"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "You'll report to the Software Engineering Manager II",
-          "Build services that delight our customers through active participation in discovery sessions, continuous R&D Explore and utilize Generative AI to enhance workflows and accelerate development velocity",
-          "You will participate in code reviews, testing, debugging, performance tuning, and capacity planning You will propose and implement new features, algorithms, and architectures for platform enhancements that enable other developers to work at high velocity",
-          "You'll report to the Software Engineering Manager II",
-          "Build services that delight our customers through active participation in discovery sessions, continuous R&D Explore and utilize Generative AI to enhance workflows and accelerate development velocity"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Expert / Lead (6+ tahun)",
-      "exp_years": 6
     },
     "source": "Grab",
     "logo": "https://www.grab.careers/favicon.ico"
@@ -6864,119 +6853,6 @@
     "logo": "https://www.grab.careers/favicon.ico"
   },
   {
-    "id": "grab_744000152615521",
-    "title": "Senior Software Engineer, Backend - Insurance",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000152615521",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000152615521/senior-software-engineer-backend-insurance/",
-    "raw_description": "<p>Senior Software Engineer, Backend - Insurance</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>At Financial Services, we empower the people of Southeast Asia, from consumers and drivers to every-day entrepreneurs, by ensuring financial inclusion for the underserved. The team is building solutions by enabling our partners (i.e. drivers and merchants) to get access to financial services (lending and insurance) products for their everyday needs.</p><p>Get to Know the Role</p><p>You will report to the Engineering Manager, Insurance, based in Indonesia and will develop the complex backend systems powering the many end-to-end user journeys across all Insurance products available in multiple Grab apps. We're looking for candidates that embody ownership, display a hunger for learning and improvement, excel in autonomy, and have the desire to go above and beyond expectations.</p><p>The Critical Tasks You Will Perform</p><p>You will develop high-quality and scalable backend applications</p><p>You will write clean, efficient, and maintainable code to solve challenging problems in the InsurTech domain</p><p>You will collaborate with diverse teams to design, and ship new features</p><p>You will participate in code reviews to maintain code quality and share knowledge</p><p>Your comprehensive understanding to troubleshoot, debug complex issues, and provide quick resolutions</p><p>You will contribute to the architectural decisions and technical direction of the projects</p><p>You will participate in On-Call rotations to ensure the reliability of services</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Years of relevant experience in software development, with proficiency in one of the major programming languages, e.g., Golang (preferred) and Java, relational databases such as MySQL, PostgreSQL, or Oracle and code versioning systems like Git</p><p>Computer Science fundamentals in algorithms and data structures, and capability to recognise when to use them</p><p>Hands-on experience with cloud platforms, e.g., AWS</p>",
-    "raw_requirements": "<p>Senior Software Engineer, Backend - Insurance</p><p>Team</p><p>Engineering</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>At Financial Services, we empower the people of Southeast Asia, from consumers and drivers to every-day entrepreneurs, by ensuring financial inclusion for the underserved. The team is building solutions by enabling our partners (i.e. drivers and merchants) to get access to financial services (lending and insurance) products for their everyday needs.</p><p>Get to Know the Role</p><p>You will report to the Engineering Manager, Insurance, based in Indonesia and will develop the complex backend systems powering the many end-to-end user journeys across all Insurance products available in multiple Grab apps. We're looking for candidates that embody ownership, display a hunger for learning and improvement, excel in autonomy, and have the desire to go above and beyond expectations.</p><p>The Critical Tasks You Will Perform</p><p>You will develop high-quality and scalable backend applications</p><p>You will write clean, efficient, and maintainable code to solve challenging problems in the InsurTech domain</p><p>You will collaborate with diverse teams to design, and ship new features</p><p>You will participate in code reviews to maintain code quality and share knowledge</p><p>Your comprehensive understanding to troubleshoot, debug complex issues, and provide quick resolutions</p><p>You will contribute to the architectural decisions and technical direction of the projects</p><p>You will participate in On-Call rotations to ensure the reliability of services</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>Years of relevant experience in software development, with proficiency in one of the major programming languages, e.g., Golang (preferred) and Java, relational databases such as MySQL, PostgreSQL, or Oracle and code versioning systems like Git</p><p>Computer Science fundamentals in algorithms and data structures, and capability to recognise when to use them</p><p>Hands-on experience with cloud platforms, e.g., AWS</p>",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 20,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: sql, excel, ai, programming, it, git, mysql."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "on experience with cloud platforms, e",
-      "mandatory_skills": [],
-      "preferred_skills": [
-        "Git",
-        "Java",
-        "MySQL",
-        "PostgreSQL"
-      ],
-      "soft_skills": [],
-      "mandatory_requirements": [
-        "Call rotations to ensure the reliability of services Read more Skills you need What Essential Skills You Will Need Years of relevant experience in software development, with proficiency in one of the major programming languages, e",
-        "Call rotations to ensure the reliability of services Read more Skills you need What Essential Skills You Will Need Years of relevant experience in software development, with proficiency in one of the major programming languages, e"
-      ],
-      "preferred_requirements": [
-        ", Golang (preferred) and Java, relational databases such as MySQL, PostgreSQL, or Oracle and code versioning systems like Git Computer Science fundamentals in algorithms and data structures, and capability to recognise when to use them Hands",
-        ", Golang (preferred) and Java, relational databases such as MySQL, PostgreSQL, or Oracle and code versioning systems like Git Computer Science fundamentals in algorithms and data structures, and capability to recognise when to use them Hands"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Get to Know the Role You will report to the Engineering Manager, Insurance, based in Indonesia and will develop the complex backend systems powering the many end",
-        "The Critical Tasks You Will Perform You will develop high",
-        "Get to Know the Role You will report to the Engineering Manager, Insurance, based in Indonesia and will develop the complex backend systems powering the many end",
-        "The Critical Tasks You Will Perform You will develop high"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Call rotations to ensure the reliability of services Read more Skills you need What Essential Skills You Will Need Years of relevant experience in software development, with proficiency in one of the major programming languages, e",
-          "Call rotations to ensure the reliability of services Read more Skills you need What Essential Skills You Will Need Years of relevant experience in software development, with proficiency in one of the major programming languages, e"
-        ],
-        "preferred": [
-          ", Golang (preferred) and Java, relational databases such as MySQL, PostgreSQL, or Oracle and code versioning systems like Git Computer Science fundamentals in algorithms and data structures, and capability to recognise when to use them Hands",
-          ", Golang (preferred) and Java, relational databases such as MySQL, PostgreSQL, or Oracle and code versioning systems like Git Computer Science fundamentals in algorithms and data structures, and capability to recognise when to use them Hands"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Get to Know the Role You will report to the Engineering Manager, Insurance, based in Indonesia and will develop the complex backend systems powering the many end",
-          "The Critical Tasks You Will Perform You will develop high",
-          "Get to Know the Role You will report to the Engineering Manager, Insurance, based in Indonesia and will develop the complex backend systems powering the many end",
-          "The Critical Tasks You Will Perform You will develop high"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
     "id": "grab_744000147411299",
     "title": "Lead Data Scientist (Analytics) - Digital Marketing",
     "organization_id": "Grab",
@@ -7955,99 +7831,6 @@
         "responsibilities": [
           "Office khususnya Excel level intermediate Penempatan : Surabaya Melakukan pengelolaan data kepegawaian termasuk data alihdaya dan menjamin data pekerja tercatat secara akurat, memeriksa kesesuaian data kehadiran &amp; komponen benefit yang mencakup lembur, pembuatan tagihan alihdaya, serta pembuatan ID Card karyawan"
         ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
-    "id": 14425,
-    "title": "Admin Factory",
-    "organization_id": "3",
-    "organization_name": "Indoagri - PT. Salim Ivomas Pratama Tbk. - REF",
-    "slug": "indofood-14425",
-    "type_name": "Karyawan Tetap",
-    "level": "Experienced",
-    "location": "Tanjung Priok - Jakarta Utara",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "09 Nov 2026",
-    "group": "Admin",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14425",
-    "raw_description": "<ul>\n\t<li>Perform administrative tasks and data entry related to production, receiving, and dispatch activities.</li>\n\t<li>Enter and update production data in the company&rsquo;s system while ensuring data completeness and accuracy.</li>\n\t<li>Collect, process, and compile production data for reporting purposes.</li>\n\t<li>Assist the Supervisor in preparing daily, monthly, and other reports related to Factory activities.</li>\n\t<li>Record and monitor stock levels and assist in conducting periodic stock opname.</li>\n</ul>\n",
-    "raw_requirements": "<ul>\n\t<li>Minimum Bachelor&rsquo;s Degree (S1) in Industrial Engineering from an accredited university.</li>\n\t<li>Minimum 2 years of work experience.</li>\n\t<li>Proficient in Microsoft Excel; SAP proficiency is an added advantage.</li>\n\t<li>Physically and mentally fit.</li>\n\t<li>Good administrative and data processing skills.</li>\n\t<li>Proficient in basic computer operations and office applications.</li>\n</ul>\n",
-    "match_score": 95,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Minimum 2 years of work experience",
-      "mandatory_skills": [],
-      "preferred_skills": [
-        "Excel"
-      ],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [
-        "Proficient in Microsoft Excel; SAP proficiency is an added advantage"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [
-          "Proficient in Microsoft Excel; SAP proficiency is an added advantage"
-        ],
-        "nice_to_have": [],
-        "responsibilities": []
       }
     },
     "parsed_requirements": {
@@ -9941,6 +9724,109 @@
     },
     "source": "Talentics",
     "logo": null
+  },
+  {
+    "id": "grab_744000155352979",
+    "title": "Security Compliance Strategist, Vendor Security",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000155352979",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000155352979/security-compliance-strategist-vendor-security/",
+    "raw_description": "<p>Security Compliance Strategist, Vendor Security</p><p>Team</p><p>Security</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Join the Cyber Assurance – Vendor Security team to help make third-party risk reviews more consistent and scalable through hands-on vendor assessments and practical automation across intake, evidence tracking, and reporting. Partnering with key stakeholders across Procurement, Legal, Privacy, Risk, Compliance, Finance, and Cybersecurity, you will apply a solid foundation in information security and Third-Party Risk Management (TPRM) frameworks to elevate our vendor security posture.</p><p>Get to Know the Role</p><p>Join a team that prioritizes engineering over administrative overhead. With a clear architectural vision and established stakeholder relationships, this role is dedicated to building the engine: combining practical software engineering with security risk practices to build tools and workflows that standardize vendor assessments. This is an onsite role based in Jakarta. You will be reporting to the Principal Cyber Security Specialist, Cyber & Tech Regulatory Partnership.</p><p>The Critical Tasks You Will Perform</p><p>Work with internal stakeholders to understand assessment needs and translate them into clear data, workflow, and reporting requirements.</p><p>Gather vendor engagement details, including services, data involved, access, hosting, sub-processors, and system integrations.</p><p>Review vendor questionnaires, security evidence, and relevant contract terms against Grab's security requirements and identify gaps and prepare evidence based findings.</p><p>Build, test, and maintain scoped automations that reduce repeat manual work, such as data validation, evidence tracking, and assessment reporting.</p><p>Support the mapping and integration of relevant risk data from internal sources, documenting data quality, access, and workflow assumptions.</p><p>Support reviews of AI vendors, including data privacy, model security under the guidance of experienced reviewers.</p><p>Coordinate evidence requests and follow-up actions with vendors and internal stakeholders; maintain review records and surface recurring issues or improvement opportunities.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>1+ years of relevant experience</p><p>or hands-on exposure in software development, automation, information security, or IT risk (internships, academic coursework, and practical projects are welcomed).</p><p>Degree or equivalent practical learning</p>",
+    "raw_requirements": "<p>Security Compliance Strategist, Vendor Security</p><p>Team</p><p>Security</p><p>Location</p><p>Jakarta, Indonesia</p><p>Job Type</p><p>Full-time</p><p>The role at a glance</p><p>Skills you need</p><p>What we offer</p><p>Life at Grab</p><p>The role at a glance</p><p>Get to Know the Team</p><p>Join the Cyber Assurance – Vendor Security team to help make third-party risk reviews more consistent and scalable through hands-on vendor assessments and practical automation across intake, evidence tracking, and reporting. Partnering with key stakeholders across Procurement, Legal, Privacy, Risk, Compliance, Finance, and Cybersecurity, you will apply a solid foundation in information security and Third-Party Risk Management (TPRM) frameworks to elevate our vendor security posture.</p><p>Get to Know the Role</p><p>Join a team that prioritizes engineering over administrative overhead. With a clear architectural vision and established stakeholder relationships, this role is dedicated to building the engine: combining practical software engineering with security risk practices to build tools and workflows that standardize vendor assessments. This is an onsite role based in Jakarta. You will be reporting to the Principal Cyber Security Specialist, Cyber & Tech Regulatory Partnership.</p><p>The Critical Tasks You Will Perform</p><p>Work with internal stakeholders to understand assessment needs and translate them into clear data, workflow, and reporting requirements.</p><p>Gather vendor engagement details, including services, data involved, access, hosting, sub-processors, and system integrations.</p><p>Review vendor questionnaires, security evidence, and relevant contract terms against Grab's security requirements and identify gaps and prepare evidence based findings.</p><p>Build, test, and maintain scoped automations that reduce repeat manual work, such as data validation, evidence tracking, and assessment reporting.</p><p>Support the mapping and integration of relevant risk data from internal sources, documenting data quality, access, and workflow assumptions.</p><p>Support reviews of AI vendors, including data privacy, model security under the guidance of experienced reviewers.</p><p>Coordinate evidence requests and follow-up actions with vendors and internal stakeholders; maintain review records and surface recurring issues or improvement opportunities.</p><p>Read more</p><p>Skills you need</p><p>What Essential Skills You Will Need</p><p>1+ years of relevant experience</p><p>or hands-on exposure in software development, automation, information security, or IT risk (internships, academic coursework, and practical projects are welcomed).</p><p>Degree or equivalent practical learning</p>",
+    "match_score": 90,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
+      },
+      "experience": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (Support reviews of AI vendors, including data privacy, model security under the guidance o...)",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [
+        "Read more Skills you need What Essential Skills You Will Need 1+ years of relevant experience or hands",
+        "Read more Skills you need What Essential Skills You Will Need 1+ years of relevant experience or hands"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "Party Risk Management (TPRM) frameworks to elevate our vendor security posture",
+        "on exposure in software development, automation, information security, or IT risk (internships, academic coursework, and practical projects are welcomed)",
+        "Party Risk Management (TPRM) frameworks to elevate our vendor security posture",
+        "on exposure in software development, automation, information security, or IT risk (internships, academic coursework, and practical projects are welcomed)"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Read more Skills you need What Essential Skills You Will Need 1+ years of relevant experience or hands",
+          "Read more Skills you need What Essential Skills You Will Need 1+ years of relevant experience or hands"
+        ],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "Party Risk Management (TPRM) frameworks to elevate our vendor security posture",
+          "on exposure in software development, automation, information security, or IT risk (internships, academic coursework, and practical projects are welcomed)",
+          "Party Risk Management (TPRM) frameworks to elevate our vendor security posture",
+          "on exposure in software development, automation, information security, or IT risk (internships, academic coursework, and practical projects are welcomed)"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Fresh / Junior (0-1 tahun)",
+      "exp_years": 1
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
   },
   {
     "id": "grab_744000154666819",
@@ -12460,195 +12346,6 @@
     "logo": null
   },
   {
-    "id": 14433,
-    "title": "Distribution Admin",
-    "organization_id": "23",
-    "organization_name": "ICBP - Nutrition and Special Food",
-    "slug": "indofood-14433",
-    "type_name": "Karyawan Kontrak",
-    "level": "Fresh Graduate",
-    "location": "Padalarang - Bandung Barat",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "10 Nov 2026",
-    "group": "Finance & Accounting",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14433",
-    "raw_description": "<ul>\n\t<li>Prepare delivery schedules based on PO, product availability, and delivery priorities.</li>\n\t<li>Coordinate with Sales, Warehouse, PPIC, and Purchasing teams to ensure smooth delivery arrangements.</li>\n\t<li>Prepare Delivery Orders (DO) for all product and material movements.</li>\n\t<li>Process administration for damaged product claims and product returns.</li>\n\t<li>Monitor delivery activities and minimize complaints from distributors, transporters, and Sales teams.</li>\n\t<li>Prepare monthly reports, DO filing, and records of damaged finished goods.</li>\n\t<li>Ensure distribution administration is accurate, complete, and on schedule.</li>\n</ul>\n",
-    "raw_requirements": "<ul>\n\t<li>Minimum Diploma (D3).</li>\n\t<li>Knowledge of <strong>distribution processes, product flow, and warehouse operations</strong>.</li>\n\t<li>Proficient in <strong>Microsoft Excel, Microsoft Word, and SAP</strong>.</li>\n\t<li>Good administrative and coordination skills.</li>\n\t<li>Detail-oriented, organized, and able to work under deadlines.</li>\n\t<li>Good communication and problem-solving skills.</li>\n\t<li>Basic/passive English proficiency.</li>\n</ul>\n",
-    "match_score": 85,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 15,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: excel, ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Communication"
-      ],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
-    "id": 14419,
-    "title": "Production Section Head",
-    "organization_id": "24",
-    "organization_name": "ICBP - Snack Food",
-    "slug": "indofood-14419",
-    "type_name": "Karyawan Tetap",
-    "level": "Experienced",
-    "location": "Cikupa - Tangerang",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "08 Nov 2026",
-    "group": "Production",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14419",
-    "raw_description": "<p>- Carry out production processes in accordance with schedules and applicable procedures<br />\n- Coordinate in implementation of production processes to achive production targets in terms of both quality and quantity on the production line<br />\n- Implement Occupational Health and Safety Management Systems and SOPs in accordance with the scope of work</p>\n",
-    "raw_requirements": "<p>- Have good leadership skill<br />\n- Able to work well in team<br />\n- Have strong analytical skills<br />\n- Able to operate computer<br />\n- Willing to work in shift system<br />\n- Preferred graduates from &nbsp;Electrical Engineering, Mechanical Engineering, Industrial Engineering or Food Technology<br />\n- Preferred to have 2 years of work experience</p>\n",
-    "match_score": 85,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Preferred to have 2 years of work experience",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Analytical",
-        "Leadership"
-      ],
-      "mandatory_requirements": [],
-      "preferred_requirements": [
-        "Preferred graduates from &nbsp;Electrical Engineering, Mechanical Engineering, Industrial Engineering or Food Technology",
-        "Preferred to have 2 years of work experience"
-      ],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Implement Occupational Health and Safety Management Systems and SOPs in accordance with the scope of work"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [
-          "Preferred graduates from &nbsp;Electrical Engineering, Mechanical Engineering, Industrial Engineering or Food Technology",
-          "Preferred to have 2 years of work experience"
-        ],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Implement Occupational Health and Safety Management Systems and SOPs in accordance with the scope of work"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
     "id": 27127,
     "title": "GENERAL BANKING STAFF - WILAYAH REKRUTMEN SULAWESI, MALUKU, PAPUA TAHUN 2026",
     "organization_id": 113823,
@@ -13280,6 +12977,96 @@
     },
     "source": "Grab",
     "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": 15577,
+    "title": "Tech Field",
+    "organization_id": "22",
+    "organization_name": "ICBP - Noodle",
+    "slug": "indofood-15577",
+    "type_name": "Karyawan Kontrak",
+    "level": "Experienced",
+    "location": "Noodle Jawa Timur - All",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "12 Des 2026",
+    "group": "Engineering",
+    "url": "https://career.indofood.com/vacancy_detail.aspx?id=15577",
+    "raw_description": "<ul>\n\t<li>Responsible for maintenance and repair</li>\n\t<li>Responsible for rejecting non standard machine parts</li>\n\t<li>Responsible for machine repairs</li>\n</ul>\n",
+    "raw_requirements": "<p>1.Diploma / Bachelor Degree of Electrical Engineering / Mechanical Engineering</p>\n\n<p>2.&nbsp;At least 1 years of working experience in the same field</p>\n\n<p>3.&nbsp;Familiar using Autocad, PLC, MS Office</p>\n\n<p>4.&nbsp;Willing to work shifts</p>\n",
+    "match_score": 80,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "&nbsp;At least 1 years of working experience in the same field 3",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [
+        "&nbsp;Willing to work shifts Responsible for maintenance and repair Responsible for rejecting non standard machine parts Responsible for machine repairs"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": [
+          "&nbsp;Willing to work shifts Responsible for maintenance and repair Responsible for rejecting non standard machine parts Responsible for machine repairs"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Indofood",
+    "logo": null
   },
   {
     "id": 15553,
@@ -13927,110 +13714,6 @@
     "logo": null
   },
   {
-    "id": 14423,
-    "title": "Area Sales Promotion Supervisor",
-    "organization_id": "19",
-    "organization_name": "ICBP - Food Seasoning",
-    "slug": "indofood-14423",
-    "type_name": "Karyawan Tetap",
-    "level": "Experienced",
-    "location": "",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "09 Nov 2026",
-    "group": "Sales",
-    "url": "https://career.indofood.com/vacancy_detail.aspx?id=14423",
-    "raw_description": "<ul>\n\t<li>Bertanggung jawab atas tercapainya terget penjualan&nbsp;produk&nbsp;New Product Launch maupun Existing Product (Sirup dan Sosis)&nbsp;di area&nbsp;masing-masing.</li>\n\t<li>Bertanggung jawab terhadap pelaksanaan program-program Tactical Promotion di area sesuai objective yang akan dicapai.</li>\n\t<li>Memantau perkembangan penjualan melalui beragam kegiatan pemasaran.</li>\n\t<li>Bertanggung jawab terhadap peningkatan kemampuan dan ketrampilan bawahannya guna tercapainya objective yang telah ditentukan.&nbsp;</li>\n\t<li>Bertanggung jawab terhadap pembuatan laporan-laporan yang telah ditentukan.</li>\n</ul>\n",
-    "raw_requirements": "<ul>\n\t<li>Pria / Wanita</li>\n\t<li>Pendidikan minimal S1 semua jurusan</li>\n\t<li>Usia 25 - 33 tahun</li>\n\t<li>Menguasai analisis data serta target orianted</li>\n\t<li>Tahan terhadap pressure dan menyukai tantangan</li>\n\t<li>Memiliki kemampuan komunikasi dan negosiasi yang tinggi dengan tim distributor (BM, SM, OM, DCM, SS hingga tim operasional) dan Buyer Pareto Outlet di area</li>\n\t<li>Memiliki pengalaman minimal 2 tahun menjadi area sales &amp; promotion supervisor di bidang FMCG handling GT &amp; MT</li>\n\t<li>Diprioritaskan handle Buyer MTI Pareto dan MD MTKA area</li>\n\t<li>Memiliki leadership yang kuat</li>\n\t<li>Dapat mengoperasikan Microsoft Office dengan baik</li>\n\t<li>Diprioritaskan mengerti area Sumatera Utara, Pekanbaru, Lampung, Bandung dan sekitarnya</li>\n</ul>\n",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Batas usia maksimal adalah 25 tahun, sedangkan usia Anda saat ini adalah 23 tahun."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Low Match",
-        "reason": "Perlu Perhatian: Lowongan meminta pengalaman minimal 2 tahun, sedangkan pengalaman kamu saat ini 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Pria / Wanita Pendidikan minimal S1 semua jurusan Usia 25",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [
-        "Komunikasi",
-        "Leadership"
-      ],
-      "mandatory_requirements": [
-        "Pria / Wanita Pendidikan minimal S1 semua jurusan Usia 25",
-        "33 tahun Menguasai analisis data serta target orianted Tahan terhadap pressure dan menyukai tantangan Memiliki kemampuan komunikasi dan negosiasi yang tinggi dengan tim distributor (BM, SM, OM, DCM, SS hingga tim operasional) dan Buyer Pareto Outlet di area Memiliki pengalaman minimal 2 tahun menjadi area sales &amp; promotion supervisor di bidang FMCG handling GT &amp; MT Diprioritaskan handle Buyer MTI Pareto dan MD MTKA area Memiliki leadership yang kuat Dapat mengoperasikan Microsoft Office dengan baik Diprioritaskan mengerti area Sumatera Utara, Pekanbaru, Lampung, Bandung dan sekitarnya Bertanggung jawab atas tercapainya terget penjualan&nbsp;produk&nbsp;New Product Launch maupun Existing Product (Sirup dan Sosis)&nbsp;di area&nbsp;masing"
-      ],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Bertanggung jawab terhadap pelaksanaan program",
-        "Bertanggung jawab terhadap peningkatan kemampuan dan ketrampilan bawahannya guna tercapainya objective yang telah ditentukan",
-        "&nbsp; Bertanggung jawab terhadap pembuatan laporan"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [
-          "Pria / Wanita Pendidikan minimal S1 semua jurusan Usia 25",
-          "33 tahun Menguasai analisis data serta target orianted Tahan terhadap pressure dan menyukai tantangan Memiliki kemampuan komunikasi dan negosiasi yang tinggi dengan tim distributor (BM, SM, OM, DCM, SS hingga tim operasional) dan Buyer Pareto Outlet di area Memiliki pengalaman minimal 2 tahun menjadi area sales &amp; promotion supervisor di bidang FMCG handling GT &amp; MT Diprioritaskan handle Buyer MTI Pareto dan MD MTKA area Memiliki leadership yang kuat Dapat mengoperasikan Microsoft Office dengan baik Diprioritaskan mengerti area Sumatera Utara, Pekanbaru, Lampung, Bandung dan sekitarnya Bertanggung jawab atas tercapainya terget penjualan&nbsp;produk&nbsp;New Product Launch maupun Existing Product (Sirup dan Sosis)&nbsp;di area&nbsp;masing"
-        ],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Bertanggung jawab terhadap pelaksanaan program",
-          "Bertanggung jawab terhadap peningkatan kemampuan dan ketrampilan bawahannya guna tercapainya objective yang telah ditentukan",
-          "&nbsp; Bertanggung jawab terhadap pembuatan laporan"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": 25,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Mid Level (1-3 tahun)",
-      "exp_years": 2
-    },
-    "source": "Indofood",
-    "logo": null
-  },
-  {
     "id": 25346,
     "title": "TALENT POOL - Teller Service Staff - Wilayah Rekrutmen Jabodetabek",
     "organization_id": 113823,
@@ -14305,6 +13988,178 @@
     },
     "source": "Talentics",
     "logo": null
+  },
+  {
+    "id": "grab_744000152615521",
+    "title": "Senior Software Engineer, Backend - Insurance",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000152615521",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000152615521/senior-software-engineer-backend-insurance/",
+    "raw_description": "<p>Posisi: <strong>Senior Software Engineer, Backend - Insurance</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "raw_requirements": "<p>Posisi: <strong>Senior Software Engineer, Backend - Insurance</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 0,
+        "status": "Low Match",
+        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
+  },
+  {
+    "id": "grab_744000152321069",
+    "title": "Senior Software Engineer, Backend",
+    "organization_id": "Grab",
+    "organization_name": "Grab Indonesia",
+    "slug": "grab-744000152321069",
+    "type_name": "Full Time",
+    "level": "Profesional",
+    "location": "Jakarta, Indonesia",
+    "workplace": "Hybrid / WFO",
+    "due_date": "Aktif",
+    "group": "Grab Tech & Operations",
+    "url": "https://www.grab.careers/en/jobs/744000152321069/senior-software-engineer-backend/",
+    "raw_description": "<p>Posisi: <strong>Senior Software Engineer, Backend</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "raw_requirements": "<p>Posisi: <strong>Senior Software Engineer, Backend</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
+    "match_score": 75,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 0,
+        "status": "Low Match",
+        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+      },
+      "experience": {
+        "score": 0,
+        "status": "Neutral"
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [],
+      "mandatory_requirements": [],
+      "preferred_requirements": [],
+      "nice_to_have": [],
+      "key_responsibilities": [],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [],
+        "preferred": [],
+        "nice_to_have": [],
+        "responsibilities": []
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Grab",
+    "logo": "https://www.grab.careers/favicon.ico"
   },
   {
     "id": "grab_744000150615581",
@@ -14710,178 +14565,6 @@
     "nlp_breakdown": {
       "education_summary": "S1 / D3 jurusan relevan atau setara",
       "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "grab_744000145249349",
-    "title": "Lead Software Engineer, Backend",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000145249349",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000145249349/lead-software-engineer-backend/",
-    "raw_description": "<p>Posisi: <strong>Lead Software Engineer, Backend</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "raw_requirements": "<p>Posisi: <strong>Lead Software Engineer, Backend</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 0,
-        "status": "Low Match",
-        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": []
-      }
-    },
-    "parsed_requirements": {
-      "gpa": null,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Grab",
-    "logo": "https://www.grab.careers/favicon.ico"
-  },
-  {
-    "id": "grab_744000144227409",
-    "title": "Lead Software Engineer, Backend - Consumer Experience",
-    "organization_id": "Grab",
-    "organization_name": "Grab Indonesia",
-    "slug": "grab-744000144227409",
-    "type_name": "Full Time",
-    "level": "Profesional",
-    "location": "Jakarta, Indonesia",
-    "workplace": "Hybrid / WFO",
-    "due_date": "Aktif",
-    "group": "Grab Tech & Operations",
-    "url": "https://www.grab.careers/en/jobs/744000144227409/lead-software-engineer-backend-consumer-experience/",
-    "raw_description": "<p>Posisi: <strong>Lead Software Engineer, Backend - Consumer Experience</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "raw_requirements": "<p>Posisi: <strong>Lead Software Engineer, Backend - Consumer Experience</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: Jakarta, Indonesia</p>",
-    "match_score": 75,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 35,
-        "status": "High Match",
-        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 0,
-        "status": "Low Match",
-        "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
-      },
-      "experience": {
-        "score": 0,
-        "status": "Neutral"
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "S1 / D3 jurusan relevan atau setara",
-      "experience_summary": "Consumer Experience Perusahaan: Grab Indonesia Lokasi: Jakarta, Indonesia Posisi: Lead Software Engineer, Backend",
       "mandatory_skills": [],
       "preferred_skills": [],
       "soft_skills": [],
