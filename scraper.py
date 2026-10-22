@@ -397,10 +397,10 @@ class RequirementNLPParser:
 
 def evaluate_job_match(job):
     # Requirements and Description
-    req_html = job.get("requirements", "")
-    desc_html = job.get("description", "")
-    title = job.get("title", "").lower()
-    org_name = job.get("organization_name", "").lower()
+    req_html = job.get("requirements") or ""
+    desc_html = job.get("description") or ""
+    title = str(job.get("title") or "").lower()
+    org_name = str(job.get("organization_name") or "").lower()
     
     req_text = clean_html(req_html)
     desc_text = clean_html(desc_html)
