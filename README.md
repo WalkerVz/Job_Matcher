@@ -51,14 +51,16 @@ job_matcher/
 
 ## ✨ Fitur Utama
 
-### 1. 🕷️ Multi-Source Scraper (7 Portal Karir)
-- 🌟 **Astra Careers** (`career.astra.co.id`) — 168 lowongan raw (IT, Engineering, Data)
+### 1. 🕷️ Multi-Source Scraper (9 Portal Karir)
+- 🌟 **Astra Careers** (`career.astra.co.id`) — Lowongan IT, Engineering, Data
+- 🟣 **OpenTrain.ai** (`opentrain.ai`) — Remote AI Training, LLM Evaluation & RLHF roles
 - 🟢 **Grab Careers Indonesia** (`grab.careers`)
 - 🟡 **Indosat Ooredoo Hutchison (IOH)** (`careers.ioh.co.id`)
 - 🏛️ **SKK Migas & KKKS / Hulu Migas (Talentics)** (`jobs.talentics.id`)
 - 🛢️ **Pertamina Training & Consulting (PTC)** (`recruitment.pertamina-ptc.com`)
 - 🌴 **SawitPRO** (`sawitpro.id/jobs`)
 - 🍲 **Indofood Careers** (`career.indofood.com`)
+- 🌐 **micro1** (`microonejobs.com`) — Remote Software Engineering & AI roles
 
 ### 2. 🎯 Smart Matching & Filtering Engine
 - **Major Matching**: Memfilter otomatis jurusan Teknik Informatika, Sistem Informasi, dan Ilmu Komputer.

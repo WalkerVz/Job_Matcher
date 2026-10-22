@@ -572,7 +572,9 @@ function applyFilters() {
                 'ptc': 'Pertamina PTC',
                 'sawitpro': 'SawitPRO',
                 'ioh': 'Indosat Ooredoo Hutchison',
-                'indofood': 'Indofood'
+                'indofood': 'Indofood',
+                'opentrain': 'OpenTrain.ai',
+                'micro1': 'micro1'
             };
             const targetSource = sourceMap[sourceVal];
             if (targetSource && job.source !== targetSource) return false;
@@ -663,6 +665,10 @@ function getSourceBadgeHTML(job, styleAttr = '') {
         return `<span class="source-badge ioh" style="${styleAttr}">Indosat Ooredoo Hutchison</span>`;
     } else if (job.source === 'Indofood') {
         return `<span class="source-badge indofood" style="${styleAttr}">Indofood Career</span>`;
+    } else if (job.source === 'OpenTrain.ai') {
+        return `<span class="source-badge opentrain" style="${styleAttr}">OpenTrain.ai (Remote)</span>`;
+    } else if (job.source === 'micro1') {
+        return `<span class="source-badge micro1" style="${styleAttr}">micro1 (Remote)</span>`;
     }
     return `<span class="source-badge talentics" style="${styleAttr}">${job.source || 'Hulu Migas / BUMN'}</span>`;
 }

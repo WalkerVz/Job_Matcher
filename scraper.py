@@ -1377,120 +1377,165 @@ def scrape_linkedin_jobs(session, max_jobs=300):
     return linkedin_jobs
 
 
-def scrape_opentrain_jobs():
+def scrape_opentrain_jobs(session):
     """
-    Scrape ALL remote freelance AI training jobs dari OpenTrain.ai worldwide
-    Gunakan Selenium untuk handle JavaScript rendering
-    Filter by skills match dengan CV: Data, Python, AI, SQL, etc.
+    Scrape remote AI training & coding jobs dari OpenTrain.ai kategori IT/AI.
+    Menggunakan HTTP requests langsung & Schema.org JobPosting extraction (cepat & tanpa Selenium).
     """
-    print("\n  Scraping OpenTrain.ai jobs (Selenium - 745+ freelance roles)...")
+    print("\n  Scraping OpenTrain.ai jobs (Coding, Generative AI & Data Annotation)...")
+    cat_urls = [
+        "https://www.opentrain.ai/jobs/category/coding-software/",
+        "https://www.opentrain.ai/jobs/category/generative-ai-rlhf/",
+        "https://www.opentrain.ai/jobs/data-annotation/"
+    ]
     
-    if not webdriver:
-        print("    ⚠️  Selenium not available. Skipping OpenTrain.")
-        return []
+    job_links = []
+    seen_urls = set()
+    for cat_url in cat_urls:
+        try:
+            r = session.get(cat_url, timeout=12)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                for a in soup.find_all('a', href=True):
+                    href = a['href']
+                    if href.startswith('/jobs/') and not href.startswith('/jobs/category') and not href.startswith('/jobs/location') and href != '/jobs/' and not '?apply=' in href:
+                        full_url = 'https://www.opentrain.ai' + href
+                        title = a.get_text(' ', strip=True)
+                        if full_url not in seen_urls and title and title != 'View job':
+                            seen_urls.add(full_url)
+                            job_links.append({'title': title, 'url': full_url})
+        except Exception as e:
+            print(f"    Error fetching OpenTrain category {cat_url}: {e}")
+            
+    print(f"    Found {len(job_links)} OpenTrain roles. Fetching details concurrently...")
     
-    driver = None
+    def fetch_opentrain_detail(job_info):
+        url = job_info['url']
+        try:
+            r = session.get(url, timeout=10)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, 'html.parser')
+                for s in soup.find_all('script', type='application/ld+json'):
+                    try:
+                        data = json.loads(s.string)
+                        if data.get('@type') == 'JobPosting':
+                            desc = data.get('description', '')
+                            clean_desc = clean_html(desc)
+                            valid_through = str(data.get('validThrough', '')).replace('T', ' ')[:19]
+                            return {
+                                'id': f"opentrain_{url.rstrip('/').split('--')[-1]}",
+                                'title': data.get('title') or job_info['title'],
+                                'organization_name': 'OpenTrain.ai',
+                                'location': 'Remote (Worldwide)',
+                                'workplace': 'Work From Home (Remote)',
+                                'due_date': valid_through or 'Active',
+                                'group': 'AI Training & RLHF',
+                                'url': url,
+                                'description': clean_desc,
+                                'requirements': 'Remote AI Training, Evaluation, Python, LLM Reasoning, Data Annotation',
+                                'type_name': 'Freelance / Contract',
+                                'source': 'OpenTrain.ai'
+                            }
+                    except Exception:
+                        pass
+        except Exception:
+            pass
+        slug = url.rstrip('/').split('/')[-1]
+        return {
+            'id': f"opentrain_{slug}",
+            'title': job_info['title'],
+            'organization_name': 'OpenTrain.ai',
+            'location': 'Remote (Worldwide)',
+            'workplace': 'Work From Home (Remote)',
+            'due_date': 'Active',
+            'group': 'AI Training & RLHF',
+            'url': url,
+            'description': f"Role for {job_info['title']} at OpenTrain.ai. Remote AI Training & RLHF tasks.",
+            'requirements': 'Remote AI Training, Evaluation, Python, LLM Reasoning, Data Annotation',
+            'type_name': 'Freelance / Contract',
+            'source': 'OpenTrain.ai'
+        }
+
+    detailed_jobs = []
+    with ThreadPoolExecutor(max_workers=10) as executor:
+        futures = [executor.submit(fetch_opentrain_detail, job) for job in job_links]
+        for f in as_completed(futures):
+            res = f.result()
+            if res:
+                detailed_jobs.append(res)
+                
+    print(f"    ✓ Successfully scraped {len(detailed_jobs)} OpenTrain jobs.")
+    return detailed_jobs
+
+
+def scrape_micro1_jobs(session):
+    """
+    Scrape remote software & AI jobs dari micro1 (microonejobs.com).
+    """
+    print("\n  Scraping micro1 remote jobs...")
+    url = "https://microonejobs.com/jobs"
+    jobs = []
     try:
-        # Setup Selenium with headless Chrome
-        chrome_options = Options()
-        chrome_options.add_argument("--headless")
-        chrome_options.add_argument("--no-sandbox")
-        chrome_options.add_argument("--disable-dev-shm-usage")
-        chrome_options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64)")
-        
-        service = Service(ChromeDriverManager().install())
-        driver = webdriver.Chrome(service=service, options=chrome_options)
-        
-        # User skills untuk filter
-        user_skills = [
-            "python", "data", "ai", "sql", "excel", "analytics", 
-            "machine learning", "ml", "engineer", "developer", "programmer",
-            "coding", "evaluation", "labeling", "annotation", "ai training",
-            "expert", "specialist", "analyst"
-        ]
-        
-        all_jobs = []
-        
-        # Load jobs page
-        url = "https://www.opentrain.ai/jobs/"
-        print(f"    Loading: {url}")
-        driver.get(url)
-        
-        # Wait untuk JavaScript rendering
-        import time
-        time.sleep(8)  # Longer wait for JS rendering
-        
-        # Extract from rendered HTML
-        soup = BeautifulSoup(driver.page_source, 'html.parser')
-        text = soup.get_text()
-        
-        # Better parsing - look for job patterns in text
-        lines = text.split('\n')
-        
-        i = 0
-        while i < len(lines):
-            line = lines[i].strip()
-            
-            # Look for job title patterns
-            if any(kw in line for kw in ['Expert', 'Specialist', 'Engineer', 'Analyst', 'Manager', 'Trainer', 'Creator', 'Evaluator', 'Attorney']):
-                if len(line) > 15 and len(line) < 150:
-                    # Check skills match
-                    line_lower = line.lower()
-                    skill_matches = [s for s in user_skills if s in line_lower]
-                    
-                    if skill_matches:  # Only if has matching skills
-                        # Extract additional info from next lines
-                        salary = ""
-                        location = "Remote (Worldwide)"
-                        job_type = ""
+        r = session.get(url, timeout=12)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, 'html.parser')
+            cards = soup.find_all('a', href=lambda h: h and h.startswith('/jobs/'))
+            for c in cards:
+                href = c['href']
+                full_url = "https://microonejobs.com" + href
+                text_parts = [t.strip() for t in c.get_text(';', strip=True).split(';') if t.strip()]
+                
+                title = ''
+                company = 'micro1'
+                salary = ''
+                location = 'Remote (Worldwide)'
+                for p in text_parts:
+                    if any(role in p for role in ['Engineer', 'Developer', 'Designer', 'Marketer', 'Analyst']):
+                        title = p
+                    elif '$' in p:
+                        salary = p
+                    elif 'Remote' in p:
+                        location = p.replace('\ufffd', '-').replace('', '-')
                         
-                        for j in range(i+1, min(i+10, len(lines))):
-                            next_line = lines[j].strip().lower()
-                            
-                            # Extract salary
-                            if '$' in lines[j] and ('hour' in next_line or 'task' in next_line or 'label' in next_line):
-                                salary = lines[j].strip()
-                                break
-                            
-                            # Extract location
-                            if 'remote' in next_line:
-                                if 'worldwide' in next_line:
-                                    location = "Remote (Worldwide)"
-                                elif 'us' in next_line:
-                                    location = "Remote (USA)"
-                        
-                        job = {
-                            "id": f"opentrain_{hash(line)}",
-                            "title": line[:100],
-                            "description": line,
-                            "organization_name": "OpenTrain",
-                            "salary_info": salary,
-                            "location": location,
-                            "url": url,
-                            "type": "Freelance/Contract",
-                            "source": "OpenTrain.ai",
-                            "matched_skills": skill_matches
-                        }
-                        
-                        # Avoid duplicates
-                        if not any(j['title'] == job['title'] for j in all_jobs):
-                            all_jobs.append(job)
-            
-            i += 1
-        
-        print(f"    Found {len(all_jobs)} matching freelance jobs from OpenTrain")
-        return all_jobs
-        
+                if not title and len(text_parts) > 2:
+                    title = text_parts[2]
+                if len(text_parts) > 1 and not ('Engineer' in text_parts[1] or '$' in text_parts[1]):
+                    company = text_parts[1]
+                
+                slug = href.replace('/jobs/', '')
+                
+                # Fetch job detail
+                desc = ''
+                try:
+                    r_det = session.get(full_url, timeout=8)
+                    if r_det.status_code == 200:
+                        soup_det = BeautifulSoup(r_det.text, 'html.parser')
+                        main_content = soup_det.find('main') or soup_det.find('article') or soup_det.body
+                        if main_content:
+                            desc = main_content.get_text('\n', strip=True)
+                except Exception:
+                    pass
+                
+                desc_text = (desc or title) + (f"\nSalary: {salary}" if salary else "")
+                jobs.append({
+                    'id': f"micro1_{slug}",
+                    'title': title,
+                    'organization_name': company,
+                    'location': location,
+                    'workplace': 'Work From Home (Remote)',
+                    'due_date': 'Active',
+                    'group': 'Engineering & Tech',
+                    'url': full_url,
+                    'description': desc_text,
+                    'requirements': 'Software Engineering, Remote, Problem Solving, Fullstack/Backend/Frontend/AI',
+                    'type_name': 'Full Time / Remote',
+                    'source': 'micro1'
+                })
     except Exception as e:
-        print(f"  Warning: OpenTrain Selenium error: {type(e).__name__}")
-        return []
+        print(f"    Warning: micro1 scrape error: {e}")
         
-    finally:
-        if driver:
-            try:
-                driver.quit()
-            except Exception:
-                pass
+    print(f"    ✓ Successfully scraped {len(jobs)} micro1 jobs.")
+    return jobs
 
 
 def scrape_with_firecrawl(url, format_output="markdown"):
@@ -1770,27 +1815,18 @@ def main():
         matched_jobs.append(matched_job)
 
     print("\nStep 3h: Scraping OpenTrain.ai AI Training Jobs...")
-    opentrain_jobs = scrape_opentrain_jobs()
+    opentrain_jobs = scrape_opentrain_jobs(session)
     for job in opentrain_jobs:
-        # Normalize untuk job matching
-        normalized_job = {
-            "id": job.get("id"),
-            "title": job.get("title", ""),
-            "organization_name": job.get("organization_name", ""),
-            "location": job.get("location", ""),
-            "workplace": "Work From Home",
-            "due_date": "Active",
-            "group": "AI Training / Freelance",
-            "url": job.get("url", ""),
-            "description": job.get("description", "") + "\n" + job.get("salary_info", ""),
-            "requirements": "AI Training, Data Labeling, Evaluation, English fluency",
-            "type_name": job.get("type", ""),
-            "source": job.get("source", "")
-        }
-        matched_job = evaluate_job_match(normalized_job)
+        matched_job = evaluate_job_match(job)
         matched_jobs.append(matched_job)
 
-    print("\nStep 3i: Scraping with JobSpy (LinkedIn)...")
+    print("\nStep 3i: Scraping micro1 Remote Jobs...")
+    micro1_jobs = scrape_micro1_jobs(session)
+    for job in micro1_jobs:
+        matched_job = evaluate_job_match(job)
+        matched_jobs.append(matched_job)
+
+    print("\nStep 3j: Scraping with JobSpy (LinkedIn)...")
     # NOTE: JobSpy memiliki compatibility issues di Windows dengan character encoding
     # LinkedIn, Indeed, Glassdoor API protection juga aktif
     # Saat ini sources sudah menghasilkan 125+ jobs yang cocok
