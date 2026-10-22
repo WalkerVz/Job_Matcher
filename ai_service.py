@@ -10,7 +10,7 @@ import requests
 import google.generativeai as genai
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from scraper import clean_html  # reuse, tidak perlu definisi ulang
+from config import clean_html  # dari modul terpusat config.py
 
 # Load environment variables from .env file
 load_dotenv()

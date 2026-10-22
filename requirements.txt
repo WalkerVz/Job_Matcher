@@ -3,6 +3,11 @@ requests>=2.31.0
 python-dotenv>=1.0.0
 pytz>=2024.1
 
+# AI Service (Flask API - ai_service.py)
+flask>=3.0.0
+flask-cors>=4.0.0
+google-generativeai>=0.8.0
+
 # Enhanced Scraping Libraries (latest stable)
 firecrawl-py>=4.0.0
 python-jobspy>=1.1.0

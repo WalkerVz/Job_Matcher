@@ -1267,10 +1267,17 @@ async function fetchWithTimeout(url, options, timeoutMs = 1200) {
     }
 }
 
-// Helper to format AI response text (convert bold markdown and linebreaks)
+// ⚠️ SECURITY: Escape HTML entities to prevent XSS injection
+function escapeHtml(unsafe) {
+    if (!unsafe) return '';
+    const map = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'};
+    return String(unsafe).replace(/[&<>"']/g, (c) => map[c]);
+}
+
+// Helper to format AI response text (convert bold markdown and linebreaks safely)
 function formatAIResponse(text) {
     if (!text) return '';
-    return text
+    return escapeHtml(text)
         .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.*?)\*/g, '<em>$1</em>')
         .replace(/\n/g, '<br>');
@@ -1324,25 +1331,6 @@ function stripHtml(html) {
     return (tmp.textContent || tmp.innerText || '').replace(/\s+/g, ' ').trim();
 }
 
-// ⚠️ SECURITY: Escape HTML entities to prevent XSS injection
-function escapeHtml(unsafe) {
-    if (!unsafe) return '';
-    const map = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'};
-    return String(unsafe).replace(/[&<>"']/g, (c) => map[c]);
-}
-
-// ⚠️ SECURITY: Escape HTML entities to prevent XSS
-function escapeHtml(unsafe) {
-    if (!unsafe) return '';
-    const map = {
-        '&': '&amp;',
-        '<': '&lt;',
-        '>': '&gt;',
-        '"': '&quot;',
-        "'": '&#039;'
-    };
-    return String(unsafe).replace(/[&<>"']/g, (char) => map[char]);
-}
 
 // Generate AI Summary for a job
 window.generateAISummary = async function (jobId) {
@@ -1417,7 +1405,7 @@ window.generateAISummary = async function (jobId) {
             contentArea.innerHTML = `
                 <div class="ai-error">
                     <p>❌ Tidak dapat memuat ringkasan AI.</p>
-                    <p>Error: ${cloudErr.message}</p>
+                    <p>Error: ${escapeHtml(cloudErr.message)}</p>
                 </div>
             `;
         }
@@ -1501,7 +1489,7 @@ window.generateInterviewQuestions = async function (jobId) {
             contentArea.innerHTML = `
                 <div class="ai-error">
                     <p>❌ Tidak dapat memprediksi pertanyaan AI.</p>
-                    <p>Error: ${cloudErr.message}</p>
+                    <p>Error: ${escapeHtml(cloudErr.message)}</p>
                 </div>
             `;
         }

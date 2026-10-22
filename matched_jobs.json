@@ -1233,7 +1233,7 @@
       },
       "exp_years": {
         "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+        "reason": "Sesuai. Lowongan meminta minimal 1 tahun pengalaman, sedangkan pengalaman kamu adalah 1 tahun."
       }
     },
     "nlp_breakdown": {
@@ -1279,8 +1279,8 @@
       "age": 90,
       "toefl": null,
       "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
+      "experience": "Fresh / Junior (0-1 tahun)",
+      "exp_years": 1
     },
     "source": "Indosat Ooredoo Hutchison",
     "logo": "https://rmkcdn.successfactors.com/00ae8fcf/5c0af18e-1ebe-4f24-80ab-0.png"
@@ -1312,6 +1312,113 @@
         "score": 15,
         "status": "Match",
         "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
+      },
+      "age": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
+      },
+      "toefl": {
+        "score": 10,
+        "status": "Match",
+        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
+      },
+      "gender": {
+        "score": 5,
+        "status": "Match",
+        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
+      },
+      "skills": {
+        "score": 15,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Menemukan kecocokan keahlian Anda: machine learning, ai, it."
+      },
+      "experience": {
+        "score": 10,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
+      },
+      "exp_years": {
+        "status": "Match",
+        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+      }
+    },
+    "nlp_breakdown": {
+      "education_summary": "S1 / D3 jurusan relevan atau setara",
+      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
+      "mandatory_skills": [],
+      "preferred_skills": [],
+      "soft_skills": [
+        "Komunikasi",
+        "Presentasi",
+        "Problem Solving"
+      ],
+      "mandatory_requirements": [
+        "Minimal S1 Teknologi Informasi, Sistem Informasi, Statistika, Matematika, atau bidang terkait"
+      ],
+      "preferred_requirements": [],
+      "nice_to_have": [
+        "Memiliki pengetahuan tentang data querying dan data engineering menjadi nilai tambah",
+        "Memiliki pengetahuan tentang machine learning menjadi nilai tambah"
+      ],
+      "key_responsibilities": [
+        "Memiliki kemampuan problem solving yang baik untuk mengidentifikasi masalah dan mengembangkan solusi menggunakan metode yang terstruktur",
+        "Mengembangkan dashboard dan laporan menggunakan business intelligence tools untuk memantau kinerja dan menghasilkan insights"
+      ],
+      "skill_categories": [],
+      "full_breakdown": {
+        "mandatory": [
+          "Minimal S1 Teknologi Informasi, Sistem Informasi, Statistika, Matematika, atau bidang terkait"
+        ],
+        "preferred": [],
+        "nice_to_have": [
+          "Memiliki pengetahuan tentang data querying dan data engineering menjadi nilai tambah",
+          "Memiliki pengetahuan tentang machine learning menjadi nilai tambah"
+        ],
+        "responsibilities": [
+          "Memiliki kemampuan problem solving yang baik untuk mengidentifikasi masalah dan mengembangkan solusi menggunakan metode yang terstruktur",
+          "Mengembangkan dashboard dan laporan menggunakan business intelligence tools untuk memantau kinerja dan menghasilkan insights"
+        ]
+      }
+    },
+    "parsed_requirements": {
+      "gpa": null,
+      "age": null,
+      "toefl": null,
+      "gender": "Open",
+      "experience": "Open / Not Specified",
+      "exp_years": 0
+    },
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_307.jpg"
+  },
+  {
+    "id": 14822,
+    "title": "Production Engineering - TACI",
+    "organization_id": 3000,
+    "organization_name": "PT TD Automotive Compressor Indonesia",
+    "slug": "astra-14822",
+    "type_name": "Karyawan Tetap",
+    "level": "Lulusan Baru",
+    "location": "Indonesia",
+    "workplace": "Work From Office (WFO)",
+    "due_date": "2027-01-30 23:59:59",
+    "group": "Production and Manufacturing",
+    "url": "https://career.astra.co.id/lowongan/lowongan-detail-page/14822/detail",
+    "raw_description": "<p>1. Melakukan Pengembangan Project</p><p>&nbsp; &nbsp; - Membuat perencanaan &amp; budget<br></p><p>&nbsp; &nbsp; - Membuat desain proses<br></p><p>&nbsp; &nbsp; - Membuat drawing CAD<br></p><p>&nbsp; &nbsp; - Membuat laporan dan presentasi</p><p>2. Menganalisis Masalah dan Melakukan Perbaikan</p><p>&nbsp; &nbsp; - Melakukan pemecahan masalah terkait SQCD<br></p><p>&nbsp; &nbsp; - Melaksanakan aktivitas Kaizen</p><p>3. Mengembangkan Otomatisasi</p><p>&nbsp; &nbsp; - Mempelajari konsep otomatisasi baru<br></p><p>&nbsp; &nbsp; - Meninjau working chart<br></p><p>&nbsp; &nbsp; - Membuat simulasi dan implementasi otomatisasi<br></p>",
+    "raw_requirements": "<p>1. Gelar Diploma (D3) di bidang Teknik Mesin/Elektro/Mekatronika</p><p>2. Lulusan Baru (Fresh Graduate) dipersilahkan untuk melamar</p><p>3. IPK minimal 3,00 (skala 4,00) dari universitas ternama</p><p>4. Mengertidan memahami Basic Design process, Basic Drawing, dan Basic NG programming</p><p>5. MenguasaiDrawing Tools (ZWCAD, AutoCAD,G-Star) minimal 2D drawing</p><p>6. MenguasaiAplikasi Office : Words, Excel, Power points</p><p>7. Mampuberkomunikasi menggunakan bahasa inggris dengan baik (lisan/tulisan)</p><p>8. Memilikimotivasi tinggi, kreativitas, inisiatif dan mampu bekerja dalam tekanan</p><p>9. Memilikiinterpersonal skill yang baik dan kemampuan bernegosiasi yang baik</p>",
+    "match_score": 100,
+    "is_blocked": false,
+    "match_details": {
+      "major": {
+        "score": 35,
+        "status": "High Match",
+        "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+      },
+      "gpa": {
+        "score": 15,
+        "status": "Match",
+        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
       },
       "age": {
         "score": 10,
@@ -1363,6 +1470,7 @@
         "Experience with data governance, data quality, metadata, lineage, security/privacy, observability, and cost optimization / FinOps practices is preferred",
         "time analytics use cases is an advantage"
       ],
+      "preferred_requirements": [],
       "nice_to_have": [],
       "key_responsibilities": [
         "Role: Responsible for leading the definition, development, continuous improvement, and delivery of enterprise data integration capabilities across Data Analytics platforms",
@@ -1382,6 +1490,7 @@
           "time analytics use cases is an advantage",
           "Master’s degree or relevant professional certification in cloud/data engineering is an advantage"
         ],
+        "preferred": [],
         "nice_to_have": [],
         "responsibilities": [
           "Role: Responsible for leading the definition, development, continuous improvement, and delivery of enterprise data integration capabilities across Data Analytics platforms",
@@ -5544,8 +5653,8 @@
       "experience": "Expert / Lead (15+ tahun)",
       "exp_years": 15
     },
-    "source": "Talentics",
-    "logo": null
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_333.jpg?1773210924324"
   },
   {
     "id": 26997,
@@ -5654,8 +5763,8 @@
       "experience": "Expert / Lead (15+ tahun)",
       "exp_years": 15
     },
-    "source": "Talentics",
-    "logo": null
+    "source": "Astra",
+    "logo": "https://hrappsstorage.blob.core.windows.net/recruitmentpublic/Branch_Logo_333.jpg?1773210924324"
   },
   {
     "id": "grab_744000156278269",
@@ -5745,7 +5854,6 @@
           "Follow up of indicators linked to budget and forecast with relevant departments Use budgeting systems, management reporting systems and other financial reporting interfaces towards business Read more Skills you need What Essential Skill you will Need A bachelor's degree in Accounting, Finance, Economics, Statistics, Industrial Engineering, or a related field",
           "Experience minimal 3+ for Financial, Planning & Analysis"
         ],
-        "preferred": [],
         "nice_to_have": [],
         "responsibilities": [
           "time The role at a glance Skills you need What we offer Life at Grab The role at a glance Get to know the Team The FP&A and forecasting team is responsible for the Business Vertical's forecast and budget, including identifying for implementing scenarios, risk and opportunities",
@@ -7324,6 +7432,7 @@
         "Comprehensive understanding on the Modifications required at the Existing Facilities to support Subsea Development",
         "The role also supports the Tuna Project as and when required, while ensuring Subsea Development activities are Delivered Safely, Efficiently and in line with approved Scope, Schedule, Budget, Quality and Regulatory Commitments"
       ],
+      "mandatory_requirements": [],
       "preferred_requirements": [],
       "nice_to_have": [],
       "key_responsibilities": [
@@ -8291,97 +8400,6 @@
     "group": null,
     "url": "https://jobs.talentics.id/skk-migas/general-banking-staff-wilayah-rekrutmen-sulawesi-tahun-2026",
     "raw_description": "<p>Rekrutmen pada Posisi setingkat staff yang akan ditempatkan pada beberapa bidang kerja yang mendukung penuh berjalannya proses bisnis Bank. Dibekali dengan pendidikan dan pelatihan yang terkonsentrasi pada bidang pendanaan dan perkreditan.</p><p>Program ini juga menyediakan peluang pengembangan profesional berkelanjutan, memungkinkan para peserta untuk terus meningkatkan kemampuan mereka dari waktu ke waktu. Khususnya pada aspek pendanaan dan perkreditan</p><p>Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi.<br><br><b>Proses seleksi akan dilaksanakan di Sulawesi</b></p>",
-    "raw_requirements": "<ul><li>Warga Negara Indonesia</li><li>Min. Pendidikan Terakhir S-1 (Sarjana)</li><li>Memiliki nilai IPK min. 3,00 dari skala 4,00</li></ul>",
-    "match_score": 80,
-    "is_blocked": false,
-    "match_details": {
-      "major": {
-        "score": 25,
-        "status": "Match",
-        "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
-      },
-      "gpa": {
-        "score": 15,
-        "status": "Match",
-        "reason": "Sesuai. IPK minimal yang diminta adalah 3.00, sedangkan IPK Anda adalah 3.39."
-      },
-      "age": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
-      },
-      "toefl": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
-      },
-      "gender": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
-      },
-      "skills": {
-        "score": 10,
-        "status": "Match",
-        "reason": "Cocok. Menemukan beberapa kecocokan kata kunci keahlian: ai, it."
-      },
-      "experience": {
-        "score": 5,
-        "status": "Match",
-        "reason": "Cocok. Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan."
-      },
-      "exp_years": {
-        "status": "Match",
-        "reason": "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
-      }
-    },
-    "nlp_breakdown": {
-      "education_summary": "Dibekali dengan pendidikan dan pelatihan yang terkonsentrasi pada bidang pendanaan dan perkreditan",
-      "experience_summary": "1 Tahun Pengalaman / Fresh Graduate",
-      "mandatory_skills": [],
-      "preferred_skills": [],
-      "soft_skills": [],
-      "mandatory_requirements": [],
-      "preferred_requirements": [],
-      "nice_to_have": [],
-      "key_responsibilities": [
-        "Khususnya pada aspek pendanaan dan perkreditan Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi"
-      ],
-      "skill_categories": [],
-      "full_breakdown": {
-        "mandatory": [],
-        "preferred": [],
-        "nice_to_have": [],
-        "responsibilities": [
-          "Khususnya pada aspek pendanaan dan perkreditan Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi"
-        ]
-      }
-    },
-    "parsed_requirements": {
-      "gpa": 3.0,
-      "age": null,
-      "toefl": null,
-      "gender": "Open",
-      "experience": "Open / Not Specified",
-      "exp_years": 0
-    },
-    "source": "Talentics",
-    "logo": null
-  },
-  {
-    "id": 27126,
-    "title": "GENERAL BANKING STAFF - WILAYAH REKRUTMEN SUMATERA TAHUN 2026",
-    "organization_id": 113823,
-    "organization_name": null,
-    "slug": "general-banking-staff-wilayah-rekrutmen-sumatera-tahun-2026",
-    "type_name": "Karyawan Tetap",
-    "level": "Staff",
-    "location": "Sumatera Barat (Indonesia), Sumatera Selatan (Indonesia), Sumatera Utara (Indonesia)",
-    "workplace": "Work From Office (WFO)",
-    "due_date": "2026-10-22 00:00:00",
-    "group": null,
-    "url": "https://jobs.talentics.id/skk-migas/general-banking-staff-wilayah-rekrutmen-sumatera-tahun-2026",
-    "raw_description": "<p>Rekrutmen pada Posisi setingkat staff yang akan ditempatkan pada beberapa bidang kerja yang mendukung penuh berjalannya proses bisnis Bank. Dibekali dengan pendidikan dan pelatihan yang terkonsentrasi pada bidang pendanaan dan perkreditan.</p><p>Program ini juga menyediakan peluang pengembangan profesional berkelanjutan, memungkinkan para peserta untuk terus meningkatkan kemampuan mereka dari waktu ke waktu. Khususnya pada aspek pendanaan dan perkreditan</p><p>Dengan mengembangkan talenta ini, kami bertujuan untuk memberdayakan peserta agar dapat memberikan kontribusi signifikan terhadap sasaran utama bisnis dan menjaga kerangka operasional yang kuat dan tangguh di seluruh organisasi.<br><br><b>Proses seleksi akan dilaksanakan di Sumatera</b></p>",
     "raw_requirements": "<ul><li>Warga Negara Indonesia</li><li>Min. Pendidikan Terakhir S-1 (Sarjana)</li><li>Memiliki nilai IPK min. 3,00 dari skala 4,00</li></ul>",
     "match_score": 80,
     "is_blocked": false,

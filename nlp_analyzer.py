@@ -4,38 +4,8 @@ Separate module untuk better requirement understanding dan professional cover le
 """
 
 import re
-from dotenv import load_dotenv
 import os
-
-load_dotenv()
-
-# User Profile
-PROFILE = {
-    "name": os.getenv("USER_NAME", "Muhammad Ravil"),
-    "email": os.getenv("USER_EMAIL", ""),
-    "phone": os.getenv("USER_PHONE", ""),
-    "location": os.getenv("USER_LOCATION", "Pekanbaru, Riau"),
-    "linkedin": os.getenv("USER_LINKEDIN", "linkedin.com/in/Muhammad-ravil"),
-    "gender": "Laki-laki",
-    "age": 23,
-    "gpa": 3.39,
-    "toefl": 537,
-    "major": "Teknik Informatika",
-    "university": "Universitas Islam Negeri Sultan Syarif Kasim Riau",
-    "skills": [
-        "python", "data science", "data analyst", "data analysis", "machine learning",
-        "sql", "dataiku", "power bi", "excel", "react", "laravel", "php", "javascript",
-        "ai engineer", "ai", "programming", "developer", "analytics", "it",
-        "web development", "fullstack", "full stack", "git", "arcgis", "it support",
-        "sentiment analysis", "naive bayes", "tableau", "mysql"
-    ],
-    "experience": (
-        "AI Engineer di PT Pertamina Hulu Rokan (Upstream Oil & Gas, Jul 2025–Feb 2026); "
-        "Data Scientist Intern Id/x partners x Rakamin Academy (Apr–Mei 2025, Best Student 86.96); "
-        "Freelance Web Dev & Machine Learning (2025–Sekarang)"
-    ),
-    "exp_years": 1
-}
+from config import PROFILE  # Import terpusat dari config.py (DRY principle)
 
 
 class RequirementAnalyzer:

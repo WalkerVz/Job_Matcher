@@ -1,3 +1,11 @@
+import sys
+if sys.platform == "win32":
+    try:
+        sys.stdout.reconfigure(encoding='utf-8')
+        sys.stderr.reconfigure(encoding='utf-8')
+    except Exception:
+        pass
+
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -19,14 +27,21 @@ try:
     from webdriver_manager.chrome import ChromeDriverManager
     from selenium.webdriver.chrome.service import Service
 except ImportError:
-    print("⚠️  Selenium not installed. Install with: pip install selenium webdriver-manager")
     webdriver = None
 
-# ─── Konstanta bersama (dipakai scraper, rescore, add_job_entry) ───────────────
-MONTHS_ID = {
-    1: "Januari", 2: "Februari", 3: "Maret", 4: "April", 5: "Mei", 6: "Juni",
-    7: "Juli", 8: "Agustus", 9: "September", 10: "Oktober", 11: "November", 12: "Desember"
-}
+# Enhanced Scrapers (Firecrawl & JobSpy)
+try:
+    from firecrawl import FirecrawlApp
+except ImportError:
+    FirecrawlApp = None
+
+try:
+    from jobspy import scrape_jobs
+except ImportError:
+    scrape_jobs = None
+
+# ─── Shared Config & Constants (terpusat di config.py) ─────────────────────────
+from config import PROFILE, MONTHS_ID, clean_html
 
 def get_timestamp_wib():
     """Kembalikan string timestamp format '12 Juli 2026 - 17:23 WIB'."""
@@ -99,55 +114,8 @@ def save_jobs(matched_jobs, base_dir=None):
     return timestamp_str
 # ──────────────────────────────────────────────────────────────────────────────
 
-# ⚠️ SECURITY: Load sensitive profile data from .env file, NOT hardcoded
-import os
-from dotenv import load_dotenv
-load_dotenv()
-
-# User Profile definition (load dari .env untuk security)
-PROFILE = {
-    "name": os.getenv("USER_NAME", "Muhammad Ravil"),
-    "email": os.getenv("USER_EMAIL", ""),  # Load dari .env, jangan hardcode
-    "phone": os.getenv("USER_PHONE", ""),  # Load dari .env
-    "location": os.getenv("USER_LOCATION", "Pekanbaru, Riau"),
-    "linkedin": os.getenv("USER_LINKEDIN", "linkedin.com/in/Muhammad-ravil"),
-    "gender": "Laki-laki",
-    "age": 23,  # born 10 August 2002 (current year 2026)
-    "gpa": 3.39,
-    "toefl": 537,
-    "major": "Teknik Informatika",
-    "university": "Universitas Islam Negeri Sultan Syarif Kasim Riau",
-    "skills": [
-        "python", "data science", "data analyst", "data analysis", "machine learning",
-        "sql", "dataiku", "power bi", "excel", "react", "laravel", "php", "javascript",
-        "ai engineer", "ai", "programming", "developer", "analytics", "it",
-        "web development", "fullstack", "full stack", "git", "arcgis", "it support",
-        "sentiment analysis", "naive bayes", "tableau", "mysql"
-    ],
-    "certifications": [
-        "TOEFL 537 (Elskill 2023)",
-        "IT Support Fundamentals (Google 2024)",
-        "FullStack Web Development (Udemy 2025)",
-        "Data Science Mastery (Udemy 2025)",
-        "Data Analysis (Myskill 2025)",
-    ],
-    "experience": (
-        "AI Engineer di PT Pertamina Hulu Rokan (Upstream Oil & Gas, Jul 2025–Feb 2026); "
-        "Data Scientist Intern Id/x partners x Rakamin Academy (Apr–Mei 2025, Best Student 86.96); "
-        "Freelance Web Dev & Machine Learning (2025–Sekarang)"
-    ),
-    "exp_years": 1
-}
-
-def clean_html(raw_html):
-    if not raw_html:
-        return ""
-    # Remove HTML tags
-    cleanr = re.compile('<.*?>')
-    cleantext = re.sub(cleanr, ' ', raw_html)
-    # Replace multiple spaces/newlines
-    cleantext = re.sub(r'\s+', ' ', cleantext)
-    return cleantext.strip()
+# User Profile definition di-import dari config.py di atas (terpusat, DRY)
+# clean_html di-import dari config.py di atas
 
 def parse_gpa_req(req_text):
     # Search for GPA / IPK requirement
@@ -757,7 +725,8 @@ def scrape_astra_listings(token):
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Content-Type": "application/json",
         "Authorization": token,
-        "Referer": "https://career.astra.co.id/lowongan"
+        "Referer": "https://career.astra.co.id/lowongan",
+        "Origin": "https://career.astra.co.id"
     }
     
     all_astra_raw = []
@@ -771,7 +740,8 @@ def scrape_astra_listings(token):
             "SearchString": "",
             "BranchId": [],
             "VacancyDepartmentId": [],
-            "CategoryType": 0,
+            "CategoryType": [],
+            "IsMatch": False,
             "PageSize": page_size,
             "PageNo": page
         }
@@ -1519,7 +1489,7 @@ def scrape_opentrain_jobs():
         if driver:
             try:
                 driver.quit()
-            except:
+            except Exception:
                 pass
 
 
@@ -1528,7 +1498,7 @@ def scrape_with_firecrawl(url, format_output="markdown"):
     Gunakan Firecrawl untuk extract clean data dari URL.
     Lebih powerful untuk handle dynamic content dan complex HTML.
     """
-    if not FirecrawlApp:
+    if FirecrawlApp is None:
         return None
         
     try:
@@ -1537,13 +1507,17 @@ def scrape_with_firecrawl(url, format_output="markdown"):
             return None
             
         app = FirecrawlApp(api_key=api_key)
-        scrape_result = app.scrape_url(url, {
-            "formats": [format_output],
-            "timeout": 30000
-        })
+        # Mendukung Firecrawl v4+ (keyword args) dan versi lawas (dictionary options)
+        try:
+            scrape_result = app.scrape_url(url, formats=[format_output], timeout=30000)
+        except TypeError:
+            scrape_result = app.scrape_url(url, {"formats": [format_output], "timeout": 30000})
         
-        if scrape_result and scrape_result.get("success"):
-            return scrape_result.get(format_output)
+        if scrape_result:
+            if hasattr(scrape_result, format_output):
+                return getattr(scrape_result, format_output)
+            elif isinstance(scrape_result, dict):
+                return scrape_result.get(format_output) or (scrape_result.get("data", {}).get(format_output) if isinstance(scrape_result.get("data"), dict) else None)
         return None
     except Exception as e:
         print(f"  Firecrawl error on {url}: {e}")
@@ -1557,7 +1531,7 @@ def scrape_with_jobspy(job_title, location="", max_results=50):
     Note: Indeed & Glassdoor have anti-bot protection (403/KeyError).
     LinkedIn adalah sumber paling stabil dan reliable.
     """
-    if not scrape_jobs:
+    if scrape_jobs is None:
         return []
         
     try:
@@ -1677,19 +1651,14 @@ def main():
             break
 
     print(f"\nTotal raw Hulu Migas jobs fetched: {len(all_jobs_raw)}")
-    
-    print("\nStep 3: Fetching detailed information for each Hulu Migas job and matching...")
-    matched_jobs = []
-    for idx, raw_job in enumerate(all_jobs_raw):
-        job_title = raw_job.get("title")
+
+    def fetch_talentics_detail(raw_job):
+        """Fetch & parse detail satu job Talentics. Dipakai secara concurrent."""
         org_slug = raw_job.get("organization", {}).get("slug", "skk-migas")
         job_slug = raw_job.get("slug")
-        
         detail_url = f"https://jobs.talentics.id/{org_slug}/{job_slug}"
-        print(f"[{idx+1}/{len(all_jobs_raw)}] Fetching details for: {job_title}")
-        
         try:
-            r_detail = session.get(detail_url)
+            r_detail = session.get(detail_url, timeout=15)
             if r_detail.status_code == 200:
                 text = r_detail.text
                 match = re.search(r'job:\s*(\{.*)', text, re.DOTALL)
@@ -1705,29 +1674,31 @@ def main():
                         json_str += char
                         if brace_count == 0:
                             break
-                    
                     try:
-                        job_detail = json.loads(json_str)
-                        matched_job = evaluate_job_match(job_detail)
-                        matched_jobs.append(matched_job)
-                    except Exception as je:
-                        print(f"  Error parsing detail JSON: {je}")
-                        matched_job = evaluate_job_match(raw_job)
-                        matched_jobs.append(matched_job)
-                else:
-                    print("  Warning: Inline JSON job data not found.")
-                    matched_job = evaluate_job_match(raw_job)
-                    matched_jobs.append(matched_job)
-            else:
-                print(f"  Failed to load detail page. Status code: {r_detail.status_code}")
-                matched_job = evaluate_job_match(raw_job)
-                matched_jobs.append(matched_job)
+                        return json.loads(json_str)
+                    except Exception:
+                        pass
         except Exception as de:
-            print(f"  Exception fetching details: {de}")
-            matched_job = evaluate_job_match(raw_job)
+            print(f"  Exception fetching Talentics detail for '{raw_job.get('title')}': {de}")
+        return raw_job  # fallback: gunakan data raw tanpa detail
+
+    print("\nStep 3: Fetching detailed information for Hulu Migas jobs concurrently...")
+    matched_jobs = []
+    with ThreadPoolExecutor(max_workers=8) as executor:
+        future_to_raw = {executor.submit(fetch_talentics_detail, raw_job): raw_job for raw_job in all_jobs_raw}
+        done_count = 0
+        for future in as_completed(future_to_raw):
+            raw_job = future_to_raw[future]
+            done_count += 1
+            try:
+                job_detail = future.result()
+                matched_job = evaluate_job_match(job_detail)
+            except Exception as ex:
+                print(f"  Error evaluating job '{raw_job.get('title')}': {ex}")
+                matched_job = evaluate_job_match(raw_job)
             matched_jobs.append(matched_job)
-            
-        time.sleep(0.5)
+            if done_count % 10 == 0 or done_count == len(all_jobs_raw):
+                print(f"  [{done_count}/{len(all_jobs_raw)}] Talentics jobs processed...")
 
     print("\nStep 3a: Logging in to Astra Careers and scraping vacancies...")
     astra_token = get_astra_token()
@@ -1823,7 +1794,7 @@ def main():
     # NOTE: JobSpy memiliki compatibility issues di Windows dengan character encoding
     # LinkedIn, Indeed, Glassdoor API protection juga aktif
     # Saat ini sources sudah menghasilkan 125+ jobs yang cocok
-    print("  ℹ️  JobSpy scraping skipped (Windows encoding issue - works on Linux/Kaggle)")
+    print("  [i] JobSpy scraping skipped (Windows encoding issue - works on Linux/Kaggle)")
 
     # Sort matched jobs by match score (highest first), placing blocked jobs at the end
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
