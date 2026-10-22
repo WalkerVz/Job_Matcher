@@ -39,15 +39,16 @@ PROFILE = {
     "toefl": 537,
     "major": "Teknik Informatika",
     "university": "Universitas Islam Negeri Sultan Syarif Kasim Riau",
-    "headline": "Data Analyst, AI Engineer & Digital Support",
+    "headline": "IT Support, Data Analyst & Machine Learning Developer",
     "skills": [
         "python", "data science", "data analyst", "data analysis", "machine learning",
         "sql", "dataiku", "power bi", "excel", "react", "react.js", "laravel", "php", "javascript",
         "ai engineer", "ai", "programming", "developer", "analytics", "it",
         "web development", "fullstack", "full stack", "git", "arcgis", "arcgis survey123",
-        "survey123", "it support", "troubleshooting", "sentiment analysis", "naive bayes",
-        "particle swarm optimization", "pso", "business intelligence", "bi", "tableau",
-        "mysql", "credit risk", "qc log analyzer"
+        "survey123", "it support", "troubleshooting", "hardware", "software", "network troubleshooting",
+        "jaringan", "lan", "workstation", "operating system", "periferal",
+        "sentiment analysis", "naive bayes", "particle swarm optimization", "pso",
+        "business intelligence", "bi", "tableau", "mysql", "credit risk", "qc log analyzer"
     ],
     "certifications": [
         "TOEFL (Skor 537) - Elskill 2023",
@@ -57,10 +58,10 @@ PROFILE = {
         "Data Analysis - Myskill 2025"
     ],
     "experience": (
-        "Data & Digital Support di PT Pertamina Hulu Rokan (Upstream Oil & Gas, Jul 2025-Feb 2026; "
-        "aplikasi QC Log Analyzer berbasis Python & Dataiku, formulir digital ArcGIS Survey123); "
-        "Data Scientist Intern Id/x partners x Rakamin Academy (Apr-Mei 2025, Best Student 86.96, Credit Risk Loan Model); "
-        "Freelance Web Dev & Machine Learning (2025-Sekarang; PHP, Laravel, React, Python)"
+        "IT Support (Hardware & Software) di Universitas Abdurrab (Agustus 2026-Sekarang; diagnosis & troubleshooting 50+ perangkat IT, instalasi OS & driver, maintenance jaringan lab); "
+        "Freelance Web Dev & Machine Learning (2025-Sekarang; PHP, Laravel, React, Python); "
+        "Data Science Intern di PT Pertamina Hulu Rokan (Juli 2025-Februari 2026; QC Log Analyzer Python & Dataiku, optimasi digital survey ArcGIS Survey123, transformasi data hulu migas); "
+        "Data Scientist Intern Id/x partners x Rakamin Academy (April-Mei 2025; Credit Risk Loan ML Model 466k data, Best Student 86.96)"
     ),
     "exp_years": 1,
     "thesis": "Sentiment Classification Using Naïve Bayes Algorithm and Particle Swarm Optimization (PSO) on Small Datasets"
