@@ -51,7 +51,8 @@ job_matcher/
 
 ## ✨ Fitur Utama
 
-### 1. 🕷️ Multi-Source Scraper (9 Portal Karir)
+### 1. 🕷️ Multi-Source Scraper (10 Portal Karir)
+- 💼 **LinkedIn Jobs** (`linkedin.com/jobs`) — Direct guest API endpoint untuk Data Science, AI, Python, & IT Support
 - 🌟 **Astra Careers** (`career.astra.co.id`) — Lowongan IT, Engineering, Data
 - 🟣 **OpenTrain.ai** (`opentrain.ai`) — Remote AI Training, LLM Evaluation & RLHF roles
 - 🟢 **Grab Careers Indonesia** (`grab.careers`)

@@ -629,6 +629,12 @@ header p {
     color: #34d399;
 }
 
+.source-badge.linkedin {
+    background: rgba(10, 102, 194, 0.18);
+    border: 1px solid rgba(10, 102, 194, 0.45);
+    color: #38bdf8;
+}
+
 .job-matching-preview {
     font-size: 0.85rem;
     color: var(--text-secondary);
@@ -1194,6 +1200,12 @@ header p {
     background: rgba(236, 0, 140, 0.15);
     border: 1px solid rgba(236, 0, 140, 0.3);
     color: #EC008C;
+}
+
+.source-badge.linkedin {
+    background: rgba(10, 102, 194, 0.18);
+    border: 1px solid rgba(10, 102, 194, 0.45);
+    color: #38bdf8;
 }
 
 .job-title-wrapper {

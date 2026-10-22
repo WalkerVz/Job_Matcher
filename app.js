@@ -566,6 +566,7 @@ function applyFilters() {
         // C. Source Filter
         if (sourceVal !== 'all') {
             const sourceMap = {
+                'linkedin': 'LinkedIn',
                 'grab': 'Grab',
                 'talentics': 'Talentics',
                 'astra': 'Astra',
@@ -577,7 +578,13 @@ function applyFilters() {
                 'micro1': 'micro1'
             };
             const targetSource = sourceMap[sourceVal];
-            if (targetSource && job.source !== targetSource) return false;
+            if (targetSource) {
+                if (sourceVal === 'linkedin') {
+                    if (job.source !== 'LinkedIn' && job.source !== 'JobSpy (LinkedIn)') return false;
+                } else if (job.source !== targetSource) {
+                    return false;
+                }
+            }
         }
 
         // D. Experience Filter (Ravil has 1 Year Experience)
@@ -653,7 +660,9 @@ function applyFilters() {
 }
 
 function getSourceBadgeHTML(job, styleAttr = '') {
-    if (job.source === 'Grab') {
+    if (job.source === 'LinkedIn' || job.source === 'JobSpy (LinkedIn)') {
+        return `<span class="source-badge linkedin" style="${styleAttr}">LinkedIn</span>`;
+    } else if (job.source === 'Grab') {
         return `<span class="source-badge grab" style="${styleAttr}">Grab Indonesia</span>`;
     } else if (job.source === 'Astra') {
         return `<span class="source-badge astra" style="${styleAttr}">Astra Career</span>`;
