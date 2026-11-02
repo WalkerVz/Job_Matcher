@@ -1,3 +1,9 @@
+"""
+scraper.py - Multi-Portal Job Scraper & Intelligent Matching Engine
+Dioptimasi untuk performa tinggi, concurrency, HTTP Connection Pooling,
+resilience terhadap network errors, dan parsing regex yang sangat cepat.
+"""
+
 import sys
 if sys.platform == "win32":
     try:
@@ -6,30 +12,30 @@ if sys.platform == "win32":
     except Exception:
         pass
 
-import requests
-from bs4 import BeautifulSoup
-import json
+import warnings
+warnings.filterwarnings("ignore", message=".*urllib3.*or chardet.*")
+warnings.filterwarnings("ignore", message=".*RequestsDependencyWarning.*")
+
+import os
 import re
 import time
-import os
+import json
 import datetime
+import hashlib
+import argparse
 from concurrent.futures import ThreadPoolExecutor, as_completed
-import pytz  # Import di top, jangan dalam function (efficiency + error handling jelas)
+from typing import Any, Dict, List, Optional, Tuple, Set
+
+import requests
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
+from bs4 import BeautifulSoup
+import pytz
 from dotenv import load_dotenv
+
 load_dotenv()
 
-try:
-    from selenium import webdriver
-    from selenium.webdriver.common.by import By
-    from selenium.webdriver.support.ui import WebDriverWait
-    from selenium.webdriver.support import expected_conditions as EC
-    from selenium.webdriver.chrome.options import Options
-    from webdriver_manager.chrome import ChromeDriverManager
-    from selenium.webdriver.chrome.service import Service
-except ImportError:
-    webdriver = None
-
-# Enhanced Scrapers (Firecrawl & JobSpy)
+# Enhanced Scrapers (Firecrawl & JobSpy) - Optional
 try:
     from firecrawl import FirecrawlApp
 except ImportError:
@@ -43,18 +49,80 @@ except ImportError:
 # ─── Shared Config & Constants (terpusat di config.py) ─────────────────────────
 from config import PROFILE, MONTHS_ID, clean_html
 
-def get_timestamp_wib():
+
+# ─── Pre-compiled Regex Patterns (Optimasi Kecepatan NLP & Parsing) ─────────────
+RE_GPA = re.compile(r'(?:ipk|gpa)[^\d]*(\d[.,]\d{2})', re.IGNORECASE)
+RE_AGE_1 = re.compile(r'(?:usia|umur|age)\s*(?:maksimal|maks|maks\.|max|maximum)?[^\d]*(\d{2})', re.IGNORECASE)
+RE_AGE_2 = re.compile(r'(?:maksimal|maks|maks\.|max|maximum)\s*(?:usia|umur|age)?[^\d]*(\d{2})\s*(?:tahun|years)', re.IGNORECASE)
+RE_TOEFL = re.compile(r'toefl[^\d]*(\d{3})', re.IGNORECASE)
+
+RE_EXP_1 = re.compile(r'(?:pengalaman|experience)\s*(?:kerja)?\s*(?:minimal|min|min\.|diutamakan|at least)?\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)', re.IGNORECASE)
+RE_EXP_2 = re.compile(r'(?:minimal|min|min\.|at least)\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)\s*(?:pengalaman|experience)', re.IGNORECASE)
+RE_EXP_3 = re.compile(r'(\d+)\+?\s*years?\s*(?:of\s*)?(?:relevant\s*)?experience', re.IGNORECASE)
+RE_EXP_4 = re.compile(r'(\d+)\s*(?:tahun)\s*(?:pengalaman)', re.IGNORECASE)
+
+RE_SENTENCE_SPLIT = re.compile(r'[\n•\-\*.]+')
+RE_HTML_CLEAN = re.compile(r'<.*?>')
+RE_WHITESPACE = re.compile(r'\s+')
+
+# Pre-compiled word-boundary regexes untuk skill profile user
+def _build_skill_pattern(skill: str) -> re.Pattern:
+    s = skill.strip().lower()
+    if len(s) <= 3:
+        return re.compile(r'\b' + re.escape(s) + r'\b', re.IGNORECASE)
+    return re.compile(r'(?:\b|_)' + re.escape(s) + r'(?:\b|_)', re.IGNORECASE)
+
+COMPILED_PROFILE_SKILLS: List[Tuple[str, re.Pattern]] = [
+    (sk, _build_skill_pattern(sk)) for sk in PROFILE.get("skills", [])
+]
+
+
+# ─── HTTP Session Factory dengan Connection Pooling ───────────────────────────
+_GLOBAL_SESSION: Optional[requests.Session] = None
+
+def get_default_session(pool_size: int = 50, retries: int = 3) -> requests.Session:
+    """
+    Mengembalikan session singleton dengan connection pooling & automatic retry.
+    Menghindari overhead TLS handshake berulang-ulang pada ribuan request concurrent.
+    """
+    global _GLOBAL_SESSION
+    if _GLOBAL_SESSION is None:
+        session = requests.Session()
+        retry_strategy = Retry(
+            total=retries,
+            backoff_factor=0.3,
+            status_forcelist=[429, 500, 502, 503, 504],
+            allowed_methods=["HEAD", "GET", "POST", "OPTIONS"]
+        )
+        adapter = HTTPAdapter(
+            pool_connections=pool_size,
+            pool_maxsize=pool_size,
+            max_retries=retry_strategy
+        )
+        session.mount("https://", adapter)
+        session.mount("http://", adapter)
+        session.headers.update({
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36",
+            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+            "Accept-Language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7",
+        })
+        _GLOBAL_SESSION = session
+    return _GLOBAL_SESSION
+
+
+# ─── Helper Functions ──────────────────────────────────────────────────────────
+def get_timestamp_wib() -> str:
     """Kembalikan string timestamp format '12 Juli 2026 - 17:23 WIB'."""
-    # Konversi UTC ke WIB (UTC+7) — pytz sudah di-import di top
     utc_now = datetime.datetime.now(datetime.timezone.utc)
     wib_tz = pytz.timezone('Asia/Jakarta')
     wib_now = utc_now.astimezone(wib_tz)
     return f"{wib_now.day} {MONTHS_ID[wib_now.month]} {wib_now.year} - {wib_now.strftime('%H:%M')} WIB"
 
-def detect_new_jobs(matched_jobs, base_dir):
+
+def detect_new_jobs(matched_jobs: List[Dict[str, Any]], base_dir: str) -> List[str]:
     """
     Bandingkan ID job saat ini dengan run sebelumnya.
-    Kembalikan list ID job yang benar-benar baru (belum pernah ada sebelumnya).
+    Kembalikan list ID job yang baru sejak run terakhir.
     """
     prev_path = os.path.join(base_dir, "matched_jobs.json")
     prev_ids = set()
@@ -62,19 +130,27 @@ def detect_new_jobs(matched_jobs, base_dir):
         try:
             with open(prev_path, encoding="utf-8") as f:
                 prev_jobs = json.load(f)
-            prev_ids = {str(j.get("id")) for j in prev_jobs}
+            prev_ids = {str(j.get("id")) for j in prev_jobs if j.get("id") is not None}
         except Exception:
             pass
 
-    current_ids = {str(j.get("id")) for j in matched_jobs}
+    current_ids = {str(j.get("id")) for j in matched_jobs if j.get("id") is not None}
     new_ids = current_ids - prev_ids
     print(f"Job baru terdeteksi: {len(new_ids)} dari {len(current_ids)} total")
     return list(new_ids)
 
 
-def save_jobs(matched_jobs, base_dir=None):
+def _atomic_write_json(filepath: str, data: Any, indent: Optional[int] = 2) -> None:
+    """Tulis file JSON secara atomik menggunakan replace untuk mencegah korupsi file."""
+    tmp_path = filepath + ".tmp"
+    with open(tmp_path, "w", encoding="utf-8") as f:
+        json.dump(data, f, indent=indent, ensure_ascii=False)
+    os.replace(tmp_path, filepath)
+
+
+def save_jobs(matched_jobs: List[Dict[str, Any]], base_dir: Optional[str] = None) -> str:
     """
-    Simpan hasil matched_jobs ke empat file output:
+    Simpan hasil matched_jobs ke empat file output secara atomik:
       - matched_jobs.json
       - matched_jobs.js  (window global fallback untuk browser)
       - last_updated.json
@@ -85,119 +161,105 @@ def save_jobs(matched_jobs, base_dir=None):
 
     # Deteksi job baru SEBELUM overwrite matched_jobs.json
     new_job_ids = detect_new_jobs(matched_jobs, base_dir)
-
     timestamp_str = get_timestamp_wib()
 
     output_json = os.path.join(base_dir, "matched_jobs.json")
-    with open(output_json, "w", encoding="utf-8") as f:
-        json.dump(matched_jobs, f, indent=2, ensure_ascii=False)
+    _atomic_write_json(output_json, matched_jobs, indent=2)
 
     output_js = os.path.join(base_dir, "matched_jobs.js")
-    with open(output_js, "w", encoding="utf-8") as f:
+    tmp_js = output_js + ".tmp"
+    with open(tmp_js, "w", encoding="utf-8") as f:
         f.write(f"window.lastUpdated = '{timestamp_str}';\n")
         f.write("window.matchedJobs = " + json.dumps(matched_jobs, ensure_ascii=False) + ";")
+    os.replace(tmp_js, output_js)
 
     output_lu = os.path.join(base_dir, "last_updated.json")
-    with open(output_lu, "w", encoding="utf-8") as f:
-        json.dump({"last_updated": timestamp_str}, f, indent=2, ensure_ascii=False)
+    _atomic_write_json(output_lu, {"last_updated": timestamp_str}, indent=2)
 
-    # Simpan ID job baru — dibaca frontend untuk tampilkan notifikasi
     output_new = os.path.join(base_dir, "new_jobs.json")
-    with open(output_new, "w", encoding="utf-8") as f:
-        json.dump({
-            "scraped_at": timestamp_str,
-            "new_ids": new_job_ids,
-            "count": len(new_job_ids)
-        }, f, indent=2, ensure_ascii=False)
+    _atomic_write_json(output_new, {
+        "scraped_at": timestamp_str,
+        "new_ids": new_job_ids,
+        "count": len(new_job_ids)
+    }, indent=2)
 
     print(f"Output disimpan ke: {output_json}, {output_js}, {output_lu}, {output_new}")
     return timestamp_str
-# ──────────────────────────────────────────────────────────────────────────────
 
-# User Profile definition di-import dari config.py di atas (terpusat, DRY)
-# clean_html di-import dari config.py di atas
 
-def parse_gpa_req(req_text):
-    # Search for GPA / IPK requirement
-    # E.g. "IPK minimal 3.00", "GPA min. 3.25", etc.
-    text_lower = req_text.lower()
-    gpa_pattern = re.findall(r'(?:ipk|gpa)[^\d]*(\d[.,]\d{2})', text_lower)
-    if gpa_pattern:
+# ─── Requirement Parsing Helpers ───────────────────────────────────────────────
+def parse_gpa_req(req_text: str) -> Optional[float]:
+    """Parse syarat minimal IPK/GPA."""
+    if not req_text:
+        return None
+    match = RE_GPA.search(req_text)
+    if match:
         try:
-            return float(gpa_pattern[0].replace(',', '.'))
+            return float(match.group(1).replace(',', '.'))
         except ValueError:
             pass
     return None
 
-def parse_age_req(req_text):
-    # Search for Max Age requirement
-    # E.g. "Usia maksimal 25 tahun", "maximum age of 27", "maks. 27 tahun"
-    text_lower = req_text.lower()
-    # Match patterns like: usia/umur/age maksimal/max/maks/maksimal 25
-    age_pattern1 = re.findall(r'(?:usia|umur|age)\s*(?:maksimal|maks|maks\.|max|maximum)?[^\d]*(\d{2})', text_lower)
-    # Match patterns like: maksimal/maks/max 25 tahun
-    age_pattern2 = re.findall(r'(?:maksimal|maks|maks\.|max|maximum)\s*(?:usia|umur|age)?[^\d]*(\d{2})\s*(?:tahun|years)', text_lower)
-    
+
+def parse_age_req(req_text: str) -> Optional[int]:
+    """Parse batas umur maksimal."""
+    if not req_text:
+        return None
     ages = []
-    for match in age_pattern1 + age_pattern2:
+    for match in RE_AGE_1.findall(req_text) + RE_AGE_2.findall(req_text):
         try:
             ages.append(int(match))
         except ValueError:
             pass
-    
-    if ages:
-        return max(ages) # Assume the maximum age restriction found
-    return None
+    return max(ages) if ages else None
 
-def parse_toefl_req(req_text):
-    # Search for TOEFL score requirements
-    text_lower = req_text.lower()
-    toefl_pattern = re.findall(r'toefl[^\d]*(\d{3})', text_lower)
-    if toefl_pattern:
+
+def parse_toefl_req(req_text: str) -> Optional[int]:
+    """Parse syarat skor TOEFL minimal."""
+    if not req_text:
+        return None
+    match = RE_TOEFL.search(req_text)
+    if match:
         try:
-            return int(toefl_pattern[0])
+            return int(match.group(1))
         except ValueError:
             pass
     return None
 
-def check_gender_req(req_text):
-    # Check if a specific gender is required
+
+def check_gender_req(req_text: str) -> str:
+    """Cek apakah ada syarat jenis kelamin spesifik."""
+    if not req_text:
+        return "Open"
     text_lower = req_text.lower()
-    # If the text mentions "laki-laki" or "pria" and NOT "wanita" or "perempuan" (or vice versa)
     has_male = "pria" in text_lower or "laki-laki" in text_lower or "male" in text_lower
     has_female = "wanita" in text_lower or "perempuan" in text_lower or "female" in text_lower
-    
-    # E.g. "khusus pria", "pria/laki-laki", "diutamakan laki-laki"
-    # If both are mentioned (e.g. "Pria/Wanita"), then it's open.
     if has_male and not has_female:
         return "Male Only"
     elif has_female and not has_male:
         return "Female Only"
     return "Open"
 
-def parse_exp_req(req_text):
+
+def parse_exp_req(req_text: str) -> Dict[str, Any]:
     """
-    Parse experience requirement dengan better accuracy.
-    Return dict dengan level + detail, bukan hanya angka.
+    Parse syarat pengalaman kerja dengan regex yang telah di-precompile.
+    Return dict berisi level dan tahun pengalaman yang diminta.
     """
+    if not req_text:
+        return {"years": 0, "level": "Open / Not Specified", "raw_text": ""}
+    
     text_lower = req_text.lower()
-    
-    # Patterns untuk extract angka pengalaman
-    pattern1 = re.findall(r'(?:pengalaman|experience)\s*(?:kerja)?\s*(?:minimal|min|min\.|diutamakan|at least)?\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)', text_lower)
-    pattern2 = re.findall(r'(?:minimal|min|min\.|at least)\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)\s*(?:pengalaman|experience)', text_lower)
-    pattern3 = re.findall(r'(\d+)\+?\s*years?\s*(?:of\s*)?(?:relevant\s*)?experience', text_lower)
-    pattern4 = re.findall(r'(\d+)\s*(?:tahun)\s*(?:pengalaman)', text_lower)
-    
     exps = []
-    for match in pattern1 + pattern2 + pattern3 + pattern4:
-        try:
-            exps.append(int(match))
-        except ValueError:
-            pass
-    
+    for pattern in (RE_EXP_1, RE_EXP_2, RE_EXP_3, RE_EXP_4):
+        for match in pattern.findall(text_lower):
+            try:
+                exps.append(int(match))
+            except ValueError:
+                pass
+
     years_req = max(exps) if exps else 0
-    
-    # Determine level based on years
+
     if "fresh graduate" in text_lower or "lulusan baru" in text_lower or "0 tahun" in text_lower:
         level = "Fresh Graduate / Entry Level"
         years_req = 0
@@ -211,23 +273,19 @@ def parse_exp_req(req_text):
         level = "Senior (3-5 tahun)"
     else:
         level = f"Expert / Lead ({years_req}+ tahun)"
-    
+
     return {
         "years": years_req,
         "level": level,
-        "raw_text": text_lower[:200]  # Keep snippet untuk debugging
+        "raw_text": text_lower[:200]
     }
 
 
+# ─── Requirement NLP Parser ────────────────────────────────────────────────────
 class RequirementNLPParser:
     """
-    Enhanced Natural Language Processing (NLP) Parser for Job Requirements.
-    Features:
-    - Semantic sentence classification (Mandatory, Preferred, Nice-to-have, Responsibility)
-    - Skill taxonomy NER extraction dengan category mapping
-    - Education & experience requirements parsing
-    - Soft skills & competency detection
-    - Context-aware requirement understanding
+    High-Performance Natural Language Processing (NLP) Parser for Job Requirements.
+    Menggunakan regex pre-compiled dan classification berbasis set untuk kecepatan maksimal.
     """
     SKILL_TAXONOMY = {
         "Languages & Core": ["Python", "SQL", "PHP", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
@@ -236,7 +294,15 @@ class RequirementNLPParser:
         "Engineering & Tools": ["React", "React.js", "Laravel", "Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL", "ArcGIS"],
         "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Upstream", "Agile", "Scrum", "Project Management", "AI Engineer"]
     }
-    
+
+    _COMPILED_TAXONOMY = {
+        category: [
+            (sk, re.compile(r'\b' + re.escape(sk.lower()) + r'\b', re.IGNORECASE))
+            for sk in skills
+        ]
+        for category, skills in SKILL_TAXONOMY.items()
+    }
+
     SOFT_SKILLS = [
         "komunikasi", "communication", "teamwork", "tim kerja", "leadership", "kepemimpinan",
         "problem solving", "pemecahan masalah", "critical thinking", "berpikir kritis",
@@ -245,147 +311,118 @@ class RequirementNLPParser:
         "time management", "manajemen waktu", "presentation", "presentasi"
     ]
 
-    @classmethod
-    def classify_sentence(cls, sentence, sentence_lower):
-        """Classify sentence type: mandatory, preferred, responsibility, or description"""
-        mandatory_triggers = ["wajib", "harus", "minimal", "required", "must", "essential", "syarat", "qualification", "persyaratan"]
-        preferred_triggers = ["diutamakan", "preferred", "advantage", "keuntungan", "lebih baik"]
-        nice_triggers = ["nice to have", "bonus", "nilai tambah", "nilai plus", "plus point"]
-        resp_triggers = ["melakukan", "mengembangkan", "mengelola", "memastikan", "bertanggung jawab", "responsible", "manage", "handle", "develop", "create"]
-        
-        if any(t in sentence_lower for t in mandatory_triggers):
-            return "mandatory"
-        elif any(t in sentence_lower for t in preferred_triggers):
-            return "preferred"
-        elif any(t in sentence_lower for t in nice_triggers):
-            return "nice_to_have"
-        elif any(t in sentence_lower for t in resp_triggers):
-            return "responsibility"
-        else:
-            return "description"
+    _MANDATORY_TRIGGERS = ("wajib", "harus", "minimal", "required", "must", "essential", "syarat", "qualification", "persyaratan")
+    _PREFERRED_TRIGGERS = ("diutamakan", "preferred", "advantage", "keuntungan", "lebih baik")
+    _NICE_TRIGGERS = ("nice to have", "bonus", "nilai tambah", "nilai plus", "plus point")
+    _RESP_TRIGGERS = ("melakukan", "mengembangkan", "mengelola", "memastikan", "bertanggung jawab", "responsible", "manage", "handle", "develop", "create")
 
     @classmethod
-    def extract_skills_from_sentence(cls, sentence, sentence_lower):
-        """Extract all skills mentioned in sentence dengan category"""
-        found_skills = {}
-        for category, skills in cls.SKILL_TAXONOMY.items():
-            for sk in skills:
-                pattern = r'\b' + re.escape(sk.lower()) + r'\b'
-                if re.search(pattern, sentence_lower):
+    def classify_sentence(cls, sentence_lower: str) -> str:
+        """Klasifikasi tipe kalimat persyaratan."""
+        if any(t in sentence_lower for t in cls._MANDATORY_TRIGGERS):
+            return "mandatory"
+        elif any(t in sentence_lower for t in cls._PREFERRED_TRIGGERS):
+            return "preferred"
+        elif any(t in sentence_lower for t in cls._NICE_TRIGGERS):
+            return "nice_to_have"
+        elif any(t in sentence_lower for t in cls._RESP_TRIGGERS):
+            return "responsibility"
+        return "description"
+
+    @classmethod
+    def extract_skills_from_sentence(cls, sentence_lower: str) -> Dict[str, List[str]]:
+        """Ekstraksi skill menggunakan regex yang sudah di-precompile."""
+        found_skills: Dict[str, List[str]] = {}
+        for category, skill_pairs in cls._COMPILED_TAXONOMY.items():
+            for sk, pattern in skill_pairs:
+                if pattern.search(sentence_lower):
                     if category not in found_skills:
                         found_skills[category] = []
                     found_skills[category].append(sk)
         return found_skills
 
     @classmethod
-    def extract_soft_skills(cls, sentence_lower):
-        """Extract soft skills mentioned"""
-        found_soft_skills = []
-        for skill in cls.SOFT_SKILLS:
-            if skill in sentence_lower:
-                found_soft_skills.append(skill.title())
-        return found_soft_skills
+    def extract_soft_skills(cls, sentence_lower: str) -> List[str]:
+        """Ekstraksi soft skills."""
+        return [skill.title() for skill in cls.SOFT_SKILLS if skill in sentence_lower]
 
     @classmethod
-    def parse(cls, job):
-        """Parse job requirements dengan semantic understanding"""
-        raw = (job.get("requirements", "") + " " + job.get("description", ""))
+    def parse(cls, job: Dict[str, Any]) -> Dict[str, Any]:
+        """Parse job requirements secara semantik."""
+        raw = (job.get("requirements") or "") + " " + (job.get("description") or "")
         text = clean_html(raw)
         
-        # Segment into logical sentences or bullet items
-        sentences = [s.strip() for s in re.split(r'[\n•\-\*.]+', text) if len(s.strip()) > 15]
-        
+        sentences = [s.strip() for s in RE_SENTENCE_SPLIT.split(text) if len(s.strip()) > 15]
+
         mandatory_requirements = []
         preferred_requirements = []
         nice_to_have_requirements = []
         responsibilities = []
-        
-        mandatory_skills_dict = {}  # {category: [skills]}
-        preferred_skills_dict = {}
-        soft_skills_found = set()
-        
+
+        mandatory_skills_dict: Dict[str, List[str]] = {}
+        preferred_skills_dict: Dict[str, List[str]] = {}
+        soft_skills_found: Set[str] = set()
+
         edu_summary = "S1 / D3 jurusan relevan atau setara"
         exp_summary = "1 Tahun Pengalaman / Fresh Graduate"
         accepts_fresh = False
         job_responsibilities = []
-        
-        # Parse each sentence
+
         for sent in sentences:
             sent_lower = sent.lower()
-            
-            # Classify sentence type
-            sent_type = cls.classify_sentence(sent, sent_lower)
-            
-            # Extract education context
-            if any(k in sent_lower for k in ["s1", "d3", "sarjana", "bachelor", "pendidikan"]):
+            sent_type = cls.classify_sentence(sent_lower)
+
+            if any(k in sent_lower for k in ("s1", "d3", "sarjana", "bachelor", "pendidikan")):
                 if len(sent) < 130 and "pendidikan" in sent_lower:
                     edu_summary = sent
-            
-            # Extract experience context
-            if any(k in sent_lower for k in ["fresh graduate", "lulusan baru", "0 tahun", "magang", "internship"]):
+
+            if any(k in sent_lower for k in ("fresh graduate", "lulusan baru", "0 tahun", "magang", "internship")):
                 accepts_fresh = True
                 if len(sent) < 140:
                     exp_summary = sent
-            elif any(k in sent_lower for k in ["pengalaman", "experience", "tahun"]):
+            elif any(k in sent_lower for k in ("pengalaman", "experience", "tahun")):
                 if len(sent) < 140 and exp_summary == "1 Tahun Pengalaman / Fresh Graduate":
                     exp_summary = sent
-            
-            # Extract skills
-            skills_found = cls.extract_skills_from_sentence(sent, sent_lower)
+
+            skills_found = cls.extract_skills_from_sentence(sent_lower)
             soft_skills = cls.extract_soft_skills(sent_lower)
             soft_skills_found.update(soft_skills)
-            
-            # Categorize requirement based on type
+
             if sent_type == "mandatory":
                 mandatory_requirements.append(sent)
-                for category, skills in skills_found.items():
+                for category, sks in skills_found.items():
                     if category not in mandatory_skills_dict:
                         mandatory_skills_dict[category] = []
-                    mandatory_skills_dict[category].extend(skills)
-                    
+                    mandatory_skills_dict[category].extend(sks)
             elif sent_type == "preferred":
                 preferred_requirements.append(sent)
-                for category, skills in skills_found.items():
+                for category, sks in skills_found.items():
                     if category not in preferred_skills_dict:
                         preferred_skills_dict[category] = []
-                    preferred_skills_dict[category].extend(skills)
-                    
+                    preferred_skills_dict[category].extend(sks)
             elif sent_type == "nice_to_have":
                 nice_to_have_requirements.append(sent)
-                
             elif sent_type == "responsibility":
                 responsibilities.append(sent)
                 job_responsibilities.append(sent)
-        
-        # Flatten and deduplicate skills
+
         mandatory_skills = sorted(list(set([s for skills in mandatory_skills_dict.values() for s in skills])))
         preferred_skills = sorted(list(set([s for skills in preferred_skills_dict.values() for s in skills])))
-        
+
         if accepts_fresh:
             exp_summary = "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (" + exp_summary[:90] + "...)"
-            
+
         return {
-            # Basic summaries
             "education_summary": edu_summary[:130],
             "experience_summary": exp_summary[:150],
-            
-            # Skills breakdown
             "mandatory_skills": mandatory_skills,
             "preferred_skills": preferred_skills,
             "soft_skills": sorted(list(soft_skills_found))[:5],
-            
-            # Detailed requirements
-            "mandatory_requirements": mandatory_requirements[:5],  # Top 5
-            "preferred_requirements": preferred_requirements[:3],   # Top 3
-            "nice_to_have": nice_to_have_requirements[:2],          # Top 2
-            
-            # Job responsibilities
-            "key_responsibilities": job_responsibilities[:4],  # Top 4
-            
-            # Skill categories
+            "mandatory_requirements": mandatory_requirements[:5],
+            "preferred_requirements": preferred_requirements[:3],
+            "nice_to_have": nice_to_have_requirements[:2],
+            "key_responsibilities": job_responsibilities[:4],
             "skill_categories": list(mandatory_skills_dict.keys()),
-            
-            # Full requirement breakdown for display
             "full_breakdown": {
                 "mandatory": mandatory_requirements[:6],
                 "preferred": preferred_requirements[:4],
@@ -395,21 +432,22 @@ class RequirementNLPParser:
         }
 
 
-def evaluate_job_match(job):
-    # Requirements and Description
+# ─── Job Match Evaluation Engine ───────────────────────────────────────────────
+def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Evaluasi tingkat kecocokan profil kandidat terhadap kualifikasi lowongan.
+    Dioptimasi dengan fast substring checks dan pre-compiled regex.
+    """
     req_html = job.get("requirements") or ""
     desc_html = job.get("description") or ""
     title = str(job.get("title") or "").lower()
     org_name = str(job.get("organization_name") or "").lower()
-    
+
     req_text = clean_html(req_html)
     desc_text = clean_html(desc_html)
-    full_text = (title + " " + org_name + " " + req_text + " " + desc_text).lower()
-    
-    # Scoring factors
+    full_text = f"{title} {org_name} {req_text} {desc_text}".lower()
+
     score = 0
-    max_score = 100
-    
     match_details = {
         "major": {"score": 0, "status": "Neutral", "reason": "Jurusan tidak dispesifikasikan secara ketat atau bersifat umum."},
         "gpa": {"score": 15, "status": "Match", "reason": f"IPK Anda ({PROFILE['gpa']}) memenuhi syarat."},
@@ -420,14 +458,12 @@ def evaluate_job_match(job):
         "experience": {"score": 0, "status": "Neutral", "reason": "Bukan peran langsung di bidang IT/Data."},
         "exp_years": {"status": "Match", "reason": "Sesuai dengan pengalaman kerja 1 tahun Anda."}
     }
-    
+
     # 1. MAJOR MATCHING (Max 35 points)
-    # Check if they request IT majors
-    it_keywords = ["informatika", "ilmu komputer", "sistem informasi", "teknik komputer", "computer science", "software", "information technology", "telekomunikasi", "sistem & teknologi informasi", "backend", "fullstack", "full stack", "data analyst", "data scientist", "ai engineer", "machine learning", "engineer", "developer", "odoo", "web"]
-    general_keywords = ["semua jurusan", "all major", "semua program studi", "diploma", "sarjana"]
-    engineering_keywords = ["teknik", "engineering", "mipa", "sains", "matematika", "statistika"]
-    
-    major_score = 0
+    it_keywords = ("informatika", "ilmu komputer", "sistem informasi", "teknik komputer", "computer science", "software", "information technology", "telekomunikasi", "sistem & teknologi informasi", "backend", "fullstack", "full stack", "data analyst", "data scientist", "ai engineer", "machine learning", "engineer", "developer", "odoo", "web")
+    general_keywords = ("semua jurusan", "all major", "semua program studi", "diploma", "sarjana")
+    engineering_keywords = ("teknik", "engineering", "mipa", "sains", "matematika", "statistika")
+
     if any(kw in full_text for kw in it_keywords):
         major_score = 35
         match_details["major"] = {
@@ -450,8 +486,7 @@ def evaluate_job_match(job):
             "reason": "Cukup Cocok. Mencari rumpun Teknik / Sains secara umum."
         }
     else:
-        # Check if the title is very specific to other fields (e.g. Geologist, Petroleum, Chemist, Akuntansi)
-        non_it_specific = ["geologi", "geofisika", "perminyakan", "pertambangan", "akuntansi", "hukum", "keuangan", "petroleum", "geology", "geophysic", "accounting", "law"]
+        non_it_specific = ("geologi", "geofisika", "perminyakan", "pertambangan", "akuntansi", "hukum", "keuangan", "petroleum", "geology", "geophysic", "accounting", "law")
         if any(kw in full_text for kw in non_it_specific):
             major_score = 5
             match_details["major"] = {
@@ -467,7 +502,7 @@ def evaluate_job_match(job):
                 "reason": "Netral. Jurusan spesifik tidak disebutkan dengan jelas, mungkin membutuhkan verifikasi manual."
             }
     score += major_score
-    
+
     # 2. GPA MATCHING (15 points)
     gpa_req = parse_gpa_req(req_text)
     if gpa_req:
@@ -479,21 +514,19 @@ def evaluate_job_match(job):
                 "reason": f"Sesuai. IPK minimal yang diminta adalah {gpa_req:.2f}, sedangkan IPK Anda adalah {PROFILE['gpa']:.2f}."
             }
         else:
-            # GPA doesn't match
             match_details["gpa"] = {
                 "score": 0,
                 "status": "No Match",
                 "reason": f"Tidak Sesuai. IPK minimal yang diminta adalah {gpa_req:.2f}, sedangkan IPK Anda adalah {PROFILE['gpa']:.2f}."
             }
     else:
-        # No GPA requirement found
         score += 15
         match_details["gpa"] = {
             "score": 15,
             "status": "Match",
             "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
         }
-        
+
     # 3. AGE MATCHING (10 points)
     age_req = parse_age_req(req_text)
     if age_req:
@@ -517,7 +550,7 @@ def evaluate_job_match(job):
             "status": "Match",
             "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
         }
-        
+
     # 4. TOEFL MATCHING (10 points)
     toefl_req = parse_toefl_req(req_text)
     if toefl_req:
@@ -541,11 +574,10 @@ def evaluate_job_match(job):
             "status": "Match",
             "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
         }
-        
+
     # 5. GENDER MATCHING (5 points)
     gender_req = check_gender_req(req_text)
     if gender_req == "Female Only":
-        # Ravil is Male, so No Match
         match_details["gender"] = {
             "score": 0,
             "status": "No Match",
@@ -565,13 +597,12 @@ def evaluate_job_match(job):
                 "status": "Match",
                 "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
             }
-            
+
     # 6. SKILLS MATCHING (Max 20 points)
-    # Check for direct Python/Data/IT development terms
-    skills_found = [s for s in PROFILE["skills"] if s in full_text]
+    skills_found = [s for s, pattern in COMPILED_PROFILE_SKILLS if pattern.search(full_text)]
     skills_score = min(len(skills_found) * 5, 20)
     score += skills_score
-    
+
     if len(skills_found) >= 3:
         match_details["skills"] = {
             "score": skills_score,
@@ -590,26 +621,22 @@ def evaluate_job_match(job):
             "status": "Low Match",
             "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
         }
-        
+
     # 7. EXPERIENCE & UPSTREAM DOMAIN MATCHING (Max 10 points)
-    # Check if the title or company matches "data", "analyst", "analis", "programmer", "developer", "it", "systems", "digital"
-    # Also check if it matches Ravil's background at Pertamina Hulu Rokan (Upstream Oil & Gas)
     exp_req = parse_exp_req(req_text)
-    
     exp_score = 0
     relevance_reasons = []
-    
-    role_keywords = ["data", "analyst", "analis", "scientist", "ai engineer", "machine learning", "programmer", "developer", "it", "systems", "digital", "informasi", "komputer", "teknologi", "fullstack", "web"]
-    if any(kw in job.get("title", "").lower() for kw in role_keywords):
+
+    role_keywords = ("data", "analyst", "analis", "scientist", "ai engineer", "machine learning", "programmer", "developer", "it", "systems", "digital", "informasi", "komputer", "teknologi", "fullstack", "web")
+    if any(kw in title for kw in role_keywords):
         exp_score += 5
         relevance_reasons.append("Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda.")
-        
-    # Hulu Migas / Oil & Gas domain relevance
-    hulu_migas_keywords = ["operasi", "operations", "production", "produksi", "reservoir", "lifting", "eksplorasi", "exploration", "drilling", "well", "log", "petrotechnical"]
+
+    hulu_migas_keywords = ("operasi", "operations", "production", "produksi", "reservoir", "lifting", "eksplorasi", "exploration", "drilling", "well", "log", "petrotechnical")
     if any(kw in full_text for kw in hulu_migas_keywords):
         exp_score += 5
         relevance_reasons.append("Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan.")
-        
+
     score += exp_score
     if exp_score >= 8:
         match_details["experience"] = {
@@ -627,8 +654,9 @@ def evaluate_job_match(job):
         match_details["experience"] = {
             "score": 0,
             "status": "Neutral",
+            "reason": "Bukan peran langsung di bidang IT/Data."
         }
-        
+
     if exp_req["years"] <= PROFILE["exp_years"]:
         match_details["exp_years"] = {
             "status": "Match",
@@ -639,21 +667,18 @@ def evaluate_job_match(job):
             "status": "Low Match",
             "reason": f"Perlu Perhatian: Lowongan meminta pengalaman minimal {exp_req['years']} tahun, sedangkan pengalaman kamu saat ini {PROFILE['exp_years']} tahun."
         }
-            
-    # Check if any hard blocker was failed (e.g. GPA, Age, Gender mismatch)
-    is_blocked = (match_details["gpa"]["status"] == "No Match" or 
-                  match_details["age"]["status"] == "No Match" or 
-                  match_details["gender"]["status"] == "No Match")
-    
-    # If blocked, reduce match score to maximum of 40% (as warning) or penalize heavily
-    final_score = score
-    if is_blocked:
-        # Cap match score at 40
-        final_score = min(score, 40)
-        
+
+    # Hard blocker check (GPA, Age, Gender)
+    is_blocked = (
+        match_details["gpa"]["status"] == "No Match" or
+        match_details["age"]["status"] == "No Match" or
+        match_details["gender"]["status"] == "No Match"
+    )
+
+    final_score = min(score, 40) if is_blocked else score
     nlp_breakdown = RequirementNLPParser.parse(job)
-        
-    job_details = {
+
+    return {
         "id": job.get("id"),
         "title": job.get("title"),
         "organization_id": job.get("organization_id"),
@@ -677,64 +702,153 @@ def evaluate_job_match(job):
             "age": age_req,
             "toefl": toefl_req,
             "gender": gender_req,
-            "experience": exp_req["level"],  # Use level string instead of years
-            "exp_years": exp_req["years"]    # Extract years from dict
+            "experience": exp_req["level"],
+            "exp_years": exp_req["years"]
         },
         "source": job.get("source", "Talentics"),
         "logo": job.get("logo", None)
     }
-    
-    return job_details
 
-def parse_location_from_text(text):
+
+# ─── Individual Portal Scrapers ────────────────────────────────────────────────
+def parse_location_from_text(text: str) -> str:
+    """Ekstraksi nama kota Indonesia dari teks lowongan."""
     if not text:
         return "Indonesia"
-    text_clean = clean_html(text)
-    cities = ["Jakarta", "Bandung", "Semarang", "Surabaya", "Denpasar", "Palembang", "Balikpapan", "Medan", "Makassar", "Yogyakarta", "Solo", "Malang"]
-    found_cities = [city for city in cities if city.lower() in text_clean.lower()]
-    if found_cities:
-        return ", ".join(found_cities)
-    return "Indonesia"
+    text_clean = clean_html(text).lower()
+    cities = ("Jakarta", "Bandung", "Semarang", "Surabaya", "Denpasar", "Palembang", "Balikpapan", "Medan", "Makassar", "Yogyakarta", "Solo", "Malang")
+    found_cities = [city for city in cities if city.lower() in text_clean]
+    return ", ".join(found_cities) if found_cities else "Indonesia"
 
-def format_astra_date(date_str):
-    if not date_str:
-        return None
-    return date_str.replace("T", " ")
 
-def get_astra_token():
-    url = "https://careerservice.astra.co.id/api/v1/auth/login"
-    payload = {
-        "siteType": "FrontEnd",
-        "lang": "ID"
+def format_astra_date(date_str: Optional[str]) -> Optional[str]:
+    return date_str.replace("T", " ") if date_str else None
+
+
+# 1. Talentics (Hulu Migas)
+def scrape_talentics_jobs(session: Optional[requests.Session] = None, max_workers: int = 8) -> List[Dict[str, Any]]:
+    """Scrape lowongan Hulu Migas / SKK Migas dari Talentics."""
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching Hulu Migas (Talentics) listings...")
+    url_main = "https://jobs.talentics.id/jobs?search=rekrutmen%20hulu%20migas"
+    try:
+        r_main = session.get(url_main, timeout=12)
+        if r_main.status_code != 200:
+            print(f"  Warning: Talentics main page HTTP {r_main.status_code}")
+            return []
+    except Exception as e:
+        print(f"  Warning: Error connecting to Talentics: {e}")
+        return []
+
+    soup = BeautifulSoup(r_main.text, 'html.parser')
+    meta_csrf = soup.find('meta', attrs={'name': 'csrf-token'})
+    csrf_token = meta_csrf.get('content') if meta_csrf else None
+
+    ajax_url = "https://jobs.talentics.id/ajaxs/jobs"
+    ajax_headers = {
+        "Accept": "application/json, text/plain, */*",
+        "Referer": url_main,
+        "X-Requested-With": "XMLHttpRequest",
+        "X-CSRF-TOKEN": csrf_token or ""
     }
+
+    all_jobs_raw = []
+    page = 1
+    last_page = 1
+
+    while page <= last_page:
+        params = {"search": "rekrutmen hulu migas", "page": page}
+        try:
+            r_ajax = session.get(ajax_url, params=params, headers=ajax_headers, timeout=12)
+            if r_ajax.status_code == 200:
+                res_data = r_ajax.json()
+                last_page = res_data.get("last_page", last_page)
+                jobs_data = res_data.get("data", [])
+                all_jobs_raw.extend(jobs_data)
+                page += 1
+            else:
+                break
+        except Exception as e:
+            print(f"  Warning: Exception on Talentics page {page}: {e}")
+            break
+
+    print(f"  Found {len(all_jobs_raw)} raw Talentics listings. Fetching details concurrently...")
+
+    def fetch_talentics_detail(raw_job):
+        org_slug = raw_job.get("organization", {}).get("slug", "skk-migas")
+        job_slug = raw_job.get("slug")
+        detail_url = f"https://jobs.talentics.id/{org_slug}/{job_slug}"
+        try:
+            r_detail = session.get(detail_url, timeout=12)
+            if r_detail.status_code == 200:
+                text = r_detail.text
+                match = re.search(r'job:\s*(\{.*)', text, re.DOTALL)
+                if match:
+                    content = match.group(1)
+                    brace_count = 0
+                    end_idx = -1
+                    for idx, char in enumerate(content):
+                        if char == '{':
+                            brace_count += 1
+                        elif char == '}':
+                            brace_count -= 1
+                            if brace_count == 0:
+                                end_idx = idx + 1
+                                break
+                    if end_idx != -1:
+                        try:
+                            return json.loads(content[:end_idx])
+                        except Exception:
+                            pass
+        except Exception:
+            pass
+        return raw_job
+
+    detailed_jobs = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(fetch_talentics_detail, raw_job) for raw_job in all_jobs_raw]
+        for f in as_completed(futures):
+            detailed_jobs.append(f.result())
+
+    print(f"  ✓ Talentics: retrieved {len(detailed_jobs)} jobs.")
+    return detailed_jobs
+
+
+# 2. Astra Careers
+def get_astra_token(session: Optional[requests.Session] = None) -> Optional[str]:
+    if session is None:
+        session = get_default_session()
+    url = "https://careerservice.astra.co.id/api/v1/auth/login"
+    payload = {"siteType": "FrontEnd", "lang": "ID"}
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Referer": "https://career.astra.co.id/lowongan"
     }
     try:
-        r = requests.post(url, data=payload, headers=headers, timeout=10)
+        r = session.post(url, data=payload, headers=headers, timeout=10)
         if r.status_code == 200:
             return r.json().get("token")
     except Exception as e:
         print(f"Error logging in to Astra: {e}")
     return None
 
-def scrape_astra_listings(token):
+
+def scrape_astra_listings(token: str, session: Optional[requests.Session] = None) -> List[Dict[str, Any]]:
+    if session is None:
+        session = get_default_session()
     url = "https://careerservice.astra.co.id/api/v1/front-end/lowongan-page/ID"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Content-Type": "application/json",
         "Authorization": token,
         "Referer": "https://career.astra.co.id/lowongan",
         "Origin": "https://career.astra.co.id"
     }
-    
     all_astra_raw = []
     page = 1
     total_pages = 1
     page_size = 12
-    
-    print("Fetching Astra jobs list...")
+
     while page <= total_pages:
         payload = {
             "SearchString": "",
@@ -746,95 +860,138 @@ def scrape_astra_listings(token):
             "PageNo": page
         }
         try:
-            r = requests.post(url, json=payload, headers=headers, timeout=10)
+            r = session.post(url, json=payload, headers=headers, timeout=10)
             if r.status_code == 200:
                 data = r.json()
                 if "vacancies" in data:
                     v_data = data["vacancies"]
                     total_rows = v_data.get("totalRows", 0)
                     total_pages = (total_rows + page_size - 1) // page_size
-                    
                     jobs = v_data.get("data", [])
-                    print(f"  Astra page {page}/{total_pages}: found {len(jobs)} jobs.")
                     all_astra_raw.extend(jobs)
-                    
                     page += 1
                 else:
                     break
             else:
-                print(f"  Astra listing page {page} failed: {r.status_code}")
                 break
-        except Exception as e:
-            print(f"  Exception fetching Astra listing page {page}: {e}")
+        except Exception:
             break
-            
     return all_astra_raw
 
-def fetch_astra_job_detail(vacancy_id, token):
+
+def fetch_astra_job_detail(vacancy_id: str, token: str, session: Optional[requests.Session] = None) -> Optional[Dict[str, Any]]:
+    if session is None:
+        session = get_default_session()
     url = f"https://careerservice.astra.co.id/api/v1/front-end/lowongan-detail/{vacancy_id}/ID"
     headers = {
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Authorization": token,
         "Referer": "https://career.astra.co.id/lowongan"
     }
     try:
-        r = requests.get(url, headers=headers, timeout=10)
+        r = session.get(url, headers=headers, timeout=10)
         if r.status_code == 200:
             return r.json().get("data")
-    except Exception as e:
-        print(f"Error fetching Astra vacancy detail {vacancy_id}: {e}")
+    except Exception:
+        pass
     return None
 
-def scrape_all_astra_details(raw_jobs, token):
-    print(f"Fetching details for {len(raw_jobs)} Astra vacancies concurrently...")
+
+def scrape_all_astra_details(raw_jobs: list, token: str, session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
+    if session is None:
+        session = get_default_session()
     detailed_jobs = []
-    
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_id = {executor.submit(fetch_astra_job_detail, job["vacancyId"], token): job for job in raw_jobs}
-        
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_id = {executor.submit(fetch_astra_job_detail, job["vacancyId"], token, session): job for job in raw_jobs}
         for future in as_completed(future_to_id):
             raw_job = future_to_id[future]
             try:
                 detail = future.result()
-                if detail:
-                    detailed_jobs.append(detail)
-                else:
-                    detailed_jobs.append(raw_job)
-            except Exception as e:
-                print(f"Exception fetching details for vacancy {raw_job.get('vacancyId')}: {e}")
+                detailed_jobs.append(detail if detail else raw_job)
+            except Exception:
                 detailed_jobs.append(raw_job)
-                
     return detailed_jobs
 
-def scrape_pertamina_ptc(session):
+
+def scrape_astra_jobs(session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
+    """Scrape dan normalkan seluruh lowongan Astra Careers."""
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching Astra Careers vacancies...")
+    token = get_astra_token(session)
+    if not token:
+        print("  Warning: Guest login to Astra failed.")
+        return []
+
+    raw_jobs = scrape_astra_listings(token, session)
+    print(f"  Found {len(raw_jobs)} Astra jobs. Fetching details concurrently...")
+    detailed = scrape_all_astra_details(raw_jobs, token, session, max_workers=max_workers)
+
+    normalized_jobs = []
+    for job in detailed:
+        req_text = job.get("requirement", "") or ""
+        desc_text = job.get("description", "") or ""
+        normalized_jobs.append({
+            "id": job.get("vacancyId"),
+            "title": job.get("positionTitleName"),
+            "organization_id": job.get("branchId"),
+            "organization_name": job.get("branchName"),
+            "slug": f"astra-{job.get('vacancyId')}",
+            "type_name": "Karyawan Kontrak" if "kontrak" in (req_text + desc_text).lower() else "Karyawan Tetap",
+            "level": job.get("categoryName", "Profesional"),
+            "location": parse_location_from_text(req_text),
+            "workplace": "Work From Office (WFO)",
+            "due_date": format_astra_date(job.get("endDate", "")),
+            "group": job.get("departmentTitle"),
+            "url": f"https://career.astra.co.id/lowongan/lowongan-detail-page/{job.get('vacancyId')}/detail",
+            "description": desc_text,
+            "requirements": req_text,
+            "source": "Astra",
+            "logo": job.get("branchImage")
+        })
+
+    print(f"  ✓ Astra: retrieved {len(normalized_jobs)} jobs.")
+    return normalized_jobs
+
+
+# 3. Pertamina Training & Consulting (PTC)
+def scrape_pertamina_ptc(session: Optional[requests.Session] = None) -> List[Dict[str, Any]]:
+    """Scrape lowongan Pertamina Training & Consulting (PTC)."""
+    if session is None:
+        session = get_default_session()
+
     print("Fetching Pertamina Training & Consulting (PTC) vacancies...")
     url = "https://recruitment.pertamina-ptc.com/guest/joblist"
     ptc_jobs = []
-    page = 1
-    while page <= 10:
+    seen_ids = set()
+
+    for page in range(1, 11):
         try:
             params = {"page": page} if page > 1 else {}
-            r = session.get(url, params=params, timeout=15)
+            r = session.get(url, params=params, timeout=12)
             if r.status_code != 200:
                 break
             soup = BeautifulSoup(r.text, 'html.parser')
             cards = soup.find_all("div", class_="card-view")
             if not cards:
                 break
-                
-            new_found = 0
+
             for card in cards:
                 heading_el = card.find("span", class_="text-primary")
                 title = heading_el.get_text(strip=True) if heading_el else "Posisi PTC"
-                
+
                 code_match = re.search(r'\[([A-Z0-9]+)\]', title)
                 job_id = code_match.group(1) if code_match else f"PTC-{len(ptc_jobs)+1}"
-                
+
+                if job_id in seen_ids:
+                    continue
+                seen_ids.add(job_id)
+
                 body = card.find("div", class_="panel-body")
                 job_type = "Karyawan Kontrak"
                 location = "Indonesia"
                 qualifications_html = ""
-                
+
                 if body:
                     for b_tag in body.find_all("b"):
                         label = b_tag.get_text(strip=True).lower()
@@ -848,8 +1005,8 @@ def scrape_pertamina_ptc(session):
                             qualifications_html = str(span_val)
                         elif "lokasi" in label:
                             location = span_val.get_text(strip=True)
-                            
-                ptc_job = {
+
+                ptc_jobs.append({
                     "id": job_id,
                     "title": title,
                     "organization_id": "PTC",
@@ -866,51 +1023,49 @@ def scrape_pertamina_ptc(session):
                     "requirements": qualifications_html,
                     "source": "Pertamina PTC",
                     "logo": "https://recruitment.pertamina-ptc.com/assets/data/images/logo/ptc.png"
-                }
-                ptc_jobs.append(ptc_job)
-                new_found += 1
-                
-            print(f"  PTC page {page}: found {new_found} jobs.")
-            page += 1
-            time.sleep(0.5)
-        except Exception as e:
-            print(f"  Exception fetching PTC page {page}: {e}")
+                })
+        except Exception:
             break
-            
-    seen_ids = set()
-    unique_ptc_jobs = []
-    for job in ptc_jobs:
-        if job["id"] not in seen_ids:
-            seen_ids.add(job["id"])
-            unique_ptc_jobs.append(job)
-    return unique_ptc_jobs
 
-def fetch_sawitpro_job_detail(url):
+    print(f"  ✓ PTC: retrieved {len(ptc_jobs)} jobs.")
+    return ptc_jobs
+
+
+# 4. SawitPRO
+def fetch_sawitpro_job_detail(url: str, session: Optional[requests.Session] = None) -> str:
+    if session is None:
+        session = get_default_session()
     try:
-        r = requests.get(url, timeout=10)
+        r = session.get(url, timeout=10)
         soup = BeautifulSoup(r.text, "html.parser")
         main = soup.find("main") or soup.body
         text_lines = [l.strip() for l in main.get_text("\n", strip=True).split("\n") if l.strip()]
-        desc_lines = []
-        for l in text_lines[:50]:
-            desc_lines.append(f"<p>{l}</p>")
+        desc_lines = [f"<p>{l}</p>" for l in text_lines[:50]]
         return "".join(desc_lines)
     except Exception:
         return ""
 
-def scrape_sawitpro(session):
+
+def scrape_sawitpro(session: Optional[requests.Session] = None, max_workers: int = 12) -> List[Dict[str, Any]]:
+    """Scrape lowongan SawitPRO."""
+    if session is None:
+        session = get_default_session()
+
     print("Fetching SawitPRO vacancies...")
     url = "https://www.sawitpro.id/jobs"
     try:
-        r = session.get(url, timeout=15)
+        r = session.get(url, timeout=12)
+        if r.status_code != 200:
+            return []
     except Exception as e:
-        print(f"Error fetching SawitPRO jobs: {e}")
+        print(f"  Warning: Error fetching SawitPRO jobs: {e}")
         return []
-        
+
     soup = BeautifulSoup(r.text, "html.parser")
     sawitpro_jobs = []
     seen_urls = set()
     idx = 1
+
     for a in soup.find_all("a", href=True):
         if "/jobsdetails/" in a["href"]:
             href = a["href"]
@@ -922,16 +1077,16 @@ def scrape_sawitpro(session):
             children = [c.get_text(strip=True) for c in p2.children if c.name]
             title = children[0] if len(children) > 0 else "SawitPRO Position"
             loc = children[1] if len(children) > 1 else "Indonesia"
-            
+
             title_l = title.lower()
             level = "Staff / Professional"
             if "intern" in title_l:
                 level = "Internship"
-            elif any(w in title_l for w in ["lead", "manager", "head", "vp"]):
+            elif any(w in title_l for w in ("lead", "manager", "head", "vp")):
                 level = "Manager / Lead"
             elif "senior" in title_l or "sr." in title_l:
                 level = "Senior Level"
-                
+
             sawitpro_jobs.append({
                 "id": f"sawitpro_{idx}",
                 "title": title,
@@ -951,12 +1106,10 @@ def scrape_sawitpro(session):
                 "logo": "https://www.sawitpro.id/favicon.ico"
             })
             idx += 1
-            
-    print(f"Found {len(sawitpro_jobs)} SawitPRO jobs.")
-    
-    print(f"Fetching details for {len(sawitpro_jobs)} SawitPRO vacancies concurrently...")
-    with ThreadPoolExecutor(max_workers=12) as executor:
-        future_to_job = {executor.submit(fetch_sawitpro_job_detail, job["url"]): job for job in sawitpro_jobs}
+
+    print(f"  Found {len(sawitpro_jobs)} SawitPRO jobs. Fetching details concurrently...")
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_job = {executor.submit(fetch_sawitpro_job_detail, job["url"], session): job for job in sawitpro_jobs}
         for future in as_completed(future_to_job):
             job = future_to_job[future]
             try:
@@ -966,77 +1119,87 @@ def scrape_sawitpro(session):
                     job["requirements"] = detail_html
             except Exception:
                 pass
-                
+
+    print(f"  ✓ SawitPRO: retrieved {len(sawitpro_jobs)} jobs.")
     return sawitpro_jobs
 
-def fetch_grab_job_detail(url):
+
+# 5. Grab Careers
+def fetch_grab_job_detail(url: str, session: Optional[requests.Session] = None) -> str:
+    if session is None:
+        session = get_default_session()
     try:
-        r = requests.get(url, timeout=10)
+        r = session.get(url, timeout=10)
         soup = BeautifulSoup(r.text, "html.parser")
         main = soup.find("main") or soup.body
         text_lines = [l.strip() for l in main.get_text("\n", strip=True).split("\n") if l.strip()]
         desc_lines = []
         for line in text_lines:
-            if any(k in line for k in ["Equal opportunity", "Featured Links", "Recruitment agencies"]):
+            if any(k in line for k in ("Equal opportunity", "Featured Links", "Recruitment agencies")):
                 break
             desc_lines.append(line)
         return "<p>" + "</p><p>".join(desc_lines[:30]) + "</p>"
     except Exception:
         return ""
 
-def scrape_grab_careers(session):
-    print("Scraping Grab Careers Indonesia jobs...")
+
+def scrape_grab_careers(session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
+    """Scrape lowongan Grab Careers Indonesia."""
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching Grab Careers Indonesia vacancies...")
     grab_jobs = []
     url = "https://www.grab.careers/en/jobs/?search=&country=Indonesia&pagesize=50"
     try:
-        r = session.get(url, timeout=15)
-        soup = BeautifulSoup(r.text, "html.parser")
-        job_links = soup.find_all("a", href=re.compile(r"/en/jobs/\d+/"))
-        seen_urls = set()
-        for a in job_links:
-            title = a.get_text(strip=True)
-            href = a["href"]
-            if not href.startswith("http"):
-                href = "https://www.grab.careers" + href
-            if href in seen_urls or not title:
-                continue
-            seen_urls.add(href)
-            
-            job_id_match = re.search(r"/jobs/(\d+)/", href)
-            job_id = job_id_match.group(1) if job_id_match else str(len(grab_jobs))
-            
-            parent = a.find_parent("div") or a.find_parent("li")
-            location = "Jakarta, Indonesia"
-            if parent:
-                loc_el = parent.find(class_=re.compile(r"location|city|country", re.I))
-                if loc_el:
-                    location = loc_el.get_text(strip=True)
-                    
-            grab_jobs.append({
-                "id": f"grab_{job_id}",
-                "title": title,
-                "organization_id": "Grab",
-                "organization_name": "Grab Indonesia",
-                "slug": f"grab-{job_id}",
-                "type_name": "Full Time",
-                "level": "Profesional",
-                "location": location,
-                "workplace": "Hybrid / WFO",
-                "due_date": "Aktif",
-                "group": "Grab Tech & Operations",
-                "url": href,
-                "description": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: {location}</p>",
-                "requirements": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: {location}</p>",
-                "source": "Grab",
-                "logo": "https://www.grab.careers/favicon.ico"
-            })
+        r = session.get(url, timeout=12)
+        if r.status_code == 200:
+            soup = BeautifulSoup(r.text, "html.parser")
+            job_links = soup.find_all("a", href=re.compile(r"/en/jobs/\d+/"))
+            seen_urls = set()
+            for a in job_links:
+                title = a.get_text(strip=True)
+                href = a["href"]
+                if not href.startswith("http"):
+                    href = "https://www.grab.careers" + href
+                if href in seen_urls or not title:
+                    continue
+                seen_urls.add(href)
+
+                job_id_match = re.search(r"/jobs/(\d+)/", href)
+                job_id = job_id_match.group(1) if job_id_match else str(len(grab_jobs))
+
+                parent = a.find_parent("div") or a.find_parent("li")
+                location = "Jakarta, Indonesia"
+                if parent:
+                    loc_el = parent.find(class_=re.compile(r"location|city|country", re.I))
+                    if loc_el:
+                        location = loc_el.get_text(strip=True)
+
+                grab_jobs.append({
+                    "id": f"grab_{job_id}",
+                    "title": title,
+                    "organization_id": "Grab",
+                    "organization_name": "Grab Indonesia",
+                    "slug": f"grab-{job_id}",
+                    "type_name": "Full Time",
+                    "level": "Profesional",
+                    "location": location,
+                    "workplace": "Hybrid / WFO",
+                    "due_date": "Aktif",
+                    "group": "Grab Tech & Operations",
+                    "url": href,
+                    "description": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: {location}</p>",
+                    "requirements": f"<p>Posisi: <strong>{title}</strong></p><p>Perusahaan: Grab Indonesia</p><p>Lokasi: {location}</p>",
+                    "source": "Grab",
+                    "logo": "https://www.grab.careers/favicon.ico"
+                })
     except Exception as e:
-        print(f"Error scraping Grab Careers: {e}")
-        
-    print(f"Found {len(grab_jobs)} Grab Indonesia jobs.")
-    print(f"Fetching details for {min(len(grab_jobs), 20)} Grab vacancies concurrently...")
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_job = {executor.submit(fetch_grab_job_detail, job["url"]): job for job in grab_jobs[:20]}
+        print(f"  Warning: Error scraping Grab: {e}")
+
+    print(f"  Found {len(grab_jobs)} Grab jobs. Fetching details concurrently...")
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_job = {executor.submit(fetch_grab_job_detail, job["url"], session): job for job in grab_jobs[:20]}
         for future in as_completed(future_to_job):
             job = future_to_job[future]
             try:
@@ -1046,11 +1209,17 @@ def scrape_grab_careers(session):
                     job["requirements"] = detail_html
             except Exception:
                 pass
+
+    print(f"  ✓ Grab: retrieved {len(grab_jobs)} jobs.")
     return grab_jobs
 
-def fetch_ioh_job_detail(url):
+
+# 6. Indosat Ooredoo Hutchison (IOH)
+def fetch_ioh_job_detail(url: str, session: Optional[requests.Session] = None) -> str:
+    if session is None:
+        session = get_default_session()
     try:
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        r = session.get(url, timeout=12)
         soup = BeautifulSoup(r.text, "html.parser")
         desc_el = soup.find(class_="jobdescription") or soup.find(class_="jobDisplay")
         if desc_el:
@@ -1059,13 +1228,20 @@ def fetch_ioh_job_detail(url):
         pass
     return ""
 
-def scrape_ioh_careers(session):
-    print("Scraping Indosat Ooredoo Hutchison (IOH) Careers...")
+
+def scrape_ioh_careers(session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
+    """Scrape lowongan Indosat Ooredoo Hutchison (IOH)."""
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching Indosat Ooredoo Hutchison (IOH) vacancies...")
     ioh_jobs = []
     seen = set()
     try:
         for start in range(0, 150, 10):
-            r = session.get(f"https://careers.ioh.co.id/search/?q=&startrow={start}", timeout=15)
+            r = session.get(f"https://careers.ioh.co.id/search/?q=&startrow={start}", timeout=12)
+            if r.status_code != 200:
+                break
             soup = BeautifulSoup(r.text, "html.parser")
             tiles = soup.find_all("li", class_="job-tile")
             new_found = 0
@@ -1079,16 +1255,16 @@ def scrape_ioh_careers(session):
                     continue
                 seen.add(full_url)
                 new_found += 1
-                
+
                 title = a.get_text(strip=True)
                 job_id_match = re.search(r"/(\d+)/?$", href)
                 job_id = job_id_match.group(1) if job_id_match else str(len(seen))
-                
+
                 loc_el = t.find(class_="location")
                 loc = loc_el.get_text(strip=True).replace("Location", "").strip() if loc_el else "Jakarta, Indonesia"
                 dept_el = t.find(class_="dept")
                 dept = dept_el.get_text(strip=True).replace("Department", "").strip() if dept_el else "Indosat Ooredoo Hutchison"
-                
+
                 ioh_jobs.append({
                     "id": f"ioh_{job_id}",
                     "title": title,
@@ -1110,12 +1286,11 @@ def scrape_ioh_careers(session):
             if new_found == 0:
                 break
     except Exception as e:
-        print(f"Error scraping IOH Careers: {e}")
-        
-    print(f"Found {len(ioh_jobs)} Indosat Ooredoo Hutchison jobs.")
-    print(f"Fetching details for {len(ioh_jobs)} IOH vacancies concurrently...")
-    with ThreadPoolExecutor(max_workers=10) as executor:
-        future_to_job = {executor.submit(fetch_ioh_job_detail, job["url"]): job for job in ioh_jobs}
+        print(f"  Warning: Error scraping IOH: {e}")
+
+    print(f"  Found {len(ioh_jobs)} IOH jobs. Fetching details concurrently...")
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        future_to_job = {executor.submit(fetch_ioh_job_detail, job["url"], session): job for job in ioh_jobs}
         for future in as_completed(future_to_job):
             job = future_to_job[future]
             try:
@@ -1125,10 +1300,18 @@ def scrape_ioh_careers(session):
                     job["requirements"] = detail_html
             except Exception:
                 pass
+
+    print(f"  ✓ IOH: retrieved {len(ioh_jobs)} jobs.")
     return ioh_jobs
 
-def scrape_indofood_careers(session):
-    print("Scraping Indofood Careers vacancies...")
+
+# 7. Indofood Careers
+def scrape_indofood_careers(session: Optional[requests.Session] = None) -> List[Dict[str, Any]]:
+    """Scrape lowongan Indofood Careers via AJAX POST."""
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching Indofood Careers vacancies...")
     indofood_jobs = []
     payload = {
         "advFilter": {
@@ -1146,15 +1329,15 @@ def scrape_indofood_careers(session):
             "Lang": "id"
         }
     }
-    
     try:
         r = session.post(
-            "https://career.indofood.com/default.aspx/OnGetAdvFilter", 
+            "https://career.indofood.com/default.aspx/OnGetAdvFilter",
             json=payload,
             headers={
                 "Content-Type": "application/json; charset=utf-8",
                 "X-Requested-With": "XMLHttpRequest"
-            }
+            },
+            timeout=12
         )
         if r.status_code == 200:
             d_val = r.json().get("d", "")
@@ -1162,14 +1345,11 @@ def scrape_indofood_careers(session):
                 _, data_part = d_val.split("[space2]")
                 data_json = json.loads(data_part)
                 vacancies = data_json.get("ListAdvFilterJob", [])
-                print(f"Retrieved {len(vacancies)} jobs from Indofood Careers.")
-                
+
                 for v in vacancies:
-                    # Clean desc & requirements
                     desc_html = v.get("JobDesc", "") or ""
                     req_html = v.get("JobReq", "") or ""
-                    
-                    job_entry = {
+                    indofood_jobs.append({
                         "id": v.get("JobID"),
                         "title": v.get("JobPositionName"),
                         "organization_id": v.get("JobDivision"),
@@ -1186,168 +1366,56 @@ def scrape_indofood_careers(session):
                         "requirements": req_html,
                         "source": "Indofood",
                         "logo": None
-                    }
-                    indofood_jobs.append(job_entry)
-            else:
-                print("Failed to find [space2] separator in Indofood response.")
-        else:
-            print(f"Error calling Indofood API: {r.status_code}")
+                    })
     except Exception as e:
-        print(f"Exception during Indofood scraping: {e}")
-        
+        print(f"  Warning: Exception during Indofood scraping: {e}")
+
+    print(f"  ✓ Indofood: retrieved {len(indofood_jobs)} jobs.")
     return indofood_jobs
 
 
-def scrape_linkedin_jobs(session, max_per_keyword=10):
-    """
-    Scrape LinkedIn jobs via LinkedIn guest API.
-    Endpoints:
-    - Search: https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search
-    - Detail: https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{job_id}
-    """
-    print("\n  Scraping LinkedIn Jobs (Data Science, AI, Python, IT Support in Indonesia)...")
-    keywords = ["Data Scientist", "Data Analyst", "Machine Learning", "Python Developer", "IT Support"]
-    found_cards = []
-    seen_ids = set()
+# 8. OpenTrain.ai
+def scrape_opentrain_jobs(session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
+    """Scrape lowongan remote AI training & coding dari OpenTrain.ai."""
+    if session is None:
+        session = get_default_session()
 
-    for kw in keywords:
-        url = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
-        params = {"keywords": kw, "location": "Indonesia", "start": 0}
-        try:
-            r = session.get(url, params=params, timeout=12)
-            if r.status_code == 200:
-                soup = BeautifulSoup(r.text, "html.parser")
-                items = soup.find_all("li")
-                count = 0
-                for item in items:
-                    if count >= max_per_keyword:
-                        break
-                    title_el = item.find("h3", class_="base-search-card__title")
-                    comp_el = item.find("h4", class_="base-search-card__subtitle")
-                    loc_el = item.find("span", class_="job-search-card__location")
-                    link_el = item.find("a", class_="base-card__full-link")
-                    date_el = item.find("time")
-
-                    title = title_el.get_text(strip=True) if title_el else ""
-                    comp = comp_el.get_text(strip=True) if comp_el else "Unknown Company"
-                    loc = loc_el.get_text(strip=True) if loc_el else "Indonesia"
-                    link = link_el.get("href", "") if link_el else ""
-                    clean_url = link.split("?")[0] if link else ""
-                    date = date_el.get_text(strip=True) if date_el else "Aktif"
-
-                    if not title or not clean_url:
-                        continue
-
-                    job_id_match = re.search(r"(\d{8,})", clean_url)
-                    job_id = job_id_match.group(1) if job_id_match else clean_url.rstrip("/").split("-")[-1]
-
-                    if job_id in seen_ids:
-                        continue
-                    seen_ids.add(job_id)
-
-                    found_cards.append({
-                        "job_id": job_id,
-                        "title": title,
-                        "company": comp,
-                        "location": loc,
-                        "url": clean_url,
-                        "date": date,
-                        "kw": kw
-                    })
-                    count += 1
-                print(f"    [+] '{kw}': found {count} listings")
-            elif r.status_code == 429:
-                print(f"    [!] Rate limited (429) on LinkedIn for '{kw}'. Pausing 10s...")
-                time.sleep(10)
-            else:
-                print(f"    [-] '{kw}': HTTP {r.status_code}")
-        except Exception as e:
-            print(f"    [!] Error searching LinkedIn for '{kw}': {e}")
-        time.sleep(1)
-
-    print(f"    Fetching job descriptions for {len(found_cards)} LinkedIn roles concurrently...")
-    
-    def fetch_linkedin_detail(card):
-        jid = card["job_id"]
-        detail_url = f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{jid}"
-        desc_html = ""
-        raw_desc = f"{card['title']} di {card['company']}, Lokasi: {card['location']}."
-        try:
-            r = session.get(detail_url, timeout=8)
-            if r.status_code == 200:
-                soup = BeautifulSoup(r.text, "html.parser")
-                desc_el = soup.find("div", class_="show-more-less-html__markup")
-                if desc_el:
-                    desc_html = str(desc_el)
-                    raw_desc = clean_html(desc_html)
-        except Exception:
-            pass
-
-        if not desc_html:
-            desc_html = f"<p><strong>{card['title']}</strong></p><p>Perusahaan: {card['company']}</p><p>Lokasi: {card['location']}</p><p>Diposting: {card['date']}</p>"
-
-        return {
-            "id": f"linkedin_{jid}",
-            "title": card["title"],
-            "organization_id": "LinkedIn",
-            "organization_name": card["company"],
-            "slug": f"linkedin-{jid}",
-            "type_name": "Full Time / Contract",
-            "level": "Profesional",
-            "location": card["location"],
-            "workplace": "Hybrid / Onsite",
-            "due_date": card["date"],
-            "group": "Tech & Data",
-            "url": card["url"],
-            "raw_description": raw_desc,
-            "description": desc_html,
-            "requirements": desc_html,
-            "source": "LinkedIn",
-            "logo": None
-        }
-
-    detailed_jobs = []
-    with ThreadPoolExecutor(max_workers=5) as executor:
-        futures = [executor.submit(fetch_linkedin_detail, card) for card in found_cards]
-        for f in as_completed(futures):
-            detailed_jobs.append(f.result())
-
-    print(f"    ✓ Successfully scraped {len(detailed_jobs)} LinkedIn jobs.")
-    return detailed_jobs
-
-
-def scrape_opentrain_jobs(session):
-    """
-    Scrape remote AI training & coding jobs dari OpenTrain.ai kategori IT/AI.
-    Menggunakan HTTP requests langsung & Schema.org JobPosting extraction (cepat & tanpa Selenium).
-    """
-    print("\n  Scraping OpenTrain.ai jobs (Coding, Generative AI & Data Annotation)...")
+    print("Fetching OpenTrain.ai jobs...")
     cat_urls = [
         "https://www.opentrain.ai/jobs/category/coding-software/",
         "https://www.opentrain.ai/jobs/category/generative-ai-rlhf/",
         "https://www.opentrain.ai/jobs/data-annotation/"
     ]
-    
+
     job_links = []
     seen_urls = set()
-    for cat_url in cat_urls:
+
+    def fetch_category_links(cat_url):
+        results = []
         try:
             r = session.get(cat_url, timeout=12)
             if r.status_code == 200:
                 soup = BeautifulSoup(r.text, 'html.parser')
                 for a in soup.find_all('a', href=True):
                     href = a['href']
-                    if href.startswith('/jobs/') and not href.startswith('/jobs/category') and not href.startswith('/jobs/location') and href != '/jobs/' and not '?apply=' in href:
+                    if href.startswith('/jobs/') and not href.startswith('/jobs/category') and not href.startswith('/jobs/location') and href != '/jobs/' and '?apply=' not in href:
                         full_url = 'https://www.opentrain.ai' + href
                         title = a.get_text(' ', strip=True)
-                        if full_url not in seen_urls and title and title != 'View job':
-                            seen_urls.add(full_url)
-                            job_links.append({'title': title, 'url': full_url})
-        except Exception as e:
-            print(f"    Error fetching OpenTrain category {cat_url}: {e}")
-            
-    print(f"    Found {len(job_links)} OpenTrain roles. Fetching details concurrently...")
-    
+                        if title and title != 'View job':
+                            results.append({'title': title, 'url': full_url})
+        except Exception:
+            pass
+        return results
+
+    with ThreadPoolExecutor(max_workers=3) as executor:
+        for links in executor.map(fetch_category_links, cat_urls):
+            for link in links:
+                if link['url'] not in seen_urls:
+                    seen_urls.add(link['url'])
+                    job_links.append(link)
+
+    print(f"  Found {len(job_links)} OpenTrain roles. Fetching details concurrently...")
+
     def fetch_opentrain_detail(job_info):
         url = job_info['url']
         try:
@@ -1396,24 +1464,29 @@ def scrape_opentrain_jobs(session):
         }
 
     detailed_jobs = []
-    with ThreadPoolExecutor(max_workers=10) as executor:
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
         futures = [executor.submit(fetch_opentrain_detail, job) for job in job_links]
         for f in as_completed(futures):
             res = f.result()
             if res:
                 detailed_jobs.append(res)
-                
-    print(f"    ✓ Successfully scraped {len(detailed_jobs)} OpenTrain jobs.")
+
+    print(f"  ✓ OpenTrain: retrieved {len(detailed_jobs)} jobs.")
     return detailed_jobs
 
 
-def scrape_micro1_jobs(session):
+# 9. micro1 Remote
+def scrape_micro1_jobs(session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
     """
-    Scrape remote software & AI jobs dari micro1 (microonejobs.com).
+    Scrape remote software & AI jobs dari micro1.
+    Dioptimasi untuk fetch detail secara concurrent (bukan sequential loop).
     """
-    print("\n  Scraping micro1 remote jobs...")
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching micro1 remote jobs...")
     url = "https://microonejobs.com/jobs"
-    jobs = []
+    raw_stubs = []
     try:
         r = session.get(url, timeout=12)
         if r.status_code == 200:
@@ -1423,80 +1496,199 @@ def scrape_micro1_jobs(session):
                 href = c['href']
                 full_url = "https://microonejobs.com" + href
                 text_parts = [t.strip() for t in c.get_text(';', strip=True).split(';') if t.strip()]
-                
+
                 title = ''
                 company = 'micro1'
                 salary = ''
                 location = 'Remote (Worldwide)'
                 for p in text_parts:
-                    if any(role in p for role in ['Engineer', 'Developer', 'Designer', 'Marketer', 'Analyst']):
+                    if any(role in p for role in ('Engineer', 'Developer', 'Designer', 'Marketer', 'Analyst')):
                         title = p
                     elif '$' in p:
                         salary = p
                     elif 'Remote' in p:
                         location = p.replace('\ufffd', '-').replace('', '-')
-                        
+
                 if not title and len(text_parts) > 2:
                     title = text_parts[2]
                 if len(text_parts) > 1 and not ('Engineer' in text_parts[1] or '$' in text_parts[1]):
                     company = text_parts[1]
-                
+
                 slug = href.replace('/jobs/', '')
-                
-                # Fetch job detail
-                desc = ''
-                try:
-                    r_det = session.get(full_url, timeout=8)
-                    if r_det.status_code == 200:
-                        soup_det = BeautifulSoup(r_det.text, 'html.parser')
-                        main_content = soup_det.find('main') or soup_det.find('article') or soup_det.body
-                        if main_content:
-                            desc = main_content.get_text('\n', strip=True)
-                except Exception:
-                    pass
-                
-                desc_text = (desc or title) + (f"\nSalary: {salary}" if salary else "")
-                jobs.append({
+                raw_stubs.append({
                     'id': f"micro1_{slug}",
-                    'title': title,
+                    'title': title or "Software Engineer",
                     'organization_name': company,
                     'location': location,
                     'workplace': 'Work From Home (Remote)',
                     'due_date': 'Active',
                     'group': 'Engineering & Tech',
                     'url': full_url,
-                    'description': desc_text,
+                    'salary': salary,
                     'requirements': 'Software Engineering, Remote, Problem Solving, Fullstack/Backend/Frontend/AI',
                     'type_name': 'Full Time / Remote',
                     'source': 'micro1'
                 })
     except Exception as e:
-        print(f"    Warning: micro1 scrape error: {e}")
-        
-    print(f"    ✓ Successfully scraped {len(jobs)} micro1 jobs.")
+        print(f"  Warning: micro1 listing fetch error: {e}")
+        return []
+
+    print(f"  Found {len(raw_stubs)} micro1 listings. Fetching details concurrently...")
+
+    def fetch_micro1_detail(stub):
+        desc = ''
+        try:
+            r_det = session.get(stub['url'], timeout=8)
+            if r_det.status_code == 200:
+                soup_det = BeautifulSoup(r_det.text, 'html.parser')
+                main_content = soup_det.find('main') or soup_det.find('article') or soup_det.body
+                if main_content:
+                    desc = main_content.get_text('\n', strip=True)
+        except Exception:
+            pass
+        salary_str = f"\nSalary: {stub['salary']}" if stub.get('salary') else ""
+        stub['description'] = (desc or stub['title']) + salary_str
+        stub.pop('salary', None)
+        return stub
+
+    jobs = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(fetch_micro1_detail, stub) for stub in raw_stubs]
+        for f in as_completed(futures):
+            jobs.append(f.result())
+
+    print(f"  ✓ micro1: retrieved {len(jobs)} jobs.")
     return jobs
 
 
-def scrape_with_firecrawl(url, format_output="markdown"):
-    """
-    Gunakan Firecrawl untuk extract clean data dari URL.
-    Lebih powerful untuk handle dynamic content dan complex HTML.
-    """
+# 10. LinkedIn Jobs (Guest API)
+def scrape_linkedin_jobs(session: Optional[requests.Session] = None, max_per_keyword: int = 10, max_workers: int = 5) -> List[Dict[str, Any]]:
+    """Scrape lowongan LinkedIn via Guest API dengan concurrency terkontrol."""
+    if session is None:
+        session = get_default_session()
+
+    print("Fetching LinkedIn Jobs via Guest API...")
+    keywords = ("Data Scientist", "Data Analyst", "Machine Learning", "Python Developer", "IT Support")
+    found_cards = []
+    seen_ids = set()
+
+    for kw in keywords:
+        url = "https://www.linkedin.com/jobs-guest/jobs/api/seeMoreJobPostings/search"
+        params = {"keywords": kw, "location": "Indonesia", "start": 0}
+        try:
+            r = session.get(url, params=params, timeout=10)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, "html.parser")
+                items = soup.find_all("li")
+                count = 0
+                for item in items:
+                    if count >= max_per_keyword:
+                        break
+                    title_el = item.find("h3", class_="base-search-card__title")
+                    comp_el = item.find("h4", class_="base-search-card__subtitle")
+                    loc_el = item.find("span", class_="job-search-card__location")
+                    link_el = item.find("a", class_="base-card__full-link")
+                    date_el = item.find("time")
+
+                    title = title_el.get_text(strip=True) if title_el else ""
+                    comp = comp_el.get_text(strip=True) if comp_el else "Unknown Company"
+                    loc = loc_el.get_text(strip=True) if loc_el else "Indonesia"
+                    link = link_el.get("href", "") if link_el else ""
+                    clean_url = link.split("?")[0] if link else ""
+                    date = date_el.get_text(strip=True) if date_el else "Aktif"
+
+                    if not title or not clean_url:
+                        continue
+
+                    job_id_match = re.search(r"(\d{8,})", clean_url)
+                    job_id = job_id_match.group(1) if job_id_match else clean_url.rstrip("/").split("-")[-1]
+
+                    if job_id in seen_ids:
+                        continue
+                    seen_ids.add(job_id)
+
+                    found_cards.append({
+                        "job_id": job_id,
+                        "title": title,
+                        "company": comp,
+                        "location": loc,
+                        "url": clean_url,
+                        "date": date,
+                        "kw": kw
+                    })
+                    count += 1
+            elif r.status_code == 429:
+                print(f"    [!] LinkedIn rate limit for '{kw}'. Skipping keyword.")
+                break
+        except Exception as e:
+            print(f"    [!] LinkedIn search exception for '{kw}': {e}")
+
+    print(f"  Found {len(found_cards)} LinkedIn roles. Fetching descriptions concurrently...")
+
+    def fetch_linkedin_detail(card):
+        jid = card["job_id"]
+        detail_url = f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{jid}"
+        desc_html = ""
+        raw_desc = f"{card['title']} di {card['company']}, Lokasi: {card['location']}."
+        try:
+            r = session.get(detail_url, timeout=8)
+            if r.status_code == 200:
+                soup = BeautifulSoup(r.text, "html.parser")
+                desc_el = soup.find("div", class_="show-more-less-html__markup")
+                if desc_el:
+                    desc_html = str(desc_el)
+                    raw_desc = clean_html(desc_html)
+        except Exception:
+            pass
+
+        if not desc_html:
+            desc_html = f"<p><strong>{card['title']}</strong></p><p>Perusahaan: {card['company']}</p><p>Lokasi: {card['location']}</p><p>Diposting: {card['date']}</p>"
+
+        return {
+            "id": f"linkedin_{jid}",
+            "title": card["title"],
+            "organization_id": "LinkedIn",
+            "organization_name": card["company"],
+            "slug": f"linkedin-{jid}",
+            "type_name": "Full Time / Contract",
+            "level": "Profesional",
+            "location": card["location"],
+            "workplace": "Hybrid / Onsite",
+            "due_date": card["date"],
+            "group": "Tech & Data",
+            "url": card["url"],
+            "raw_description": raw_desc,
+            "description": desc_html,
+            "requirements": desc_html,
+            "source": "LinkedIn",
+            "logo": None
+        }
+
+    detailed_jobs = []
+    with ThreadPoolExecutor(max_workers=max_workers) as executor:
+        futures = [executor.submit(fetch_linkedin_detail, card) for card in found_cards]
+        for f in as_completed(futures):
+            detailed_jobs.append(f.result())
+
+    print(f"  ✓ LinkedIn: retrieved {len(detailed_jobs)} jobs.")
+    return detailed_jobs
+
+
+# ─── Optional Firecrawl & JobSpy Integrations ─────────────────────────────────
+def scrape_with_firecrawl(url: str, format_output: str = "markdown") -> Optional[str]:
+    """Gunakan Firecrawl untuk extract data bersih dari URL."""
     if FirecrawlApp is None:
         return None
-        
     try:
         api_key = os.getenv("FIRECRAWL_API_KEY")
         if not api_key:
             return None
-            
         app = FirecrawlApp(api_key=api_key)
-        # Mendukung Firecrawl v4+ (keyword args) dan versi lawas (dictionary options)
         try:
             scrape_result = app.scrape_url(url, formats=[format_output], timeout=30000)
         except TypeError:
             scrape_result = app.scrape_url(url, {"formats": [format_output], "timeout": 30000})
-        
+
         if scrape_result:
             if hasattr(scrape_result, format_output):
                 return getattr(scrape_result, format_output)
@@ -1508,280 +1700,206 @@ def scrape_with_firecrawl(url, format_output="markdown"):
         return None
 
 
-def scrape_with_jobspy(job_title, location="", max_results=50):
-    """
-    Gunakan JobSpy untuk aggregate jobs dari LinkedIn.
-    
-    Note: Indeed & Glassdoor have anti-bot protection (403/KeyError).
-    LinkedIn adalah sumber paling stabil dan reliable.
-    """
+def scrape_with_jobspy(job_title: str, location: str = "", max_results: int = 50) -> List[Dict[str, Any]]:
+    """Gunakan JobSpy untuk aggregate jobs dari LinkedIn dengan hash ID deterministik."""
     if scrape_jobs is None:
         return []
-        
     try:
-        # Try LinkedIn first (most reliable)
         print(f"  Scraping LinkedIn via JobSpy for '{job_title}'...")
-        
-        # Specify encoding to avoid charmap errors
-        import sys
-        original_encoding = sys.stdout.encoding
-        
         jobs = scrape_jobs(
-            site_name=["linkedin"],  # LinkedIn only - most stable
+            site_name=["linkedin"],
             search_term=job_title,
             location=location,
             results_wanted=max_results,
         )
-        
-        if len(jobs) > 0:
-            print(f"    ✓ Found {len(jobs)} jobs from LinkedIn")
-        else:
-            print(f"    No jobs found on LinkedIn")
-        
-        # Convert to our format (handle encoding properly)
+        if len(jobs) == 0:
+            return []
+
         normalized_jobs = []
-        for idx, job in jobs.iterrows():
-            try:
-                normalized_job = {
-                    "id": hash(str(job.get("job_url", "")) + str(job.get("title", ""))),
-                    "title": str(job.get("title", "")).encode('utf-8', errors='ignore').decode('utf-8'),
-                    "organization_name": str(job.get("company", "")).encode('utf-8', errors='ignore').decode('utf-8'),
-                    "location": str(job.get("location", "")).encode('utf-8', errors='ignore').decode('utf-8'),
-                    "workplace": "Unknown",
-                    "due_date": str(job.get("date_posted", "")),
-                    "group": str(job.get("job_type", "")),
-                    "url": str(job.get("job_url", "")),
-                    "description": str(job.get("description", "") or job.get("job_description", "")).encode('utf-8', errors='ignore').decode('utf-8')[:500],
-                    "requirements": str(job.get("description", "") or job.get("job_description", "")).encode('utf-8', errors='ignore').decode('utf-8')[:500],
-                    "salary_min": job.get("min_amount"),
-                    "salary_max": job.get("max_amount"),
-                    "source": "JobSpy (LinkedIn)",
-                }
-                normalized_jobs.append(normalized_job)
-            except Exception as inner_e:
-                print(f"    Warning: Skipped 1 job due to encoding: {inner_e}")
-                continue
-            
+        for _, job in jobs.iterrows():
+            url = str(job.get("job_url", ""))
+            title = str(job.get("title", ""))
+            stable_id = hashlib.sha256(f"{url}_{title}".encode('utf-8')).hexdigest()[:16]
+            normalized_jobs.append({
+                "id": f"jobspy_{stable_id}",
+                "title": title,
+                "organization_name": str(job.get("company", "")),
+                "location": str(job.get("location", "")),
+                "workplace": "Unknown",
+                "due_date": str(job.get("date_posted", "")),
+                "group": str(job.get("job_type", "")),
+                "url": url,
+                "description": str(job.get("description", "") or job.get("job_description", ""))[:500],
+                "requirements": str(job.get("description", "") or job.get("job_description", ""))[:500],
+                "salary_min": job.get("min_amount"),
+                "salary_max": job.get("max_amount"),
+                "source": "JobSpy (LinkedIn)",
+            })
         return normalized_jobs
     except Exception as e:
-        import traceback
-        error_msg = str(e)[:80]
-        print(f"  ⚠️  JobSpy error: {type(e).__name__}: {error_msg}")
-        # print(traceback.format_exc())
+        print(f"  ⚠️ JobSpy error: {e}")
         return []
 
 
-def main():
-    session = requests.Session()
-    session.headers.update({
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8",
-    })
+# ─── Scraper Registry & Orchestrator ──────────────────────────────────────────
+SCRAPER_REGISTRY = {
+    "talentics": ("Talentics (Hulu Migas)", scrape_talentics_jobs),
+    "astra": ("Astra Careers", scrape_astra_jobs),
+    "ptc": ("Pertamina PTC", scrape_pertamina_ptc),
+    "sawitpro": ("SawitPRO", scrape_sawitpro),
+    "grab": ("Grab Careers Indonesia", scrape_grab_careers),
+    "ioh": ("Indosat Ooredoo Hutchison", scrape_ioh_careers),
+    "indofood": ("Indofood Careers", scrape_indofood_careers),
+    "opentrain": ("OpenTrain.ai", scrape_opentrain_jobs),
+    "micro1": ("micro1 Remote", scrape_micro1_jobs),
+    "linkedin": ("LinkedIn Jobs", lambda s: scrape_linkedin_jobs(s, max_per_keyword=10)),
+}
 
-    print("Step 1: Establishing session and fetching CSRF token...")
-    url_main = "https://jobs.talentics.id/jobs?search=rekrutmen%20hulu%20migas"
-    try:
-        r_main = session.get(url_main)
-        if r_main.status_code != 200:
-            print(f"Failed to fetch main page: {r_main.status_code}")
-            return
-    except Exception as e:
-        print(f"Error fetching main page: {e}")
-        return
 
-    soup = BeautifulSoup(r_main.text, 'html.parser')
-    meta_csrf = soup.find('meta', attrs={'name': 'csrf-token'})
-    csrf_token = meta_csrf.get('content') if meta_csrf else None
-    
-    if not csrf_token:
-        print("Warning: CSRF token not found. Requests might fail.")
+def run_pipeline(
+    portals: Optional[List[str]] = None,
+    parallel: bool = True,
+    filter_major: bool = True,
+    portal_workers: int = 5
+) -> List[Dict[str, Any]]:
+    """
+    Eksekusi pipeline scraping dengan opsi paralel lintas-portal dan scoring cerdas.
+    """
+    session = get_default_session()
+    start_time = time.time()
+
+    # Pilih scraper yang aktif
+    if portals:
+        selected_scrapers = {k: v for k, v in SCRAPER_REGISTRY.items() if k.lower() in [p.lower() for p in portals]}
     else:
-        print(f"CSRF Token obtained: {csrf_token}")
+        selected_scrapers = SCRAPER_REGISTRY
 
-    ajax_url = "https://jobs.talentics.id/ajaxs/jobs"
-    ajax_headers = {
-        "Accept": "application/json, text/plain, */*",
-        "Referer": url_main,
-        "X-Requested-With": "XMLHttpRequest",
-        "X-CSRF-TOKEN": csrf_token
-    }
+    print("=" * 70)
+    print(f"🚀 Memulai Job Matcher Scraper Pipeline ({len(selected_scrapers)} portal)")
+    print(f"Mode: {'Paralel (' + str(portal_workers) + ' threads)' if parallel else 'Sekuensial'}")
+    print("=" * 70)
 
-    all_jobs_raw = []
-    page = 1
-    last_page = 1
+    raw_jobs_by_portal: Dict[str, List[Dict[str, Any]]] = {}
 
-    print("\nStep 2: Scraping Hulu Migas (Talentics) job search pages...")
-    while page <= last_page:
-        print(f"Fetching page {page} of {last_page}...")
-        params = {
-            "search": "rekrutmen hulu migas",
-            "page": page
-        }
-        try:
-            r_ajax = session.get(ajax_url, params=params, headers=ajax_headers)
-            if r_ajax.status_code == 200:
-                res_data = r_ajax.json()
-                last_page = res_data.get("last_page", last_page)
-                jobs_data = res_data.get("data", [])
-                print(f"  Retrieved {len(jobs_data)} jobs.")
-                all_jobs_raw.extend(jobs_data)
-                page += 1
-                time.sleep(0.5)
-            else:
-                print(f"  Error fetching page {page}: {r_ajax.status_code}")
-                break
-        except Exception as e:
-            print(f"  Exception fetching page {page}: {e}")
-            break
-
-    print(f"\nTotal raw Hulu Migas jobs fetched: {len(all_jobs_raw)}")
-
-    def fetch_talentics_detail(raw_job):
-        """Fetch & parse detail satu job Talentics. Dipakai secara concurrent."""
-        org_slug = raw_job.get("organization", {}).get("slug", "skk-migas")
-        job_slug = raw_job.get("slug")
-        detail_url = f"https://jobs.talentics.id/{org_slug}/{job_slug}"
-        try:
-            r_detail = session.get(detail_url, timeout=15)
-            if r_detail.status_code == 200:
-                text = r_detail.text
-                match = re.search(r'job:\s*(\{.*)', text, re.DOTALL)
-                if match:
-                    content = match.group(1)
-                    brace_count = 0
-                    json_str = ""
-                    for char in content:
-                        if char == '{':
-                            brace_count += 1
-                        elif char == '}':
-                            brace_count -= 1
-                        json_str += char
-                        if brace_count == 0:
-                            break
-                    try:
-                        return json.loads(json_str)
-                    except Exception:
-                        pass
-        except Exception as de:
-            print(f"  Exception fetching Talentics detail for '{raw_job.get('title')}': {de}")
-        return raw_job  # fallback: gunakan data raw tanpa detail
-
-    print("\nStep 3: Fetching detailed information for Hulu Migas jobs concurrently...")
-    matched_jobs = []
-    with ThreadPoolExecutor(max_workers=8) as executor:
-        future_to_raw = {executor.submit(fetch_talentics_detail, raw_job): raw_job for raw_job in all_jobs_raw}
-        done_count = 0
-        for future in as_completed(future_to_raw):
-            raw_job = future_to_raw[future]
-            done_count += 1
-            try:
-                job_detail = future.result()
-                matched_job = evaluate_job_match(job_detail)
-            except Exception as ex:
-                print(f"  Error evaluating job '{raw_job.get('title')}': {ex}")
-                matched_job = evaluate_job_match(raw_job)
-            matched_jobs.append(matched_job)
-            if done_count % 10 == 0 or done_count == len(all_jobs_raw):
-                print(f"  [{done_count}/{len(all_jobs_raw)}] Talentics jobs processed...")
-
-    print("\nStep 3a: Logging in to Astra Careers and scraping vacancies...")
-    astra_token = get_astra_token()
-    if astra_token:
-        raw_astra_jobs = scrape_astra_listings(astra_token)
-        print(f"Found {len(raw_astra_jobs)} Astra jobs.")
-        
-        # Concurrently fetch detailed requirement & descriptions
-        detailed_astra_jobs = scrape_all_astra_details(raw_astra_jobs, astra_token)
-        
-        print("\nStep 3b: Normalizing and evaluating Astra jobs...")
-        for job in detailed_astra_jobs:
-            req_text = job.get("requirement", "") or ""
-            desc_text = job.get("description", "") or ""
-            
-            normalized_job = {
-                "id": job.get("vacancyId"),
-                "title": job.get("positionTitleName"),
-                "organization_id": job.get("branchId"),
-                "organization_name": job.get("branchName"),
-                "slug": f"astra-{job.get('vacancyId')}",
-                "type_name": "Karyawan Kontrak" if "kontrak" in (req_text + desc_text).lower() else "Karyawan Tetap",
-                "level": job.get("categoryName", "Profesional"),
-                "location": parse_location_from_text(req_text),
-                "workplace": "Work From Office (WFO)",
-                "due_date": format_astra_date(job.get("endDate", "")),
-                "group": job.get("departmentTitle"),
-                "url": f"https://career.astra.co.id/lowongan/lowongan-detail-page/{job.get('vacancyId')}/detail",
-                "description": desc_text,
-                "requirements": req_text,
-                "source": "Astra",
-                "logo": job.get("branchImage")
+    if parallel and len(selected_scrapers) > 1:
+        with ThreadPoolExecutor(max_workers=portal_workers) as portal_executor:
+            future_to_key = {
+                portal_executor.submit(runner, session): (key, label)
+                for key, (label, runner) in selected_scrapers.items()
             }
-            
-            matched_job = evaluate_job_match(normalized_job)
-            matched_jobs.append(matched_job)
+            for future in as_completed(future_to_key):
+                key, label = future_to_key[future]
+                try:
+                    jobs = future.result() or []
+                    raw_jobs_by_portal[key] = jobs
+                    print(f"  [+] Portal {label} selesai ({len(jobs)} jobs)")
+                except Exception as ex:
+                    print(f"  [!] Error pada portal {label}: {ex}")
+                    raw_jobs_by_portal[key] = []
     else:
-        print("Warning: Skipping Astra Careers scraping because guest login failed.")
+        for key, (label, runner) in selected_scrapers.items():
+            try:
+                jobs = runner(session) or []
+                raw_jobs_by_portal[key] = jobs
+                print(f"  [+] Portal {label} selesai ({len(jobs)} jobs)")
+            except Exception as ex:
+                print(f"  [!] Error pada portal {label}: {ex}")
+                raw_jobs_by_portal[key] = []
 
-    print("\nStep 3c: Scraping Pertamina Training & Consulting (PTC) vacancies...")
-    ptc_jobs = scrape_pertamina_ptc(session)
-    print(f"Found {len(ptc_jobs)} Pertamina PTC jobs.")
-    for job in ptc_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+    # Flatten dan Global Deduplication
+    all_raw_jobs = [job for jobs in raw_jobs_by_portal.values() for job in jobs]
+    print(f"\nTotal lowongan mentah terkumpul: {len(all_raw_jobs)}")
 
-    print("\nStep 3d: Scraping SawitPRO vacancies...")
-    sawitpro_jobs = scrape_sawitpro(session)
-    for job in sawitpro_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+    # Deduplikasi cerdas berdasarkan (source, id)
+    seen_keys: Set[str] = set()
+    deduped_raw: List[Dict[str, Any]] = []
 
-    print("\nStep 3e: Scraping Grab Careers Indonesia vacancies...")
-    grab_jobs = scrape_grab_careers(session)
-    for job in grab_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+    for job in all_raw_jobs:
+        src = str(job.get("source") or "").strip().lower()
+        jid = str(job.get("id") or "").strip().lower()
+        raw_url = str(job.get("url") or "").strip().lower()
 
-    print("\nStep 3f: Scraping Indosat Ooredoo Hutchison (IOH) vacancies...")
-    ioh_jobs = scrape_ioh_careers(session)
-    for job in ioh_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+        if jid:
+            key = f"{src}:{jid}"
+        elif raw_url:
+            key = f"{src}:{raw_url}"
+        else:
+            key = f"{src}:{hash(str(job))}"
 
-    print("\nStep 3g: Scraping Indofood Careers vacancies...")
-    indofood_jobs = scrape_indofood_careers(session)
-    for job in indofood_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+        if key in seen_keys:
+            continue
+        seen_keys.add(key)
+        deduped_raw.append(job)
 
-    print("\nStep 3h: Scraping OpenTrain.ai AI Training Jobs...")
-    opentrain_jobs = scrape_opentrain_jobs(session)
-    for job in opentrain_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+    print(f"Deduplikasi selesai: {len(deduped_raw)} lowongan unik tersisa.")
 
-    print("\nStep 3i: Scraping micro1 Remote Jobs...")
-    micro1_jobs = scrape_micro1_jobs(session)
-    for job in micro1_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
+    # Scoring & NLP Match Evaluation
+    print("Mengevaluasi match score dan NLP breakdown...")
+    matched_jobs: List[Dict[str, Any]] = []
+    for job in deduped_raw:
+        try:
+            matched_jobs.append(evaluate_job_match(job))
+        except Exception as e:
+            print(f"  Warning: Error scoring job '{job.get('title')}': {e}")
 
-    print("\nStep 3j: Scraping LinkedIn Jobs...")
-    linkedin_jobs = scrape_linkedin_jobs(session, max_per_keyword=10)
-    for job in linkedin_jobs:
-        matched_job = evaluate_job_match(job)
-        matched_jobs.append(matched_job)
-
-    # Sort matched jobs by match score (highest first), placing blocked jobs at the end
+    # Sorting: skor tertinggi duluan, non-blocked diutamakan
     matched_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
 
-    # Filter to only keep jobs with IT major (High Match) or All Majors (Match)
-    filtered_jobs = [job for job in matched_jobs if job["match_details"]["major"]["status"] in ["High Match", "Match"]]
-    print(f"Filtered out {len(matched_jobs) - len(filtered_jobs)} jobs that do not match major requirements (IT or All Majors).")
-    matched_jobs = filtered_jobs
+    # Filter major (IT / All Majors) jika diminta
+    if filter_major:
+        filtered = [j for j in matched_jobs if j["match_details"]["major"]["status"] in ("High Match", "Match")]
+        print(f"Filter major aktif: menyaring {len(matched_jobs) - len(filtered)} lowongan non-IT/spesifik.")
+        matched_jobs = filtered
 
-    print("\nStep 4: Writing output files...")
-    save_jobs(matched_jobs)
-    print(f"Berhasil memproses {len(matched_jobs)} lowongan!")
+    # Jika partial run (--portal diberikan), merge dengan job dari portal lain yang sudah ada di matched_jobs.json
+    base_dir = os.path.dirname(os.path.abspath(__file__))
+    output_json = os.path.join(base_dir, "matched_jobs.json")
+    if portals and os.path.exists(output_json):
+        try:
+            with open(output_json, "r", encoding="utf-8") as f:
+                existing_jobs = json.load(f)
+            # Ambil nama source portal yang baru saja di-scrape
+            scraped_sources = {str(j.get("source") or "").strip().lower() for j in matched_jobs}
+            # Simpan job dari portal lain yang tidak di-scrape kali ini
+            retained_jobs = [
+                j for j in existing_jobs
+                if str(j.get("source") or "").strip().lower() not in scraped_sources
+            ]
+            merged_jobs = matched_jobs + retained_jobs
+            merged_jobs.sort(key=lambda x: (0 if x["is_blocked"] else 1, x["match_score"]), reverse=True)
+            matched_jobs = merged_jobs
+            print(f"Merge partial run: {len(retained_jobs)} lowongan portal lain dipertahankan, total: {len(matched_jobs)}.")
+        except Exception as e:
+            print(f"  Warning: Gagal merge data existing: {e}")
+
+    # Simpan output
+    print("\nMenyimpan file output...")
+    save_jobs(matched_jobs, base_dir=base_dir)
+
+    elapsed = time.time() - start_time
+    print("=" * 70)
+    print(f"✓ Pipeline selesai dalam {elapsed:.2f} detik! Total {len(matched_jobs)} lowongan tersimpan.")
+    print("=" * 70)
+
+    return matched_jobs
+
+
+def main():
+    parser = argparse.ArgumentParser(description="Job Matcher Scraper Engine (High Performance)")
+    parser.add_argument("--portal", type=str, default="", help="Pilih portal tertentu, dipisahkan koma (contoh: astra,ptc,talentics)")
+    parser.add_argument("--sequential", action="store_true", help="Jalankan scraper secara sekuensial (bukan paralel)")
+    parser.add_argument("--workers", type=int, default=5, help="Jumlah thread worker untuk scraping paralel lintas portal")
+    parser.add_argument("--no-filter", action="store_true", help="Jangan filter jurusan (simpan semua lowongan)")
+    args = parser.parse_args()
+
+    portals = [p.strip() for p in args.portal.split(",") if p.strip()] if args.portal else None
+    run_pipeline(
+        portals=portals,
+        parallel=not args.sequential,
+        filter_major=not args.no_filter,
+        portal_workers=args.workers
+    )
+
 
 if __name__ == "__main__":
     main()
