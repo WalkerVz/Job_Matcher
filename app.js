@@ -40,7 +40,7 @@ function updateNewJobsNavBadge(count) {
 
 async function loadNewJobsData() {
     try {
-        const res = await fetch('new_jobs.json?t=' + Date.now());
+        const res = await fetch('new_jobs.json?t=' + Date.now(), { cache: 'no-store' });
         if (!res.ok) {
             console.log('[DEBUG] new_jobs.json fetch gagal:', res.status);
             return;
@@ -253,7 +253,7 @@ async function loadJobsData() {
     try {
         // Attempt to fetch from local json first
         // Tambah timestamp query string agar bypass cache SW di mobile
-        const response = await fetch('matched_jobs.json?t=' + Date.now());
+        const response = await fetch('matched_jobs.json?t=' + Date.now(), { cache: 'no-store' });
         if (response.ok) {
             allJobs = await response.json();
         } else {
@@ -268,7 +268,7 @@ async function loadJobsData() {
 
     // Try to load last updated timestamp
     try {
-        const luRes = await fetch('last_updated.json?t=' + Date.now());
+        const luRes = await fetch('last_updated.json?t=' + Date.now(), { cache: 'no-store' });
         if (luRes.ok) {
             const luData = await luRes.json();
             if (luData && luData.last_updated) {
@@ -1962,9 +1962,20 @@ window.switchTab = function (event, tabId) {
 // Register Progressive Web App (PWA) Service Worker
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-        // Daftarkan SW tanpa query string supaya browser selalu cek versi terbaru
-        navigator.serviceWorker.register('/sw.js').then((reg) => {
+        // Gunakan path relatif './sw.js' agar kompatibel di root domain maupun subpath GitHub Pages
+        navigator.serviceWorker.register('./sw.js').then((reg) => {
             reg.update();
-        }).catch(() => { });
+        }).catch((err) => {
+            console.warn('[PWA] Service Worker registration failed:', err);
+        });
+
+        // Deteksi pergantian controller Service Worker (misal saat versi cache diperbarui)
+        let refreshing = false;
+        navigator.serviceWorker.addEventListener('controllerchange', () => {
+            if (!refreshing) {
+                refreshing = true;
+                window.location.reload();
+            }
+        });
     });
 }
