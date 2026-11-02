@@ -181,6 +181,15 @@ document.addEventListener('DOMContentLoaded', async () => {
             wishlistOnly = !wishlistOnly;
             wishlistToggleBtn.classList.toggle('active', wishlistOnly);
             currentPage = 1;
+
+            // Jika mengaktifkan mode wishlist, reset filter lain agar seluruh lowongan wishlist tampil
+            if (wishlistOnly) {
+                if (matchFilter) matchFilter.value = 'all';
+                if (sourceFilter) sourceFilter.value = 'all';
+                if (expFilter) expFilter.value = 'all';
+                if (searchInput) searchInput.value = '';
+            }
+
             applyFilters();
         });
     }
@@ -335,7 +344,14 @@ function getSavedJobsState() {
 function updateWishlistCountBadge() {
     if (!wishlistCountEl) return;
     const state = getSavedJobsState();
-    const count = Object.values(state).filter(s => s && s.isBookmarked).length;
+    // Sinkronkan dengan allJobs agar hanya menghitung lowongan yang valid dan ada di data saat ini
+    const validJobIds = (allJobs && allJobs.length > 0) ? new Set(allJobs.map(j => String(j.id))) : null;
+    const count = Object.keys(state).filter(id => {
+        const item = state[id];
+        if (!item || !item.isBookmarked) return false;
+        if (validJobIds && !validJobIds.has(String(id))) return false;
+        return true;
+    }).length;
     wishlistCountEl.textContent = count;
 }
 
@@ -602,7 +618,8 @@ function applyFilters() {
         // E. Wishlist Filter
         if (wishlistOnly) {
             const state = getSavedJobsState();
-            if (!state[job.id] || !state[job.id].isBookmarked) return false;
+            const idStr = String(job.id);
+            if (!state[idStr] || !state[idStr].isBookmarked) return false;
         }
 
         return true;
