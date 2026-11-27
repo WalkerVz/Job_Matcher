@@ -116,15 +116,58 @@ function parseJobDate(dateStr) {
     return { timestamp: Number.MAX_SAFE_INTEGER - 1, isDeadline: false, isExpired: false };
 }
 
+function getEmploymentMeta(job) {
+    let empType = job.employment_type;
+    const title = (job.title || '').toLowerCase();
+    const level = (job.level || '').toLowerCase();
+    const rawType = (job.type_name || '').toLowerCase();
+
+    if (!empType) {
+        if (/\b(?:intern|internship|magang|pemagangan|apprentice|gip)\b/.test(title) || /\b(?:intern|internship|magang|mahasiswa)\b/.test(level) || /\b(?:intern|internship|magang)\b/.test(rawType)) {
+            empType = 'intern';
+        } else if (/\b(?:kontrak|contract|freelance|mitra|pkwt|outsourc)\b/.test(rawType) && !rawType.includes('full time / contract')) {
+            empType = 'contract';
+        } else if (/\b(?:kontrak|pkwt|freelance|project-based)\b/.test(title)) {
+            empType = 'contract';
+        } else {
+            empType = 'fulltime';
+        }
+    }
+
+    if (empType === 'intern') {
+        return {
+            type: 'intern',
+            icon: '🎓',
+            label: job.type_name && /magang|intern/i.test(job.type_name) ? job.type_name : 'Magang / Internship'
+        };
+    }
+    if (empType === 'contract') {
+        return {
+            type: 'contract',
+            icon: '📄',
+            label: job.type_name && /kontrak|contract|freelance|mitra/i.test(job.type_name) ? job.type_name : 'Karyawan Kontrak'
+        };
+    }
+    return {
+        type: 'fulltime',
+        icon: '💼',
+        label: job.type_name && !['-', 'full time / contract'].includes(rawType) ? job.type_name : 'Full-Time'
+    };
+}
+
 function prepareJobsIndex(jobs) {
     jobs.forEach(job => {
         const nlp = job.nlp_breakdown || {};
         const skills = [...(nlp.mandatory_skills || []), ...(nlp.preferred_skills || nlp.plus_skills || [])].join(' ');
+        const empMeta = getEmploymentMeta(job);
+        job._empMeta = empMeta;
         job._searchText = [
             job.title || '',
             job.organization_name || '',
             job.group || '',
             job.location || '',
+            empMeta.label,
+            empMeta.type === 'contract' ? 'kontrak contract freelance' : (empMeta.type === 'intern' ? 'intern magang internship' : 'fulltime full-time tetap'),
             skills
         ].join(' ').toLowerCase();
         job._dueMeta = parseJobDate(job.due_date);
@@ -207,6 +250,7 @@ window.filterToNewJobs = function () {
     matchFilter.value = 'all';
     sourceFilter.value = 'all';
     if (expFilter) expFilter.value = 'all';
+    if (employmentFilter) employmentFilter.value = 'all';
     sortSelect.value = 'score';
     wishlistOnly = false;
     if (wishlistToggleBtn) wishlistToggleBtn.classList.remove('active');
@@ -235,6 +279,7 @@ const searchInput = document.getElementById('searchInput');
 const matchFilter = document.getElementById('matchFilter');
 const sourceFilter = document.getElementById('sourceFilter');
 const expFilter = document.getElementById('expFilter');
+const employmentFilter = document.getElementById('employmentFilter');
 const sortSelect = document.getElementById('sortSelect');
 const perPageSelect = document.getElementById('perPageSelect');
 const wishlistToggleBtn = document.getElementById('wishlistToggleBtn');
@@ -282,6 +327,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     matchFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     sourceFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     if (expFilter) expFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
+    if (employmentFilter) employmentFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     sortSelect.addEventListener('change', () => { currentPage = 1; applyFilters(); });
 
     if (wishlistToggleBtn) {
@@ -294,6 +340,7 @@ document.addEventListener('DOMContentLoaded', async () => {
                 if (matchFilter) matchFilter.value = 'all';
                 if (sourceFilter) sourceFilter.value = 'all';
                 if (expFilter) expFilter.value = 'all';
+                if (employmentFilter) employmentFilter.value = 'all';
                 if (searchInput) searchInput.value = '';
             }
 
@@ -307,6 +354,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             matchFilter.value = 'all';
             sourceFilter.value = 'all';
             if (expFilter) expFilter.value = 'all';
+            if (employmentFilter) employmentFilter.value = 'all';
             sortSelect.value = 'score';
             perPageSelect.value = '10';
             wishlistOnly = false;
@@ -715,6 +763,7 @@ function applyFilters() {
     const matchType = matchFilter.value;
     const sourceVal = sourceFilter.value;
     const expVal = expFilter ? expFilter.value : 'all';
+    const empVal = employmentFilter ? employmentFilter.value : 'all';
     const sortBy = sortSelect.value;
 
     // Parse localStorage ONCE outside filter loop (menghindari ratusan JSON.parse per render)
@@ -763,6 +812,11 @@ function applyFilters() {
             if (expVal === 'experienced' && reqYears <= 1) return false;
         }
 
+        if (empVal !== 'all') {
+            const jobEmp = (job._empMeta || getEmploymentMeta(job)).type;
+            if (jobEmp !== empVal) return false;
+        }
+
         if (wishlistOnly) {
             const item = savedState[String(job.id)];
             if (!item || !item.isBookmarked) return false;
@@ -777,6 +831,7 @@ function applyFilters() {
         if (matchType !== 'all') activeCount++;
         if (sourceVal !== 'all') activeCount++;
         if (expVal !== 'all') activeCount++;
+        if (empVal !== 'all') activeCount++;
         if (sortBy !== 'score') activeCount++;
         if (wishlistOnly) activeCount++;
         if (query !== '') activeCount++;
@@ -1001,6 +1056,7 @@ function renderJobList() {
         const dueMetaTag = dueLabel
             ? `<span class="meta-tag ${isExpired ? 'expired' : 'highlight'}">${isExpired ? '⌛ Tutup:' : '📅 Deadline:'} ${dueLabel}</span>`
             : '';
+        const empMeta = job._empMeta || getEmploymentMeta(job);
 
         const card = document.createElement('div');
         card.className = newJobIds.has(idStr) ? cardClass + ' is-new-job' : cardClass;
@@ -1031,11 +1087,11 @@ function renderJobList() {
                 </div>
                 
                 <div class="job-meta-tags">
+                    <span class="employment-badge ${empMeta.type}">${empMeta.icon} ${escapeHtml(empMeta.label)}</span>
                     <span class="meta-tag">📍 ${escapeHtml(formatLocationShort(job.location))}</span>
                     <span class="meta-tag">🏢 ${escapeHtml(job.workplace || 'WFO')}</span>
-                    <span class="meta-tag">💼 ${escapeHtml(job.level)}</span>
-                    <span class="meta-tag">📝 ${escapeHtml(job.type_name)}</span>
-                    <span class="meta-tag ${job.parsed_requirements && job.parsed_requirements.exp_years <= 1 ? 'highlight' : ''}">💼 Syarat Exp: ${escapeHtml(job.parsed_requirements ? job.parsed_requirements.experience : 'Fresh Grad')}</span>
+                    <span class="meta-tag">📊 ${escapeHtml(job.level)}</span>
+                    <span class="meta-tag ${job.parsed_requirements && job.parsed_requirements.exp_years <= 1 ? 'highlight' : ''}">⏳ Syarat Exp: ${escapeHtml(job.parsed_requirements ? job.parsed_requirements.experience : 'Fresh Grad')}</span>
                     ${dueMetaTag}
                 </div>
                 
@@ -1146,6 +1202,7 @@ function openJobModal(job) {
     const safeDesc = sanitizeHtml(job.raw_description) || '<p>Tidak ada deskripsi pekerjaan yang dicantumkan.</p>';
     const safeReqs = sanitizeHtml(job.raw_requirements || job.raw_description) || '<p>Tidak ada persyaratan detail yang dicantumkan.</p>';
     const clampedScore = Math.max(0, Math.min(100, Number(job.match_score) || 0));
+    const empMeta = job._empMeta || getEmploymentMeta(job);
 
     modalContent.innerHTML = `
         <div class="modal-header-section">
@@ -1157,10 +1214,10 @@ function openJobModal(job) {
             </div>
             
             <div class="job-meta-tags">
+                <span class="employment-badge ${empMeta.type}">${empMeta.icon} ${escapeHtml(empMeta.label)}</span>
                 <span class="meta-tag">📍 ${escapeHtml(job.location || 'Lokasi tidak dispesifikasikan')}</span>
                 <span class="meta-tag">🏢 Workplace: ${escapeHtml(job.workplace || 'WFO')}</span>
-                <span class="meta-tag">💼 Level: ${escapeHtml(job.level)}</span>
-                <span class="meta-tag">📝 Kontrak: ${escapeHtml(job.type_name)}</span>
+                <span class="meta-tag">📊 Level: ${escapeHtml(job.level)}</span>
                 ${job.group ? `<span class="meta-tag">📁 Deputi/Perwakilan/Dept: ${escapeHtml(job.group)}</span>` : ''}
                 ${job.due_date ? `<span class="meta-tag highlight">📅 Deadline: ${escapeHtml(job.due_date)}</span>` : ''}
             </div>

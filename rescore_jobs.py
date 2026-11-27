@@ -24,6 +24,7 @@ for job in jobs:
         "organization_name": job.get("organization_name"),
         "slug": job.get("slug"),
         "type_name": job.get("type_name"),
+        "employment_type": job.get("employment_type"),
         "level": job.get("level"),
         "location": location,
         "workplace": job.get("workplace"),

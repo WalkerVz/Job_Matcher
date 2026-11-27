@@ -138,6 +138,25 @@ RE_HULU_MIGAS = re.compile(
     re.IGNORECASE
 )
 
+RE_EMP_INTERN = re.compile(
+    r'\b(?:intern|internship|magang|pemagangan|co-op|student trainee|apprentice|gip)\b',
+    re.IGNORECASE
+)
+RE_EMP_INTERN_TEXT = re.compile(
+    r'\b(?:program pemagangan|internship program|paid internship|posisi magang)\b',
+    re.IGNORECASE
+)
+RE_EMP_CONTRACT = re.compile(
+    r'\b(?:karyawan kontrak|status kontrak|perjanjian kerja waktu tertentu|pkwt|'
+    r'contract[-\s]?based|fixed[-\s]?term|duration of contract|contract role|contract position|'
+    r'project[-\s]?based|maternity leave|outsourc(?:e|ing)|freelance|mitra)\b',
+    re.IGNORECASE
+)
+RE_EMP_FULLTIME = re.compile(
+    r'\b(?:karyawan tetap|full[-\s]?time|permanent|organik|pkwtt)\b',
+    re.IGNORECASE
+)
+
 # Core vs General profile skills (core skills bernilai lebih tinggi daripada istilah umum)
 GENERAL_PROFILE_SKILLS = {"ai", "it", "analytics", "programming", "developer", "web development", "hardware", "software"}
 
@@ -218,6 +237,59 @@ def compact_location(loc: Optional[str], max_items: int = 3) -> str:
         shown = ", ".join(parts[:max_items])
         return f"{shown} (+{len(parts) - max_items} lokasi lainnya)"
     return text[:120]
+
+
+def classify_employment_type(job: Dict[str, Any], eval_text: str = "") -> Tuple[str, str]:
+    """
+    Klasifikasikan tipe kerja secara kanonik menjadi ('fulltime' | 'contract' | 'intern')
+    beserta label `type_name` yang bersih dan konsisten lintas portal.
+    """
+    title = str(job.get("title") or "")
+    level = str(job.get("level") or "")
+    raw_type = str(job.get("type_name") or "").strip()
+    source = str(job.get("source") or "").strip().lower()
+    raw_type_lower = raw_type.lower()
+    title_lower = title.lower()
+    eval_lower = (eval_text or "").lower()
+
+    # 1. Prioritaskan Intern / Magang (memperbaiki Astra 'Karyawan Tetap' / Grab 'Full Time' / Talentics 'Kontrak' pada lowongan Intern)
+    if (
+        RE_EMP_INTERN.search(title)
+        or RE_EMP_INTERN.search(level)
+        or level.strip().lower() == "mahasiswa"
+        or RE_EMP_INTERN.search(raw_type)
+        or (RE_EMP_INTERN_TEXT.search(eval_lower) and not RE_TRAINEE.search(title))
+    ):
+        return "intern", "Magang / Internship"
+
+    # 2. Cek Kontrak / Freelance / Mitra / PKWT / Project-Based
+    is_ambiguous_raw = raw_type_lower in ("", "-", "full time / contract", "full time / remote")
+    if not is_ambiguous_raw and any(
+        kw in raw_type_lower for kw in ("kontrak", "contract", "freelance", "mitra", "temporary", "part time", "part-time", "outsource")
+    ):
+        if "freelance" in raw_type_lower:
+            return "contract", "Kontrak / Freelance"
+        if "mitra" in raw_type_lower:
+            return "contract", "Kontrak / Mitra"
+        return "contract", "Karyawan Kontrak"
+
+    if RE_EMP_CONTRACT.search(title) or RE_EMP_CONTRACT.search(eval_lower):
+        if "freelance" in title_lower or "freelance" in eval_lower:
+            return "contract", "Kontrak / Freelance"
+        return "contract", "Karyawan Kontrak"
+
+    if source == "micro1" and (re.search(r'\bcontract\b', eval_lower) or "/ hr" in eval_lower):
+        return "contract", "Kontrak / Freelance"
+
+    # 3. Full-Time / Karyawan Tetap
+    if "karyawan tetap" in raw_type_lower:
+        return "fulltime", "Karyawan Tetap"
+    if "remote" in raw_type_lower or source == "micro1":
+        return "fulltime", "Full-Time (Remote)"
+    if RE_EMP_FULLTIME.search(raw_type) or is_ambiguous_raw:
+        return "fulltime", "Full-Time"
+
+    return "fulltime", raw_type
 
 
 def deduplicate_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
@@ -890,6 +962,7 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
     # Deduplikasi raw_requirements jika identik dengan raw_description (hemat ~450 KB di JSON)
     raw_desc_out = desc_html
     raw_req_out = "" if (req_html and req_html.strip() == desc_html.strip()) else req_html
+    emp_type, norm_type_name = classify_employment_type(job, eval_text)
 
     return {
         "id": job.get("id"),
@@ -897,7 +970,8 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
         "organization_id": job.get("organization_id"),
         "organization_name": org_name,
         "slug": job.get("slug"),
-        "type_name": job.get("type_name", "Karyawan Tetap"),
+        "type_name": norm_type_name,
+        "employment_type": emp_type,
         "level": job.get("level", "Staff"),
         "location": compact_location(job.get("location")),
         "workplace": job.get("workplace", "WFO"),
@@ -1204,14 +1278,22 @@ def scrape_astra_jobs(session: Optional[requests.Session] = None, max_workers: i
     for job in detailed:
         req_text = job.get("requirement", "") or ""
         desc_text = job.get("description", "") or ""
+        title_str = str(job.get("positionTitleName") or "")
+        level_str = str(job.get("categoryName") or "Profesional")
+        if RE_EMP_INTERN.search(title_str) or level_str.lower() == "mahasiswa":
+            astra_type = "Magang / Internship"
+        elif "kontrak" in (req_text + desc_text).lower():
+            astra_type = "Karyawan Kontrak"
+        else:
+            astra_type = "Karyawan Tetap"
         normalized_jobs.append({
             "id": job.get("vacancyId"),
-            "title": job.get("positionTitleName"),
+            "title": title_str,
             "organization_id": job.get("branchId"),
             "organization_name": job.get("branchName"),
             "slug": f"astra-{job.get('vacancyId')}",
-            "type_name": "Karyawan Kontrak" if "kontrak" in (req_text + desc_text).lower() else "Karyawan Tetap",
-            "level": job.get("categoryName", "Profesional"),
+            "type_name": astra_type,
+            "level": level_str,
             "location": parse_location_from_text(req_text),
             "workplace": "Work From Office (WFO)",
             "due_date": format_astra_date(job.get("endDate", "")),
@@ -1455,8 +1537,8 @@ def scrape_grab_careers(session: Optional[requests.Session] = None, max_workers:
                     "organization_id": "Grab",
                     "organization_name": "Grab Indonesia",
                     "slug": f"grab-{job_id}",
-                    "type_name": "Full Time",
-                    "level": "Profesional",
+                    "type_name": "Magang / Internship" if RE_EMP_INTERN.search(title) else "Full Time",
+                    "level": "Intern" if RE_EMP_INTERN.search(title) else "Profesional",
                     "location": location,
                     "workplace": "Hybrid / WFO",
                     "due_date": "Aktif",
@@ -1823,6 +1905,12 @@ def scrape_micro1_jobs(session: Optional[requests.Session] = None, max_workers: 
         full_desc = (desc or stub['title']) + salary_str
         stub['description'] = full_desc
         stub['requirements'] = full_desc
+        if re.search(r'\bcontract\b', full_desc, re.IGNORECASE) or '/ hr' in full_desc.lower():
+            stub['type_name'] = 'Kontrak / Freelance'
+        elif RE_EMP_INTERN.search(stub.get('title', '')):
+            stub['type_name'] = 'Magang / Internship'
+        else:
+            stub['type_name'] = 'Full-Time (Remote)'
         stub.pop('salary', None)
         return stub
 
@@ -1905,6 +1993,8 @@ def scrape_linkedin_jobs(session: Optional[requests.Session] = None, max_per_key
         detail_url = f"https://www.linkedin.com/jobs-guest/jobs/api/jobPosting/{jid}"
         desc_html = ""
         raw_desc = f"{card['title']} di {card['company']}, Lokasi: {card['location']}."
+        li_emp_type = ""
+        li_seniority = "Profesional"
         try:
             r = session.get(detail_url, timeout=8)
             if r.status_code == 200:
@@ -1913,6 +2003,16 @@ def scrape_linkedin_jobs(session: Optional[requests.Session] = None, max_per_key
                 if desc_el:
                     desc_html = str(desc_el)
                     raw_desc = clean_html(desc_html)
+                for crit in soup.find_all("li", class_="description__job-criteria-item"):
+                    hdr = crit.find("h3")
+                    val = crit.find("span")
+                    if hdr and val:
+                        h_txt = hdr.get_text(strip=True).lower()
+                        v_txt = val.get_text(strip=True)
+                        if "employment type" in h_txt or "jenis pekerjaan" in h_txt:
+                            li_emp_type = v_txt
+                        elif "seniority" in h_txt or "tingkat senioritas" in h_txt:
+                            li_seniority = v_txt
         except Exception:
             pass
 
@@ -1925,8 +2025,8 @@ def scrape_linkedin_jobs(session: Optional[requests.Session] = None, max_per_key
             "organization_id": "LinkedIn",
             "organization_name": card["company"],
             "slug": f"linkedin-{jid}",
-            "type_name": "Full Time / Contract",
-            "level": "Profesional",
+            "type_name": li_emp_type or "Full Time",
+            "level": li_seniority or "Profesional",
             "location": card["location"],
             "workplace": "Hybrid / Onsite",
             "due_date": card["date"],
