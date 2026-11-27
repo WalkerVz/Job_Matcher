@@ -4,20 +4,42 @@ Berisi PROFILE user dan konstanta bersama.
 Import dari file ini agar tidak ada duplikasi definisi di setiap modul.
 """
 
+import html
 import os
 import re
 from dotenv import load_dotenv
 
 load_dotenv()
 
+_RE_HTML_TAG = re.compile(r'<[^>]+>')
+_RE_MULTI_SPACE = re.compile(r'\s+')
+
+
 def clean_html(raw_html):
-    """Membersihkan tag HTML dan spasi berlebih dari teks."""
+    """Membersihkan tag HTML, HTML entities, dan spasi berlebih dari teks."""
     if not raw_html:
         return ""
-    cleanr = re.compile(r'<.*?>')
-    cleantext = re.sub(cleanr, ' ', raw_html)
-    cleantext = re.sub(r'\s+', ' ', cleantext)
-    return cleantext.strip()
+    text = html.unescape(str(raw_html))
+    cleantext = _RE_HTML_TAG.sub(' ', text)
+    return _RE_MULTI_SPACE.sub(' ', cleantext).strip()
+
+
+# Konstanta Taksonomi Skill & Soft Skill Bersama (Single Source of Truth)
+SKILL_TAXONOMY = {
+    "Languages & Core": ["Python", "SQL", "PHP", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
+    "Data Science & Analytics": ["Machine Learning", "Deep Learning", "NLP", "Pandas", "NumPy", "Scikit-Learn", "PyTorch", "TensorFlow", "Data Analysis", "Statistical Modeling", "Analytics", "Dataiku"],
+    "BI & Visualization": ["Power BI", "PowerBI", "Tableau", "Looker", "Metabase", "Excel", "Data Studio"],
+    "Engineering & Tools": ["React", "React.js", "Laravel", "Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL", "ArcGIS"],
+    "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Upstream", "Agile", "Scrum", "Project Management", "AI Engineer"],
+}
+
+SOFT_SKILLS = [
+    "komunikasi", "communication", "teamwork", "tim kerja", "leadership", "kepemimpinan",
+    "problem solving", "pemecahan masalah", "critical thinking", "berpikir kritis",
+    "analytical", "analitis", "attention to detail", "perhatian detail",
+    "adaptability", "adaptif", "flexibility", "fleksibel", "self-motivated", "termotivasi",
+    "time management", "manajemen waktu", "presentation", "presentasi",
+]
 
 # Konstanta Bulan Indonesia
 MONTHS_ID = {

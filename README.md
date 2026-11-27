@@ -57,7 +57,7 @@ job_matcher/
 - 🟣 **OpenTrain.ai** (`opentrain.ai`) — Remote AI Training, LLM Evaluation & RLHF roles
 - 🟢 **Grab Careers Indonesia** (`grab.careers`)
 - 🟡 **Indosat Ooredoo Hutchison (IOH)** (`careers.ioh.co.id`)
-- 🏛️ **SKK Migas & KKKS / Hulu Migas (Talentics)** (`jobs.talentics.id`)
+- 🏛️ **Talentics** (`jobs.talentics.id`) — Lowongan IT, Data Science, Software Development, IT Support, & Energy (BRI, Mandiri, SKK Migas, BFI, Tech)
 - 🛢️ **Pertamina Training & Consulting (PTC)** (`recruitment.pertamina-ptc.com`)
 - 🌴 **SawitPRO** (`sawitpro.id/jobs`)
 - 🍲 **Indofood Careers** (`career.indofood.com`)

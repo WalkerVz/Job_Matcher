@@ -5,6 +5,132 @@ let currentPage = 1;
 let itemsPerPage = 10;
 let wishlistOnly = false;
 
+// ─── Security, Formatting & Date Utilities ────────────────────────────────────
+function escapeHtml(unsafe) {
+    if (unsafe === null || unsafe === undefined) return '';
+    const map = { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' };
+    return String(unsafe).replace(/[&<>"']/g, (c) => map[c]);
+}
+
+function sanitizeUrl(url) {
+    if (!url) return '#';
+    const trimmed = String(url).trim();
+    if (/^(?:https?:|mailto:)/i.test(trimmed)) return trimmed;
+    return '#';
+}
+
+function sanitizeHtml(rawHtml) {
+    if (!rawHtml) return '';
+    const template = document.createElement('template');
+    template.innerHTML = rawHtml;
+    const forbidden = template.content.querySelectorAll('script, iframe, object, embed, style, link, meta');
+    forbidden.forEach(el => el.remove());
+
+    const walker = document.createTreeWalker(template.content, NodeFilter.SHOW_ELEMENT);
+    let node;
+    while ((node = walker.nextNode())) {
+        for (const attr of Array.from(node.attributes)) {
+            const name = attr.name.toLowerCase();
+            const val = attr.value.trim().toLowerCase();
+            if (name.startsWith('on') || ((name === 'href' || name === 'src') && val.startsWith('javascript:'))) {
+                node.removeAttribute(attr.name);
+            }
+        }
+    }
+    return template.innerHTML;
+}
+
+function showToast(message, durationMs = 2400) {
+    let toast = document.getElementById('appToastNotification');
+    if (!toast) {
+        toast = document.createElement('div');
+        toast.id = 'appToastNotification';
+        toast.className = 'toast-notification';
+        document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.classList.add('visible');
+    clearTimeout(toast._hideTimer);
+    toast._hideTimer = setTimeout(() => toast.classList.remove('visible'), durationMs);
+}
+
+function formatLocationShort(loc) {
+    if (!loc) return 'Lokasi tidak dispesifikasikan';
+    const cleaned = String(loc).replace(/\s+/g, ' ').trim();
+    if (cleaned.length <= 65) return cleaned;
+    if (cleaned.includes('(+') && cleaned.includes('lokasi lainnya)')) return cleaned;
+    const parts = cleaned.split(/\s*,\s*/).filter(Boolean);
+    if (parts.length > 3) {
+        return `${parts.slice(0, 3).join(', ')} (+${parts.length - 3} lokasi)`;
+    }
+    return cleaned.slice(0, 62) + '...';
+}
+
+const ID_MONTH_MAP = {
+    jan: 0, januari: 0, january: 0,
+    feb: 1, februari: 1, february: 1,
+    mar: 2, maret: 2, march: 2,
+    apr: 3, april: 3,
+    mei: 4, may: 4,
+    jun: 5, juni: 5, june: 5,
+    jul: 6, juli: 6, july: 6,
+    agu: 7, ags: 7, agustus: 7, aug: 7, august: 7,
+    sep: 8, sept: 8, september: 8,
+    okt: 9, oktober: 9, oct: 9, october: 9,
+    nov: 10, november: 10,
+    des: 11, desember: 11, dec: 11, december: 11
+};
+
+function parseJobDate(dateStr) {
+    if (!dateStr) return { timestamp: Number.MAX_SAFE_INTEGER - 1, isDeadline: false, isExpired: false };
+    const raw = String(dateStr).trim();
+    const lower = raw.toLowerCase();
+    if (lower === 'aktif' || lower === 'active') {
+        return { timestamp: Number.MAX_SAFE_INTEGER - 2, isDeadline: false, isExpired: false };
+    }
+
+    let parsedDate = null;
+    // ISO YYYY-MM-DD
+    const isoMatch = raw.match(/^(\d{4})-(\d{2})-(\d{2})/);
+    if (isoMatch) {
+        parsedDate = new Date(Number(isoMatch[1]), Number(isoMatch[2]) - 1, Number(isoMatch[3]), 23, 59, 59);
+    } else {
+        // Format "07 Des 2026" / "13 December 2026"
+        const idMatch = raw.match(/^(\d{1,2})\s+([a-zA-Z]+)\s+(\d{4})/);
+        if (idMatch) {
+            const monthIdx = ID_MONTH_MAP[idMatch[2].toLowerCase()];
+            if (monthIdx !== undefined) {
+                parsedDate = new Date(Number(idMatch[3]), monthIdx, Number(idMatch[1]), 23, 59, 59);
+            }
+        }
+    }
+
+    if (parsedDate && !isNaN(parsedDate.getTime())) {
+        const ts = parsedDate.getTime();
+        const todayStart = new Date();
+        todayStart.setHours(0, 0, 0, 0);
+        return { timestamp: ts, isDeadline: true, isExpired: ts < todayStart.getTime() };
+    }
+
+    // Relative strings ("2 minggu yang lalu", "3 days ago") -> bukan deadline
+    return { timestamp: Number.MAX_SAFE_INTEGER - 1, isDeadline: false, isExpired: false };
+}
+
+function prepareJobsIndex(jobs) {
+    jobs.forEach(job => {
+        const nlp = job.nlp_breakdown || {};
+        const skills = [...(nlp.mandatory_skills || []), ...(nlp.preferred_skills || nlp.plus_skills || [])].join(' ');
+        job._searchText = [
+            job.title || '',
+            job.organization_name || '',
+            job.group || '',
+            job.location || '',
+            skills
+        ].join(' ').toLowerCase();
+        job._dueMeta = parseJobDate(job.due_date);
+    });
+}
+
 // ─── State job baru ───────────────────────────────────────────────────────────
 let newJobIds = new Set(); // ID job yang baru muncul sejak scrape terakhir
 
@@ -20,7 +146,6 @@ function markAllAsSeen() {
     const allIds = allJobs.map(j => String(j.id));
     localStorage.setItem(SEEN_KEY, JSON.stringify(allIds));
     newJobIds = new Set();
-    // Hapus banner & semua badge 'Baru'
     const banner = document.getElementById('newJobsBanner');
     if (banner) banner.remove();
     document.querySelectorAll('.new-job-badge').forEach(el => el.remove());
@@ -38,45 +163,18 @@ function updateNewJobsNavBadge(count) {
     }
 }
 
-async function loadNewJobsData() {
-    try {
-        const res = await fetch('new_jobs.json?t=' + Date.now(), { cache: 'no-store' });
-        if (!res.ok) {
-            console.log('[DEBUG] new_jobs.json fetch gagal:', res.status);
-            return;
-        }
-        const data = await res.json();
-        console.log('[DEBUG] new_jobs.json loaded:', data);
-        
-        if (!data.new_ids || data.count === 0) {
-            console.log('[DEBUG] Tidak ada job baru atau count = 0');
-            return;
-        }
+function processNewJobsData(data) {
+    if (!data || !data.new_ids || data.count === 0) return;
+    const seenIds = getSeenIds();
+    const trulyNew = data.new_ids.filter(id => !seenIds.has(String(id)));
+    if (trulyNew.length === 0) return;
 
-        const seenIds = getSeenIds();
-        console.log('[DEBUG] Seen IDs dari localStorage:', Array.from(seenIds));
-        console.log('[DEBUG] New IDs dari server:', data.new_ids);
-        
-        // Job baru = ada di new_jobs.json DAN belum pernah dilihat user
-        const trulyNew = data.new_ids.filter(id => !seenIds.has(String(id)));
-        console.log('[DEBUG] Truly new IDs (belum dilihat):', trulyNew);
-        
-        if (trulyNew.length === 0) {
-            console.log('[DEBUG] Semua job sudah pernah dilihat, tidak tampilkan banner');
-            return;
-        }
-
-        newJobIds = new Set(trulyNew.map(String));
-        console.log('[DEBUG] newJobIds state updated:', Array.from(newJobIds));
-        showNewJobsBanner(trulyNew.length, data.scraped_at);
-        updateNewJobsNavBadge(trulyNew.length);
-    } catch (e) {
-        console.error('[DEBUG] Error loadNewJobsData:', e);
-    }
+    newJobIds = new Set(trulyNew.map(String));
+    showNewJobsBanner(trulyNew.length, data.scraped_at);
+    updateNewJobsNavBadge(trulyNew.length);
 }
 
 function showNewJobsBanner(count, scrapedAt) {
-    // Hindari duplikat banner
     const existing = document.getElementById('newJobsBanner');
     if (existing) existing.remove();
 
@@ -88,7 +186,7 @@ function showNewJobsBanner(count, scrapedAt) {
             <span class="new-jobs-banner-icon">🆕</span>
             <div>
                 <strong>${count} lowongan baru</strong> ditemukan sejak scrape terakhir
-                <span class="new-jobs-banner-time">${scrapedAt}</span>
+                <span class="new-jobs-banner-time">${escapeHtml(scrapedAt || '')}</span>
             </div>
         </div>
         <div class="new-jobs-banner-actions">
@@ -97,7 +195,6 @@ function showNewJobsBanner(count, scrapedAt) {
         </div>
     `;
 
-    // Sisipkan tepat di atas filter bar
     const mainSection = document.querySelector('.main-section');
     const filterBar = document.querySelector('.filters-bar');
     if (mainSection && filterBar) {
@@ -106,15 +203,15 @@ function showNewJobsBanner(count, scrapedAt) {
 }
 
 window.filterToNewJobs = function () {
-    // Reset filter lain, lalu render ulang — card dengan badge 'Baru' akan muncul di atas
     searchInput.value = '';
     matchFilter.value = 'all';
     sourceFilter.value = 'all';
     if (expFilter) expFilter.value = 'all';
     sortSelect.value = 'score';
+    wishlistOnly = false;
+    if (wishlistToggleBtn) wishlistToggleBtn.classList.remove('active');
     currentPage = 1;
 
-    // Pindahkan job baru ke urutan paling atas sementara
     filteredJobs = [
         ...allJobs.filter(j => newJobIds.has(String(j.id))),
         ...allJobs.filter(j => !newJobIds.has(String(j.id)))
@@ -125,7 +222,7 @@ window.filterToNewJobs = function () {
 // ─────────────────────────────────────────────────────────────────────────────
 
 // Debounce helper – prevents search firing on every keypress
-function debounce(fn, delay = 300) {
+function debounce(fn, delay = 250) {
     let timer;
     return (...args) => {
         clearTimeout(timer);
@@ -158,7 +255,18 @@ const resetFilterBtn = document.getElementById('resetFilterBtn');
 
 // Initialize Dashboard
 document.addEventListener('DOMContentLoaded', async () => {
-    // 1. Fetch data
+    // Setup single delegated click listener for job cards
+    if (jobListContainer) {
+        jobListContainer.addEventListener('click', (e) => {
+            if (e.target.closest('.bookmark-btn')) return;
+            const card = e.target.closest('.job-card[data-job-id]');
+            if (!card) return;
+            const job = allJobs.find(j => String(j.id) === card.dataset.jobId);
+            if (job) openJobModal(job);
+        });
+    }
+
+    // Fetch data (skeleton renders immediately inside loadJobsData)
     await loadJobsData();
 
     // Setup mobile filter toggle
@@ -169,8 +277,8 @@ document.addEventListener('DOMContentLoaded', async () => {
         });
     }
 
-    // 2. Setup event listeners
-    searchInput.addEventListener('input', debounce(() => { currentPage = 1; applyFilters(); }, 250));
+    // Setup event listeners
+    searchInput.addEventListener('input', debounce(() => { currentPage = 1; applyFilters(); }, 200));
     matchFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     sourceFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
     if (expFilter) expFilter.addEventListener('change', () => { currentPage = 1; applyFilters(); });
@@ -182,7 +290,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             wishlistToggleBtn.classList.toggle('active', wishlistOnly);
             currentPage = 1;
 
-            // Jika mengaktifkan mode wishlist, reset filter lain agar seluruh lowongan wishlist tampil
             if (wishlistOnly) {
                 if (matchFilter) matchFilter.value = 'all';
                 if (sourceFilter) sourceFilter.value = 'all';
@@ -196,7 +303,6 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (resetFilterBtn) {
         resetFilterBtn.addEventListener('click', () => {
-            // Reset all filters to default values
             searchInput.value = '';
             matchFilter.value = 'all';
             sourceFilter.value = 'all';
@@ -206,7 +312,6 @@ document.addEventListener('DOMContentLoaded', async () => {
             wishlistOnly = false;
             if (wishlistToggleBtn) wishlistToggleBtn.classList.remove('active');
 
-            // Reset pagination and re-apply filters
             currentPage = 1;
             itemsPerPage = 10;
             applyFilters();
@@ -242,14 +347,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     modalCloseBtn.addEventListener('click', closeModal);
 
-    // Close modal on click outside content
     detailModal.addEventListener('click', (e) => {
-        if (e.target === detailModal) {
-            closeModal();
-        }
+        if (e.target === detailModal) closeModal();
     });
 
-    // Close modal on Escape key
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape' && detailModal.classList.contains('active')) {
             closeModal();
@@ -257,52 +358,84 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
 });
 
-// Load Jobs from JSON file
-async function loadJobsData() {
-    try {
-        // Attempt to fetch from local json first
-        // Tambah timestamp query string agar bypass cache SW di mobile
-        const response = await fetch('matched_jobs.json?t=' + Date.now(), { cache: 'no-store' });
-        if (response.ok) {
-            allJobs = await response.json();
-        } else {
-            throw new Error('Local JSON fetch failed');
-        }
-    } catch (e) {
-        console.warn('Fetch failed or was blocked by CORS. Checking for global window variable fallback...');
+// Lazy fallback loader: hanya download matched_jobs.js (3+ MB) jika fetch JSON gagal (misal file://)
+function loadFallbackJobsScript() {
+    return new Promise((resolve, reject) => {
         if (window.matchedJobs && window.matchedJobs.length > 0) {
-            allJobs = window.matchedJobs;
+            resolve();
+            return;
         }
-    }
+        const script = document.createElement('script');
+        script.src = 'matched_jobs.js?v=20261127_1';
+        script.onload = resolve;
+        script.onerror = reject;
+        document.body.appendChild(script);
+    });
+}
 
-    // Try to load last updated timestamp
-    try {
-        const luRes = await fetch('last_updated.json?t=' + Date.now(), { cache: 'no-store' });
-        if (luRes.ok) {
-            const luData = await luRes.json();
-            if (luData && luData.last_updated) {
-                const badgeEl = document.getElementById('lastUpdatedDate');
-                if (badgeEl) badgeEl.textContent = luData.last_updated;
-            }
-        } else {
-            throw new Error('Local last_updated fetch failed');
-        }
-    } catch (err) {
-        console.warn('Failed to load last updated timestamp from JSON:', err);
-        if (window.lastUpdated) {
-            const badgeEl = document.getElementById('lastUpdatedDate');
-            if (badgeEl) badgeEl.textContent = window.lastUpdated;
-        }
-    }
-
-    // Show skeleton while loading
+// Load Jobs, Timestamp, and New-Jobs metadata in parallel
+async function loadJobsData() {
     showSkeleton();
+    const cacheBust = Date.now();
+
+    const [jobsRes, luRes, newJobsRes] = await Promise.allSettled([
+        fetch(`matched_jobs.json?t=${cacheBust}`, { cache: 'no-store' }),
+        fetch(`last_updated.json?t=${cacheBust}`, { cache: 'no-store' }),
+        fetch(`new_jobs.json?t=${cacheBust}`, { cache: 'no-store' })
+    ]);
+
+    let loadedFromJson = false;
+    if (jobsRes.status === 'fulfilled' && jobsRes.value.ok) {
+        try {
+            allJobs = await jobsRes.value.json();
+            loadedFromJson = Array.isArray(allJobs);
+        } catch (err) {
+            console.warn('Gagal parse matched_jobs.json:', err);
+        }
+    }
+
+    if (!loadedFromJson) {
+        console.warn('JSON fetch gagal atau diblokir CORS. Memuat fallback matched_jobs.js...');
+        try {
+            await loadFallbackJobsScript();
+            if (window.matchedJobs && window.matchedJobs.length > 0) {
+                allJobs = window.matchedJobs;
+            }
+        } catch (err) {
+            console.error('Fallback matched_jobs.js gagal dimuat:', err);
+        }
+    }
+
+    const badgeEl = document.getElementById('lastUpdatedDate');
+    if (luRes.status === 'fulfilled' && luRes.value.ok) {
+        try {
+            const luData = await luRes.value.json();
+            if (luData && luData.last_updated && badgeEl) {
+                badgeEl.textContent = luData.last_updated;
+            }
+        } catch (err) {
+            console.warn('Gagal parse last_updated.json:', err);
+        }
+    } else if (window.lastUpdated && badgeEl) {
+        badgeEl.textContent = window.lastUpdated;
+    }
+
+    if (newJobsRes.status === 'fulfilled' && newJobsRes.value.ok) {
+        try {
+            const njData = await newJobsRes.value.json();
+            processNewJobsData(njData);
+        } catch (err) {
+            console.warn('Gagal parse new_jobs.json:', err);
+        }
+    }
+
+    if (!allJobs || allJobs.length === 0) {
+        renderError('Gagal Memuat Lowongan', 'Pastikan matched_jobs.json tersedia atau jalankan server web lokal.');
+        return;
+    }
+
+    prepareJobsIndex(allJobs);
     updateWishlistCountBadge();
-    
-    // ⚠️ FIX RACE CONDITION: Ensure loadNewJobsData completes BEFORE applyFilters
-    await loadNewJobsData(); // Wait untuk selesai
-    
-    // Now safe to apply filters
     applyFilters();
 }
 
@@ -325,8 +458,8 @@ function renderError(title, subtitle) {
     jobListContainer.innerHTML = `
         <div class="empty-container">
             <div class="empty-icon">⚠️</div>
-            <h3>${title}</h3>
-            <p>${subtitle}</p>
+            <h3>${escapeHtml(title)}</h3>
+            <p>${escapeHtml(subtitle)}</p>
         </div>
     `;
     jobCountEl.textContent = '0 Lowongan';
@@ -341,10 +474,17 @@ function getSavedJobsState() {
     }
 }
 
+function getApplicationsState() {
+    try {
+        return JSON.parse(localStorage.getItem('jobMatcher_applications') || '{}');
+    } catch (e) {
+        return {};
+    }
+}
+
 function updateWishlistCountBadge() {
     if (!wishlistCountEl) return;
     const state = getSavedJobsState();
-    // Sinkronkan dengan allJobs agar hanya menghitung lowongan yang valid dan ada di data saat ini
     const validJobIds = (allJobs && allJobs.length > 0) ? new Set(allJobs.map(j => String(j.id))) : null;
     const count = Object.keys(state).filter(id => {
         const item = state[id];
@@ -367,19 +507,18 @@ window.toggleBookmark = function (event, jobId) {
 };
 
 window.changeApplicationStatus = function (jobId, statusValue) {
-    const state = getSavedJobsState();
     const idStr = String(jobId);
-    state[idStr] = { ...(state[idStr] || {}), status: statusValue, isBookmarked: true };
+    const shouldBookmark = (statusValue !== 'not_applied' && statusValue !== 'rejected');
+    const state = getSavedJobsState();
+    state[idStr] = { ...(state[idStr] || {}), status: statusValue, isBookmarked: shouldBookmark };
     localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
-    
-    // Also sync with tracker applications
+
     const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    let applications = applicationsData ? JSON.parse(applicationsData) : {};
-    
-    if (!applications[jobId]) {
-        const job = allJobs.find(j => j.id == jobId);
-        applications[jobId] = {
+    const applications = getApplicationsState();
+
+    if (!applications[idStr]) {
+        const job = allJobs.find(j => String(j.id) === idStr);
+        applications[idStr] = {
             jobId: jobId,
             jobTitle: job ? job.title : 'Unknown',
             company: job ? (job.organization_name || job.company || 'Unknown') : 'Unknown',
@@ -390,12 +529,15 @@ window.changeApplicationStatus = function (jobId, statusValue) {
             followUpDate: null
         };
     } else {
-        applications[jobId].status = statusValue;
+        applications[idStr].status = statusValue;
     }
-    
+
     localStorage.setItem(applicationsKey, JSON.stringify(applications));
+    const trackerSelect = document.getElementById(`appStatus_${idStr}`);
+    if (trackerSelect) trackerSelect.value = statusValue;
     updateWishlistCountBadge();
-    applyFilters();
+    refreshJobCardUI(idStr);
+    showToast('📌 Status lamaran diperbarui');
 };
 
 function generateCoverLetterHTML(job) {
@@ -407,43 +549,43 @@ function generateCoverLetterHTML(job) {
     const companyName = job.organization_name || 'Perusahaan';
     const jobTitle = job.title || 'Posisi yang dilamar';
 
-    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika UIN Suska Riau (IPK 3.39 | TOEFL 537) dengan pengalaman profesional sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR), Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student 86.96), serta Freelance Web Dev & Machine Learning. Saya memiliki keahlian teruji dalam ${requiredSkills} yang sangat sejalan dengan kebutuhan posisi ${jobTitle}.\n\nMelalui proyek nyata seperti QC Log Analyzer (Python/Dataiku), model Credit Risk Loan (turunkan gagal bayar 12%), dan pengembangan aplikasi web (React/Laravel), saya siap memberikan kontribusi nyata bagi efisiensi operasional ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
+    const pitchID = `Yth. Tim Rekrutmen ${companyName},\n\nPerkenalkan saya Muhammad Ravil, lulusan S1 Teknik Informatika UIN Suska Riau (IPK 3.39 | TOEFL 537) dengan pengalaman profesional sebagai Data Science Intern di PT Pertamina Hulu Rokan (PHR), IT Support di Universitas Abdurrab, Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student 86.96), serta Freelance Web Dev & Machine Learning. Saya memiliki keahlian teruji dalam ${requiredSkills} yang sangat sejalan dengan kebutuhan posisi ${jobTitle}.\n\nMelalui proyek nyata seperti QC Log Analyzer (Python/Dataiku), model Credit Risk Loan (turunkan gagal bayar 12%), dan pengembangan aplikasi web (React/Laravel), saya siap memberikan kontribusi nyata bagi efisiensi operasional ${companyName}. Terlampir CV lengkap saya untuk pertimbangan Bapak/Ibu. Terima kasih.`;
 
-    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate from UIN Suska Riau (GPA 3.39 | TOEFL 537) with hands-on industry experience as an AI Engineer at PT Pertamina Hulu Rokan (PHR), Data Scientist Intern at Id/x partners x Rakamin Academy, and Freelance Web Developer & ML Engineer. I bring practical technical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nWith a track record of building automated analytics applications (Python/Dataiku), predictive ML models (12% credit risk reduction), and full-stack web solutions (React/Laravel), I look forward to contributing to data-driven growth at ${companyName}. Please find my resume attached for your review. Thank you.`;
+    const pitchEN = `Dear ${companyName} Recruitment Team,\n\nMy name is Muhammad Ravil, a Computer Science graduate from UIN Suska Riau (GPA 3.39 | TOEFL 537) with hands-on industry experience in Data Science at PT Pertamina Hulu Rokan (PHR), IT Support at Universitas Abdurrab, Data Scientist Intern at Id/x partners x Rakamin Academy, and Freelance Web Developer & ML Engineer. I bring practical technical expertise in ${requiredSkills}, aligning directly with the requirements for the ${jobTitle} role.\n\nWith a track record of building automated analytics applications (Python/Dataiku), predictive ML models (12% credit risk reduction), and full-stack web solutions (React/Laravel), I look forward to contributing to data-driven growth at ${companyName}. Please find my resume attached for your review. Thank you.`;
 
-    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dari UIN Suska Riau (IPK 3.39, TOEFL 537) dengan latar belakang pengalaman di industri hulu migas sebagai AI Engineer di PT Pertamina Hulu Rokan (PHR, Juli 2025–Februari 2026). Selama masa kerja tersebut, saya berhasil mengembangkan aplikasi QC Log Analyzer berbasis Python dan Dataiku untuk otomatisasi pemrosesan, monitoring, serta visualisasi data operasional hulu migas.\n\nSelain itu, sebagai Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student Score 86.96, April–Mei 2025), saya memiliki rekam jejak mengembangkan model machine learning Credit Risk Loan yang berhasil menurunkan tingkat gagal bayar pinjaman hingga 12% pada dataset 466.285 data. Saat ini saya juga aktif sebagai Freelance Web Developer & Machine Learning Engineer (PHP, Laravel, React, Python). Pengalaman ini membuat saya sangat terbiasa mengimplementasikan keahlian pada ${requiredSkills}.\n\nKemampuan analisis data yang kuat, keahlian teknis lintas platform (Python, SQL, Dataiku, React, Laravel, Power BI), serta komunikasi kolaboratif membuat saya yakin dapat memberikan kontribusi signifikan bagi ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil\nPekanbaru, Riau | ravilmuhammad987@gmail.com`;
+    const formalID = `Hal: Lamaran Pekerjaan – ${jobTitle}\nKepada Yth.\nTim HR / Rekrutmen\n${companyName}\n\nDengan hormat,\n\nSehubungan dengan informasi lowongan pekerjaan untuk posisi ${jobTitle} di ${companyName}, saya bermaksud mengajukan lamaran untuk bergabung dengan perusahaan Bapak/Ibu.\n\nSaya adalah lulusan S1 Teknik Informatika dari UIN Suska Riau (IPK 3.39, TOEFL 537) dengan latar belakang pengalaman di industri hulu migas sebagai Data Science Intern di PT Pertamina Hulu Rokan (PHR, Juli 2025–Februari 2026) serta IT Support (Hardware & Software) di Universitas Abdurrab. Selama di PHR, saya mengembangkan aplikasi QC Log Analyzer berbasis Python dan Dataiku untuk otomatisasi pemrosesan, monitoring, serta visualisasi data operasional hulu migas.\n\nSelain itu, sebagai Data Scientist Intern di Id/x partners x Rakamin Academy (Best Student Score 86.96, April–Mei 2025), saya memiliki rekam jejak mengembangkan model machine learning Credit Risk Loan yang berhasil menurunkan tingkat gagal bayar pinjaman hingga 12% pada dataset 466.285 data. Saya juga aktif sebagai Freelance Web Developer & Machine Learning Engineer (PHP, Laravel, React, Python). Pengalaman ini membuat saya sangat terbiasa mengimplementasikan keahlian pada ${requiredSkills}.\n\nKemampuan analisis data yang kuat, keahlian teknis lintas platform (Python, SQL, Dataiku, React, Laravel, Power BI), serta troubleshooting IT yang solid membuat saya yakin dapat memberikan kontribusi signifikan bagi ${companyName}.\n\nBesar harapan saya untuk diberikan kesempatan wawancara agar dapat menjelaskan lebih rinci mengenai portofolio saya. Atas perhatian dan kesempatan yang Bapak/Ibu berikan, saya ucapkan terima kasih.\n\nHormat saya,\n\nMuhammad Ravil\nPekanbaru, Riau | ravilmuhammad987@gmail.com`;
 
     return `
         <div class="cover-letter-container">
             <div class="cover-letter-header">
                 <div>
                     <h4>✨ Auto-Generated Application Pitch & Cover Letter</h4>
-                    <p>Dibuat otomatis dari CV asli (Muhammad Ravil | UIN Suska Riau | AI Engineer PHR | Rakamin 86.96 | Freelance Web/ML) dicocokkan dengan keahlian lowongan ini.</p>
+                    <p>Dibuat otomatis dari CV asli (Muhammad Ravil | UIN Suska Riau | IT Support Abdurrab | Data Science PHR | Rakamin 86.96) dicocokkan dengan keahlian lowongan ini.</p>
                 </div>
             </div>
             
             <div class="pitch-section">
                 <div class="pitch-card-title">
                     <h5>💬 Pitch Singkat / LinkedIn Message (Bahasa Indonesia)</h5>
-                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(pitchID)}\`)">📋 Salin Teks</button>
+                    <button class="btn-copy" onclick="copySiblingTextarea(this)">📋 Salin Teks</button>
                 </div>
-                <textarea readonly class="pitch-textarea" rows="5">${pitchID}</textarea>
+                <textarea readonly class="pitch-textarea" rows="5">${escapeHtml(pitchID)}</textarea>
             </div>
 
             <div class="pitch-section">
                 <div class="pitch-card-title">
                     <h5>🌐 Brief Pitch / Recruiter Outreach (English)</h5>
-                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(pitchEN)}\`)">📋 Copy Pitch</button>
+                    <button class="btn-copy" onclick="copySiblingTextarea(this)">📋 Copy Pitch</button>
                 </div>
-                <textarea readonly class="pitch-textarea" rows="5">${pitchEN}</textarea>
+                <textarea readonly class="pitch-textarea" rows="5">${escapeHtml(pitchEN)}</textarea>
             </div>
 
             <div class="pitch-section">
                 <div class="pitch-card-title">
                     <h5>📄 Surat Lamaran Resmi / Formal Cover Letter (ID)</h5>
-                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(formalID)}\`)">📋 Salin Lamaran</button>
+                    <button class="btn-copy" onclick="copySiblingTextarea(this)">📋 Salin Lamaran</button>
                 </div>
-                <textarea readonly class="pitch-textarea" rows="11">${formalID}</textarea>
+                <textarea readonly class="pitch-textarea" rows="11">${escapeHtml(formalID)}</textarea>
             </div>
         </div>
     `;
@@ -452,20 +594,18 @@ function generateCoverLetterHTML(job) {
 function generateATSBoosterHTML(job) {
     const nlp = job.nlp_breakdown || {};
     const mandatory = nlp.mandatory_skills || [];
-    const plus = nlp.plus_skills || [];
+    const plus = nlp.preferred_skills || nlp.plus_skills || [];
     const rawText = ((job.raw_description || '') + ' ' + (job.raw_requirements || '')).toLowerCase();
 
-    // Kata kunci profil autentik dari CV - Muhammad Ravil.pdf
     const ravilProfileKeywords = [
         'python', 'sql', 'data analysis', 'data science', 'machine learning',
         'dataiku', 'excel', 'power bi', 'react', 'laravel', 'php', 'javascript', 'git', 'arcgis',
         'teknik informatika', 'sistem informasi', 'problem solving', 'analisis data',
         'data analyst', 'data scientist', 'ai engineer', 'web development', 'web developer',
         'fullstack', 'full stack', 'it support', 'mysql', 'sentiment analysis', 'naive bayes',
-        'tableau', 'microsoft office', 'troubleshooting'
+        'tableau', 'microsoft office', 'troubleshooting', 'hardware', 'software', 'network'
     ];
 
-    // Identify which mandatory/plus skills Ravil already matches
     const matchedATS = [];
     const missingATS = [];
 
@@ -478,21 +618,20 @@ function generateATSBoosterHTML(job) {
         }
     });
 
-    // Also look for industry standard keywords in description
     const potentialBonusKeywords = ['power bi', 'tableau', 'excel', 'etl', 'data warehouse', 'big data', 'uat', 'dashboard', 'cleaning', 'visualisasi data', 'agile', 'jira', 'sap'];
     const bonusFound = [];
     potentialBonusKeywords.forEach(pk => {
-        if (rawText.includes(pk) && !matchedATS.includes(pk)) {
+        const alreadyMatched = matchedATS.some(m => m.toLowerCase() === pk);
+        if (rawText.includes(pk) && !alreadyMatched) {
             bonusFound.push(pk.toUpperCase());
         }
     });
 
-    const atsScore = Math.min(98, Math.max(82, 75 + (matchedATS.length * 6)));
+    const atsScore = Math.min(98, Math.max(78, 72 + (matchedATS.length * 6)));
 
-    // Generate tailored resume bullet points authentic to CV PDF
-    const bullet1 = `• Developed QC Log Analyzer — automated data processing, monitoring & visualization application using Python and Dataiku at PT Pertamina Hulu Rokan (AI Engineer), streamlining upstream oil & gas operational reporting.`;
+    const bullet1 = `• Developed QC Log Analyzer — automated data processing, monitoring & visualization application using Python and Dataiku at PT Pertamina Hulu Rokan, streamlining upstream oil & gas operational reporting.`;
     const bullet2 = `• Engineered Credit Risk Loan ML model at Id/x partners x Rakamin Academy (Best Student 86.96), reducing loan default rates by 12% across 466,285 records.`;
-    const bullet3 = `• Delivered end-to-end ${matchedATS[0] || 'data analytics'} workflows and full-stack solutions (${bonusFound[0] || 'React/Laravel/Python'}) as Freelance Web Dev & ML Engineer.`;
+    const bullet3 = `• Resolved hardware, software, OS & lab network issues across 50+ IT devices at Universitas Abdurrab and delivered ${matchedATS[0] || 'data analytics'} & full-stack solutions (${bonusFound[0] || 'React/Laravel/Python'}).`;
 
     const allBulletsText = `${bullet1}\n${bullet2}\n${bullet3}`;
 
@@ -512,9 +651,9 @@ function generateATSBoosterHTML(job) {
             <div class="ats-grid">
                 <div class="ats-card matched">
                     <h5>✅ Kata Kunci Sudah Ada di Profilmu</h5>
-                    <p class="ats-desc">Skill ini cocok dengan latar belakangmu (S1 Informatika & Data/Migas):</p>
+                    <p class="ats-desc">Skill ini cocok dengan latar belakangmu (S1 Informatika & Data/IT):</p>
                     <div class="nlp-tags">
-                        ${matchedATS.length > 0 ? matchedATS.map(s => `<span class="nlp-skill-badge mandatory">✓ ${s}</span>`).join('') : '<span class="nlp-skill-badge mandatory">✓ Data Analysis & IT Core</span>'}
+                        ${matchedATS.length > 0 ? matchedATS.map(s => `<span class="nlp-skill-badge mandatory">✓ ${escapeHtml(s)}</span>`).join('') : '<span class="nlp-skill-badge mandatory">✓ Data Analysis & IT Core</span>'}
                     </div>
                 </div>
 
@@ -522,7 +661,7 @@ function generateATSBoosterHTML(job) {
                     <h5>🎯 Kata Kunci Emas yang Perlu Ditambahkan ke CV</h5>
                     <p class="ats-desc">Tambahkan istilah ini pada bullet point CV kamu agar skor ATS naik maksimal:</p>
                     <div class="nlp-tags">
-                        ${missingATS.concat(bonusFound).length > 0 ? missingATS.concat(bonusFound).slice(0, 8).map(s => `<span class="nlp-skill-badge plus">+ ${s}</span>`).join('') : '<span class="nlp-skill-badge plus">+ Analytical Problem Solving</span>'}
+                        ${missingATS.concat(bonusFound).length > 0 ? missingATS.concat(bonusFound).slice(0, 8).map(s => `<span class="nlp-skill-badge plus">+ ${escapeHtml(s)}</span>`).join('') : '<span class="nlp-skill-badge plus">+ Analytical Problem Solving</span>'}
                     </div>
                 </div>
             </div>
@@ -530,14 +669,30 @@ function generateATSBoosterHTML(job) {
             <div class="pitch-section">
                 <div class="pitch-card-title">
                     <h5>✨ 3 ATS-Optimized Resume Bullet Points (1-Click Copy untuk CV-mu)</h5>
-                    <button class="btn-copy" onclick="copyToClipboard(this, \`${encodeURIComponent(allBulletsText)}\`)">📋 Salin 3 Bullet Points</button>
+                    <button class="btn-copy" onclick="copySiblingTextarea(this)">📋 Salin 3 Bullet Points</button>
                 </div>
                 <p style="font-size: 0.78rem; color: #a78bfa; margin-top: 0; margin-bottom: 0.6rem;">Tempelkan poin-poin berdampak tinggi ini pada bagian Pengalaman Kerja / Proyek di CV kamu sebelum melamar lowongan ini:</p>
-                <textarea readonly class="pitch-textarea" rows="6">${allBulletsText}</textarea>
+                <textarea readonly class="pitch-textarea" rows="6">${escapeHtml(allBulletsText)}</textarea>
             </div>
         </div>
     `;
 }
+
+window.copySiblingTextarea = function (btnElem) {
+    const section = btnElem.closest('.pitch-section');
+    const textarea = section ? section.querySelector('textarea') : null;
+    if (!textarea) return;
+    navigator.clipboard.writeText(textarea.value).then(() => {
+        const origText = btnElem.innerHTML;
+        btnElem.innerHTML = '✅ Tersalin!';
+        btnElem.classList.add('copied');
+        showToast('📋 Teks berhasil disalin ke clipboard');
+        setTimeout(() => {
+            btnElem.innerHTML = origText;
+            btnElem.classList.remove('copied');
+        }, 2000);
+    });
+};
 
 window.copyToClipboard = function (btnElem, encodedText) {
     const text = decodeURIComponent(encodedText);
@@ -559,112 +714,72 @@ function applyFilters() {
     const query = searchInput.value.toLowerCase().trim();
     const matchType = matchFilter.value;
     const sourceVal = sourceFilter.value;
+    const expVal = expFilter ? expFilter.value : 'all';
     const sortBy = sortSelect.value;
 
+    // Parse localStorage ONCE outside filter loop (menghindari ratusan JSON.parse per render)
+    const savedState = wishlistOnly ? getSavedJobsState() : null;
+    const sourceMap = {
+        'linkedin': 'LinkedIn',
+        'grab': 'Grab',
+        'talentics': 'Talentics',
+        'astra': 'Astra',
+        'ptc': 'Pertamina PTC',
+        'sawitpro': 'SawitPRO',
+        'ioh': 'Indosat Ooredoo Hutchison',
+        'indofood': 'Indofood',
+        'opentrain': 'OpenTrain.ai',
+        'micro1': 'micro1'
+    };
+    const targetSource = sourceVal !== 'all' ? sourceMap[sourceVal] : null;
+
     filteredJobs = allJobs.filter(job => {
-        // A. Text Search (Matches title, company, or department group)
-        const textMatch =
-            job.title.toLowerCase().includes(query) ||
-            (job.organization_name && job.organization_name.toLowerCase().includes(query)) ||
-            (job.group && job.group.toLowerCase().includes(query));
+        if (query && !(job._searchText || '').includes(query)) {
+            return false;
+        }
 
-        if (!textMatch) return false;
-
-        // B. Match Status Filter
         if (matchType !== 'all') {
             if (matchType === 'high' && job.match_score < 80) return false;
             if (matchType === 'medium' && (job.match_score < 50 || job.match_score >= 80)) return false;
-            if (matchType === 'low' && job.match_score < 50) return false;
+            if (matchType === 'low' && job.match_score >= 50) return false;
             if (matchType === 'compatible' && job.is_blocked) return false;
             if (matchType === 'blocked' && !job.is_blocked) return false;
         }
 
-        // C. Source Filter
-        if (sourceVal !== 'all') {
-            const sourceMap = {
-                'linkedin': 'LinkedIn',
-                'grab': 'Grab',
-                'talentics': 'Talentics',
-                'astra': 'Astra',
-                'ptc': 'Pertamina PTC',
-                'sawitpro': 'SawitPRO',
-                'ioh': 'Indosat Ooredoo Hutchison',
-                'indofood': 'Indofood',
-                'opentrain': 'OpenTrain.ai',
-                'micro1': 'micro1'
-            };
-            const targetSource = sourceMap[sourceVal];
-            if (targetSource) {
-                if (sourceVal === 'linkedin') {
-                    if (job.source !== 'LinkedIn' && job.source !== 'JobSpy (LinkedIn)') return false;
-                } else if (job.source !== targetSource) {
-                    return false;
-                }
+        if (targetSource) {
+            if (sourceVal === 'linkedin') {
+                if (job.source !== 'LinkedIn' && job.source !== 'JobSpy (LinkedIn)') return false;
+            } else if (job.source !== targetSource) {
+                return false;
             }
         }
 
-        // D. Experience Filter (Ravil has 1 Year Experience)
-        if (expFilter && expFilter.value !== 'all') {
-            const expVal = expFilter.value;
+        if (expVal !== 'all') {
             const reqYears = (job.parsed_requirements && job.parsed_requirements.exp_years !== undefined)
                 ? job.parsed_requirements.exp_years
                 : 0;
-
             if (expVal === 'eligible' && reqYears > 1) return false;
             if (expVal === 'freshgrad' && reqYears > 0) return false;
             if (expVal === 'experienced' && reqYears <= 1) return false;
         }
 
-        // E. Wishlist Filter
         if (wishlistOnly) {
-            const state = getSavedJobsState();
-            const idStr = String(job.id);
-            if (!state[idStr] || !state[idStr].isBookmarked) return false;
+            const item = savedState[String(job.id)];
+            if (!item || !item.isBookmarked) return false;
         }
 
         return true;
     });
 
-    // Update mobile filter badge
-    if (filterCountBadge) {
-        let count = 0;
-        if (matchType !== 'all') count++;
-        if (sourceVal !== 'all') count++;
-        if (expFilter && expFilter.value !== 'all') count++;
-        if (query !== '') count++;
-        if (count > 0) {
-            filterCountBadge.style.display = 'inline-block';
-            filterCountBadge.textContent = count;
-        } else {
-            filterCountBadge.style.display = 'none';
-        }
-    }
-
-    // C. Sorting
-    if (sortBy === 'score') {
-        // Highest score first, compatible jobs prioritized over blocked
-        filteredJobs.sort((a, b) => {
-            if (a.is_blocked && !b.is_blocked) return 1;
-            if (!a.is_blocked && b.is_blocked) return -1;
-            return b.match_score - a.match_score;
-        });
-    } else if (sortBy === 'title') {
-        filteredJobs.sort((a, b) => a.title.localeCompare(b.title));
-    } else if (sortBy === 'due_date') {
-        filteredJobs.sort((a, b) => {
-            const dateA = a.due_date ? new Date(a.due_date) : new Date('2099-12-31');
-            const dateB = b.due_date ? new Date(b.due_date) : new Date('2099-12-31');
-            return dateA - dateB;
-        });
-    }
-
-    // Update mobile filter badge count
+    // Update mobile filter badge (dihitung sekali secara akurat)
     if (filterCountBadge) {
         let activeCount = 0;
-        if (matchFilter && matchFilter.value !== 'all') activeCount++;
-        if (sourceFilter && sourceFilter.value !== 'all') activeCount++;
-        if (expFilter && expFilter.value !== 'all') activeCount++;
-        if (sortSelect && sortSelect.value !== 'score') activeCount++;
+        if (matchType !== 'all') activeCount++;
+        if (sourceVal !== 'all') activeCount++;
+        if (expVal !== 'all') activeCount++;
+        if (sortBy !== 'score') activeCount++;
+        if (wishlistOnly) activeCount++;
+        if (query !== '') activeCount++;
         if (activeCount > 0) {
             filterCountBadge.style.display = 'inline-block';
             filterCountBadge.textContent = activeCount;
@@ -673,30 +788,50 @@ function applyFilters() {
         }
     }
 
+    // Sorting
+    if (sortBy === 'score') {
+        filteredJobs.sort((a, b) => {
+            if (a.is_blocked && !b.is_blocked) return 1;
+            if (!a.is_blocked && b.is_blocked) return -1;
+            return b.match_score - a.match_score;
+        });
+    } else if (sortBy === 'title') {
+        filteredJobs.sort((a, b) => (a.title || '').localeCompare(b.title || ''));
+    } else if (sortBy === 'due_date') {
+        filteredJobs.sort((a, b) => {
+            const metaA = a._dueMeta || parseJobDate(a.due_date);
+            const metaB = b._dueMeta || parseJobDate(b.due_date);
+            // Push expired deadlines to the bottom, upcoming deadlines first
+            if (metaA.isExpired !== metaB.isExpired) return metaA.isExpired ? 1 : -1;
+            return metaA.timestamp - metaB.timestamp;
+        });
+    }
+
     renderJobList();
 }
 
 function getSourceBadgeHTML(job, styleAttr = '') {
+    const styleStr = styleAttr ? ` style="${styleAttr}"` : '';
     if (job.source === 'LinkedIn' || job.source === 'JobSpy (LinkedIn)') {
-        return `<span class="source-badge linkedin" style="${styleAttr}">LinkedIn</span>`;
+        return `<span class="source-badge linkedin"${styleStr}>LinkedIn</span>`;
     } else if (job.source === 'Grab') {
-        return `<span class="source-badge grab" style="${styleAttr}">Grab Indonesia</span>`;
+        return `<span class="source-badge grab"${styleStr}>Grab Indonesia</span>`;
     } else if (job.source === 'Astra') {
-        return `<span class="source-badge astra" style="${styleAttr}">Astra Career</span>`;
+        return `<span class="source-badge astra"${styleStr}>Astra Career</span>`;
     } else if (job.source === 'Pertamina PTC') {
-        return `<span class="source-badge ptc" style="${styleAttr}">Pertamina PTC</span>`;
+        return `<span class="source-badge ptc"${styleStr}>Pertamina PTC</span>`;
     } else if (job.source === 'SawitPRO') {
-        return `<span class="source-badge sawitpro" style="${styleAttr}">SawitPRO</span>`;
+        return `<span class="source-badge sawitpro"${styleStr}>SawitPRO</span>`;
     } else if (job.source === 'Indosat Ooredoo Hutchison') {
-        return `<span class="source-badge ioh" style="${styleAttr}">Indosat Ooredoo Hutchison</span>`;
+        return `<span class="source-badge ioh"${styleStr}>Indosat Ooredoo Hutchison</span>`;
     } else if (job.source === 'Indofood') {
-        return `<span class="source-badge indofood" style="${styleAttr}">Indofood Career</span>`;
+        return `<span class="source-badge indofood"${styleStr}>Indofood Career</span>`;
     } else if (job.source === 'OpenTrain.ai') {
-        return `<span class="source-badge opentrain" style="${styleAttr}">OpenTrain.ai (Remote)</span>`;
+        return `<span class="source-badge opentrain"${styleStr}>OpenTrain.ai (Remote)</span>`;
     } else if (job.source === 'micro1') {
-        return `<span class="source-badge micro1" style="${styleAttr}">micro1 (Remote)</span>`;
+        return `<span class="source-badge micro1"${styleStr}>micro1 (Remote)</span>`;
     }
-    return `<span class="source-badge talentics" style="${styleAttr}">${job.source || 'Hulu Migas / BUMN'}</span>`;
+    return `<span class="source-badge talentics"${styleStr}>${escapeHtml(job.source || 'Talentics')}</span>`;
 }
 
 // Render Numbered Pagination Buttons
@@ -752,7 +887,7 @@ function scrollToJobListTop() {
     }
 }
 
-// Render the Job List Cards
+// Render the Job List Cards (Batch DocumentFragment + 1x localStorage parse)
 function renderJobList() {
     jobListContainer.innerHTML = '';
 
@@ -802,19 +937,29 @@ function renderJobList() {
         if (paginationBar) paginationBar.style.display = 'none';
     }
 
+    // Parse localStorage ONCE untuk seluruh halaman (menghindari N× JSON.parse)
+    const allSavedState = getSavedJobsState();
+    const applications = getApplicationsState();
+    const radius = 28;
+    const circ = 2 * Math.PI * radius;
+    const statusBadgeMap = {
+        'applied': '<span class="app-status-pill applied">🚀 Sudah Dilamar</span>',
+        'interview': '<span class="app-status-pill interview">💬 Tahap Interview</span>',
+        'accepted': '<span class="app-status-pill accepted">🎉 Diterima</span>'
+    };
+
+    const fragment = document.createDocumentFragment();
+
     paginatedJobs.forEach(job => {
-        // Circumference of circular progress is 2 * PI * r = 2 * 3.14159 * 28 = 175.9
-        const radius = 28;
-        const circ = 2 * Math.PI * radius;
-        const offset = circ - (job.match_score / 100) * circ;
+        const clampedScore = Math.max(0, Math.min(100, Number(job.match_score) || 0));
+        const offset = circ - (clampedScore / 100) * circ;
 
         let matchClass = 'low-match';
-        if (job.match_score >= 70) matchClass = 'high-match';
-        else if (job.match_score >= 50) matchClass = 'medium-match';
+        if (clampedScore >= 70) matchClass = 'high-match';
+        else if (clampedScore >= 50) matchClass = 'medium-match';
 
         const cardClass = job.is_blocked ? 'job-card blocked' : 'job-card';
 
-        // Setup blocker text if any
         let blockerLabel = '';
         if (job.is_blocked) {
             const failedReqs = [];
@@ -824,46 +969,42 @@ function renderJobList() {
             blockerLabel = `<div class="blocker-banner">⚠️ Tidak Memenuhi Syarat: ${failedReqs.join(', ')}</div>`;
         }
 
-        // Summary Match Reason preview
         let matchPreview = '';
         if (job.match_details.major.status === 'High Match') {
-            matchPreview = 'Mencari lulusan Teknik Informatika/Sistem Informasi secara spesifik.';
+            matchPreview = 'Sesuai latar belakang Teknik Informatika, Data, atau IT.';
         } else if (job.match_details.skills.status === 'High Match') {
-            matchPreview = 'Membutuhkan keahlian Python/Data Science Anda.';
+            matchPreview = 'Membutuhkan keahlian inti Anda (Python/Data/IT/Web).';
         } else {
-            matchPreview = job.match_details.major.reason;
+            matchPreview = escapeHtml(job.match_details.major.reason);
         }
 
         const sourceBadge = getSourceBadgeHTML(job);
-
-        const savedState = getSavedJobsState()[job.id] || {};
+        const idStr = String(job.id);
+        const savedState = allSavedState[idStr] || {};
         const isBookmarked = savedState.isBookmarked || false;
-        
-        // Read application status from NEW storage (jobMatcher_applications)
-        const applicationsKey = 'jobMatcher_applications';
-        const applicationsData = localStorage.getItem(applicationsKey);
-        const applications = applicationsData ? JSON.parse(applicationsData) : {};
-        const appStatus = applications[job.id] ? applications[job.id].status : (savedState.status || '');
+        const appStatus = applications[idStr] ? applications[idStr].status : (savedState.status || '');
 
         const bookmarkBtnHTML = `
-            <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" title="Simpan lowongan ini" onclick="toggleBookmark(event, '${job.id}')">
+            <button class="bookmark-btn ${isBookmarked ? 'active' : ''}" title="Simpan lowongan ini" onclick="toggleBookmark(event, '${escapeHtml(idStr)}')">
                 ${isBookmarked ? '★' : '☆'}
             </button>
         `;
 
-        const statusBadgeMap = {
-            'applied': '<span class="app-status-pill applied">🚀 Sudah Dilamar</span>',
-            'interview': '<span class="app-status-pill interview">💬 Tahap Interview</span>',
-            'accepted': '<span class="app-status-pill accepted">🎉 Diterima</span>'
-        };
         const appStatusBadge = statusBadgeMap[appStatus] || '';
+        const safeLogo = job.logo && /^https?:\/\//i.test(job.logo) ? escapeHtml(job.logo) : '';
+        const companyLogo = safeLogo
+            ? `<img src="${safeLogo}" class="company-logo" alt="${escapeHtml(job.organization_name)}" loading="lazy" decoding="async" onerror="this.style.display='none'">`
+            : '';
 
-        const companyLogo = job.logo
-            ? `<img src="${job.logo}" class="company-logo" alt="${job.organization_name}" loading="lazy" onerror="this.style.display='none'">`
+        const isExpired = job._dueMeta && job._dueMeta.isExpired;
+        const dueLabel = job.due_date ? escapeHtml(String(job.due_date).split(' ')[0]) : '';
+        const dueMetaTag = dueLabel
+            ? `<span class="meta-tag ${isExpired ? 'expired' : 'highlight'}">${isExpired ? '⌛ Tutup:' : '📅 Deadline:'} ${dueLabel}</span>`
             : '';
 
         const card = document.createElement('div');
-        card.className = newJobIds.has(String(job.id)) ? cardClass + ' is-new-job' : cardClass;
+        card.className = newJobIds.has(idStr) ? cardClass + ' is-new-job' : cardClass;
+        card.dataset.jobId = idStr;
         card.innerHTML = `
             <div class="score-circle ${matchClass}">
                 <svg>
@@ -871,14 +1012,14 @@ function renderJobList() {
                     <circle class="progress-ring" cx="34" cy="34" r="${radius}" 
                             stroke-dasharray="${circ}" stroke-dashoffset="${offset}"></circle>
                 </svg>
-                <span class="score-text">${job.match_score}%</span>
+                <span class="score-text">${clampedScore}%</span>
             </div>
             
             <div class="job-info">
                 <div class="job-card-header">
                     <div class="job-title-wrapper">
-                        <h3 class="job-title-text">${job.title}</h3>
-                        ${newJobIds.has(String(job.id)) ? '<span class="new-job-badge">🆕 Baru</span>' : ''}
+                        <h3 class="job-title-text">${escapeHtml(job.title)}</h3>
+                        ${newJobIds.has(idStr) ? '<span class="new-job-badge">🆕 Baru</span>' : ''}
                         ${sourceBadge}
                         ${appStatusBadge}
                         ${bookmarkBtnHTML}
@@ -886,16 +1027,16 @@ function renderJobList() {
                 </div>
                 <div class="job-company">
                     ${companyLogo}
-                    <span>${job.organization_name || 'SKK Migas / KKKS'}</span>
+                    <span>${escapeHtml(job.organization_name || 'SKK Migas / KKKS')}</span>
                 </div>
                 
                 <div class="job-meta-tags">
-                    <span class="meta-tag">📍 ${job.location || 'Lokasi tidak dispesifikasikan'}</span>
-                    <span class="meta-tag">🏢 ${job.workplace || 'WFO'}</span>
-                    <span class="meta-tag">💼 ${job.level}</span>
-                    <span class="meta-tag">📝 ${job.type_name}</span>
-                    <span class="meta-tag ${job.parsed_requirements && job.parsed_requirements.exp_years <= 1 ? 'highlight' : ''}">💼 Syarat Exp: ${job.parsed_requirements ? job.parsed_requirements.experience : 'Fresh Grad'}</span>
-                    ${job.due_date ? `<span class="meta-tag highlight">📅 Deadline: ${job.due_date.split(' ')[0]}</span>` : ''}
+                    <span class="meta-tag">📍 ${escapeHtml(formatLocationShort(job.location))}</span>
+                    <span class="meta-tag">🏢 ${escapeHtml(job.workplace || 'WFO')}</span>
+                    <span class="meta-tag">💼 ${escapeHtml(job.level)}</span>
+                    <span class="meta-tag">📝 ${escapeHtml(job.type_name)}</span>
+                    <span class="meta-tag ${job.parsed_requirements && job.parsed_requirements.exp_years <= 1 ? 'highlight' : ''}">💼 Syarat Exp: ${escapeHtml(job.parsed_requirements ? job.parsed_requirements.experience : 'Fresh Grad')}</span>
+                    ${dueMetaTag}
                 </div>
                 
                 <div class="job-matching-preview">
@@ -908,16 +1049,14 @@ function renderJobList() {
             <button class="view-detail-btn">Lihat Detail</button>
         `;
 
-        // Add click listener to show modal
-        card.addEventListener('click', () => openJobModal(job));
-
-        jobListContainer.appendChild(card);
+        fragment.appendChild(card);
     });
+
+    jobListContainer.appendChild(fragment);
 }
 
 // Open Detail Modal
 function openJobModal(job) {
-    // Checklist icons mappings
     const icons = {
         'High Match': '✅',
         'Match': '✅',
@@ -935,27 +1074,38 @@ function openJobModal(job) {
         return 'neutral';
     };
 
+    const idStr = String(job.id);
     const sourceBadge = getSourceBadgeHTML(job, 'margin-left: 10px; vertical-align: middle;');
-
-    const companyLogo = job.logo
-        ? `<img src="${job.logo}" class="company-logo" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 8px;" alt="${job.organization_name}">`
+    const safeLogo = job.logo && /^https?:\/\//i.test(job.logo) ? escapeHtml(job.logo) : '';
+    const companyLogo = safeLogo
+        ? `<img src="${safeLogo}" class="company-logo" style="width: 28px; height: 28px; vertical-align: middle; margin-right: 8px;" alt="${escapeHtml(job.organization_name)}">`
         : '';
 
-    const savedState = getSavedJobsState()[job.id] || {};
+    const savedState = getSavedJobsState()[idStr] || {};
+    const applications = getApplicationsState();
     const isBookmarked = savedState.isBookmarked || false;
-    const appStatus = savedState.status || '';
+    const appStatus = (applications[idStr] && applications[idStr].status) || savedState.status || 'not_applied';
 
     const nlp = job.nlp_breakdown || {};
     const mandSkillsTags = (nlp.mandatory_skills && nlp.mandatory_skills.length > 0)
-        ? nlp.mandatory_skills.map(s => `<span class="nlp-skill-badge mandatory">${s}</span>`).join('')
+        ? nlp.mandatory_skills.map(s => `<span class="nlp-skill-badge mandatory">${escapeHtml(s)}</span>`).join('')
         : `<span class="nlp-skill-badge neutral">Umum / Tidak Spesifik</span>`;
 
-    const plusSkillsTags = (nlp.plus_skills && nlp.plus_skills.length > 0)
-        ? nlp.plus_skills.map(s => `<span class="nlp-skill-badge plus">+ ${s}</span>`).join('')
+    const prefSkillsArr = nlp.preferred_skills || nlp.plus_skills || [];
+    const plusSkillsTags = prefSkillsArr.length > 0
+        ? prefSkillsArr.map(s => `<span class="nlp-skill-badge plus">+ ${escapeHtml(s)}</span>`).join('')
         : '';
 
-    const keySentencesList = (nlp.key_sentences && nlp.key_sentences.length > 0)
-        ? nlp.key_sentences.map(sent => `<li>• ${sent}</li>`).join('')
+    const keySentencesRaw = (nlp.key_sentences && nlp.key_sentences.length > 0)
+        ? nlp.key_sentences
+        : [
+            ...(nlp.mandatory_requirements || []),
+            ...(nlp.preferred_requirements || []),
+            ...(nlp.key_responsibilities || [])
+        ].slice(0, 5);
+
+    const keySentencesList = keySentencesRaw.length > 0
+        ? keySentencesRaw.map(sent => `<li>• ${escapeHtml(sent)}</li>`).join('')
         : '<li>• Silakan lihat detail lengkap di tab Persyaratan Detail di bawah.</li>';
 
     const nlpSectionHTML = `
@@ -970,11 +1120,11 @@ function openJobModal(job) {
             <div class="nlp-smart-grid">
                 <div class="nlp-item">
                     <h5>🎓 Konteks Pendidikan</h5>
-                    <p>${nlp.education_summary || 'S1 / D3 relevan atau setara'}</p>
+                    <p>${escapeHtml(nlp.education_summary || 'S1 / D3 relevan atau setara')}</p>
                 </div>
                 <div class="nlp-item">
                     <h5>⏳ Konteks Pengalaman</h5>
-                    <p>${nlp.experience_summary || '1 Tahun Pengalaman / Fresh Graduate'}</p>
+                    <p>${escapeHtml(nlp.experience_summary || '1 Tahun Pengalaman / Fresh Graduate')}</p>
                 </div>
             </div>
             <div class="nlp-skills-row">
@@ -993,22 +1143,26 @@ function openJobModal(job) {
         </div>
     `;
 
+    const safeDesc = sanitizeHtml(job.raw_description) || '<p>Tidak ada deskripsi pekerjaan yang dicantumkan.</p>';
+    const safeReqs = sanitizeHtml(job.raw_requirements || job.raw_description) || '<p>Tidak ada persyaratan detail yang dicantumkan.</p>';
+    const clampedScore = Math.max(0, Math.min(100, Number(job.match_score) || 0));
+
     modalContent.innerHTML = `
         <div class="modal-header-section">
-            <h2 class="modal-job-title">${job.title}</h2>
+            <h2 class="modal-job-title">${escapeHtml(job.title)}</h2>
             <div class="modal-job-company" style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1rem;">
                 ${companyLogo}
-                <span>${job.organization_name || 'SKK Migas / KKKS'}</span>
+                <span>${escapeHtml(job.organization_name || 'SKK Migas / KKKS')}</span>
                 ${sourceBadge}
             </div>
             
             <div class="job-meta-tags">
-                <span class="meta-tag">📍 ${job.location || 'Lokasi tidak dispesifikasikan'}</span>
-                <span class="meta-tag">🏢 Workplace: ${job.workplace || 'WFO'}</span>
-                <span class="meta-tag">💼 Level: ${job.level}</span>
-                <span class="meta-tag">📝 Kontrak: ${job.type_name}</span>
-                ${job.group ? `<span class="meta-tag">📁 Deputi/Perwakilan/Dept: ${job.group}</span>` : ''}
-                ${job.due_date ? `<span class="meta-tag highlight">📅 Deadline: ${job.due_date}</span>` : ''}
+                <span class="meta-tag">📍 ${escapeHtml(job.location || 'Lokasi tidak dispesifikasikan')}</span>
+                <span class="meta-tag">🏢 Workplace: ${escapeHtml(job.workplace || 'WFO')}</span>
+                <span class="meta-tag">💼 Level: ${escapeHtml(job.level)}</span>
+                <span class="meta-tag">📝 Kontrak: ${escapeHtml(job.type_name)}</span>
+                ${job.group ? `<span class="meta-tag">📁 Deputi/Perwakilan/Dept: ${escapeHtml(job.group)}</span>` : ''}
+                ${job.due_date ? `<span class="meta-tag highlight">📅 Deadline: ${escapeHtml(job.due_date)}</span>` : ''}
             </div>
         </div>
         
@@ -1017,7 +1171,7 @@ function openJobModal(job) {
         <!-- Checklist Match Section -->
         <div class="match-evaluation-section">
             <div class="match-evaluation-title">
-                <span>Analisis Kesesuaian Profil (Skor: ${job.match_score}%)</span>
+                <span>Analisis Kesesuaian Profil (Skor: ${clampedScore}%)</span>
                 ${job.is_blocked ? '<span style="color:#f43f5e; font-size:0.9rem; font-weight:700;">⚠️ TIDAK MEMENUHI SYARAT MUTLAK</span>' : ''}
             </div>
             
@@ -1029,7 +1183,7 @@ function openJobModal(job) {
                     </span>
                     <div class="checklist-info">
                         <h5>Jurusan Pendidikan</h5>
-                        <p>${job.match_details.major.reason}</p>
+                        <p>${escapeHtml(job.match_details.major.reason)}</p>
                     </div>
                 </div>
                 
@@ -1039,8 +1193,8 @@ function openJobModal(job) {
                         ${getIcon(job.match_details.gpa.status)}
                     </span>
                     <div class="checklist-info">
-                        <h5>IPK / GPA (Syarat: ${job.parsed_requirements.gpa || '-'})</h5>
-                        <p>${job.match_details.gpa.reason}</p>
+                        <h5>IPK / GPA (Syarat: ${escapeHtml(job.parsed_requirements.gpa || '-')})</h5>
+                        <p>${escapeHtml(job.match_details.gpa.reason)}</p>
                     </div>
                 </div>
                 
@@ -1050,8 +1204,8 @@ function openJobModal(job) {
                         ${getIcon(job.match_details.age.status)}
                     </span>
                     <div class="checklist-info">
-                        <h5>Batas Usia (Batas: ${job.parsed_requirements.age || '-'})</h5>
-                        <p>${job.match_details.age.reason}</p>
+                        <h5>Batas Usia (Batas: ${escapeHtml(job.parsed_requirements.age || '-')})</h5>
+                        <p>${escapeHtml(job.match_details.age.reason)}</p>
                     </div>
                 </div>
 
@@ -1061,8 +1215,8 @@ function openJobModal(job) {
                         ${getIcon(job.match_details.toefl.status)}
                     </span>
                     <div class="checklist-info">
-                        <h5>Skor TOEFL (Syarat: ${job.parsed_requirements.toefl || '-'})</h5>
-                        <p>${job.match_details.toefl.reason}</p>
+                        <h5>Skor TOEFL (Syarat: ${escapeHtml(job.parsed_requirements.toefl || '-')})</h5>
+                        <p>${escapeHtml(job.match_details.toefl.reason)}</p>
                     </div>
                 </div>
                 
@@ -1073,7 +1227,7 @@ function openJobModal(job) {
                     </span>
                     <div class="checklist-info">
                         <h5>Gender Pelamar</h5>
-                        <p>${job.match_details.gender.reason}</p>
+                        <p>${escapeHtml(job.match_details.gender.reason)}</p>
                     </div>
                 </div>
 
@@ -1083,8 +1237,8 @@ function openJobModal(job) {
                         ${job.match_details && job.match_details.exp_years ? getIcon(job.match_details.exp_years.status) : '✅'}
                     </span>
                     <div class="checklist-info">
-                        <h5>Syarat Pengalaman Kerja (Kamu: ~1 Tahun — PHR, Rakamin & Freelance)</h5>
-                        <p>${job.match_details && job.match_details.exp_years ? job.match_details.exp_years.reason : 'Sesuai dengan profil pengalamanmu.'}</p>
+                        <h5>Syarat Pengalaman Kerja (Kamu: ~1 Tahun — Abdurrab, PHR & Rakamin)</h5>
+                        <p>${escapeHtml(job.match_details && job.match_details.exp_years ? job.match_details.exp_years.reason : 'Sesuai dengan profil pengalamanmu.')}</p>
                     </div>
                 </div>
 
@@ -1094,8 +1248,8 @@ function openJobModal(job) {
                         ${getIcon(job.match_details.skills.status)}
                     </span>
                     <div class="checklist-info">
-                        <h5>Keahlian (Python, Dataiku & AI/ML)</h5>
-                        <p>${job.match_details.skills.reason}</p>
+                        <h5>Keahlian (Python, Dataiku, AI/ML & IT)</h5>
+                        <p>${escapeHtml(job.match_details.skills.reason)}</p>
                     </div>
                 </div>
 
@@ -1106,7 +1260,7 @@ function openJobModal(job) {
                     </span>
                     <div class="checklist-info">
                         <h5>Pengalaman Relevan (Upstream Oil & Gas / Tech)</h5>
-                        <p>${job.match_details.experience ? job.match_details.experience.reason : 'Sesuai dengan kualifikasi pengalaman kerja.'}</p>
+                        <p>${escapeHtml(job.match_details.experience ? job.match_details.experience.reason : 'Sesuai dengan kualifikasi pengalaman kerja.')}</p>
                     </div>
                 </div>
             </div>
@@ -1121,15 +1275,14 @@ function openJobModal(job) {
             <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'aiSummaryTab')">🤖 AI Smart Summary</button>
             <button class="tab-btn skill-gap-tab-btn" onclick="switchTab(event, 'skillsGapTab')">📊 Skills Gap</button>
             <button class="tab-btn tracker-tab-btn" onclick="switchTab(event, 'trackerTab')">📋 Application Tracker</button>
-            <!-- <button class="tab-btn ai-tab-btn" onclick="switchTab(event, 'interviewTab')">💬 Interview Questions</button> -->
         </div>
         
         <div id="descriptionTab" class="tab-pane active">
-            ${job.raw_description || '<p>Tidak ada deskripsi pekerjaan yang dicantumkan.</p>'}
+            ${safeDesc}
         </div>
         
         <div id="requirementsTab" class="tab-pane">
-            ${job.raw_requirements || '<p>Tidak ada persyaratan detail yang dicantumkan.</p>'}
+            ${safeReqs}
         </div>
 
         <div id="pitchTab" class="tab-pane">
@@ -1146,10 +1299,10 @@ function openJobModal(job) {
                     <h3>🤖 AI Smart Summary</h3>
                     <p>Ringkasan otomatis menggunakan AI untuk memahami lowongan ini dengan cepat</p>
                 </div>
-                <button class="btn-generate-ai" onclick="generateAISummary('${job.id}')">
+                <button class="btn-generate-ai" onclick="generateAISummary('${escapeHtml(idStr)}')">
                     ✨ Generate Smart Summary
                 </button>
-                <div id="aiSummaryContent-${job.id}" class="ai-content-area" style="display: none;">
+                <div id="aiSummaryContent-${escapeHtml(idStr)}" class="ai-content-area" style="display: none;">
                     <div class="ai-loading">
                         <div class="spinner"></div>
                         <p>AI sedang menganalisis deskripsi pekerjaan...</p>
@@ -1164,10 +1317,10 @@ function openJobModal(job) {
                     <h3>📊 Skills Gap Analysis</h3>
                     <p>Bandingkan skill Anda dengan requirement pekerjaan ini</p>
                 </div>
-                <button class="btn-generate-ai" onclick="generateSkillsGap('${job.id}')">
+                <button class="btn-generate-ai" onclick="generateSkillsGap('${escapeHtml(idStr)}')">
                     📊 Analyze Skills Gap
                 </button>
-                <div id="skillsGapContent-${job.id}" class="ai-content-area" style="display: none;">
+                <div id="skillsGapContent-${escapeHtml(idStr)}" class="ai-content-area" style="display: none;">
                     <div class="ai-loading">
                         <div class="spinner"></div>
                         <p>Menganalisis gap skills Anda...</p>
@@ -1182,88 +1335,72 @@ function openJobModal(job) {
                     <h3>📋 Application Tracker</h3>
                     <p>Kelola status lamaran dan progress interview Anda</p>
                 </div>
-                <button class="btn-generate-ai" onclick="openApplicationTracker('${job.id}')">
+                <button class="btn-generate-ai" onclick="openApplicationTracker('${escapeHtml(idStr)}')">
                     📋 Manage Application
                 </button>
-                <div id="trackerContent-${job.id}" class="tracker-content-area" style="display: none;">
-                    <!-- Tracker form akan di-render di sini -->
-                </div>
+                <div id="trackerContent-${escapeHtml(idStr)}" class="tracker-content-area" style="display: none;"></div>
             </div>
         </div>
-
-        <!-- <div id="interviewTab" class="tab-pane">
-            <div class="ai-feature-container">
-                <div class="ai-feature-header">
-                    <h3>💬 Interview Questions Predictor</h3>
-                    <p>Prediksi pertanyaan interview yang mungkin ditanyakan berdasarkan job requirements</p>
-                </div>
-                <button class="btn-generate-ai" onclick="generateInterviewQuestions('${job.id}')">
-                    🎯 Predict Interview Questions
-                </button>
-                <div id="interviewContent-${job.id}" class="ai-content-area" style="display: none;">
-                    <div class="ai-loading">
-                        <div class="spinner"></div>
-                        <p>AI sedang memprediksi pertanyaan interview...</p>
-                    </div>
-                </div>
-            </div>
-        </div> -->
         
         <div class="modal-footer">
             <div class="modal-footer-row-top">
-                <button class="btn-bookmark-modal ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(event, '${job.id}'); openJobModal(allJobs.find(j => j.id == '${job.id}'));">
+                <button class="btn-bookmark-modal ${isBookmarked ? 'active' : ''}" onclick="toggleBookmark(event, '${escapeHtml(idStr)}'); updateJobModalBookmarkButton('${escapeHtml(idStr)}');">
                     ${isBookmarked ? '★ Tersimpan' : '☆ Simpan'}
                 </button>
+                <select class="status-select-modal" onchange="changeApplicationStatus('${escapeHtml(idStr)}', this.value)">
+                    <option value="not_applied" ${appStatus === 'not_applied' ? 'selected' : ''}>📌 Belum Dilamar</option>
+                    <option value="applied" ${appStatus === 'applied' ? 'selected' : ''}>🚀 Sudah Dilamar</option>
+                    <option value="interview" ${appStatus === 'interview' ? 'selected' : ''}>💬 Tahap Interview</option>
+                    <option value="offer" ${appStatus === 'offer' ? 'selected' : ''}>📝 Dapat Offer</option>
+                    <option value="accepted" ${appStatus === 'accepted' ? 'selected' : ''}>🎉 Diterima</option>
+                    <option value="rejected" ${appStatus === 'rejected' ? 'selected' : ''}>❌ Ditolak</option>
+                </select>
             </div>
-            <a href="${job.url}" target="_blank" class="btn-primary btn-apply-modal">
-                Lamar di Portal Resmi (${job.source}) ↗
+            <a href="${escapeHtml(sanitizeUrl(job.url))}" target="_blank" rel="noopener noreferrer" class="btn-primary btn-apply-modal">
+                Lamar di Portal Resmi (${escapeHtml(job.source)}) ↗
             </a>
         </div>
     `;
 
     window.currentModalJobId = job.id;
     detailModal.classList.add('active');
-    document.body.style.overflow = 'hidden'; // Lock background scrolling
+    document.body.style.overflow = 'hidden';
 }
 
-// Switch tabs inside modal
+// Switch tabs inside modal (unified)
 window.switchTab = function (event, tabId) {
-    // Hide all tab content panes
     const panes = document.querySelectorAll('.tab-pane');
     panes.forEach(pane => pane.classList.remove('active'));
 
-    // Deactivate all tab header buttons
     const buttons = document.querySelectorAll('.tab-btn');
     buttons.forEach(btn => btn.classList.remove('active'));
 
-    // Show selected pane and set button active
     document.getElementById(tabId).classList.add('active');
     event.currentTarget.classList.add('active');
 
-    // Otomatis jalankan AI ketika membuka tab AI (jika belum dijalankan)
-    if (tabId === 'aiSummaryTab' && window.currentModalJobId) {
-        const area = document.getElementById(`aiSummaryContent-${window.currentModalJobId}`);
-        if (area && area.style.display === 'none') {
-            generateAISummary(window.currentModalJobId);
-        }
-    } else if (tabId === 'interviewTab' && window.currentModalJobId) {
-        const area = document.getElementById(`interviewContent-${window.currentModalJobId}`);
-        if (area && area.style.display === 'none') {
-            generateInterviewQuestions(window.currentModalJobId);
-        }
-    } else if (tabId === 'skillsGapTab' && window.currentModalJobId) {
-        const area = document.getElementById(`skillsGapContent-${window.currentModalJobId}`);
-        if (area && area.style.display === 'none') {
-            generateSkillsGap(window.currentModalJobId);
-        }
+    const jid = window.currentModalJobId;
+    if (!jid) return;
+
+    if (tabId === 'aiSummaryTab') {
+        const area = document.getElementById(`aiSummaryContent-${jid}`);
+        if (area && area.style.display === 'none') generateAISummary(jid);
+    } else if (tabId === 'interviewTab') {
+        const area = document.getElementById(`interviewContent-${jid}`);
+        if (area && area.style.display === 'none') generateInterviewQuestions(jid);
+    } else if (tabId === 'skillsGapTab') {
+        const area = document.getElementById(`skillsGapContent-${jid}`);
+        if (area && area.style.display === 'none') generateSkillsGap(jid);
+    } else if (tabId === 'trackerTab') {
+        const area = document.getElementById(`trackerContent-${jid}`);
+        if (area && area.style.display === 'none') openApplicationTracker(jid);
     }
-}
+};
 
 // Close Modal
 window.closeModal = function () {
     detailModal.classList.remove('active');
-    document.body.style.overflow = ''; // Restore background scrolling
-}
+    document.body.style.overflow = '';
+};
 
 // AI Service Functions
 const AI_SERVICE_URL = 'http://localhost:5001';
@@ -1297,13 +1434,6 @@ async function fetchWithTimeout(url, options, timeoutMs = 1200) {
         clearTimeout(timer);
         throw err;
     }
-}
-
-// ⚠️ SECURITY: Escape HTML entities to prevent XSS injection
-function escapeHtml(unsafe) {
-    if (!unsafe) return '';
-    const map = {'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'};
-    return String(unsafe).replace(/[&<>"']/g, (c) => map[c]);
 }
 
 // Helper to format AI response text (convert bold markdown and linebreaks safely)
@@ -1370,6 +1500,7 @@ window.generateAISummary = async function (jobId) {
     if (!job) return;
 
     const contentArea = document.getElementById(`aiSummaryContent-${jobId}`);
+    if (!contentArea) return;
     contentArea.style.display = 'block';
 
     // Instant Cache Return
@@ -1388,9 +1519,7 @@ window.generateAISummary = async function (jobId) {
     try {
         const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/summarize-job`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 title: job.title,
                 description: job.raw_description || job.description || '',
@@ -1401,23 +1530,23 @@ window.generateAISummary = async function (jobId) {
         const data = await response.json();
 
         if (data.success) {
+            const providerLabel = escapeHtml(data.provider || 'Local AI');
             const htmlOut = `
                 <div class="ai-result">
                     <div class="ai-result-header">
-                        <h4>📝 Ringkasan Lowongan (Groq AI)</h4>
+                        <h4>📝 Ringkasan Lowongan (${providerLabel})</h4>
                     </div>
                     <div class="ai-result-content">
                         ${formatAIResponse(data.summary)}
                     </div>
                 </div>
             `;
-            window.aiSummaryCache[jobId] = htmlOut;
+            addToCache(window.aiSummaryCache, jobId, htmlOut);
             contentArea.innerHTML = htmlOut;
         } else {
             throw new Error(data.error || 'Server error');
         }
     } catch (error) {
-        // Fallback otomatis ke Serverless Cloud AI (jalan di Mobile & ketika laptop dimatikan)
         try {
             const promptText = `Ringkas deskripsi pekerjaan berikut menjadi 5-7 poin bullet yang mudah dipahami dalam Bahasa Indonesia untuk posisi "${job.title}":\n\nDeskripsi: ${stripHtml(job.raw_description || job.description)}\nPersyaratan: ${stripHtml(job.raw_requirements || job.requirements)}`;
             const cloudSummary = await fetchCloudAI(promptText);
@@ -1431,7 +1560,7 @@ window.generateAISummary = async function (jobId) {
                     </div>
                 </div>
             `;
-            window.aiSummaryCache[jobId] = htmlOut;
+            addToCache(window.aiSummaryCache, jobId, htmlOut);
             contentArea.innerHTML = htmlOut;
         } catch (cloudErr) {
             contentArea.innerHTML = `
@@ -1450,9 +1579,9 @@ window.generateInterviewQuestions = async function (jobId) {
     if (!job) return;
 
     const contentArea = document.getElementById(`interviewContent-${jobId}`);
+    if (!contentArea) return;
     contentArea.style.display = 'block';
 
-    // Instant Cache Return
     if (window.aiInterviewCache[jobId]) {
         contentArea.innerHTML = window.aiInterviewCache[jobId];
         return;
@@ -1468,24 +1597,25 @@ window.generateInterviewQuestions = async function (jobId) {
     try {
         const response = await fetchWithTimeout(`${AI_SERVICE_URL}/api/predict-interview`, {
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 title: job.title,
                 description: job.raw_description || job.description || '',
                 requirements: job.raw_requirements || job.requirements || '',
-                company: job.organization_name || job.company || 'Perusahaan tidak disebutkan'
+                company: job.organization_name || job.company || 'Perusahaan tidak disebutkan',
+                user_skills: localStorage.getItem('userSkills') || 'Python, SQL, Data Science, Machine Learning, Dataiku, Power BI, React, Laravel, IT Support',
+                user_experience: 'IT Support (Universitas Abdurrab), Data Science Intern (PT Pertamina Hulu Rokan), Data Scientist Intern (Rakamin), Freelance Web/ML'
             })
         }, 1200);
 
         const data = await response.json();
 
         if (data.success) {
+            const providerLabel = escapeHtml(data.provider || 'Local AI');
             const htmlOut = `
                 <div class="ai-result">
                     <div class="ai-result-header">
-                        <h4>💬 Prediksi Pertanyaan Interview (Groq AI)</h4>
+                        <h4>💬 Prediksi Pertanyaan Interview (${providerLabel})</h4>
                         <p>Berdasarkan analisis AI terhadap job requirements</p>
                     </div>
                     <div class="ai-result-content interview-questions">
@@ -1493,13 +1623,12 @@ window.generateInterviewQuestions = async function (jobId) {
                     </div>
                 </div>
             `;
-            window.aiInterviewCache[jobId] = htmlOut;
+            addToCache(window.aiInterviewCache, jobId, htmlOut);
             contentArea.innerHTML = htmlOut;
         } else {
             throw new Error(data.error || 'Server error');
         }
     } catch (error) {
-        // Fallback otomatis ke Serverless Cloud AI (jalan di Mobile & ketika laptop dimatikan)
         try {
             const companyName = job.organization_name || job.company || 'Perusahaan';
             const promptText = `Prediksi 8 pertanyaan interview yang kemungkinan besar ditanyakan untuk posisi "${job.title}" di ${companyName} dalam Bahasa Indonesia (campuran technical dan behavioral):\n\nDeskripsi: ${stripHtml(job.raw_description || job.description)}\nPersyaratan: ${stripHtml(job.raw_requirements || job.requirements)}`;
@@ -1515,7 +1644,7 @@ window.generateInterviewQuestions = async function (jobId) {
                     </div>
                 </div>
             `;
-            window.aiInterviewCache[jobId] = htmlOut;
+            addToCache(window.aiInterviewCache, jobId, htmlOut);
             contentArea.innerHTML = htmlOut;
         } catch (cloudErr) {
             contentArea.innerHTML = `
@@ -1534,22 +1663,31 @@ window.generateSkillsGap = async function (jobId) {
     if (!job) return;
 
     const contentArea = document.getElementById(`skillsGapContent-${jobId}`);
+    if (!contentArea) return;
     contentArea.style.display = 'block';
 
-    // Check if cached
     if (window.skillsGapCache && window.skillsGapCache[jobId]) {
         contentArea.innerHTML = window.skillsGapCache[jobId];
         return;
     }
 
-    // Extract skills from requirements using simple keyword matching
-    const jobRequirements = extractSkillsFromText(job.raw_requirements || job.requirements || '');
-    
-    // Get user skills from localStorage or use default
-    const userSkillsStr = localStorage.getItem('userSkills') || 'Python,SQL,Pandas,Power BI,Basic ML';
-    const userSkills = userSkillsStr.split(',').map(s => s.trim()).filter(s => s);
+    const combinedText = `${job.raw_requirements || ''} ${job.raw_description || ''}`;
+    const extracted = extractSkillsFromText(combinedText);
+    const nlp = job.nlp_breakdown || {};
+    const nlpSkills = [...(nlp.mandatory_skills || []), ...(nlp.preferred_skills || nlp.plus_skills || [])];
 
-    // Calculate skill gaps (simple matching algorithm)
+    // Gabungkan skill dari NLP backend dan keyword extraction dengan deduplikasi case-insensitive
+    const reqSkillMap = new Map();
+    [...nlpSkills, ...extracted].forEach(s => {
+        const key = s.toLowerCase();
+        if (!reqSkillMap.has(key)) reqSkillMap.set(key, s);
+    });
+    const jobRequirements = Array.from(reqSkillMap.values());
+
+    const defaultRavilSkills = 'Python,SQL,Data Science,Data Analysis,Machine Learning,Dataiku,Power BI,Excel,React,Laravel,PHP,JavaScript,Git,ArcGIS,IT Support,Troubleshooting,MySQL,Tableau';
+    const userSkillsStr = localStorage.getItem('userSkills') || defaultRavilSkills;
+    const userSkills = userSkillsStr.split(',').map(s => s.trim()).filter(Boolean);
+
     const matched = [];
     const missing = [];
     const advanced = [];
@@ -1558,7 +1696,7 @@ window.generateSkillsGap = async function (jobId) {
         const s1 = skill1.toLowerCase();
         const s2 = skill2.toLowerCase();
         if (s1 === s2) return 1.0;
-        if (s1.includes(s2) || s2.includes(s1)) return 0.7;
+        if (s1.length >= 3 && s2.length >= 3 && (s1.includes(s2) || s2.includes(s1))) return 0.7;
         return 0.0;
     };
 
@@ -1583,11 +1721,10 @@ window.generateSkillsGap = async function (jobId) {
         }
     }
 
-    const matchPercentage = jobRequirements.length > 0 
+    const matchPercentage = jobRequirements.length > 0
         ? Math.round((matched.length / jobRequirements.length) * 100)
-        : 0;
+        : 100;
 
-    // Build HTML output
     const htmlOut = `
         <div class="skills-gap-result">
             <div class="gap-header">
@@ -1616,7 +1753,7 @@ window.generateSkillsGap = async function (jobId) {
             <div class="gap-section">
                 <h4>✅ Your Matched Skills</h4>
                 <ul class="skills-list">
-                    ${matched.map(m => `<li class="skill-matched"><strong>${m.user}</strong> → ${m.required}</li>`).join('')}
+                    ${matched.map(m => `<li class="skill-matched"><strong>${escapeHtml(m.user)}</strong> → ${escapeHtml(m.required)}</li>`).join('')}
                 </ul>
             </div>
             ` : ''}
@@ -1625,7 +1762,7 @@ window.generateSkillsGap = async function (jobId) {
             <div class="gap-section">
                 <h4>❌ Skills to Learn</h4>
                 <ul class="skills-list">
-                    ${missing.map(m => `<li class="skill-missing">• ${m}</li>`).join('')}
+                    ${missing.map(m => `<li class="skill-missing">• ${escapeHtml(m)}</li>`).join('')}
                 </ul>
             </div>
             ` : ''}
@@ -1634,41 +1771,81 @@ window.generateSkillsGap = async function (jobId) {
             <div class="gap-section">
                 <h4>⚡ Level Up These Skills</h4>
                 <ul class="skills-list">
-                    ${advanced.map(a => `<li class="skill-advanced"><strong>${a.user}</strong> → Advanced ${a.required}</li>`).join('')}
+                    ${advanced.map(a => `<li class="skill-advanced"><strong>${escapeHtml(a.user)}</strong> → Advanced ${escapeHtml(a.required)}</li>`).join('')}
                 </ul>
             </div>
             ` : ''}
         </div>
     `;
 
-    if (!window.skillsGapCache) window.skillsGapCache = {};
-    window.skillsGapCache[jobId] = htmlOut;
+    addToCache(window.skillsGapCache, jobId, htmlOut);
     contentArea.innerHTML = htmlOut;
 }
 
-// Helper: Extract skills from text
+// Helper: Extract skills from text using word-boundary regexes (fixes 'r'/'ai'/'rest' false matches)
+const SKILL_EXTRACTION_RULES = [
+    ['Python', /\bpython\b/i],
+    ['JavaScript', /\bjavascript\b/i],
+    ['TypeScript', /\btypescript\b/i],
+    ['Java', /\bjava\b/i],
+    ['C++', /(?:^|\W)c\+\+(?=$|\W)/i],
+    ['C#', /(?:^|\W)c#(?=$|\W)/i],
+    ['R', /\bR\b/],
+    ['Go', /\b(?:golang|go)\b/i],
+    ['PHP', /\bphp\b/i],
+    ['Rust', /\brust\b/i],
+    ['SQL', /\bsql\b/i],
+    ['MySQL', /\bmysql\b/i],
+    ['PostgreSQL', /\bpostgresql\b/i],
+    ['MongoDB', /\bmongodb\b/i],
+    ['Redis', /\bredis\b/i],
+    ['Elasticsearch', /\belasticsearch\b/i],
+    ['Machine Learning', /\bmachine learning\b/i],
+    ['Deep Learning', /\bdeep learning\b/i],
+    ['NLP', /\bnlp\b/i],
+    ['Computer Vision', /\bcomputer vision\b/i],
+    ['Data Science', /\bdata science\b/i],
+    ['Data Analysis', /\bdata analy(?:sis|tics)\b/i],
+    ['Tableau', /\btableau\b/i],
+    ['Power BI', /\bpower\s?bi\b/i],
+    ['Looker', /\blooker\b/i],
+    ['Metabase', /\bmetabase\b/i],
+    ['Docker', /\bdocker\b/i],
+    ['Kubernetes', /\bkubernetes\b/i],
+    ['Git', /\bgit\b/i],
+    ['AWS', /\baws\b/i],
+    ['GCP', /\bgcp\b/i],
+    ['Azure', /\bazure\b/i],
+    ['Dataiku', /\bdataiku\b/i],
+    ['Pandas', /\bpandas\b/i],
+    ['NumPy', /\bnumpy\b/i],
+    ['Scikit-Learn', /\bscikit-learn\b/i],
+    ['TensorFlow', /\btensorflow\b/i],
+    ['PyTorch', /\bpytorch\b/i],
+    ['React', /\breact(?:\.js)?\b/i],
+    ['Laravel', /\blaravel\b/i],
+    ['Vue', /\bvue(?:\.js)?\b/i],
+    ['Node.js', /\bnode(?:\.js)?\b/i],
+    ['Django', /\bdjango\b/i],
+    ['Flask', /\bflask\b/i],
+    ['REST API', /\brest\s?api\b/i],
+    ['GraphQL', /\bgraphql\b/i],
+    ['Microservices', /\bmicroservices\b/i],
+    ['Agile', /\bagile\b/i],
+    ['Scrum', /\bscrum\b/i],
+    ['IT Support', /\bit support\b/i],
+    ['ArcGIS', /\barcgis\b/i]
+];
+
 function extractSkillsFromText(text) {
-    const skillKeywords = [
-        'python', 'javascript', 'java', 'c++', 'r', 'golang', 'php', 'rust',
-        'sql', 'mysql', 'postgresql', 'mongodb', 'redis', 'elasticsearch',
-        'machine learning', 'deep learning', 'nlp', 'computer vision', 'data science', 'ml', 'ai',
-        'tableau', 'power bi', 'looker', 'qlik', 'metabase',
-        'docker', 'kubernetes', 'git', 'aws', 'gcp', 'azure', 'jenkins', 'dataiku',
-        'pandas', 'numpy', 'scikit-learn', 'tensorflow', 'pytorch', 'keras',
-        'react', 'angular', 'vue', 'node.js', 'express', 'django', 'flask',
-        'rest', 'api', 'graphql', 'microservices', 'agile', 'scrum'
-    ];
-
-    const textLower = text.toLowerCase();
-    const foundSkills = new Set();
-
-    for (const skill of skillKeywords) {
-        if (textLower.includes(skill)) {
-            foundSkills.add(skill.split(' ')[0].charAt(0).toUpperCase() + skill.slice(1));
+    if (!text) return [];
+    const foundSkills = [];
+    for (const [label, regex] of SKILL_EXTRACTION_RULES) {
+        if (regex.test(text)) {
+            foundSkills.push(label);
         }
     }
-
-    return Array.from(foundSkills);
+    return foundSkills;
 }
 
 // Open Application Tracker
@@ -1677,17 +1854,12 @@ window.openApplicationTracker = function (jobId) {
     if (!job) return;
 
     const contentArea = document.getElementById(`trackerContent-${jobId}`);
+    if (!contentArea) return;
     contentArea.style.display = 'block';
 
-    // Get or create application data from localStorage
-    const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
-
-    // Get status dari footer button (priority)
+    const applications = getApplicationsState();
     const footerStatus = document.querySelector(`select.status-select-modal`)?.value || '';
 
-    // Get or init application for this job
     if (!applications[jobId]) {
         const initialStatus = footerStatus || 'not_applied';
         applications[jobId] = {
@@ -1701,18 +1873,17 @@ window.openApplicationTracker = function (jobId) {
             followUpDate: null
         };
     } else if (footerStatus && footerStatus !== applications[jobId].status) {
-        // Sync status dari footer ke tracker
         applications[jobId].status = footerStatus;
     }
 
     const app = applications[jobId];
+    const safeId = escapeHtml(String(jobId));
 
-    // Build tracker form HTML
     const trackerHTML = `
         <div class="application-tracker-form">
             <div class="form-section">
                 <label>📌 Application Status</label>
-                <select class="form-select" id="appStatus_${jobId}" onchange="updateApplicationStatus('${jobId}', this.value)">
+                <select class="form-select" id="appStatus_${safeId}" onchange="updateApplicationStatus('${safeId}', this.value)">
                     <option value="not_applied" ${app.status === 'not_applied' ? 'selected' : ''}>Belum Dilamar</option>
                     <option value="applied" ${app.status === 'applied' ? 'selected' : ''}>Sudah Dilamar</option>
                     <option value="interview" ${app.status === 'interview' ? 'selected' : ''}>Tahap Interview</option>
@@ -1724,7 +1895,7 @@ window.openApplicationTracker = function (jobId) {
 
             <div class="form-section">
                 <label>📅 Tanggal Dilamar</label>
-                <input type="date" class="form-input" id="appliedDate_${jobId}" value="${app.appliedDate}" onchange="updateApplicationData('${jobId}', 'appliedDate', this.value)">
+                <input type="date" class="form-input" id="appliedDate_${safeId}" value="${escapeHtml(app.appliedDate)}" onchange="updateApplicationData('${safeId}', 'appliedDate', this.value)">
             </div>
 
             ${app.status !== 'not_applied' ? `
@@ -1733,27 +1904,27 @@ window.openApplicationTracker = function (jobId) {
                 <div class="interview-list">
                     ${app.interviewDates.length > 0 ? app.interviewDates.map((int, idx) => `
                         <div class="interview-item">
-                            <span>${int.date} - ${int.type || 'Interview'}</span>
-                            <button class="btn-remove" onclick="removeInterviewDate('${jobId}', ${idx})">✕</button>
+                            <span>${escapeHtml(int.date)} - ${escapeHtml(int.type || 'Interview')}</span>
+                            <button class="btn-remove" onclick="removeInterviewDate('${safeId}', ${idx})">✕</button>
                         </div>
                     `).join('') : '<p style="color: #888; font-size: 0.9rem;">Belum ada interview scheduled</p>'}
                 </div>
-                <button class="btn-add-interview" onclick="addInterviewDateForm('${jobId}')">+ Add Interview</button>
+                <button class="btn-add-interview" onclick="addInterviewDateForm('${safeId}')">+ Add Interview</button>
             </div>
             ` : ''}
 
             <div class="form-section">
                 <label>📝 Notes</label>
-                <textarea class="form-textarea" id="notes_${jobId}" placeholder="Catatan tentang aplikasi ini..." onchange="updateApplicationData('${jobId}', 'notes', this.value)">${app.notes}</textarea>
+                <textarea class="form-textarea" id="notes_${safeId}" placeholder="Catatan tentang aplikasi ini..." onchange="updateApplicationData('${safeId}', 'notes', this.value)">${escapeHtml(app.notes)}</textarea>
             </div>
 
             <div class="form-section">
                 <label>📌 Follow-up Date</label>
-                <input type="date" class="form-input" id="followUpDate_${jobId}" value="${app.followUpDate || ''}" onchange="updateApplicationData('${jobId}', 'followUpDate', this.value)">
+                <input type="date" class="form-input" id="followUpDate_${safeId}" value="${escapeHtml(app.followUpDate || '')}" onchange="updateApplicationData('${safeId}', 'followUpDate', this.value)">
             </div>
 
             <div class="form-actions">
-                <button class="btn-save" onclick="saveApplicationTracker('${jobId}')">💾 Save Progress</button>
+                <button class="btn-save" onclick="saveApplicationTracker('${safeId}')">💾 Save Progress</button>
                 <button class="btn-view-all" onclick="showApplicationStats()">📊 View All Applications</button>
             </div>
         </div>
@@ -1765,44 +1936,42 @@ window.openApplicationTracker = function (jobId) {
 // Update application status
 window.updateApplicationStatus = function (jobId, status) {
     const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+    const applications = getApplicationsState();
 
-    if (applications[jobId]) {
+    if (!applications[jobId]) {
+        const job = allJobs.find(j => j.id == jobId);
+        applications[jobId] = {
+            jobId: jobId,
+            jobTitle: job ? job.title : 'Unknown',
+            company: job ? (job.organization_name || job.company || 'Unknown') : 'Unknown',
+            appliedDate: new Date().toISOString().split('T')[0],
+            status: status,
+            interviewDates: [],
+            notes: '',
+            followUpDate: null
+        };
+    } else {
         applications[jobId].status = status;
-        localStorage.setItem(applicationsKey, JSON.stringify(applications));
-        
-        // Also sync to footer button
-        const footerSelect = document.querySelector(`select.status-select-modal`);
-        if (footerSelect) {
-            footerSelect.value = status;
-        }
-        
-        // Also sync to savedJobMatcherState (old storage)
-        // Auto-bookmark hanya kalau status bukan "not_applied" atau "rejected"
-        const state = getSavedJobsState();
-        const shouldBookmark = (status !== 'not_applied' && status !== 'rejected');
-        state[jobId] = { ...(state[jobId] || {}), status: status, isBookmarked: shouldBookmark };
-        localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
-        
-        // Update wishlist count badge
-        updateWishlistCountBadge();
-        
-        // Refresh UI job cards (tapi jangan refresh form dulu)
-        refreshJobCardUI(jobId);
     }
+    localStorage.setItem(applicationsKey, JSON.stringify(applications));
+
+    const footerSelect = document.querySelector(`select.status-select-modal`);
+    if (footerSelect) footerSelect.value = status;
+
+    const state = getSavedJobsState();
+    const shouldBookmark = (status !== 'not_applied' && status !== 'rejected');
+    state[jobId] = { ...(state[jobId] || {}), status: status, isBookmarked: shouldBookmark };
+    localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
+
+    updateWishlistCountBadge();
+    refreshJobCardUI(jobId);
 }
 
-// Helper: Refresh job card UI status pill
+// Helper: Refresh job card UI status pill & active modal controls
 function refreshJobCardUI(jobId) {
-    // Force full re-render dengan applyFilters()
-    // Ini akan re-create semua job cards dengan status terbaru dari localStorage
     applyFilters();
-    
-    // Juga update modal kalau masih kebuka
-    const modal = document.getElementById('jobModal');
-    if (modal && modal.style.display === 'block') {
-        // Update footer button di modal
+
+    if (detailModal && detailModal.classList.contains('active') && String(window.currentModalJobId) === String(jobId)) {
         updateJobModalFooterStatus(jobId);
         updateJobModalBookmarkButton(jobId);
     }
@@ -1810,10 +1979,7 @@ function refreshJobCardUI(jobId) {
 
 // Update footer status button di modal
 function updateJobModalFooterStatus(jobId) {
-    const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
-    
+    const applications = getApplicationsState();
     const footerSelect = document.querySelector('select.status-select-modal');
     if (footerSelect && applications[jobId]) {
         footerSelect.value = applications[jobId].status;
@@ -1821,10 +1987,10 @@ function updateJobModalFooterStatus(jobId) {
 }
 
 // Update bookmark button di modal
-function updateJobModalBookmarkButton(jobId) {
+window.updateJobModalBookmarkButton = function (jobId) {
     const state = getSavedJobsState();
     const isBookmarked = state[jobId] ? state[jobId].isBookmarked : false;
-    
+
     const bookmarkBtn = document.querySelector('.btn-bookmark-modal');
     if (bookmarkBtn) {
         if (isBookmarked) {
@@ -1835,13 +2001,12 @@ function updateJobModalBookmarkButton(jobId) {
             bookmarkBtn.innerHTML = '☆ Simpan';
         }
     }
-}
+};
 
 // Update application data
 window.updateApplicationData = function (jobId, field, value) {
     const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+    const applications = getApplicationsState();
 
     if (applications[jobId]) {
         applications[jobId][field] = value;
@@ -1852,8 +2017,7 @@ window.updateApplicationData = function (jobId, field, value) {
 // Add interview date
 window.addInterviewDateForm = function (jobId) {
     const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+    const applications = getApplicationsState();
 
     if (applications[jobId]) {
         const interviewDate = prompt('Masukkan tanggal interview (YYYY-MM-DD):');
@@ -1865,7 +2029,7 @@ window.addInterviewDateForm = function (jobId) {
                 type: interviewType || 'Interview'
             });
             localStorage.setItem(applicationsKey, JSON.stringify(applications));
-            window.openApplicationTracker(jobId); // Refresh form
+            window.openApplicationTracker(jobId);
         }
     }
 }
@@ -1873,23 +2037,20 @@ window.addInterviewDateForm = function (jobId) {
 // Remove interview date
 window.removeInterviewDate = function (jobId, index) {
     const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
+    const applications = getApplicationsState();
 
     if (applications[jobId]) {
         applications[jobId].interviewDates.splice(index, 1);
         localStorage.setItem(applicationsKey, JSON.stringify(applications));
-        window.openApplicationTracker(jobId); // Refresh form
+        window.openApplicationTracker(jobId);
     }
 }
 
 // Save application tracker
 window.saveApplicationTracker = function (jobId) {
     const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    let applications = applicationsData ? JSON.parse(applicationsData) : {};
+    const applications = getApplicationsState();
 
-    // Create aplikasi kalau belum exist
     if (!applications[jobId]) {
         const job = allJobs.find(j => j.id == jobId);
         applications[jobId] = {
@@ -1904,42 +2065,31 @@ window.saveApplicationTracker = function (jobId) {
         };
     }
 
-    // Capture form values sebelum save
     applications[jobId].status = document.getElementById(`appStatus_${jobId}`)?.value || applications[jobId].status;
     applications[jobId].appliedDate = document.getElementById(`appliedDate_${jobId}`)?.value || applications[jobId].appliedDate;
     applications[jobId].notes = document.getElementById(`notes_${jobId}`)?.value || '';
     applications[jobId].followUpDate = document.getElementById(`followUpDate_${jobId}`)?.value || '';
 
     localStorage.setItem(applicationsKey, JSON.stringify(applications));
-    
-    // Update footer button status juga
+
     const footerSelect = document.querySelector(`select.status-select-modal`);
-    if (footerSelect) {
-        footerSelect.value = applications[jobId].status;
-    }
-    
-    // Update savedJobMatcherState (old storage)
-    // Auto-bookmark hanya kalau status bukan "not_applied" atau "rejected"
+    if (footerSelect) footerSelect.value = applications[jobId].status;
+
     const state = getSavedJobsState();
     const shouldBookmark = (applications[jobId].status !== 'not_applied' && applications[jobId].status !== 'rejected');
     state[jobId] = { ...(state[jobId] || {}), status: applications[jobId].status, isBookmarked: shouldBookmark };
     localStorage.setItem('savedJobMatcherState', JSON.stringify(state));
-    
-    // Refresh UI semua
+
+    updateWishlistCountBadge();
     refreshJobCardUI(jobId);
-    
-    // Refresh form biar conditional sections update
     window.openApplicationTracker(jobId);
-    
-    alert('✅ Application progress saved!');
+
+    showToast('✅ Progress lamaran berhasil disimpan!');
 }
 
 // Show application stats
 window.showApplicationStats = function () {
-    const applicationsKey = 'jobMatcher_applications';
-    const applicationsData = localStorage.getItem(applicationsKey);
-    const applications = applicationsData ? JSON.parse(applicationsData) : {};
-
+    const applications = getApplicationsState();
     const statuses = { not_applied: 0, applied: 0, interview: 0, offer: 0, accepted: 0, rejected: 0 };
 
     for (const app of Object.values(applications)) {
@@ -1960,19 +2110,6 @@ window.showApplicationStats = function () {
         `Accepted: ${statuses.accepted} (${acceptanceRate}%)\n` +
         `Rejected: ${statuses.rejected}`
     );
-}
-
-// Also handle in switchTab
-const originalSwitchTab = window.switchTab;
-window.switchTab = function (event, tabId) {
-    originalSwitchTab.call(this, event, tabId);
-    
-    if (tabId === 'trackerTab' && window.currentModalJobId) {
-        const area = document.getElementById(`trackerContent-${window.currentModalJobId}`);
-        if (area && area.style.display === 'none') {
-            window.openApplicationTracker(window.currentModalJobId);
-        }
-    }
 }
 
 

@@ -47,40 +47,120 @@ except ImportError:
     scrape_jobs = None
 
 # ─── Shared Config & Constants (terpusat di config.py) ─────────────────────────
-from config import PROFILE, MONTHS_ID, clean_html
+from config import PROFILE, MONTHS_ID, SKILL_TAXONOMY, SOFT_SKILLS, clean_html
 
 
 # ─── Pre-compiled Regex Patterns (Optimasi Kecepatan NLP & Parsing) ─────────────
-RE_GPA = re.compile(r'(?:ipk|gpa)[^\d]*(\d[.,]\d{2})', re.IGNORECASE)
-RE_AGE_1 = re.compile(r'(?:usia|umur|age)\s*(?:maksimal|maks|maks\.|max|maximum)?[^\d]*(\d{2})', re.IGNORECASE)
-RE_AGE_2 = re.compile(r'(?:maksimal|maks|maks\.|max|maximum)\s*(?:usia|umur|age)?[^\d]*(\d{2})\s*(?:tahun|years)', re.IGNORECASE)
-RE_TOEFL = re.compile(r'toefl[^\d]*(\d{3})', re.IGNORECASE)
+RE_GPA = re.compile(r'\b(?:ipk|gpa)\b[^.\n]{0,30}?(\d[.,]\d{1,2})\b', re.IGNORECASE)
+RE_AGE_MAX = re.compile(
+    r'\b(?:usia|umur|age)\b\s*(?:maksimal|maks\.?|max(?:imum)?|di\s*bawah|under|below|up\s*to|hingga|<=|<|:|-)?\s*(?:\d{2}\s*[-–]\s*)?(\d{2})\b(?:\s*(?:tahun|thn|years?))?',
+    re.IGNORECASE
+)
+RE_AGE_PREFIX_MAX = re.compile(
+    r'\b(?:maksimal|maks\.?|max(?:imum)?|di\s*bawah|under|below)\s*(?:usia|umur|age)\b[^\d\n]{0,15}(\d{2})\b',
+    re.IGNORECASE
+)
+RE_AGE_MIN_GUARD = re.compile(r'\b(?:minimal|min\.?|minimum|at\s*least|>=)\s*(?:usia|umur|age)?\s*$', re.IGNORECASE)
+RE_TOEFL = re.compile(r'\btoefl\b[^\d\n]{0,25}?(\d{3})\b', re.IGNORECASE)
+RE_GENDER_MALE = re.compile(r'\b(?:pria|laki-laki|male)\b', re.IGNORECASE)
+RE_GENDER_FEMALE = re.compile(r'\b(?:wanita|perempuan|female)\b', re.IGNORECASE)
 
-RE_EXP_1 = re.compile(r'(?:pengalaman|experience)\s*(?:kerja)?\s*(?:minimal|min|min\.|diutamakan|at least)?\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)', re.IGNORECASE)
-RE_EXP_2 = re.compile(r'(?:minimal|min|min\.|at least)\s*(\d+)\s*(?:\+)?\s*(?:tahun|year)\s*(?:pengalaman|experience)', re.IGNORECASE)
-RE_EXP_3 = re.compile(r'(\d+)\+?\s*years?\s*(?:of\s*)?(?:relevant\s*)?experience', re.IGNORECASE)
-RE_EXP_4 = re.compile(r'(\d+)\s*(?:tahun)\s*(?:pengalaman)', re.IGNORECASE)
+RE_EXP_RANGE = re.compile(
+    r'(?:pengalaman|experience|minimal|min\.?|at\s*least)[^\d\n]{0,25}?(\d+)\s*[-–]\s*(\d+)\s*(?:tahun|thn|years?)',
+    re.IGNORECASE
+)
+RE_EXP_1 = re.compile(
+    r'\b(?:pengalaman|experience)\b(?:\s*kerja)?\s*(?:minimal|min\.?|diutamakan|at\s*least)?\s*(\d+)\s*(?:\([a-z]+\)\s*)?\+?\s*(?:tahun|thn|years?)\b',
+    re.IGNORECASE
+)
+RE_EXP_2 = re.compile(
+    r'\b(?:minimal|min\.?|at\s*least)\s*(\d+)\s*(?:\([a-z]+\)\s*)?\+?\s*(?:tahun|thn|years?)\s*(?:pengalaman|experience)\b',
+    re.IGNORECASE
+)
+RE_EXP_3 = re.compile(r'\b(\d+)\+?\s*years?\s*(?:of\s*)?(?:relevant\s*)?experience\b', re.IGNORECASE)
+RE_EXP_4 = re.compile(r'\b(\d+)\+?\s*(?:tahun|thn)\s*(?:pengalaman|kerja)\b', re.IGNORECASE)
+RE_FRESH_NEGATED = re.compile(r'\b(?:not\s+for|bukan|tidak\s+untuk|no)\s+fresh\s+graduate', re.IGNORECASE)
 
 RE_SENTENCE_SPLIT = re.compile(r'[\n•\-\*.]+')
-RE_HTML_CLEAN = re.compile(r'<.*?>')
+RE_HTML_CLEAN = re.compile(r'<[^>]+>')
 RE_WHITESPACE = re.compile(r'\s+')
 
-# Pre-compiled word-boundary regexes untuk skill profile user
-def _build_skill_pattern(skill: str) -> re.Pattern:
-    s = skill.strip().lower()
-    if len(s) <= 3:
-        return re.compile(r'\b' + re.escape(s) + r'\b', re.IGNORECASE)
-    return re.compile(r'(?:\b|_)' + re.escape(s) + r'(?:\b|_)', re.IGNORECASE)
+# Pre-compiled Matching & Domain Regexes (menghindari false-positive substring)
+RE_IT_DEGREE = re.compile(
+    r'\b(?:teknik informatika|informatika|ilmu komputer|sistem informasi|teknik komputer|computer science|'
+    r'information technology|information systems|software engineering|rekayasa perangkat lunak|'
+    r'manajemen informatika|data science|teknologi informasi|sistem & teknologi informasi|komputer)\b',
+    re.IGNORECASE
+)
+RE_IT_TITLE_ROLE = re.compile(
+    r'\b(?:software|developer|programmer|backend|back-end|front-end|frontend|fullstack|full stack|'
+    r'data analyst|data scientist|data engineer|data analytics|analytics engineer|ai engineer|ai systems|'
+    r'ai data|ai training|machine learning|ml engineer|ml ops|mlops|deep learning|'
+    r'it support|it helpdesk|help\s?desk|technology support|it staff|it officer|it project|'
+    r'it specialist|it analyst|it supervisor|it operations|it infrastructure|it non developer|'
+    r'systems engineer|network engineer|network administrator|system administrator|sysadmin|devops|sre|'
+    r'cyber\s?security|information security|data security|data quality|database administrator|dba|'
+    r'web developer|mobile developer|ui/ux|qa engineer|odoo|bi analyst|business intelligence|'
+    r'edp|teknisi komputer|teknisi jaringan|teknisi it|cloud engineer|ai/ml|llm|rlhf|annotation|'
+    r'python|react|laravel|flutter|golang|linux|ubuntu|cuda|vercel)\b',
+    re.IGNORECASE
+)
+RE_GENERAL_MAJOR = re.compile(r'\b(?:semua jurusan|all majors?|all disciplines|semua program studi|open to all majors)\b', re.IGNORECASE)
+RE_ENG_MAJOR = re.compile(r'\b(?:teknik|engineering|mipa|matematika|statistika|statistics|physics|fisika)\b', re.IGNORECASE)
+RE_NON_IT_SPECIFIC = re.compile(
+    r'\b(?:geologi|geofisika|perminyakan|pertambangan|akuntansi|hukum|kedokteran|farmasi|keperawatan|'
+    r'petroleum|geology|geophysic\w*|accounting|taxation|perpajakan|civil engineering|teknik sipil|'
+    r'mechanical engineering|teknik mesin|chemical engineering|teknik kimia)\b',
+    re.IGNORECASE
+)
+RE_ADVANCED_DEGREE = re.compile(r'\b(?:phd|ph\.d|doctorate|msc|m\.sc|s2|magister|master\'?s degree)\b', re.IGNORECASE)
+RE_BACHELOR_DEGREE = re.compile(r'\b(?:s1|bachelor|sarjana|d3|d4|undergraduate)\b', re.IGNORECASE)
 
-COMPILED_PROFILE_SKILLS: List[Tuple[str, re.Pattern]] = [
-    (sk, _build_skill_pattern(sk)) for sk in PROFILE.get("skills", [])
+RE_TRAINEE = re.compile(
+    r'\b(?:management trainee|officer development program|odp|mdp|fgdp|gdp|fldp|bbap|'
+    r'future leader\w*|graduate development\w*|banking associate|management development program|'
+    r'graduate program|graduate trainee|associate program|bibit bsi|pemagangan terstruktur|trainee|mt)\b',
+    re.IGNORECASE
+)
+RE_ROLE_TITLE = re.compile(
+    r'\b(?:data|analyst|analis|scientist|ai|ml|machine learning|programmer|developer|it|software|'
+    r'systems|digital|fullstack|full stack|backend|frontend|web|mobile|support|helpdesk|'
+    r'jaringan|network|cyber|security|database|devops|cloud|bi|edp|odoo|trainee|odp|mdp)\b',
+    re.IGNORECASE
+)
+RE_SENIOR_TITLE = re.compile(
+    r'\b(?:senior|sr\.?|lead|principal|head of|vp|vice president|director|avp|manager|architect|staff engineer|pod lead)\b',
+    re.IGNORECASE
+)
+RE_HULU_MIGAS = re.compile(
+    r'\b(?:hulu migas|migas|skk migas|kkks|oil\s*(?:&|and)\s*gas|upstream|pertamina|petrochemical|'
+    r'reservoir|drilling|petroleum|petrotechnical|geoscience|well logging|wellbore|subsurface|refinery)\b',
+    re.IGNORECASE
+)
+
+# Core vs General profile skills (core skills bernilai lebih tinggi daripada istilah umum)
+GENERAL_PROFILE_SKILLS = {"ai", "it", "analytics", "programming", "developer", "web development", "hardware", "software"}
+
+def _build_skill_pattern(skill: str) -> re.Pattern:
+    s = skill.strip()
+    s_lower = s.lower()
+    if s_lower == "it":
+        # Case-sensitive agar kata ganti bahasa Inggris "it" tidak false-match
+        return re.compile(r'\bIT\b')
+    if len(s_lower) <= 3:
+        return re.compile(r'\b' + re.escape(s_lower) + r'\b', re.IGNORECASE)
+    return re.compile(r'(?:\b|_)' + re.escape(s_lower) + r'(?:\b|_)', re.IGNORECASE)
+
+COMPILED_PROFILE_SKILLS: List[Tuple[str, re.Pattern, bool]] = [
+    (sk, _build_skill_pattern(sk), sk.strip().lower() not in GENERAL_PROFILE_SKILLS)
+    for sk in PROFILE.get("skills", [])
 ]
 
 
 # ─── HTTP Session Factory dengan Connection Pooling ───────────────────────────
 _GLOBAL_SESSION: Optional[requests.Session] = None
 
-def get_default_session(pool_size: int = 50, retries: int = 3) -> requests.Session:
+def get_default_session(pool_size: int = 64, retries: int = 3) -> requests.Session:
     """
     Mengembalikan session singleton dengan connection pooling & automatic retry.
     Menghindari overhead TLS handshake berulang-ulang pada ribuan request concurrent.
@@ -119,6 +199,60 @@ def get_timestamp_wib() -> str:
     return f"{wib_now.day} {MONTHS_ID[wib_now.month]} {wib_now.year} - {wib_now.strftime('%H:%M')} WIB"
 
 
+def compact_location(loc: Optional[str], max_items: int = 3) -> str:
+    """Ringkas string lokasi yang sangat panjang (misal daftar puluhan kabupaten di Talentics)."""
+    if not loc:
+        return "Indonesia"
+    text = RE_WHITESPACE.sub(" ", str(loc)).strip()
+    if len(text) <= 90:
+        return text
+    parts = [p.strip() for p in re.split(r'[;|]', text) if p.strip()]
+    if len(parts) == 1:
+        # Pisahkan berdasarkan pola ", Kabupaten/Kota" atau "(Indonesia),"
+        if "(Indonesia)," in text:
+            parts = [p.strip().rstrip(",") for p in text.split("(Indonesia),") if p.strip()]
+            parts = [f"{p} (Indonesia)" if not p.endswith(")") else p for p in parts]
+        else:
+            parts = [p.strip() for p in text.split(",") if p.strip()]
+    if len(parts) > max_items:
+        shown = ", ".join(parts[:max_items])
+        return f"{shown} (+{len(parts) - max_items} lokasi lainnya)"
+    return text[:120]
+
+
+def deduplicate_jobs(jobs: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    """Deduplikasi berdasarkan (source, id/url) lalu (source, title, organization_name)."""
+    seen_keys: Set[str] = set()
+    seen_title_org: Set[str] = set()
+    deduped: List[Dict[str, Any]] = []
+
+    for job in jobs:
+        src = str(job.get("source") or "").strip().lower()
+        jid = str(job.get("id") or "").strip().lower()
+        raw_url = str(job.get("url") or "").strip().lower()
+
+        if jid:
+            key = f"{src}:{jid}"
+        elif raw_url:
+            key = f"{src}:{raw_url}"
+        else:
+            key = f"{src}:{hash(str(job))}"
+
+        norm_title = RE_WHITESPACE.sub(" ", str(job.get("title") or "").strip().lower())
+        norm_org = RE_WHITESPACE.sub(" ", str(job.get("organization_name") or "").strip().lower())
+        title_org_key = f"{src}|{norm_title}|{norm_org}" if norm_title else ""
+
+        if key in seen_keys or (title_org_key and title_org_key in seen_title_org):
+            continue
+
+        seen_keys.add(key)
+        if title_org_key:
+            seen_title_org.add(title_org_key)
+        deduped.append(job)
+
+    return deduped
+
+
 def detect_new_jobs(matched_jobs: List[Dict[str, Any]], base_dir: str) -> List[str]:
     """
     Bandingkan ID job saat ini dengan run sebelumnya.
@@ -140,100 +274,116 @@ def detect_new_jobs(matched_jobs: List[Dict[str, Any]], base_dir: str) -> List[s
     return list(new_ids)
 
 
-def _atomic_write_json(filepath: str, data: Any, indent: Optional[int] = 2) -> None:
+def _atomic_write_json(filepath: str, data: Any, indent: Optional[int] = None) -> None:
     """Tulis file JSON secara atomik menggunakan replace untuk mencegah korupsi file."""
     tmp_path = filepath + ".tmp"
+    separators = (',', ':') if indent is None else None
     with open(tmp_path, "w", encoding="utf-8") as f:
-        json.dump(data, f, indent=indent, ensure_ascii=False)
+        json.dump(data, f, indent=indent, separators=separators, ensure_ascii=False)
     os.replace(tmp_path, filepath)
 
 
-def save_jobs(matched_jobs: List[Dict[str, Any]], base_dir: Optional[str] = None) -> str:
+def save_jobs(
+    matched_jobs: List[Dict[str, Any]],
+    base_dir: Optional[str] = None,
+    compact: bool = True,
+    update_metadata: bool = True
+) -> str:
     """
-    Simpan hasil matched_jobs ke empat file output secara atomik:
-      - matched_jobs.json
-      - matched_jobs.js  (window global fallback untuk browser)
-      - last_updated.json
-      - new_jobs.json    (ID job baru sejak scrape terakhir, dibaca app.js)
+    Simpan hasil matched_jobs secara atomik:
+      - matched_jobs.json (compact JSON untuk kecepatan loading browser)
+      - matched_jobs.js   (window global fallback untuk file://)
+      - last_updated.json & new_jobs.json (saat update_metadata=True)
     """
     if base_dir is None:
         base_dir = os.path.dirname(os.path.abspath(__file__))
 
-    # Deteksi job baru SEBELUM overwrite matched_jobs.json
-    new_job_ids = detect_new_jobs(matched_jobs, base_dir)
     timestamp_str = get_timestamp_wib()
+    new_job_ids = detect_new_jobs(matched_jobs, base_dir) if update_metadata else []
 
     output_json = os.path.join(base_dir, "matched_jobs.json")
-    _atomic_write_json(output_json, matched_jobs, indent=2)
+    _atomic_write_json(output_json, matched_jobs, indent=None if compact else 2)
 
     output_js = os.path.join(base_dir, "matched_jobs.js")
     tmp_js = output_js + ".tmp"
     with open(tmp_js, "w", encoding="utf-8") as f:
         f.write(f"window.lastUpdated = '{timestamp_str}';\n")
-        f.write("window.matchedJobs = " + json.dumps(matched_jobs, ensure_ascii=False) + ";")
+        f.write("window.matchedJobs = " + json.dumps(matched_jobs, separators=(',', ':'), ensure_ascii=False) + ";")
     os.replace(tmp_js, output_js)
 
-    output_lu = os.path.join(base_dir, "last_updated.json")
-    _atomic_write_json(output_lu, {"last_updated": timestamp_str}, indent=2)
+    if update_metadata:
+        output_lu = os.path.join(base_dir, "last_updated.json")
+        _atomic_write_json(output_lu, {"last_updated": timestamp_str}, indent=2)
 
-    output_new = os.path.join(base_dir, "new_jobs.json")
-    _atomic_write_json(output_new, {
-        "scraped_at": timestamp_str,
-        "new_ids": new_job_ids,
-        "count": len(new_job_ids)
-    }, indent=2)
+        output_new = os.path.join(base_dir, "new_jobs.json")
+        _atomic_write_json(output_new, {
+            "scraped_at": timestamp_str,
+            "new_ids": new_job_ids,
+            "count": len(new_job_ids)
+        }, indent=2)
+        print(f"Output disimpan ke: {output_json}, {output_js}, {output_lu}, {output_new}")
+    else:
+        print(f"Output disimpan ke: {output_json}, {output_js}")
 
-    print(f"Output disimpan ke: {output_json}, {output_js}, {output_lu}, {output_new}")
     return timestamp_str
 
 
 # ─── Requirement Parsing Helpers ───────────────────────────────────────────────
 def parse_gpa_req(req_text: str) -> Optional[float]:
-    """Parse syarat minimal IPK/GPA."""
+    """Parse syarat minimal IPK/GPA (range valid 1.00 - 4.00)."""
     if not req_text:
         return None
-    match = RE_GPA.search(req_text)
-    if match:
+    for match in RE_GPA.finditer(req_text):
         try:
-            return float(match.group(1).replace(',', '.'))
+            val = float(match.group(1).replace(',', '.'))
+            if 1.0 <= val <= 4.0:
+                return val
         except ValueError:
             pass
     return None
 
 
 def parse_age_req(req_text: str) -> Optional[int]:
-    """Parse batas umur maksimal."""
+    """Parse batas umur maksimal dengan validasi konteks agar tidak false-positive."""
     if not req_text:
         return None
     ages = []
-    for match in RE_AGE_1.findall(req_text) + RE_AGE_2.findall(req_text):
-        try:
-            ages.append(int(match))
-        except ValueError:
-            pass
+    for pattern in (RE_AGE_MAX, RE_AGE_PREFIX_MAX):
+        for match in pattern.finditer(req_text):
+            start = max(0, match.start() - 25)
+            prefix = req_text[start:match.start()]
+            # Abaikan jika frasa menyatakan batas MINIMAL ("minimal usia 18 tahun")
+            if RE_AGE_MIN_GUARD.search(prefix) or re.search(r'\b(?:minimal|min\.?|minimum|at\s*least)\b', match.group(0), re.IGNORECASE):
+                continue
+            try:
+                val = int(match.group(1))
+                if 20 <= val <= 55:
+                    ages.append(val)
+            except ValueError:
+                pass
     return max(ages) if ages else None
 
 
 def parse_toefl_req(req_text: str) -> Optional[int]:
-    """Parse syarat skor TOEFL minimal."""
+    """Parse syarat skor TOEFL minimal (range valid 310 - 677)."""
     if not req_text:
         return None
-    match = RE_TOEFL.search(req_text)
-    if match:
+    for match in RE_TOEFL.finditer(req_text):
         try:
-            return int(match.group(1))
+            val = int(match.group(1))
+            if 310 <= val <= 677:
+                return val
         except ValueError:
             pass
     return None
 
 
 def check_gender_req(req_text: str) -> str:
-    """Cek apakah ada syarat jenis kelamin spesifik."""
+    """Cek apakah ada syarat jenis kelamin spesifik menggunakan word boundaries."""
     if not req_text:
         return "Open"
-    text_lower = req_text.lower()
-    has_male = "pria" in text_lower or "laki-laki" in text_lower or "male" in text_lower
-    has_female = "wanita" in text_lower or "perempuan" in text_lower or "female" in text_lower
+    has_male = bool(RE_GENDER_MALE.search(req_text))
+    has_female = bool(RE_GENDER_FEMALE.search(req_text))
     if has_male and not has_female:
         return "Male Only"
     elif has_female and not has_male:
@@ -244,23 +394,36 @@ def check_gender_req(req_text: str) -> str:
 def parse_exp_req(req_text: str) -> Dict[str, Any]:
     """
     Parse syarat pengalaman kerja dengan regex yang telah di-precompile.
-    Return dict berisi level dan tahun pengalaman yang diminta.
+    Mendukung rentang tahun (misal 2-3 tahun) dan filter fresh graduate.
     """
     if not req_text:
         return {"years": 0, "level": "Open / Not Specified", "raw_text": ""}
-    
+
     text_lower = req_text.lower()
     exps = []
+    for match in RE_EXP_RANGE.finditer(text_lower):
+        try:
+            exps.append(int(match.group(1)))
+            exps.append(int(match.group(2)))
+        except ValueError:
+            pass
+
     for pattern in (RE_EXP_1, RE_EXP_2, RE_EXP_3, RE_EXP_4):
         for match in pattern.findall(text_lower):
             try:
-                exps.append(int(match))
+                val = int(match)
+                if 0 <= val <= 20:
+                    exps.append(val)
             except ValueError:
                 pass
 
     years_req = max(exps) if exps else 0
+    mentions_fresh = (
+        ("fresh graduate" in text_lower or "lulusan baru" in text_lower or "0 tahun" in text_lower)
+        and not RE_FRESH_NEGATED.search(text_lower)
+    )
 
-    if "fresh graduate" in text_lower or "lulusan baru" in text_lower or "0 tahun" in text_lower:
+    if mentions_fresh and years_req <= 1:
         level = "Fresh Graduate / Entry Level"
         years_req = 0
     elif years_req == 0:
@@ -285,15 +448,9 @@ def parse_exp_req(req_text: str) -> Dict[str, Any]:
 class RequirementNLPParser:
     """
     High-Performance Natural Language Processing (NLP) Parser for Job Requirements.
-    Menggunakan regex pre-compiled dan classification berbasis set untuk kecepatan maksimal.
+    Menggunakan taksonomi terpusat dari config.py & regex pre-compiled.
     """
-    SKILL_TAXONOMY = {
-        "Languages & Core": ["Python", "SQL", "PHP", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
-        "Data Science & Analytics": ["Machine Learning", "Deep Learning", "NLP", "Pandas", "NumPy", "Scikit-Learn", "PyTorch", "TensorFlow", "Data Analysis", "Statistical Modeling", "Analytics", "Dataiku"],
-        "BI & Visualization": ["Power BI", "PowerBI", "Tableau", "Looker", "Metabase", "Excel", "Data Studio"],
-        "Engineering & Tools": ["React", "React.js", "Laravel", "Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL", "ArcGIS"],
-        "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Upstream", "Agile", "Scrum", "Project Management", "AI Engineer"]
-    }
+    SKILL_TAXONOMY = SKILL_TAXONOMY
 
     _COMPILED_TAXONOMY = {
         category: [
@@ -303,13 +460,7 @@ class RequirementNLPParser:
         for category, skills in SKILL_TAXONOMY.items()
     }
 
-    SOFT_SKILLS = [
-        "komunikasi", "communication", "teamwork", "tim kerja", "leadership", "kepemimpinan",
-        "problem solving", "pemecahan masalah", "critical thinking", "berpikir kritis",
-        "analytical", "analitis", "attention to detail", "perhatian detail",
-        "adaptability", "adaptif", "flexibility", "fleksibel", "self-motivated", "termotivasi",
-        "time management", "manajemen waktu", "presentation", "presentasi"
-    ]
+    SOFT_SKILLS = SOFT_SKILLS
 
     _MANDATORY_TRIGGERS = ("wajib", "harus", "minimal", "required", "must", "essential", "syarat", "qualification", "persyaratan")
     _PREFERRED_TRIGGERS = ("diutamakan", "preferred", "advantage", "keuntungan", "lebih baik")
@@ -348,25 +499,27 @@ class RequirementNLPParser:
 
     @classmethod
     def parse(cls, job: Dict[str, Any]) -> Dict[str, Any]:
-        """Parse job requirements secara semantik."""
-        raw = (job.get("requirements") or "") + " " + (job.get("description") or "")
+        """Parse job requirements secara semantik tanpa duplikasi payload."""
+        req_part = job.get("requirements") or ""
+        desc_part = job.get("description") or ""
+        raw = req_part if req_part == desc_part else f"{req_part} {desc_part}"
         text = clean_html(raw)
-        
+
         sentences = [s.strip() for s in RE_SENTENCE_SPLIT.split(text) if len(s.strip()) > 15]
 
         mandatory_requirements = []
         preferred_requirements = []
         nice_to_have_requirements = []
-        responsibilities = []
+        job_responsibilities = []
 
-        mandatory_skills_dict: Dict[str, List[str]] = {}
-        preferred_skills_dict: Dict[str, List[str]] = {}
+        mandatory_skills_set: Set[str] = set()
+        preferred_skills_set: Set[str] = set()
+        skill_categories: Set[str] = set()
         soft_skills_found: Set[str] = set()
 
         edu_summary = "S1 / D3 jurusan relevan atau setara"
         exp_summary = "1 Tahun Pengalaman / Fresh Graduate"
         accepts_fresh = False
-        job_responsibilities = []
 
         for sent in sentences:
             sent_lower = sent.lower()
@@ -385,29 +538,32 @@ class RequirementNLPParser:
                     exp_summary = sent
 
             skills_found = cls.extract_skills_from_sentence(sent_lower)
-            soft_skills = cls.extract_soft_skills(sent_lower)
-            soft_skills_found.update(soft_skills)
+            soft_skills_found.update(cls.extract_soft_skills(sent_lower))
 
             if sent_type == "mandatory":
-                mandatory_requirements.append(sent)
+                if len(mandatory_requirements) < 5:
+                    mandatory_requirements.append(sent[:200])
                 for category, sks in skills_found.items():
-                    if category not in mandatory_skills_dict:
-                        mandatory_skills_dict[category] = []
-                    mandatory_skills_dict[category].extend(sks)
+                    skill_categories.add(category)
+                    mandatory_skills_set.update(sks)
             elif sent_type == "preferred":
-                preferred_requirements.append(sent)
-                for category, sks in skills_found.items():
-                    if category not in preferred_skills_dict:
-                        preferred_skills_dict[category] = []
-                    preferred_skills_dict[category].extend(sks)
+                if len(preferred_requirements) < 3:
+                    preferred_requirements.append(sent[:200])
+                for sks in skills_found.values():
+                    preferred_skills_set.update(sks)
             elif sent_type == "nice_to_have":
-                nice_to_have_requirements.append(sent)
+                if len(nice_to_have_requirements) < 2:
+                    nice_to_have_requirements.append(sent[:200])
+                for sks in skills_found.values():
+                    preferred_skills_set.update(sks)
             elif sent_type == "responsibility":
-                responsibilities.append(sent)
-                job_responsibilities.append(sent)
-
-        mandatory_skills = sorted(list(set([s for skills in mandatory_skills_dict.values() for s in skills])))
-        preferred_skills = sorted(list(set([s for skills in preferred_skills_dict.values() for s in skills])))
+                if len(job_responsibilities) < 4:
+                    job_responsibilities.append(sent[:200])
+            else:
+                # Tetap kumpulkan skill yang terdeteksi di kalimat umum agar tidak hilang
+                for category, sks in skills_found.items():
+                    skill_categories.add(category)
+                    mandatory_skills_set.update(sks)
 
         if accepts_fresh:
             exp_summary = "Terbuka untuk Fresh Graduate / 1 Tahun Pengalaman (" + exp_summary[:90] + "...)"
@@ -415,20 +571,14 @@ class RequirementNLPParser:
         return {
             "education_summary": edu_summary[:130],
             "experience_summary": exp_summary[:150],
-            "mandatory_skills": mandatory_skills,
-            "preferred_skills": preferred_skills,
-            "soft_skills": sorted(list(soft_skills_found))[:5],
-            "mandatory_requirements": mandatory_requirements[:5],
-            "preferred_requirements": preferred_requirements[:3],
-            "nice_to_have": nice_to_have_requirements[:2],
-            "key_responsibilities": job_responsibilities[:4],
-            "skill_categories": list(mandatory_skills_dict.keys()),
-            "full_breakdown": {
-                "mandatory": mandatory_requirements[:6],
-                "preferred": preferred_requirements[:4],
-                "nice_to_have": nice_to_have_requirements[:3],
-                "responsibilities": job_responsibilities[:5]
-            }
+            "mandatory_skills": sorted(mandatory_skills_set),
+            "preferred_skills": sorted(preferred_skills_set - mandatory_skills_set),
+            "soft_skills": sorted(soft_skills_found)[:5],
+            "mandatory_requirements": mandatory_requirements,
+            "preferred_requirements": preferred_requirements,
+            "nice_to_have": nice_to_have_requirements,
+            "key_responsibilities": job_responsibilities,
+            "skill_categories": sorted(skill_categories),
         }
 
 
@@ -436,80 +586,101 @@ class RequirementNLPParser:
 def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
     """
     Evaluasi tingkat kecocokan profil kandidat terhadap kualifikasi lowongan.
-    Dioptimasi dengan fast substring checks dan pre-compiled regex.
+    Rubrik terkalibrasi ketat 0-100 poin:
+      - Major & Education : 30
+      - Hard Checks (GPA 12, Age 8, TOEFL 8, Gender 4) : 32
+      - Skills Alignment  : 24
+      - Role, Experience Fit & Upstream Domain : 14 (dengan penalti jika syarat senioritas jauh di atas profil)
     """
     req_html = job.get("requirements") or ""
     desc_html = job.get("description") or ""
-    title = str(job.get("title") or "").lower()
+    title_raw = str(job.get("title") or "")
+    title = title_raw.lower()
     org_name = str(job.get("organization_name") or "").lower()
 
     req_text = clean_html(req_html)
     desc_text = clean_html(desc_html)
-    full_text = f"{title} {org_name} {req_text} {desc_text}".lower()
+    eval_text = req_text if req_text == desc_text else f"{req_text} {desc_text}".strip()
+    if not eval_text:
+        eval_text = title_raw
+    full_text = f"{title} {org_name} {eval_text}".lower()
 
     score = 0
     match_details = {
         "major": {"score": 0, "status": "Neutral", "reason": "Jurusan tidak dispesifikasikan secara ketat atau bersifat umum."},
-        "gpa": {"score": 15, "status": "Match", "reason": f"IPK Anda ({PROFILE['gpa']}) memenuhi syarat."},
-        "age": {"score": 10, "status": "Match", "reason": f"Usia Anda ({PROFILE['age']} tahun) memenuhi syarat."},
-        "toefl": {"score": 10, "status": "Match", "reason": f"TOEFL Anda ({PROFILE['toefl']}) memenuhi syarat."},
-        "gender": {"score": 5, "status": "Match", "reason": "Pekerjaan terbuka untuk pria/wanita."},
-        "skills": {"score": 0, "status": "Low Match", "reason": "Tidak mendeteksi kecocokan skill Python/Data yang signifikan."},
+        "gpa": {"score": 12, "status": "Match", "reason": f"IPK Anda ({PROFILE['gpa']}) memenuhi syarat."},
+        "age": {"score": 8, "status": "Match", "reason": f"Usia Anda ({PROFILE['age']} tahun) memenuhi syarat."},
+        "toefl": {"score": 8, "status": "Match", "reason": f"TOEFL Anda ({PROFILE['toefl']}) memenuhi syarat."},
+        "gender": {"score": 4, "status": "Match", "reason": "Pekerjaan terbuka untuk pria/wanita."},
+        "skills": {"score": 0, "status": "Low Match", "reason": "Tidak mendeteksi kecocokan skill Python/Data/IT yang signifikan."},
         "experience": {"score": 0, "status": "Neutral", "reason": "Bukan peran langsung di bidang IT/Data."},
         "exp_years": {"status": "Match", "reason": "Sesuai dengan pengalaman kerja 1 tahun Anda."}
     }
 
-    # 1. MAJOR MATCHING (Max 35 points)
-    it_keywords = ("informatika", "ilmu komputer", "sistem informasi", "teknik komputer", "computer science", "software", "information technology", "telekomunikasi", "sistem & teknologi informasi", "backend", "fullstack", "full stack", "data analyst", "data scientist", "ai engineer", "machine learning", "engineer", "developer", "odoo", "web")
-    general_keywords = ("semua jurusan", "all major", "semua program studi", "diploma", "sarjana")
-    engineering_keywords = ("teknik", "engineering", "mipa", "sains", "matematika", "statistika")
+    # 1. MAJOR & ROLE DOMAIN MATCHING (Max 30 points)
+    is_trainee_program = bool(RE_TRAINEE.search(title)) or "development program" in title
+    is_it_role_or_major = bool(RE_IT_TITLE_ROLE.search(title)) or bool(RE_IT_DEGREE.search(full_text))
+    requires_advanced_only = bool(RE_ADVANCED_DEGREE.search(full_text)) and not bool(RE_BACHELOR_DEGREE.search(full_text))
 
-    if any(kw in full_text for kw in it_keywords):
-        major_score = 35
+    if is_it_role_or_major:
+        if requires_advanced_only:
+            major_score = 18
+            match_details["major"] = {
+                "score": 18,
+                "status": "Medium Match",
+                "reason": "Bidang IT/AI relevan, namun mensyaratkan gelar S2/MSc/PhD secara spesifik."
+            }
+        else:
+            major_score = 30
+            match_details["major"] = {
+                "score": 30,
+                "status": "High Match",
+                "reason": "Sangat Cocok! Program Trainee / ODP / MDP spesialisasi IT, Sistem Informasi, atau Data." if is_trainee_program else "Sangat Cocok! Pekerjaan ini sesuai dengan latar belakang Teknik Informatika, Data, atau IT."
+            }
+    elif is_trainee_program:
+        major_score = 22
         match_details["major"] = {
-            "score": 35,
-            "status": "High Match",
-            "reason": "Sangat Cocok! Pekerjaan ini secara eksplisit mencari lulusan Teknik Informatika, Sistem Informasi, atau bidang IT/Komputer."
+            "score": 22,
+            "status": "Match",
+            "reason": "Cocok. Program akselerasi karir Trainee / Development Program (ODP/MDP/MT) yang terbuka untuk lulusan baru / berbagai jurusan (All Majors)."
         }
-    elif any(kw in full_text for kw in general_keywords):
-        major_score = 25
+    elif RE_GENERAL_MAJOR.search(eval_text):
+        major_score = 22
         match_details["major"] = {
-            "score": 25,
+            "score": 22,
             "status": "Match",
             "reason": "Cocok. Terbuka untuk semua jurusan (All Majors)."
         }
-    elif any(kw in full_text for kw in engineering_keywords):
-        major_score = 20
+    elif RE_ENG_MAJOR.search(eval_text) and not RE_NON_IT_SPECIFIC.search(full_text):
+        major_score = 16
         match_details["major"] = {
-            "score": 20,
+            "score": 16,
             "status": "Medium Match",
             "reason": "Cukup Cocok. Mencari rumpun Teknik / Sains secara umum."
         }
+    elif RE_NON_IT_SPECIFIC.search(full_text):
+        major_score = 4
+        match_details["major"] = {
+            "score": 4,
+            "status": "Low Match",
+            "reason": "Kurang Cocok. Persyaratan menyebutkan jurusan spesifik non-IT (seperti Geologi, Perminyakan, Hukum, Akuntansi, atau Teknik Sipil/Mesin)."
+        }
     else:
-        non_it_specific = ("geologi", "geofisika", "perminyakan", "pertambangan", "akuntansi", "hukum", "keuangan", "petroleum", "geology", "geophysic", "accounting", "law")
-        if any(kw in full_text for kw in non_it_specific):
-            major_score = 5
-            match_details["major"] = {
-                "score": 5,
-                "status": "Low Match",
-                "reason": "Kurang Cocok. Persyaratan menyebutkan jurusan spesifik non-IT (seperti Geologi, Perminyakan, Hukum, atau Keuangan)."
-            }
-        else:
-            major_score = 15
-            match_details["major"] = {
-                "score": 15,
-                "status": "Neutral",
-                "reason": "Netral. Jurusan spesifik tidak disebutkan dengan jelas, mungkin membutuhkan verifikasi manual."
-            }
+        major_score = 12
+        match_details["major"] = {
+            "score": 12,
+            "status": "Neutral",
+            "reason": "Netral. Jurusan spesifik tidak disebutkan dengan jelas, mungkin membutuhkan verifikasi manual."
+        }
     score += major_score
 
-    # 2. GPA MATCHING (15 points)
-    gpa_req = parse_gpa_req(req_text)
+    # 2. GPA MATCHING (12 points)
+    gpa_req = parse_gpa_req(eval_text)
     if gpa_req:
         if PROFILE["gpa"] >= gpa_req:
-            score += 15
+            score += 12
             match_details["gpa"] = {
-                "score": 15,
+                "score": 12,
                 "status": "Match",
                 "reason": f"Sesuai. IPK minimal yang diminta adalah {gpa_req:.2f}, sedangkan IPK Anda adalah {PROFILE['gpa']:.2f}."
             }
@@ -520,20 +691,20 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
                 "reason": f"Tidak Sesuai. IPK minimal yang diminta adalah {gpa_req:.2f}, sedangkan IPK Anda adalah {PROFILE['gpa']:.2f}."
             }
     else:
-        score += 15
+        score += 12
         match_details["gpa"] = {
-            "score": 15,
+            "score": 12,
             "status": "Match",
             "reason": "Sesuai. Tidak ada syarat IPK minimal yang tertulis secara eksplisit."
         }
 
-    # 3. AGE MATCHING (10 points)
-    age_req = parse_age_req(req_text)
+    # 3. AGE MATCHING (8 points)
+    age_req = parse_age_req(eval_text)
     if age_req:
         if PROFILE["age"] <= age_req:
-            score += 10
+            score += 8
             match_details["age"] = {
-                "score": 10,
+                "score": 8,
                 "status": "Match",
                 "reason": f"Sesuai. Batas usia maksimal adalah {age_req} tahun, sedangkan usia Anda saat ini adalah {PROFILE['age']} tahun."
             }
@@ -544,20 +715,20 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
                 "reason": f"Tidak Sesuai. Batas usia maksimal adalah {age_req} tahun, sedangkan usia Anda saat ini adalah {PROFILE['age']} tahun."
             }
     else:
-        score += 10
+        score += 8
         match_details["age"] = {
-            "score": 10,
+            "score": 8,
             "status": "Match",
             "reason": "Sesuai. Tidak ada batas usia maksimal yang disebutkan secara spesifik."
         }
 
-    # 4. TOEFL MATCHING (10 points)
-    toefl_req = parse_toefl_req(req_text)
+    # 4. TOEFL MATCHING (8 points)
+    toefl_req = parse_toefl_req(eval_text)
     if toefl_req:
         if PROFILE["toefl"] >= toefl_req:
-            score += 10
+            score += 8
             match_details["toefl"] = {
-                "score": 10,
+                "score": 8,
                 "status": "Match",
                 "reason": f"Sesuai. Skor TOEFL minimal yang diminta adalah {toefl_req}, sedangkan skor TOEFL Anda adalah {PROFILE['toefl']}."
             }
@@ -568,15 +739,15 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
                 "reason": f"Tidak Sesuai. Skor TOEFL minimal yang diminta adalah {toefl_req}, sedangkan skor TOEFL Anda adalah {PROFILE['toefl']}."
             }
     else:
-        score += 10
+        score += 8
         match_details["toefl"] = {
-            "score": 10,
+            "score": 8,
             "status": "Match",
             "reason": "Sesuai. Tidak ada syarat nilai TOEFL tertulis secara spesifik."
         }
 
-    # 5. GENDER MATCHING (5 points)
-    gender_req = check_gender_req(req_text)
+    # 5. GENDER MATCHING (4 points)
+    gender_req = check_gender_req(eval_text)
     if gender_req == "Female Only":
         match_details["gender"] = {
             "score": 0,
@@ -584,67 +755,88 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
             "reason": "Tidak Sesuai. Lowongan ini diutamakan atau dikhususkan untuk Wanita."
         }
     else:
-        score += 5
+        score += 4
         if gender_req == "Male Only":
             match_details["gender"] = {
-                "score": 5,
+                "score": 4,
                 "status": "Match",
                 "reason": "Sesuai. Lowongan ini dikhususkan atau diutamakan untuk Pria."
             }
         else:
             match_details["gender"] = {
-                "score": 5,
+                "score": 4,
                 "status": "Match",
                 "reason": "Sesuai. Lowongan terbuka untuk Pria dan Wanita."
             }
 
-    # 6. SKILLS MATCHING (Max 20 points)
-    skills_found = [s for s, pattern in COMPILED_PROFILE_SKILLS if pattern.search(full_text)]
-    skills_score = min(len(skills_found) * 5, 20)
+    # 6. SKILLS MATCHING (Max 24 points)
+    core_matched = []
+    general_matched = []
+    for sk, pattern, is_core in COMPILED_PROFILE_SKILLS:
+        search_target = title_raw if sk.lower() == "it" else full_text
+        if pattern.search(search_target):
+            if is_core:
+                core_matched.append(sk)
+            else:
+                general_matched.append(sk)
+
+    skills_found = core_matched + general_matched
+    raw_skill_pts = len(core_matched) * 6 + len(general_matched) * 2
+    skills_score = min(raw_skill_pts, 24)
     score += skills_score
 
-    if len(skills_found) >= 3:
+    if len(core_matched) >= 3 or skills_score >= 18:
         match_details["skills"] = {
             "score": skills_score,
             "status": "High Match",
-            "reason": f"Sangat Cocok! Menemukan kecocokan keahlian Anda: {', '.join(skills_found)}."
+            "reason": f"Sangat Cocok! Menemukan kecocokan keahlian inti Anda: {', '.join(skills_found[:8])}."
         }
     elif len(skills_found) >= 1:
         match_details["skills"] = {
             "score": skills_score,
             "status": "Match",
-            "reason": f"Cocok. Menemukan beberapa kecocokan kata kunci keahlian: {', '.join(skills_found)}."
+            "reason": f"Cocok. Menemukan beberapa kecocokan kata kunci keahlian: {', '.join(skills_found[:8])}."
         }
     else:
         match_details["skills"] = {
             "score": 0,
             "status": "Low Match",
-            "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, Data Analyst) pada deskripsi lowongan ini."
+            "reason": "Tidak mendeteksi kecocokan keahlian teknis (Python, Dataiku, AI/ML, IT Support, Web) pada deskripsi lowongan ini."
         }
 
-    # 7. EXPERIENCE & UPSTREAM DOMAIN MATCHING (Max 10 points)
-    exp_req = parse_exp_req(req_text)
+    # 7. ROLE, EXPERIENCE FIT & UPSTREAM DOMAIN MATCHING (Max 14 points)
+    exp_req = parse_exp_req(eval_text)
     exp_score = 0
     relevance_reasons = []
 
-    role_keywords = ("data", "analyst", "analis", "scientist", "ai engineer", "machine learning", "programmer", "developer", "it", "systems", "digital", "informasi", "komputer", "teknologi", "fullstack", "web")
-    if any(kw in title for kw in role_keywords):
-        exp_score += 5
-        relevance_reasons.append("Peran ini di bidang Data / IT / Analis yang sesuai dengan spesialisasi pekerjaan Anda.")
+    if RE_ROLE_TITLE.search(title):
+        exp_score += 6
+        relevance_reasons.append("Peran ini di bidang Data / IT / Analis / Trainee yang sesuai dengan spesialisasi Anda.")
 
-    hulu_migas_keywords = ("operasi", "operations", "production", "produksi", "reservoir", "lifting", "eksplorasi", "exploration", "drilling", "well", "log", "petrotechnical")
-    if any(kw in full_text for kw in hulu_migas_keywords):
+    is_senior_title = bool(RE_SENIOR_TITLE.search(title)) and not is_trainee_program
+    if is_trainee_program or (exp_req["years"] <= PROFILE["exp_years"] and not is_senior_title):
         exp_score += 5
-        relevance_reasons.append("Sangat Relevan! Lowongan ini berkaitan dengan sektor operasional hulu migas, di mana Anda memiliki pengalaman magang di Pertamina Hulu Rokan.")
+        relevance_reasons.append("Level pengalaman sesuai (Fresh Graduate / ≤ 1 tahun).")
+    elif exp_req["years"] == 2 and not is_senior_title:
+        exp_score += 2
+        relevance_reasons.append("Masih terjangkau (meminta ~2 tahun pengalaman).")
+    else:
+        # Penalti ringan agar lowongan entry/junior berperingkat lebih tinggi daripada Senior/Lead 5-10 tahun
+        score -= 8
+        relevance_reasons.append("Perlu perhatian: posisi menargetkan level Senior / pengalaman lebih dari 2 tahun.")
+
+    if RE_HULU_MIGAS.search(full_text):
+        exp_score += 3
+        relevance_reasons.append("Nilai tambah! Berkaitan dengan sektor hulu migas/energi, relevan dengan pengalaman magang Anda di Pertamina Hulu Rokan.")
 
     score += exp_score
-    if exp_score >= 8:
+    if exp_score >= 10:
         match_details["experience"] = {
             "score": exp_score,
             "status": "High Match",
             "reason": "Sangat Cocok! " + " ".join(relevance_reasons)
         }
-    elif exp_score >= 4:
+    elif exp_score >= 5:
         match_details["experience"] = {
             "score": exp_score,
             "status": "Match",
@@ -652,20 +844,27 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
         }
     else:
         match_details["experience"] = {
-            "score": 0,
+            "score": exp_score,
             "status": "Neutral",
-            "reason": "Bukan peran langsung di bidang IT/Data."
+            "reason": " ".join(relevance_reasons) if relevance_reasons else "Bukan peran langsung di bidang IT/Data atau Program Trainee."
         }
 
-    if exp_req["years"] <= PROFILE["exp_years"]:
+    if is_trainee_program or (exp_req["years"] <= PROFILE["exp_years"] and not is_senior_title):
         match_details["exp_years"] = {
             "status": "Match",
-            "reason": f"Sesuai. Lowongan meminta minimal {exp_req['years']} tahun pengalaman, sedangkan pengalaman kamu adalah {PROFILE['exp_years']} tahun." if exp_req['years'] > 0 else "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+            "reason": "Sesuai. Program Trainee / ODP / MDP terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun." if is_trainee_program else (
+                f"Sesuai. Lowongan meminta minimal {exp_req['years']} tahun pengalaman, sedangkan pengalaman kamu adalah {PROFILE['exp_years']} tahun." if exp_req['years'] > 0 else "Sesuai. Terbuka untuk Fresh Graduate / pengalaman ≤ 1 tahun."
+            )
         }
-    else:
+    elif exp_req["years"] > PROFILE["exp_years"]:
         match_details["exp_years"] = {
             "status": "Low Match",
             "reason": f"Perlu Perhatian: Lowongan meminta pengalaman minimal {exp_req['years']} tahun, sedangkan pengalaman kamu saat ini {PROFILE['exp_years']} tahun."
+        }
+    else:
+        match_details["exp_years"] = {
+            "status": "Medium Match",
+            "reason": "Perlu Perhatian: Judul posisi mengindikasikan level Senior / Lead / Manager."
         }
 
     # Hard blocker check (GPA, Age, Gender)
@@ -675,24 +874,38 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
         match_details["gender"]["status"] == "No Match"
     )
 
-    final_score = min(score, 40) if is_blocked else score
-    nlp_breakdown = RequirementNLPParser.parse(job)
+    clamped_score = max(0, min(100, score))
+    final_score = min(clamped_score, 40) if is_blocked else clamped_score
+    nlp_breakdown = RequirementNLPParser.parse({
+        "description": desc_html,
+        "requirements": req_html
+    })
+
+    org_data = job.get("organization") or {}
+    org_slug = org_data.get("slug") if isinstance(org_data, dict) else (job.get("organization_slug") or "jobs")
+    org_name = job.get("organization_name") or (org_data.get("name") if isinstance(org_data, dict) else "Talentics")
+    job_url = job.get("url") or f"https://jobs.talentics.id/{org_slug}/{job.get('slug')}"
+    job_logo = job.get("logo") or (org_data.get("avatar_url") or org_data.get("logo_url") if isinstance(org_data, dict) else None)
+
+    # Deduplikasi raw_requirements jika identik dengan raw_description (hemat ~450 KB di JSON)
+    raw_desc_out = desc_html
+    raw_req_out = "" if (req_html and req_html.strip() == desc_html.strip()) else req_html
 
     return {
         "id": job.get("id"),
         "title": job.get("title"),
         "organization_id": job.get("organization_id"),
-        "organization_name": job.get("organization_name"),
+        "organization_name": org_name,
         "slug": job.get("slug"),
         "type_name": job.get("type_name", "Karyawan Tetap"),
         "level": job.get("level", "Staff"),
-        "location": job.get("location"),
+        "location": compact_location(job.get("location")),
         "workplace": job.get("workplace", "WFO"),
         "due_date": job.get("due_date"),
         "group": job.get("group"),
-        "url": job.get("url") if job.get("url") else f"https://jobs.talentics.id/{job.get('organization', {}).get('slug', 'skk-migas')}/{job.get('slug')}",
-        "raw_description": job.get("description"),
-        "raw_requirements": job.get("requirements"),
+        "url": job_url,
+        "raw_description": raw_desc_out,
+        "raw_requirements": raw_req_out,
         "match_score": final_score,
         "is_blocked": is_blocked,
         "match_details": match_details,
@@ -706,7 +919,7 @@ def evaluate_job_match(job: Dict[str, Any]) -> Dict[str, Any]:
             "exp_years": exp_req["years"]
         },
         "source": job.get("source", "Talentics"),
-        "logo": job.get("logo", None)
+        "logo": job_logo
     }
 
 
@@ -725,14 +938,19 @@ def format_astra_date(date_str: Optional[str]) -> Optional[str]:
     return date_str.replace("T", " ") if date_str else None
 
 
-# 1. Talentics (Hulu Migas)
-def scrape_talentics_jobs(session: Optional[requests.Session] = None, max_workers: int = 8) -> List[Dict[str, Any]]:
-    """Scrape lowongan Hulu Migas / SKK Migas dari Talentics."""
+# 1. Talentics
+def scrape_talentics_jobs(session: Optional[requests.Session] = None, max_workers: int = 10) -> List[Dict[str, Any]]:
+    """
+    Scrape lowongan Talentics yang relevan dengan CV/Profil pengguna:
+    - Rumpun IT, Data Science, Software Dev, Hardware & IT Support, Information Security
+    - Targeted search keywords: data, analyst, developer, web, network, it support, machine learning, hulu migas
+    - Mengambil lowongan lintas industri (BUMN, Perbankan, IT Tech, Energi, dsb), bukan hanya Hulu Migas.
+    """
     if session is None:
         session = get_default_session()
 
-    print("Fetching Hulu Migas (Talentics) listings...")
-    url_main = "https://jobs.talentics.id/jobs?search=rekrutmen%20hulu%20migas"
+    print("Fetching Talentics listings based on CV / Profile...")
+    url_main = "https://jobs.talentics.id/jobs"
     try:
         r_main = session.get(url_main, timeout=12)
         if r_main.status_code != 200:
@@ -754,57 +972,112 @@ def scrape_talentics_jobs(session: Optional[requests.Session] = None, max_worker
         "X-CSRF-TOKEN": csrf_token or ""
     }
 
-    all_jobs_raw = []
-    page = 1
-    last_page = 1
+    raw_jobs_by_id: Dict[Any, Dict[str, Any]] = {}
 
-    while page <= last_page:
-        params = {"search": "rekrutmen hulu migas", "page": page}
+    # 1. Job Functions IT, Data, & Trainee / Graduate Development yang relevan:
+    # IT/Data: 1, 6, 7, 8, 13, 14, 16, 22, 54, 55, 56, 57, 58, 59, 60, 77
+    # Trainee/ODP/MDP: 65 (Management Trainee), 66 (Graduate Development Program), 103 (Apprentice)
+    it_func_ids = [1, 6, 7, 8, 13, 14, 16, 22, 54, 55, 56, 57, 58, 59, 60, 65, 66, 77, 103]
+    try:
+        r_func = session.get(ajax_url, params={'job_functions[]': it_func_ids, 'page': 1}, headers=ajax_headers, timeout=12)
+        if r_func.status_code == 200:
+            res_func = r_func.json()
+            total_func_pages = res_func.get("last_page", 1)
+            for j in res_func.get("data", []):
+                if j.get("id"):
+                    raw_jobs_by_id[j["id"]] = j
+
+            # Ambil halaman berikutnya secara concurrent
+            if total_func_pages > 1:
+                def fetch_func_page(p: int) -> List[Dict[str, Any]]:
+                    try:
+                        res = session.get(ajax_url, params={'job_functions[]': it_func_ids, 'page': p}, headers=ajax_headers, timeout=12)
+                        if res.status_code == 200:
+                            return res.json().get("data", [])
+                    except Exception:
+                        pass
+                    return []
+
+                with ThreadPoolExecutor(max_workers=max_workers) as page_exec:
+                    futures = [page_exec.submit(fetch_func_page, p) for p in range(2, total_func_pages + 1)]
+                    for f in as_completed(futures):
+                        for j in f.result():
+                            if j.get("id"):
+                                raw_jobs_by_id[j["id"]] = j
+    except Exception as e:
+        print(f"  Warning: Exception querying Talentics IT & Trainee functions: {e}")
+
+    # 2. Targeted Keywords sesuai CV dan program akselerasi karir (ODP / MDP / MT / Trainee / Graduate)
+    cv_keywords = [
+        # CV IT & Data keywords
+        "data", "analyst", "developer", "software", "it support",
+        "machine learning", "programmer", "web", "network", "rekrutmen hulu migas",
+        # ODP / MDP / Management Trainee / Graduate Development Program
+        "management trainee", "trainee", "odp", "mdp", "fgdp", "gdp", "fldp",
+        "development program", "future leader", "banking associate", "bbap",
+        "mt", "bibit", "graduate program", "graduate trainee", "associate program"
+    ]
+
+    def fetch_kw_jobs(kw: str) -> List[Dict[str, Any]]:
+        jobs_found = []
         try:
-            r_ajax = session.get(ajax_url, params=params, headers=ajax_headers, timeout=12)
-            if r_ajax.status_code == 200:
-                res_data = r_ajax.json()
-                last_page = res_data.get("last_page", last_page)
-                jobs_data = res_data.get("data", [])
-                all_jobs_raw.extend(jobs_data)
-                page += 1
-            else:
-                break
-        except Exception as e:
-            print(f"  Warning: Exception on Talentics page {page}: {e}")
-            break
+            r_kw = session.get(ajax_url, params={'search': kw, 'page': 1}, headers=ajax_headers, timeout=12)
+            if r_kw.status_code == 200:
+                res_kw = r_kw.json()
+                jobs_found.extend(res_kw.get("data", []))
+                last_page = min(res_kw.get("last_page", 1), 4)  # batasi max 4 page per query
+                for p in range(2, last_page + 1):
+                    r_p = session.get(ajax_url, params={'search': kw, 'page': p}, headers=ajax_headers, timeout=12)
+                    if r_p.status_code == 200:
+                        jobs_found.extend(r_p.json().get("data", []))
+        except Exception:
+            pass
+        return jobs_found
 
+    with ThreadPoolExecutor(max_workers=max_workers) as kw_exec:
+        kw_futures = [kw_exec.submit(fetch_kw_jobs, kw) for kw in cv_keywords]
+        for f in as_completed(kw_futures):
+            for j in f.result():
+                if j.get("id"):
+                    raw_jobs_by_id[j["id"]] = j
+
+    all_jobs_raw = list(raw_jobs_by_id.values())
     print(f"  Found {len(all_jobs_raw)} raw Talentics listings. Fetching details concurrently...")
 
-    def fetch_talentics_detail(raw_job):
-        org_slug = raw_job.get("organization", {}).get("slug", "skk-migas")
+    def fetch_talentics_detail(raw_job: Dict[str, Any]) -> Dict[str, Any]:
+        org = raw_job.get("organization") or {}
+        org_slug = org.get("slug") if isinstance(org, dict) else (raw_job.get("organization_slug") or "jobs")
         job_slug = raw_job.get("slug")
         detail_url = f"https://jobs.talentics.id/{org_slug}/{job_slug}"
+        org_name = raw_job.get("organization_name") or (org.get("name") if isinstance(org, dict) else "Talentics")
+        logo = (org.get("avatar_url") or org.get("logo_url")) if isinstance(org, dict) else None
+
+        job_result = dict(raw_job)
+        job_result["url"] = detail_url
+        job_result["organization_name"] = org_name
+        job_result["source"] = "Talentics"
+        if logo:
+            job_result["logo"] = logo
+
         try:
             r_detail = session.get(detail_url, timeout=12)
             if r_detail.status_code == 200:
                 text = r_detail.text
-                match = re.search(r'job:\s*(\{.*)', text, re.DOTALL)
+                match = re.search(r'job:\s*\{', text)
                 if match:
-                    content = match.group(1)
-                    brace_count = 0
-                    end_idx = -1
-                    for idx, char in enumerate(content):
-                        if char == '{':
-                            brace_count += 1
-                        elif char == '}':
-                            brace_count -= 1
-                            if brace_count == 0:
-                                end_idx = idx + 1
-                                break
-                    if end_idx != -1:
-                        try:
-                            return json.loads(content[:end_idx])
-                        except Exception:
-                            pass
+                    try:
+                        det_data, _ = json.JSONDecoder().raw_decode(text, match.end() - 1)
+                        if isinstance(det_data, dict):
+                            job_result.update(det_data)
+                            job_result["url"] = detail_url
+                            job_result["source"] = "Talentics"
+                            if logo and not job_result.get("logo"):
+                                job_result["logo"] = logo
+                    except Exception:
+                        pass
         except Exception:
             pass
-        return raw_job
+        return job_result
 
     detailed_jobs = []
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
@@ -1439,7 +1712,7 @@ def scrape_opentrain_jobs(session: Optional[requests.Session] = None, max_worker
                                 'group': 'AI Training & RLHF',
                                 'url': url,
                                 'description': clean_desc,
-                                'requirements': 'Remote AI Training, Evaluation, Python, LLM Reasoning, Data Annotation',
+                                'requirements': clean_desc or 'Remote AI Training, Evaluation, LLM Reasoning, Data Annotation',
                                 'type_name': 'Freelance / Contract',
                                 'source': 'OpenTrain.ai'
                             }
@@ -1458,7 +1731,7 @@ def scrape_opentrain_jobs(session: Optional[requests.Session] = None, max_worker
             'group': 'AI Training & RLHF',
             'url': url,
             'description': f"Role for {job_info['title']} at OpenTrain.ai. Remote AI Training & RLHF tasks.",
-            'requirements': 'Remote AI Training, Evaluation, Python, LLM Reasoning, Data Annotation',
+            'requirements': 'Remote AI Training, Evaluation, LLM Reasoning, Data Annotation',
             'type_name': 'Freelance / Contract',
             'source': 'OpenTrain.ai'
         }
@@ -1507,7 +1780,7 @@ def scrape_micro1_jobs(session: Optional[requests.Session] = None, max_workers: 
                     elif '$' in p:
                         salary = p
                     elif 'Remote' in p:
-                        location = p.replace('\ufffd', '-').replace('', '-')
+                        location = p.replace('\ufffd', '-').replace('\u00a0', ' ').strip()
 
                 if not title and len(text_parts) > 2:
                     title = text_parts[2]
@@ -1525,7 +1798,7 @@ def scrape_micro1_jobs(session: Optional[requests.Session] = None, max_workers: 
                     'group': 'Engineering & Tech',
                     'url': full_url,
                     'salary': salary,
-                    'requirements': 'Software Engineering, Remote, Problem Solving, Fullstack/Backend/Frontend/AI',
+                    'requirements': '',
                     'type_name': 'Full Time / Remote',
                     'source': 'micro1'
                 })
@@ -1547,7 +1820,9 @@ def scrape_micro1_jobs(session: Optional[requests.Session] = None, max_workers: 
         except Exception:
             pass
         salary_str = f"\nSalary: {stub['salary']}" if stub.get('salary') else ""
-        stub['description'] = (desc or stub['title']) + salary_str
+        full_desc = (desc or stub['title']) + salary_str
+        stub['description'] = full_desc
+        stub['requirements'] = full_desc
         stub.pop('salary', None)
         return stub
 
@@ -1743,7 +2018,7 @@ def scrape_with_jobspy(job_title: str, location: str = "", max_results: int = 50
 
 # ─── Scraper Registry & Orchestrator ──────────────────────────────────────────
 SCRAPER_REGISTRY = {
-    "talentics": ("Talentics (Hulu Migas)", scrape_talentics_jobs),
+    "talentics": ("Talentics", scrape_talentics_jobs),
     "astra": ("Astra Careers", scrape_astra_jobs),
     "ptc": ("Pertamina PTC", scrape_pertamina_ptc),
     "sawitpro": ("SawitPRO", scrape_sawitpro),
@@ -1810,27 +2085,8 @@ def run_pipeline(
     all_raw_jobs = [job for jobs in raw_jobs_by_portal.values() for job in jobs]
     print(f"\nTotal lowongan mentah terkumpul: {len(all_raw_jobs)}")
 
-    # Deduplikasi cerdas berdasarkan (source, id)
-    seen_keys: Set[str] = set()
-    deduped_raw: List[Dict[str, Any]] = []
-
-    for job in all_raw_jobs:
-        src = str(job.get("source") or "").strip().lower()
-        jid = str(job.get("id") or "").strip().lower()
-        raw_url = str(job.get("url") or "").strip().lower()
-
-        if jid:
-            key = f"{src}:{jid}"
-        elif raw_url:
-            key = f"{src}:{raw_url}"
-        else:
-            key = f"{src}:{hash(str(job))}"
-
-        if key in seen_keys:
-            continue
-        seen_keys.add(key)
-        deduped_raw.append(job)
-
+    # Deduplikasi cerdas berdasarkan (source, id/url) lalu (source, title, organization_name)
+    deduped_raw = deduplicate_jobs(all_raw_jobs)
     print(f"Deduplikasi selesai: {len(deduped_raw)} lowongan unik tersisa.")
 
     # Scoring & NLP Match Evaluation

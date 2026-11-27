@@ -1,4 +1,4 @@
-const CACHE_NAME = 'career-radar-v7';
+const CACHE_NAME = 'career-radar-v8';
 
 // Aset statis yang boleh di-cache (UI shell)
 // Gunakan path relatif agar kompatibel di root domain (/) maupun subpath (/Job_Matcher/)

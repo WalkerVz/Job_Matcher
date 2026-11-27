@@ -5,27 +5,21 @@ Separate module untuk better requirement understanding dan professional cover le
 
 import re
 import os
-from config import PROFILE  # Import terpusat dari config.py (DRY principle)
+from config import PROFILE, SKILL_TAXONOMY, SOFT_SKILLS  # Import terpusat dari config.py (DRY principle)
 
 
 class RequirementAnalyzer:
     """Analyze job requirements dengan semantic understanding"""
-    
-    SKILL_TAXONOMY = {
-        "Languages & Core": ["Python", "SQL", "PHP", "R", "Java", "C++", "JavaScript", "TypeScript", "Go", "Bash", "Shell"],
-        "Data Science & Analytics": ["Machine Learning", "Deep Learning", "NLP", "Pandas", "NumPy", "Scikit-Learn", "PyTorch", "TensorFlow", "Data Analysis", "Statistical Modeling", "Analytics", "Dataiku"],
-        "BI & Visualization": ["Power BI", "PowerBI", "Tableau", "Looker", "Metabase", "Excel", "Data Studio"],
-        "Engineering & Tools": ["React", "React.js", "Laravel", "Airflow", "Spark", "Hadoop", "Docker", "Kubernetes", "AWS", "GCP", "Azure", "Git", "REST API", "CI/CD", "PostgreSQL", "MySQL", "ArcGIS"],
-        "Domain & Methodology": ["Hulu Migas", "Oil and Gas", "Oil & Gas", "Upstream", "Agile", "Scrum", "Project Management", "AI Engineer"]
+
+    SKILL_TAXONOMY = SKILL_TAXONOMY
+    SOFT_SKILLS = SOFT_SKILLS
+    _COMPILED_TAXONOMY = {
+        category: [
+            (sk, re.compile(r'\b' + re.escape(sk.lower()) + r'\b', re.IGNORECASE))
+            for sk in skills
+        ]
+        for category, skills in SKILL_TAXONOMY.items()
     }
-    
-    SOFT_SKILLS = [
-        "komunikasi", "communication", "teamwork", "tim kerja", "leadership", "kepemimpinan",
-        "problem solving", "pemecahan masalah", "critical thinking", "berpikir kritis",
-        "analytical", "analitis", "attention to detail", "perhatian detail",
-        "adaptability", "adaptif", "flexibility", "fleksibel", "self-motivated", "termotivasi",
-        "time management", "manajemen waktu", "presentation", "presentasi"
-    ]
     
     @classmethod
     def classify_sentence(cls, sentence_lower):
@@ -47,14 +41,10 @@ class RequirementAnalyzer:
     
     @classmethod
     def extract_skills(cls, text_lower):
-        """Extract skills dari text dengan category"""
+        """Extract skills dari text dengan category menggunakan regex terkompilasi."""
         found_skills = {}
-        for category, skills in cls.SKILL_TAXONOMY.items():
-            category_skills = []
-            for sk in skills:
-                pattern = r'\b' + re.escape(sk.lower()) + r'\b'
-                if re.search(pattern, text_lower):
-                    category_skills.append(sk)
+        for category, skill_pairs in cls._COMPILED_TAXONOMY.items():
+            category_skills = [sk for sk, pattern in skill_pairs if pattern.search(text_lower)]
             if category_skills:
                 found_skills[category] = category_skills
         return found_skills

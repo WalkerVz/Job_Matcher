@@ -4,13 +4,17 @@ Supports multiple AI Providers: Groq API (Free Llama-3.3-70B) & Google Gemini AP
 Provides intelligent features: job summarization and interview question prediction
 """
 
-from dotenv import load_dotenv
+from collections import OrderedDict
+import hashlib
 import os
+import threading
+from dotenv import load_dotenv
 import requests
+from requests.adapters import HTTPAdapter
 import google.generativeai as genai
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-from config import clean_html  # dari modul terpusat config.py
+from config import PROFILE, clean_html  # dari modul terpusat config.py
 
 # Load environment variables from .env file
 load_dotenv()
@@ -29,45 +33,102 @@ if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
 GEMINI_MODEL = os.getenv('GEMINI_MODEL', 'gemini-2.0-flash')
 
+# Persistent HTTP session & cached Gemini model untuk latency rendah
+_HTTP_SESSION = requests.Session()
+_HTTP_SESSION.mount("https://", HTTPAdapter(pool_connections=10, pool_maxsize=10))
+_GEMINI_MODEL_INSTANCE = genai.GenerativeModel(GEMINI_MODEL) if GEMINI_API_KEY else None
 
-def generate_ai_content(prompt):
-    """Generate content using the active AI Provider (Groq or Gemini)"""
+# Thread-safe LRU cache (mengurangi API calls berulang & menghemat kuota)
+_AI_CACHE_MAX = 200
+_AI_CACHE: OrderedDict = OrderedDict()
+_AI_CACHE_LOCK = threading.Lock()
+
+
+def _call_groq(prompt: str) -> str:
+    if not GROQ_API_KEY or GROQ_API_KEY == 'gsk_your_groq_api_key_here':
+        raise ValueError("GROQ_API_KEY belum dikonfigurasi di file .env. Dapatkan API Key gratis di https://console.groq.com")
+
+    headers = {
+        "Authorization": f"Bearer {GROQ_API_KEY}",
+        "Content-Type": "application/json"
+    }
+    payload = {
+        "model": GROQ_MODEL,
+        "messages": [
+            {"role": "system", "content": "Kamu adalah asisten karir profesional dalam Bahasa Indonesia."},
+            {"role": "user", "content": prompt}
+        ],
+        "temperature": 0.4
+    }
+    resp = _HTTP_SESSION.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=payload, timeout=30)
+    if resp.status_code != 200:
+        try:
+            err_info = resp.json().get('error', {}).get('message', resp.text)
+        except Exception:
+            err_info = resp.text
+        raise RuntimeError(f"Groq API Error ({resp.status_code}): {err_info}")
+
+    data = resp.json()
+    return data['choices'][0]['message']['content'].strip()
+
+
+def _call_gemini(prompt: str) -> str:
+    if not GEMINI_API_KEY or _GEMINI_MODEL_INSTANCE is None:
+        raise ValueError("GEMINI_API_KEY belum dikonfigurasi di file .env")
+    response = _GEMINI_MODEL_INSTANCE.generate_content(prompt)
+    return response.text.strip()
+
+
+def generate_ai_content(prompt: str, cache_namespace: str = "default"):
+    """Generate content with LRU caching and automatic secondary provider fallback."""
+    cache_key = hashlib.sha256(f"{AI_PROVIDER}:{cache_namespace}:{prompt}".encode("utf-8")).hexdigest()
+    with _AI_CACHE_LOCK:
+        cached = _AI_CACHE.get(cache_key)
+        if cached is not None:
+            _AI_CACHE.move_to_end(cache_key)
+            return cached
+
     if AI_PROVIDER == 'groq':
-        if not GROQ_API_KEY or GROQ_API_KEY == 'gsk_your_groq_api_key_here':
-            raise ValueError("GROQ_API_KEY belum dikonfigurasi di file .env. Dapatkan API Key gratis di https://console.groq.com")
-        
-        headers = {
-            "Authorization": f"Bearer {GROQ_API_KEY}",
-            "Content-Type": "application/json"
-        }
-        payload = {
-            "model": GROQ_MODEL,
-            "messages": [
-                {"role": "system", "content": "Kamu adalah asisten karir profesional dalam Bahasa Indonesia."},
-                {"role": "user", "content": prompt}
-            ],
-            "temperature": 0.4
-        }
-        resp = requests.post("https://api.groq.com/openai/v1/chat/completions", headers=headers, json=payload, timeout=30)
-        if resp.status_code != 200:
-            try:
-                err_info = resp.json().get('error', {}).get('message', resp.text)
-            except Exception:
-                err_info = resp.text
-            raise RuntimeError(f"Groq API Error ({resp.status_code}): {err_info}")
-        
-        data = resp.json()
-        return data['choices'][0]['message']['content'].strip()
-
+        providers = [('GROQ', _call_groq), ('GEMINI', _call_gemini)]
     elif AI_PROVIDER == 'gemini':
-        if not GEMINI_API_KEY:
-            raise ValueError("GEMINI_API_KEY belum dikonfigurasi di file .env")
-        model = genai.GenerativeModel(GEMINI_MODEL)
-        response = model.generate_content(prompt)
-        return response.text.strip()
-
+        providers = [('GEMINI', _call_gemini), ('GROQ', _call_groq)]
     else:
         raise ValueError(f"AI_PROVIDER '{AI_PROVIDER}' tidak dikenali. Pilih 'groq' atau 'gemini'")
+
+    errors = []
+    for name, caller in providers:
+        try:
+            text = caller(prompt)
+            result = (text, name)
+            with _AI_CACHE_LOCK:
+                if len(_AI_CACHE) >= _AI_CACHE_MAX:
+                    _AI_CACHE.popitem(last=False)
+                _AI_CACHE[cache_key] = result
+            return result
+        except Exception as exc:
+            errors.append(f"{name}: {exc}")
+
+    raise RuntimeError(" | ".join(errors))
+
+
+def _validate_job_payload(data: dict, require_text: bool = False):
+    """Validasi dan sanitasi payload lowongan untuk semua endpoint AI."""
+    job_title = str(data.get('title') or '').strip()
+    if not job_title or len(job_title) > 500:
+        return None, (jsonify({'success': False, 'error': 'Invalid or missing job title'}), 400)
+
+    job_description = clean_html(data.get('description', ''))[:8000]
+    requirements = clean_html(data.get('requirements', ''))[:8000]
+
+    if require_text and not job_description and not requirements:
+        return None, (jsonify({'success': False, 'error': 'Job description or requirements is required'}), 400)
+
+    return {
+        'title': job_title,
+        'description': job_description,
+        'requirements': requirements,
+        'company': str(data.get('company') or '').strip()[:200],
+    }, None
 
 
 @app.route('/api/summarize-job', methods=['POST'])
@@ -77,31 +138,20 @@ def summarize_job():
     """
     try:
         data = request.get_json(silent=True) or {}
-        job_title = data.get('title', '')
-        job_description = clean_html(data.get('description', ''))
-        requirements = clean_html(data.get('requirements', ''))
-        
-        # ⚠️ SECURITY: Input validation
-        if not job_description and not requirements:
-            return jsonify({'success': False, 'error': 'Job description or requirements is required'}), 400
-        
-        # Limit payload size to prevent abuse
-        if len(job_description) > 15000 or len(requirements) > 15000:
-            return jsonify({'success': False, 'error': 'Input too long. Maximum 15000 chars.'}), 400
-        
-        if not job_title or len(job_title) > 500:
-            return jsonify({'success': False, 'error': 'Invalid job title'}), 400
-        
+        cleaned, err_resp = _validate_job_payload(data, require_text=True)
+        if err_resp:
+            return err_resp
+
         prompt = f"""
 Kamu adalah asisten karir profesional. Ringkas deskripsi pekerjaan berikut menjadi 5-7 poin bullet yang mudah dipahami dalam Bahasa Indonesia.
 
-Posisi: {job_title}
+Posisi: {cleaned['title']}
 
 Deskripsi:
-{job_description}
+{cleaned['description']}
 
 Persyaratan:
-{requirements}
+{cleaned['requirements']}
 
 Format output:
 - Gunakan bahasa Indonesia yang natural dan mudah dipahami
@@ -112,15 +162,15 @@ Format output:
 
 Output format (hanya bullet points, tanpa penjelasan tambahan):
 """
-        
-        summary = generate_ai_content(prompt)
-        
+
+        summary, used_provider = generate_ai_content(prompt, cache_namespace="summarize")
+
         return jsonify({
             'success': True,
             'summary': summary,
-            'provider': AI_PROVIDER.upper()
+            'provider': used_provider
         })
-        
+
     except Exception as e:
         return jsonify({
             'success': False,
@@ -135,42 +185,39 @@ def predict_interview():
     """
     try:
         data = request.get_json(silent=True) or {}
-        job_title = data.get('title', '')
-        job_description = clean_html(data.get('description', ''))
-        requirements = clean_html(data.get('requirements', ''))
-        company = data.get('company', '')
-        user_skills = data.get('user_skills', 'Python, SQL, Data Analysis')
-        user_experience = data.get('user_experience', 'Fresh graduate')
-        
-        if not job_title:
-            return jsonify({'success': False, 'error': 'Job title is required'}), 400
-        
-        # Generate interview questions + sample answers dalam 1 prompt
+        cleaned, err_resp = _validate_job_payload(data, require_text=False)
+        if err_resp:
+            return err_resp
+
+        default_skills = ', '.join(PROFILE.get('skills', [])[:15])
+        user_skills = str(data.get('user_skills') or default_skills)[:1000]
+        user_experience = str(data.get('user_experience') or PROFILE.get('experience', '1 tahun'))[:1500]
+
         prompt = f"""
 Kamu adalah career coach dan interview coach profesional berpengalaman. Kamu akan:
 1. Prediksi 8 pertanyaan interview yang kemungkinan ditanyakan
 2. Untuk SETIAP pertanyaan, buatkan jawaban sample yang profesional
 
 KONTEKS KANDIDAT:
-- Posisi: {job_title}
-- Perusahaan: {company}
+- Posisi: {cleaned['title']}
+- Perusahaan: {cleaned['company']}
 - Keahlian: {user_skills}
 - Pengalaman: {user_experience}
 
 INFORMASI LOWONGAN:
-Deskripsi: {job_description}
-Persyaratan: {requirements}
+Deskripsi: {cleaned['description']}
+Persyaratan: {cleaned['requirements']}
 
 INSTRUKSI:
 1. Buat 8 pertanyaan interview yang:
    - Relevan dengan posisi dan requirement
    - Campuran technical dan behavioral questions
-   - Disesuaikan untuk fresh graduate
+   - Disesuaikan untuk fresh graduate / 1 tahun pengalaman
    - Dalam Bahasa Indonesia yang natural
 
 2. Untuk SETIAP pertanyaan, tambahkan:
    - Contoh jawaban profesional (2-3 kalimat)
-   - Jawaban sesuai konteks candidate fresh graduate
+   - Jawaban sesuai konteks candidate
    - Highlight keahlian yang relevan
 
 FORMAT OUTPUT (PENTING - ikuti format ini persis):
@@ -186,15 +233,15 @@ FORMAT OUTPUT (PENTING - ikuti format ini persis):
 
 MULAI SEKARANG (output hanya list pertanyaan + jawaban, tanpa penjelasan):
 """
-        
-        response_text = generate_ai_content(prompt)
-        
+
+        response_text, used_provider = generate_ai_content(prompt, cache_namespace="interview")
+
         return jsonify({
             'success': True,
             'questions': response_text,
-            'provider': AI_PROVIDER.upper()
+            'provider': used_provider
         })
-        
+
     except Exception as e:
         return jsonify({
             'success': False,
@@ -209,20 +256,16 @@ def generate_cover_letter():
     """
     try:
         data = request.get_json(silent=True) or {}
-        job_title = data.get('title', '')
-        company = data.get('company', '')
-        job_description = clean_html(data.get('description', ''))
-        requirements = clean_html(data.get('requirements', ''))
-        
-        # User CV data
-        user_major = data.get('user_major', 'Teknik Informatika')
-        user_gpa = data.get('user_gpa', '3.5')
-        user_skills = data.get('user_skills', 'Python, Data Science, Machine Learning')
-        user_experience = data.get('user_experience', '1 tahun')
-        
-        if not job_title:
-            return jsonify({'success': False, 'error': 'Job title is required'}), 400
-        
+        cleaned, err_resp = _validate_job_payload(data, require_text=False)
+        if err_resp:
+            return err_resp
+
+        default_skills = ', '.join(PROFILE.get('skills', [])[:15])
+        user_major = str(data.get('user_major') or PROFILE.get('major', 'Teknik Informatika'))[:200]
+        user_gpa = str(data.get('user_gpa') or PROFILE.get('gpa', '3.39'))[:20]
+        user_skills = str(data.get('user_skills') or default_skills)[:1000]
+        user_experience = str(data.get('user_experience') or PROFILE.get('experience', '1 tahun'))[:1500]
+
         prompt = f"""
 Kamu adalah career coach profesional yang ahli menulis cover letter. Buatkan cover letter profesional dalam Bahasa Indonesia untuk lamaran ini.
 
@@ -233,14 +276,14 @@ INFORMASI PELAMAR (CV):
 - Pengalaman: {user_experience}
 
 INFORMASI LOWONGAN:
-- Perusahaan: {company}
-- Posisi: {job_title}
+- Perusahaan: {cleaned['company']}
+- Posisi: {cleaned['title']}
 
 Deskripsi Pekerjaan:
-{job_description}
+{cleaned['description']}
 
 Persyaratan:
-{requirements}
+{cleaned['requirements']}
 
 Tulis cover letter yang:
 1. Profesional dan menarik perhatian HRD
@@ -258,15 +301,15 @@ Format output (langsung paragraf tanpa header):
 
 [Paragraf penutup yang kuat dengan call-to-action]
 """
-        
-        cover_letter = generate_ai_content(prompt)
-        
+
+        cover_letter, used_provider = generate_ai_content(prompt, cache_namespace="cover_letter")
+
         return jsonify({
             'success': True,
             'cover_letter': cover_letter,
-            'provider': AI_PROVIDER.upper()
+            'provider': used_provider
         })
-        
+
     except Exception as e:
         return jsonify({
             'success': False,
@@ -282,17 +325,21 @@ def health_check():
         'status': 'healthy',
         'service': 'AI Job Matcher Service',
         'provider': AI_PROVIDER.upper(),
-        'model': active_model
+        'model': active_model,
+        'cache_entries': len(_AI_CACHE)
     })
 
 
 if __name__ == '__main__':
     active_model = GROQ_MODEL if AI_PROVIDER == 'groq' else GEMINI_MODEL
-    print("=== Starting AI Service on http://localhost:5001 ===")
+    host = os.getenv('FLASK_HOST', '127.0.0.1')
+    port = int(os.getenv('FLASK_PORT', '5001'))
+    debug = os.getenv('FLASK_DEBUG', 'false').lower() == 'true'
+    print(f"=== Starting AI Service on http://{host}:{port} ===")
     print(f"Provider Active : {AI_PROVIDER.upper()} ({active_model})")
     print("Endpoints available:")
     print("   - POST /api/summarize-job")
     print("   - POST /api/predict-interview")
     print("   - POST /api/generate-cover-letter")
     print("   - GET /health")
-    app.run(host='0.0.0.0', port=5001, debug=True)
+    app.run(host=host, port=port, debug=debug)
